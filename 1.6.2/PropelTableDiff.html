@@ -1,0 +1,1976 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>PropelTableDiff | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>PropelTableDiff</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PropelTableDiff</strong></p>
+
+            <div class="description">
+            <p>Value object for storing Table object diffs Heavily inspired by Doctrine2&#039;s Migrations (see http://github.com/doctrine/dbal/tree/master/lib/Doctrine/DBAL/Schema/)</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setFromTable">setFromTable</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $fromTable)
+                    <p>Setter for the fromTable property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Table.html"><abbr title="Table">Table</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getFromTable">getFromTable</a>()
+                    <p>Getter for the fromTable property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setToTable">setToTable</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $toTable)
+                    <p>Setter for the toTable property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Table.html"><abbr title="Table">Table</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getToTable">getToTable</a>()
+                    <p>Getter for the toTable property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setAddedColumns">setAddedColumns</a>(array $addedColumns)
+                    <p>Setter for the addedColumns property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addAddedColumn">addAddedColumn</a>(string $columnName, <a href="Column.html"><abbr title="Column">Column</abbr></a> $addedColumn)
+                    <p>Add an added column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_removeAddedColumn">removeAddedColumn</a>(string $columnName)
+                    <p>Remove an added column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAddedColumns">getAddedColumns</a>()
+                    <p>Getter for the addedColumns property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getAddedColumn">getAddedColumn</a>($columnName)
+                    <p>Get an added column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setRemovedColumns">setRemovedColumns</a>(array $removedColumns)
+                    <p>Setter for the removedColumns property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addRemovedColumn">addRemovedColumn</a>(string $columnName, <a href="Column.html"><abbr title="Column">Column</abbr></a> $removedColumn)
+                    <p>Add a removed column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_removeRemovedColumn">removeRemovedColumn</a>(string $columnName)
+                    <p>Remove a removed column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getRemovedColumns">getRemovedColumns</a>()
+                    <p>Getter for the removedColumns property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getRemovedColumn">getRemovedColumn</a>($columnName)
+                    <p>Get a removed column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setModifiedColumns">setModifiedColumns</a>(array $modifiedColumns)
+                    <p>Setter for the modifiedColumns property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addModifiedColumn">addModifiedColumn</a>(string $columnName, <a href="PropelColumnDiff.html"><abbr title="PropelColumnDiff">PropelColumnDiff</abbr></a> $modifiedColumn)
+                    <p>Add a column difference</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getModifiedColumns">getModifiedColumns</a>()
+                    <p>Getter for the modifiedColumns property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setRenamedColumns">setRenamedColumns</a>(array $renamedColumns)
+                    <p>Setter for the renamedColumns property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addRenamedColumn">addRenamedColumn</a>(<a href="Column.html"><abbr title="Column">Column</abbr></a> $fromColumn, <a href="Column.html"><abbr title="Column">Column</abbr></a> $toColumn)
+                    <p>Add a renamed column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getRenamedColumns">getRenamedColumns</a>()
+                    <p>Getter for the renamedColumns property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setAddedPkColumns">setAddedPkColumns</a>(<abbr title="$addedPkColumns">$addedPkColumns</abbr> $addedPkColumns)
+                    <p>Setter for the addedPkColumns property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addAddedPkColumn">addAddedPkColumn</a>(string $columnName, <a href="Column.html"><abbr title="Column">Column</abbr></a> $addedPkColumn)
+                    <p>Add an added Pk column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_removeAddedPkColumn">removeAddedPkColumn</a>(string $columnName)
+                    <p>Remove an added Pk column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAddedPkColumns">getAddedPkColumns</a>()
+                    <p>Getter for the addedPkColumns property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setRemovedPkColumns">setRemovedPkColumns</a>(<abbr title="$removedPkColumns">$removedPkColumns</abbr> $removedPkColumns)
+                    <p>Setter for the removedPkColumns property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addRemovedPkColumn">addRemovedPkColumn</a>($columnName, <a href="Column.html"><abbr title="Column">Column</abbr></a> $removedPkColumn)
+                    <p>Add a removed Pk column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_removeRemovedPkColumn">removeRemovedPkColumn</a>(string $columnName)
+                    <p>Remove a removed Pk column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getRemovedPkColumns">getRemovedPkColumns</a>()
+                    <p>Getter for the removedPkColumns property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setRenamedPkColumns">setRenamedPkColumns</a>(<abbr title="$renamedPkColumns">$renamedPkColumns</abbr> $renamedPkColumns)
+                    <p>Setter for the renamedPkColumns property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addRenamedPkColumn">addRenamedPkColumn</a>(<a href="Column.html"><abbr title="Column">Column</abbr></a> $fromColumn, <a href="Column.html"><abbr title="Column">Column</abbr></a> $toColumn)
+                    <p>Add a renamed Pk column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getRenamedPkColumns">getRenamedPkColumns</a>()
+                    <p>Getter for the renamedPkColumns property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasModifiedPk">hasModifiedPk</a>()
+                    <p>Whether the primary key was modified</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setAddedIndices">setAddedIndices</a>(<abbr title="$addedIndices">$addedIndices</abbr> $addedIndices)
+                    <p>Setter for the addedIndices property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addAddedIndex">addAddedIndex</a>(string $indexName, <a href="Index.html"><abbr title="Index">Index</abbr></a> $addedIndex)
+                    <p>Add an added Index</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAddedIndices">getAddedIndices</a>()
+                    <p>Getter for the addedIndices property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setRemovedIndices">setRemovedIndices</a>(<abbr title="$removedIndices">$removedIndices</abbr> $removedIndices)
+                    <p>Setter for the removedIndices property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addRemovedIndex">addRemovedIndex</a>(string $indexName, <a href="Index.html"><abbr title="Index">Index</abbr></a> $removedIndex)
+                    <p>Add a removed Index</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getRemovedIndices">getRemovedIndices</a>()
+                    <p>Getter for the removedIndices property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setModifiedIndices">setModifiedIndices</a>(<abbr title="$modifiedIndices">$modifiedIndices</abbr> $modifiedIndices)
+                    <p>Setter for the modifiedIndices property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addModifiedIndex">addModifiedIndex</a>(string $indexName, <a href="Index.html"><abbr title="Index">Index</abbr></a> $fromIndex, <a href="Index.html"><abbr title="Index">Index</abbr></a> $toIndex)
+                    <p>Add a modified Index</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getModifiedIndices">getModifiedIndices</a>()
+                    <p>Getter for the modifiedIndices property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setAddedFks">setAddedFks</a>(<abbr title="$addedFks">$addedFks</abbr> $addedFks)
+                    <p>Setter for the addedFks property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addAddedFk">addAddedFk</a>(string $fkName, <a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $addedFk)
+                    <p>Add an added Fk column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_removeAddedFk">removeAddedFk</a>(string $fkName)
+                    <p>Remove an added Fk column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAddedFks">getAddedFks</a>()
+                    <p>Getter for the addedFks property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setRemovedFks">setRemovedFks</a>(<abbr title="$removedFks">$removedFks</abbr> $removedFks)
+                    <p>Setter for the removedFks property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addRemovedFk">addRemovedFk</a>($fkName, <a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $removedFk)
+                    <p>Add a removed Fk column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_removeRemovedFk">removeRemovedFk</a>(string $fkName)
+                    <p>Remove a removed Fk column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getRemovedFks">getRemovedFks</a>()
+                    <p>Getter for the removedFks property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setModifiedFks">setModifiedFks</a>(array $modifiedFks)
+                    <p>Setter for the modifiedFks property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addModifiedFk">addModifiedFk</a>(string $fkName, <a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $fromFk, <a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $toFk)
+                    <p>Add a modified Fk</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getModifiedFks">getModifiedFks</a>()
+                    <p>Getter for the modifiedFks property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="PropelTableDiff.html"><abbr title="PropelTableDiff">PropelTableDiff</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getReverseDiff">getReverseDiff</a>()
+                    <p>Get the reverse diff for this diff</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___toString">__toString</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_setFromTable">
+        <div class="location">at line 48</div>
+        <code>            public            
+    <strong>setFromTable</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $fromTable)</code>
+    </h3>
+    <div class="details">
+        <p>Setter for the fromTable property</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$fromTable</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFromTable">
+        <div class="location">at line 58</div>
+        <code>            public            <a href="Table.html"><abbr title="Table">Table</abbr></a>
+    <strong>getFromTable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Getter for the fromTable property</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setToTable">
+        <div class="location">at line 68</div>
+        <code>            public            
+    <strong>setToTable</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $toTable)</code>
+    </h3>
+    <div class="details">
+        <p>Setter for the toTable property</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$toTable</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getToTable">
+        <div class="location">at line 78</div>
+        <code>            public            <a href="Table.html"><abbr title="Table">Table</abbr></a>
+    <strong>getToTable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Getter for the toTable property</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAddedColumns">
+        <div class="location">at line 88</div>
+        <code>            public            
+    <strong>setAddedColumns</strong>(array $addedColumns)</code>
+    </h3>
+    <div class="details">
+        <p>Setter for the addedColumns property</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$addedColumns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addAddedColumn">
+        <div class="location">at line 99</div>
+        <code>            public            
+    <strong>addAddedColumn</strong>(string $columnName, <a href="Column.html"><abbr title="Column">Column</abbr></a> $addedColumn)</code>
+    </h3>
+    <div class="details">
+        <p>Add an added column</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$columnName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Column.html"><abbr title="Column">Column</abbr></a></td>
+                <td>$addedColumn</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeAddedColumn">
+        <div class="location">at line 109</div>
+        <code>            public            
+    <strong>removeAddedColumn</strong>(string $columnName)</code>
+    </h3>
+    <div class="details">
+        <p>Remove an added column</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$columnName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddedColumns">
+        <div class="location">at line 119</div>
+        <code>            public            array
+    <strong>getAddedColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Getter for the addedColumns property</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddedColumn">
+        <div class="location">at line 131</div>
+        <code>            public            
+    <strong>getAddedColumn</strong>($columnName)</code>
+    </h3>
+    <div class="details">
+        <p>Get an added column</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$columnName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setRemovedColumns">
+        <div class="location">at line 141</div>
+        <code>            public            
+    <strong>setRemovedColumns</strong>(array $removedColumns)</code>
+    </h3>
+    <div class="details">
+        <p>Setter for the removedColumns property</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$removedColumns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addRemovedColumn">
+        <div class="location">at line 152</div>
+        <code>            public            
+    <strong>addRemovedColumn</strong>(string $columnName, <a href="Column.html"><abbr title="Column">Column</abbr></a> $removedColumn)</code>
+    </h3>
+    <div class="details">
+        <p>Add a removed column</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$columnName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Column.html"><abbr title="Column">Column</abbr></a></td>
+                <td>$removedColumn</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeRemovedColumn">
+        <div class="location">at line 162</div>
+        <code>            public            
+    <strong>removeRemovedColumn</strong>(string $columnName)</code>
+    </h3>
+    <div class="details">
+        <p>Remove a removed column</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$columnName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRemovedColumns">
+        <div class="location">at line 172</div>
+        <code>            public            array
+    <strong>getRemovedColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Getter for the removedColumns property</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRemovedColumn">
+        <div class="location">at line 184</div>
+        <code>            public            
+    <strong>getRemovedColumn</strong>($columnName)</code>
+    </h3>
+    <div class="details">
+        <p>Get a removed column</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$columnName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setModifiedColumns">
+        <div class="location">at line 194</div>
+        <code>            public            
+    <strong>setModifiedColumns</strong>(array $modifiedColumns)</code>
+    </h3>
+    <div class="details">
+        <p>Setter for the modifiedColumns property</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$modifiedColumns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addModifiedColumn">
+        <div class="location">at line 205</div>
+        <code>            public            
+    <strong>addModifiedColumn</strong>(string $columnName, <a href="PropelColumnDiff.html"><abbr title="PropelColumnDiff">PropelColumnDiff</abbr></a> $modifiedColumn)</code>
+    </h3>
+    <div class="details">
+        <p>Add a column difference</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$columnName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="PropelColumnDiff.html"><abbr title="PropelColumnDiff">PropelColumnDiff</abbr></a></td>
+                <td>$modifiedColumn</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getModifiedColumns">
+        <div class="location">at line 215</div>
+        <code>            public            array
+    <strong>getModifiedColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Getter for the modifiedColumns property</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setRenamedColumns">
+        <div class="location">at line 225</div>
+        <code>            public            
+    <strong>setRenamedColumns</strong>(array $renamedColumns)</code>
+    </h3>
+    <div class="details">
+        <p>Setter for the renamedColumns property</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$renamedColumns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addRenamedColumn">
+        <div class="location">at line 236</div>
+        <code>            public            
+    <strong>addRenamedColumn</strong>(<a href="Column.html"><abbr title="Column">Column</abbr></a> $fromColumn, <a href="Column.html"><abbr title="Column">Column</abbr></a> $toColumn)</code>
+    </h3>
+    <div class="details">
+        <p>Add a renamed column</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Column.html"><abbr title="Column">Column</abbr></a></td>
+                <td>$fromColumn</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Column.html"><abbr title="Column">Column</abbr></a></td>
+                <td>$toColumn</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRenamedColumns">
+        <div class="location">at line 246</div>
+        <code>            public            array
+    <strong>getRenamedColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Getter for the renamedColumns property</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAddedPkColumns">
+        <div class="location">at line 256</div>
+        <code>            public            
+    <strong>setAddedPkColumns</strong>(<abbr title="$addedPkColumns">$addedPkColumns</abbr> $addedPkColumns)</code>
+    </h3>
+    <div class="details">
+        <p>Setter for the addedPkColumns property</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="$addedPkColumns">$addedPkColumns</abbr></td>
+                <td>$addedPkColumns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addAddedPkColumn">
+        <div class="location">at line 267</div>
+        <code>            public            
+    <strong>addAddedPkColumn</strong>(string $columnName, <a href="Column.html"><abbr title="Column">Column</abbr></a> $addedPkColumn)</code>
+    </h3>
+    <div class="details">
+        <p>Add an added Pk column</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$columnName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Column.html"><abbr title="Column">Column</abbr></a></td>
+                <td>$addedPkColumn</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeAddedPkColumn">
+        <div class="location">at line 277</div>
+        <code>            public            
+    <strong>removeAddedPkColumn</strong>(string $columnName)</code>
+    </h3>
+    <div class="details">
+        <p>Remove an added Pk column</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$columnName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddedPkColumns">
+        <div class="location">at line 287</div>
+        <code>            public            array
+    <strong>getAddedPkColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Getter for the addedPkColumns property</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setRemovedPkColumns">
+        <div class="location">at line 297</div>
+        <code>            public            
+    <strong>setRemovedPkColumns</strong>(<abbr title="$removedPkColumns">$removedPkColumns</abbr> $removedPkColumns)</code>
+    </h3>
+    <div class="details">
+        <p>Setter for the removedPkColumns property</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="$removedPkColumns">$removedPkColumns</abbr></td>
+                <td>$removedPkColumns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addRemovedPkColumn">
+        <div class="location">at line 308</div>
+        <code>            public            
+    <strong>addRemovedPkColumn</strong>($columnName, <a href="Column.html"><abbr title="Column">Column</abbr></a> $removedPkColumn)</code>
+    </h3>
+    <div class="details">
+        <p>Add a removed Pk column</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$columnName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Column.html"><abbr title="Column">Column</abbr></a></td>
+                <td>$removedPkColumn</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeRemovedPkColumn">
+        <div class="location">at line 318</div>
+        <code>            public            
+    <strong>removeRemovedPkColumn</strong>(string $columnName)</code>
+    </h3>
+    <div class="details">
+        <p>Remove a removed Pk column</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$columnName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRemovedPkColumns">
+        <div class="location">at line 328</div>
+        <code>            public            array
+    <strong>getRemovedPkColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Getter for the removedPkColumns property</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setRenamedPkColumns">
+        <div class="location">at line 338</div>
+        <code>            public            
+    <strong>setRenamedPkColumns</strong>(<abbr title="$renamedPkColumns">$renamedPkColumns</abbr> $renamedPkColumns)</code>
+    </h3>
+    <div class="details">
+        <p>Setter for the renamedPkColumns property</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="$renamedPkColumns">$renamedPkColumns</abbr></td>
+                <td>$renamedPkColumns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addRenamedPkColumn">
+        <div class="location">at line 349</div>
+        <code>            public            
+    <strong>addRenamedPkColumn</strong>(<a href="Column.html"><abbr title="Column">Column</abbr></a> $fromColumn, <a href="Column.html"><abbr title="Column">Column</abbr></a> $toColumn)</code>
+    </h3>
+    <div class="details">
+        <p>Add a renamed Pk column</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Column.html"><abbr title="Column">Column</abbr></a></td>
+                <td>$fromColumn</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Column.html"><abbr title="Column">Column</abbr></a></td>
+                <td>$toColumn</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRenamedPkColumns">
+        <div class="location">at line 359</div>
+        <code>            public            array
+    <strong>getRenamedPkColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Getter for the renamedPkColumns property</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasModifiedPk">
+        <div class="location">at line 369</div>
+        <code>            public            boolean
+    <strong>hasModifiedPk</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Whether the primary key was modified</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAddedIndices">
+        <div class="location">at line 379</div>
+        <code>            public            
+    <strong>setAddedIndices</strong>(<abbr title="$addedIndices">$addedIndices</abbr> $addedIndices)</code>
+    </h3>
+    <div class="details">
+        <p>Setter for the addedIndices property</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="$addedIndices">$addedIndices</abbr></td>
+                <td>$addedIndices</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addAddedIndex">
+        <div class="location">at line 390</div>
+        <code>            public            
+    <strong>addAddedIndex</strong>(string $indexName, <a href="Index.html"><abbr title="Index">Index</abbr></a> $addedIndex)</code>
+    </h3>
+    <div class="details">
+        <p>Add an added Index</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$indexName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Index.html"><abbr title="Index">Index</abbr></a></td>
+                <td>$addedIndex</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddedIndices">
+        <div class="location">at line 400</div>
+        <code>            public            array
+    <strong>getAddedIndices</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Getter for the addedIndices property</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setRemovedIndices">
+        <div class="location">at line 410</div>
+        <code>            public            
+    <strong>setRemovedIndices</strong>(<abbr title="$removedIndices">$removedIndices</abbr> $removedIndices)</code>
+    </h3>
+    <div class="details">
+        <p>Setter for the removedIndices property</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="$removedIndices">$removedIndices</abbr></td>
+                <td>$removedIndices</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addRemovedIndex">
+        <div class="location">at line 421</div>
+        <code>            public            
+    <strong>addRemovedIndex</strong>(string $indexName, <a href="Index.html"><abbr title="Index">Index</abbr></a> $removedIndex)</code>
+    </h3>
+    <div class="details">
+        <p>Add a removed Index</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$indexName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Index.html"><abbr title="Index">Index</abbr></a></td>
+                <td>$removedIndex</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRemovedIndices">
+        <div class="location">at line 431</div>
+        <code>            public            array
+    <strong>getRemovedIndices</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Getter for the removedIndices property</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setModifiedIndices">
+        <div class="location">at line 441</div>
+        <code>            public            
+    <strong>setModifiedIndices</strong>(<abbr title="$modifiedIndices">$modifiedIndices</abbr> $modifiedIndices)</code>
+    </h3>
+    <div class="details">
+        <p>Setter for the modifiedIndices property</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="$modifiedIndices">$modifiedIndices</abbr></td>
+                <td>$modifiedIndices</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addModifiedIndex">
+        <div class="location">at line 453</div>
+        <code>            public            
+    <strong>addModifiedIndex</strong>(string $indexName, <a href="Index.html"><abbr title="Index">Index</abbr></a> $fromIndex, <a href="Index.html"><abbr title="Index">Index</abbr></a> $toIndex)</code>
+    </h3>
+    <div class="details">
+        <p>Add a modified Index</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$indexName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Index.html"><abbr title="Index">Index</abbr></a></td>
+                <td>$fromIndex</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Index.html"><abbr title="Index">Index</abbr></a></td>
+                <td>$toIndex</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getModifiedIndices">
+        <div class="location">at line 463</div>
+        <code>            public            
+    <strong>getModifiedIndices</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Getter for the modifiedIndices property</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAddedFks">
+        <div class="location">at line 473</div>
+        <code>            public            
+    <strong>setAddedFks</strong>(<abbr title="$addedFks">$addedFks</abbr> $addedFks)</code>
+    </h3>
+    <div class="details">
+        <p>Setter for the addedFks property</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="$addedFks">$addedFks</abbr></td>
+                <td>$addedFks</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addAddedFk">
+        <div class="location">at line 484</div>
+        <code>            public            
+    <strong>addAddedFk</strong>(string $fkName, <a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $addedFk)</code>
+    </h3>
+    <div class="details">
+        <p>Add an added Fk column</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$fkName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a></td>
+                <td>$addedFk</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeAddedFk">
+        <div class="location">at line 494</div>
+        <code>            public            
+    <strong>removeAddedFk</strong>(string $fkName)</code>
+    </h3>
+    <div class="details">
+        <p>Remove an added Fk column</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$fkName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddedFks">
+        <div class="location">at line 504</div>
+        <code>            public            array
+    <strong>getAddedFks</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Getter for the addedFks property</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setRemovedFks">
+        <div class="location">at line 514</div>
+        <code>            public            
+    <strong>setRemovedFks</strong>(<abbr title="$removedFks">$removedFks</abbr> $removedFks)</code>
+    </h3>
+    <div class="details">
+        <p>Setter for the removedFks property</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="$removedFks">$removedFks</abbr></td>
+                <td>$removedFks</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addRemovedFk">
+        <div class="location">at line 525</div>
+        <code>            public            
+    <strong>addRemovedFk</strong>($fkName, <a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $removedFk)</code>
+    </h3>
+    <div class="details">
+        <p>Add a removed Fk column</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$fkName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a></td>
+                <td>$removedFk</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeRemovedFk">
+        <div class="location">at line 535</div>
+        <code>            public            
+    <strong>removeRemovedFk</strong>(string $fkName)</code>
+    </h3>
+    <div class="details">
+        <p>Remove a removed Fk column</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$fkName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRemovedFks">
+        <div class="location">at line 545</div>
+        <code>            public            array
+    <strong>getRemovedFks</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Getter for the removedFks property</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setModifiedFks">
+        <div class="location">at line 555</div>
+        <code>            public            
+    <strong>setModifiedFks</strong>(array $modifiedFks)</code>
+    </h3>
+    <div class="details">
+        <p>Setter for the modifiedFks property</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$modifiedFks</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addModifiedFk">
+        <div class="location">at line 567</div>
+        <code>            public            
+    <strong>addModifiedFk</strong>(string $fkName, <a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $fromFk, <a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $toFk)</code>
+    </h3>
+    <div class="details">
+        <p>Add a modified Fk</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$fkName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a></td>
+                <td>$fromFk</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a></td>
+                <td>$toFk</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getModifiedFks">
+        <div class="location">at line 577</div>
+        <code>            public            array
+    <strong>getModifiedFks</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Getter for the modifiedFks property</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getReverseDiff">
+        <div class="location">at line 587</div>
+        <code>            public            <a href="PropelTableDiff.html"><abbr title="PropelTableDiff">PropelTableDiff</abbr></a>
+    <strong>getReverseDiff</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the reverse diff for this diff</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="PropelTableDiff.html"><abbr title="PropelTableDiff">PropelTableDiff</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___toString">
+        <div class="location">at line 639</div>
+        <code>            public            
+    <strong>__toString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

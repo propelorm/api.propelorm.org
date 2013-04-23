@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>XmlToDataSQL | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>XmlToDataSQL</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>XmlToDataSQL</strong>        extends <abbr title="AbstractHandler">AbstractHandler</abbr></p>
+
+            <div class="description">
+            <p>A Class that is used to parse an data dump XML file and create SQL using a DataSQLBuilder class.</p>
+            <p></p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>DEBUG</td>
+                <td class="last">
+                    <p><em>Flag for enabing debug output to aid in parser tracing.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_parser">
+                                                            <abbr title="ExpatParser">ExpatParser</abbr>
+                </td>
+                <td>$parser</td>
+                <td class="last">Expat Parser.</td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="Database.html"><abbr title="Database">Database</abbr></a> $database, <a href="GeneratorConfig.html"><abbr title="GeneratorConfig">GeneratorConfig</abbr></a> $config, string $encoding = &#039;iso-8859-1&#039;)
+                    <p>Construct new XmlToDataSQL class.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_transform">transform</a>(<abbr title="PhingFile">PhingFile</abbr> $xmlFile, <abbr title="Writer">Writer</abbr> $out)
+                    <p>Transform the data dump input file into SQL and writes it to the output stream.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_startElement">startElement</a>($name, $attributes)
+                    <p>Handles opening elements of the xml file.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_endElement">endElement</a>(<abbr title="$name">$name</abbr> $name)
+                    <p>Handles closing elements of the xml file.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 99</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="Database.html"><abbr title="Database">Database</abbr></a> $database, <a href="GeneratorConfig.html"><abbr title="GeneratorConfig">GeneratorConfig</abbr></a> $config, string $encoding = &#039;iso-8859-1&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Construct new XmlToDataSQL class.</p>
+        <p>This class is passed the Database object so that it knows what to expect from<br />
+ the XML file.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Database.html"><abbr title="Database">Database</abbr></a></td>
+                <td>$database</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="GeneratorConfig.html"><abbr title="GeneratorConfig">GeneratorConfig</abbr></a></td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$encoding</td>
+                <td>Database encoding</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_transform">
+        <div class="location">at line 113</div>
+        <code>            public            
+    <strong>transform</strong>(<abbr title="PhingFile">PhingFile</abbr> $xmlFile, <abbr title="Writer">Writer</abbr> $out)</code>
+    </h3>
+    <div class="details">
+        <p>Transform the data dump input file into SQL and writes it to the output stream.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="PhingFile">PhingFile</abbr></td>
+                <td>$xmlFile</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Writer">Writer</abbr></td>
+                <td>$out</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="BuildException">BuildException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_startElement">
+        <div class="location">at line 146</div>
+        <code>            public            
+    <strong>startElement</strong>($name, $attributes)</code>
+    </h3>
+    <div class="details">
+        <p>Handles opening elements of the xml file.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_endElement">
+        <div class="location">at line 201</div>
+        <code>            public            
+    <strong>endElement</strong>(<abbr title="$name">$name</abbr> $name)</code>
+    </h3>
+    <div class="details">
+        <p>Handles closing elements of the xml file.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="$name">$name</abbr></td>
+                <td>$name</td>
+                <td>The local name (without prefix), or the empty string if Namespace processing is not being performed.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

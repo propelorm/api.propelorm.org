@@ -1,0 +1,1940 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>ModelJoin | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>ModelJoin</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>ModelJoin</strong>        extends <a href="Join.html"><abbr title="Join">Join</abbr></a></p>
+
+            <div class="description">
+            <p>A ModelJoin is a Join object tied to a RelationMap object</p>
+            <p></p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>EQUAL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>INNER_JOIN</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(string $leftColumn = null, string $rightColumn = null, string $joinType = null)
+                    <p>Constructor Use it preferably with no arguments, and then use addCondition() and setJoinType() Syntax with arguments used mainly for backwards compatibility</p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method___construct"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addCondition">addCondition</a>(string $left, string $right, string $operator = self::EQUAL)
+                    <p>Join condition definition.</p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_addCondition"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addConditions">addConditions</a>(array $lefts, array $rights, array $operators = array())
+                    <p>Join condition definition, for several conditions</p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_addConditions"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addExplicitCondition">addExplicitCondition</a>(string $leftTableName, string $leftColumnName, string $leftTableAlias = null, string $rightTableName, string $rightColumnName, string $rightTableAlias = null, string $operator = self::EQUAL)
+                    <p>Join condition definition.</p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_addExplicitCondition"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_countConditions">countConditions</a>()
+                    <p>Retrieve the number of conditions in the join</p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_countConditions"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getConditions">getConditions</a>()
+                    <p>Return an array of the join conditions</p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_getConditions"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addOperator">addOperator</a>(string $operator = null)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_addOperator"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getOperator">getOperator</a>(int $index)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_getOperator"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getOperators">getOperators</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_getOperators"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setJoinType">setJoinType</a>(string $joinType = null)
+                    <p>Set the join type</p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_setJoinType"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getJoinType">getJoinType</a>()
+                    <p>Get the join type</p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_getJoinType"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addLeftColumnName">addLeftColumnName</a>(string $left)
+                    <p>Add a left column name to the join condition</p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_addLeftColumnName"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getLeftColumn">getLeftColumn</a>(integer $index)
+                    <p>Get the fully qualified name of the left column of the join condition</p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_getLeftColumn"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getLeftColumnName">getLeftColumnName</a>(integer $index)
+                    <p>Get the left column name of the join condition</p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_getLeftColumnName"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getLeftColumns">getLeftColumns</a>()
+                    <p>Get the list of all the names of left columns of the join condition</p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_getLeftColumns"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setLeftTableName">setLeftTableName</a>($leftTableName)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_setLeftTableName"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getLeftTableName">getLeftTableName</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_getLeftTableName"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setLeftTableAlias">setLeftTableAlias</a>($leftTableAlias)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_setLeftTableAlias"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getLeftTableAlias">getLeftTableAlias</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_getLeftTableAlias"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_hasLeftTableAlias">hasLeftTableAlias</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_hasLeftTableAlias"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getLeftTableAliasOrName">getLeftTableAliasOrName</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_getLeftTableAliasOrName"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getLeftTableWithAlias">getLeftTableWithAlias</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_getLeftTableWithAlias"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addRightColumnName">addRightColumnName</a>(string $right)
+                    <p>Add a right column name to the join condition</p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_addRightColumnName"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getRightColumn">getRightColumn</a>(integer $index)
+                    <p>Get the fully qualified name of the right column of the join condition</p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_getRightColumn"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getRightColumnName">getRightColumnName</a>(integer $index)
+                    <p>Get the right column name of the join condition</p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_getRightColumnName"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="all">all</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getRightColumns">getRightColumns</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_getRightColumns"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setRightTableName">setRightTableName</a>($rightTableName)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_setRightTableName"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getRightTableName">getRightTableName</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_getRightTableName"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setRightTableAlias">setRightTableAlias</a>($rightTableAlias)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_setRightTableAlias"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getRightTableAlias">getRightTableAlias</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_getRightTableAlias"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_hasRightTableAlias">hasRightTableAlias</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_hasRightTableAlias"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getRightTableAliasOrName">getRightTableAliasOrName</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_getRightTableAliasOrName"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getRightTableWithAlias">getRightTableWithAlias</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_getRightTableWithAlias"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="DBAdapter.html"><abbr title="DBAdapter">DBAdapter</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getDB">getDB</a>()
+                    <p>Get the value of db.</p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_getDB"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_setDB">setDB</a>(<a href="DBAdapter.html"><abbr title="DBAdapter">DBAdapter</abbr></a> $db)
+                    <p>Set the value of db.</p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_setDB"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setJoinCondition">setJoinCondition</a>(<a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a> $joinCondition)
+                    <p>Set a custom join condition</p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_setJoinCondition"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getJoinCondition">getJoinCondition</a>()
+                    <p>Get the custom join condition, if previously set</p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_getJoinCondition"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_buildJoinCondition">buildJoinCondition</a>(<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a> $c)
+                    <p>Set the custom join condition Criterion based on the conditions of this join</p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_buildJoinCondition"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getClause">getClause</a>(array $params)
+                    <p>Get the join clause for this Join.</p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_getClause"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_equals">equals</a>(<a href="ModelJoin.html"><abbr title="ModelJoin">ModelJoin</abbr></a> $join)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_toString">toString</a>()
+                    <p>Returns a String representation of the class,</p>
+                </td>
+                <td><small>from&nbsp;<a href="Join.html#method_toString"><abbr title="Join">Join</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___toString">__toString</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setRelationMap">setRelationMap</a>(<abbr title="RelationMap">RelationMap</abbr> $relationMap, $leftTableAlias = null, $relationAlias = null)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getRelationMap">getRelationMap</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ModelJoin.html"><abbr title="ModelJoin">ModelJoin</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setTableMap">setTableMap</a>(<abbr title="TableMap">TableMap</abbr> $tableMap)
+                    <p>Sets the right tableMap for this join</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="TableMap">TableMap</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getTableMap">getTableMap</a>()
+                    <p>Gets the right tableMap for this join</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ModelJoin.html"><abbr title="ModelJoin">ModelJoin</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setPreviousJoin">setPreviousJoin</a>(<a href="ModelJoin.html"><abbr title="ModelJoin">ModelJoin</abbr></a> $join)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ModelJoin.html"><abbr title="ModelJoin">ModelJoin</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getPreviousJoin">getPreviousJoin</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_isPrimary">isPrimary</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setRelationAlias">setRelationAlias</a>($relationAlias)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getRelationAlias">getRelationAlias</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_hasRelationAlias">hasRelationAlias</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Object
+                </td>
+                <td class="last">
+                    <a href="#method_getObjectToRelate">getObjectToRelate</a>(Object $startObject)
+                    <p>This method returns the last related, but already hydrated object up until this join Starting from $startObject and continuously calling the getters to get to the base object for the current join.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">in <a href="Join.html#method___construct"><abbr title="Join">Join</abbr></a> at line 71</div>
+        <code>            public            
+    <strong>__construct</strong>(string $leftColumn = null, string $rightColumn = null, string $joinType = null)</code>
+    </h3>
+    <div class="details">
+        <p>Constructor Use it preferably with no arguments, and then use addCondition() and setJoinType() Syntax with arguments used mainly for backwards compatibility</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$leftColumn</td>
+                <td>The left column of the join condition (may contain an alias name)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$rightColumn</td>
+                <td>The right column of the join condition (may contain an alias name)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$joinType</td>
+                <td>The type of the join. Valid join types are null (implicit join), Criteria::LEFT_JOIN, Criteria::RIGHT_JOIN, and Criteria::INNER_JOIN</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addCondition">
+        <div class="location">in <a href="Join.html#method_addCondition"><abbr title="Join">Join</abbr></a> at line 97</div>
+        <code>            public            
+    <strong>addCondition</strong>(string $left, string $right, string $operator = self::EQUAL)</code>
+    </h3>
+    <div class="details">
+        <p>Join condition definition.</p>
+        <p>Warning: doesn&#039;t support table aliases. Use the explicit methods to use aliases.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$left</td>
+                <td>The left column of the join condition (may contain an alias name)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$right</td>
+                <td>The right column of the join condition (may contain an alias name)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td>The comparison operator of the join condition, default Join::EQUAL</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addConditions">
+        <div class="location">in <a href="Join.html#method_addConditions"><abbr title="Join">Join</abbr></a> at line 122</div>
+        <code>            public            
+    <strong>addConditions</strong>(array $lefts, array $rights, array $operators = array())</code>
+    </h3>
+    <div class="details">
+        <p>Join condition definition, for several conditions</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$lefts</td>
+                <td>The left columns of the join condition</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$rights</td>
+                <td>The right columns of the join condition</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$operators</td>
+                <td>The comparison operators of the join condition, default Join::EQUAL</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addExplicitCondition">
+        <div class="location">in <a href="Join.html#method_addExplicitCondition"><abbr title="Join">Join</abbr></a> at line 151</div>
+        <code>            public            
+    <strong>addExplicitCondition</strong>(string $leftTableName, string $leftColumnName, string $leftTableAlias = null, string $rightTableName, string $rightColumnName, string $rightTableAlias = null, string $operator = self::EQUAL)</code>
+    </h3>
+    <div class="details">
+        <p>Join condition definition.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$leftTableName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$leftColumnName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$leftTableAlias</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$rightTableName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$rightColumnName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$rightTableAlias</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td>The comparison operator of the join condition, default Join::EQUAL</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_countConditions">
+        <div class="location">in <a href="Join.html#method_countConditions"><abbr title="Join">Join</abbr></a> at line 168</div>
+        <code>            public            integer
+    <strong>countConditions</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieve the number of conditions in the join</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>The number of conditions in the join</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConditions">
+        <div class="location">in <a href="Join.html#method_getConditions"><abbr title="Join">Join</abbr></a> at line 178</div>
+        <code>            public            array
+    <strong>getConditions</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return an array of the join conditions</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>An array of arrays representing (left, comparison, right) for each condition</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addOperator">
+        <div class="location">in <a href="Join.html#method_addOperator"><abbr title="Join">Join</abbr></a> at line 195</div>
+        <code>            public            
+    <strong>addOperator</strong>(string $operator = null)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td>the comparison operator for the join condition</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOperator">
+        <div class="location">in <a href="Join.html#method_getOperator"><abbr title="Join">Join</abbr></a> at line 204</div>
+        <code>            public            string
+    <strong>getOperator</strong>(int $index)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>the comparison operator for the join condition</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOperators">
+        <div class="location">in <a href="Join.html#method_getOperators"><abbr title="Join">Join</abbr></a> at line 209</div>
+        <code>            public            
+    <strong>getOperators</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setJoinType">
+        <div class="location">in <a href="Join.html#method_setJoinType"><abbr title="Join">Join</abbr></a> at line 221</div>
+        <code>            public            
+    <strong>setJoinType</strong>(string $joinType = null)</code>
+    </h3>
+    <div class="details">
+        <p>Set the join type</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$joinType</td>
+                <td>The type of the join. Valid join types are null (adding the join condition to the where clause), Criteria::LEFT_JOIN(), Criteria::RIGHT_JOIN(), and Criteria::INNER_JOIN()</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getJoinType">
+        <div class="location">in <a href="Join.html#method_getJoinType"><abbr title="Join">Join</abbr></a> at line 232</div>
+        <code>            public            string
+    <strong>getJoinType</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the join type</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The type of the join, i.e. Criteria::LEFT_JOIN(), ..., or null for adding the join condition to the where Clause</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addLeftColumnName">
+        <div class="location">in <a href="Join.html#method_addLeftColumnName"><abbr title="Join">Join</abbr></a> at line 247</div>
+        <code>            public            
+    <strong>addLeftColumnName</strong>(string $left)</code>
+    </h3>
+    <div class="details">
+        <p>Add a left column name to the join condition</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$left</td>
+                <td>The name of the left column to add</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLeftColumn">
+        <div class="location">in <a href="Join.html#method_getLeftColumn"><abbr title="Join">Join</abbr></a> at line 263</div>
+        <code>            public            string
+    <strong>getLeftColumn</strong>(integer $index)</code>
+    </h3>
+    <div class="details">
+        <p>Get the fully qualified name of the left column of the join condition</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$index</td>
+                <td>The number of the condition to use</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLeftColumnName">
+        <div class="location">in <a href="Join.html#method_getLeftColumnName"><abbr title="Join">Join</abbr></a> at line 281</div>
+        <code>            public            string
+    <strong>getLeftColumnName</strong>(integer $index)</code>
+    </h3>
+    <div class="details">
+        <p>Get the left column name of the join condition</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$index</td>
+                <td>The number of the condition to use</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLeftColumns">
+        <div class="location">in <a href="Join.html#method_getLeftColumns"><abbr title="Join">Join</abbr></a> at line 290</div>
+        <code>            public            array
+    <strong>getLeftColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the list of all the names of left columns of the join condition</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setLeftTableName">
+        <div class="location">in <a href="Join.html#method_setLeftTableName"><abbr title="Join">Join</abbr></a> at line 300</div>
+        <code>            public            
+    <strong>setLeftTableName</strong>($leftTableName)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$leftTableName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLeftTableName">
+        <div class="location">in <a href="Join.html#method_getLeftTableName"><abbr title="Join">Join</abbr></a> at line 307</div>
+        <code>            public            
+    <strong>getLeftTableName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setLeftTableAlias">
+        <div class="location">in <a href="Join.html#method_setLeftTableAlias"><abbr title="Join">Join</abbr></a> at line 312</div>
+        <code>            public            
+    <strong>setLeftTableAlias</strong>($leftTableAlias)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$leftTableAlias</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLeftTableAlias">
+        <div class="location">in <a href="Join.html#method_getLeftTableAlias"><abbr title="Join">Join</abbr></a> at line 319</div>
+        <code>            public            
+    <strong>getLeftTableAlias</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasLeftTableAlias">
+        <div class="location">in <a href="Join.html#method_hasLeftTableAlias"><abbr title="Join">Join</abbr></a> at line 324</div>
+        <code>            public            
+    <strong>hasLeftTableAlias</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLeftTableAliasOrName">
+        <div class="location">in <a href="Join.html#method_getLeftTableAliasOrName"><abbr title="Join">Join</abbr></a> at line 329</div>
+        <code>            public            
+    <strong>getLeftTableAliasOrName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLeftTableWithAlias">
+        <div class="location">in <a href="Join.html#method_getLeftTableWithAlias"><abbr title="Join">Join</abbr></a> at line 334</div>
+        <code>            public            
+    <strong>getLeftTableWithAlias</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addRightColumnName">
+        <div class="location">in <a href="Join.html#method_addRightColumnName"><abbr title="Join">Join</abbr></a> at line 349</div>
+        <code>            public            
+    <strong>addRightColumnName</strong>(string $right)</code>
+    </h3>
+    <div class="details">
+        <p>Add a right column name to the join condition</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$right</td>
+                <td>The name of the right column to add</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRightColumn">
+        <div class="location">in <a href="Join.html#method_getRightColumn"><abbr title="Join">Join</abbr></a> at line 365</div>
+        <code>            public            string
+    <strong>getRightColumn</strong>(integer $index)</code>
+    </h3>
+    <div class="details">
+        <p>Get the fully qualified name of the right column of the join condition</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$index</td>
+                <td>The number of the condition to use</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRightColumnName">
+        <div class="location">in <a href="Join.html#method_getRightColumnName"><abbr title="Join">Join</abbr></a> at line 383</div>
+        <code>            public            string
+    <strong>getRightColumnName</strong>(integer $index)</code>
+    </h3>
+    <div class="details">
+        <p>Get the right column name of the join condition</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$index</td>
+                <td>The number of the condition to use</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRightColumns">
+        <div class="location">in <a href="Join.html#method_getRightColumns"><abbr title="Join">Join</abbr></a> at line 391</div>
+        <code>            public            <abbr title="all">all</abbr>
+    <strong>getRightColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="all">all</abbr></td>
+            <td>right columns of the join condition</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setRightTableName">
+        <div class="location">in <a href="Join.html#method_setRightTableName"><abbr title="Join">Join</abbr></a> at line 401</div>
+        <code>            public            
+    <strong>setRightTableName</strong>($rightTableName)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$rightTableName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRightTableName">
+        <div class="location">in <a href="Join.html#method_getRightTableName"><abbr title="Join">Join</abbr></a> at line 408</div>
+        <code>            public            
+    <strong>getRightTableName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setRightTableAlias">
+        <div class="location">in <a href="Join.html#method_setRightTableAlias"><abbr title="Join">Join</abbr></a> at line 413</div>
+        <code>            public            
+    <strong>setRightTableAlias</strong>($rightTableAlias)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$rightTableAlias</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRightTableAlias">
+        <div class="location">in <a href="Join.html#method_getRightTableAlias"><abbr title="Join">Join</abbr></a> at line 420</div>
+        <code>            public            
+    <strong>getRightTableAlias</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasRightTableAlias">
+        <div class="location">in <a href="Join.html#method_hasRightTableAlias"><abbr title="Join">Join</abbr></a> at line 425</div>
+        <code>            public            
+    <strong>hasRightTableAlias</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRightTableAliasOrName">
+        <div class="location">in <a href="Join.html#method_getRightTableAliasOrName"><abbr title="Join">Join</abbr></a> at line 430</div>
+        <code>            public            
+    <strong>getRightTableAliasOrName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRightTableWithAlias">
+        <div class="location">in <a href="Join.html#method_getRightTableWithAlias"><abbr title="Join">Join</abbr></a> at line 435</div>
+        <code>            public            
+    <strong>getRightTableWithAlias</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDB">
+        <div class="location">in <a href="Join.html#method_getDB"><abbr title="Join">Join</abbr></a> at line 446</div>
+        <code>            public            <a href="DBAdapter.html"><abbr title="DBAdapter">DBAdapter</abbr></a>
+    <strong>getDB</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the value of db.</p>
+        <p>The DBAdapter which might be used to get db specific<br />
+ variations of sql.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="DBAdapter.html"><abbr title="DBAdapter">DBAdapter</abbr></a></td>
+            <td>value of db.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDB">
+        <div class="location">in <a href="Join.html#method_setDB"><abbr title="Join">Join</abbr></a> at line 457</div>
+        <code>            public            void
+    <strong>setDB</strong>(<a href="DBAdapter.html"><abbr title="DBAdapter">DBAdapter</abbr></a> $db)</code>
+    </h3>
+    <div class="details">
+        <p>Set the value of db.</p>
+        <p>The DBAdapter might be used to get db specific variations of sql.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="DBAdapter.html"><abbr title="DBAdapter">DBAdapter</abbr></a></td>
+                <td>$db</td>
+                <td>Value to assign to db.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setJoinCondition">
+        <div class="location">in <a href="Join.html#method_setJoinCondition"><abbr title="Join">Join</abbr></a> at line 467</div>
+        <code>            public            
+    <strong>setJoinCondition</strong>(<a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a> $joinCondition)</code>
+    </h3>
+    <div class="details">
+        <p>Set a custom join condition</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a></td>
+                <td>$joinCondition</td>
+                <td>a Join condition</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getJoinCondition">
+        <div class="location">in <a href="Join.html#method_getJoinCondition"><abbr title="Join">Join</abbr></a> at line 477</div>
+        <code>            public            <a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a>
+    <strong>getJoinCondition</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the custom join condition, if previously set</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_buildJoinCondition">
+        <div class="location">in <a href="Join.html#method_buildJoinCondition"><abbr title="Join">Join</abbr></a> at line 487</div>
+        <code>            public            
+    <strong>buildJoinCondition</strong>(<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a> $c)</code>
+    </h3>
+    <div class="details">
+        <p>Set the custom join condition Criterion based on the conditions of this join</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+                <td>$c</td>
+                <td>A Criteria object to get Criterions from</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getClause">
+        <div class="location">in <a href="Join.html#method_getClause"><abbr title="Join">Join</abbr></a> at line 517</div>
+        <code>            public            string
+    <strong>getClause</strong>(array $params)</code>
+    </h3>
+    <div class="details">
+        <p>Get the join clause for this Join.</p>
+        <p>If the join condition needs binding, uses the passed params array.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>&amp;$params</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>SQL join clause with join condition</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_equals">
+        <div class="location">at line 141</div>
+        <code>            public            bool
+    <strong>equals</strong>(<a href="ModelJoin.html"><abbr title="ModelJoin">ModelJoin</abbr></a> $join)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="ModelJoin.html"><abbr title="ModelJoin">ModelJoin</abbr></a></td>
+                <td>$join</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toString">
+        <div class="location">in <a href="Join.html#method_toString"><abbr title="Join">Join</abbr></a> at line 560</div>
+        <code>            public            string
+    <strong>toString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns a String representation of the class,</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>A String representation of the class</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___toString">
+        <div class="location">at line 149</div>
+        <code>            public            
+    <strong>__toString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setRelationMap">
+        <div class="location">at line 23</div>
+        <code>            public            
+    <strong>setRelationMap</strong>(<abbr title="RelationMap">RelationMap</abbr> $relationMap, $leftTableAlias = null, $relationAlias = null)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="RelationMap">RelationMap</abbr></td>
+                <td>$relationMap</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$leftTableAlias</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$relationAlias</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRelationMap">
+        <div class="location">at line 39</div>
+        <code>            public            
+    <strong>getRelationMap</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setTableMap">
+        <div class="location">at line 51</div>
+        <code>            public            <a href="ModelJoin.html"><abbr title="ModelJoin">ModelJoin</abbr></a>
+    <strong>setTableMap</strong>(<abbr title="TableMap">TableMap</abbr> $tableMap)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the right tableMap for this join</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="TableMap">TableMap</abbr></td>
+                <td>$tableMap</td>
+                <td>The table map to use</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ModelJoin.html"><abbr title="ModelJoin">ModelJoin</abbr></a></td>
+            <td>The current join object, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTableMap">
+        <div class="location">at line 63</div>
+        <code>            public            <abbr title="TableMap">TableMap</abbr>
+    <strong>getTableMap</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the right tableMap for this join</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="TableMap">TableMap</abbr></td>
+            <td>The table map</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPreviousJoin">
+        <div class="location">at line 76</div>
+        <code>            public            <a href="ModelJoin.html"><abbr title="ModelJoin">ModelJoin</abbr></a>
+    <strong>setPreviousJoin</strong>(<a href="ModelJoin.html"><abbr title="ModelJoin">ModelJoin</abbr></a> $join)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="ModelJoin.html"><abbr title="ModelJoin">ModelJoin</abbr></a></td>
+                <td>$join</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ModelJoin.html"><abbr title="ModelJoin">ModelJoin</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPreviousJoin">
+        <div class="location">at line 86</div>
+        <code>            public            <a href="ModelJoin.html"><abbr title="ModelJoin">ModelJoin</abbr></a>
+    <strong>getPreviousJoin</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ModelJoin.html"><abbr title="ModelJoin">ModelJoin</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isPrimary">
+        <div class="location">at line 94</div>
+        <code>            public            bool
+    <strong>isPrimary</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setRelationAlias">
+        <div class="location">at line 99</div>
+        <code>            public            
+    <strong>setRelationAlias</strong>($relationAlias)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relationAlias</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRelationAlias">
+        <div class="location">at line 104</div>
+        <code>            public            
+    <strong>getRelationAlias</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasRelationAlias">
+        <div class="location">at line 109</div>
+        <code>            public            
+    <strong>hasRelationAlias</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getObjectToRelate">
+        <div class="location">at line 124</div>
+        <code>            public            Object
+    <strong>getObjectToRelate</strong>(Object $startObject)</code>
+    </h3>
+    <div class="details">
+        <p>This method returns the last related, but already hydrated object up until this join Starting from $startObject and continuously calling the getters to get to the base object for the current join.</p>
+        <p>This method only works if PreviousJoin has been defined,<br />
+ which only happens when you provide dotted relations when calling join</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>Object</td>
+                <td>$startObject</td>
+                <td>the start object all joins originate from and which has already hydrated</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Object</td>
+            <td>the base Object of this join</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

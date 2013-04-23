@@ -1,0 +1,20 @@
+#!/bin/sh
+
+if [[ -n "$1" && -n "$2" ]]; then
+  export PROPEL_PATH="$2"
+  if [[ $1 == "v1" ]]; then
+    git clone https://github.com/propelorm/Propel
+    export PROPEL_PATH="Propel"
+    php vendor/bin/sami.php update --force v1_config.php
+    rm -rf $PROPEL_PATH
+
+  elif [[ $1 == "v2" ]]; then
+    git clone https://github.com/propelorm/Propel2
+    export PROPEL_PATH="Propel2"
+    php vendor/bin/sami.php update --force v2_config.php
+    rm -rf $PROPEL_PATH
+  fi
+else
+  echo "Usage: build-api <version>"
+  echo "    version     - either v1 or v2"
+fi

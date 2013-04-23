@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>PropelSqlManager | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>PropelSqlManager</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PropelSqlManager</strong></p>
+
+            <div class="description">
+            <p>Service class for managing SQL.</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setConnections">setConnections</a>(array $connections)
+                    <p>Set the database connection settings</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getConnections">getConnections</a>()
+                    <p>Get the database connection settings</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_hasConnection">hasConnection</a>($connection)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getConnection">getConnection</a>($datasource)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setGeneratorConfig">setGeneratorConfig</a>(<a href="GeneratorConfigInterface.html"><abbr title="GeneratorConfigInterface">GeneratorConfigInterface</abbr></a> $generatorConfig)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="GeneratorConfigInterface.html"><abbr title="GeneratorConfigInterface">GeneratorConfigInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getGeneratorConfig">getGeneratorConfig</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDataModels">setDataModels</a>(array $dataModels)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getDataModels">getDataModels</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setWorkingDirectory">setWorkingDirectory</a>(string $workingDirectory)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getWorkingDirectory">getWorkingDirectory</a>()
+                    <p>return string</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getDatabases">getDatabases</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getSqlDbMapFilename">getSqlDbMapFilename</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_buildSql">buildSql</a>()
+                    <p>Build SQL files.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_insertSql">insertSql</a>(string $datasource = null)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_setConnections">
+        <div class="location">at line 49</div>
+        <code>            public            
+    <strong>setConnections</strong>(array $connections)</code>
+    </h3>
+    <div class="details">
+        <p>Set the database connection settings</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$connections</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConnections">
+        <div class="location">at line 59</div>
+        <code>            public            array
+    <strong>getConnections</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the database connection settings</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasConnection">
+        <div class="location">at line 64</div>
+        <code>            public            
+    <strong>hasConnection</strong>($connection)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$connection</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConnection">
+        <div class="location">at line 69</div>
+        <code>            public            
+    <strong>getConnection</strong>($datasource)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$datasource</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setGeneratorConfig">
+        <div class="location">at line 80</div>
+        <code>            public            
+    <strong>setGeneratorConfig</strong>(<a href="GeneratorConfigInterface.html"><abbr title="GeneratorConfigInterface">GeneratorConfigInterface</abbr></a> $generatorConfig)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="GeneratorConfigInterface.html"><abbr title="GeneratorConfigInterface">GeneratorConfigInterface</abbr></a></td>
+                <td>$generatorConfig</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getGeneratorConfig">
+        <div class="location">at line 88</div>
+        <code>            public            <a href="GeneratorConfigInterface.html"><abbr title="GeneratorConfigInterface">GeneratorConfigInterface</abbr></a>
+    <strong>getGeneratorConfig</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="GeneratorConfigInterface.html"><abbr title="GeneratorConfigInterface">GeneratorConfigInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDataModels">
+        <div class="location">at line 96</div>
+        <code>            public            
+    <strong>setDataModels</strong>(array $dataModels)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$dataModels</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDataModels">
+        <div class="location">at line 104</div>
+        <code>            public            array
+    <strong>getDataModels</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setWorkingDirectory">
+        <div class="location">at line 112</div>
+        <code>            public            
+    <strong>setWorkingDirectory</strong>(string $workingDirectory)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$workingDirectory</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getWorkingDirectory">
+        <div class="location">at line 120</div>
+        <code>            public            
+    <strong>getWorkingDirectory</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>return string</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDatabases">
+        <div class="location">at line 128</div>
+        <code>            public            array
+    <strong>getDatabases</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSqlDbMapFilename">
+        <div class="location">at line 155</div>
+        <code>            public            string
+    <strong>getSqlDbMapFilename</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_buildSql">
+        <div class="location">at line 163</div>
+        <code>            public            
+    <strong>buildSql</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Build SQL files.</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_insertSql">
+        <div class="location">at line 192</div>
+        <code>            public            
+    <strong>insertSql</strong>(string $datasource = null)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$datasource</td>
+                <td>A datasource name.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

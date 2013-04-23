@@ -1,0 +1,2695 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>PgsqlPlatform | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>PgsqlPlatform</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PgsqlPlatform</strong>        extends <a href="DefaultPlatform.html"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></p>
+
+            <div class="description">
+            <p>Postgresql PropelPlatformInterface implementation.</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a> $con = null)
+                    <p>Default constructor.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method___construct"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setConnection">setConnection</a>(<a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a> $con = null)
+                    <p>Set the database connection to use for this Platform class.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_setConnection"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getConnection">getConnection</a>()
+                    <p>Returns the database connection to use for this Platform class.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getConnection"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setGeneratorConfig">setGeneratorConfig</a>(<a href="GeneratorConfig.html"><abbr title="GeneratorConfig">GeneratorConfig</abbr></a> $config)
+                    <p>Sets the GeneratorConfig to use in the parsing.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_setGeneratorConfig"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDatabaseType">getDatabaseType</a>()
+                    <p>Returns the short name of the database type that this platform represents.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getDatabaseType"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getMaxColumnNameLength">getMaxColumnNameLength</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getNativeIdMethod">getNativeIdMethod</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Domain.html"><abbr title="Domain">Domain</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getDomainForType">getDomainForType</a>(string $propelType)
+                    <p>Returns the db specific domain for a propelType.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getDomainForType"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getNullString">getNullString</a>($notNull)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getNullString"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getAutoIncrement">getAutoIncrement</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getSequenceName">getSequenceName</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p>Override to provide sequence names that conform to postgres&#039; standard when no id-method-parameter specified.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getAddTablesDDL">getAddTablesDDL</a>(<a href="Database.html"><abbr title="Database">Database</abbr></a> $database)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getBeginDDL">getBeginDDL</a>()
+                    <p>Gets the requests to execute at the beginning of a DDL file</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getBeginDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getEndDDL">getEndDDL</a>()
+                    <p>Gets the requests to execute at the end of a DDL file</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getEndDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getDropTableDDL">getDropTableDDL</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getAddTableDDL">getAddTableDDL</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnDDL">getColumnDDL</a>(<a href="Column.html"><abbr title="Column">Column</abbr></a> $col)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnDefaultValueDDL">getColumnDefaultValueDDL</a>(<a href="Column.html"><abbr title="Column">Column</abbr></a> $col)
+                    <p>Returns the SQL for the default value of a Column object</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getColumnDefaultValueDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnListDDL">getColumnListDDL</a>($columns, $delimiter = &#039;,&#039;)
+                    <p>Creates a delimiter-delimited string list of column names, quoted using quoteIdentifier().</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getColumnListDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getPrimaryKeyName">getPrimaryKeyName</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPrimaryKeyDDL">getPrimaryKeyDDL</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p>Returns the SQL for the primary key of a Table object</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getPrimaryKeyDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDropPrimaryKeyDDL">getDropPrimaryKeyDDL</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p>Builds the DDL SQL to drop the primary key of a table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getDropPrimaryKeyDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getAddPrimaryKeyDDL">getAddPrimaryKeyDDL</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p>Builds the DDL SQL to add the primary key of a table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getAddPrimaryKeyDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getAddIndicesDDL">getAddIndicesDDL</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p>Builds the DDL SQL to add the indices of a table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getAddIndicesDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getAddIndexDDL">getAddIndexDDL</a>(<a href="Index.html"><abbr title="Index">Index</abbr></a> $index)
+                    <p>Builds the DDL SQL to add an Index.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getAddIndexDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDropIndexDDL">getDropIndexDDL</a>(<a href="Index.html"><abbr title="Index">Index</abbr></a> $index)
+                    <p>Overrides the implementation from DefaultPlatform</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getIndexDDL">getIndexDDL</a>(<a href="Index.html"><abbr title="Index">Index</abbr></a> $index)
+                    <p>Builds the DDL SQL for an Index object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getIndexDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getUniqueDDL">getUniqueDDL</a>(<a href="Unique.html"><abbr title="Unique">Unique</abbr></a> $unique)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getAddForeignKeysDDL">getAddForeignKeysDDL</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p>Builds the DDL SQL to add the foreign keys of a table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getAddForeignKeysDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getAddForeignKeyDDL">getAddForeignKeyDDL</a>(<a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $fk)
+                    <p>Builds the DDL SQL to add a foreign key.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getAddForeignKeyDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDropForeignKeyDDL">getDropForeignKeyDDL</a>(<a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $fk)
+                    <p>Builds the DDL SQL to drop a foreign key.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getDropForeignKeyDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getForeignKeyDDL">getForeignKeyDDL</a>(<a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $fk)
+                    <p>Builds the DDL SQL for a ForeignKey object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getForeignKeyDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getCommentLineDDL">getCommentLineDDL</a>($comment)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getCommentLineDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getCommentBlockDDL">getCommentBlockDDL</a>($comment)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getCommentBlockDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getModifyDatabaseDDL">getModifyDatabaseDDL</a>(<a href="PropelDatabaseDiff.html"><abbr title="PropelDatabaseDiff">PropelDatabaseDiff</abbr></a> $databaseDiff)
+                    <p>Builds the DDL SQL to modify a database based on a PropelDatabaseDiff instance</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getModifyDatabaseDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getRenameTableDDL">getRenameTableDDL</a>($fromTableName, $toTableName)
+                    <p>Builds the DDL SQL to rename a table</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getRenameTableDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getModifyTableDDL">getModifyTableDDL</a>(<a href="PropelTableDiff.html"><abbr title="PropelTableDiff">PropelTableDiff</abbr></a> $tableDiff)
+                    <p>Builds the DDL SQL to alter a table based on a PropelTableDiff instance</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getModifyTableDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getModifyTableColumnsDDL">getModifyTableColumnsDDL</a>(<a href="PropelTableDiff.html"><abbr title="PropelTableDiff">PropelTableDiff</abbr></a> $tableDiff)
+                    <p>Builds the DDL SQL to alter a table based on a PropelTableDiff instance</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getModifyTableColumnsDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getModifyTablePrimaryKeyDDL">getModifyTablePrimaryKeyDDL</a>(<a href="PropelTableDiff.html"><abbr title="PropelTableDiff">PropelTableDiff</abbr></a> $tableDiff)
+                    <p>Builds the DDL SQL to alter a table&#039;s primary key based on a PropelTableDiff instance</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getModifyTablePrimaryKeyDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getModifyTableIndicesDDL">getModifyTableIndicesDDL</a>(<a href="PropelTableDiff.html"><abbr title="PropelTableDiff">PropelTableDiff</abbr></a> $tableDiff)
+                    <p>Builds the DDL SQL to alter a table&#039;s indices based on a PropelTableDiff instance</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getModifyTableIndicesDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getModifyTableForeignKeysDDL">getModifyTableForeignKeysDDL</a>(<a href="PropelTableDiff.html"><abbr title="PropelTableDiff">PropelTableDiff</abbr></a> $tableDiff)
+                    <p>Builds the DDL SQL to alter a table&#039;s foreign keys based on a PropelTableDiff instance</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getModifyTableForeignKeysDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getRemoveColumnDDL">getRemoveColumnDDL</a>(<a href="Column.html"><abbr title="Column">Column</abbr></a> $column)
+                    <p>Builds the DDL SQL to remove a column</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getRemoveColumnDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getRenameColumnDDL">getRenameColumnDDL</a>($fromColumn, $toColumn)
+                    <p>Builds the DDL SQL to rename a column</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getRenameColumnDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getModifyColumnDDL">getModifyColumnDDL</a>(<a href="PropelColumnDiff.html"><abbr title="PropelColumnDiff">PropelColumnDiff</abbr></a> $columnDiff)
+                    <p>Overrides the implementation from DefaultPlatform</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getModifyColumnsDDL">getModifyColumnsDDL</a>($columnDiffs)
+                    <p>Overrides the implementation from DefaultPlatform</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getAddColumnDDL">getAddColumnDDL</a>(<a href="Column.html"><abbr title="Column">Column</abbr></a> $column)
+                    <p>Builds the DDL SQL to remove a column</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getAddColumnDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getAddColumnsDDL">getAddColumnsDDL</a>($columns)
+                    <p>Overrides the implementation from DefaultPlatform</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_hasSize">hasSize</a>($sqlType)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasScale">hasScale</a>(string $sqlType)
+                    <p>Returns if the RDBMS-specific SQL type has a scale attribute.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_hasScale"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_quote">quote</a>(string $text)
+                    <p>Quote and escape needed characters in the string for unerlying RDBMS.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_quote"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_quoteIdentifier">quoteIdentifier</a>(string $text)
+                    <p>Quotes identifiers used in database SQL.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_quoteIdentifier"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setIdentifierQuoting">setIdentifierQuoting</a>($enabled = true)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_setIdentifierQuoting"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getIdentifierQuoting">getIdentifierQuoting</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getIdentifierQuoting"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_supportsNativeDeleteTrigger">supportsNativeDeleteTrigger</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_supportsInsertNullPk">supportsInsertNullPk</a>()
+                    <p>Whether RDBMS supports INSERT null values in autoincremented primary keys</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_supportsInsertNullPk"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_hasStreamBlobImpl">hasStreamBlobImpl</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_supportsSchemas">supportsSchemas</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_supportsMigrations">supportsMigrations</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_supportsMigrations"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_supportsVarcharWithoutSize">supportsVarcharWithoutSize</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getBooleanString">getBooleanString</a>($b)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getTimestampFormatter">getTimestampFormatter</a>()
+                    <p>Gets the preferred timestamp formatter for setting date/time values.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getTimestampFormatter"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getTimeFormatter">getTimeFormatter</a>()
+                    <p>Gets the preferred time formatter for setting date/time values.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getTimeFormatter"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDateFormatter">getDateFormatter</a>()
+                    <p>Gets the preferred date formatter for setting date/time values.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DefaultPlatform.html#method_getDateFormatter"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_disconnectedEscapeText">disconnectedEscapeText</a>(string $text)
+                    <p>Escape the string for RDBMS.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getAddSchemasDDL">getAddSchemasDDL</a>(<a href="Database.html"><abbr title="Database">Database</abbr></a> $database)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getAddSchemaDDL">getAddSchemaDDL</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getUseSchemaDDL">getUseSchemaDDL</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getResetSchemaDDL">getResetSchemaDDL</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">in <a href="DefaultPlatform.html#method___construct"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 48</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Default constructor.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a></td>
+                <td>$con</td>
+                <td>Optional database connection to use in this platform.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setConnection">
+        <div class="location">in <a href="DefaultPlatform.html#method_setConnection"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 58</div>
+        <code>            public            
+    <strong>setConnection</strong>(<a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Set the database connection to use for this Platform class.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a></td>
+                <td>$con</td>
+                <td>Database connection to use in this platform.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConnection">
+        <div class="location">in <a href="DefaultPlatform.html#method_getConnection"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 67</div>
+        <code>            public            <a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a>
+    <strong>getConnection</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the database connection to use for this Platform class.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a></td>
+            <td>The database connection or NULL if none has been set.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setGeneratorConfig">
+        <div class="location">in <a href="DefaultPlatform.html#method_setGeneratorConfig"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 77</div>
+        <code>            public            
+    <strong>setGeneratorConfig</strong>(<a href="GeneratorConfig.html"><abbr title="GeneratorConfig">GeneratorConfig</abbr></a> $config)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the GeneratorConfig to use in the parsing.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="GeneratorConfig.html"><abbr title="GeneratorConfig">GeneratorConfig</abbr></a></td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDatabaseType">
+        <div class="location">in <a href="DefaultPlatform.html#method_getDatabaseType"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 127</div>
+        <code>            public            string
+    <strong>getDatabaseType</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the short name of the database type that this platform represents.</p>
+        <p>For example MysqlPlatform-&gt;getDatabaseType() returns &#039;mysql&#039;.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getMaxColumnNameLength">
+        <div class="location">at line 59</div>
+        <code>            public            
+    <strong>getMaxColumnNameLength</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNativeIdMethod">
+        <div class="location">at line 49</div>
+        <code>            public            
+    <strong>getNativeIdMethod</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDomainForType">
+        <div class="location">in <a href="DefaultPlatform.html#method_getDomainForType"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 160</div>
+        <code>            public            <a href="Domain.html"><abbr title="Domain">Domain</abbr></a>
+    <strong>getDomainForType</strong>(string $propelType)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the db specific domain for a propelType.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$propelType</td>
+                <td>the Propel type name.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Domain.html"><abbr title="Domain">Domain</abbr></a></td>
+            <td>The db specific domain.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNullString">
+        <div class="location">in <a href="DefaultPlatform.html#method_getNullString"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 172</div>
+        <code>            public            string
+    <strong>getNullString</strong>($notNull)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$notNull</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The RDBMS-specific SQL fragment for &lt;code&gt;NULL&lt;/code&gt; or &lt;code&gt;NOT NULL&lt;/code&gt;.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAutoIncrement">
+        <div class="location">at line 54</div>
+        <code>            public            
+    <strong>getAutoIncrement</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSequenceName">
+        <div class="location">at line 99</div>
+        <code>            public            string
+    <strong>getSequenceName</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Override to provide sequence names that conform to postgres&#039; standard when no id-method-parameter specified.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddTablesDDL">
+        <div class="location">at line 195</div>
+        <code>            public            
+    <strong>getAddTablesDDL</strong>(<a href="Database.html"><abbr title="Database">Database</abbr></a> $database)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Database.html"><abbr title="Database">Database</abbr></a></td>
+                <td>$database</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBeginDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getBeginDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 244</div>
+        <code>            public            string
+    <strong>getBeginDDL</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the requests to execute at the beginning of a DDL file</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getEndDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getEndDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 253</div>
+        <code>            public            string
+    <strong>getEndDDL</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the requests to execute at the end of a DDL file</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDropTableDDL">
+        <div class="location">at line 284</div>
+        <code>            public            
+    <strong>getDropTableDDL</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddTableDDL">
+        <div class="location">at line 212</div>
+        <code>            public            
+    <strong>getAddTableDDL</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnDDL">
+        <div class="location">at line 303</div>
+        <code>            public            
+    <strong>getColumnDDL</strong>(<a href="Column.html"><abbr title="Column">Column</abbr></a> $col)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Column.html"><abbr title="Column">Column</abbr></a></td>
+                <td>$col</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnDefaultValueDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getColumnDefaultValueDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 340</div>
+        <code>            public            string
+    <strong>getColumnDefaultValueDDL</strong>(<a href="Column.html"><abbr title="Column">Column</abbr></a> $col)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the SQL for the default value of a Column object</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Column.html"><abbr title="Column">Column</abbr></a></td>
+                <td>$col</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnListDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getColumnListDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 376</div>
+        <code>            public            string
+    <strong>getColumnListDDL</strong>($columns, $delimiter = &#039;,&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a delimiter-delimited string list of column names, quoted using quoteIdentifier().</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$delimiter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPrimaryKeyName">
+        <div class="location">at line 297</div>
+        <code>            public            
+    <strong>getPrimaryKeyName</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPrimaryKeyDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getPrimaryKeyDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 402</div>
+        <code>            public            string
+    <strong>getPrimaryKeyDDL</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the SQL for the primary key of a Table object</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDropPrimaryKeyDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getDropPrimaryKeyDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 415</div>
+        <code>            public            string
+    <strong>getDropPrimaryKeyDDL</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to drop the primary key of a table.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddPrimaryKeyDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getAddPrimaryKeyDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 432</div>
+        <code>            public            string
+    <strong>getAddPrimaryKeyDDL</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to add the primary key of a table.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddIndicesDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getAddIndicesDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 449</div>
+        <code>            public            string
+    <strong>getAddIndicesDDL</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to add the indices of a table.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddIndexDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getAddIndexDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 464</div>
+        <code>            public            string
+    <strong>getAddIndexDDL</strong>(<a href="Index.html"><abbr title="Index">Index</abbr></a> $index)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to add an Index.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Index.html"><abbr title="Index">Index</abbr></a></td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDropIndexDDL">
+        <div class="location">at line 457</div>
+        <code>            public            string
+    <strong>getDropIndexDDL</strong>(<a href="Index.html"><abbr title="Index">Index</abbr></a> $index)</code>
+    </h3>
+    <div class="details">
+        <p>Overrides the implementation from DefaultPlatform</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Index.html"><abbr title="Index">Index</abbr></a></td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>DefaultPlatform::getDropIndexDDL</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getIndexDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getIndexDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 499</div>
+        <code>            public            string
+    <strong>getIndexDDL</strong>(<a href="Index.html"><abbr title="Index">Index</abbr></a> $index)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL for an Index object.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Index.html"><abbr title="Index">Index</abbr></a></td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUniqueDDL">
+        <div class="location">at line 331</div>
+        <code>            public            
+    <strong>getUniqueDDL</strong>(<a href="Unique.html"><abbr title="Unique">Unique</abbr></a> $unique)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Unique.html"><abbr title="Unique">Unique</abbr></a></td>
+                <td>$unique</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddForeignKeysDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getAddForeignKeysDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 525</div>
+        <code>            public            string
+    <strong>getAddForeignKeysDDL</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to add the foreign keys of a table.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddForeignKeyDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getAddForeignKeyDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 540</div>
+        <code>            public            string
+    <strong>getAddForeignKeyDDL</strong>(<a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $fk)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to add a foreign key.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a></td>
+                <td>$fk</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDropForeignKeyDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getDropForeignKeyDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 560</div>
+        <code>            public            string
+    <strong>getDropForeignKeyDDL</strong>(<a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $fk)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to drop a foreign key.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a></td>
+                <td>$fk</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getForeignKeyDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getForeignKeyDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 578</div>
+        <code>            public            string
+    <strong>getForeignKeyDDL</strong>(<a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $fk)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL for a ForeignKey object.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a></td>
+                <td>$fk</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCommentLineDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getCommentLineDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 604</div>
+        <code>            public            
+    <strong>getCommentLineDDL</strong>($comment)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$comment</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCommentBlockDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getCommentBlockDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 611</div>
+        <code>            public            
+    <strong>getCommentBlockDDL</strong>($comment)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$comment</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getModifyDatabaseDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getModifyDatabaseDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 627</div>
+        <code>            public            string
+    <strong>getModifyDatabaseDDL</strong>(<a href="PropelDatabaseDiff.html"><abbr title="PropelDatabaseDiff">PropelDatabaseDiff</abbr></a> $databaseDiff)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to modify a database based on a PropelDatabaseDiff instance</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelDatabaseDiff.html"><abbr title="PropelDatabaseDiff">PropelDatabaseDiff</abbr></a></td>
+                <td>$databaseDiff</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRenameTableDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getRenameTableDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 661</div>
+        <code>            public            string
+    <strong>getRenameTableDDL</strong>($fromTableName, $toTableName)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to rename a table</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$fromTableName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$toTableName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getModifyTableDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getModifyTableDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 678</div>
+        <code>            public            string
+    <strong>getModifyTableDDL</strong>(<a href="PropelTableDiff.html"><abbr title="PropelTableDiff">PropelTableDiff</abbr></a> $tableDiff)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to alter a table based on a PropelTableDiff instance</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelTableDiff.html"><abbr title="PropelTableDiff">PropelTableDiff</abbr></a></td>
+                <td>$tableDiff</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getModifyTableColumnsDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getModifyTableColumnsDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 743</div>
+        <code>            public            string
+    <strong>getModifyTableColumnsDDL</strong>(<a href="PropelTableDiff.html"><abbr title="PropelTableDiff">PropelTableDiff</abbr></a> $tableDiff)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to alter a table based on a PropelTableDiff instance</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelTableDiff.html"><abbr title="PropelTableDiff">PropelTableDiff</abbr></a></td>
+                <td>$tableDiff</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getModifyTablePrimaryKeyDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getModifyTablePrimaryKeyDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 772</div>
+        <code>            public            string
+    <strong>getModifyTablePrimaryKeyDDL</strong>(<a href="PropelTableDiff.html"><abbr title="PropelTableDiff">PropelTableDiff</abbr></a> $tableDiff)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to alter a table&#039;s primary key based on a PropelTableDiff instance</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelTableDiff.html"><abbr title="PropelTableDiff">PropelTableDiff</abbr></a></td>
+                <td>$tableDiff</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getModifyTableIndicesDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getModifyTableIndicesDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 790</div>
+        <code>            public            string
+    <strong>getModifyTableIndicesDDL</strong>(<a href="PropelTableDiff.html"><abbr title="PropelTableDiff">PropelTableDiff</abbr></a> $tableDiff)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to alter a table&#039;s indices based on a PropelTableDiff instance</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelTableDiff.html"><abbr title="PropelTableDiff">PropelTableDiff</abbr></a></td>
+                <td>$tableDiff</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getModifyTableForeignKeysDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getModifyTableForeignKeysDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 817</div>
+        <code>            public            string
+    <strong>getModifyTableForeignKeysDDL</strong>(<a href="PropelTableDiff.html"><abbr title="PropelTableDiff">PropelTableDiff</abbr></a> $tableDiff)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to alter a table&#039;s foreign keys based on a PropelTableDiff instance</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelTableDiff.html"><abbr title="PropelTableDiff">PropelTableDiff</abbr></a></td>
+                <td>$tableDiff</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRemoveColumnDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getRemoveColumnDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 843</div>
+        <code>            public            string
+    <strong>getRemoveColumnDDL</strong>(<a href="Column.html"><abbr title="Column">Column</abbr></a> $column)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to remove a column</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Column.html"><abbr title="Column">Column</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRenameColumnDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getRenameColumnDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 858</div>
+        <code>            public            string
+    <strong>getRenameColumnDDL</strong>($fromColumn, $toColumn)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to rename a column</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$fromColumn</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$toColumn</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getModifyColumnDDL">
+        <div class="location">at line 369</div>
+        <code>            public            string
+    <strong>getModifyColumnDDL</strong>(<a href="PropelColumnDiff.html"><abbr title="PropelColumnDiff">PropelColumnDiff</abbr></a> $columnDiff)</code>
+    </h3>
+    <div class="details">
+        <p>Overrides the implementation from DefaultPlatform</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelColumnDiff.html"><abbr title="PropelColumnDiff">PropelColumnDiff</abbr></a></td>
+                <td>$columnDiff</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>DefaultPlatform::getModifyColumnDDL</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getModifyColumnsDDL">
+        <div class="location">at line 425</div>
+        <code>            public            string
+    <strong>getModifyColumnsDDL</strong>($columnDiffs)</code>
+    </h3>
+    <div class="details">
+        <p>Overrides the implementation from DefaultPlatform</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$columnDiffs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>DefaultPlatform::getModifyColumnsDDL</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getAddColumnDDL">
+        <div class="location">in <a href="DefaultPlatform.html#method_getAddColumnDDL"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 924</div>
+        <code>            public            string
+    <strong>getAddColumnDDL</strong>(<a href="Column.html"><abbr title="Column">Column</abbr></a> $column)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to remove a column</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Column.html"><abbr title="Column">Column</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddColumnsDDL">
+        <div class="location">at line 441</div>
+        <code>            public            string
+    <strong>getAddColumnsDDL</strong>($columns)</code>
+    </h3>
+    <div class="details">
+        <p>Overrides the implementation from DefaultPlatform</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>DefaultPlatform::getAddColumnsDLL</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_hasSize">
+        <div class="location">at line 347</div>
+        <code>            public            
+    <strong>hasSize</strong>($sqlType)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$sqlType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasScale">
+        <div class="location">in <a href="DefaultPlatform.html#method_hasScale"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 983</div>
+        <code>            public            boolean
+    <strong>hasScale</strong>(string $sqlType)</code>
+    </h3>
+    <div class="details">
+        <p>Returns if the RDBMS-specific SQL type has a scale attribute.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$sqlType</td>
+                <td>the SQL type</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if the type has a scale attribute</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_quote">
+        <div class="location">in <a href="DefaultPlatform.html#method_quote"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 993</div>
+        <code>            public            string
+    <strong>quote</strong>(string $text)</code>
+    </h3>
+    <div class="details">
+        <p>Quote and escape needed characters in the string for unerlying RDBMS.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_quoteIdentifier">
+        <div class="location">in <a href="DefaultPlatform.html#method_quoteIdentifier"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 1021</div>
+        <code>            public            string
+    <strong>quoteIdentifier</strong>(string $text)</code>
+    </h3>
+    <div class="details">
+        <p>Quotes identifiers used in database SQL.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>Quoted identifier.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setIdentifierQuoting">
+        <div class="location">in <a href="DefaultPlatform.html#method_setIdentifierQuoting"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 1026</div>
+        <code>            public            
+    <strong>setIdentifierQuoting</strong>($enabled = true)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$enabled</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getIdentifierQuoting">
+        <div class="location">in <a href="DefaultPlatform.html#method_getIdentifierQuoting"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 1031</div>
+        <code>            public            
+    <strong>getIdentifierQuoting</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_supportsNativeDeleteTrigger">
+        <div class="location">at line 86</div>
+        <code>            public            
+    <strong>supportsNativeDeleteTrigger</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_supportsInsertNullPk">
+        <div class="location">in <a href="DefaultPlatform.html#method_supportsInsertNullPk"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 1049</div>
+        <code>            public            boolean
+    <strong>supportsInsertNullPk</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Whether RDBMS supports INSERT null values in autoincremented primary keys</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasStreamBlobImpl">
+        <div class="location">at line 352</div>
+        <code>            public            
+    <strong>hasStreamBlobImpl</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_supportsSchemas">
+        <div class="location">at line 342</div>
+        <code>            public            
+    <strong>supportsSchemas</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>Platform::supportsSchemas()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_supportsMigrations">
+        <div class="location">in <a href="DefaultPlatform.html#method_supportsMigrations"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 1074</div>
+        <code>            public            
+    <strong>supportsMigrations</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>Platform::supportsMigrations()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_supportsVarcharWithoutSize">
+        <div class="location">at line 357</div>
+        <code>            public            
+    <strong>supportsVarcharWithoutSize</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBooleanString">
+        <div class="location">at line 78</div>
+        <code>            public            
+    <strong>getBooleanString</strong>($b)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$b</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTimestampFormatter">
+        <div class="location">in <a href="DefaultPlatform.html#method_getTimestampFormatter"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 1106</div>
+        <code>            public            string
+    <strong>getTimestampFormatter</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the preferred timestamp formatter for setting date/time values.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTimeFormatter">
+        <div class="location">in <a href="DefaultPlatform.html#method_getTimeFormatter"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 1115</div>
+        <code>            public            string
+    <strong>getTimeFormatter</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the preferred time formatter for setting date/time values.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDateFormatter">
+        <div class="location">in <a href="DefaultPlatform.html#method_getDateFormatter"><abbr title="DefaultPlatform">DefaultPlatform</abbr></a> at line 1124</div>
+        <code>            public            string
+    <strong>getDateFormatter</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the preferred date formatter for setting date/time values.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_disconnectedEscapeText">
+        <div class="location">at line 69</div>
+        <code>            public            string
+    <strong>disconnectedEscapeText</strong>(string $text)</code>
+    </h3>
+    <div class="details">
+        <p>Escape the string for RDBMS.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddSchemasDDL">
+        <div class="location">at line 148</div>
+        <code>            public            
+    <strong>getAddSchemasDDL</strong>(<a href="Database.html"><abbr title="Database">Database</abbr></a> $database)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Database.html"><abbr title="Database">Database</abbr></a></td>
+                <td>$database</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddSchemaDDL">
+        <div class="location">at line 162</div>
+        <code>            public            
+    <strong>getAddSchemaDDL</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUseSchemaDDL">
+        <div class="location">at line 174</div>
+        <code>            public            
+    <strong>getUseSchemaDDL</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getResetSchemaDDL">
+        <div class="location">at line 185</div>
+        <code>            public            
+    <strong>getResetSchemaDDL</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

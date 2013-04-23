@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>NameGenerator | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Interface</div>
+    <h1><a href=".html"></a>NameGenerator</h1>
+    </div>
+        <div class="content">
+                <p>interface    <strong>NameGenerator</strong></p>
+
+            <div class="description">
+            <p>The generic interface to a name generation algorithm.</p>
+            <p></p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>STD_SEPARATOR_CHAR</td>
+                <td class="last">
+                    <p><em>The character used by most implementations as the separator between name elements.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONV_METHOD_UNDERSCORE</td>
+                <td class="last">
+                    <p><em>Traditional method for converting schema table and column names to PHP names.</em></p>
+                    <p>The &lt;code&gt;CONV_METHOD_XXX&lt;/code&gt; constants<br />
+ define how names for columns and tables in the database schema<br />
+ will be converted to PHP source names.</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONV_METHOD_CLEAN</td>
+                <td class="last">
+                    <p><em>Heavier method for converting schema table and column names to PHP names.</em></p>
+                    <p>Similar to {@link #CONV_METHOD_UNDERSCORE} but<br />
+ this one will pass only letters and numbers through and will<br />
+ use as separator any character that is not a letter or a number<br />
+ inside the string to be converted. The &lt;code&gt;CONV_METHOD_XXX&lt;/code&gt;<br />
+ constants define how names for columns and tales in the<br />
+ database schema will be converted to PHP source names.</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONV_METHOD_PHPNAME</td>
+                <td class="last">
+                    <p><em>Similar to {@link #CONV_METHOD_UNDERSCORE} except nothing is converted to lowercase.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONV_METHOD_NOCHANGE</td>
+                <td class="last">
+                    <p><em>Specifies no modification when converting from a schema column or table name to a PHP name.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <abbr title="The">The</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_generateName">generateName</a>(<abbr title="inputs">inputs</abbr> $inputs)
+                    <p>Given a list of &lt;code&gt;String&lt;/code&gt; objects, implements an algorithm which produces a name.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_generateName">
+        <div class="location">at line 72</div>
+        <code>            public            <abbr title="The">The</abbr>
+    <strong>generateName</strong>(<abbr title="inputs">inputs</abbr> $inputs)</code>
+    </h3>
+    <div class="details">
+        <p>Given a list of &lt;code&gt;String&lt;/code&gt; objects, implements an algorithm which produces a name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="inputs">inputs</abbr></td>
+                <td>$inputs</td>
+                <td>Inputs used to generate a name.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="The">The</abbr></td>
+            <td>generated name.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="EngineException.html"><abbr title="EngineException">EngineException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

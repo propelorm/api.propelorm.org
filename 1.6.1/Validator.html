@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Validator | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>Validator</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Validator</strong>        extends <a href="XMLElement.html"><abbr title="XMLElement">XMLElement</abbr></a></p>
+
+            <div class="description">
+            <p>Validator.</p>
+            <p></p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>TRANSLATE_NONE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TRANSLATE_GETTEXT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_loadFromXML">loadFromXML</a>(array $attributes)
+                    <p>This is the entry point method for loading data from XML.</p>
+                </td>
+                <td><small>from&nbsp;<a href="XMLElement.html#method_loadFromXML"><abbr title="XMLElement">XMLElement</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAttributes">getAttributes</a>()
+                    <p>Returns the assoc array of attributes.</p>
+                </td>
+                <td><small>from&nbsp;<a href="XMLElement.html#method_getAttributes"><abbr title="XMLElement">XMLElement</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getAttribute">getAttribute</a>(string $name, mixed $defaultValue = null)
+                    <p>Gets a particular attribute by [case-insensitive] name.</p>
+                </td>
+                <td><small>from&nbsp;<a href="XMLElement.html#method_getAttribute"><abbr title="XMLElement">XMLElement</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_appendXml">appendXml</a>(<a href="http://php.net/DOMNode"><abbr title="DOMNode">DOMNode</abbr></a> $node)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VendorInfo.html"><abbr title="VendorInfo">VendorInfo</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addVendorInfo">addVendorInfo</a>(mixed $data)
+                    <p>Sets an associated VendorInfo object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="XMLElement.html#method_addVendorInfo"><abbr title="XMLElement">XMLElement</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VendorInfo.html"><abbr title="VendorInfo">VendorInfo</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getVendorInfoForType">getVendorInfoForType</a>($type)
+                    <p>Gets the any associated VendorInfo object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="XMLElement.html#method_getVendorInfoForType"><abbr title="XMLElement">XMLElement</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getConfiguredBehavior">getConfiguredBehavior</a>(string $bname)
+                    <p>Find the best class name for a given behavior Looks in build.properties for path like propel.behavior.[bname].class If not found, tries to autoload [Bname]Behavior If no success, returns &#039;Behavior&#039;</p>
+                </td>
+                <td><small>from&nbsp;<a href="XMLElement.html#method_getConfiguredBehavior"><abbr title="XMLElement">XMLElement</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_toString">toString</a>()
+                    <p>String representation of the current object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="XMLElement.html#method_toString"><abbr title="XMLElement">XMLElement</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___toString">__toString</a>()
+                    <p>Magic string method</p>
+                </td>
+                <td><small>from&nbsp;<a href="XMLElement.html#method___toString"><abbr title="XMLElement">XMLElement</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Rule.html"><abbr title="Rule">Rule</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addRule">addRule</a>(mixed $data)
+                    <p>Add a Rule to this validator.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getRules">getRules</a>()
+                    <p>Gets an array of all added rules for this validator.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnName">getColumnName</a>()
+                    <p>Gets the name of the column that this Validator applies to.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setColumn">setColumn</a>(<a href="Column.html"><abbr title="Column">Column</abbr></a> $column)
+                    <p>Sets the Column object that this validator applies to.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Column.html"><abbr title="Column">Column</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getColumn">getColumn</a>()
+                    <p>Gets the Column object that this validator applies to.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setTable">setTable</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p>Set the owning Table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Table.html"><abbr title="Table">Table</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getTable">getTable</a>()
+                    <p>Get the owning Table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setTranslate">setTranslate</a>(string $method)
+                    <p>Set the translation mode to use for the message.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getTranslate">getTranslate</a>()
+                    <p>Get the translation mode to use for the message.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_loadFromXML">
+        <div class="location">in <a href="XMLElement.html#method_loadFromXML"><abbr title="XMLElement">XMLElement</abbr></a> at line 47</div>
+        <code>            public            
+    <strong>loadFromXML</strong>(array $attributes)</code>
+    </h3>
+    <div class="details">
+        <p>This is the entry point method for loading data from XML.</p>
+        <p>It calls a setupObject() method that must be implemented by the child class.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td>The attributes for the XML tag.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAttributes">
+        <div class="location">in <a href="XMLElement.html#method_getAttributes"><abbr title="XMLElement">XMLElement</abbr></a> at line 58</div>
+        <code>            public            array
+    <strong>getAttributes</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the assoc array of attributes.</p>
+        <p>All attribute names (keys) are lowercase.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAttribute">
+        <div class="location">in <a href="XMLElement.html#method_getAttribute"><abbr title="XMLElement">XMLElement</abbr></a> at line 70</div>
+        <code>            public            mixed
+    <strong>getAttribute</strong>(string $name, mixed $defaultValue = null)</code>
+    </h3>
+    <div class="details">
+        <p>Gets a particular attribute by [case-insensitive] name.</p>
+        <p>If attribute is not set then the $defaultValue is returned.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The [case-insensitive] name of the attribute to lookup.</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$defaultValue</td>
+                <td>The default value to use in case the attribute is not set.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>The value of the attribute or $defaultValue if not set.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_appendXml">
+        <div class="location">at line 169</div>
+        <code>            public            
+    <strong>appendXml</strong>(<a href="http://php.net/DOMNode"><abbr title="DOMNode">DOMNode</abbr></a> $node)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/DOMNode"><abbr title="DOMNode">DOMNode</abbr></a></td>
+                <td>$node</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>XMLElement::appendXml(DOMNode)</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_addVendorInfo">
+        <div class="location">in <a href="XMLElement.html#method_addVendorInfo"><abbr title="XMLElement">XMLElement</abbr></a> at line 106</div>
+        <code>            public            <a href="VendorInfo.html"><abbr title="VendorInfo">VendorInfo</abbr></a>
+    <strong>addVendorInfo</strong>(mixed $data)</code>
+    </h3>
+    <div class="details">
+        <p>Sets an associated VendorInfo object.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td>VendorInfo object or XML attrib data (array)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VendorInfo.html"><abbr title="VendorInfo">VendorInfo</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVendorInfoForType">
+        <div class="location">in <a href="XMLElement.html#method_getVendorInfoForType"><abbr title="XMLElement">XMLElement</abbr></a> at line 123</div>
+        <code>            public            <a href="VendorInfo.html"><abbr title="VendorInfo">VendorInfo</abbr></a>
+    <strong>getVendorInfoForType</strong>($type)</code>
+    </h3>
+    <div class="details">
+        <p>Gets the any associated VendorInfo object.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VendorInfo.html"><abbr title="VendorInfo">VendorInfo</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConfiguredBehavior">
+        <div class="location">in <a href="XMLElement.html#method_getConfiguredBehavior"><abbr title="XMLElement">XMLElement</abbr></a> at line 142</div>
+        <code>            public            string
+    <strong>getConfiguredBehavior</strong>(string $bname)</code>
+    </h3>
+    <div class="details">
+        <p>Find the best class name for a given behavior Looks in build.properties for path like propel.behavior.[bname].class If not found, tries to autoload [Bname]Behavior If no success, returns &#039;Behavior&#039;</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$bname</td>
+                <td>behavior name, e.g. &#039;timestampable&#039;</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>behavior class name, e.g. &#039;TimestampableBehavior&#039;</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toString">
+        <div class="location">in <a href="XMLElement.html#method_toString"><abbr title="XMLElement">XMLElement</abbr></a> at line 165</div>
+        <code>            public            
+    <strong>toString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>String representation of the current object.</p>
+        <p>This is an xml representation with the XML declaration removed.</p>
+        <div class="tags">
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>appendXml()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method___toString">
+        <div class="location">in <a href="XMLElement.html#method___toString"><abbr title="XMLElement">XMLElement</abbr></a> at line 178</div>
+        <code>            public            
+    <strong>__toString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Magic string method</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>toString()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_addRule">
+        <div class="location">at line 75</div>
+        <code>            public            <a href="Rule.html"><abbr title="Rule">Rule</abbr></a>
+    <strong>addRule</strong>(mixed $data)</code>
+    </h3>
+    <div class="details">
+        <p>Add a Rule to this validator.</p>
+        <p>Supports two signatures:<br />
+ - addRule(Rule $rule)<br />
+ - addRule(array $attribs)</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td>Rule object or XML attribs (array) from &lt;rule/&gt; element.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Rule.html"><abbr title="Rule">Rule</abbr></a></td>
+            <td>The added Rule.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRules">
+        <div class="location">at line 95</div>
+        <code>            public            array
+    <strong>getRules</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets an array of all added rules for this validator.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>Rule[]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnName">
+        <div class="location">at line 104</div>
+        <code>            public            string
+    <strong>getColumnName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the name of the column that this Validator applies to.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setColumn">
+        <div class="location">at line 114</div>
+        <code>            public            
+    <strong>setColumn</strong>(<a href="Column.html"><abbr title="Column">Column</abbr></a> $column)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the Column object that this validator applies to.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Column.html"><abbr title="Column">Column</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>Table::addValidator()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getColumn">
+        <div class="location">at line 123</div>
+        <code>            public            <a href="Column.html"><abbr title="Column">Column</abbr></a>
+    <strong>getColumn</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the Column object that this validator applies to.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Column.html"><abbr title="Column">Column</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setTable">
+        <div class="location">at line 132</div>
+        <code>            public            
+    <strong>setTable</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Set the owning Table.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTable">
+        <div class="location">at line 141</div>
+        <code>            public            <a href="Table.html"><abbr title="Table">Table</abbr></a>
+    <strong>getTable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the owning Table.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setTranslate">
+        <div class="location">at line 151</div>
+        <code>            public            
+    <strong>setTranslate</strong>(string $method)</code>
+    </h3>
+    <div class="details">
+        <p>Set the translation mode to use for the message.</p>
+        <p>Currently only &quot;gettext&quot; and &quot;none&quot; are supported.  The default is &quot;none&quot;.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>Translation method (&quot;gettext&quot;, &quot;none&quot;).</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTranslate">
+        <div class="location">at line 161</div>
+        <code>            public            string
+    <strong>getTranslate</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the translation mode to use for the message.</p>
+        <p>Currently only &quot;gettext&quot; and &quot;none&quot; are supported.  The default is &quot;none&quot;.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>Translation method (&quot;gettext&quot;, &quot;none&quot;).</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

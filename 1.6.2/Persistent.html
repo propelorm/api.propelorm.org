@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Persistent | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Interface</div>
+    <h1><a href=".html"></a>Persistent</h1>
+    </div>
+        <div class="content">
+                <p>interface    <strong>Persistent</strong></p>
+
+            <div class="description">
+            <p>This interface defines methods related to saving an object</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <abbr title="ObjectKey">ObjectKey</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getPrimaryKey">getPrimaryKey</a>()
+                    <p>getter for the object primaryKey.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_setPrimaryKey">setPrimaryKey</a>(mixed $primaryKey)
+                    <p>Sets the PrimaryKey for the object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isModified">isModified</a>()
+                    <p>Returns whether the object has been modified, since it was last retrieved from storage.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isColumnModified">isColumnModified</a>(string $col)
+                    <p>Has specified column been modified?</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isNew">isNew</a>()
+                    <p>Returns whether the object has ever been saved.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setNew">setNew</a>(boolean $b)
+                    <p>Setter for the isNew attribute.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_resetModified">resetModified</a>()
+                    <p>Resets (to false) the &quot;modified&quot; state for this object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isDeleted">isDeleted</a>()
+                    <p>Whether this object has been deleted.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_setDeleted">setDeleted</a>(boolean $b)
+                    <p>Specify whether this object has been deleted.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_delete">delete</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Deletes the object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_save">save</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Saves the object.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getPrimaryKey">
+        <div class="location">at line 28</div>
+        <code>            public            <abbr title="ObjectKey">ObjectKey</abbr>
+    <strong>getPrimaryKey</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>getter for the object primaryKey.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ObjectKey">ObjectKey</abbr></td>
+            <td>the object primaryKey as an Object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPrimaryKey">
+        <div class="location">at line 37</div>
+        <code>            public            void
+    <strong>setPrimaryKey</strong>(mixed $primaryKey)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the PrimaryKey for the object.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$primaryKey</td>
+                <td>The new PrimaryKey object or string (result of PrimaryKey.toString()).</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Exception,">Exception,</abbr></td>
+                <td>This method might throw an exceptions</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isModified">
+        <div class="location">at line 46</div>
+        <code>            public            boolean
+    <strong>isModified</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether the object has been modified, since it was last retrieved from storage.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if the object has been modified.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isColumnModified">
+        <div class="location">at line 54</div>
+        <code>            public            boolean
+    <strong>isColumnModified</strong>(string $col)</code>
+    </h3>
+    <div class="details">
+        <p>Has specified column been modified?</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$col</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if $col has been modified.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isNew">
+        <div class="location">at line 63</div>
+        <code>            public            boolean
+    <strong>isNew</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether the object has ever been saved.</p>
+        <p>This will<br />
+ be false, if the object was retrieved from storage or was created<br />
+ and then saved.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True, if the object has never been persisted.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setNew">
+        <div class="location">at line 71</div>
+        <code>            public            
+    <strong>setNew</strong>(boolean $b)</code>
+    </h3>
+    <div class="details">
+        <p>Setter for the isNew attribute.</p>
+        <p>This method will be called<br />
+ by Propel-generated children and Peers.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$b</td>
+                <td>the state of the object.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resetModified">
+        <div class="location">at line 78</div>
+        <code>            public            void
+    <strong>resetModified</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Resets (to false) the &quot;modified&quot; state for this object.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isDeleted">
+        <div class="location">at line 84</div>
+        <code>            public            boolean
+    <strong>isDeleted</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Whether this object has been deleted.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>The deleted state of this object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDeleted">
+        <div class="location">at line 91</div>
+        <code>            public            void
+    <strong>setDeleted</strong>(boolean $b)</code>
+    </h3>
+    <div class="details">
+        <p>Specify whether this object has been deleted.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$b</td>
+                <td>The deleted state of this object.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_delete">
+        <div class="location">at line 99</div>
+        <code>            public            void
+    <strong>delete</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes the object.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_save">
+        <div class="location">at line 107</div>
+        <code>            public            void
+    <strong>save</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Saves the object.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

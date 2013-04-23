@@ -1,0 +1,3622 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Propel\Generator\Model\Table | Propel 2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel 2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Propel/Generator/Model.html">Propel\Generator\Model</a>\Table</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Table</strong>        extends <a href="../../../Propel/Generator/Model/ScopedMappingModel.html"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a>        implements
+        <a href="../../../Propel/Generator/Model/IdMethod.html"><abbr title="Propel\Generator\Model\IdMethod">IdMethod</abbr></a></p>
+
+            <div class="description">
+            <p>Data about a table used in an application.</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(string $name = null)
+                    <p>Constructs a table object with a name</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getNamespace">getNamespace</a>()
+                    <p>Returns the namespace.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_getNamespace"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setNamespace">setNamespace</a>(string $namespace)
+                    <p>Sets the namespace.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_setNamespace"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isAbsoluteNamespace">isAbsoluteNamespace</a>(string $namespace)
+                    <p>Returns whether or not the namespace is absolute.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_isAbsoluteNamespace"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPackage">getPackage</a>()
+                    <p>Returns the package name.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_getPackage"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPackage">setPackage</a>(string $package)
+                    <p>Sets the package name.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_setPackage"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getSchema">getSchema</a>()
+                    <p>Returns the schema name.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_getSchema"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSchema">setSchema</a>(string $schema)
+                    <p>Sets the schema name.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_setSchema"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setupObject">setupObject</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getBuildProperty">getBuildProperty</a>(string $key)
+                    <p>Returns a build property value for the database this table belongs to.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_applyBehaviors">applyBehaviors</a>()
+                    <p>Executes behavior table modifiers.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_doFinalInitialization">doFinalInitialization</a>()
+                    <p>&lt;p&gt;A hook for the SAX XML parser to call when this table has been fully loaded from the XML, and all nested elements have been processed.&lt;/p&gt;</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addExtraIndices">addExtraIndices</a>()
+                    <p>Adds extra indices for reverse foreign keys This is required for MySQL databases, and is called from Database::doFinalInitialization()</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnList">getColumnList</a>(array $columns, string $delimiter = &#039;,&#039;)
+                    <p>Returns a delimiter-delimited string list of column names.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_doNaming">doNaming</a>()
+                    <p>Names composing objects which haven&#039;t yet been named.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getBaseClass">getBaseClass</a>()
+                    <p>Returns the name of the base class used for superclass of all objects of this table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setBaseClass">setBaseClass</a>(string $class)
+                    <p>Sets the peer base class name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getBasePeer">getBasePeer</a>()
+                    <p>Returns the peer base class name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setBasePeer">setBasePeer</a>(string $class)
+                    <p>Sets the base peer class name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addColumn">addColumn</a>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>|array $col)
+                    <p>Adds a new column to the table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_removeColumn">removeColumn</a>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>|string $column)
+                    <p>Removes a column from the table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_adjustColumnPositions">adjustColumnPositions</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addForeignKey">addForeignKey</a>(<a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a>|array $fkdata)
+                    <p>Adds a new foreign key to this table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getChildrenColumn">getChildrenColumn</a>()
+                    <p>Returns the column that subclasses the class representing this table can be produced from.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getChildrenNames">getChildrenNames</a>()
+                    <p>Returns the subclasses that can be created from this table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addReferrer">addReferrer</a>(<a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk)
+                    <p>Adds the foreign key from another table that refers to this table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getReferrers">getReferrers</a>()
+                    <p>Returns the list of references to this table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setupReferrers">setupReferrers</a>(boolean $throwErrors = false)
+                    <p>Browses the foreign keys and creates referrers for the foreign table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getCrossFks">getCrossFks</a>()
+                    <p>Returns the list of cross foreign keys.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_setContainsForeignPK">setContainsForeignPK</a>($b)
+                    <p>Sets whether or not this table contains a foreign primary key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_getContainsForeignPK">getContainsForeignPK</a>()
+                    <p>Returns whether or not this table contains a foreign primary key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getForeignTableNames">getForeignTableNames</a>()
+                    <p>Returns the list of tables referenced by foreign keys in this table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_requiresTransactionInPostgres">requiresTransactionInPostgres</a>()
+                    <p>Return true if the column requires a transaction in Postgres.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addIdMethodParameter">addIdMethodParameter</a>(<a href="../../../Propel/Generator/Model/IdMethodParameter.html"><abbr title="Propel\Generator\Model\IdMethodParameter">IdMethodParameter</abbr></a> $idMethodParameter)
+                    <p>Adds a new parameter for the strategy that generates primary keys.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Index.html"><abbr title="Propel\Generator\Model\Index">Index</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addIndex">addIndex</a>(<a href="../../../Propel/Generator/Model/Index.html"><abbr title="Propel\Generator\Model\Index">Index</abbr></a> $index)
+                    <p>Adds a new index to the indices list and set the parent table of the column to the current table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Unique.html"><abbr title="Propel\Generator\Model\Unique">Unique</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addUnique">addUnique</a>(<a href="../../../Propel/Generator/Model/Unique.html"><abbr title="Propel\Generator\Model\Unique">Unique</abbr></a> $unique)
+                    <p>Adds a new Unique index to the list of unique indices and set the parent table of the column to the current table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Propel\Generator\Model\GeneratorConfig">GeneratorConfig</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getGeneratorConfig">getGeneratorConfig</a>()
+                    <p>Retrieves the configuration object, filled by build.properties</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addBehavior">addBehavior</a>($bdata)
+                    <p>Adds a new Behavior to the table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getBehaviors">getBehaviors</a>()
+                    <p>Returns the list of table behaviors.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasBehavior">hasBehavior</a>(string $name)
+                    <p>check if the table has a behavior by name</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getBehavior">getBehavior</a>(string $name)
+                    <p>Get one table behavior by name</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasAdditionalBuilders">hasAdditionalBuilders</a>()
+                    <p>Returns whether or not the table behaviors offer additional builders.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Array
+                </td>
+                <td class="last">
+                    <a href="#method_getEarlyBehaviors">getEarlyBehaviors</a>()
+                    <p>Get the early table behaviors</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAdditionalBuilders">getAdditionalBuilders</a>()
+                    <p>Returns the list of additional builders provided by the table behaviors.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getName">getName</a>()
+                    <p>Returns the full table name (including schema name when possible).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDescription">getDescription</a>()
+                    <p>Returns the table description.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasDescription">hasDescription</a>()
+                    <p>Returns whether or not the table has a description.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDescription">setDescription</a>(string $description)
+                    <p>Sets the table description.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPhpName">getPhpName</a>()
+                    <p>Returns the name to use in PHP sources.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPhpName">setPhpName</a>(string $phpName)
+                    <p>Sets the name to use in PHP sources.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getStudlyPhpName">getStudlyPhpName</a>()
+                    <p>Returns the studly version of PHP name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getCommonName">getCommonName</a>()
+                    <p>Returns the common name (without schema name).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setCommonName">setCommonName</a>(string $name)
+                    <p>Sets the table common name (without schema name).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDefaultStringFormat">setDefaultStringFormat</a>(string $format)
+                    <p>Sets the default string format for ActiveRecord objects in this table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDefaultStringFormat">getDefaultStringFormat</a>()
+                    <p>Returns the default string format for ActiveRecord objects in this table, or the one for the whole database if not set.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getIdMethod">getIdMethod</a>()
+                    <p>Returns the method strateg for generating primary keys.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isAllowPkInsert">isAllowPkInsert</a>()
+                    <p>Returns whether we allow to insert primary keys on tables with native id method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setIdMethod">setIdMethod</a>(string $idMethod)
+                    <p>Sets the method strategy for generating primary keys.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isSkipSql">isSkipSql</a>()
+                    <p>Returns whether or not Propel has to skip DDL SQL generation for this table (in the event it should not be created from scratch).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSkipSql">setSkipSql</a>(boolean $skip)
+                    <p>Sets whether or not this table should have its SQL DDL code generated.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isReadOnly">isReadOnly</a>()
+                    <p>Returns whether or not this table is read-only.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isReloadOnInsert">isReloadOnInsert</a>()
+                    <p>Whether to force object to reload on INSERT.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isReloadOnUpdate">isReloadOnUpdate</a>()
+                    <p>Returns whether or not to force object to reload on UPDATE.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getAlias">getAlias</a>()
+                    <p>Returns the PHP name of an active record object this entry references.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isAlias">isAlias</a>()
+                    <p>Returns whether or not this table is specified in the schema or if there is just a foreign key reference to it.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setAlias">setAlias</a>(string $alias)
+                    <p>Sets whether or not this table is specified in the schema or if there is just a foreign key reference to it.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getInterface">getInterface</a>()
+                    <p>Returns the interface objects of this table will implement.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setInterface">setInterface</a>(string $interface)
+                    <p>Sets the interface objects of this table will implement.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isAbstract">isAbstract</a>()
+                    <p>Returns whether or not a table is abstract, it marks the business object class that is generated as being abstract.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setAbstract">setAbstract</a>(boolean $isAbstract)
+                    <p>Sets whether or not a table is abstract, it marks the business object class that is generated as being abstract.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getColumns">getColumns</a>()
+                    <p>Returns an array containing all Column objects in the table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_getNumColumns">getNumColumns</a>()
+                    <p>Returns the number of columns in this table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_getNumLazyLoadColumns">getNumLazyLoadColumns</a>()
+                    <p>Returns the number of lazy loaded columns in this table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasEnumColumns">hasEnumColumns</a>()
+                    <p>Returns whether or not one of the columns is of type ENUM.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getForeignKeys">getForeignKeys</a>()
+                    <p>Returns the list of all foreign keys.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getIdMethodParameters">getIdMethodParameters</a>()
+                    <p>Returns a Collection of parameters relevant for the chosen id generation method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getIndices">getIndices</a>()
+                    <p>Returns the list of all indices of this table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getUnices">getUnices</a>()
+                    <p>Returns the list of all unique indices of this table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasColumn">hasColumn</a>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>|string $column, boolean $caseInsensitive = false)
+                    <p>Returns whether or not the table has a column.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getColumn">getColumn</a>(string $name, boolean $caseInsensitive = false)
+                    <p>Returns the Column object with the specified name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnByPhpName">getColumnByPhpName</a>(string $phpName)
+                    <p>Returns a specified column by its php name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getForeignKeysReferencingTable">getForeignKeysReferencingTable</a>(string $tableName)
+                    <p>Returns all foreign keys from this table that reference the table passed in argument.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnForeignKeys">getColumnForeignKeys</a>(string $column)
+                    <p>Returns the foreign keys that include column in it&#039;s list of local columns.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDatabase">setDatabase</a>(<a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a> $database)
+                    <p>Set the database that contains this table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getDatabase">getDatabase</a>()
+                    <p>Get the database that contains this table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Propel\Generator\Model\PlatformInterface">PlatformInterface</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getPlatform">getPlatform</a>()
+                    <p>Returns the Database platform.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isForReferenceOnly">isForReferenceOnly</a>()
+                    <p>Returns whether or not code and SQL must be created for this table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setForReferenceOnly">setForReferenceOnly</a>(boolean $v)
+                    <p>Returns whether or not to determine if code/sql gets created for this table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_appendXml">appendXml</a>(<abbr title="Propel\Generator\Model\DOMNode">DOMNode</abbr> $node)
+                    <p>Appends XML nodes to passed-in DOMNode.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getPrimaryKey">getPrimaryKey</a>()
+                    <p>Returns the collection of Columns which make up the single primary key for this table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasPrimaryKey">hasPrimaryKey</a>()
+                    <p>Returns whether or not this table has a primary key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasCompositePrimaryKey">hasCompositePrimaryKey</a>()
+                    <p>Returns whether or not this table has a composite primary key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getFirstPrimaryKeyColumn">getFirstPrimaryKeyColumn</a>()
+                    <p>Returns the first primary key column.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasAutoIncrementPrimaryKey">hasAutoIncrementPrimaryKey</a>()
+                    <p>Returns whether or not this table has any auto-increment primary keys.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getAutoIncrementPrimaryKey">getAutoIncrementPrimaryKey</a>()
+                    <p>Returns the auto incremented primary key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_getIsCrossRef">getIsCrossRef</a>()
+                    <p>Returns whether or not there is a cross reference status for this foreign key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isCrossRef">isCrossRef</a>()
+                    <p>Alias for Table::getIsCrossRef.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setIsCrossRef">setIsCrossRef</a>(boolean $isCrossRef)
+                    <p>Sets a cross reference status for this foreign key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasForeignKeys">hasForeignKeys</a>()
+                    <p>Returns whether or not the table has foreign keys.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasCrossForeignKeys">hasCrossForeignKeys</a>()
+                    <p>Returns whether the table has cross foreign keys or not.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 72</div>
+        <code>            public            
+    <strong>__construct</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Constructs a table object with a name</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>table name</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNamespace">
+        <div class="location">in <a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_getNamespace"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a> at line 57</div>
+        <code>            public            string
+    <strong>getNamespace</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the namespace.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setNamespace">
+        <div class="location">in <a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_setNamespace"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a> at line 67</div>
+        <code>            public            
+    <strong>setNamespace</strong>(string $namespace)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the namespace.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isAbsoluteNamespace">
+        <div class="location">in <a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_isAbsoluteNamespace"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a> at line 90</div>
+        <code>            public            boolean
+    <strong>isAbsoluteNamespace</strong>(string $namespace)</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not the namespace is absolute.</p>
+        <p>A namespace is absolute if it starts with a &quot;\&quot;.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPackage">
+        <div class="location">in <a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_getPackage"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a> at line 100</div>
+        <code>            public            string
+    <strong>getPackage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the package name.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPackage">
+        <div class="location">in <a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_setPackage"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a> at line 110</div>
+        <code>            public            
+    <strong>setPackage</strong>(string $package)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the package name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$package</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSchema">
+        <div class="location">in <a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_getSchema"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a> at line 125</div>
+        <code>            public            string
+    <strong>getSchema</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the schema name.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSchema">
+        <div class="location">in <a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_setSchema"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a> at line 135</div>
+        <code>            public            
+    <strong>setSchema</strong>(string $schema)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the schema name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$schema</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setupObject">
+        <div class="location">at line 119</div>
+        <code>            public            
+    <strong>setupObject</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBuildProperty">
+        <div class="location">at line 164</div>
+        <code>            public            string
+    <strong>getBuildProperty</strong>(string $key)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a build property value for the database this table belongs to.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_applyBehaviors">
+        <div class="location">at line 173</div>
+        <code>            public            
+    <strong>applyBehaviors</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Executes behavior table modifiers.</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_doFinalInitialization">
+        <div class="location">at line 191</div>
+        <code>            public            
+    <strong>doFinalInitialization</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>&lt;p&gt;A hook for the SAX XML parser to call when this table has been fully loaded from the XML, and all nested elements have been processed.&lt;/p&gt;</p>
+        <p>&lt;p&gt;Performs heavy indexing and naming of elements which weren&#039;t<br />
+ provided with a name.&lt;/p&gt;</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addExtraIndices">
+        <div class="location">at line 253</div>
+        <code>            public            
+    <strong>addExtraIndices</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Adds extra indices for reverse foreign keys This is required for MySQL databases, and is called from Database::doFinalInitialization()</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnList">
+        <div class="location">at line 343</div>
+        <code>            public            string
+    <strong>getColumnList</strong>(array $columns, string $delimiter = &#039;,&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a delimiter-delimited string list of column names.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$delimiter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>Platform::getColumnList()</td>
+                <td>if quoting is required</td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_doNaming">
+        <div class="location">at line 360</div>
+        <code>            public            
+    <strong>doNaming</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Names composing objects which haven&#039;t yet been named.</p>
+        <p>This<br />
+ currently consists of foreign-key and index entities.</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBaseClass">
+        <div class="location">at line 427</div>
+        <code>            public            string
+    <strong>getBaseClass</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the name of the base class used for superclass of all objects of this table.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setBaseClass">
+        <div class="location">at line 445</div>
+        <code>            public            
+    <strong>setBaseClass</strong>(string $class)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the peer base class name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBasePeer">
+        <div class="location">at line 455</div>
+        <code>            public            string
+    <strong>getBasePeer</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the peer base class name.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setBasePeer">
+        <div class="location">at line 473</div>
+        <code>            public            
+    <strong>setBasePeer</strong>(string $class)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the base peer class name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addColumn">
+        <div class="location">at line 484</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>
+    <strong>addColumn</strong>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>|array $col)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a new column to the table.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>|array</td>
+                <td>$col</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeColumn">
+        <div class="location">at line 523</div>
+        <code>            public            
+    <strong>removeColumn</strong>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>|string $column)</code>
+    </h3>
+    <div class="details">
+        <p>Removes a column from the table.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>|string</td>
+                <td>$column</td>
+                <td>The Column or its name</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_adjustColumnPositions">
+        <div class="location">at line 556</div>
+        <code>            public            
+    <strong>adjustColumnPositions</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addForeignKey">
+        <div class="location">at line 571</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a>
+    <strong>addForeignKey</strong>(<a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a>|array $fkdata)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a new foreign key to this table.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a>|array</td>
+                <td>$fkdata</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getChildrenColumn">
+        <div class="location">at line 598</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>
+    <strong>getChildrenColumn</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the column that subclasses the class representing this table can be produced from.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getChildrenNames">
+        <div class="location">at line 608</div>
+        <code>            public            array
+    <strong>getChildrenNames</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the subclasses that can be created from this table.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addReferrer">
+        <div class="location">at line 628</div>
+        <code>            public            
+    <strong>addReferrer</strong>(<a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk)</code>
+    </h3>
+    <div class="details">
+        <p>Adds the foreign key from another table that refers to this table.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a></td>
+                <td>$fk</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getReferrers">
+        <div class="location">at line 638</div>
+        <code>            public            array
+    <strong>getReferrers</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the list of references to this table.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setupReferrers">
+        <div class="location">at line 651</div>
+        <code>            public            
+    <strong>setupReferrers</strong>(boolean $throwErrors = false)</code>
+    </h3>
+    <div class="details">
+        <p>Browses the foreign keys and creates referrers for the foreign table.</p>
+        <p>This method can be called several times on the same table. It only<br />
+ adds the missing referrers and is non-destructive.<br />
+ Warning: only use when all the tables were created.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$throwErrors</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCrossFks">
+        <div class="location">at line 724</div>
+        <code>            public            array
+    <strong>getCrossFks</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the list of cross foreign keys.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setContainsForeignPK">
+        <div class="location">at line 743</div>
+        <code>            public            boolean
+    <strong>setContainsForeignPK</strong>($b)</code>
+    </h3>
+    <div class="details">
+        <p>Sets whether or not this table contains a foreign primary key.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$b</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getContainsForeignPK">
+        <div class="location">at line 753</div>
+        <code>            public            boolean
+    <strong>getContainsForeignPK</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not this table contains a foreign primary key.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getForeignTableNames">
+        <div class="location">at line 763</div>
+        <code>            public            array
+    <strong>getForeignTableNames</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the list of tables referenced by foreign keys in this table.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_requiresTransactionInPostgres">
+        <div class="location">at line 773</div>
+        <code>            public            boolean
+    <strong>requiresTransactionInPostgres</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return true if the column requires a transaction in Postgres.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addIdMethodParameter">
+        <div class="location">at line 783</div>
+        <code>            public            
+    <strong>addIdMethodParameter</strong>(<a href="../../../Propel/Generator/Model/IdMethodParameter.html"><abbr title="Propel\Generator\Model\IdMethodParameter">IdMethodParameter</abbr></a> $idMethodParameter)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a new parameter for the strategy that generates primary keys.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/IdMethodParameter.html"><abbr title="Propel\Generator\Model\IdMethodParameter">IdMethodParameter</abbr></a></td>
+                <td>$idMethodParameter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addIndex">
+        <div class="location">at line 806</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Index.html"><abbr title="Propel\Generator\Model\Index">Index</abbr></a>
+    <strong>addIndex</strong>(<a href="../../../Propel/Generator/Model/Index.html"><abbr title="Propel\Generator\Model\Index">Index</abbr></a> $index)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a new index to the indices list and set the parent table of the column to the current table.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Index.html"><abbr title="Propel\Generator\Model\Index">Index</abbr></a></td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Index.html"><abbr title="Propel\Generator\Model\Index">Index</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addUnique">
+        <div class="location">at line 830</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Unique.html"><abbr title="Propel\Generator\Model\Unique">Unique</abbr></a>
+    <strong>addUnique</strong>(<a href="../../../Propel/Generator/Model/Unique.html"><abbr title="Propel\Generator\Model\Unique">Unique</abbr></a> $unique)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a new Unique index to the list of unique indices and set the parent table of the column to the current table.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Unique.html"><abbr title="Propel\Generator\Model\Unique">Unique</abbr></a></td>
+                <td>$unique</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Unique.html"><abbr title="Propel\Generator\Model\Unique">Unique</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getGeneratorConfig">
+        <div class="location">at line 851</div>
+        <code>            public            <abbr title="Propel\Generator\Model\GeneratorConfig">GeneratorConfig</abbr>
+    <strong>getGeneratorConfig</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieves the configuration object, filled by build.properties</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Generator\Model\GeneratorConfig">GeneratorConfig</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addBehavior">
+        <div class="location">at line 861</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
+    <strong>addBehavior</strong>($bdata)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a new Behavior to the table.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$bdata</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></td>
+            <td>$bdata</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBehaviors">
+        <div class="location">at line 883</div>
+        <code>            public            array
+    <strong>getBehaviors</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the list of table behaviors.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasBehavior">
+        <div class="location">at line 894</div>
+        <code>            public            boolean
+    <strong>hasBehavior</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>check if the table has a behavior by name</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>the behavior name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if the behavior exists</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBehavior">
+        <div class="location">at line 905</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
+    <strong>getBehavior</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Get one table behavior by name</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>the behavior name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></td>
+            <td>a behavior object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasAdditionalBuilders">
+        <div class="location">at line 915</div>
+        <code>            public            boolean
+    <strong>hasAdditionalBuilders</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not the table behaviors offer additional builders.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getEarlyBehaviors">
+        <div class="location">at line 930</div>
+        <code>            public            Array
+    <strong>getEarlyBehaviors</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the early table behaviors</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Array</td>
+            <td>of Behavior objects</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAdditionalBuilders">
+        <div class="location">at line 947</div>
+        <code>            public            array
+    <strong>getAdditionalBuilders</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the list of additional builders provided by the table behaviors.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getName">
+        <div class="location">at line 962</div>
+        <code>            public            string
+    <strong>getName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the full table name (including schema name when possible).</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDescription">
+        <div class="location">at line 980</div>
+        <code>            public            string
+    <strong>getDescription</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the table description.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasDescription">
+        <div class="location">at line 990</div>
+        <code>            public            boolean
+    <strong>hasDescription</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not the table has a description.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDescription">
+        <div class="location">at line 1000</div>
+        <code>            public            
+    <strong>setDescription</strong>(string $description)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the table description.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$description</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPhpName">
+        <div class="location">at line 1011</div>
+        <code>            public            string
+    <strong>getPhpName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the name to use in PHP sources.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="EngineException">EngineException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPhpName">
+        <div class="location">at line 1029</div>
+        <code>            public            
+    <strong>setPhpName</strong>(string $phpName)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the name to use in PHP sources.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$phpName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getStudlyPhpName">
+        <div class="location">at line 1051</div>
+        <code>            public            string
+    <strong>getStudlyPhpName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the studly version of PHP name.</p>
+        <p>The studly name is the PHP name with the first character lowercase.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCommonName">
+        <div class="location">at line 1061</div>
+        <code>            public            string
+    <strong>getCommonName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the common name (without schema name).</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setCommonName">
+        <div class="location">at line 1071</div>
+        <code>            public            
+    <strong>setCommonName</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the table common name (without schema name).</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDefaultStringFormat">
+        <div class="location">at line 1084</div>
+        <code>            public            
+    <strong>setDefaultStringFormat</strong>(string $format)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the default string format for ActiveRecord objects in this table.</p>
+        <p>Any of &#039;XML&#039;, &#039;YAML&#039;, &#039;JSON&#039;, or &#039;CSV&#039;.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDefaultStringFormat">
+        <div class="location">at line 1102</div>
+        <code>            public            string
+    <strong>getDefaultStringFormat</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the default string format for ActiveRecord objects in this table, or the one for the whole database if not set.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getIdMethod">
+        <div class="location">at line 1119</div>
+        <code>            public            string
+    <strong>getIdMethod</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the method strateg for generating primary keys.</p>
+        <p>[HL] changing behavior so that Database default method is returned<br />
+ if no method has been specified for the table.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isAllowPkInsert">
+        <div class="location">at line 1130</div>
+        <code>            public            boolean
+    <strong>isAllowPkInsert</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether we allow to insert primary keys on tables with native id method.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setIdMethod">
+        <div class="location">at line 1140</div>
+        <code>            public            
+    <strong>setIdMethod</strong>(string $idMethod)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the method strategy for generating primary keys.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$idMethod</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isSkipSql">
+        <div class="location">at line 1151</div>
+        <code>            public            boolean
+    <strong>isSkipSql</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not Propel has to skip DDL SQL generation for this table (in the event it should not be created from scratch).</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSkipSql">
+        <div class="location">at line 1161</div>
+        <code>            public            
+    <strong>setSkipSql</strong>(boolean $skip)</code>
+    </h3>
+    <div class="details">
+        <p>Sets whether or not this table should have its SQL DDL code generated.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$skip</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isReadOnly">
+        <div class="location">at line 1172</div>
+        <code>            public            boolean
+    <strong>isReadOnly</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not this table is read-only.</p>
+        <p>If yes, only only<br />
+ accessors and relationship accessors and mutators will be generated.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isReloadOnInsert">
+        <div class="location">at line 1181</div>
+        <code>            public            boolean
+    <strong>isReloadOnInsert</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Whether to force object to reload on INSERT.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isReloadOnUpdate">
+        <div class="location">at line 1191</div>
+        <code>            public            boolean
+    <strong>isReloadOnUpdate</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not to force object to reload on UPDATE.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAlias">
+        <div class="location">at line 1201</div>
+        <code>            public            string
+    <strong>getAlias</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the PHP name of an active record object this entry references.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isAlias">
+        <div class="location">at line 1212</div>
+        <code>            public            boolean
+    <strong>isAlias</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not this table is specified in the schema or if there is just a foreign key reference to it.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAlias">
+        <div class="location">at line 1223</div>
+        <code>            public            
+    <strong>setAlias</strong>(string $alias)</code>
+    </h3>
+    <div class="details">
+        <p>Sets whether or not this table is specified in the schema or if there is just a foreign key reference to it.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$alias</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getInterface">
+        <div class="location">at line 1233</div>
+        <code>            public            string
+    <strong>getInterface</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the interface objects of this table will implement.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setInterface">
+        <div class="location">at line 1243</div>
+        <code>            public            
+    <strong>setInterface</strong>(string $interface)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the interface objects of this table will implement.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$interface</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isAbstract">
+        <div class="location">at line 1256</div>
+        <code>            public            boolean
+    <strong>isAbstract</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not a table is abstract, it marks the business object class that is generated as being abstract.</p>
+        <p>If you have a table called<br />
+ &quot;FOO&quot;, then the Foo business object class will be declared abstract. This<br />
+ helps support class hierarchies</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAbstract">
+        <div class="location">at line 1269</div>
+        <code>            public            
+    <strong>setAbstract</strong>(boolean $isAbstract)</code>
+    </h3>
+    <div class="details">
+        <p>Sets whether or not a table is abstract, it marks the business object class that is generated as being abstract.</p>
+        <p>If you have a<br />
+ table called &quot;FOO&quot;, then the Foo business object class will be<br />
+ declared abstract. This helps support class hierarchies</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$isAbstract</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumns">
+        <div class="location">at line 1279</div>
+        <code>            public            array
+    <strong>getColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns an array containing all Column objects in the table.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNumColumns">
+        <div class="location">at line 1289</div>
+        <code>            public            integer
+    <strong>getNumColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the number of columns in this table.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNumLazyLoadColumns">
+        <div class="location">at line 1299</div>
+        <code>            public            integer
+    <strong>getNumLazyLoadColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the number of lazy loaded columns in this table.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasEnumColumns">
+        <div class="location">at line 1316</div>
+        <code>            public            boolean
+    <strong>hasEnumColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not one of the columns is of type ENUM.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getForeignKeys">
+        <div class="location">at line 1332</div>
+        <code>            public            array
+    <strong>getForeignKeys</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the list of all foreign keys.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getIdMethodParameters">
+        <div class="location">at line 1341</div>
+        <code>            public            
+    <strong>getIdMethodParameters</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns a Collection of parameters relevant for the chosen id generation method.</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getIndices">
+        <div class="location">at line 1351</div>
+        <code>            public            array
+    <strong>getIndices</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the list of all indices of this table.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUnices">
+        <div class="location">at line 1361</div>
+        <code>            public            array
+    <strong>getUnices</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the list of all unique indices of this table.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasColumn">
+        <div class="location">at line 1373</div>
+        <code>            public            boolean
+    <strong>hasColumn</strong>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>|string $column, boolean $caseInsensitive = false)</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not the table has a column.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>|string</td>
+                <td>$column</td>
+                <td>The Column object or its name</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$caseInsensitive</td>
+                <td>Whether the check is case insensitive.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumn">
+        <div class="location">at line 1393</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>
+    <strong>getColumn</strong>(string $name, boolean $caseInsensitive = false)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the Column object with the specified name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The name of the column (e.g. &#039;my_column&#039;)</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$caseInsensitive</td>
+                <td>Whether the check is case insensitive.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnByPhpName">
+        <div class="location">at line 1412</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>
+    <strong>getColumnByPhpName</strong>(string $phpName)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a specified column by its php name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$phpName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getForeignKeysReferencingTable">
+        <div class="location">at line 1428</div>
+        <code>            public            array
+    <strong>getForeignKeysReferencingTable</strong>(string $tableName)</code>
+    </h3>
+    <div class="details">
+        <p>Returns all foreign keys from this table that reference the table passed in argument.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$tableName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnForeignKeys">
+        <div class="location">at line 1450</div>
+        <code>            public            array
+    <strong>getColumnForeignKeys</strong>(string $column)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the foreign keys that include column in it&#039;s list of local columns.</p>
+        <p>Eg. Foreign key (a, b, c) refrences tbl(x, y, z) will be returned of col<br />
+ is either a, b or c.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td>Name of the column</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDatabase">
+        <div class="location">at line 1467</div>
+        <code>            public            
+    <strong>setDatabase</strong>(<a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a> $database)</code>
+    </h3>
+    <div class="details">
+        <p>Set the database that contains this table.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a></td>
+                <td>$database</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDatabase">
+        <div class="location">at line 1477</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a>
+    <strong>getDatabase</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the database that contains this table.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPlatform">
+        <div class="location">at line 1487</div>
+        <code>            public            <abbr title="Propel\Generator\Model\PlatformInterface">PlatformInterface</abbr>
+    <strong>getPlatform</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the Database platform.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Generator\Model\PlatformInterface">PlatformInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isForReferenceOnly">
+        <div class="location">at line 1499</div>
+        <code>            public            boolean
+    <strong>isForReferenceOnly</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not code and SQL must be created for this table.</p>
+        <p>Table will be skipped, if return true.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setForReferenceOnly">
+        <div class="location">at line 1509</div>
+        <code>            public            
+    <strong>setForReferenceOnly</strong>(boolean $v)</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not to determine if code/sql gets created for this table.</p>
+        <p>Table will be skipped, if set to true.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$v</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_appendXml">
+        <div class="location">at line 1519</div>
+        <code>            public            
+    <strong>appendXml</strong>(<abbr title="Propel\Generator\Model\DOMNode">DOMNode</abbr> $node)</code>
+    </h3>
+    <div class="details">
+        <p>Appends XML nodes to passed-in DOMNode.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Generator\Model\DOMNode">DOMNode</abbr></td>
+                <td>$node</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPrimaryKey">
+        <div class="location">at line 1621</div>
+        <code>            public            array
+    <strong>getPrimaryKey</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the collection of Columns which make up the single primary key for this table.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasPrimaryKey">
+        <div class="location">at line 1638</div>
+        <code>            public            boolean
+    <strong>hasPrimaryKey</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not this table has a primary key.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasCompositePrimaryKey">
+        <div class="location">at line 1648</div>
+        <code>            public            boolean
+    <strong>hasCompositePrimaryKey</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not this table has a composite primary key.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFirstPrimaryKeyColumn">
+        <div class="location">at line 1660</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>
+    <strong>getFirstPrimaryKeyColumn</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the first primary key column.</p>
+        <p>Useful for tables with a PK using a single column.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasAutoIncrementPrimaryKey">
+        <div class="location">at line 1674</div>
+        <code>            public            boolean
+    <strong>hasAutoIncrementPrimaryKey</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not this table has any auto-increment primary keys.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAutoIncrementPrimaryKey">
+        <div class="location">at line 1684</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>
+    <strong>getAutoIncrementPrimaryKey</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the auto incremented primary key.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getIsCrossRef">
+        <div class="location">at line 1701</div>
+        <code>            public            boolean
+    <strong>getIsCrossRef</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not there is a cross reference status for this foreign key.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isCrossRef">
+        <div class="location">at line 1711</div>
+        <code>            public            boolean
+    <strong>isCrossRef</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Alias for Table::getIsCrossRef.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setIsCrossRef">
+        <div class="location">at line 1721</div>
+        <code>            public            
+    <strong>setIsCrossRef</strong>(boolean $isCrossRef)</code>
+    </h3>
+    <div class="details">
+        <p>Sets a cross reference status for this foreign key.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$isCrossRef</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasForeignKeys">
+        <div class="location">at line 1731</div>
+        <code>            public            boolean
+    <strong>hasForeignKeys</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not the table has foreign keys.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasCrossForeignKeys">
+        <div class="location">at line 1741</div>
+        <code>            public            boolean
+    <strong>hasCrossForeignKeys</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether the table has cross foreign keys or not.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

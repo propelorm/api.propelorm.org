@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>XmlToAppData | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>XmlToAppData</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>XmlToAppData</strong></p>
+
+            <div class="description">
+            <p>A class that is used to parse an input xml schema file and creates an AppData PHP object.</p>
+            <p></p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>DEBUG</td>
+                <td class="last">
+                    <p><em>enables debug output</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="PropelPlatformInterface.html"><abbr title="PropelPlatformInterface">PropelPlatformInterface</abbr></a> $defaultPlatform = null, string $defaultPackage = null, string $encoding = &#039;iso-8859-1&#039;)
+                    <p>Creates a new instance for the specified database type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setGeneratorConfig">setGeneratorConfig</a>(<a href="GeneratorConfigInterface.html"><abbr title="GeneratorConfigInterface">GeneratorConfigInterface</abbr></a> $generatorConfig)
+                    <p>Set the AppData generator configuration</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="AppData.html"><abbr title="AppData">AppData</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_parseFile">parseFile</a>(string $xmlFile)
+                    <p>Parses a XML input file and returns a newly created and populated AppData structure.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="AppData.html"><abbr title="AppData">AppData</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_parseString">parseString</a>(string $xmlString, string $xmlFile = null)
+                    <p>Parses a XML input string and returns a newly created and populated AppData structure.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_startElement">startElement</a>($parser, $name, $attributes)
+                    <p>Handles opening elements of the xml file.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method__throwInvalidTagException">_throwInvalidTagException</a>($parser, $tag_name)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_endElement">endElement</a>($parser, $name)
+                    <p>Handles closing elements of the xml file.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 62</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="PropelPlatformInterface.html"><abbr title="PropelPlatformInterface">PropelPlatformInterface</abbr></a> $defaultPlatform = null, string $defaultPackage = null, string $encoding = &#039;iso-8859-1&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new instance for the specified database type.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPlatformInterface.html"><abbr title="PropelPlatformInterface">PropelPlatformInterface</abbr></a></td>
+                <td>$defaultPlatform</td>
+                <td>The default database platform for the application.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$defaultPackage</td>
+                <td>the default PHP package used for the om</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$encoding</td>
+                <td>The database encoding.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setGeneratorConfig">
+        <div class="location">at line 75</div>
+        <code>            public            
+    <strong>setGeneratorConfig</strong>(<a href="GeneratorConfigInterface.html"><abbr title="GeneratorConfigInterface">GeneratorConfigInterface</abbr></a> $generatorConfig)</code>
+    </h3>
+    <div class="details">
+        <p>Set the AppData generator configuration</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="GeneratorConfigInterface.html"><abbr title="GeneratorConfigInterface">GeneratorConfigInterface</abbr></a></td>
+                <td>$generatorConfig</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_parseFile">
+        <div class="location">at line 87</div>
+        <code>            public            <a href="AppData.html"><abbr title="AppData">AppData</abbr></a>
+    <strong>parseFile</strong>(string $xmlFile)</code>
+    </h3>
+    <div class="details">
+        <p>Parses a XML input file and returns a newly created and populated AppData structure.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$xmlFile</td>
+                <td>The input file to parse.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="AppData.html"><abbr title="AppData">AppData</abbr></a></td>
+            <td>populated by &lt;code&gt;xmlFile&lt;/code&gt;.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_parseString">
+        <div class="location">at line 106</div>
+        <code>            public            <a href="AppData.html"><abbr title="AppData">AppData</abbr></a>
+    <strong>parseString</strong>(string $xmlString, string $xmlFile = null)</code>
+    </h3>
+    <div class="details">
+        <p>Parses a XML input string and returns a newly created and populated AppData structure.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$xmlString</td>
+                <td>The input string to parse.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$xmlFile</td>
+                <td>The input file name.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="AppData.html"><abbr title="AppData">AppData</abbr></a></td>
+            <td>populated by &lt;code&gt;xmlFile&lt;/code&gt;.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_startElement">
+        <div class="location">at line 145</div>
+        <code>            public            
+    <strong>startElement</strong>($parser, $name, $attributes)</code>
+    </h3>
+    <div class="details">
+        <p>Handles opening elements of the xml file.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$parser</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="SchemaException.html"><abbr title="SchemaException">SchemaException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method__throwInvalidTagException">
+        <div class="location">at line 349</div>
+        <code>            public            
+    <strong>_throwInvalidTagException</strong>($parser, $tag_name)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$parser</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$tag_name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_endElement">
+        <div class="location">at line 371</div>
+        <code>            public            
+    <strong>endElement</strong>($parser, $name)</code>
+    </h3>
+    <div class="details">
+        <p>Handles closing elements of the xml file.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$parser</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

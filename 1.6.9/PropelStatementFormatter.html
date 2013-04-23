@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>PropelStatementFormatter | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>PropelStatementFormatter</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PropelStatementFormatter</strong>        extends <a href="PropelFormatter.html"><abbr title="PropelFormatter">PropelFormatter</abbr></a></p>
+
+            <div class="description">
+            <p>statement formatter for Propel query format() returns a PDO statement</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="ModelCriteria.html"><abbr title="ModelCriteria">ModelCriteria</abbr></a> $criteria = null)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="PropelFormatter.html#method___construct"><abbr title="PropelFormatter">PropelFormatter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="PropelFormatter.html"><abbr title="PropelFormatter">PropelFormatter</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_init">init</a>(<a href="ModelCriteria.html"><abbr title="ModelCriteria">ModelCriteria</abbr></a> $criteria)
+                    <p>Define the hydration schema based on a query object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="PropelFormatter.html#method_init"><abbr title="PropelFormatter">PropelFormatter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDbName">setDbName</a>($dbName)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="PropelFormatter.html#method_setDbName"><abbr title="PropelFormatter">PropelFormatter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getDbName">getDbName</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="PropelFormatter.html#method_getDbName"><abbr title="PropelFormatter">PropelFormatter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setClass">setClass</a>($class)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="PropelFormatter.html#method_setClass"><abbr title="PropelFormatter">PropelFormatter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getClass">getClass</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="PropelFormatter.html#method_getClass"><abbr title="PropelFormatter">PropelFormatter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPeer">setPeer</a>($peer)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="PropelFormatter.html#method_setPeer"><abbr title="PropelFormatter">PropelFormatter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getPeer">getPeer</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="PropelFormatter.html#method_getPeer"><abbr title="PropelFormatter">PropelFormatter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setWith">setWith</a>($withs = array())
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="PropelFormatter.html#method_setWith"><abbr title="PropelFormatter">PropelFormatter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getWith">getWith</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="PropelFormatter.html#method_getWith"><abbr title="PropelFormatter">PropelFormatter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setAsColumns">setAsColumns</a>($asColumns = array())
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="PropelFormatter.html#method_setAsColumns"><abbr title="PropelFormatter">PropelFormatter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getAsColumns">getAsColumns</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="PropelFormatter.html#method_getAsColumns"><abbr title="PropelFormatter">PropelFormatter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setHasLimit">setHasLimit</a>($hasLimit = false)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="PropelFormatter.html#method_setHasLimit"><abbr title="PropelFormatter">PropelFormatter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_hasLimit">hasLimit</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="PropelFormatter.html#method_hasLimit"><abbr title="PropelFormatter">PropelFormatter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_formatRecord">formatRecord</a>($record = null)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_format">format</a>(<a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a> $stmt)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_formatOne">formatOne</a>(<a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a> $stmt)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_isObjectFormatter">isObjectFormatter</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_checkInit">checkInit</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="PropelFormatter.html#method_checkInit"><abbr title="PropelFormatter">PropelFormatter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getTableMap">getTableMap</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="PropelFormatter.html#method_getTableMap"><abbr title="PropelFormatter">PropelFormatter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="BaseObject.html"><abbr title="BaseObject">BaseObject</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getSingleObjectFromRow">getSingleObjectFromRow</a>(array $row, string $class, int $col)
+                    <p>Gets a Propel object hydrated from a selection of columns in statement row</p>
+                </td>
+                <td><small>from&nbsp;<a href="PropelFormatter.html#method_getSingleObjectFromRow"><abbr title="PropelFormatter">PropelFormatter</abbr></a></small></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">in <a href="PropelFormatter.html#method___construct"><abbr title="PropelFormatter">PropelFormatter</abbr></a> at line 29</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="ModelCriteria.html"><abbr title="ModelCriteria">ModelCriteria</abbr></a> $criteria = null)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="ModelCriteria.html"><abbr title="ModelCriteria">ModelCriteria</abbr></a></td>
+                <td>$criteria</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_init">
+        <div class="location">in <a href="PropelFormatter.html#method_init"><abbr title="PropelFormatter">PropelFormatter</abbr></a> at line 44</div>
+        <code>            public            <a href="PropelFormatter.html"><abbr title="PropelFormatter">PropelFormatter</abbr></a>
+    <strong>init</strong>(<a href="ModelCriteria.html"><abbr title="ModelCriteria">ModelCriteria</abbr></a> $criteria)</code>
+    </h3>
+    <div class="details">
+        <p>Define the hydration schema based on a query object.</p>
+        <p>Fills the Formatter&#039;s properties using a Criteria as source</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="ModelCriteria.html"><abbr title="ModelCriteria">ModelCriteria</abbr></a></td>
+                <td>$criteria</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="PropelFormatter.html"><abbr title="PropelFormatter">PropelFormatter</abbr></a></td>
+            <td>The current formatter object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDbName">
+        <div class="location">in <a href="PropelFormatter.html#method_setDbName"><abbr title="PropelFormatter">PropelFormatter</abbr></a> at line 57</div>
+        <code>            public            
+    <strong>setDbName</strong>($dbName)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$dbName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDbName">
+        <div class="location">in <a href="PropelFormatter.html#method_getDbName"><abbr title="PropelFormatter">PropelFormatter</abbr></a> at line 62</div>
+        <code>            public            
+    <strong>getDbName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setClass">
+        <div class="location">in <a href="PropelFormatter.html#method_setClass"><abbr title="PropelFormatter">PropelFormatter</abbr></a> at line 67</div>
+        <code>            public            
+    <strong>setClass</strong>($class)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getClass">
+        <div class="location">in <a href="PropelFormatter.html#method_getClass"><abbr title="PropelFormatter">PropelFormatter</abbr></a> at line 73</div>
+        <code>            public            
+    <strong>getClass</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPeer">
+        <div class="location">in <a href="PropelFormatter.html#method_setPeer"><abbr title="PropelFormatter">PropelFormatter</abbr></a> at line 78</div>
+        <code>            public            
+    <strong>setPeer</strong>($peer)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$peer</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPeer">
+        <div class="location">in <a href="PropelFormatter.html#method_getPeer"><abbr title="PropelFormatter">PropelFormatter</abbr></a> at line 83</div>
+        <code>            public            
+    <strong>getPeer</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setWith">
+        <div class="location">in <a href="PropelFormatter.html#method_setWith"><abbr title="PropelFormatter">PropelFormatter</abbr></a> at line 88</div>
+        <code>            public            
+    <strong>setWith</strong>($withs = array())</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$withs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getWith">
+        <div class="location">in <a href="PropelFormatter.html#method_getWith"><abbr title="PropelFormatter">PropelFormatter</abbr></a> at line 93</div>
+        <code>            public            
+    <strong>getWith</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAsColumns">
+        <div class="location">in <a href="PropelFormatter.html#method_setAsColumns"><abbr title="PropelFormatter">PropelFormatter</abbr></a> at line 98</div>
+        <code>            public            
+    <strong>setAsColumns</strong>($asColumns = array())</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$asColumns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAsColumns">
+        <div class="location">in <a href="PropelFormatter.html#method_getAsColumns"><abbr title="PropelFormatter">PropelFormatter</abbr></a> at line 103</div>
+        <code>            public            
+    <strong>getAsColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setHasLimit">
+        <div class="location">in <a href="PropelFormatter.html#method_setHasLimit"><abbr title="PropelFormatter">PropelFormatter</abbr></a> at line 108</div>
+        <code>            public            
+    <strong>setHasLimit</strong>($hasLimit = false)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$hasLimit</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasLimit">
+        <div class="location">in <a href="PropelFormatter.html#method_hasLimit"><abbr title="PropelFormatter">PropelFormatter</abbr></a> at line 113</div>
+        <code>            public            
+    <strong>hasLimit</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_formatRecord">
+        <div class="location">at line 35</div>
+        <code>            public            
+    <strong>formatRecord</strong>($record = null)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$record</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_format">
+        <div class="location">at line 21</div>
+        <code>            public            
+    <strong>format</strong>(<a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a> $stmt)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a></td>
+                <td>$stmt</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_formatOne">
+        <div class="location">at line 26</div>
+        <code>            public            
+    <strong>formatOne</strong>(<a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a> $stmt)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a></td>
+                <td>$stmt</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isObjectFormatter">
+        <div class="location">at line 40</div>
+        <code>            public            
+    <strong>isObjectFormatter</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_checkInit">
+        <div class="location">in <a href="PropelFormatter.html#method_checkInit"><abbr title="PropelFormatter">PropelFormatter</abbr></a> at line 136</div>
+        <code>            public            
+    <strong>checkInit</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTableMap">
+        <div class="location">in <a href="PropelFormatter.html#method_getTableMap"><abbr title="PropelFormatter">PropelFormatter</abbr></a> at line 143</div>
+        <code>            public            
+    <strong>getTableMap</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSingleObjectFromRow">
+        <div class="location">in <a href="PropelFormatter.html#method_getSingleObjectFromRow"><abbr title="PropelFormatter">PropelFormatter</abbr></a> at line 194</div>
+        <code>            public            <a href="BaseObject.html"><abbr title="BaseObject">BaseObject</abbr></a>
+    <strong>getSingleObjectFromRow</strong>(array $row, string $class, int $col)</code>
+    </h3>
+    <div class="details">
+        <p>Gets a Propel object hydrated from a selection of columns in statement row</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$row</td>
+                <td>associative array indexed by column number, as returned by PDOStatement::fetch(PDO::FETCH_NUM)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td>The classname of the object to create</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$col</td>
+                <td>The start column for the hydration (modified)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="BaseObject.html"><abbr title="BaseObject">BaseObject</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

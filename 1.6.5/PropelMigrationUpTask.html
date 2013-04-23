@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>PropelMigrationUpTask | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>PropelMigrationUpTask</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PropelMigrationUpTask</strong>        extends <a href="BasePropelMigrationTask.html"><abbr title="BasePropelMigrationTask">BasePropelMigrationTask</abbr></a></p>
+
+            <div class="description">
+            <p>This Task executes the next migration up</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setMigrationTable">setMigrationTable</a>(string $migrationTable)
+                    <p>Set the migration Table name</p>
+                </td>
+                <td><small>from&nbsp;<a href="BasePropelMigrationTask.html#method_setMigrationTable"><abbr title="BasePropelMigrationTask">BasePropelMigrationTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getMigrationTable">getMigrationTable</a>()
+                    <p>Get the migration Table name</p>
+                </td>
+                <td><small>from&nbsp;<a href="BasePropelMigrationTask.html#method_getMigrationTable"><abbr title="BasePropelMigrationTask">BasePropelMigrationTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_setOutputDirectory">setOutputDirectory</a>(<abbr title="PhingFile">PhingFile</abbr> $outputDirectory)
+                    <p>[REQUIRED] Set the output directory.</p>
+                </td>
+                <td><small>from&nbsp;<a href="BasePropelMigrationTask.html#method_setOutputDirectory"><abbr title="BasePropelMigrationTask">BasePropelMigrationTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getOutputDirectory">getOutputDirectory</a>()
+                    <p>Get the output directory.</p>
+                </td>
+                <td><small>from&nbsp;<a href="BasePropelMigrationTask.html#method_getOutputDirectory"><abbr title="BasePropelMigrationTask">BasePropelMigrationTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_main">main</a>()
+                    <p>Main method builds all the targets for a typical propel project.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_setMigrationTable">
+        <div class="location">in <a href="BasePropelMigrationTask.html#method_setMigrationTable"><abbr title="BasePropelMigrationTask">BasePropelMigrationTask</abbr></a> at line 45</div>
+        <code>            public            
+    <strong>setMigrationTable</strong>(string $migrationTable)</code>
+    </h3>
+    <div class="details">
+        <p>Set the migration Table name</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$migrationTable</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getMigrationTable">
+        <div class="location">in <a href="BasePropelMigrationTask.html#method_getMigrationTable"><abbr title="BasePropelMigrationTask">BasePropelMigrationTask</abbr></a> at line 55</div>
+        <code>            public            string
+    <strong>getMigrationTable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the migration Table name</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setOutputDirectory">
+        <div class="location">in <a href="BasePropelMigrationTask.html#method_setOutputDirectory"><abbr title="BasePropelMigrationTask">BasePropelMigrationTask</abbr></a> at line 67</div>
+        <code>            public            void
+    <strong>setOutputDirectory</strong>(<abbr title="PhingFile">PhingFile</abbr> $outputDirectory)</code>
+    </h3>
+    <div class="details">
+        <p>[REQUIRED] Set the output directory.</p>
+        <p>It will be<br />
+ created if it doesn&#039;t exist.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="PhingFile">PhingFile</abbr></td>
+                <td>$outputDirectory</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOutputDirectory">
+        <div class="location">in <a href="BasePropelMigrationTask.html#method_getOutputDirectory"><abbr title="BasePropelMigrationTask">BasePropelMigrationTask</abbr></a> at line 85</div>
+        <code>            public            string
+    <strong>getOutputDirectory</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the output directory.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_main">
+        <div class="location">at line 25</div>
+        <code>            public            
+    <strong>main</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Main method builds all the targets for a typical propel project.</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

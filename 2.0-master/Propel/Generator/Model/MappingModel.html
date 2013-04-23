@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Propel\Generator\Model\MappingModel | Propel 2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel 2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Propel/Generator/Model.html">Propel\Generator\Model</a>\MappingModel</h1>
+    </div>
+        <div class="content">
+                <p>abstract class    <strong>MappingModel</strong>        implements
+        <a href="../../../Propel/Generator/Model/MappingModelInterface.html"><abbr title="Propel\Generator\Model\MappingModelInterface">MappingModelInterface</abbr></a></p>
+
+            <div class="description">
+            <p>An abstract model class to represent objects that belongs to a schema like databases, tables, columns, indices, unices, foreign keys...</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_loadMapping">loadMapping</a>(array $attributes)
+                    <p>Loads a mapping definition from an array.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAttributes">getAttributes</a>()
+                    <p>Returns all definition attributes.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getAttribute">getAttribute</a>(string $name, mixed $default = null)
+                    <p>Returns a particular attribute by a case-insensitive name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_appendXml">appendXml</a>(<abbr title="Propel\Generator\Model\DOMNode">DOMNode</abbr> $node)
+                    <p>Appends DOM elements to represent this object in XML.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/VendorInfo.html"><abbr title="Propel\Generator\Model\VendorInfo">VendorInfo</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addVendorInfo">addVendorInfo</a>($vendor)
+                    <p>Adds a new VendorInfo instance to this current model object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/VendorInfo.html"><abbr title="Propel\Generator\Model\VendorInfo">VendorInfo</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getVendorInfoForType">getVendorInfoForType</a>(string $type)
+                    <p>Returns a VendorInfo object by its type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getConfiguredBehavior">getConfiguredBehavior</a>(string $behavior)
+                    <p>Returns the best class name for a given behavior.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_toString">toString</a>()
+                    <p>String representation of the current object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method___toString">__toString</a>()
+                    <p>String representation of the current object.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 27</div>
+        <code>            public            
+    <strong>__construct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadMapping">
+        <div class="location">at line 38</div>
+        <code>            public            
+    <strong>loadMapping</strong>(array $attributes)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a mapping definition from an array.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAttributes">
+        <div class="location">at line 58</div>
+        <code>            public            array
+    <strong>getAttributes</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns all definition attributes.</p>
+        <p>All attribute names (keys) are lowercase.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAttribute">
+        <div class="location">at line 73</div>
+        <code>            public            mixed
+    <strong>getAttribute</strong>(string $name, mixed $default = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a particular attribute by a case-insensitive name.</p>
+        <p>If the attribute is not set, then the second default value is<br />
+ returned instead.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_appendXml">
+        <div class="location">at line 130</div>
+        <code>    abstract        public            
+    <strong>appendXml</strong>(<abbr title="Propel\Generator\Model\DOMNode">DOMNode</abbr> $node)</code>
+    </h3>
+    <div class="details">
+        <p>Appends DOM elements to represent this object in XML.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Generator\Model\DOMNode">DOMNode</abbr></td>
+                <td>$node</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addVendorInfo">
+        <div class="location">at line 138</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/VendorInfo.html"><abbr title="Propel\Generator\Model\VendorInfo">VendorInfo</abbr></a>
+    <strong>addVendorInfo</strong>($vendor)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a new VendorInfo instance to this current model object.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$vendor</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/VendorInfo.html"><abbr title="Propel\Generator\Model\VendorInfo">VendorInfo</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVendorInfoForType">
+        <div class="location">at line 158</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/VendorInfo.html"><abbr title="Propel\Generator\Model\VendorInfo">VendorInfo</abbr></a>
+    <strong>getVendorInfoForType</strong>(string $type)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a VendorInfo object by its type.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/VendorInfo.html"><abbr title="Propel\Generator\Model\VendorInfo">VendorInfo</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConfiguredBehavior">
+        <div class="location">at line 176</div>
+        <code>            public            string
+    <strong>getConfiguredBehavior</strong>(string $behavior)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the best class name for a given behavior.</p>
+        <p>If not found, the method tries to autoload \Propel\Generator\Behavior\[Bname]\[Bname]Behavior</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$behavior</td>
+                <td>The behavior name (ie: timestampable)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>$class The behavior fully qualified class name</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="BehaviorNotFoundException">BehaviorNotFoundException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toString">
+        <div class="location">at line 198</div>
+        <code>            public            string
+    <strong>toString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>String representation of the current object.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___toString">
+        <div class="location">at line 213</div>
+        <code>            public            string
+    <strong>__toString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>String representation of the current object.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

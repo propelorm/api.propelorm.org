@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Propel\Generator\Model\Diff\DatabaseDiff | Propel 2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel 2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../Propel/Generator/Model/Diff.html">Propel\Generator\Model\Diff</a>\DatabaseDiff</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>DatabaseDiff</strong></p>
+
+            <div class="description">
+            <p>Value object for storing Database object diffs Heavily inspired by Doctrine2&#039;s Migrations (see http://github.com/doctrine/dbal/tree/master/lib/Doctrine/DBAL/Schema/)</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setAddedTables">setAddedTables</a>(array $tables)
+                    <p>Sets the added tables.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addAddedTable">addAddedTable</a>(string $name, <a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)
+                    <p>Adds an added table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_removeAddedTable">removeAddedTable</a>(string $name)
+                    <p>Removes an added table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAddedTables">getAddedTables</a>()
+                    <p>Returns the list of added tables.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_countAddedTables">countAddedTables</a>()
+                    <p>Returns the number of added tables.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getAddedTable">getAddedTable</a>($name)
+                    <p>Returns an added table by its name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setRemovedTables">setRemovedTables</a>(array $tables)
+                    <p>Sets the removes tables.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addRemovedTable">addRemovedTable</a>(string $name, <a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)
+                    <p>Adds a table to remove.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_removeRemovedTable">removeRemovedTable</a>(string $name)
+                    <p>Removes a removed table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getRemovedTables">getRemovedTables</a>()
+                    <p>Returns the list of removed tables.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_countRemovedTables">countRemovedTables</a>()
+                    <p>Retuns the number of removed tables.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getRemovedTable">getRemovedTable</a>($name)
+                    <p>Returns a removed table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setModifiedTables">setModifiedTables</a>(array $tables)
+                    <p>Sets the modified tables</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addModifiedTable">addModifiedTable</a>(string $name, <a href="../../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a> $difference)
+                    <p>Adds a table difference.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_countModifiedTables">countModifiedTables</a>()
+                    <p>Returns the number of modified tables.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getModifiedTables">getModifiedTables</a>()
+                    <p>Returns the modified tables.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setRenamedTables">setRenamedTables</a>(array $tables)
+                    <p>Sets the renamed tables.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addRenamedTable">addRenamedTable</a>(string $fromName, string $toName)
+                    <p>Adds a renamed table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getRenamedTables">getRenamedTables</a>()
+                    <p>Returns the list of renamed tables.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_countRenamedTables">countRenamedTables</a>()
+                    <p>Returns the number of renamed tables.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../Propel/Generator/Model/Diff/DatabaseDiff.html"><abbr title="Propel\Generator\Model\Diff\DatabaseDiff">DatabaseDiff</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getReverseDiff">getReverseDiff</a>()
+                    <p>Returns the reverse diff for this diff.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDescription">getDescription</a>()
+                    <p>Returns a description of the database modifications.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___toString">__toString</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 28</div>
+        <code>            public            
+    <strong>__construct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAddedTables">
+        <div class="location">at line 41</div>
+        <code>            public            
+    <strong>setAddedTables</strong>(array $tables)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the added tables.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$tables</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addAddedTable">
+        <div class="location">at line 52</div>
+        <code>            public            
+    <strong>addAddedTable</strong>(string $name, <a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Adds an added table.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeAddedTable">
+        <div class="location">at line 62</div>
+        <code>            public            
+    <strong>removeAddedTable</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Removes an added table.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddedTables">
+        <div class="location">at line 72</div>
+        <code>            public            array
+    <strong>getAddedTables</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the list of added tables.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_countAddedTables">
+        <div class="location">at line 82</div>
+        <code>            public            integer
+    <strong>countAddedTables</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the number of added tables.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddedTable">
+        <div class="location">at line 93</div>
+        <code>            public            
+    <strong>getAddedTable</strong>($name)</code>
+    </h3>
+    <div class="details">
+        <p>Returns an added table by its name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setRemovedTables">
+        <div class="location">at line 103</div>
+        <code>            public            
+    <strong>setRemovedTables</strong>(array $tables)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the removes tables.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$tables</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addRemovedTable">
+        <div class="location">at line 114</div>
+        <code>            public            
+    <strong>addRemovedTable</strong>(string $name, <a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a table to remove.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeRemovedTable">
+        <div class="location">at line 124</div>
+        <code>            public            
+    <strong>removeRemovedTable</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Removes a removed table.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRemovedTables">
+        <div class="location">at line 134</div>
+        <code>            public            array
+    <strong>getRemovedTables</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the list of removed tables.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_countRemovedTables">
+        <div class="location">at line 144</div>
+        <code>            public            integer
+    <strong>countRemovedTables</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retuns the number of removed tables.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRemovedTable">
+        <div class="location">at line 155</div>
+        <code>            public            
+    <strong>getRemovedTable</strong>($name)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a removed table.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setModifiedTables">
+        <div class="location">at line 165</div>
+        <code>            public            
+    <strong>setModifiedTables</strong>(array $tables)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the modified tables</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$tables</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addModifiedTable">
+        <div class="location">at line 176</div>
+        <code>            public            
+    <strong>addModifiedTable</strong>(string $name, <a href="../../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a> $difference)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a table difference.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a></td>
+                <td>$difference</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_countModifiedTables">
+        <div class="location">at line 186</div>
+        <code>            public            integer
+    <strong>countModifiedTables</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the number of modified tables.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getModifiedTables">
+        <div class="location">at line 196</div>
+        <code>            public            array
+    <strong>getModifiedTables</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the modified tables.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setRenamedTables">
+        <div class="location">at line 206</div>
+        <code>            public            
+    <strong>setRenamedTables</strong>(array $tables)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the renamed tables.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$tables</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addRenamedTable">
+        <div class="location">at line 217</div>
+        <code>            public            
+    <strong>addRenamedTable</strong>(string $fromName, string $toName)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a renamed table.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$fromName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$toName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRenamedTables">
+        <div class="location">at line 227</div>
+        <code>            public            array
+    <strong>getRenamedTables</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the list of renamed tables.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_countRenamedTables">
+        <div class="location">at line 237</div>
+        <code>            public            integer
+    <strong>countRenamedTables</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the number of renamed tables.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getReverseDiff">
+        <div class="location">at line 247</div>
+        <code>            public            <a href="../../../../Propel/Generator/Model/Diff/DatabaseDiff.html"><abbr title="Propel\Generator\Model\Diff\DatabaseDiff">DatabaseDiff</abbr></a>
+    <strong>getReverseDiff</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the reverse diff for this diff.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../Propel/Generator/Model/Diff/DatabaseDiff.html"><abbr title="Propel\Generator\Model\Diff\DatabaseDiff">DatabaseDiff</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDescription">
+        <div class="location">at line 274</div>
+        <code>            public            string
+    <strong>getDescription</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns a description of the database modifications.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___toString">
+        <div class="location">at line 293</div>
+        <code>            public            
+    <strong>__toString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

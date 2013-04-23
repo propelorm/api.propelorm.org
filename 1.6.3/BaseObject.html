@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>BaseObject | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>BaseObject</h1>
+    </div>
+        <div class="content">
+                <p>abstract class    <strong>BaseObject</strong></p>
+
+            <div class="description">
+            <p>This class contains attributes and methods that are used by all business objects within the system.</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>()
+                    <p>Empty constructor (this allows people with their own BaseObject implementation to use its constructor)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isModified">isModified</a>()
+                    <p>Returns whether the object has been modified.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isColumnModified">isColumnModified</a>(string $col)
+                    <p>Has specified column been modified?</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getModifiedColumns">getModifiedColumns</a>()
+                    <p>Get the columns that have been modified in this object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="true,">true,</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_isNew">isNew</a>()
+                    <p>Returns whether the object has ever been saved.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setNew">setNew</a>(boolean $b)
+                    <p>Setter for the isNew attribute.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isDeleted">isDeleted</a>()
+                    <p>Whether this object has been deleted.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_setDeleted">setDeleted</a>(boolean $b)
+                    <p>Specify whether this object has been deleted.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="bloolean">bloolean</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_preSave">preSave</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Code to be run before persisting the object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_postSave">postSave</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Code to be run after persisting the object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_preInsert">preInsert</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Code to be run before inserting to database</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_postInsert">postInsert</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Code to be run after inserting to database</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_preUpdate">preUpdate</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Code to be run before updating the object in database</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_postUpdate">postUpdate</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Code to be run after updating the object in database</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_preDelete">preDelete</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Code to be run before deleting the object in database</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_postDelete">postDelete</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Code to be run after deleting the object in database</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_resetModified">resetModified</a>(string $col = null)
+                    <p>Sets the modified state for the object to be false.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Whether">Whether</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_equals">equals</a>(<abbr title="obj">obj</abbr> $obj)
+                    <p>Compares this with another &lt;code&gt;BaseObject&lt;/code&gt; instance.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_hashCode">hashCode</a>()
+                    <p>If the primary key is not &lt;code&gt;null&lt;/code&gt;, return the hashcode of the primary key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getVirtualColumns">getVirtualColumns</a>()
+                    <p>Get the associative array of the virtual columns in this object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasVirtualColumn">hasVirtualColumn</a>($name)
+                    <p>Checks the existence of a virtual column in this object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getVirtualColumn">getVirtualColumn</a>($name)
+                    <p>Get the value of a virtual column in this object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="BaseObject.html"><abbr title="BaseObject">BaseObject</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setVirtualColumn">setVirtualColumn</a>(string $name, mixed $value)
+                    <p>Get the value of a virtual column in this object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="BaseObject.html"><abbr title="BaseObject">BaseObject</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_importFrom">importFrom</a>(mixed $parser, string $data)
+                    <p>Populate the current object from a string, using a given parser format &lt;code&gt; $book = new Book(); $book-&gt;importFrom(&#039;JSON&#039;, &#039;{&quot;Id&quot;:9012,&quot;Title&quot;:&quot;Don Juan&quot;,&quot;ISBN&quot;:&quot;0140422161&quot;,&quot;Price&quot;:12.99,&quot;PublisherId&quot;:1234,&quot;AuthorId&quot;:5678}&#039;); &lt;/code&gt;</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_exportTo">exportTo</a>(mixed $parser, boolean $includeLazyLoadColumns = true)
+                    <p>Export the current object properties to a string, using a given parser format &lt;code&gt; $book = BookQuery::create()-&gt;findPk(9012); echo $book-&gt;exportTo(&#039;JSON&#039;);  =&gt; {&quot;Id&quot;:9012,&quot;Title&quot;:&quot;Don Juan&quot;,&quot;ISBN&quot;:&quot;0140422161&quot;,&quot;Price&quot;:12.99,&quot;PublisherId&quot;:1234,&quot;AuthorId&quot;:5678}&#039;); &lt;/code&gt;</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___sleep">__sleep</a>()
+                    <p>Clean up internal collections prior to serializing Avoids recursive loops that turn into segmentation faults when serializing</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___call">__call</a>($name, $params)
+                    <p>Catches calls to undefined methods.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 62</div>
+        <code>            public            
+    <strong>__construct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Empty constructor (this allows people with their own BaseObject implementation to use its constructor)</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isModified">
+        <div class="location">at line 71</div>
+        <code>            public            boolean
+    <strong>isModified</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether the object has been modified.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if the object has been modified.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isColumnModified">
+        <div class="location">at line 82</div>
+        <code>            public            boolean
+    <strong>isColumnModified</strong>(string $col)</code>
+    </h3>
+    <div class="details">
+        <p>Has specified column been modified?</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$col</td>
+                <td>column fully qualified name (BasePeer::TYPE_COLNAME), e.g. Book::AUTHOR_ID</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if $col has been modified.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getModifiedColumns">
+        <div class="location">at line 91</div>
+        <code>            public            array
+    <strong>getModifiedColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the columns that have been modified in this object.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>A unique list of the modified column names for this object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isNew">
+        <div class="location">at line 103</div>
+        <code>            public            <abbr title="true,">true,</abbr>
+    <strong>isNew</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether the object has ever been saved.</p>
+        <p>This will<br />
+ be false, if the object was retrieved from storage or was created<br />
+ and then saved.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="true,">true,</abbr></td>
+            <td>if the object has never been persisted.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setNew">
+        <div class="location">at line 114</div>
+        <code>            public            
+    <strong>setNew</strong>(boolean $b)</code>
+    </h3>
+    <div class="details">
+        <p>Setter for the isNew attribute.</p>
+        <p>This method will be called<br />
+ by Propel-generated children and Peers.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$b</td>
+                <td>the state of the object.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isDeleted">
+        <div class="location">at line 123</div>
+        <code>            public            boolean
+    <strong>isDeleted</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Whether this object has been deleted.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>The deleted state of this object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDeleted">
+        <div class="location">at line 133</div>
+        <code>            public            void
+    <strong>setDeleted</strong>(boolean $b)</code>
+    </h3>
+    <div class="details">
+        <p>Specify whether this object has been deleted.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$b</td>
+                <td>The deleted state of this object.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_preSave">
+        <div class="location">at line 143</div>
+        <code>            public            <abbr title="bloolean">bloolean</abbr>
+    <strong>preSave</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Code to be run before persisting the object</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="bloolean">bloolean</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_postSave">
+        <div class="location">at line 152</div>
+        <code>            public            
+    <strong>postSave</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Code to be run after persisting the object</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_preInsert">
+        <div class="location">at line 159</div>
+        <code>            public            boolean
+    <strong>preInsert</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Code to be run before inserting to database</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_postInsert">
+        <div class="location">at line 168</div>
+        <code>            public            
+    <strong>postInsert</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Code to be run after inserting to database</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_preUpdate">
+        <div class="location">at line 175</div>
+        <code>            public            boolean
+    <strong>preUpdate</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Code to be run before updating the object in database</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_postUpdate">
+        <div class="location">at line 184</div>
+        <code>            public            
+    <strong>postUpdate</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Code to be run after updating the object in database</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_preDelete">
+        <div class="location">at line 191</div>
+        <code>            public            boolean
+    <strong>preDelete</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Code to be run before deleting the object in database</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_postDelete">
+        <div class="location">at line 200</div>
+        <code>            public            
+    <strong>postDelete</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Code to be run after deleting the object in database</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resetModified">
+        <div class="location">at line 207</div>
+        <code>            public            void
+    <strong>resetModified</strong>(string $col = null)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the modified state for the object to be false.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$col</td>
+                <td>If supplied, only the specified column is reset.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_equals">
+        <div class="location">at line 226</div>
+        <code>            public            <abbr title="Whether">Whether</abbr>
+    <strong>equals</strong>(<abbr title="obj">obj</abbr> $obj)</code>
+    </h3>
+    <div class="details">
+        <p>Compares this with another &lt;code&gt;BaseObject&lt;/code&gt; instance.</p>
+        <p>If<br />
+ &lt;code&gt;obj&lt;/code&gt; is an instance of &lt;code&gt;BaseObject&lt;/code&gt;, delegates to<br />
+ &lt;code&gt;equals(BaseObject)&lt;/code&gt;.  Otherwise, returns &lt;code&gt;false&lt;/code&gt;.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="obj">obj</abbr></td>
+                <td>$obj</td>
+                <td>The object to compare to.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Whether">Whether</abbr></td>
+            <td>equal to the object specified.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hashCode">
+        <div class="location">at line 248</div>
+        <code>            public            int
+    <strong>hashCode</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>If the primary key is not &lt;code&gt;null&lt;/code&gt;, return the hashcode of the primary key.</p>
+        <p>Otherwise calls &lt;code&gt;Object.hashCode()&lt;/code&gt;.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>Hashcode</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVirtualColumns">
+        <div class="location">at line 264</div>
+        <code>            public            array
+    <strong>getVirtualColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the associative array of the virtual columns in this object</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasVirtualColumn">
+        <div class="location">at line 274</div>
+        <code>            public            boolean
+    <strong>hasVirtualColumn</strong>($name)</code>
+    </h3>
+    <div class="details">
+        <p>Checks the existence of a virtual column in this object</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVirtualColumn">
+        <div class="location">at line 284</div>
+        <code>            public            mixed
+    <strong>getVirtualColumn</strong>($name)</code>
+    </h3>
+    <div class="details">
+        <p>Get the value of a virtual column in this object</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setVirtualColumn">
+        <div class="location">at line 300</div>
+        <code>            public            <a href="BaseObject.html"><abbr title="BaseObject">BaseObject</abbr></a>
+    <strong>setVirtualColumn</strong>(string $name, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Get the value of a virtual column in this object</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The virtual column name</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value to give to the virtual column</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="BaseObject.html"><abbr title="BaseObject">BaseObject</abbr></a></td>
+            <td>The current object, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_importFrom">
+        <div class="location">at line 331</div>
+        <code>            public            <a href="BaseObject.html"><abbr title="BaseObject">BaseObject</abbr></a>
+    <strong>importFrom</strong>(mixed $parser, string $data)</code>
+    </h3>
+    <div class="details">
+        <p>Populate the current object from a string, using a given parser format &lt;code&gt; $book = new Book(); $book-&gt;importFrom(&#039;JSON&#039;, &#039;{&quot;Id&quot;:9012,&quot;Title&quot;:&quot;Don Juan&quot;,&quot;ISBN&quot;:&quot;0140422161&quot;,&quot;Price&quot;:12.99,&quot;PublisherId&quot;:1234,&quot;AuthorId&quot;:5678}&#039;); &lt;/code&gt;</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$parser</td>
+                <td>A PropelParser instance, or a format name (&#039;XML&#039;, &#039;YAML&#039;, &#039;JSON&#039;, &#039;CSV&#039;)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td>The source data to import from</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="BaseObject.html"><abbr title="BaseObject">BaseObject</abbr></a></td>
+            <td>The current object, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_exportTo">
+        <div class="location">at line 351</div>
+        <code>            public            string
+    <strong>exportTo</strong>(mixed $parser, boolean $includeLazyLoadColumns = true)</code>
+    </h3>
+    <div class="details">
+        <p>Export the current object properties to a string, using a given parser format &lt;code&gt; $book = BookQuery::create()-&gt;findPk(9012); echo $book-&gt;exportTo(&#039;JSON&#039;);  =&gt; {&quot;Id&quot;:9012,&quot;Title&quot;:&quot;Don Juan&quot;,&quot;ISBN&quot;:&quot;0140422161&quot;,&quot;Price&quot;:12.99,&quot;PublisherId&quot;:1234,&quot;AuthorId&quot;:5678}&#039;); &lt;/code&gt;</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$parser</td>
+                <td>A PropelParser instance, or a format name (&#039;XML&#039;, &#039;YAML&#039;, &#039;JSON&#039;, &#039;CSV&#039;)</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$includeLazyLoadColumns</td>
+                <td>(optional) Whether to include lazy load(ed) columns. Defaults to TRUE.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The exported data</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___sleep">
+        <div class="location">at line 363</div>
+        <code>            public            
+    <strong>__sleep</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Clean up internal collections prior to serializing Avoids recursive loops that turn into segmentation faults when serializing</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___call">
+        <div class="location">at line 380</div>
+        <code>            public            
+    <strong>__call</strong>($name, $params)</code>
+    </h3>
+    <div class="details">
+        <p>Catches calls to undefined methods.</p>
+        <p>Provides magic import/export method support (fromXML()/toXML(), fromYAML()/toYAML(), etc.).<br />
+ Allows to define default __call() behavior if you use a custom BaseObject</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

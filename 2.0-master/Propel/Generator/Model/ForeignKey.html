@@ -1,0 +1,2229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Propel\Generator\Model\ForeignKey | Propel 2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel 2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Propel/Generator/Model.html">Propel\Generator\Model</a>\ForeignKey</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>ForeignKey</strong>        extends <a href="../../../Propel/Generator/Model/MappingModel.html"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a></p>
+
+            <div class="description">
+            <p>A class for information about table foreign keys.</p>
+            <p></p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>NONE</td>
+                <td class="last">
+                    <p><em>These constants are the uppercase equivalents of the onDelete / onUpdate values in the schema definition.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NOACTION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CASCADE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RESTRICT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SETDEFAULT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SETNULL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(string $name = null)
+                    <p>Constructs a new ForeignKey object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_loadMapping">loadMapping</a>(array $attributes)
+                    <p>Loads a mapping definition from an array.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/MappingModel.html#method_loadMapping"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAttributes">getAttributes</a>()
+                    <p>Returns all definition attributes.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/MappingModel.html#method_getAttributes"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getAttribute">getAttribute</a>(string $name, mixed $default = null)
+                    <p>Returns a particular attribute by a case-insensitive name.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/MappingModel.html#method_getAttribute"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_appendXml">appendXml</a>(<abbr title="Propel\Generator\Model\DOMNode">DOMNode</abbr> $node)
+                    <p>Appends DOM elements to represent this object in XML.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/VendorInfo.html"><abbr title="Propel\Generator\Model\VendorInfo">VendorInfo</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addVendorInfo">addVendorInfo</a>($vendor)
+                    <p>Adds a new VendorInfo instance to this current model object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/MappingModel.html#method_addVendorInfo"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/VendorInfo.html"><abbr title="Propel\Generator\Model\VendorInfo">VendorInfo</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getVendorInfoForType">getVendorInfoForType</a>(string $type)
+                    <p>Returns a VendorInfo object by its type.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/MappingModel.html#method_getVendorInfoForType"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getConfiguredBehavior">getConfiguredBehavior</a>(string $behavior)
+                    <p>Returns the best class name for a given behavior.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/MappingModel.html#method_getConfiguredBehavior"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_toString">toString</a>()
+                    <p>String representation of the current object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/MappingModel.html#method_toString"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method___toString">__toString</a>()
+                    <p>String representation of the current object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/MappingModel.html#method___toString"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_normalizeFKey">normalizeFKey</a>(string $behavior)
+                    <p>Returns the normalized input of onDelete and onUpdate behaviors.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasOnUpdate">hasOnUpdate</a>()
+                    <p>Returns whether or not the onUpdate behavior is set.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasOnDelete">hasOnDelete</a>()
+                    <p>Returns whether or not the onDelete behavior is set.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getOnUpdate">getOnUpdate</a>()
+                    <p>Returns the onUpdate behavior.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getOnDelete">getOnDelete</a>()
+                    <p>Returns the onDelete behavior.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setOnDelete">setOnDelete</a>(string $behavior)
+                    <p>Sets the onDelete behavior.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setOnUpdate">setOnUpdate</a>(string $behavior)
+                    <p>Sets the onUpdate behavior.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getName">getName</a>()
+                    <p>Returns the foreign key name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setName">setName</a>(string $name)
+                    <p>Sets the foreign key name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPhpName">getPhpName</a>()
+                    <p>Returns the phpName for this foreign key (if any).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPhpName">setPhpName</a>(string $name)
+                    <p>Sets a phpName to use for this foreign key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getRefPhpName">getRefPhpName</a>()
+                    <p>Returns the refPhpName for this foreign key (if any).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setRefPhpName">setRefPhpName</a>(string $name)
+                    <p>Sets a refPhpName to use for this foreign key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDefaultJoin">getDefaultJoin</a>()
+                    <p>Returns the default join strategy for this foreign key (if any).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDefaultJoin">setDefaultJoin</a>(string $join)
+                    <p>Sets the default join strategy for this foreign key (if any).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getForeignTableName">getForeignTableName</a>()
+                    <p>Returns the foreign table name of the FK.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getForeignTableCommonName">getForeignTableCommonName</a>()
+                    <p>Returns the foreign table name without schema.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setForeignTableCommonName">setForeignTableCommonName</a>(string $tableName)
+                    <p>Sets the foreign table common name of the FK.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getForeignTable">getForeignTable</a>()
+                    <p>Returns the resolved foreign Table model object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getForeignSchemaName">getForeignSchemaName</a>()
+                    <p>Returns the foreign schema name of the FK.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setForeignSchemaName">setForeignSchemaName</a>(string $schemaName)
+                    <p>Set the foreign schema name of the foreign key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setTable">setTable</a>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $parent)
+                    <p>Sets the parent Table of the foreign key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getTable">getTable</a>()
+                    <p>Returns the parent Table of the foreign key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getTableName">getTableName</a>()
+                    <p>Returns the name of the table the foreign key is in.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getSchemaName">getSchemaName</a>()
+                    <p>Returns the name of the schema the foreign key is in.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addReference">addReference</a>(mixed $ref1, mixed $ref2 = null)
+                    <p>Adds a new reference entry to the foreign key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_clearReferences">clearReferences</a>()
+                    <p>Clears the references of this foreign key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getLocalColumns">getLocalColumns</a>()
+                    <p>Returns an array of local column names.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getLocalColumnObjects">getLocalColumnObjects</a>()
+                    <p>Returns an array of local column objects.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getLocalColumnName">getLocalColumnName</a>(integer $index)
+                    <p>Returns a local column name identified by a position.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getLocalColumn">getLocalColumn</a>(integer $index)
+                    <p>Returns a local Column object identified by a position.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getLocalForeignMapping">getLocalForeignMapping</a>()
+                    <p>Returns an array of local column to foreign column mapping for this foreign key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getForeignLocalMapping">getForeignLocalMapping</a>()
+                    <p>Returns an array of local column to foreign column mapping for this foreign key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnObjectsMapping">getColumnObjectsMapping</a>()
+                    <p>Returns an array of local and foreign column objects mapped for this foreign key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getMappedForeignColumn">getMappedForeignColumn</a>(string $local)
+                    <p>Returns the foreign column name mapped to a specified local column.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getMappedLocalColumn">getMappedLocalColumn</a>(string $foreign)
+                    <p>Returns the local column name mapped to a specified foreign column.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getForeignColumns">getForeignColumns</a>()
+                    <p>Returns an array of foreign column names.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getForeignColumnObjects">getForeignColumnObjects</a>()
+                    <p>Returns an array of foreign column objects.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getForeignColumnName">getForeignColumnName</a>(integer $index)
+                    <p>Returns a foreign column name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getForeignColumn">getForeignColumn</a>($index)
+                    <p>Returns a foreign column object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isLocalColumnsRequired">isLocalColumnsRequired</a>()
+                    <p>Returns whether this foreign key uses a required column, or a list of required columns.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isForeignPrimaryKey">isForeignPrimaryKey</a>()
+                    <p>Returns whether this foreign key is also the primary key of the foreign table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isComposite">isComposite</a>()
+                    <p>Returns whether or not this foreign key relies on more than one column binding.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isLocalPrimaryKey">isLocalPrimaryKey</a>()
+                    <p>Returns whether or not this foreign key is also the primary key of the local table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSkipSql">setSkipSql</a>(boolean $skip)
+                    <p>Sets whether or not this foreign key should have its creation SQL generated.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isSkipSql">isSkipSql</a>()
+                    <p>Returns whether or not the SQL generation must be skipped for this foreign key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isMatchedByInverseFK">isMatchedByInverseFK</a>()
+                    <p>Whether this foreign key is matched by an inverted foreign key (on foreign table).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getInverseFK">getInverseFK</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getOtherFks">getOtherFks</a>()
+                    <p>Returns the list of other foreign keys starting on the same table.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 54</div>
+        <code>            public            
+    <strong>__construct</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Constructs a new ForeignKey object.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadMapping">
+        <div class="location">in <a href="../../../Propel/Generator/Model/MappingModel.html#method_loadMapping"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a> at line 38</div>
+        <code>            public            
+    <strong>loadMapping</strong>(array $attributes)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a mapping definition from an array.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAttributes">
+        <div class="location">in <a href="../../../Propel/Generator/Model/MappingModel.html#method_getAttributes"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a> at line 58</div>
+        <code>            public            array
+    <strong>getAttributes</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns all definition attributes.</p>
+        <p>All attribute names (keys) are lowercase.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAttribute">
+        <div class="location">in <a href="../../../Propel/Generator/Model/MappingModel.html#method_getAttribute"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a> at line 73</div>
+        <code>            public            mixed
+    <strong>getAttribute</strong>(string $name, mixed $default = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a particular attribute by a case-insensitive name.</p>
+        <p>If the attribute is not set, then the second default value is<br />
+ returned instead.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_appendXml">
+        <div class="location">at line 713</div>
+        <code>            public            
+    <strong>appendXml</strong>(<abbr title="Propel\Generator\Model\DOMNode">DOMNode</abbr> $node)</code>
+    </h3>
+    <div class="details">
+        <p>Appends DOM elements to represent this object in XML.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Generator\Model\DOMNode">DOMNode</abbr></td>
+                <td>$node</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addVendorInfo">
+        <div class="location">in <a href="../../../Propel/Generator/Model/MappingModel.html#method_addVendorInfo"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a> at line 138</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/VendorInfo.html"><abbr title="Propel\Generator\Model\VendorInfo">VendorInfo</abbr></a>
+    <strong>addVendorInfo</strong>($vendor)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a new VendorInfo instance to this current model object.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$vendor</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/VendorInfo.html"><abbr title="Propel\Generator\Model\VendorInfo">VendorInfo</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVendorInfoForType">
+        <div class="location">in <a href="../../../Propel/Generator/Model/MappingModel.html#method_getVendorInfoForType"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a> at line 158</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/VendorInfo.html"><abbr title="Propel\Generator\Model\VendorInfo">VendorInfo</abbr></a>
+    <strong>getVendorInfoForType</strong>(string $type)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a VendorInfo object by its type.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/VendorInfo.html"><abbr title="Propel\Generator\Model\VendorInfo">VendorInfo</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConfiguredBehavior">
+        <div class="location">in <a href="../../../Propel/Generator/Model/MappingModel.html#method_getConfiguredBehavior"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a> at line 176</div>
+        <code>            public            string
+    <strong>getConfiguredBehavior</strong>(string $behavior)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the best class name for a given behavior.</p>
+        <p>If not found, the method tries to autoload \Propel\Generator\Behavior\[Bname]\[Bname]Behavior</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$behavior</td>
+                <td>The behavior name (ie: timestampable)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>$class The behavior fully qualified class name</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="BehaviorNotFoundException">BehaviorNotFoundException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toString">
+        <div class="location">in <a href="../../../Propel/Generator/Model/MappingModel.html#method_toString"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a> at line 198</div>
+        <code>            public            string
+    <strong>toString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>String representation of the current object.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___toString">
+        <div class="location">in <a href="../../../Propel/Generator/Model/MappingModel.html#method___toString"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a> at line 213</div>
+        <code>            public            string
+    <strong>__toString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>String representation of the current object.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_normalizeFKey">
+        <div class="location">at line 93</div>
+        <code>            public            string
+    <strong>normalizeFKey</strong>(string $behavior)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the normalized input of onDelete and onUpdate behaviors.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$behavior</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasOnUpdate">
+        <div class="location">at line 117</div>
+        <code>            public            boolean
+    <strong>hasOnUpdate</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not the onUpdate behavior is set.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasOnDelete">
+        <div class="location">at line 127</div>
+        <code>            public            boolean
+    <strong>hasOnDelete</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not the onDelete behavior is set.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOnUpdate">
+        <div class="location">at line 137</div>
+        <code>            public            string
+    <strong>getOnUpdate</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the onUpdate behavior.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOnDelete">
+        <div class="location">at line 147</div>
+        <code>            public            string
+    <strong>getOnDelete</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the onDelete behavior.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setOnDelete">
+        <div class="location">at line 157</div>
+        <code>            public            
+    <strong>setOnDelete</strong>(string $behavior)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the onDelete behavior.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$behavior</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setOnUpdate">
+        <div class="location">at line 167</div>
+        <code>            public            
+    <strong>setOnUpdate</strong>(string $behavior)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the onUpdate behavior.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$behavior</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getName">
+        <div class="location">at line 177</div>
+        <code>            public            string
+    <strong>getName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the foreign key name.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setName">
+        <div class="location">at line 187</div>
+        <code>            public            
+    <strong>setName</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the foreign key name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPhpName">
+        <div class="location">at line 197</div>
+        <code>            public            string
+    <strong>getPhpName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the phpName for this foreign key (if any).</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPhpName">
+        <div class="location">at line 207</div>
+        <code>            public            
+    <strong>setPhpName</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Sets a phpName to use for this foreign key.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRefPhpName">
+        <div class="location">at line 217</div>
+        <code>            public            string
+    <strong>getRefPhpName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the refPhpName for this foreign key (if any).</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setRefPhpName">
+        <div class="location">at line 227</div>
+        <code>            public            
+    <strong>setRefPhpName</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Sets a refPhpName to use for this foreign key.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDefaultJoin">
+        <div class="location">at line 237</div>
+        <code>            public            string
+    <strong>getDefaultJoin</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the default join strategy for this foreign key (if any).</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDefaultJoin">
+        <div class="location">at line 247</div>
+        <code>            public            
+    <strong>setDefaultJoin</strong>(string $join)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the default join strategy for this foreign key (if any).</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$join</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getForeignTableName">
+        <div class="location">at line 257</div>
+        <code>            public            string
+    <strong>getForeignTableName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the foreign table name of the FK.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getForeignTableCommonName">
+        <div class="location">at line 271</div>
+        <code>            public            string
+    <strong>getForeignTableCommonName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the foreign table name without schema.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setForeignTableCommonName">
+        <div class="location">at line 281</div>
+        <code>            public            
+    <strong>setForeignTableCommonName</strong>(string $tableName)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the foreign table common name of the FK.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$tableName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getForeignTable">
+        <div class="location">at line 291</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a>
+    <strong>getForeignTable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the resolved foreign Table model object.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getForeignSchemaName">
+        <div class="location">at line 301</div>
+        <code>            public            string
+    <strong>getForeignSchemaName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the foreign schema name of the FK.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setForeignSchemaName">
+        <div class="location">at line 311</div>
+        <code>            public            
+    <strong>setForeignSchemaName</strong>(string $schemaName)</code>
+    </h3>
+    <div class="details">
+        <p>Set the foreign schema name of the foreign key.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$schemaName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setTable">
+        <div class="location">at line 321</div>
+        <code>            public            
+    <strong>setTable</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $parent)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the parent Table of the foreign key.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
+                <td>$parent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTable">
+        <div class="location">at line 331</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a>
+    <strong>getTable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the parent Table of the foreign key.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTableName">
+        <div class="location">at line 341</div>
+        <code>            public            string
+    <strong>getTableName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the name of the table the foreign key is in.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSchemaName">
+        <div class="location">at line 351</div>
+        <code>            public            string
+    <strong>getSchemaName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the name of the schema the foreign key is in.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addReference">
+        <div class="location">at line 362</div>
+        <code>            public            
+    <strong>addReference</strong>(mixed $ref1, mixed $ref2 = null)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a new reference entry to the foreign key.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$ref1</td>
+                <td>A Column object or an associative array or a string</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$ref2</td>
+                <td>A Column object or a single string name</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_clearReferences">
+        <div class="location">at line 396</div>
+        <code>            public            
+    <strong>clearReferences</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Clears the references of this foreign key.</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLocalColumns">
+        <div class="location">at line 407</div>
+        <code>            public            array
+    <strong>getLocalColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns an array of local column names.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLocalColumnObjects">
+        <div class="location">at line 417</div>
+        <code>            public            array
+    <strong>getLocalColumnObjects</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns an array of local column objects.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLocalColumnName">
+        <div class="location">at line 433</div>
+        <code>            public            string
+    <strong>getLocalColumnName</strong>(integer $index)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a local column name identified by a position.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLocalColumn">
+        <div class="location">at line 444</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>
+    <strong>getLocalColumn</strong>(integer $index)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a local Column object identified by a position.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLocalForeignMapping">
+        <div class="location">at line 455</div>
+        <code>            public            array
+    <strong>getLocalForeignMapping</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns an array of local column to foreign column mapping for this foreign key.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getForeignLocalMapping">
+        <div class="location">at line 471</div>
+        <code>            public            array
+    <strong>getForeignLocalMapping</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns an array of local column to foreign column mapping for this foreign key.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnObjectsMapping">
+        <div class="location">at line 487</div>
+        <code>            public            array
+    <strong>getColumnObjectsMapping</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns an array of local and foreign column objects mapped for this foreign key.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getMappedForeignColumn">
+        <div class="location">at line 507</div>
+        <code>            public            string
+    <strong>getMappedForeignColumn</strong>(string $local)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the foreign column name mapped to a specified local column.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$local</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getMappedLocalColumn">
+        <div class="location">at line 520</div>
+        <code>            public            string
+    <strong>getMappedLocalColumn</strong>(string $foreign)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the local column name mapped to a specified foreign column.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$foreign</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getForeignColumns">
+        <div class="location">at line 532</div>
+        <code>            public            array
+    <strong>getForeignColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns an array of foreign column names.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getForeignColumnObjects">
+        <div class="location">at line 542</div>
+        <code>            public            array
+    <strong>getForeignColumnObjects</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns an array of foreign column objects.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getForeignColumnName">
+        <div class="location">at line 559</div>
+        <code>            public            string
+    <strong>getForeignColumnName</strong>(integer $index)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a foreign column name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getForeignColumn">
+        <div class="location">at line 569</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>
+    <strong>getForeignColumn</strong>($index)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a foreign column object.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isLocalColumnsRequired">
+        <div class="location">at line 580</div>
+        <code>            public            boolean
+    <strong>isLocalColumnsRequired</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether this foreign key uses a required column, or a list of required columns.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isForeignPrimaryKey">
+        <div class="location">at line 597</div>
+        <code>            public            boolean
+    <strong>isForeignPrimaryKey</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether this foreign key is also the primary key of the foreign table.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isComposite">
+        <div class="location">at line 623</div>
+        <code>            public            boolean
+    <strong>isComposite</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not this foreign key relies on more than one column binding.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isLocalPrimaryKey">
+        <div class="location">at line 634</div>
+        <code>            public            boolean
+    <strong>isLocalPrimaryKey</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not this foreign key is also the primary key of the local table.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSkipSql">
+        <div class="location">at line 650</div>
+        <code>            public            
+    <strong>setSkipSql</strong>(boolean $skip)</code>
+    </h3>
+    <div class="details">
+        <p>Sets whether or not this foreign key should have its creation SQL generated.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$skip</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isSkipSql">
+        <div class="location">at line 661</div>
+        <code>            public            boolean
+    <strong>isSkipSql</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not the SQL generation must be skipped for this foreign key.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isMatchedByInverseFK">
+        <div class="location">at line 676</div>
+        <code>            public            boolean
+    <strong>isMatchedByInverseFK</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Whether this foreign key is matched by an inverted foreign key (on foreign table).</p>
+        <p>This is to prevent duplicate columns being generated for a 1:1 relationship that is represented<br />
+ by foreign keys on both tables.  I don&#039;t know if that&#039;s good practice ... but hell, why not<br />
+ support it.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getInverseFK">
+        <div class="location">at line 681</div>
+        <code>            public            
+    <strong>getInverseFK</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOtherFks">
+        <div class="location">at line 701</div>
+        <code>            public            array
+    <strong>getOtherFks</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the list of other foreign keys starting on the same table.</p>
+        <p>Used in many-to-many relationships.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

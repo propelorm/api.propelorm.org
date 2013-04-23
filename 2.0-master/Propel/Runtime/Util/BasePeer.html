@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Propel\Runtime\Util\BasePeer | Propel 2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel 2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Propel/Runtime/Util.html">Propel\Runtime\Util</a>\BasePeer</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>BasePeer</strong></p>
+
+            <div class="description">
+            <p>This is a utility class for all generated Peer classes in the system.</p>
+            <p>Peer classes are responsible for isolating all of the database access<br />
+ for a specific business object.  They execute all of the SQL<br />
+ against the database.  Over time this class has grown to include<br />
+ utility methods which ease execution of cross-database queries and<br />
+ the implementation of concrete Peers.</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_getFieldnames">getFieldnames</a>($classname, $type = TableMap::TYPE_PHPNAME)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_translateFieldname">translateFieldname</a>($classname, $fieldname, $fromType, $toType)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;int
+                </td>
+                <td class="last">
+                    <a href="#method_doDelete">doDelete</a>(<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $criteria, <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con)
+                    <p>Method to perform deletes based on values and keys in a Criteria.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;int
+                </td>
+                <td class="last">
+                    <a href="#method_doDeleteAll">doDeleteAll</a>(string $tableName, <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con, string $databaseName = null)
+                    <p>Method to deletes all contents of specified table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;mixed
+                </td>
+                <td class="last">
+                    <a href="#method_doInsert">doInsert</a>(<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $criteria, <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con)
+                    <p>Method to perform inserts based on values and keys in a Criteria.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;int
+                </td>
+                <td class="last">
+                    <a href="#method_doUpdate">doUpdate</a>(<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $selectCriteria, <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $updateValues, <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con)
+                    <p>Method used to update rows in the DB.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<abbr title="Propel\Runtime\Util\Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_doSelect">doSelect</a>(<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $criteria, <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null)
+                    <p>Executes query build by createSelectSql() and returns the resultset statement.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<abbr title="Propel\Runtime\Util\Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_doCount">doCount</a>(<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $criteria, <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null)
+                    <p>Executes a COUNT query using either a simple SQL rewrite or, for more complex queries, a sub-select of the SQL created by createSelectSql() and returns the statement.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_needsSelectAliases">needsSelectAliases</a>(<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $criteria)
+                    <p>Checks whether the Criteria needs to use column aliasing This is implemented in a service class rather than in Criteria itself in order to avoid doing the tests when it&#039;s not necessary (e.g.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_createSelectSql">createSelectSql</a>(<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $criteria, array $params)
+                    <p>Method to create an SQL query based on values in a Criteria.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getFieldnames">
+        <div class="location">at line 43</div>
+        <code>        static    public            
+    <strong>getFieldnames</strong>($classname, $type = TableMap::TYPE_PHPNAME)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$classname</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_translateFieldname">
+        <div class="location">at line 50</div>
+        <code>        static    public            
+    <strong>translateFieldname</strong>($classname, $fieldname, $fromType, $toType)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$classname</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldname</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fromType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$toType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_doDelete">
+        <div class="location">at line 68</div>
+        <code>        static    public            int
+    <strong>doDelete</strong>(<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $criteria, <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con)</code>
+    </h3>
+    <div class="details">
+        <p>Method to perform deletes based on values and keys in a Criteria.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a></td>
+                <td>$criteria</td>
+                <td>The criteria to use.</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a></td>
+                <td>$con</td>
+                <td>A ConnectionInterface connection object.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>The number of rows affected by last statement execution. For most uses there is only one delete statement executed, so this number will correspond to the number of rows affected by the call to this method.  Note that the return value does require that this information is returned (supported) by the PDO driver.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Exception/RuntimeException.html"><abbr title="Propel\Runtime\Exception\RuntimeException">RuntimeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_doDeleteAll">
+        <div class="location">at line 136</div>
+        <code>        static    public            int
+    <strong>doDeleteAll</strong>(string $tableName, <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con, string $databaseName = null)</code>
+    </h3>
+    <div class="details">
+        <p>Method to deletes all contents of specified table.</p>
+        <p>This method is invoked from generated Peer classes like this:<br />
+ &lt;code&gt;<br />
+ static public function doDeleteAll($con = null)<br />
+ {<br />
+   if ($con === null) $con = Propel::getServiceContainer()-&gt;getWriteConnection(TableMap::DATABASE_NAME);<br />
+   BasePeer::doDeleteAll(TableMap::TABLE_NAME, $con, TableMap::DATABASE_NAME);<br />
+ }<br />
+ &lt;/code&gt;</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$tableName</td>
+                <td>The name of the table to empty.</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a></td>
+                <td>$con</td>
+                <td>A ConnectionInterface connection object.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$databaseName</td>
+                <td>the name of the database.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>The number of rows affected by the statement. Note that the return value does require that this information is returned (supported) by the Propel database driver.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Exception/RuntimeException.html"><abbr title="Propel\Runtime\Exception\RuntimeException">RuntimeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_doInsert">
+        <div class="location">at line 179</div>
+        <code>        static    public            mixed
+    <strong>doInsert</strong>(<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $criteria, <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con)</code>
+    </h3>
+    <div class="details">
+        <p>Method to perform inserts based on values and keys in a Criteria.</p>
+        <p>&lt;p&gt;<br />
+ If the primary key is auto incremented the data in Criteria<br />
+ will be inserted and the auto increment value will be returned.<br />
+ &lt;p&gt;<br />
+ If the primary key is included in Criteria then that value will<br />
+ be used to insert the row.<br />
+ &lt;p&gt;<br />
+ If no primary key is included in Criteria then we will try to<br />
+ figure out the primary key from the database map and insert the<br />
+ row with the next available id using util.db.IDBroker.<br />
+ &lt;p&gt;<br />
+ If no primary key is defined for the table the values will be<br />
+ inserted as specified in Criteria and null will be returned.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a></td>
+                <td>$criteria</td>
+                <td>Object containing values to insert.</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a></td>
+                <td>$con</td>
+                <td>A ConnectionInterface connection.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>The primary key for the new row if the primary key is auto-generated. Otherwise will return null.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Exception/RuntimeException.html"><abbr title="Propel\Runtime\Exception\RuntimeException">RuntimeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_doUpdate">
+        <div class="location">at line 288</div>
+        <code>        static    public            int
+    <strong>doUpdate</strong>(<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $selectCriteria, <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $updateValues, <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con)</code>
+    </h3>
+    <div class="details">
+        <p>Method used to update rows in the DB.</p>
+        <p>Rows are selected based<br />
+ on selectCriteria and updated using values in updateValues.<br />
+ &lt;p&gt;<br />
+ Use this method for performing an update of the kind:<br />
+ &lt;p&gt;<br />
+ WHERE some_column = some value AND could_have_another_column =<br />
+ another value AND so on.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a></td>
+                <td>$selectCriteria</td>
+                <td>A Criteria object containing values used in where clause.</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a></td>
+                <td>$updateValues</td>
+                <td>A Criteria object containing values used in set clause.</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a></td>
+                <td>$con</td>
+                <td>The ConnectionInterface connection object to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>The number of rows affected by last update statement.  For most uses there is only one update statement executed, so this number will correspond to the number of rows affected by the call to this method.  Note that the return value does require that this information is returned (supported) by the Propel db driver.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Exception/RuntimeException.html"><abbr title="Propel\Runtime\Exception\RuntimeException">RuntimeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_doSelect">
+        <div class="location">at line 424</div>
+        <code>        static    public            <abbr title="Propel\Runtime\Util\Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr>
+    <strong>doSelect</strong>(<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $criteria, <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Executes query build by createSelectSql() and returns the resultset statement.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a></td>
+                <td>$criteria</td>
+                <td>A Criteria.</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a></td>
+                <td>$con</td>
+                <td>A ConnectionInterface connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Runtime\Util\Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></td>
+            <td>The resultset.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Exception/RuntimeException.html"><abbr title="Propel\Runtime\Exception\RuntimeException">RuntimeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>createSelectSql()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_doCount">
+        <div class="location">at line 466</div>
+        <code>        static    public            <abbr title="Propel\Runtime\Util\Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr>
+    <strong>doCount</strong>(<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $criteria, <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Executes a COUNT query using either a simple SQL rewrite or, for more complex queries, a sub-select of the SQL created by createSelectSql() and returns the statement.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a></td>
+                <td>$criteria</td>
+                <td>A Criteria.</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a></td>
+                <td>$con</td>
+                <td>A ConnectionInterface connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Runtime\Util\Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></td>
+            <td>The resultset statement.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Exception/RuntimeException.html"><abbr title="Propel\Runtime\Exception\RuntimeException">RuntimeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>createSelectSql()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_needsSelectAliases">
+        <div class="location">at line 553</div>
+        <code>        static    public            
+    <strong>needsSelectAliases</strong>(<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $criteria)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether the Criteria needs to use column aliasing This is implemented in a service class rather than in Criteria itself in order to avoid doing the tests when it&#039;s not necessary (e.g.</p>
+        <p>for SELECTs)</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a></td>
+                <td>$criteria</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createSelectSql">
+        <div class="location">at line 584</div>
+        <code>        static    public            string
+    <strong>createSelectSql</strong>(<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $criteria, array $params)</code>
+    </h3>
+    <div class="details">
+        <p>Method to create an SQL query based on values in a Criteria.</p>
+        <p>This method creates only prepared statement SQL (using ? where values<br />
+ will go).  The second parameter ($params) stores the values that need<br />
+ to be set before the statement is executed.  The reason we do it this way<br />
+ is to let the PDO layer handle all escaping &amp; value formatting.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a></td>
+                <td>$criteria</td>
+                <td>Criteria for the SELECT query.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>&amp;$params Parameters that are to be replaced in prepared statement.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Exception/RuntimeException.html"><abbr title="Propel\Runtime\Exception\RuntimeException">RuntimeException</abbr></a></td>
+                <td>Trouble creating the query string.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

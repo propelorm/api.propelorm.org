@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>PropelModelPager | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>PropelModelPager</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PropelModelPager</strong>        implements
+        <a href="http://php.net/IteratorAggregate"><abbr title="IteratorAggregate">IteratorAggregate</abbr></a>, <a href="http://php.net/Countable"><abbr title="Countable">Countable</abbr></a></p>
+
+            <div class="description">
+            <p>Implements a pager based on a ModelCriteria The code from this class heavily borrows from symfony&#039;s sfPager class</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="ModelCriteria.html"><abbr title="ModelCriteria">ModelCriteria</abbr></a> $query, $maxPerPage = 10)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setQuery">setQuery</a>(<a href="ModelCriteria.html"><abbr title="ModelCriteria">ModelCriteria</abbr></a> $query)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getQuery">getQuery</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_init">init</a>($con = null)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="PropelCollection.html"><abbr title="PropelCollection">PropelCollection</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getResults">getResults</a>()
+                    <p>Get the collection of results in the page</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getCurrentMaxLink">getCurrentMaxLink</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getMaxRecordLimit">getMaxRecordLimit</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setMaxRecordLimit">setMaxRecordLimit</a>($limit)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getLinks">getLinks</a>($nb_links = 5)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_haveToPaginate">haveToPaginate</a>()
+                    <p>Test whether the number of results exceeds the max number of results per page</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getFirstIndex">getFirstIndex</a>()
+                    <p>Get the index of the first element in the page Returns 1 on the first page, $maxPerPage +1 on the second page, etc</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getLastIndex">getLastIndex</a>()
+                    <p>Get the index of the last element in the page Always less than or eaqual to $maxPerPage</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getNbResults">getNbResults</a>()
+                    <p>Get the total number of results of the query This can be greater than $maxPerPage</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isFirstPage">isFirstPage</a>()
+                    <p>Check whether the current page is the first page</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getFirstPage">getFirstPage</a>()
+                    <p>Get the number of the first page</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isLastPage">isLastPage</a>()
+                    <p>Check whether the current page is the last page</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getLastPage">getLastPage</a>()
+                    <p>Get the number of the last page</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getPage">getPage</a>()
+                    <p>Get the number of the current page</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPage">setPage</a>(int $page)
+                    <p>Set the number of the current page</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getNextPage">getNextPage</a>()
+                    <p>Get the number of the next page</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getPreviousPage">getPreviousPage</a>()
+                    <p>Get the number of the previous page</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getMaxPerPage">getMaxPerPage</a>()
+                    <p>Get the maximum number results per page</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setMaxPerPage">setMaxPerPage</a>(int $max)
+                    <p>Set the maximum number results per page</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isFirst">isFirst</a>()
+                    <p>Check whether the internal pointer is at the beginning of the list</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isLast">isLast</a>()
+                    <p>Check whether the internal pointer is at the end of the list</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isEmpty">isEmpty</a>()
+                    <p>Check if the collection is empty</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isOdd">isOdd</a>()
+                    <p>Check if the current index is an odd integer</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isEven">isEven</a>()
+                    <p>Check if the current index is an even integer</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getIterator">getIterator</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_count">count</a>()
+                    <p>Returns the total number of results.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 37</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="ModelCriteria.html"><abbr title="ModelCriteria">ModelCriteria</abbr></a> $query, $maxPerPage = 10)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="ModelCriteria.html"><abbr title="ModelCriteria">ModelCriteria</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$maxPerPage</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setQuery">
+        <div class="location">at line 43</div>
+        <code>            public            
+    <strong>setQuery</strong>(<a href="ModelCriteria.html"><abbr title="ModelCriteria">ModelCriteria</abbr></a> $query)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="ModelCriteria.html"><abbr title="ModelCriteria">ModelCriteria</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getQuery">
+        <div class="location">at line 48</div>
+        <code>            public            
+    <strong>getQuery</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_init">
+        <div class="location">at line 53</div>
+        <code>            public            
+    <strong>init</strong>($con = null)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getResults">
+        <div class="location">at line 97</div>
+        <code>            public            <a href="PropelCollection.html"><abbr title="PropelCollection">PropelCollection</abbr></a>
+    <strong>getResults</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the collection of results in the page</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="PropelCollection.html"><abbr title="PropelCollection">PropelCollection</abbr></a></td>
+            <td>A collection of results</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCurrentMaxLink">
+        <div class="location">at line 107</div>
+        <code>            public            
+    <strong>getCurrentMaxLink</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getMaxRecordLimit">
+        <div class="location">at line 112</div>
+        <code>            public            
+    <strong>getMaxRecordLimit</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setMaxRecordLimit">
+        <div class="location">at line 117</div>
+        <code>            public            
+    <strong>setMaxRecordLimit</strong>($limit)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$limit</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLinks">
+        <div class="location">at line 122</div>
+        <code>            public            
+    <strong>getLinks</strong>($nb_links = 5)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$nb_links</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_haveToPaginate">
+        <div class="location">at line 145</div>
+        <code>            public            boolean
+    <strong>haveToPaginate</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Test whether the number of results exceeds the max number of results per page</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true if the pager displays only a subset of the results</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFirstIndex">
+        <div class="location">at line 156</div>
+        <code>            public            int
+    <strong>getFirstIndex</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the index of the first element in the page Returns 1 on the first page, $maxPerPage +1 on the second page, etc</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLastIndex">
+        <div class="location">at line 171</div>
+        <code>            public            int
+    <strong>getLastIndex</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the index of the last element in the page Always less than or eaqual to $maxPerPage</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNbResults">
+        <div class="location">at line 190</div>
+        <code>            public            int
+    <strong>getNbResults</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the total number of results of the query This can be greater than $maxPerPage</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isFirstPage">
+        <div class="location">at line 210</div>
+        <code>            public            boolean
+    <strong>isFirstPage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check whether the current page is the first page</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true if the current page is the first page</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFirstPage">
+        <div class="location">at line 220</div>
+        <code>            public            int
+    <strong>getFirstPage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the number of the first page</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>Always 1</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isLastPage">
+        <div class="location">at line 230</div>
+        <code>            public            boolean
+    <strong>isLastPage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check whether the current page is the last page</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true if the current page is the last page</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLastPage">
+        <div class="location">at line 240</div>
+        <code>            public            int
+    <strong>getLastPage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the number of the last page</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPage">
+        <div class="location">at line 263</div>
+        <code>            public            int
+    <strong>getPage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the number of the current page</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPage">
+        <div class="location">at line 273</div>
+        <code>            public            
+    <strong>setPage</strong>(int $page)</code>
+    </h3>
+    <div class="details">
+        <p>Set the number of the current page</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$page</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNextPage">
+        <div class="location">at line 287</div>
+        <code>            public            int
+    <strong>getNextPage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the number of the next page</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPreviousPage">
+        <div class="location">at line 297</div>
+        <code>            public            int
+    <strong>getPreviousPage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the number of the previous page</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getMaxPerPage">
+        <div class="location">at line 307</div>
+        <code>            public            int
+    <strong>getMaxPerPage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the maximum number results per page</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setMaxPerPage">
+        <div class="location">at line 317</div>
+        <code>            public            
+    <strong>setMaxPerPage</strong>(int $max)</code>
+    </h3>
+    <div class="details">
+        <p>Set the maximum number results per page</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$max</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isFirst">
+        <div class="location">at line 341</div>
+        <code>            public            boolean
+    <strong>isFirst</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check whether the internal pointer is at the beginning of the list</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>PropelCollection</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_isLast">
+        <div class="location">at line 352</div>
+        <code>            public            boolean
+    <strong>isLast</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check whether the internal pointer is at the end of the list</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>PropelCollection</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_isEmpty">
+        <div class="location">at line 363</div>
+        <code>            public            boolean
+    <strong>isEmpty</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if the collection is empty</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>PropelCollection</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_isOdd">
+        <div class="location">at line 374</div>
+        <code>            public            boolean
+    <strong>isOdd</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if the current index is an odd integer</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>PropelCollection</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_isEven">
+        <div class="location">at line 385</div>
+        <code>            public            boolean
+    <strong>isEven</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if the current index is an even integer</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>PropelCollection</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getIterator">
+        <div class="location">at line 390</div>
+        <code>            public            
+    <strong>getIterator</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_count">
+        <div class="location">at line 401</div>
+        <code>            public            int
+    <strong>count</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the total number of results.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>Countable</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

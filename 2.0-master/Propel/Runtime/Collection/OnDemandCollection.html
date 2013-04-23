@@ -1,0 +1,2609 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Propel\Runtime\Collection\OnDemandCollection | Propel 2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel 2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Propel/Runtime/Collection.html">Propel\Runtime\Collection</a>\OnDemandCollection</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>OnDemandCollection</strong>        extends <a href="../../../Propel/Runtime/Collection/Collection.html"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></p>
+
+            <div class="description">
+            <p>Class for iterating over a statement and returning one Propel object at a time</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getData">getData</a>()
+                    <p>Get the data in the collection</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_getData"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setData">setData</a>(array $data)
+                    <p>Set the data in the collection</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_setData"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_getPosition">getPosition</a>()
+                    <p>Gets the position of the internal pointer This position can be later used in seek()</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_getPosition"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getFirst">getFirst</a>()
+                    <p>Move the internal pointer to the beginning of the list And get the first element in the collection</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_getFirst"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isFirst">isFirst</a>()
+                    <p>Check whether the internal pointer is at the beginning of the list</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_isFirst"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getPrevious">getPrevious</a>()
+                    <p>Move the internal pointer backward And get the previous element in the collection</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_getPrevious"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getCurrent">getCurrent</a>()
+                    <p>Get the current element in the collection</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_getCurrent"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getNext">getNext</a>()
+                    <p>Move the internal pointer forward And get the next element in the collection</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_getNext"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getLast">getLast</a>()
+                    <p>Move the internal pointer to the end of the list And get the last element in the collection</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_getLast"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isLast">isLast</a>()
+                    <p>Check whether the internal pointer is at the end of the list</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_isLast"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isEmpty">isEmpty</a>()
+                    <p>Check if the collection is empty</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_isEmpty"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isOdd">isOdd</a>()
+                    <p>Check if the current index is an odd integer</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_isOdd"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isEven">isEven</a>()
+                    <p>Check if the current index is an even integer</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_isEven"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_get">get</a>(mixed $key)
+                    <p>Get an element from its key Alias for ArrayObject::offsetGet()</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_get"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_pop">pop</a>()
+                    <p>Pops an element off the end of the collection</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_pop"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_shift">shift</a>()
+                    <p>Pops an element off the beginning of the collection</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_shift"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_prepend">prepend</a>(mixed $value)
+                    <p>Prepend one or more elements to the beginning of the collection</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_set">set</a>(mixed $key, mixed $value)
+                    <p>Add an element to the collection with the given key Alias for ArrayObject::offsetSet()</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_set"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_remove">remove</a>(mixed $key)
+                    <p>Removes a specified collection element Alias for ArrayObject::offsetUnset()</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_remove"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_clear">clear</a>()
+                    <p>Clears the collection</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_clear"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_contains">contains</a>(mixed $element)
+                    <p>Whether or not this collection contains a specified element</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_contains"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_search">search</a>(mixed $element)
+                    <p>Search an element in the collection</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_search"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/Collection/Collection.html"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_diff">diff</a>(<a href="../../../Propel/Runtime/Collection/Collection.html"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> $collection)
+                    <p>Returns an array of objects present in the collection that are not presents in the given collection.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_diff"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_serialize">serialize</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_unserialize">unserialize</a>(string $data)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/Collection/OnDemandIterator.html"><abbr title="Propel\Runtime\Collection\OnDemandIterator">OnDemandIterator</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getIterator">getIterator</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="http://php.net/ArrayIterator"><abbr title="ArrayIterator">ArrayIterator</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getInternalIterator">getInternalIterator</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_getInternalIterator"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_clearIterator">clearIterator</a>()
+                    <p>Clear the internal Iterator.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_clearIterator"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setModel">setModel</a>(string $model)
+                    <p>Set the model of the elements in the collection</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_setModel"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getModel">getModel</a>()
+                    <p>Get the model of the elements in the collection</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_getModel"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getFullyQualifiedModel">getFullyQualifiedModel</a>()
+                    <p>Get the model of the elements in the collection</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_getFullyQualifiedModel"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPeerClass">getPeerClass</a>()
+                    <p>Get the peer class of the elements in the collection</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_getPeerClass"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getTableMapClass">getTableMapClass</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_getTableMapClass"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setFormatter">setFormatter</a>(<a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> $formatter)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_setFormatter"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getFormatter">getFormatter</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_getFormatter"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Propel\Runtime\Collection\ConnectionInterface">ConnectionInterface</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getWriteConnection">getWriteConnection</a>()
+                    <p>Get a write connection object for the database containing the elements of the collection</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_getWriteConnection"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Propel\Runtime\Collection\BaseObject">BaseObject</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_importFrom">importFrom</a>(mixed $parser, string $data)
+                    <p>Populate the current collection from a string, using a given parser format &lt;code&gt; $coll = new ObjectCollection(); $coll-&gt;setModel(&#039;Book&#039;); $coll-&gt;importFrom(&#039;JSON&#039;, &#039;{{&quot;Id&quot;:9012,&quot;Title&quot;:&quot;Don Juan&quot;,&quot;ISBN&quot;:&quot;0140422161&quot;,&quot;Price&quot;:12.99,&quot;PublisherId&quot;:1234,&quot;AuthorId&quot;:5678}}&#039;); &lt;/code&gt;</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_importFrom"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_exportTo">exportTo</a>(mixed $parser, boolean $usePrefix = true, boolean $includeLazyLoadColumns = true)
+                    <p>Export the current collection to a string, using a given parser format &lt;code&gt; $books = BookQuery::create()-&gt;find(); echo $book-&gt;exportTo(&#039;JSON&#039;);  =&gt; {{&quot;Id&quot;:9012,&quot;Title&quot;:&quot;Don Juan&quot;,&quot;ISBN&quot;:&quot;0140422161&quot;,&quot;Price&quot;:12.99,&quot;PublisherId&quot;:1234,&quot;AuthorId&quot;:5678}}&#039;); &lt;/code&gt;</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array|string
+                </td>
+                <td class="last">
+                    <a href="#method___call">__call</a>(string $name, mixed $params)
+                    <p>Catches calls to undefined methods.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method___call"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method___toString">__toString</a>()
+                    <p>Returns a string representation of the current collection.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method___toString"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Collection">Collection</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_fromXML">fromXML</a>(<abbr title="string ">string </abbr> $data)
+                    <p>Populate the collection from an XML string</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_fromXML"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Collection">Collection</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_fromYAML">fromYAML</a>(<abbr title="string ">string </abbr> $data)
+                    <p>Populate the collection from a YAML string</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_fromYAML"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Collection">Collection</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_fromJSON">fromJSON</a>(<abbr title="string ">string </abbr> $data)
+                    <p>Populate the collection from a JSON string</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_fromJSON"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Collection">Collection</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_fromCSV">fromCSV</a>(<abbr title="string ">string </abbr> $data)
+                    <p>Populate the collection from a CSV string</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_fromCSV"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_toXML">toXML</a>(<abbr title="boolean ">boolean </abbr> $usePrefix, <abbr title="boolean ">boolean </abbr> $includeLazyLoadColumns)
+                    <p>Export the collection to an XML string</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_toXML"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_toYAML">toYAML</a>(<abbr title="boolean ">boolean </abbr> $usePrefix, <abbr title="boolean ">boolean </abbr> $includeLazyLoadColumns)
+                    <p>Export the collection to a YAML string</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_toYAML"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_toJSON">toJSON</a>(<abbr title="boolean ">boolean </abbr> $usePrefix, <abbr title="boolean ">boolean </abbr> $includeLazyLoadColumns)
+                    <p>Export the collection to a JSON string</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_toJSON"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_toCSV">toCSV</a>(<abbr title="boolean ">boolean </abbr> $usePrefix, <abbr title="boolean ">boolean </abbr> $includeLazyLoadColumns)
+                    <p>Export the collection to a CSV string</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_toCSV"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_initIterator">initIterator</a>(<a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> $formatter, <a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a> $stmt)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_toArray">toArray</a>(string $keyColumn = null, boolean $usePrefix = false, string $keyType = TableMap::TYPE_PHPNAME, boolean $includeLazyLoadColumns = true, array $alreadyDumpedObjects = array())
+                    <p>Get an array representation of the collection Each object is turned into an array and the result is returned</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_fromArray">fromArray</a>(array $arr)
+                    <p>Populates the collection from an array Each object is populated from an array and the result is stored Does not empty the collection before adding the data from the array</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_offsetExists">offsetExists</a>(integer $offset)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_offsetGet">offsetGet</a>(integer $offset)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_offsetSet">offsetSet</a>(integer $offset, mixed $value)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_offsetUnset">offsetUnset</a>(integer $offset)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_count">count</a>()
+                    <p>Returns the number of rows in the resultset Warning: this number is inaccurate for most databases.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_append">append</a>($value)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_asort">asort</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_exchangeArray">exchangeArray</a>($input)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getArrayCopy">getArrayCopy</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getFlags">getFlags</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_ksort">ksort</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_natcasesort">natcasesort</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_natsort">natsort</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setFlags">setFlags</a>($flags)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_uasort">uasort</a>($cmp_function)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_uksort">uksort</a>($cmp_function)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getData">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getData"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 70</div>
+        <code>            public            array
+    <strong>getData</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the data in the collection</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setData">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_setData"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 80</div>
+        <code>            public            
+    <strong>setData</strong>(array $data)</code>
+    </h3>
+    <div class="details">
+        <p>Set the data in the collection</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPosition">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getPosition"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 91</div>
+        <code>            public            integer
+    <strong>getPosition</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the position of the internal pointer This position can be later used in seek()</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFirst">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getFirst"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 102</div>
+        <code>            public            mixed
+    <strong>getFirst</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Move the internal pointer to the beginning of the list And get the first element in the collection</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isFirst">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_isFirst"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 114</div>
+        <code>            public            boolean
+    <strong>isFirst</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check whether the internal pointer is at the beginning of the list</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPrevious">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getPrevious"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 125</div>
+        <code>            public            mixed
+    <strong>getPrevious</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Move the internal pointer backward And get the previous element in the collection</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCurrent">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getCurrent"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 141</div>
+        <code>            public            mixed
+    <strong>getCurrent</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the current element in the collection</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNext">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getNext"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 152</div>
+        <code>            public            mixed
+    <strong>getNext</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Move the internal pointer forward And get the next element in the collection</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLast">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getLast"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 165</div>
+        <code>            public            mixed
+    <strong>getLast</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Move the internal pointer to the end of the list And get the last element in the collection</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isLast">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_isLast"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 181</div>
+        <code>            public            boolean
+    <strong>isLast</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check whether the internal pointer is at the end of the list</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isEmpty">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_isEmpty"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 198</div>
+        <code>            public            boolean
+    <strong>isEmpty</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if the collection is empty</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isOdd">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_isOdd"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 208</div>
+        <code>            public            boolean
+    <strong>isOdd</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if the current index is an odd integer</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isEven">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_isEven"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 218</div>
+        <code>            public            boolean
+    <strong>isEven</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if the current index is an even integer</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_get">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_get"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 230</div>
+        <code>            public            mixed
+    <strong>get</strong>(mixed $key)</code>
+    </h3>
+    <div class="details">
+        <p>Get an element from its key Alias for ArrayObject::offsetGet()</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>The element</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_pop">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_pop"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 244</div>
+        <code>            public            mixed
+    <strong>pop</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Pops an element off the end of the collection</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>The popped element</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_shift">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_shift"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 262</div>
+        <code>            public            mixed
+    <strong>shift</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Pops an element off the beginning of the collection</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>The popped element</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_prepend">
+        <div class="location">at line 209</div>
+        <code>            public            integer
+    <strong>prepend</strong>(mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Prepend one or more elements to the beginning of the collection</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>the element to prepend</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>The number of new elements in the array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_set">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_set"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 297</div>
+        <code>            public            
+    <strong>set</strong>(mixed $key, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Add an element to the collection with the given key Alias for ArrayObject::offsetSet()</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_remove">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_remove"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 309</div>
+        <code>            public            mixed
+    <strong>remove</strong>(mixed $key)</code>
+    </h3>
+    <div class="details">
+        <p>Removes a specified collection element Alias for ArrayObject::offsetUnset()</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>The removed element</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_clear">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_clear"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 323</div>
+        <code>            public            array
+    <strong>clear</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Clears the collection</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>The previous collection</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_contains">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_contains"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 334</div>
+        <code>            public            boolean
+    <strong>contains</strong>(mixed $element)</code>
+    </h3>
+    <div class="details">
+        <p>Whether or not this collection contains a specified element</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$element</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_search">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_search"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 345</div>
+        <code>            public            mixed
+    <strong>search</strong>(mixed $element)</code>
+    </h3>
+    <div class="details">
+        <p>Search an element in the collection</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$element</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>Returns the key for the element if it is found in the collection, FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_diff">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_diff"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 357</div>
+        <code>            public            <a href="../../../Propel/Runtime/Collection/Collection.html"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a>
+    <strong>diff</strong>(<a href="../../../Propel/Runtime/Collection/Collection.html"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> $collection)</code>
+    </h3>
+    <div class="details">
+        <p>Returns an array of objects present in the collection that are not presents in the given collection.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Collection/Collection.html"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></td>
+                <td>$collection</td>
+                <td>A Propel collection.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/Collection/Collection.html"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></td>
+            <td>An array of Propel objects from the collection that are not presents in the given collection.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_serialize">
+        <div class="location">at line 175</div>
+        <code>            public            string
+    <strong>serialize</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Exception/PropelException.html"><abbr title="Propel\Runtime\Exception\PropelException">PropelException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_unserialize">
+        <div class="location">at line 184</div>
+        <code>            public            
+    <strong>unserialize</strong>(string $data)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Exception/PropelException.html"><abbr title="Propel\Runtime\Exception\PropelException">PropelException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getIterator">
+        <div class="location">at line 113</div>
+        <code>            public            <a href="../../../Propel/Runtime/Collection/OnDemandIterator.html"><abbr title="Propel\Runtime\Collection\OnDemandIterator">OnDemandIterator</abbr></a>
+    <strong>getIterator</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/Collection/OnDemandIterator.html"><abbr title="Propel\Runtime\Collection\OnDemandIterator">OnDemandIterator</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getInternalIterator">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getInternalIterator"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 414</div>
+        <code>            public            <a href="http://php.net/ArrayIterator"><abbr title="ArrayIterator">ArrayIterator</abbr></a>
+    <strong>getInternalIterator</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="http://php.net/ArrayIterator"><abbr title="ArrayIterator">ArrayIterator</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_clearIterator">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_clearIterator"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 429</div>
+        <code>            public            
+    <strong>clearIterator</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Clear the internal Iterator.</p>
+        <p>PHP 5.3 doesn&#039;t know how to free a Collection object if it has an attached<br />
+ Iterator, so this must be done manually to avoid memory leaks.</p>
+        <div class="tags">
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>http://www.propelorm.org/ticket/1232</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_setModel">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_setModel"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 441</div>
+        <code>            public            
+    <strong>setModel</strong>(string $model)</code>
+    </h3>
+    <div class="details">
+        <p>Set the model of the elements in the collection</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$model</td>
+                <td>Name of the Propel object classes stored in the collection</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getModel">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getModel"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 456</div>
+        <code>            public            string
+    <strong>getModel</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the model of the elements in the collection</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>Name of the Propel object class stored in the collection</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFullyQualifiedModel">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getFullyQualifiedModel"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 466</div>
+        <code>            public            string
+    <strong>getFullyQualifiedModel</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the model of the elements in the collection</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>Fully qualified Name of the Propel object class stored in the collection</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPeerClass">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getPeerClass"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 476</div>
+        <code>            public            string
+    <strong>getPeerClass</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the peer class of the elements in the collection</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>Name of the Propel peer class stored in the collection</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTableMapClass">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getTableMapClass"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 487</div>
+        <code>            public            
+    <strong>getTableMapClass</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setFormatter">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_setFormatter"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 501</div>
+        <code>            public            
+    <strong>setFormatter</strong>(<a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> $formatter)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a></td>
+                <td>$formatter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFormatter">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getFormatter"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 509</div>
+        <code>            public            <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a>
+    <strong>getFormatter</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getWriteConnection">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getWriteConnection"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 519</div>
+        <code>            public            <abbr title="Propel\Runtime\Collection\ConnectionInterface">ConnectionInterface</abbr>
+    <strong>getWriteConnection</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a write connection object for the database containing the elements of the collection</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Runtime\Collection\ConnectionInterface">ConnectionInterface</abbr></td>
+            <td>A ConnectionInterface connection object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_importFrom">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_importFrom"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 539</div>
+        <code>            public            <abbr title="Propel\Runtime\Collection\BaseObject">BaseObject</abbr>
+    <strong>importFrom</strong>(mixed $parser, string $data)</code>
+    </h3>
+    <div class="details">
+        <p>Populate the current collection from a string, using a given parser format &lt;code&gt; $coll = new ObjectCollection(); $coll-&gt;setModel(&#039;Book&#039;); $coll-&gt;importFrom(&#039;JSON&#039;, &#039;{{&quot;Id&quot;:9012,&quot;Title&quot;:&quot;Don Juan&quot;,&quot;ISBN&quot;:&quot;0140422161&quot;,&quot;Price&quot;:12.99,&quot;PublisherId&quot;:1234,&quot;AuthorId&quot;:5678}}&#039;); &lt;/code&gt;</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$parser</td>
+                <td>A AbstractParser instance, or a format name (&#039;XML&#039;, &#039;YAML&#039;, &#039;JSON&#039;, &#039;CSV&#039;)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td>The source data to import from</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Runtime\Collection\BaseObject">BaseObject</abbr></td>
+            <td>The current object, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_exportTo">
+        <div class="location">at line 267</div>
+        <code>            public            string
+    <strong>exportTo</strong>(mixed $parser, boolean $usePrefix = true, boolean $includeLazyLoadColumns = true)</code>
+    </h3>
+    <div class="details">
+        <p>Export the current collection to a string, using a given parser format &lt;code&gt; $books = BookQuery::create()-&gt;find(); echo $book-&gt;exportTo(&#039;JSON&#039;);  =&gt; {{&quot;Id&quot;:9012,&quot;Title&quot;:&quot;Don Juan&quot;,&quot;ISBN&quot;:&quot;0140422161&quot;,&quot;Price&quot;:12.99,&quot;PublisherId&quot;:1234,&quot;AuthorId&quot;:5678}}&#039;); &lt;/code&gt;</p>
+        <p>A OnDemandCollection cannot be exported. Any attempt will result in a PropelException being thrown.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$parser</td>
+                <td>A AbstractParser instance, or a format name (&#039;XML&#039;, &#039;YAML&#039;, &#039;JSON&#039;, &#039;CSV&#039;)</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$usePrefix</td>
+                <td>(optional) If true, the returned element keys will be prefixed with the model class name (&#039;Article_0&#039;, &#039;Article_1&#039;, etc). Defaults to TRUE. Not supported by ArrayCollection, as ArrayFormatter has already created the array used here with integers as keys.</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$includeLazyLoadColumns</td>
+                <td>(optional) Whether to include lazy load(ed) columns. Defaults to TRUE. Not supported by ArrayCollection, as ArrayFormatter has already included lazy-load columns in the array used here.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The exported data</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___call">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method___call"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 588</div>
+        <code>            public            array|string
+    <strong>__call</strong>(string $name, mixed $params)</code>
+    </h3>
+    <div class="details">
+        <p>Catches calls to undefined methods.</p>
+        <p>Provides magic import/export method support (fromXML()/toXML(), fromYAML()/toYAML(), etc.).<br />
+ Allows to define default __call() behavior if you use a custom BaseObject</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___toString">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method___toString"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 612</div>
+        <code>            public            string
+    <strong>__toString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns a string representation of the current collection.</p>
+        <p>Based on the string representation of the underlying objects, defined in<br />
+ the TableMap::DEFAULT_STRING_FORMAT constant</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fromXML">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_fromXML"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 39</div>
+        <code>                        <abbr title="Collection">Collection</abbr>
+    <strong>fromXML</strong>(<abbr title="string ">string </abbr> $data)</code>
+    </h3>
+    <div class="details">
+        <p>Populate the collection from an XML string</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Collection">Collection</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fromYAML">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_fromYAML"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 39</div>
+        <code>                        <abbr title="Collection">Collection</abbr>
+    <strong>fromYAML</strong>(<abbr title="string ">string </abbr> $data)</code>
+    </h3>
+    <div class="details">
+        <p>Populate the collection from a YAML string</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Collection">Collection</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fromJSON">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_fromJSON"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 39</div>
+        <code>                        <abbr title="Collection">Collection</abbr>
+    <strong>fromJSON</strong>(<abbr title="string ">string </abbr> $data)</code>
+    </h3>
+    <div class="details">
+        <p>Populate the collection from a JSON string</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Collection">Collection</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fromCSV">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_fromCSV"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 39</div>
+        <code>                        <abbr title="Collection">Collection</abbr>
+    <strong>fromCSV</strong>(<abbr title="string ">string </abbr> $data)</code>
+    </h3>
+    <div class="details">
+        <p>Populate the collection from a CSV string</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Collection">Collection</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toXML">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_toXML"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 39</div>
+        <code>                        string
+    <strong>toXML</strong>(<abbr title="boolean ">boolean </abbr> $usePrefix, <abbr title="boolean ">boolean </abbr> $includeLazyLoadColumns)</code>
+    </h3>
+    <div class="details">
+        <p>Export the collection to an XML string</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="boolean ">boolean </abbr></td>
+                <td>$usePrefix</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="boolean ">boolean </abbr></td>
+                <td>$includeLazyLoadColumns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toYAML">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_toYAML"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 39</div>
+        <code>                        string
+    <strong>toYAML</strong>(<abbr title="boolean ">boolean </abbr> $usePrefix, <abbr title="boolean ">boolean </abbr> $includeLazyLoadColumns)</code>
+    </h3>
+    <div class="details">
+        <p>Export the collection to a YAML string</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="boolean ">boolean </abbr></td>
+                <td>$usePrefix</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="boolean ">boolean </abbr></td>
+                <td>$includeLazyLoadColumns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toJSON">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_toJSON"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 39</div>
+        <code>                        string
+    <strong>toJSON</strong>(<abbr title="boolean ">boolean </abbr> $usePrefix, <abbr title="boolean ">boolean </abbr> $includeLazyLoadColumns)</code>
+    </h3>
+    <div class="details">
+        <p>Export the collection to a JSON string</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="boolean ">boolean </abbr></td>
+                <td>$usePrefix</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="boolean ">boolean </abbr></td>
+                <td>$includeLazyLoadColumns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toCSV">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_toCSV"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 39</div>
+        <code>                        string
+    <strong>toCSV</strong>(<abbr title="boolean ">boolean </abbr> $usePrefix, <abbr title="boolean ">boolean </abbr> $includeLazyLoadColumns)</code>
+    </h3>
+    <div class="details">
+        <p>Export the collection to a CSV string</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="boolean ">boolean </abbr></td>
+                <td>$usePrefix</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="boolean ">boolean </abbr></td>
+                <td>$includeLazyLoadColumns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_initIterator">
+        <div class="location">at line 41</div>
+        <code>            public            
+    <strong>initIterator</strong>(<a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> $formatter, <a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a> $stmt)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a></td>
+                <td>$formatter</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a></td>
+                <td>$stmt</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toArray">
+        <div class="location">at line 81</div>
+        <code>            public            array
+    <strong>toArray</strong>(string $keyColumn = null, boolean $usePrefix = false, string $keyType = TableMap::TYPE_PHPNAME, boolean $includeLazyLoadColumns = true, array $alreadyDumpedObjects = array())</code>
+    </h3>
+    <div class="details">
+        <p>Get an array representation of the collection Each object is turned into an array and the result is returned</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$keyColumn</td>
+                <td>If null, the returned array uses an incremental index. Otherwise, the array is indexed using the specified column</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$usePrefix</td>
+                <td>If true, the returned array prefixes keys with the model class name (&#039;Article_0&#039;, &#039;Article_1&#039;, etc).</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$keyType</td>
+                <td>(optional) One of the class type constants TableMap::TYPE_PHPNAME, TableMap::TYPE_STUDLYPHPNAME, TableMap::TYPE_COLNAME, TableMap::TYPE_FIELDNAME, TableMap::TYPE_NUM. Defaults to TableMap::TYPE_PHPNAME.</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$includeLazyLoadColumns</td>
+                <td>(optional) Whether to include lazy loaded columns. Defaults to TRUE.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$alreadyDumpedObjects</td>
+                <td>List of objects to skip to avoid recursion &lt;code&gt; $bookCollection-&gt;toArray(); array( 0 =&gt; array(&#039;Id&#039; =&gt; 123, &#039;Title&#039; =&gt; &#039;War And Peace&#039;), 1 =&gt; array(&#039;Id&#039; =&gt; 456, &#039;Title&#039; =&gt; &#039;Don Juan&#039;), ) $bookCollection-&gt;toArray(&#039;Id&#039;); array( 123 =&gt; array(&#039;Id&#039; =&gt; 123, &#039;Title&#039; =&gt; &#039;War And Peace&#039;), 456 =&gt; array(&#039;Id&#039; =&gt; 456, &#039;Title&#039; =&gt; &#039;Don Juan&#039;), ) $bookCollection-&gt;toArray(null, true); array( &#039;Book_0&#039; =&gt; array(&#039;Id&#039; =&gt; 123, &#039;Title&#039; =&gt; &#039;War And Peace&#039;), &#039;Book_1&#039; =&gt; array(&#039;Id&#039; =&gt; 456, &#039;Title&#039; =&gt; &#039;Don Juan&#039;), ) &lt;/code&gt;</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fromArray">
+        <div class="location">at line 103</div>
+        <code>            public            
+    <strong>fromArray</strong>(array $arr)</code>
+    </h3>
+    <div class="details">
+        <p>Populates the collection from an array Each object is populated from an array and the result is stored Does not empty the collection before adding the data from the array</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$arr</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetExists">
+        <div class="location">at line 126</div>
+        <code>            public            boolean
+    <strong>offsetExists</strong>(integer $offset)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Exception/PropelException.html"><abbr title="Propel\Runtime\Exception\PropelException">PropelException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetGet">
+        <div class="location">at line 141</div>
+        <code>            public            mixed
+    <strong>offsetGet</strong>(integer $offset)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Exception/PropelException.html"><abbr title="Propel\Runtime\Exception\PropelException">PropelException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetSet">
+        <div class="location">at line 156</div>
+        <code>            public            
+    <strong>offsetSet</strong>(integer $offset, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Collection/Exception/ReadOnlyModelException.html"><abbr title="Propel\Runtime\Collection\Exception\ReadOnlyModelException">ReadOnlyModelException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetUnset">
+        <div class="location">at line 165</div>
+        <code>            public            
+    <strong>offsetUnset</strong>(integer $offset)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Collection/Exception/ReadOnlyModelException.html"><abbr title="Propel\Runtime\Collection\Exception\ReadOnlyModelException">ReadOnlyModelException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_count">
+        <div class="location">at line 197</div>
+        <code>            public            integer
+    <strong>count</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the number of rows in the resultset Warning: this number is inaccurate for most databases.</p>
+        <p>Do not rely on it for a portable application.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>Number of results</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_append">
+        <div class="location">at line 204</div>
+        <code>            public            
+    <strong>append</strong>($value)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_asort">
+        <div class="location">at line 214</div>
+        <code>            public            
+    <strong>asort</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_exchangeArray">
+        <div class="location">at line 219</div>
+        <code>            public            
+    <strong>exchangeArray</strong>($input)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getArrayCopy">
+        <div class="location">at line 224</div>
+        <code>            public            
+    <strong>getArrayCopy</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFlags">
+        <div class="location">at line 229</div>
+        <code>            public            
+    <strong>getFlags</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_ksort">
+        <div class="location">at line 234</div>
+        <code>            public            
+    <strong>ksort</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_natcasesort">
+        <div class="location">at line 239</div>
+        <code>            public            
+    <strong>natcasesort</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_natsort">
+        <div class="location">at line 244</div>
+        <code>            public            
+    <strong>natsort</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setFlags">
+        <div class="location">at line 249</div>
+        <code>            public            
+    <strong>setFlags</strong>($flags)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$flags</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_uasort">
+        <div class="location">at line 254</div>
+        <code>            public            
+    <strong>uasort</strong>($cmp_function)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$cmp_function</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_uksort">
+        <div class="location">at line 259</div>
+        <code>            public            
+    <strong>uksort</strong>($cmp_function)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$cmp_function</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

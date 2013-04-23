@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>QuickGeneratorConfig | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>QuickGeneratorConfig</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>QuickGeneratorConfig</strong>        implements
+        <a href="GeneratorConfigInterface.html"><abbr title="GeneratorConfigInterface">GeneratorConfigInterface</abbr></a></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getConfiguredBuilder">getConfiguredBuilder</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table, $type)
+                    <p>Gets a configured data model builder class for specified table and based on type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Pluralizer.html"><abbr title="Pluralizer">Pluralizer</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getConfiguredPluralizer">getConfiguredPluralizer</a>()
+                    <p>Gets a configured Pluralizer class.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setBuildProperties">setBuildProperties</a>($props)
+                    <p>Parses the passed-in properties, renaming and saving eligible properties in this object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getBuildProperty">getBuildProperty</a>($name)
+                    <p>Gets a specific propel (renamed) property from the build.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setBuildProperty">setBuildProperty</a>(string $name, mixed $value)
+                    <p>Sets a specific propel (renamed) property from the build.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 42</div>
+        <code>            public            
+    <strong>__construct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConfiguredBuilder">
+        <div class="location">at line 80</div>
+        <code>            public            
+    <strong>getConfiguredBuilder</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table, $type)</code>
+    </h3>
+    <div class="details">
+        <p>Gets a configured data model builder class for specified table and based on type.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConfiguredPluralizer">
+        <div class="location">at line 94</div>
+        <code>            public            <a href="Pluralizer.html"><abbr title="Pluralizer">Pluralizer</abbr></a>
+    <strong>getConfiguredPluralizer</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets a configured Pluralizer class.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Pluralizer.html"><abbr title="Pluralizer">Pluralizer</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setBuildProperties">
+        <div class="location">at line 108</div>
+        <code>            public            
+    <strong>setBuildProperties</strong>($props)</code>
+    </h3>
+    <div class="details">
+        <p>Parses the passed-in properties, renaming and saving eligible properties in this object.</p>
+        <p>Renames the propel.xxx properties to just xxx and renames any xxx.yyy properties<br />
+ to xxxYyy as PHP doesn&#039;t like the xxx.yyy syntax.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$props</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBuildProperty">
+        <div class="location">at line 132</div>
+        <code>            public            
+    <strong>getBuildProperty</strong>($name)</code>
+    </h3>
+    <div class="details">
+        <p>Gets a specific propel (renamed) property from the build.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setBuildProperty">
+        <div class="location">at line 143</div>
+        <code>            public            
+    <strong>setBuildProperty</strong>(string $name, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Sets a specific propel (renamed) property from the build.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

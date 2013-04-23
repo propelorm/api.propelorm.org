@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>PHP5PeerBuilder | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>PHP5PeerBuilder</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PHP5PeerBuilder</strong>        extends <a href="PeerBuilder.html"><abbr title="PeerBuilder">PeerBuilder</abbr></a></p>
+
+            <div class="description">
+            <p>Generates a PHP5 base Peer class for user object model (OM).</p>
+            <p>This class produces the base peer class (e.g. BaseMyPeer) which contains all<br />
+ the custom-built query and manipulator methods.</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p>Constructs a new PeerBuilder subclass.</p>
+                </td>
+                <td><small>from&nbsp;<a href="PeerBuilder.html#method___construct"><abbr title="PeerBuilder">PeerBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getRetrieveMethodName">getRetrieveMethodName</a>()
+                    <p>Returns the retrieveByPK method name to use for this table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="PeerBuilder.html#method_getRetrieveMethodName"><abbr title="PeerBuilder">PeerBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnName">getColumnName</a>(<a href="Column.html"><abbr title="Column">Column</abbr></a> $col, string $phpName = null)
+                    <p>COMPATIBILITY: Get the column constant name (e.g.</p>
+                </td>
+                <td><small>from&nbsp;<a href="PeerBuilder.html#method_getColumnName"><abbr title="PeerBuilder">PeerBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasBehaviorModifier">hasBehaviorModifier</a>($hookName, $modifier = null)
+                    <p>Checks whether any registered behavior on that table has a modifier for a hook</p>
+                </td>
+                <td><small>from&nbsp;<a href="PeerBuilder.html#method_hasBehaviorModifier"><abbr title="PeerBuilder">PeerBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_applyBehaviorModifier">applyBehaviorModifier</a>($hookName, $script, $tab = &#039;		&#039;)
+                    <p>Checks whether any registered behavior on that table has a modifier for a hook</p>
+                </td>
+                <td><small>from&nbsp;<a href="PeerBuilder.html#method_applyBehaviorModifier"><abbr title="PeerBuilder">PeerBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getBehaviorContent">getBehaviorContent</a>(string $contentName)
+                    <p>Checks whether any registered behavior content creator on that table exists a contentName</p>
+                </td>
+                <td><small>from&nbsp;<a href="PeerBuilder.html#method_getBehaviorContent"><abbr title="PeerBuilder">PeerBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getBasePeerClassname">getBasePeerClassname</a>()
+                    <p>Get the BasePeer class name for the current table (e.g.</p>
+                </td>
+                <td><small>from&nbsp;<a href="PeerBuilder.html#method_getBasePeerClassname"><abbr title="PeerBuilder">PeerBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getUnprefixedClassname">getUnprefixedClassname</a>()
+                    <p>Returns the name of the current class being built.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPackage">getPackage</a>()
+                    <p>Gets the package for the [base] peer classes.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getNamespace">getNamespace</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getTableMapClass">getTableMapClass</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getTablePhpName">getTablePhpName</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addInheritanceColumnConstants">addInheritanceColumnConstants</a>(string $script)
+                    <p>Adds the CLASSKEY_* and CLASSNAME_* constants used for inheritance.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getInstancePoolKeySnippet">getInstancePoolKeySnippet</a>(array $pkphp)
+                    <p>Adds the PHP code to return a instance pool key for the passed-in primary key variable names.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addCriteriaJoin">addCriteriaJoin</a>($fk, $table, $joinTable, $joinedTablePeerBuilder)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">in <a href="PeerBuilder.html#method___construct"><abbr title="PeerBuilder">PeerBuilder</abbr></a> at line 33</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Constructs a new PeerBuilder subclass.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRetrieveMethodName">
+        <div class="location">in <a href="PeerBuilder.html#method_getRetrieveMethodName"><abbr title="PeerBuilder">PeerBuilder</abbr></a> at line 239</div>
+        <code>            public            string
+    <strong>getRetrieveMethodName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the retrieveByPK method name to use for this table.</p>
+        <p>If the table is an alias then the method name looks like &quot;retrieveTablenameByPK&quot;<br />
+ otherwise simply &quot;retrieveByPK&quot;.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnName">
+        <div class="location">in <a href="PeerBuilder.html#method_getColumnName"><abbr title="PeerBuilder">PeerBuilder</abbr></a> at line 263</div>
+        <code>        static    public            string
+    <strong>getColumnName</strong>(<a href="Column.html"><abbr title="Column">Column</abbr></a> $col, string $phpName = null)</code>
+    </h3>
+    <div class="details">
+        <p>COMPATIBILITY: Get the column constant name (e.g.</p>
+        <p>PeerName::COLUMN_NAME).<br />
+<br />
+ This method exists simply because it belonged to the &#039;PeerBuilder&#039; that this<br />
+ class is replacing (because of name conflict more than actual functionality overlap).<br />
+ When the new builder model is finished this method will be removed.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Column.html"><abbr title="Column">Column</abbr></a></td>
+                <td>$col</td>
+                <td>The column we need a name for.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$phpName</td>
+                <td>The PHP Name of the peer class. The &#039;Peer&#039; is appended automatically.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>If $phpName is provided, then will return {$phpName}Peer::COLUMN_NAME; if not, just COLUMN_NAME.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasBehaviorModifier">
+        <div class="location">in <a href="PeerBuilder.html#method_hasBehaviorModifier"><abbr title="PeerBuilder">PeerBuilder</abbr></a> at line 283</div>
+        <code>            public            boolean
+    <strong>hasBehaviorModifier</strong>($hookName, $modifier = null)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether any registered behavior on that table has a modifier for a hook</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$hookName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$modifier</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_applyBehaviorModifier">
+        <div class="location">in <a href="PeerBuilder.html#method_applyBehaviorModifier"><abbr title="PeerBuilder">PeerBuilder</abbr></a> at line 293</div>
+        <code>            public            
+    <strong>applyBehaviorModifier</strong>($hookName, $script, $tab = &#039;		&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether any registered behavior on that table has a modifier for a hook</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$hookName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$script</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$tab</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBehaviorContent">
+        <div class="location">in <a href="PeerBuilder.html#method_getBehaviorContent"><abbr title="PeerBuilder">PeerBuilder</abbr></a> at line 302</div>
+        <code>            public            
+    <strong>getBehaviorContent</strong>(string $contentName)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether any registered behavior content creator on that table exists a contentName</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$contentName</td>
+                <td>The name of the content as called from one of this class methods, e.g. &quot;parentClassname&quot;</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBasePeerClassname">
+        <div class="location">in <a href="PeerBuilder.html#method_getBasePeerClassname"><abbr title="PeerBuilder">PeerBuilder</abbr></a> at line 312</div>
+        <code>            public            string
+    <strong>getBasePeerClassname</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the BasePeer class name for the current table (e.g.</p>
+        <p>&#039;BasePeer&#039;)</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The Base Peer Class name</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUnprefixedClassname">
+        <div class="location">at line 59</div>
+        <code>            public            string
+    <strong>getUnprefixedClassname</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the name of the current class being built.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPackage">
+        <div class="location">at line 68</div>
+        <code>            public            string
+    <strong>getPackage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the package for the [base] peer classes.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNamespace">
+        <div class="location">at line 73</div>
+        <code>            public            
+    <strong>getNamespace</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTableMapClass">
+        <div class="location">at line 178</div>
+        <code>            public            
+    <strong>getTableMapClass</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTablePhpName">
+        <div class="location">at line 183</div>
+        <code>            public            
+    <strong>getTablePhpName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addInheritanceColumnConstants">
+        <div class="location">at line 532</div>
+        <code>            public            
+    <strong>addInheritanceColumnConstants</strong>(string $script)</code>
+    </h3>
+    <div class="details">
+        <p>Adds the CLASSKEY_* and CLASSNAME_* constants used for inheritance.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$script</td>
+                <td>&amp;$script The script will be modified in this method.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getInstancePoolKeySnippet">
+        <div class="location">at line 801</div>
+        <code>            public            string
+    <strong>getInstancePoolKeySnippet</strong>(array $pkphp)</code>
+    </h3>
+    <div class="details">
+        <p>Adds the PHP code to return a instance pool key for the passed-in primary key variable names.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$pkphp</td>
+                <td>An array of PHP var names / method calls representing complete pk.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addCriteriaJoin">
+        <div class="location">at line 2089</div>
+        <code>            public            
+    <strong>addCriteriaJoin</strong>($fk, $table, $joinTable, $joinedTablePeerBuilder)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$fk</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$joinTable</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$joinedTablePeerBuilder</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

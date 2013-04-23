@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>PropelOnDemandIterator | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>PropelOnDemandIterator</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PropelOnDemandIterator</strong>        implements
+        <a href="http://php.net/Iterator"><abbr title="Iterator">Iterator</abbr></a></p>
+
+            <div class="description">
+            <p>Class for iterating over a statement and returning one Propel object at a time</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="PropelFormatter.html"><abbr title="PropelFormatter">PropelFormatter</abbr></a> $formatter, <a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a> $stmt)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_closeCursor">closeCursor</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_count">count</a>()
+                    <p>Returns the number of rows in the resultset Warning: this number is inaccurate for most databases.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="BaseObject.html"><abbr title="BaseObject">BaseObject</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_current">current</a>()
+                    <p>Gets the current Model object in the collection This is where the hydration takes place.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_key">key</a>()
+                    <p>Gets the current key in the iterator</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_next">next</a>()
+                    <p>Advances the curesor in the statement Closes the cursor if the end of the statement is reached</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_rewind">rewind</a>()
+                    <p>Initializes the iterator by advancing to the first position This method can only be called once (this is a NoRewindIterator)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_valid">valid</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 41</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="PropelFormatter.html"><abbr title="PropelFormatter">PropelFormatter</abbr></a> $formatter, <a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a> $stmt)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelFormatter.html"><abbr title="PropelFormatter">PropelFormatter</abbr></a></td>
+                <td>$formatter</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a></td>
+                <td>$stmt</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_closeCursor">
+        <div class="location">at line 48</div>
+        <code>            public            
+    <strong>closeCursor</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_count">
+        <div class="location">at line 59</div>
+        <code>            public            integer
+    <strong>count</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the number of rows in the resultset Warning: this number is inaccurate for most databases.</p>
+        <p>Do not rely on it for a portable application.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>Number of results</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_current">
+        <div class="location">at line 72</div>
+        <code>            public            <a href="BaseObject.html"><abbr title="BaseObject">BaseObject</abbr></a>
+    <strong>current</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the current Model object in the collection This is where the hydration takes place.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="BaseObject.html"><abbr title="BaseObject">BaseObject</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>PropelObjectFormatter::getAllObjectsFromRow()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_key">
+        <div class="location">at line 82</div>
+        <code>            public            string
+    <strong>key</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the current key in the iterator</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_next">
+        <div class="location">at line 91</div>
+        <code>            public            
+    <strong>next</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Advances the curesor in the statement Closes the cursor if the end of the statement is reached</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_rewind">
+        <div class="location">at line 108</div>
+        <code>            public            
+    <strong>rewind</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Initializes the iterator by advancing to the first position This method can only be called once (this is a NoRewindIterator)</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_valid">
+        <div class="location">at line 128</div>
+        <code>            public            boolean
+    <strong>valid</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

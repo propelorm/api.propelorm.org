@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>PropelSQLExec | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>PropelSQLExec</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PropelSQLExec</strong>        extends <abbr title="Task">Task</abbr></p>
+
+            <div class="description">
+            <p>Executes all SQL files referenced in the sqldbmap file against their mapped databases.</p>
+            <p>This task uses an SQL -&gt; Database map in the form of a properties<br />
+ file to insert each SQL file listed into its designated database.</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSqlDbMap">setSqlDbMap</a>(<abbr title="sqldbmap">sqldbmap</abbr> $sqldbmap)
+                    <p>Set the sqldbmap properties file.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="filename">filename</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getSqlDbMap">getSqlDbMap</a>()
+                    <p>Get the sqldbmap properties file.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setBuildConnections">setBuildConnections</a>(array $buildConnections)
+                    <p>Set the buildtime connection settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getBuildConnections">getBuildConnections</a>()
+                    <p>Get the buildtime connection settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getBuildConnection">getBuildConnection</a>(string $database)
+                    <p>Get the buildtime connection settings for a given database name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSrcDir">setSrcDir</a>(<abbr title="PhingFile">PhingFile</abbr> $srcDir)
+                    <p>Set the src directory for the sql files listed in the sqldbmap file.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="PhingFile">PhingFile</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getSrcDir">getSrcDir</a>()
+                    <p>Get the src directory for the sql files listed in the sqldbmap file.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setUrl">setUrl</a>(string $url)
+                    <p>Set the DB connection url.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setUserid">setUserid</a>(string $userId)
+                    <p>Set the user name for the DB connection.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPassword">setPassword</a>(string $password)
+                    <p>Set the password for the DB connection.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setAutoCommit">setAutoCommit</a>(boolean $autocommit)
+                    <p>Set the autocommit flag for the DB connection.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setOnerror">setOnerror</a>(string $action)
+                    <p>Set the action to perform onerror</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_main">main</a>()
+                    <p>Load the sql file and then execute it</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_setSqlDbMap">
+        <div class="location">at line 74</div>
+        <code>            public            
+    <strong>setSqlDbMap</strong>(<abbr title="sqldbmap">sqldbmap</abbr> $sqldbmap)</code>
+    </h3>
+    <div class="details">
+        <p>Set the sqldbmap properties file.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="sqldbmap">sqldbmap</abbr></td>
+                <td>$sqldbmap</td>
+                <td>filename for the sqldbmap</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSqlDbMap">
+        <div class="location">at line 84</div>
+        <code>            public            <abbr title="filename">filename</abbr>
+    <strong>getSqlDbMap</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the sqldbmap properties file.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="filename">filename</abbr></td>
+            <td>for the sqldbmap</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setBuildConnections">
+        <div class="location">at line 94</div>
+        <code>            public            
+    <strong>setBuildConnections</strong>(array $buildConnections)</code>
+    </h3>
+    <div class="details">
+        <p>Set the buildtime connection settings.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$buildConnections</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBuildConnections">
+        <div class="location">at line 104</div>
+        <code>            public            array
+    <strong>getBuildConnections</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the buildtime connection settings.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>$buildConnections</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBuildConnection">
+        <div class="location">at line 115</div>
+        <code>            public            array
+    <strong>getBuildConnection</strong>(string $database)</code>
+    </h3>
+    <div class="details">
+        <p>Get the buildtime connection settings for a given database name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$database</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>$buildConnections</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSrcDir">
+        <div class="location">at line 133</div>
+        <code>            public            
+    <strong>setSrcDir</strong>(<abbr title="PhingFile">PhingFile</abbr> $srcDir)</code>
+    </h3>
+    <div class="details">
+        <p>Set the src directory for the sql files listed in the sqldbmap file.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="PhingFile">PhingFile</abbr></td>
+                <td>$srcDir</td>
+                <td>sql source directory</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSrcDir">
+        <div class="location">at line 143</div>
+        <code>            public            <abbr title="PhingFile">PhingFile</abbr>
+    <strong>getSrcDir</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the src directory for the sql files listed in the sqldbmap file.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="PhingFile">PhingFile</abbr></td>
+            <td>SQL Source directory</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setUrl">
+        <div class="location">at line 153</div>
+        <code>            public            
+    <strong>setUrl</strong>(string $url)</code>
+    </h3>
+    <div class="details">
+        <p>Set the DB connection url.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>connection url</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setUserid">
+        <div class="location">at line 164</div>
+        <code>            public            
+    <strong>setUserid</strong>(string $userId)</code>
+    </h3>
+    <div class="details">
+        <p>Set the user name for the DB connection.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$userId</td>
+                <td>database user</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPassword">
+        <div class="location">at line 175</div>
+        <code>            public            
+    <strong>setPassword</strong>(string $password)</code>
+    </h3>
+    <div class="details">
+        <p>Set the password for the DB connection.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td>database password</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAutoCommit">
+        <div class="location">at line 185</div>
+        <code>            public            
+    <strong>setAutoCommit</strong>(boolean $autocommit)</code>
+    </h3>
+    <div class="details">
+        <p>Set the autocommit flag for the DB connection.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$autocommit</td>
+                <td>the autocommit flag</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setOnerror">
+        <div class="location">at line 195</div>
+        <code>            public            
+    <strong>setOnerror</strong>(string $action)</code>
+    </h3>
+    <div class="details">
+        <p>Set the action to perform onerror</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_main">
+        <div class="location">at line 205</div>
+        <code>            public            
+    <strong>main</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Load the sql file and then execute it</p>
+        <p></p>
+        <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="BuildException">BuildException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

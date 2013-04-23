@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Propel\Generator\Builder\Om\AbstractPeerBuilder | Propel 2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel 2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../Propel/Generator/Builder/Om.html">Propel\Generator\Builder\Om</a>\AbstractPeerBuilder</h1>
+    </div>
+        <div class="content">
+                <p>abstract class    <strong>AbstractPeerBuilder</strong>        extends <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></p>
+
+            <div class="description">
+            <p>Base class for Peer-building classes.</p>
+            <p>This class is designed so that it can be extended by the &quot;standard&quot;<br />
+ PHP5PeerBuilder and PHP5ComplexOMPeerBuilder.  Hence, this class<br />
+ should not have any actual template code in it -- simply basic logic &amp; utility<br />
+ methods.</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_build">build</a>()
+                    <p>Builds the PHP source for current class and returns it as a string.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_build"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_buildObjectInstanceCreationCode">buildObjectInstanceCreationCode</a>($objName, $clsName)
+                    <p>Creates a $obj = new Book(); code snippet.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_buildObjectInstanceCreationCode"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getUnprefixedClassName">getUnprefixedClassName</a>()
+                    <p>Returns the qualified (prefixed) classname that is being built by the current class.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getUnprefixedClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getUnqualifiedClassName">getUnqualifiedClassName</a>()
+                    <p>Returns the unqualified classname (e.g.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getUnqualifiedClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getQualifiedClassName">getQualifiedClassName</a>()
+                    <p>Returns the qualified classname (e.g.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getQualifiedClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getFullyQualifiedClassName">getFullyQualifiedClassName</a>()
+                    <p>Returns the fully qualified classname (e.g.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getFullyQualifiedClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getClassName">getClassName</a>()
+                    <p>Returns FQCN alias of getFullyQualifiedClassName</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getClasspath">getClasspath</a>()
+                    <p>Gets the dot-path representation of current class being built.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getClasspath"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getClassFilePath">getClassFilePath</a>()
+                    <p>Gets the full path to the file for the current class.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getClassFilePath"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPackage">getPackage</a>()
+                    <p>Gets package name for this table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getPackage"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPackagePath">getPackagePath</a>()
+                    <p>Returns filesystem path for current package.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getPackagePath"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getNamespace">getNamespace</a>()
+                    <p>Returns the user-defined namespace for this table, or the database namespace otherwise.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getNamespace"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getClassNameFromBuilder">getClassNameFromBuilder</a>(<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> $builder, boolean $fqcn = false)
+                    <p>This declare the class use and get the correct name to use (short classname, Alias, or FQCN)</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getClassNameFromBuilder"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_declareClassNamespace">declareClassNamespace</a>(string $class, string $namespace = &#039;&#039;, string|boolean $alias = false)
+                    <p>Declare a class to be use and return it&#039;s name or it&#039;s alias</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_declareClassNamespace"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_declareClassNamespacePrefix">declareClassNamespacePrefix</a>(string $class, string $namespace = &#039;&#039;, mixed $aliasPrefix = false)
+                    <p>Declare a use statement for a $class with a $namespace and an $aliasPrefix This return the short ClassName or an alias</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_declareClassNamespacePrefix"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_declareClass">declareClass</a>(string $fullyQualifiedClassName, mixed $aliasPrefix = false)
+                    <p>Declare a Fully qualified classname with an $aliasPrefix This return the short ClassName to use or an alias</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_declareClass"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_declareClassFromBuilder">declareClassFromBuilder</a>(<abbr title="Propel\Generator\Builder\Om\$builder">$builder</abbr> $builder, boolean|string $aliasPrefix = false)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_declareClassFromBuilder"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_declareClasses">declareClasses</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_declareClasses"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getDeclaredClasses">getDeclaredClasses</a>(string $namespace = null)
+                    <p>Get the list of declared classes for a given $namespace or all declared classes</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getDeclaredClasses"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getNamespaceStatement">getNamespaceStatement</a>()
+                    <p>return the string for the class namespace</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getNamespaceStatement"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getUseStatements">getUseStatements</a>(string $ignoredNamespace = null)
+                    <p>Return all the use statement of the class</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getUseStatements"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPeerClassName">getPeerClassName</a>(boolean $fqcn = false)
+                    <p>Shortcut method to return the [stub] peer classname for current table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getPeerClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getQueryClassName">getQueryClassName</a>(boolean $fqcn = false)
+                    <p>Shortcut method to return the [stub] query classname for current table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getQueryClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getObjectClassName">getObjectClassName</a>(boolean $fqcn = false)
+                    <p>Returns the object classname for current table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getObjectClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getTableMapClassName">getTableMapClassName</a>(boolean $fqcn = false)
+                    <p>Returns the tableMap classname for current table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getTableMapClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnConstant">getColumnConstant</a>(<a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $col, string $classname = null)
+                    <p>Get the column constant name (e.g.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getColumnConstant"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getBasePeer">getBasePeer</a>(<a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)
+                    <p>Gets the basePeer path if specified for table/db.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getBasePeer"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getFKPhpNameAffix">getFKPhpNameAffix</a>(<a href="../../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk, boolean $plural = false)
+                    <p>Gets the PHP method name affix to be used for fkeys for the current table (not referrers to this table).</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getFKPhpNameAffix"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getRefFKPhpNameAffix">getRefFKPhpNameAffix</a>(<a href="../../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk, boolean $plural = false)
+                    <p>Gets the PHP method name affix to be used for referencing foreign key methods and variable names (e.g.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getRefFKPhpNameAffix"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasBehaviorModifier">hasBehaviorModifier</a>(string $hookName, string $modifier = null)
+                    <p>Checks whether any registered behavior on that table has a modifier for a hook</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_applyBehaviorModifierBase">applyBehaviorModifierBase</a>($hookName, $modifier, $script, $tab = &#039;        &#039;)
+                    <p>Checks whether any registered behavior on that table has a modifier for a hook</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_applyBehaviorModifierBase"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getBehaviorContentBase">getBehaviorContentBase</a>(string $contentName, string $modifier)
+                    <p>Checks whether any registered behavior content creator on that table exists a contentName</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getBehaviorContentBase"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_renderTemplate">renderTemplate</a>(string $filename, array $vars = array(), string $templateDir = &#039;/templates/&#039;)
+                    <p>Use Propel simple templating system to render a PHP file using variables passed as arguments.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_renderTemplate"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getTableMapClass">getTableMapClass</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getTableMapClass"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)
+                    <p>Constructs a new PeerBuilder subclass.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnName">getColumnName</a>(<a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $col, string $phpName = null)
+                    <p>COMPATIBILITY: Get the column constant name (e.g.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_applyBehaviorModifier">applyBehaviorModifier</a>($hookName, $script, $tab = &#039;        &#039;)
+                    <p>Checks whether any registered behavior on that table has a modifier for a hook</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getBehaviorContent">getBehaviorContent</a>(string $contentName)
+                    <p>Checks whether any registered behavior content creator on that table exists a contentName</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getBasePeerClassName">getBasePeerClassName</a>()
+                    <p>Get the BasePeer class name for the current table (e.g.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_build">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_build"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 65</div>
+        <code>            public            string
+    <strong>build</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Builds the PHP source for current class and returns it as a string.</p>
+        <p>This is the main entry point and defines a basic structure that classes should follow.<br />
+ In most cases this method will not need to be overridden by subclasses.  This method<br />
+ does assume that the output language is PHP code, so it will need to be overridden if<br />
+ this is not the case.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The resulting PHP sourcecode.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_buildObjectInstanceCreationCode">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_buildObjectInstanceCreationCode"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 111</div>
+        <code>            public            string
+    <strong>buildObjectInstanceCreationCode</strong>($objName, $clsName)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a $obj = new Book(); code snippet.</p>
+        <p>Can be used by frameworks, for instance, to<br />
+ extend this behavior, e.g. initialize the object after creating the instance or so.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$objName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$clsName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>Some code</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUnprefixedClassName">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getUnprefixedClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 122</div>
+        <code>    abstract        public            string
+    <strong>getUnprefixedClassName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the qualified (prefixed) classname that is being built by the current class.</p>
+        <p>This method must be implemented by child classes.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUnqualifiedClassName">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getUnqualifiedClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 129</div>
+        <code>            public            string
+    <strong>getUnqualifiedClassName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the unqualified classname (e.g.</p>
+        <p>Book)</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getQualifiedClassName">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getQualifiedClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 139</div>
+        <code>            public            string
+    <strong>getQualifiedClassName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the qualified classname (e.g.</p>
+        <p>Model\Book)</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFullyQualifiedClassName">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getFullyQualifiedClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 153</div>
+        <code>            public            string
+    <strong>getFullyQualifiedClassName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the fully qualified classname (e.g.</p>
+        <p>\Model\Book)</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getClassName">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 162</div>
+        <code>            public            string
+    <strong>getClassName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns FQCN alias of getFullyQualifiedClassName</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getClasspath">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getClasspath"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 172</div>
+        <code>            public            string
+    <strong>getClasspath</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the dot-path representation of current class being built.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getClassFilePath">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getClassFilePath"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 186</div>
+        <code>            public            string
+    <strong>getClassFilePath</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the full path to the file for the current class.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPackage">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getPackage"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 196</div>
+        <code>            public            string
+    <strong>getPackage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets package name for this table.</p>
+        <p>This is overridden by child classes that have different packages.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPackagePath">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getPackagePath"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 210</div>
+        <code>            public            string
+    <strong>getPackagePath</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns filesystem path for current package.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNamespace">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getNamespace"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 230</div>
+        <code>            public            string
+    <strong>getNamespace</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the user-defined namespace for this table, or the database namespace otherwise.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getClassNameFromBuilder">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getClassNameFromBuilder"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 242</div>
+        <code>            public            string
+    <strong>getClassNameFromBuilder</strong>(<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> $builder, boolean $fqcn = false)</code>
+    </h3>
+    <div class="details">
+        <p>This declare the class use and get the correct name to use (short classname, Alias, or FQCN)</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></td>
+                <td>$builder</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$fqcn</td>
+                <td>true to return the $fqcn classname</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>ClassName, Alias or FQCN</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_declareClassNamespace">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_declareClassNamespace"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 267</div>
+        <code>            public            string
+    <strong>declareClassNamespace</strong>(string $class, string $namespace = &#039;&#039;, string|boolean $alias = false)</code>
+    </h3>
+    <div class="details">
+        <p>Declare a class to be use and return it&#039;s name or it&#039;s alias</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td>the class name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td>the namespace</td>
+            </tr>
+                    <tr>
+                <td>string|boolean</td>
+                <td>$alias</td>
+                <td>the alias wanted, if set to True, it automatically adds an alias when needed</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>the class name or it&#039;s alias</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_declareClassNamespacePrefix">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_declareClassNamespacePrefix"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 361</div>
+        <code>            public            string
+    <strong>declareClassNamespacePrefix</strong>(string $class, string $namespace = &#039;&#039;, mixed $aliasPrefix = false)</code>
+    </h3>
+    <div class="details">
+        <p>Declare a use statement for a $class with a $namespace and an $aliasPrefix This return the short ClassName or an alias</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td>the class</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td>the namespace</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$aliasPrefix</td>
+                <td>optionally an alias or True to force an automatic alias prefix (Base or Child)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>the short ClassName or an alias</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_declareClass">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_declareClass"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 380</div>
+        <code>            public            string
+    <strong>declareClass</strong>(string $fullyQualifiedClassName, mixed $aliasPrefix = false)</code>
+    </h3>
+    <div class="details">
+        <p>Declare a Fully qualified classname with an $aliasPrefix This return the short ClassName to use or an alias</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$fullyQualifiedClassName</td>
+                <td>the fully qualified classname</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$aliasPrefix</td>
+                <td>optionally an alias or True to force an automatic alias prefix (Base or Child)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>the short ClassName or an alias</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_declareClassFromBuilder">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_declareClassFromBuilder"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 394</div>
+        <code>            public            
+    <strong>declareClassFromBuilder</strong>(<abbr title="Propel\Generator\Builder\Om\$builder">$builder</abbr> $builder, boolean|string $aliasPrefix = false)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Generator\Builder\Om\$builder">$builder</abbr></td>
+                <td>$builder</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean|string</td>
+                <td>$aliasPrefix</td>
+                <td>the prefix for the Alias or True for auto generation of the Alias</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_declareClasses">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_declareClasses"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 399</div>
+        <code>            public            
+    <strong>declareClasses</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDeclaredClasses">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getDeclaredClasses"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 413</div>
+        <code>            public            array
+    <strong>getDeclaredClasses</strong>(string $namespace = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get the list of declared classes for a given $namespace or all declared classes</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td>the namespace or null</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>list of declared classes</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNamespaceStatement">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getNamespaceStatement"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 427</div>
+        <code>            public            string
+    <strong>getNamespaceStatement</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>return the string for the class namespace</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUseStatements">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getUseStatements"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 443</div>
+        <code>            public            string
+    <strong>getUseStatements</strong>(string $ignoredNamespace = null)</code>
+    </h3>
+    <div class="details">
+        <p>Return all the use statement of the class</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$ignoredNamespace</td>
+                <td>the ignored namespace</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPeerClassName">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getPeerClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 476</div>
+        <code>            public            string
+    <strong>getPeerClassName</strong>(boolean $fqcn = false)</code>
+    </h3>
+    <div class="details">
+        <p>Shortcut method to return the [stub] peer classname for current table.</p>
+        <p>This is the classname that is used whenever object or peer classes want<br />
+ to invoke methods of the peer classes.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$fqcn</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>(e.g. &#039;MyPeer&#039;)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getQueryClassName">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getQueryClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 488</div>
+        <code>            public            string
+    <strong>getQueryClassName</strong>(boolean $fqcn = false)</code>
+    </h3>
+    <div class="details">
+        <p>Shortcut method to return the [stub] query classname for current table.</p>
+        <p>This is the classname that is used whenever object or peer classes want<br />
+ to invoke methods of the query classes.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$fqcn</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>(e.g. &#039;Myquery&#039;)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getObjectClassName">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getObjectClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 500</div>
+        <code>            public            string
+    <strong>getObjectClassName</strong>(boolean $fqcn = false)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the object classname for current table.</p>
+        <p>This is the classname that is used whenever object or peer classes want<br />
+ to invoke methods of the object classes.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$fqcn</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>(e.g. &#039;My&#039;)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTableMapClassName">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getTableMapClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 512</div>
+        <code>            public            string
+    <strong>getTableMapClassName</strong>(boolean $fqcn = false)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the tableMap classname for current table.</p>
+        <p>This is the classname that is used whenever object or peer classes want<br />
+ to invoke methods of the object classes.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$fqcn</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>(e.g. &#039;My&#039;)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnConstant">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getColumnConstant"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 525</div>
+        <code>            public            string
+    <strong>getColumnConstant</strong>(<a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $col, string $classname = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get the column constant name (e.g.</p>
+        <p>PeerName::COLUMN_NAME).</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a></td>
+                <td>$col</td>
+                <td>The column we need a name for.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$classname</td>
+                <td>The Peer classname to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>If $classname is provided, then will return $classname::COLUMN_NAME; if not, then the peername is looked up for current table to yield $currTablePeer::COLUMN_NAME.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBasePeer">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getBasePeer"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 550</div>
+        <code>            public            string
+    <strong>getBasePeer</strong>(<a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Gets the basePeer path if specified for table/db.</p>
+        <p>If not, will return &#039;propel.util.BasePeer&#039;</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFKPhpNameAffix">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getFKPhpNameAffix"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 601</div>
+        <code>            public            string
+    <strong>getFKPhpNameAffix</strong>(<a href="../../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk, boolean $plural = false)</code>
+    </h3>
+    <div class="details">
+        <p>Gets the PHP method name affix to be used for fkeys for the current table (not referrers to this table).</p>
+        <p>The difference between this method and the getRefFKPhpNameAffix() method is that in this method the<br />
+ classname in the affix is the foreign table classname.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a></td>
+                <td>$fk</td>
+                <td>The local FK that we need a name for.</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$plural</td>
+                <td>Whether the php name should be plural (e.g. initRelatedObjs() vs. addRelatedObj()</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRefFKPhpNameAffix">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getRefFKPhpNameAffix"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 663</div>
+        <code>            public            string
+    <strong>getRefFKPhpNameAffix</strong>(<a href="../../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk, boolean $plural = false)</code>
+    </h3>
+    <div class="details">
+        <p>Gets the PHP method name affix to be used for referencing foreign key methods and variable names (e.g.</p>
+        <p>set????(), $coll???).<br />
+<br />
+ The difference between this method and the getFKPhpNameAffix() method is that in this method the<br />
+ classname in the affix is the classname of the local fkey table.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a></td>
+                <td>$fk</td>
+                <td>The referrer FK that we need a name for.</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$plural</td>
+                <td>Whether the php name should be plural (e.g. initRelatedObjs() vs. addRelatedObj()</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasBehaviorModifier">
+        <div class="location">at line 229</div>
+        <code>            public            boolean
+    <strong>hasBehaviorModifier</strong>(string $hookName, string $modifier = null)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether any registered behavior on that table has a modifier for a hook</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$hookName</td>
+                <td>The name of the hook as called from one of this class methods, e.g. &quot;preSave&quot;</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$modifier</td>
+                <td>The name of the modifier object providing the method in the behavior</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_applyBehaviorModifierBase">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_applyBehaviorModifierBase"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 732</div>
+        <code>            public            
+    <strong>applyBehaviorModifierBase</strong>($hookName, $modifier, $script, $tab = &#039;        &#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether any registered behavior on that table has a modifier for a hook</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$hookName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$modifier</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$script</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$tab</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBehaviorContentBase">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getBehaviorContentBase"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 760</div>
+        <code>            public            
+    <strong>getBehaviorContentBase</strong>(string $contentName, string $modifier)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether any registered behavior content creator on that table exists a contentName</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$contentName</td>
+                <td>The name of the content as called from one of this class methods, e.g. &quot;parentClassName&quot;</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$modifier</td>
+                <td>The name of the modifier object providing the method in the behavior</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_renderTemplate">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_renderTemplate"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 781</div>
+        <code>            public            string
+    <strong>renderTemplate</strong>(string $filename, array $vars = array(), string $templateDir = &#039;/templates/&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Use Propel simple templating system to render a PHP file using variables passed as arguments.</p>
+        <p>The template file name is relative to the behavior&#039;s<br />
+ directory name.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$vars</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$templateDir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTableMapClass">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getTableMapClass"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 801</div>
+        <code>            public            string
+    <strong>getTableMapClass</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___construct">
+        <div class="location">at line 38</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Constructs a new PeerBuilder subclass.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td>A Table instance</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnName">
+        <div class="location">at line 208</div>
+        <code>        static    public            string
+    <strong>getColumnName</strong>(<a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $col, string $phpName = null)</code>
+    </h3>
+    <div class="details">
+        <p>COMPATIBILITY: Get the column constant name (e.g.</p>
+        <p>PeerName::COLUMN_NAME).<br />
+<br />
+ This method exists simply because it belonged to the &#039;PeerBuilder&#039; that this<br />
+ class is replacing (because of name conflict more than actual functionality overlap).<br />
+ When the new builder model is finished this method will be removed.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a></td>
+                <td>$col</td>
+                <td>The column we need a name for.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$phpName</td>
+                <td>The PHP Name of the peer class. The &#039;Peer&#039; is appended automatically.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>If $phpName is provided, then will return {$phpName}Peer::COLUMN_NAME; if not, just COLUMN_NAME.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_applyBehaviorModifier">
+        <div class="location">at line 239</div>
+        <code>            public            
+    <strong>applyBehaviorModifier</strong>($hookName, $script, $tab = &#039;        &#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether any registered behavior on that table has a modifier for a hook</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$hookName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$script</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$tab</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBehaviorContent">
+        <div class="location">at line 248</div>
+        <code>            public            
+    <strong>getBehaviorContent</strong>(string $contentName)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether any registered behavior content creator on that table exists a contentName</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$contentName</td>
+                <td>The name of the content as called from one of this class methods, e.g. &quot;parentClassName&quot;</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBasePeerClassName">
+        <div class="location">at line 258</div>
+        <code>            public            string
+    <strong>getBasePeerClassName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the BasePeer class name for the current table (e.g.</p>
+        <p>&#039;BasePeer&#039;)</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The Base Peer Class name</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

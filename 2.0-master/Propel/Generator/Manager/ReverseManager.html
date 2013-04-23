@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Propel\Generator\Manager\ReverseManager | Propel 2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel 2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Propel/Generator/Manager.html">Propel\Generator\Manager</a>\ReverseManager</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>ReverseManager</strong>        extends <a href="../../../Propel/Generator/Manager/AbstractManager.html"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getSchemas">getSchemas</a>()
+                    <p>Returns the list of schemas.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Manager/AbstractManager.html#method_getSchemas"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSchemas">setSchemas</a>(array $schemas)
+                    <p>Sets the schemas list.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Manager/AbstractManager.html#method_setSchemas"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setWorkingDirectory">setWorkingDirectory</a>(string $workingDirectory)
+                    <p>Sets the working directory path.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Manager/AbstractManager.html#method_setWorkingDirectory"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getWorkingDirectory">getWorkingDirectory</a>()
+                    <p>Returns the working directory path.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Manager/AbstractManager.html#method_getWorkingDirectory"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getDataModels">getDataModels</a>()
+                    <p>Returns the data models that have been processed.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Manager/AbstractManager.html#method_getDataModels"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getDataModelDbMap">getDataModelDbMap</a>()
+                    <p>Returns the data model to database name map.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Manager/AbstractManager.html#method_getDataModelDbMap"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setValidate">setValidate</a>(boolean $validate)
+                    <p>Sets whether to perform validation on the datamodel schema.xml file(s).</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Manager/AbstractManager.html#method_setValidate"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setXsd">setXsd</a>(string $xsd)
+                    <p>Sets the XSD schema to use for validation of any datamodel schema.xml file(s).</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Manager/AbstractManager.html#method_setXsd"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setXsl">setXsl</a>(string $xsl)
+                    <p>Sets the normalization XSLT to use to transform datamodel schema.xml file(s) before validation and parsing.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Manager/AbstractManager.html#method_setXsl"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDbEncoding">setDbEncoding</a>(string $encoding)
+                    <p>Sets the current target database encoding.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Manager/AbstractManager.html#method_setDbEncoding"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setLoggerClosure">setLoggerClosure</a>(<abbr title="Propel\Generator\Manager\Closure">Closure</abbr> $logger)
+                    <p>Sets a logger closure.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Manager/AbstractManager.html#method_setLoggerClosure"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setGeneratorConfig">setGeneratorConfig</a>(<a href="../../../Propel/Generator/Config/GeneratorConfigInterface.html"><abbr title="Propel\Generator\Config\GeneratorConfigInterface">GeneratorConfigInterface</abbr></a> $generatorConfig)
+                    <p>Sets the GeneratorConfigInterface implementation.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Manager/AbstractManager.html#method_setGeneratorConfig"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setConnection">setConnection</a>($connection)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getSchemaName">getSchemaName</a>()
+                    <p>Gets the (optional) schema name to use.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSchemaName">setSchemaName</a>(string $schemaName)
+                    <p>Sets the name of a database schema to use (optional).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDatabaseName">getDatabaseName</a>()
+                    <p>Gets the datasource name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDatabaseName">setDatabaseName</a>(string $databaseName)
+                    <p>Sets the datasource name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSamePhpName">setSamePhpName</a>(boolean $samePhpName)
+                    <p>Sets whether to use the column name as phpName without any translation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setAddVendorInfo">setAddVendorInfo</a>(boolean $addVendorInfo)
+                    <p>Sets whether to add vendor info to the schema.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isSamePhpName">isSamePhpName</a>()
+                    <p>Returns whether to use the column name as phpName without any translation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_reverse">reverse</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getSchemas">
+        <div class="location">in <a href="../../../Propel/Generator/Manager/AbstractManager.html#method_getSchemas"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a> at line 100</div>
+        <code>            public            array
+    <strong>getSchemas</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the list of schemas.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSchemas">
+        <div class="location">in <a href="../../../Propel/Generator/Manager/AbstractManager.html#method_setSchemas"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a> at line 110</div>
+        <code>            public            
+    <strong>setSchemas</strong>(array $schemas)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the schemas list.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$schemas</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setWorkingDirectory">
+        <div class="location">in <a href="../../../Propel/Generator/Manager/AbstractManager.html#method_setWorkingDirectory"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a> at line 120</div>
+        <code>            public            
+    <strong>setWorkingDirectory</strong>(string $workingDirectory)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the working directory path.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$workingDirectory</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getWorkingDirectory">
+        <div class="location">in <a href="../../../Propel/Generator/Manager/AbstractManager.html#method_getWorkingDirectory"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a> at line 130</div>
+        <code>            public            string
+    <strong>getWorkingDirectory</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the working directory path.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDataModels">
+        <div class="location">in <a href="../../../Propel/Generator/Manager/AbstractManager.html#method_getDataModels"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a> at line 142</div>
+        <code>            public            array
+    <strong>getDataModels</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the data models that have been processed.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDataModelDbMap">
+        <div class="location">in <a href="../../../Propel/Generator/Manager/AbstractManager.html#method_getDataModelDbMap"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a> at line 156</div>
+        <code>            public            array
+    <strong>getDataModelDbMap</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the data model to database name map.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setValidate">
+        <div class="location">in <a href="../../../Propel/Generator/Manager/AbstractManager.html#method_setValidate"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a> at line 170</div>
+        <code>            public            
+    <strong>setValidate</strong>(boolean $validate)</code>
+    </h3>
+    <div class="details">
+        <p>Sets whether to perform validation on the datamodel schema.xml file(s).</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$validate</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setXsd">
+        <div class="location">in <a href="../../../Propel/Generator/Manager/AbstractManager.html#method_setXsd"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a> at line 181</div>
+        <code>            public            
+    <strong>setXsd</strong>(string $xsd)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the XSD schema to use for validation of any datamodel schema.xml file(s).</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$xsd</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setXsl">
+        <div class="location">in <a href="../../../Propel/Generator/Manager/AbstractManager.html#method_setXsl"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a> at line 192</div>
+        <code>            public            
+    <strong>setXsl</strong>(string $xsl)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the normalization XSLT to use to transform datamodel schema.xml file(s) before validation and parsing.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$xsl</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDbEncoding">
+        <div class="location">in <a href="../../../Propel/Generator/Manager/AbstractManager.html#method_setDbEncoding"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a> at line 202</div>
+        <code>            public            
+    <strong>setDbEncoding</strong>(string $encoding)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the current target database encoding.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$encoding</td>
+                <td>Target database encoding</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setLoggerClosure">
+        <div class="location">in <a href="../../../Propel/Generator/Manager/AbstractManager.html#method_setLoggerClosure"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a> at line 212</div>
+        <code>            public            
+    <strong>setLoggerClosure</strong>(<abbr title="Propel\Generator\Manager\Closure">Closure</abbr> $logger)</code>
+    </h3>
+    <div class="details">
+        <p>Sets a logger closure.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Generator\Manager\Closure">Closure</abbr></td>
+                <td>$logger</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setGeneratorConfig">
+        <div class="location">in <a href="../../../Propel/Generator/Manager/AbstractManager.html#method_setGeneratorConfig"><abbr title="Propel\Generator\Manager\AbstractManager">AbstractManager</abbr></a> at line 370</div>
+        <code>            public            
+    <strong>setGeneratorConfig</strong>(<a href="../../../Propel/Generator/Config/GeneratorConfigInterface.html"><abbr title="Propel\Generator\Config\GeneratorConfigInterface">GeneratorConfigInterface</abbr></a> $generatorConfig)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the GeneratorConfigInterface implementation.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Config/GeneratorConfigInterface.html"><abbr title="Propel\Generator\Config\GeneratorConfigInterface">GeneratorConfigInterface</abbr></a></td>
+                <td>$generatorConfig</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setConnection">
+        <div class="location">at line 64</div>
+        <code>            public            
+    <strong>setConnection</strong>($connection)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$connection</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSchemaName">
+        <div class="location">at line 74</div>
+        <code>            public            string
+    <strong>getSchemaName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the (optional) schema name to use.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSchemaName">
+        <div class="location">at line 84</div>
+        <code>            public            
+    <strong>setSchemaName</strong>(string $schemaName)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the name of a database schema to use (optional).</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$schemaName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDatabaseName">
+        <div class="location">at line 94</div>
+        <code>            public            string
+    <strong>getDatabaseName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the datasource name.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDatabaseName">
+        <div class="location">at line 106</div>
+        <code>            public            
+    <strong>setDatabaseName</strong>(string $databaseName)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the datasource name.</p>
+        <p>This will be used as the &lt;database name=&quot;&quot;&gt; value in the generated<br />
+ schema.xml</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$databaseName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSamePhpName">
+        <div class="location">at line 116</div>
+        <code>            public            
+    <strong>setSamePhpName</strong>(boolean $samePhpName)</code>
+    </h3>
+    <div class="details">
+        <p>Sets whether to use the column name as phpName without any translation.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$samePhpName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAddVendorInfo">
+        <div class="location">at line 126</div>
+        <code>            public            
+    <strong>setAddVendorInfo</strong>(boolean $addVendorInfo)</code>
+    </h3>
+    <div class="details">
+        <p>Sets whether to add vendor info to the schema.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$addVendorInfo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isSamePhpName">
+        <div class="location">at line 137</div>
+        <code>            public            boolean
+    <strong>isSamePhpName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether to use the column name as phpName without any translation.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_reverse">
+        <div class="location">at line 142</div>
+        <code>            public            
+    <strong>reverse</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

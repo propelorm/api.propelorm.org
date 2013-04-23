@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Propel\Runtime\ServiceContainer\ServiceContainerInterface | Propel 2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel 2 API</div>
+
+            <div class="type">Interface</div>
+    <h1><a href="../../../Propel/Runtime/ServiceContainer.html">Propel\Runtime\ServiceContainer</a>\ServiceContainerInterface</h1>
+    </div>
+        <div class="content">
+                <p>interface    <strong>ServiceContainerInterface</strong></p>
+
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>CONNECTION_READ</td>
+                <td class="last">
+                    <p><em>Constant used to request a READ connection (applies to replication).</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONNECTION_WRITE</td>
+                <td class="last">
+                    <p><em>Constant used to request a WRITE connection (applies to replication).</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAULT_DATABASE_MAP_CLASS</td>
+                <td class="last">
+                    <p><em>The default DatabaseMap class created by getDatabaseMap()</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAULT_DATASOURCE_NAME</td>
+                <td class="last">
+                    <p><em>The name of the default datasource.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAULT_PROFILER_CLASS</td>
+                <td class="last">
+                    <p><em>The name of the default Profiler class created by getProfiler()</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDefaultDatasource">getDefaultDatasource</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Propel\Runtime\ServiceContainer\Propel\Runtime\Adapter\AdapterInterface">AdapterInterface</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getAdapter">getAdapter</a>(string $name = null)
+                    <p>Get the adapter for a given datasource.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/Map/DatabaseMap.html"><abbr title="Propel\Runtime\Map\DatabaseMap">DatabaseMap</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getDatabaseMap">getDatabaseMap</a>(string $name = null)
+                    <p>Get the database map for a given datasource.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/Connection/ConnectionManagerInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionManagerInterface">ConnectionManagerInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getConnectionManager">getConnectionManager</a>(string $name)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_closeConnections">closeConnections</a>()
+                    <p>Close any associated resource handles.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getConnection">getConnection</a>(string $name = null, string $mode = self::CONNECTION_WRITE)
+                    <p>Get a connection for a given datasource.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Propel\Runtime\ServiceContainer\ConnectionInterface">ConnectionInterface</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getWriteConnection">getWriteConnection</a>(string $name)
+                    <p>Get a write connection for a given datasource.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Propel\Runtime\ServiceContainer\ConnectionInterface">ConnectionInterface</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getReadConnection">getReadConnection</a>(string $name)
+                    <p>Get a read connection for a given datasource.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/Util/Profiler.html"><abbr title="Propel\Runtime\Util\Profiler">Profiler</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getProfiler">getProfiler</a>()
+                    <p>Get a profiler instance.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getLogger">getLogger</a>($name = &#039;defaultLogger&#039;)
+                    <p>Get a logger for a given datasource, or the default logger.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getDefaultDatasource">
+        <div class="location">at line 46</div>
+        <code>            public            string
+    <strong>getDefaultDatasource</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAdapter">
+        <div class="location">at line 57</div>
+        <code>            public            <abbr title="Propel\Runtime\ServiceContainer\Propel\Runtime\Adapter\AdapterInterface">AdapterInterface</abbr>
+    <strong>getAdapter</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get the adapter for a given datasource.</p>
+        <p>If the adapter does not yet exist, build it using the related adapterClass.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The datasource name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Runtime\ServiceContainer\Propel\Runtime\Adapter\AdapterInterface">AdapterInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDatabaseMap">
+        <div class="location">at line 68</div>
+        <code>            public            <a href="../../../Propel/Runtime/Map/DatabaseMap.html"><abbr title="Propel\Runtime\Map\DatabaseMap">DatabaseMap</abbr></a>
+    <strong>getDatabaseMap</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get the database map for a given datasource.</p>
+        <p>The database maps are &quot;registered&quot; by the generated map builder classes.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The datasource name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/Map/DatabaseMap.html"><abbr title="Propel\Runtime\Map\DatabaseMap">DatabaseMap</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConnectionManager">
+        <div class="location">at line 75</div>
+        <code>            public            <a href="../../../Propel/Runtime/Connection/ConnectionManagerInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionManagerInterface">ConnectionManagerInterface</abbr></a>
+    <strong>getConnectionManager</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The datasource name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/Connection/ConnectionManagerInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionManagerInterface">ConnectionManagerInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_closeConnections">
+        <div class="location">at line 83</div>
+        <code>            public            
+    <strong>closeConnections</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Close any associated resource handles.</p>
+        <p>This method frees any database connection handles that have been<br />
+ opened by the getConnection() method.</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConnection">
+        <div class="location">at line 96</div>
+        <code>            public            <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a>
+    <strong>getConnection</strong>(string $name = null, string $mode = self::CONNECTION_WRITE)</code>
+    </h3>
+    <div class="details">
+        <p>Get a connection for a given datasource.</p>
+        <p>If the connection has not been opened, open it using the related<br />
+ connectionSettings. If the connection has already been opened, return it.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The datasource name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$mode</td>
+                <td>The connection mode (this applies to replication systems).</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a></td>
+            <td>A database connection</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getWriteConnection">
+        <div class="location">at line 111</div>
+        <code>            public            <abbr title="Propel\Runtime\ServiceContainer\ConnectionInterface">ConnectionInterface</abbr>
+    <strong>getWriteConnection</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Get a write connection for a given datasource.</p>
+        <p>If the connection has not been opened, open it using the related<br />
+ connectionSettings. If the connection has already been opened, return it.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The datasource name that is used to look up the DSN from the runtime configuration file. Empty name not allowed.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Runtime\ServiceContainer\ConnectionInterface">ConnectionInterface</abbr></td>
+            <td>A database connection</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Adapter/Exception/AdapterException.html"><abbr title="Propel\Runtime\Adapter\Exception\AdapterException">AdapterException</abbr></a></td>
+                <td>- if connection is not properly configured</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getReadConnection">
+        <div class="location">at line 125</div>
+        <code>            public            <abbr title="Propel\Runtime\ServiceContainer\ConnectionInterface">ConnectionInterface</abbr>
+    <strong>getReadConnection</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Get a read connection for a given datasource.</p>
+        <p>If the slave connection has not been opened, open it using a random read connection<br />
+ setting for the related datasource. If no read connection setting exist, return the master<br />
+ connection. If the slave connection has already been opened, return it.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The datasource name that is used to look up the DSN from the runtime configuration file. Empty name not allowed.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Runtime\ServiceContainer\ConnectionInterface">ConnectionInterface</abbr></td>
+            <td>A database connection</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getProfiler">
+        <div class="location">at line 132</div>
+        <code>            public            <a href="../../../Propel/Runtime/Util/Profiler.html"><abbr title="Propel\Runtime\Util\Profiler">Profiler</abbr></a>
+    <strong>getProfiler</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a profiler instance.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/Util/Profiler.html"><abbr title="Propel\Runtime\Util\Profiler">Profiler</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLogger">
+        <div class="location">at line 139</div>
+        <code>            public            <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr>
+    <strong>getLogger</strong>($name = &#039;defaultLogger&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Get a logger for a given datasource, or the default logger.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

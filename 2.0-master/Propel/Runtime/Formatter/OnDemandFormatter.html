@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Propel\Runtime\Formatter\OnDemandFormatter | Propel 2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel 2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Propel/Runtime/Formatter.html">Propel\Runtime\Formatter</a>\OnDemandFormatter</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>OnDemandFormatter</strong>        extends <a href="../../../Propel/Runtime/Formatter/ObjectFormatter.html"><abbr title="Propel\Runtime\Formatter\ObjectFormatter">ObjectFormatter</abbr></a></p>
+
+            <div class="description">
+            <p>Object formatter for Propel query format() returns a OnDemandCollection that hydrates objects as the use iterates on the collection This formatter consumes less memory than the ObjectFormatter, but doesn&#039;t use Instance Pool</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_format">format</a>(<a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a> $stmt)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getCollectionClassName">getCollectionClassName</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_formatOne">formatOne</a>(<a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a> $stmt)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Formatter/ObjectFormatter.html#method_formatOne"><abbr title="Propel\Runtime\Formatter\ObjectFormatter">ObjectFormatter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_isObjectFormatter">isObjectFormatter</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Formatter/ObjectFormatter.html#method_isObjectFormatter"><abbr title="Propel\Runtime\Formatter\ObjectFormatter">ObjectFormatter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Propel\Runtime\Formatter\BaseObject">BaseObject</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getAllObjectsFromRow">getAllObjectsFromRow</a>(array $row)
+                    <p>Hydrates a series of objects from a result row The first object to hydrate is the model of the Criteria The following objects (the ones added by way of ModelCriteria::with()) are linked to the first one</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_init">init</a>(<a href="../../../Propel/Runtime/ActiveQuery/ModelCriteria.html"><abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr></a> $criteria)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getCollection">getCollection</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_format">
+        <div class="location">at line 37</div>
+        <code>            public            
+    <strong>format</strong>(<a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a> $stmt)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a></td>
+                <td>$stmt</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCollectionClassName">
+        <div class="location">at line 50</div>
+        <code>            public            
+    <strong>getCollectionClassName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_formatOne">
+        <div class="location">in <a href="../../../Propel/Runtime/Formatter/ObjectFormatter.html#method_formatOne"><abbr title="Propel\Runtime\Formatter\ObjectFormatter">ObjectFormatter</abbr></a> at line 59</div>
+        <code>            public            
+    <strong>formatOne</strong>(<a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a> $stmt)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a></td>
+                <td>$stmt</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isObjectFormatter">
+        <div class="location">in <a href="../../../Propel/Runtime/Formatter/ObjectFormatter.html#method_isObjectFormatter"><abbr title="Propel\Runtime\Formatter\ObjectFormatter">ObjectFormatter</abbr></a> at line 71</div>
+        <code>            public            
+    <strong>isObjectFormatter</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAllObjectsFromRow">
+        <div class="location">at line 75</div>
+        <code>            public            <abbr title="Propel\Runtime\Formatter\BaseObject">BaseObject</abbr>
+    <strong>getAllObjectsFromRow</strong>(array $row)</code>
+    </h3>
+    <div class="details">
+        <p>Hydrates a series of objects from a result row The first object to hydrate is the model of the Criteria The following objects (the ones added by way of ModelCriteria::with()) are linked to the first one</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$row</td>
+                <td>associative array indexed by column number, as returned by PDOStatement::fetch(PDO::FETCH_NUM)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Runtime\Formatter\BaseObject">BaseObject</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_init">
+        <div class="location">at line 28</div>
+        <code>            public            
+    <strong>init</strong>(<a href="../../../Propel/Runtime/ActiveQuery/ModelCriteria.html"><abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr></a> $criteria)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/ActiveQuery/ModelCriteria.html"><abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr></a></td>
+                <td>$criteria</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCollection">
+        <div class="location">at line 55</div>
+        <code>            public            
+    <strong>getCollection</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>PropelQuickBuilder | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>PropelQuickBuilder</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PropelQuickBuilder</strong></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setClassTargets">setClassTargets</a>(array $targets)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSchema">setSchema</a>($schema)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPlatform">setPlatform</a>(<a href="PropelPlatformInterface.html"><abbr title="PropelPlatformInterface">PropelPlatformInterface</abbr></a> $platform)
+                    <p>Setter for the platform property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="PropelPlatformInterface.html"><abbr title="PropelPlatformInterface">PropelPlatformInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getPlatform">getPlatform</a>()
+                    <p>Getter for the platform property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setConfig">setConfig</a>(<a href="GeneratorConfigInterface.html"><abbr title="GeneratorConfigInterface">GeneratorConfigInterface</abbr></a> $config)
+                    <p>Setter for the config property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="GeneratorConfigInterface.html"><abbr title="GeneratorConfigInterface">GeneratorConfigInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getConfig">getConfig</a>()
+                    <p>Getter for the config property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_buildSchema">buildSchema</a>($schema, $dsn = null, $user = null, $pass = null, $adapter = null)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_build">build</a>($dsn = null, $user = null, $pass = null, $adapter = null, array $classTargets = null)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getDatabase">getDatabase</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_buildSQL">buildSQL</a>(<a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a> $con)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getSQL">getSQL</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_buildClasses">buildClasses</a>(array $classTargets = null)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getClasses">getClasses</a>(array $classTargets = null)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getClassesForTable">getClassesForTable</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table, array $classTargets = null)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_debugClassesForTable">debugClassesForTable</a>($schema, $tableName)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_setClassTargets">
+        <div class="location">at line 20</div>
+        <code>            public            
+    <strong>setClassTargets</strong>(array $targets)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$targets</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSchema">
+        <div class="location">at line 25</div>
+        <code>            public            
+    <strong>setSchema</strong>($schema)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$schema</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPlatform">
+        <div class="location">at line 35</div>
+        <code>            public            
+    <strong>setPlatform</strong>(<a href="PropelPlatformInterface.html"><abbr title="PropelPlatformInterface">PropelPlatformInterface</abbr></a> $platform)</code>
+    </h3>
+    <div class="details">
+        <p>Setter for the platform property</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPlatformInterface.html"><abbr title="PropelPlatformInterface">PropelPlatformInterface</abbr></a></td>
+                <td>$platform</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPlatform">
+        <div class="location">at line 45</div>
+        <code>            public            <a href="PropelPlatformInterface.html"><abbr title="PropelPlatformInterface">PropelPlatformInterface</abbr></a>
+    <strong>getPlatform</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Getter for the platform property</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="PropelPlatformInterface.html"><abbr title="PropelPlatformInterface">PropelPlatformInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setConfig">
+        <div class="location">at line 60</div>
+        <code>            public            
+    <strong>setConfig</strong>(<a href="GeneratorConfigInterface.html"><abbr title="GeneratorConfigInterface">GeneratorConfigInterface</abbr></a> $config)</code>
+    </h3>
+    <div class="details">
+        <p>Setter for the config property</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="GeneratorConfigInterface.html"><abbr title="GeneratorConfigInterface">GeneratorConfigInterface</abbr></a></td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConfig">
+        <div class="location">at line 70</div>
+        <code>            public            <a href="GeneratorConfigInterface.html"><abbr title="GeneratorConfigInterface">GeneratorConfigInterface</abbr></a>
+    <strong>getConfig</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Getter for the config property</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="GeneratorConfigInterface.html"><abbr title="GeneratorConfigInterface">GeneratorConfigInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_buildSchema">
+        <div class="location">at line 80</div>
+        <code>        static    public            
+    <strong>buildSchema</strong>($schema, $dsn = null, $user = null, $pass = null, $adapter = null)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$schema</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$dsn</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$pass</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$adapter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_build">
+        <div class="location">at line 88</div>
+        <code>            public            
+    <strong>build</strong>($dsn = null, $user = null, $pass = null, $adapter = null, array $classTargets = null)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$dsn</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$pass</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$adapter</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$classTargets</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDatabase">
+        <div class="location">at line 114</div>
+        <code>            public            
+    <strong>getDatabase</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_buildSQL">
+        <div class="location">at line 128</div>
+        <code>            public            
+    <strong>buildSQL</strong>(<a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a> $con)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSQL">
+        <div class="location">at line 146</div>
+        <code>            public            
+    <strong>getSQL</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_buildClasses">
+        <div class="location">at line 151</div>
+        <code>            public            
+    <strong>buildClasses</strong>(array $classTargets = null)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$classTargets</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getClasses">
+        <div class="location">at line 156</div>
+        <code>            public            
+    <strong>getClasses</strong>(array $classTargets = null)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$classTargets</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getClassesForTable">
+        <div class="location">at line 166</div>
+        <code>            public            
+    <strong>getClassesForTable</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table, array $classTargets = null)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$classTargets</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_debugClassesForTable">
+        <div class="location">at line 235</div>
+        <code>        static    public            
+    <strong>debugClassesForTable</strong>($schema, $tableName)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$schema</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$tableName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

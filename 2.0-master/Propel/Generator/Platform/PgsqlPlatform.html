@@ -1,0 +1,3006 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Propel\Generator\Platform\PgsqlPlatform | Propel 2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel 2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Propel/Generator/Platform.html">Propel\Generator\Platform</a>\PgsqlPlatform</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PgsqlPlatform</strong>        extends <a href="../../../Propel/Generator/Platform/DefaultPlatform.html"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></p>
+
+            <div class="description">
+            <p>Postgresql PlatformInterface implementation.</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null)
+                    <p>Default constructor.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method___construct"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setConnection">setConnection</a>(<a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null)
+                    <p>Sets the database connection to use for this Platform class.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_setConnection"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getConnection">getConnection</a>()
+                    <p>Returns the database connection to use for this Platform class.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getConnection"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setGeneratorConfig">setGeneratorConfig</a>(<a href="../../../Propel/Generator/Config/GeneratorConfigInterface.html"><abbr title="Propel\Generator\Config\GeneratorConfigInterface">GeneratorConfigInterface</abbr></a> $config)
+                    <p>Sets the GeneratorConfigInterface to use in the parsing.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_setGeneratorConfig"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDatabaseType">getDatabaseType</a>()
+                    <p>Returns the short name of the database type that this platform represents.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getDatabaseType"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getMaxColumnNameLength">getMaxColumnNameLength</a>()
+                    <p>Returns the max column length supported by the db.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getNativeIdMethod">getNativeIdMethod</a>()
+                    <p>Returns the native IdMethod (sequence|identity)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_isNativeIdMethodAutoIncrement">isNativeIdMethodAutoIncrement</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_isNativeIdMethodAutoIncrement"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Domain.html"><abbr title="Propel\Generator\Model\Domain">Domain</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getDomainForType">getDomainForType</a>(string $mappingType)
+                    <p>Returns the database specific domain for a mapping type.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getDomainForType"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Propel\Generator\Platform\string.">string.</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getNullString">getNullString</a>($notNull)
+                    <p>Returns the NOT NULL string for the configured RDBMS.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getNullString"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Propel\Generator\Platform\string.">string.</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getAutoIncrement">getAutoIncrement</a>()
+                    <p>Returns the auto increment strategy for the configured RDBMS.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getSequenceName">getSequenceName</a>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)
+                    <p>Override to provide sequence names that conform to postgres&#039; standard when no id-method-parameter specified.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getAddTablesDDL">getAddTablesDDL</a>(<a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a> $database)
+                    <p>Returns the DDL SQL to add the tables of a database together with index and foreign keys</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getBeginDDL">getBeginDDL</a>()
+                    <p>Gets the requests to execute at the beginning of a DDL file</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getBeginDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getEndDDL">getEndDDL</a>()
+                    <p>Gets the requests to execute at the end of a DDL file</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getEndDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDropTableDDL">getDropTableDDL</a>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)
+                    <p>Builds the DDL SQL to drop a table</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getAddTableDDL">getAddTableDDL</a>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)
+                    <p>Builds the DDL SQL to add a table without index and foreign keys</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnDDL">getColumnDDL</a>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $col)
+                    <p>Builds the DDL SQL for a Column object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnDefaultValueDDL">getColumnDefaultValueDDL</a>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $col)
+                    <p>Returns the SQL for the default value of a Column object</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getColumnDefaultValueDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnListDDL">getColumnListDDL</a>($columns, $delimiter = &#039;,&#039;)
+                    <p>Creates a delimiter-delimited string list of column names, quoted using quoteIdentifier().</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getColumnListDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPrimaryKeyName">getPrimaryKeyName</a>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)
+                    <p>Returns the name of a table primary key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPrimaryKeyDDL">getPrimaryKeyDDL</a>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)
+                    <p>Returns the SQL for the primary key of a Table object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getPrimaryKeyDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDropPrimaryKeyDDL">getDropPrimaryKeyDDL</a>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)
+                    <p>Returns the DDL SQL to drop the primary key of a table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getDropPrimaryKeyDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getAddPrimaryKeyDDL">getAddPrimaryKeyDDL</a>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)
+                    <p>Returns the DDL SQL to add the primary key of a table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getAddPrimaryKeyDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getAddIndicesDDL">getAddIndicesDDL</a>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)
+                    <p>Returns the DDL SQL to add the indices of a table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getAddIndicesDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getAddIndexDDL">getAddIndexDDL</a>(<a href="../../../Propel/Generator/Model/Index.html"><abbr title="Propel\Generator\Model\Index">Index</abbr></a> $index)
+                    <p>Returns the DDL SQL to add an Index.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getAddIndexDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDropIndexDDL">getDropIndexDDL</a>(<a href="../../../Propel/Generator/Model/Index.html"><abbr title="Propel\Generator\Model\Index">Index</abbr></a> $index)
+                    <p>Overrides the implementation from DefaultPlatform</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getIndexDDL">getIndexDDL</a>(<a href="../../../Propel/Generator/Model/Index.html"><abbr title="Propel\Generator\Model\Index">Index</abbr></a> $index)
+                    <p>Builds the DDL SQL for an Index object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getIndexDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getUniqueDDL">getUniqueDDL</a>(<a href="../../../Propel/Generator/Model/Unique.html"><abbr title="Propel\Generator\Model\Unique">Unique</abbr></a> $unique)
+                    <p>Builds the DDL SQL for a Unique constraint object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getAddForeignKeysDDL">getAddForeignKeysDDL</a>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)
+                    <p>Builds the DDL SQL to add the foreign keys of a table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getAddForeignKeysDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getAddForeignKeyDDL">getAddForeignKeyDDL</a>(<a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk)
+                    <p>Builds the DDL SQL to add a foreign key.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getAddForeignKeyDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDropForeignKeyDDL">getDropForeignKeyDDL</a>(<a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk)
+                    <p>Builds the DDL SQL to drop a foreign key.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getDropForeignKeyDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getForeignKeyDDL">getForeignKeyDDL</a>(<a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk)
+                    <p>Builds the DDL SQL for a ForeignKey object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getForeignKeyDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getCommentLineDDL">getCommentLineDDL</a>($comment)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getCommentLineDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getCommentBlockDDL">getCommentBlockDDL</a>($comment)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getCommentBlockDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getModifyDatabaseDDL">getModifyDatabaseDDL</a>(<a href="../../../Propel/Generator/Model/Diff/DatabaseDiff.html"><abbr title="Propel\Generator\Model\Diff\DatabaseDiff">DatabaseDiff</abbr></a> $databaseDiff)
+                    <p>Builds the DDL SQL to modify a database based on a DatabaseDiff instance</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyDatabaseDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getRenameTableDDL">getRenameTableDDL</a>($fromTableName, $toTableName)
+                    <p>Builds the DDL SQL to rename a table</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getRenameTableDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getModifyTableDDL">getModifyTableDDL</a>(<a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a> $tableDiff)
+                    <p>Builds the DDL SQL to alter a table based on a TableDiff instance</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyTableDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getModifyTableColumnsDDL">getModifyTableColumnsDDL</a>(<a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a> $tableDiff)
+                    <p>Builds the DDL SQL to alter a table based on a TableDiff instance</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyTableColumnsDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getModifyTablePrimaryKeyDDL">getModifyTablePrimaryKeyDDL</a>(<a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a> $tableDiff)
+                    <p>Builds the DDL SQL to alter a table&#039;s primary key based on a TableDiff instance</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyTablePrimaryKeyDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getModifyTableIndicesDDL">getModifyTableIndicesDDL</a>(<a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a> $tableDiff)
+                    <p>Builds the DDL SQL to alter a table&#039;s indices based on a TableDiff instance</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyTableIndicesDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getModifyTableForeignKeysDDL">getModifyTableForeignKeysDDL</a>(<a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a> $tableDiff)
+                    <p>Builds the DDL SQL to alter a table&#039;s foreign keys based on a TableDiff instance</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyTableForeignKeysDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getRemoveColumnDDL">getRemoveColumnDDL</a>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)
+                    <p>Builds the DDL SQL to remove a column</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getRemoveColumnDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getRenameColumnDDL">getRenameColumnDDL</a>($fromColumn, $toColumn)
+                    <p>Builds the DDL SQL to rename a column</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getRenameColumnDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getModifyColumnDDL">getModifyColumnDDL</a>(<a href="../../../Propel/Generator/Model/Diff/ColumnDiff.html"><abbr title="Propel\Generator\Model\Diff\ColumnDiff">ColumnDiff</abbr></a> $columnDiff)
+                    <p>Overrides the implementation from DefaultPlatform</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getModifyColumnsDDL">getModifyColumnsDDL</a>($columnDiffs)
+                    <p>Overrides the implementation from DefaultPlatform</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getAddColumnDDL">getAddColumnDDL</a>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)
+                    <p>Builds the DDL SQL to remove a column</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getAddColumnDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getAddColumnsDDL">getAddColumnsDDL</a>($columns)
+                    <p>Overrides the implementation from DefaultPlatform</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasSize">hasSize</a>(string $sqlType)
+                    <p>Returns if the RDBMS-specific SQL type has a size attribute.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasScale">hasScale</a>(string $sqlType)
+                    <p>Returns if the RDBMS-specific SQL type has a scale attribute.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_hasScale"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_quote">quote</a>(string $text)
+                    <p>Quote and escape needed characters in the string for underlying RDBMS.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_quote"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_quoteIdentifier">quoteIdentifier</a>(string $text)
+                    <p>Quotes identifiers used in database SQL.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_quoteIdentifier"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setIdentifierQuoting">setIdentifierQuoting</a>($enabled = true)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_setIdentifierQuoting"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getIdentifierQuoting">getIdentifierQuoting</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getIdentifierQuoting"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_supportsNativeDeleteTrigger">supportsNativeDeleteTrigger</a>()
+                    <p>Whether RDBMS supports native ON DELETE triggers (e.g.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_supportsInsertNullPk">supportsInsertNullPk</a>()
+                    <p>Whether RDBMS supports INSERT null values in autoincremented primary keys</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_supportsInsertNullPk"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasStreamBlobImpl">hasStreamBlobImpl</a>()
+                    <p>Whether the underlying PDO driver for this platform returns BLOB columns as streams (instead of strings).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_supportsSchemas">supportsSchemas</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_supportsMigrations">supportsMigrations</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_supportsMigrations"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_supportsVarcharWithoutSize">supportsVarcharWithoutSize</a>()
+                    <p>Wether RDBMS supports VARCHAR without explicit size</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getBooleanString">getBooleanString</a>($b)
+                    <p>Returns the Boolean value for the RDBMS.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getPhpArrayString">getPhpArrayString</a>($stringValue)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getPhpArrayString"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getTimestampFormatter">getTimestampFormatter</a>()
+                    <p>Gets the preferred timestamp formatter for setting date/time values.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getTimestampFormatter"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getTimeFormatter">getTimeFormatter</a>()
+                    <p>Gets the preferred time formatter for setting date/time values.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getTimeFormatter"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDateFormatter">getDateFormatter</a>()
+                    <p>Gets the preferred date formatter for setting date/time values.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getDateFormatter"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnBindingPHP">getColumnBindingPHP</a>($column, $identifier, $columnValueAccessor, $tab = &#039;            &#039;)
+                    <p>Get the PHP snippet for binding a value to a column.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getColumnBindingPHP"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getIdentifierPhp">getIdentifierPhp</a>($columnValueMutator, $connectionVariableName = &#039;$con&#039;, $sequenceName = &#039;&#039;, $tab = &#039;            &#039;)
+                    <p>Get the PHP snippet for getting a Pk from the database.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_disconnectedEscapeText">disconnectedEscapeText</a>(string $text)
+                    <p>Escape the string for RDBMS.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getAddSchemasDDL">getAddSchemasDDL</a>(<a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a> $database)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getAddSchemaDDL">getAddSchemaDDL</a>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getUseSchemaDDL">getUseSchemaDDL</a>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getResetSchemaDDL">getResetSchemaDDL</a>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method___construct"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 59</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Default constructor.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a></td>
+                <td>$con</td>
+                <td>Optional database connection to use in this platform.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setConnection">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_setConnection"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 73</div>
+        <code>            public            
+    <strong>setConnection</strong>(<a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the database connection to use for this Platform class.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a></td>
+                <td>$con</td>
+                <td>Database connection to use in this platform.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConnection">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getConnection"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 83</div>
+        <code>            public            <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a>
+    <strong>getConnection</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the database connection to use for this Platform class.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a></td>
+            <td>The database connection or NULL if none has been set.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setGeneratorConfig">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_setGeneratorConfig"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 93</div>
+        <code>            public            
+    <strong>setGeneratorConfig</strong>(<a href="../../../Propel/Generator/Config/GeneratorConfigInterface.html"><abbr title="Propel\Generator\Config\GeneratorConfigInterface">GeneratorConfigInterface</abbr></a> $config)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the GeneratorConfigInterface to use in the parsing.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Config/GeneratorConfigInterface.html"><abbr title="Propel\Generator\Config\GeneratorConfigInterface">GeneratorConfigInterface</abbr></a></td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDatabaseType">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getDatabaseType"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 144</div>
+        <code>            public            string
+    <strong>getDatabaseType</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the short name of the database type that this platform represents.</p>
+        <p>For example MysqlPlatform-&gt;getDatabaseType() returns &#039;mysql&#039;.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getMaxColumnNameLength">
+        <div class="location">at line 68</div>
+        <code>            public            int
+    <strong>getMaxColumnNameLength</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the max column length supported by the db.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>The max column length</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNativeIdMethod">
+        <div class="location">at line 58</div>
+        <code>            public            string
+    <strong>getNativeIdMethod</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the native IdMethod (sequence|identity)</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The native IdMethod (PlatformInterface:IDENTITY, PlatformInterface::SEQUENCE).</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isNativeIdMethodAutoIncrement">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_isNativeIdMethodAutoIncrement"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 173</div>
+        <code>            public            
+    <strong>isNativeIdMethodAutoIncrement</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDomainForType">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getDomainForType"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 184</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Domain.html"><abbr title="Propel\Generator\Model\Domain">Domain</abbr></a>
+    <strong>getDomainForType</strong>(string $mappingType)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the database specific domain for a mapping type.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$mappingType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Domain.html"><abbr title="Propel\Generator\Model\Domain">Domain</abbr></a></td>
+            <td>The db specific domain.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNullString">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getNullString"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 198</div>
+        <code>            public            <abbr title="Propel\Generator\Platform\string.">string.</abbr>
+    <strong>getNullString</strong>($notNull)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the NOT NULL string for the configured RDBMS.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$notNull</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Generator\Platform\string.">string.</abbr></td>
+            <td>The RDBMS-specific SQL fragment for &lt;code&gt;NULL&lt;/code&gt; or &lt;code&gt;NOT NULL&lt;/code&gt;.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAutoIncrement">
+        <div class="location">at line 63</div>
+        <code>            public            <abbr title="Propel\Generator\Platform\string.">string.</abbr>
+    <strong>getAutoIncrement</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the auto increment strategy for the configured RDBMS.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Generator\Platform\string.">string.</abbr></td>
+            <td>RDBMS-specific SQL fragment for autoincrement.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSequenceName">
+        <div class="location">at line 109</div>
+        <code>            public            string
+    <strong>getSequenceName</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Override to provide sequence names that conform to postgres&#039; standard when no id-method-parameter specified.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddTablesDDL">
+        <div class="location">at line 209</div>
+        <code>            public            string
+    <strong>getAddTablesDDL</strong>(<a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a> $database)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the DDL SQL to add the tables of a database together with index and foreign keys</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a></td>
+                <td>$database</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBeginDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getBeginDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 273</div>
+        <code>            public            string
+    <strong>getBeginDDL</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the requests to execute at the beginning of a DDL file</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getEndDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getEndDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 282</div>
+        <code>            public            string
+    <strong>getEndDDL</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the requests to execute at the end of a DDL file</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDropTableDDL">
+        <div class="location">at line 300</div>
+        <code>            public            string
+    <strong>getDropTableDDL</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to drop a table</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddTableDDL">
+        <div class="location">at line 227</div>
+        <code>            public            string
+    <strong>getAddTableDDL</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to add a table without index and foreign keys</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnDDL">
+        <div class="location">at line 321</div>
+        <code>            public            string
+    <strong>getColumnDDL</strong>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $col)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL for a Column object.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a></td>
+                <td>$col</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnDefaultValueDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getColumnDefaultValueDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 370</div>
+        <code>            public            string
+    <strong>getColumnDefaultValueDDL</strong>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $col)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the SQL for the default value of a Column object</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a></td>
+                <td>$col</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnListDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getColumnListDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 413</div>
+        <code>            public            string
+    <strong>getColumnListDDL</strong>($columns, $delimiter = &#039;,&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a delimiter-delimited string list of column names, quoted using quoteIdentifier().</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$delimiter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPrimaryKeyName">
+        <div class="location">at line 314</div>
+        <code>            public            string
+    <strong>getPrimaryKeyName</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the name of a table primary key.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPrimaryKeyDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getPrimaryKeyDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 443</div>
+        <code>            public            string
+    <strong>getPrimaryKeyDDL</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the SQL for the primary key of a Table object.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDropPrimaryKeyDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getDropPrimaryKeyDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 456</div>
+        <code>            public            string
+    <strong>getDropPrimaryKeyDDL</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the DDL SQL to drop the primary key of a table.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddPrimaryKeyDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getAddPrimaryKeyDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 474</div>
+        <code>            public            string
+    <strong>getAddPrimaryKeyDDL</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the DDL SQL to add the primary key of a table.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddIndicesDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getAddIndicesDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 492</div>
+        <code>            public            string
+    <strong>getAddIndicesDDL</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the DDL SQL to add the indices of a table.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddIndexDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getAddIndexDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 508</div>
+        <code>            public            string
+    <strong>getAddIndexDDL</strong>(<a href="../../../Propel/Generator/Model/Index.html"><abbr title="Propel\Generator\Model\Index">Index</abbr></a> $index)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the DDL SQL to add an Index.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Index.html"><abbr title="Propel\Generator\Model\Index">Index</abbr></a></td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDropIndexDDL">
+        <div class="location">at line 478</div>
+        <code>            public            string
+    <strong>getDropIndexDDL</strong>(<a href="../../../Propel/Generator/Model/Index.html"><abbr title="Propel\Generator\Model\Index">Index</abbr></a> $index)</code>
+    </h3>
+    <div class="details">
+        <p>Overrides the implementation from DefaultPlatform</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Index.html"><abbr title="Propel\Generator\Model\Index">Index</abbr></a></td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>DefaultPlatform::getDropIndexDDL</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getIndexDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getIndexDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 545</div>
+        <code>            public            string
+    <strong>getIndexDDL</strong>(<a href="../../../Propel/Generator/Model/Index.html"><abbr title="Propel\Generator\Model\Index">Index</abbr></a> $index)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL for an Index object.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Index.html"><abbr title="Propel\Generator\Model\Index">Index</abbr></a></td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUniqueDDL">
+        <div class="location">at line 349</div>
+        <code>            public            string
+    <strong>getUniqueDDL</strong>(<a href="../../../Propel/Generator/Model/Unique.html"><abbr title="Propel\Generator\Model\Unique">Unique</abbr></a> $unique)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL for a Unique constraint object.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Unique.html"><abbr title="Propel\Generator\Model\Unique">Unique</abbr></a></td>
+                <td>$unique</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddForeignKeysDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getAddForeignKeysDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 571</div>
+        <code>            public            string
+    <strong>getAddForeignKeysDDL</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to add the foreign keys of a table.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddForeignKeyDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getAddForeignKeyDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 587</div>
+        <code>            public            string
+    <strong>getAddForeignKeyDDL</strong>(<a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to add a foreign key.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a></td>
+                <td>$fk</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDropForeignKeyDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getDropForeignKeyDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 608</div>
+        <code>            public            string
+    <strong>getDropForeignKeyDDL</strong>(<a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to drop a foreign key.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a></td>
+                <td>$fk</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getForeignKeyDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getForeignKeyDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 627</div>
+        <code>            public            string
+    <strong>getForeignKeyDDL</strong>(<a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL for a ForeignKey object.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a></td>
+                <td>$fk</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCommentLineDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getCommentLineDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 653</div>
+        <code>            public            
+    <strong>getCommentLineDDL</strong>($comment)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$comment</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCommentBlockDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getCommentBlockDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 661</div>
+        <code>            public            
+    <strong>getCommentBlockDDL</strong>($comment)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$comment</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getModifyDatabaseDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyDatabaseDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 678</div>
+        <code>            public            string
+    <strong>getModifyDatabaseDDL</strong>(<a href="../../../Propel/Generator/Model/Diff/DatabaseDiff.html"><abbr title="Propel\Generator\Model\Diff\DatabaseDiff">DatabaseDiff</abbr></a> $databaseDiff)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to modify a database based on a DatabaseDiff instance</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Diff/DatabaseDiff.html"><abbr title="Propel\Generator\Model\Diff\DatabaseDiff">DatabaseDiff</abbr></a></td>
+                <td>$databaseDiff</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRenameTableDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getRenameTableDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 712</div>
+        <code>            public            string
+    <strong>getRenameTableDDL</strong>($fromTableName, $toTableName)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to rename a table</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$fromTableName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$toTableName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getModifyTableDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyTableDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 730</div>
+        <code>            public            string
+    <strong>getModifyTableDDL</strong>(<a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a> $tableDiff)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to alter a table based on a TableDiff instance</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a></td>
+                <td>$tableDiff</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getModifyTableColumnsDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyTableColumnsDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 795</div>
+        <code>            public            string
+    <strong>getModifyTableColumnsDDL</strong>(<a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a> $tableDiff)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to alter a table based on a TableDiff instance</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a></td>
+                <td>$tableDiff</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getModifyTablePrimaryKeyDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyTablePrimaryKeyDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 824</div>
+        <code>            public            string
+    <strong>getModifyTablePrimaryKeyDDL</strong>(<a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a> $tableDiff)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to alter a table&#039;s primary key based on a TableDiff instance</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a></td>
+                <td>$tableDiff</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getModifyTableIndicesDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyTableIndicesDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 842</div>
+        <code>            public            string
+    <strong>getModifyTableIndicesDDL</strong>(<a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a> $tableDiff)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to alter a table&#039;s indices based on a TableDiff instance</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a></td>
+                <td>$tableDiff</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getModifyTableForeignKeysDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyTableForeignKeysDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 869</div>
+        <code>            public            string
+    <strong>getModifyTableForeignKeysDDL</strong>(<a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a> $tableDiff)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to alter a table&#039;s foreign keys based on a TableDiff instance</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a></td>
+                <td>$tableDiff</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRemoveColumnDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getRemoveColumnDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 895</div>
+        <code>            public            string
+    <strong>getRemoveColumnDDL</strong>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to remove a column</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRenameColumnDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getRenameColumnDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 912</div>
+        <code>            public            string
+    <strong>getRenameColumnDDL</strong>($fromColumn, $toColumn)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to rename a column</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$fromColumn</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$toColumn</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getModifyColumnDDL">
+        <div class="location">at line 387</div>
+        <code>            public            string
+    <strong>getModifyColumnDDL</strong>(<a href="../../../Propel/Generator/Model/Diff/ColumnDiff.html"><abbr title="Propel\Generator\Model\Diff\ColumnDiff">ColumnDiff</abbr></a> $columnDiff)</code>
+    </h3>
+    <div class="details">
+        <p>Overrides the implementation from DefaultPlatform</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Diff/ColumnDiff.html"><abbr title="Propel\Generator\Model\Diff\ColumnDiff">ColumnDiff</abbr></a></td>
+                <td>$columnDiff</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>DefaultPlatform::getModifyColumnDDL</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getModifyColumnsDDL">
+        <div class="location">at line 444</div>
+        <code>            public            string
+    <strong>getModifyColumnsDDL</strong>($columnDiffs)</code>
+    </h3>
+    <div class="details">
+        <p>Overrides the implementation from DefaultPlatform</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$columnDiffs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>DefaultPlatform::getModifyColumnsDDL</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getAddColumnDDL">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getAddColumnDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 981</div>
+        <code>            public            string
+    <strong>getAddColumnDDL</strong>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to remove a column</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddColumnsDDL">
+        <div class="location">at line 461</div>
+        <code>            public            string
+    <strong>getAddColumnsDDL</strong>($columns)</code>
+    </h3>
+    <div class="details">
+        <p>Overrides the implementation from DefaultPlatform</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>DefaultPlatform::getAddColumnsDLL</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_hasSize">
+        <div class="location">at line 365</div>
+        <code>            public            boolean
+    <strong>hasSize</strong>(string $sqlType)</code>
+    </h3>
+    <div class="details">
+        <p>Returns if the RDBMS-specific SQL type has a size attribute.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$sqlType</td>
+                <td>the SQL type</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if the type has a size attribute</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasScale">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_hasScale"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1042</div>
+        <code>            public            boolean
+    <strong>hasScale</strong>(string $sqlType)</code>
+    </h3>
+    <div class="details">
+        <p>Returns if the RDBMS-specific SQL type has a scale attribute.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$sqlType</td>
+                <td>the SQL type</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if the type has a scale attribute</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_quote">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_quote"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1052</div>
+        <code>            public            string
+    <strong>quote</strong>(string $text)</code>
+    </h3>
+    <div class="details">
+        <p>Quote and escape needed characters in the string for underlying RDBMS.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_quoteIdentifier">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_quoteIdentifier"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1080</div>
+        <code>            public            string
+    <strong>quoteIdentifier</strong>(string $text)</code>
+    </h3>
+    <div class="details">
+        <p>Quotes identifiers used in database SQL.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>Quoted identifier.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setIdentifierQuoting">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_setIdentifierQuoting"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1085</div>
+        <code>            public            
+    <strong>setIdentifierQuoting</strong>($enabled = true)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$enabled</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getIdentifierQuoting">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getIdentifierQuoting"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1090</div>
+        <code>            public            
+    <strong>getIdentifierQuoting</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_supportsNativeDeleteTrigger">
+        <div class="location">at line 96</div>
+        <code>            public            boolean
+    <strong>supportsNativeDeleteTrigger</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Whether RDBMS supports native ON DELETE triggers (e.g.</p>
+        <p>ON DELETE CASCADE).</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_supportsInsertNullPk">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_supportsInsertNullPk"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1108</div>
+        <code>            public            boolean
+    <strong>supportsInsertNullPk</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Whether RDBMS supports INSERT null values in autoincremented primary keys</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasStreamBlobImpl">
+        <div class="location">at line 370</div>
+        <code>            public            boolean
+    <strong>hasStreamBlobImpl</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Whether the underlying PDO driver for this platform returns BLOB columns as streams (instead of strings).</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_supportsSchemas">
+        <div class="location">at line 360</div>
+        <code>            public            boolean
+    <strong>supportsSchemas</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>Platform::supportsSchemas()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_supportsMigrations">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_supportsMigrations"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1134</div>
+        <code>            public            boolean
+    <strong>supportsMigrations</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>Platform::supportsMigrations()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_supportsVarcharWithoutSize">
+        <div class="location">at line 375</div>
+        <code>            public            boolean
+    <strong>supportsVarcharWithoutSize</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Wether RDBMS supports VARCHAR without explicit size</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBooleanString">
+        <div class="location">at line 87</div>
+        <code>            public            mixed
+    <strong>getBooleanString</strong>($b)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the Boolean value for the RDBMS.</p>
+        <p>This value should match the Boolean value that is set<br />
+ when using Propel&#039;s PreparedStatement::setBoolean().<br />
+<br />
+ This function is used to set default column values when building<br />
+ SQL.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$b</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPhpArrayString">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getPhpArrayString"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1174</div>
+        <code>            public            
+    <strong>getPhpArrayString</strong>($stringValue)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$stringValue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTimestampFormatter">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getTimestampFormatter"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1198</div>
+        <code>            public            string
+    <strong>getTimestampFormatter</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the preferred timestamp formatter for setting date/time values.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTimeFormatter">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getTimeFormatter"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1207</div>
+        <code>            public            string
+    <strong>getTimeFormatter</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the preferred time formatter for setting date/time values.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDateFormatter">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getDateFormatter"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1216</div>
+        <code>            public            string
+    <strong>getDateFormatter</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the preferred date formatter for setting date/time values.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnBindingPHP">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getColumnBindingPHP"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1226</div>
+        <code>            public            
+    <strong>getColumnBindingPHP</strong>($column, $identifier, $columnValueAccessor, $tab = &#039;            &#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Get the PHP snippet for binding a value to a column.</p>
+        <p>Warning: duplicates logic from AdapterInterface::bindValue().<br />
+ Any code modification here must be ported there.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$identifier</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$columnValueAccessor</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$tab</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getIdentifierPhp">
+        <div class="location">at line 499</div>
+        <code>            public            
+    <strong>getIdentifierPhp</strong>($columnValueMutator, $connectionVariableName = &#039;$con&#039;, $sequenceName = &#039;&#039;, $tab = &#039;            &#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Get the PHP snippet for getting a Pk from the database.</p>
+        <p>Warning: duplicates logic from PgsqlAdapter::getId().<br />
+ Any code modification here must be ported there.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$columnValueMutator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$connectionVariableName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$sequenceName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$tab</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_disconnectedEscapeText">
+        <div class="location">at line 78</div>
+        <code>            public            string
+    <strong>disconnectedEscapeText</strong>(string $text)</code>
+    </h3>
+    <div class="details">
+        <p>Escape the string for RDBMS.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddSchemasDDL">
+        <div class="location">at line 160</div>
+        <code>            public            
+    <strong>getAddSchemasDDL</strong>(<a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a> $database)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a></td>
+                <td>$database</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddSchemaDDL">
+        <div class="location">at line 175</div>
+        <code>            public            
+    <strong>getAddSchemaDDL</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUseSchemaDDL">
+        <div class="location">at line 187</div>
+        <code>            public            
+    <strong>getUseSchemaDDL</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getResetSchemaDDL">
+        <div class="location">at line 199</div>
+        <code>            public            
+    <strong>getResetSchemaDDL</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

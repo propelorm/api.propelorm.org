@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Propel\Generator\Behavior\Validate\ValidateBehavior | Propel 2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel 2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../Propel/Generator/Behavior/Validate.html">Propel\Generator\Behavior\Validate</a>\ValidateBehavior</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>ValidateBehavior</strong>        extends <a href="../../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></p>
+
+            <div class="description">
+            <p>Validate a model object using Symfony2 Validator component</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setName">setName</a>(string $name)
+                    <p>Sets the name of the Behavior</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_setName"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getName">getName</a>()
+                    <p>Returns the name of the Behavior</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_getName"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setTable">setTable</a>(<a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)
+                    <p>Sets the table this behavior is applied to</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_setTable"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getTable">getTable</a>()
+                    <p>Returns the table this behavior is applied to</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_getTable"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDatabase">setDatabase</a>(<a href="../../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a> $database)
+                    <p>Sets the database this behavior is applied to</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_setDatabase"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getDatabase">getDatabase</a>()
+                    <p>Returns the table this behavior is applied to if behavior is applied to a database element.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_getDatabase"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addParameter">addParameter</a>(array $parameter)
+                    <p>Adds a single parameter.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_addParameter"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setParameters">setParameters</a>(array $parameters)
+                    <p>Overrides the behavior parameters.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_setParameters"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getParameters">getParameters</a>()
+                    <p>Returns the associative array of parameters.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_getParameters"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getParameter">getParameter</a>(string $name)
+                    <p>Returns a single parameter by its name.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_getParameter"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setTableModificationOrder">setTableModificationOrder</a>(integer $tableModificationOrder)
+                    <p>Defines when this behavior must execute its modifyTable() method relative to other behaviors.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_setTableModificationOrder"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_getTableModificationOrder">getTableModificationOrder</a>()
+                    <p>Returns when this behavior must execute its modifyTable() method relative to other behaviors.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_getTableModificationOrder"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_modifyDatabase">modifyDatabase</a>()
+                    <p>This method is automatically called on database behaviors when the database model is finished.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_modifyDatabase"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_modifyTable">modifyTable</a>()
+                    <p>This method is automatically called on table behaviors when the database model is finished.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_modifyTable"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setTableModified">setTableModified</a>(boolean $modified)
+                    <p>Sets whether or not the table has been modified.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_setTableModified"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isTableModified">isTableModified</a>()
+                    <p>Returns whether or not the table has been modified.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_isTableModified"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_renderTemplate">renderTemplate</a>(string $filename, array $vars = array(), string $templateDir = &#039;/templates/&#039;)
+                    <p>Use Propel simple templating system to render a PHP file using variables passed as arguments.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_renderTemplate"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnForParameter">getColumnForParameter</a>(string $name)
+                    <p>Returns a column object using a name stored in the behavior parameters.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_getColumnForParameter"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_appendXml">appendXml</a>(<abbr title="Propel\Generator\Model\DOMNode">DOMNode</abbr> $node)
+                    <p>Appends DOM elements to represent this object in XML.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_appendXml"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getTableModifier">getTableModifier</a>()
+                    <p>Returns the table modifier object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_getTableModifier"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getObjectBuilderModifier">getObjectBuilderModifier</a>()
+                    <p>Returns the object builder modifier object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_getObjectBuilderModifier"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getQueryBuilderModifier">getQueryBuilderModifier</a>()
+                    <p>Returns the query builder modifier object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_getQueryBuilderModifier"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getPeerBuilderModifier">getPeerBuilderModifier</a>()
+                    <p>Returns the peer builder modifier object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_getPeerBuilderModifier"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getTableMapBuilderModifier">getTableMapBuilderModifier</a>()
+                    <p>Returns the table map builder modifier object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_getTableMapBuilderModifier"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasAdditionalBuilders">hasAdditionalBuilders</a>()
+                    <p>Returns whether or not this behavior has additional builders.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_hasAdditionalBuilders"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAdditionalBuilders">getAdditionalBuilders</a>()
+                    <p>Returns the list of additional builder objects.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_getAdditionalBuilders"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_objectMethods">objectMethods</a>($builder)
+                    <p>Add behavior methods to model class</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_objectAttributes">objectAttributes</a>()
+                    <p>Add behavior attributes to model class</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getParametersFromColumnName">getParametersFromColumnName</a>(string $columnName = null)
+                    <p>Returns the parameters associated with a given column.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_removeParametersFromColumnName">removeParametersFromColumnName</a>(string $columnName = null)
+                    <p>Remove parameters associated with given column.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addRuleOnPk">addRuleOnPk</a>()
+                    <p>Add a rule based on primary key type, if there aren&#039;t other parameters.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_mergeParameters">mergeParameters</a>(array $params = null)
+                    <p>Merge $paramArray array into parameters array.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_setName">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_setName"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 37</div>
+        <code>            public            
+    <strong>setName</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the name of the Behavior</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>the name of the behavior</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getName">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_getName"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 47</div>
+        <code>            public            string
+    <strong>getName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the name of the Behavior</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setTable">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_setTable"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 57</div>
+        <code>            public            
+    <strong>setTable</strong>(<a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the table this behavior is applied to</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTable">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_getTable"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 67</div>
+        <code>            public            <a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a>
+    <strong>getTable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the table this behavior is applied to</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDatabase">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_setDatabase"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 77</div>
+        <code>            public            
+    <strong>setDatabase</strong>(<a href="../../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a> $database)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the database this behavior is applied to</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a></td>
+                <td>$database</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDatabase">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_getDatabase"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 88</div>
+        <code>            public            <a href="../../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a>
+    <strong>getDatabase</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the table this behavior is applied to if behavior is applied to a database element.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addParameter">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_addParameter"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 101</div>
+        <code>            public            
+    <strong>addParameter</strong>(array $parameter)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a single parameter.</p>
+        <p>Expects an associative array looking like<br />
+ array(&#039;name&#039; =&gt; &#039;foo&#039;, &#039;value&#039; =&gt; bar)</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$parameter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setParameters">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_setParameters"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 114</div>
+        <code>            public            
+    <strong>setParameters</strong>(array $parameters)</code>
+    </h3>
+    <div class="details">
+        <p>Overrides the behavior parameters.</p>
+        <p>Expects an associative array looking like array(&#039;foo&#039; =&gt; &#039;bar&#039;).</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getParameters">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_getParameters"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 124</div>
+        <code>            public            array
+    <strong>getParameters</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the associative array of parameters.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getParameter">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_getParameter"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 135</div>
+        <code>            public            array
+    <strong>getParameter</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a single parameter by its name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setTableModificationOrder">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_setTableModificationOrder"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 149</div>
+        <code>            public            
+    <strong>setTableModificationOrder</strong>(integer $tableModificationOrder)</code>
+    </h3>
+    <div class="details">
+        <p>Defines when this behavior must execute its modifyTable() method relative to other behaviors.</p>
+        <p>The bigger the value is, the later the<br />
+ behavior is executed.<br />
+<br />
+ Default is 50.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$tableModificationOrder</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTableModificationOrder">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_getTableModificationOrder"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 163</div>
+        <code>            public            integer
+    <strong>getTableModificationOrder</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns when this behavior must execute its modifyTable() method relative to other behaviors.</p>
+        <p>The bigger the value is, the later the behavior is<br />
+ executed.<br />
+<br />
+ Default is 50.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_modifyDatabase">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_modifyDatabase"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 175</div>
+        <code>            public            
+    <strong>modifyDatabase</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>This method is automatically called on database behaviors when the database model is finished.</p>
+        <p>Propagates the behavior to the tables of the database and override this<br />
+ method to have a database behavior do something special.</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_modifyTable">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_modifyTable"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 192</div>
+        <code>            public            
+    <strong>modifyTable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>This method is automatically called on table behaviors when the database model is finished.</p>
+        <p>It also override it to add columns to the current<br />
+ table.</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setTableModified">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_setTableModified"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 202</div>
+        <code>            public            
+    <strong>setTableModified</strong>(boolean $modified)</code>
+    </h3>
+    <div class="details">
+        <p>Sets whether or not the table has been modified.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$modified</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isTableModified">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_isTableModified"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 212</div>
+        <code>            public            boolean
+    <strong>isTableModified</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not the table has been modified.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_renderTemplate">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_renderTemplate"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 227</div>
+        <code>            public            string
+    <strong>renderTemplate</strong>(string $filename, array $vars = array(), string $templateDir = &#039;/templates/&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Use Propel simple templating system to render a PHP file using variables passed as arguments.</p>
+        <p>The template file name is relative to the behavior&#039;s<br />
+ directory name.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$vars</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$templateDir</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnForParameter">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_getColumnForParameter"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 270</div>
+        <code>            public            <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>
+    <strong>getColumnForParameter</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a column object using a name stored in the behavior parameters.</p>
+        <p>Useful for table behaviors.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_appendXml">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_appendXml"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 280</div>
+        <code>            public            
+    <strong>appendXml</strong>(<abbr title="Propel\Generator\Model\DOMNode">DOMNode</abbr> $node)</code>
+    </h3>
+    <div class="details">
+        <p>Appends DOM elements to represent this object in XML.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Generator\Model\DOMNode">DOMNode</abbr></td>
+                <td>$node</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTableModifier">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_getTableModifier"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 301</div>
+        <code>            public            <a href="../../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
+    <strong>getTableModifier</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the table modifier object.</p>
+        <p>The current object is returned by default.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getObjectBuilderModifier">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_getObjectBuilderModifier"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 313</div>
+        <code>            public            <a href="../../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
+    <strong>getObjectBuilderModifier</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the object builder modifier object.</p>
+        <p>The current object is returned by default.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getQueryBuilderModifier">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_getQueryBuilderModifier"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 325</div>
+        <code>            public            <a href="../../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
+    <strong>getQueryBuilderModifier</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the query builder modifier object.</p>
+        <p>The current object is returned by default.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPeerBuilderModifier">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_getPeerBuilderModifier"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 337</div>
+        <code>            public            <a href="../../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
+    <strong>getPeerBuilderModifier</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the peer builder modifier object.</p>
+        <p>The current object is returned by default.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTableMapBuilderModifier">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_getTableMapBuilderModifier"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 349</div>
+        <code>            public            <a href="../../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
+    <strong>getTableMapBuilderModifier</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the table map builder modifier object.</p>
+        <p>The current object is returned by default.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasAdditionalBuilders">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_hasAdditionalBuilders"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 359</div>
+        <code>            public            boolean
+    <strong>hasAdditionalBuilders</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not this behavior has additional builders.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAdditionalBuilders">
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_getAdditionalBuilders"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 369</div>
+        <code>            public            array
+    <strong>getAdditionalBuilders</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the list of additional builder objects.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_objectMethods">
+        <div class="location">at line 35</div>
+        <code>            public            string
+    <strong>objectMethods</strong>($builder)</code>
+    </h3>
+    <div class="details">
+        <p>Add behavior methods to model class</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$builder</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_objectAttributes">
+        <div class="location">at line 66</div>
+        <code>            public            string
+    <strong>objectAttributes</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Add behavior attributes to model class</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The code to be added to model class</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getParametersFromColumnName">
+        <div class="location">at line 78</div>
+        <code>            public            array
+    <strong>getParametersFromColumnName</strong>(string $columnName = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the parameters associated with a given column.</p>
+        <p>Useful for i18n behavior</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$columnName</td>
+                <td>The column name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>The array of parameters associated to given column</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeParametersFromColumnName">
+        <div class="location">at line 99</div>
+        <code>            public            
+    <strong>removeParametersFromColumnName</strong>(string $columnName = null)</code>
+    </h3>
+    <div class="details">
+        <p>Remove parameters associated with given column.</p>
+        <p>Useful for i18n behavior</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$columnName</td>
+                <td>The column name</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addRuleOnPk">
+        <div class="location">at line 120</div>
+        <code>            public            
+    <strong>addRuleOnPk</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Add a rule based on primary key type, if there aren&#039;t other parameters.</p>
+        <p>Useful when modify table (i18n behavior).<br />
+ If all the rules have been removed, the behavior can&#039;t perform validation on related tables.<br />
+ This method introduce a rule to avoid this.</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_mergeParameters">
+        <div class="location">at line 140</div>
+        <code>            public            
+    <strong>mergeParameters</strong>(array $params = null)</code>
+    </h3>
+    <div class="details">
+        <p>Merge $paramArray array into parameters array.</p>
+        <p>This method avoid that there are rules with the same name, when adding parameters programmatically.<br />
+ Useful for Concrete Inheritance behavior.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

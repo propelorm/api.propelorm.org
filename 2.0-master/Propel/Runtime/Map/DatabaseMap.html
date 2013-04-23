@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Propel\Runtime\Map\DatabaseMap | Propel 2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel 2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Propel/Runtime/Map.html">Propel\Runtime\Map</a>\DatabaseMap</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>DatabaseMap</strong></p>
+
+            <div class="description">
+            <p>DatabaseMap is used to model a database.</p>
+            <p>GENERAL NOTE<br />
+ ------------<br />
+ The propel.map classes are abstract building-block classes for modeling<br />
+ the database at runtime.  These classes are similar (a lite version) to the<br />
+ propel.engine.database.model classes, which are build-time modeling classes.<br />
+ These classes in themselves do not do any database metadata lookups.</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(string $name)
+                    <p>Constructor.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getName">getName</a>()
+                    <p>Get the name of this database.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addTable">addTable</a>(string $tableName)
+                    <p>Add a new table to the database by name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addTableObject">addTableObject</a>(<a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a> $table)
+                    <p>Add a new table object to the database.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addTableFromMapClass">addTableFromMapClass</a>(string $tableMapClass)
+                    <p>Add a new table to the database, using the tablemap class name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasTable">hasTable</a>(string $name)
+                    <p>Does this database contain this specific table?</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getTable">getTable</a>(string $name)
+                    <p>Get a TableMap for the table by name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getTables">getTables</a>()
+                    <p>Get a TableMap[] of all of the tables in the database.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getColumn">getColumn</a>(<abbr title="Propel\Runtime\Map\$qualifiedColumnName">$qualifiedColumnName</abbr> $qualifiedColumnName)
+                    <p>Get a ColumnMap for the column by name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getTableByPhpName">getTableByPhpName</a>($phpName)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/Adapter/AdapterInterface.html"><abbr title="Propel\Runtime\Adapter\AdapterInterface">AdapterInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getAbstractAdapter">getAbstractAdapter</a>()
+                    <p>Convenience method to get the AdapterInterface registered with Propel for this database.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 58</div>
+        <code>            public            
+    <strong>__construct</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Constructor.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the database.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getName">
+        <div class="location">at line 68</div>
+        <code>            public            string
+    <strong>getName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the name of this database.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The name of the database.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addTable">
+        <div class="location">at line 79</div>
+        <code>            public            <a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a>
+    <strong>addTable</strong>(string $tableName)</code>
+    </h3>
+    <div class="details">
+        <p>Add a new table to the database by name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$tableName</td>
+                <td>The name of the table.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a></td>
+            <td>The newly created TableMap.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addTableObject">
+        <div class="location">at line 91</div>
+        <code>            public            
+    <strong>addTableObject</strong>(<a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Add a new table object to the database.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a></td>
+                <td>$table</td>
+                <td>The table to add</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addTableFromMapClass">
+        <div class="location">at line 104</div>
+        <code>            public            <a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a>
+    <strong>addTableFromMapClass</strong>(string $tableMapClass)</code>
+    </h3>
+    <div class="details">
+        <p>Add a new table to the database, using the tablemap class name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$tableMapClass</td>
+                <td>The name of the table map to add</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a></td>
+            <td>The TableMap object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasTable">
+        <div class="location">at line 122</div>
+        <code>            public            boolean
+    <strong>hasTable</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Does this database contain this specific table?</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The String representation of the table.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if the database contains the table.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTable">
+        <div class="location">at line 138</div>
+        <code>            public            <a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a>
+    <strong>getTable</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Get a TableMap for the table by name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the table.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a></td>
+            <td>A TableMap</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Map/Exception/TableNotFoundException.html"><abbr title="Propel\Runtime\Map\Exception\TableNotFoundException">TableNotFoundException</abbr></a></td>
+                <td>If the table is undefined</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTables">
+        <div class="location">at line 152</div>
+        <code>            public            <a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a>[]
+    <strong>getTables</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a TableMap[] of all of the tables in the database.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumn">
+        <div class="location">at line 165</div>
+        <code>            public            <a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>
+    <strong>getColumn</strong>(<abbr title="Propel\Runtime\Map\$qualifiedColumnName">$qualifiedColumnName</abbr> $qualifiedColumnName)</code>
+    </h3>
+    <div class="details">
+        <p>Get a ColumnMap for the column by name.</p>
+        <p>Name must be fully qualified, e.g. book.AUTHOR_ID</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Map\$qualifiedColumnName">$qualifiedColumnName</abbr></td>
+                <td>$qualifiedColumnName</td>
+                <td>Name of the column.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a></td>
+            <td>A TableMap</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Map\TableNotFoundException">TableNotFoundException</abbr></td>
+                <td>If the table is undefined, or if the table is undefined</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTableByPhpName">
+        <div class="location">at line 172</div>
+        <code>            public            
+    <strong>getTableByPhpName</strong>($phpName)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$phpName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAbstractAdapter">
+        <div class="location">at line 207</div>
+        <code>            public            <a href="../../../Propel/Runtime/Adapter/AdapterInterface.html"><abbr title="Propel\Runtime\Adapter\AdapterInterface">AdapterInterface</abbr></a>
+    <strong>getAbstractAdapter</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Convenience method to get the AdapterInterface registered with Propel for this database.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/Adapter/AdapterInterface.html"><abbr title="Propel\Runtime\Adapter\AdapterInterface">AdapterInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>Propel::getServiceContainer()-&gt;getAdapter(string)</td>
+                <td>.</td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

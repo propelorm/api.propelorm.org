@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>PropelOnDemandFormatter | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>PropelOnDemandFormatter</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PropelOnDemandFormatter</strong>        extends <a href="PropelObjectFormatter.html"><abbr title="PropelObjectFormatter">PropelObjectFormatter</abbr></a></p>
+
+            <div class="description">
+            <p>Object formatter for Propel query format() returns a PropelOnDemandCollection that hydrates objects as the use iterates on the collection This formatter consumes less memory than the PropelObjectFormatter, but doesn&#039;t use Instance Pool</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_format">format</a>(<a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a> $stmt)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_formatOne">formatOne</a>(<a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a> $stmt)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="PropelObjectFormatter.html#method_formatOne"><abbr title="PropelObjectFormatter">PropelObjectFormatter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_isObjectFormatter">isObjectFormatter</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="PropelObjectFormatter.html#method_isObjectFormatter"><abbr title="PropelObjectFormatter">PropelObjectFormatter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="BaseObject.html"><abbr title="BaseObject">BaseObject</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getAllObjectsFromRow">getAllObjectsFromRow</a>(array $row)
+                    <p>Hydrates a series of objects from a result row The first object to hydrate is the model of the Criteria The following objects (the ones added by way of ModelCriteria::with()) are linked to the first one</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_init">init</a>(<a href="ModelCriteria.html"><abbr title="ModelCriteria">ModelCriteria</abbr></a> $criteria)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_format">
+        <div class="location">at line 34</div>
+        <code>            public            
+    <strong>format</strong>(<a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a> $stmt)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a></td>
+                <td>$stmt</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_formatOne">
+        <div class="location">in <a href="PropelObjectFormatter.html#method_formatOne"><abbr title="PropelObjectFormatter">PropelObjectFormatter</abbr></a> at line 70</div>
+        <code>            public            
+    <strong>formatOne</strong>(<a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a> $stmt)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a></td>
+                <td>$stmt</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isObjectFormatter">
+        <div class="location">in <a href="PropelObjectFormatter.html#method_isObjectFormatter"><abbr title="PropelObjectFormatter">PropelObjectFormatter</abbr></a> at line 85</div>
+        <code>            public            
+    <strong>isObjectFormatter</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAllObjectsFromRow">
+        <div class="location">at line 58</div>
+        <code>            public            <a href="BaseObject.html"><abbr title="BaseObject">BaseObject</abbr></a>
+    <strong>getAllObjectsFromRow</strong>(array $row)</code>
+    </h3>
+    <div class="details">
+        <p>Hydrates a series of objects from a result row The first object to hydrate is the model of the Criteria The following objects (the ones added by way of ModelCriteria::with()) are linked to the first one</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$row</td>
+                <td>associative array indexed by column number, as returned by PDOStatement::fetch(PDO::FETCH_NUM)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="BaseObject.html"><abbr title="BaseObject">BaseObject</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_init">
+        <div class="location">at line 26</div>
+        <code>            public            
+    <strong>init</strong>(<a href="ModelCriteria.html"><abbr title="ModelCriteria">ModelCriteria</abbr></a> $criteria)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="ModelCriteria.html"><abbr title="ModelCriteria">ModelCriteria</abbr></a></td>
+                <td>$criteria</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

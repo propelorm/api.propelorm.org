@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>PropelJSONParser | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>PropelJSONParser</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PropelJSONParser</strong>        extends <a href="PropelParser.html"><abbr title="PropelParser">PropelParser</abbr></a></p>
+
+            <div class="description">
+            <p>JSON parser.</p>
+            <p>Converts data between associative array and JSON formats</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_fromArray">fromArray</a>(array $array)
+                    <p>Converts data from an associative array to JSON.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_toArray">toArray</a>(string $data)
+                    <p>Converts data from JSON to an associative array.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_listFromArray">listFromArray</a>($data)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="PropelParser.html#method_listFromArray"><abbr title="PropelParser">PropelParser</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_listToArray">listToArray</a>($data)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="PropelParser.html#method_listToArray"><abbr title="PropelParser">PropelParser</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_load">load</a>(string $path)
+                    <p>Loads data from a file.</p>
+                </td>
+                <td><small>from&nbsp;<a href="PropelParser.html#method_load"><abbr title="PropelParser">PropelParser</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int|null
+                </td>
+                <td class="last">
+                    <a href="#method_dump">dump</a>(string $data, string $path = null)
+                    <p>Dumps data to a file, or to STDOUT if no filename is given</p>
+                </td>
+                <td><small>from&nbsp;<a href="PropelParser.html#method_dump"><abbr title="PropelParser">PropelParser</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<a href="PropelParser.html"><abbr title="PropelParser">PropelParser</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getParser">getParser</a>(string $type = &#039;XML&#039;)
+                    <p>Factory for getting an instance of a subclass of PropelParser</p>
+                </td>
+                <td><small>from&nbsp;<a href="PropelParser.html#method_getParser"><abbr title="PropelParser">PropelParser</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_toJSON">toJSON</a>(array $array)
+                    <p>Alias for PropelJSONParser::fromArray()</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_fromJSON">fromJSON</a>(string $data)
+                    <p>Alias for PropelJSONParser::toArray()</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_fromArray">
+        <div class="location">at line 26</div>
+        <code>            public            string
+    <strong>fromArray</strong>(array $array)</code>
+    </h3>
+    <div class="details">
+        <p>Converts data from an associative array to JSON.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$array</td>
+                <td>Source data to convert</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>Converted data, as a JSON string</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toArray">
+        <div class="location">at line 48</div>
+        <code>            public            array
+    <strong>toArray</strong>(string $data)</code>
+    </h3>
+    <div class="details">
+        <p>Converts data from JSON to an associative array.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td>Source data to convert, as a JSON string</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>Converted data</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_listFromArray">
+        <div class="location">in <a href="PropelParser.html#method_listFromArray"><abbr title="PropelParser">PropelParser</abbr></a> at line 40</div>
+        <code>            public            
+    <strong>listFromArray</strong>($data)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_listToArray">
+        <div class="location">in <a href="PropelParser.html#method_listToArray"><abbr title="PropelParser">PropelParser</abbr></a> at line 45</div>
+        <code>            public            
+    <strong>listToArray</strong>($data)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_load">
+        <div class="location">in <a href="PropelParser.html#method_load"><abbr title="PropelParser">PropelParser</abbr></a> at line 59</div>
+        <code>            public            string
+    <strong>load</strong>(string $path)</code>
+    </h3>
+    <div class="details">
+        <p>Loads data from a file.</p>
+        <p>Executes PHP code blocks in the file.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>Path to the file to load</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The file content processed by PHP</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_dump">
+        <div class="location">in <a href="PropelParser.html#method_dump"><abbr title="PropelParser">PropelParser</abbr></a> at line 79</div>
+        <code>            public            int|null
+    <strong>dump</strong>(string $data, string $path = null)</code>
+    </h3>
+    <div class="details">
+        <p>Dumps data to a file, or to STDOUT if no filename is given</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td>The file content</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>Path of the file to create</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int|null</td>
+            <td>If path given, the written bytes, null otherwise.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getParser">
+        <div class="location">in <a href="PropelParser.html#method_getParser"><abbr title="PropelParser">PropelParser</abbr></a> at line 97</div>
+        <code>        static    public            <a href="PropelParser.html"><abbr title="PropelParser">PropelParser</abbr></a>
+    <strong>getParser</strong>(string $type = &#039;XML&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Factory for getting an instance of a subclass of PropelParser</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>Parser type, amon &#039;XML&#039;, &#039;YAML&#039;, &#039;JSON&#039;, and &#039;CSV&#039;</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="PropelParser.html"><abbr title="PropelParser">PropelParser</abbr></a></td>
+            <td>A PropelParser subclass instance</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toJSON">
+        <div class="location">at line 37</div>
+        <code>            public            string
+    <strong>toJSON</strong>(array $array)</code>
+    </h3>
+    <div class="details">
+        <p>Alias for PropelJSONParser::fromArray()</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$array</td>
+                <td>Source data to convert</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>Converted data, as a JSON string</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fromJSON">
+        <div class="location">at line 59</div>
+        <code>            public            array
+    <strong>fromJSON</strong>(string $data)</code>
+    </h3>
+    <div class="details">
+        <p>Alias for PropelJSONParser::toArray()</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td>Source data to convert, as a JSON string</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>Converted data</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

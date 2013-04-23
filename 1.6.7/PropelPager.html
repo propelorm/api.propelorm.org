@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>PropelPager | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>PropelPager</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PropelPager</strong>        implements
+        <a href="http://php.net/Countable"><abbr title="Countable">Countable</abbr></a>, <a href="http://php.net/Iterator"><abbr title="Iterator">Iterator</abbr></a></p>
+
+            <div class="description">
+            <p>PropelPager</p>
+            <p>Example Usage:<br />
+<br />
+  require_once &#039;propel/util/PropelPager.php&#039;;<br />
+  require_once &#039;PEACH/Propel/Poem/poemPeer.php&#039;;<br />
+<br />
+  $c = new Criteria();<br />
+  $c-&gt;addDescendingOrderByColumn(poemPeer::SID);<br />
+<br />
+  // with join<br />
+  $pager = new PropelPager($c, &#039;poemPeer&#039;, &#039;doSelectJoinPoemUsers&#039;, 1, 50);<br />
+<br />
+  // without Join<br />
+<br />
+  $pager = new PropelPager($c, &#039;poemPeer&#039;, &#039;doSelect&#039;, 1, 50);<br />
+<br />
+ Some template:<br />
+<br />
+ &lt;p&gt;<br />
+ Total Pages: &lt;?=$pager-&gt;getTotalPages()?&gt;  Total Records: &lt;?=$pager-&gt;getTotalRecordCount()?&gt;<br />
+ &lt;/p&gt;<br />
+ &lt;table&gt;<br />
+ &lt;tr&gt;<br />
+ &lt;td&gt;<br />
+ &lt;?if ($link = $pager-&gt;getFirstPage):?&gt;<br />
+ &lt;a href=&quot;somescript?page=&lt;?=$link?&gt;&quot;&gt;&lt;?=$link?&gt;&lt;/a&gt;|<br />
+ &lt;?endif?&gt;<br />
+ &lt;/td&gt;<br />
+ &lt;td&gt;<br />
+ &lt;?if ($link = $pager-&gt;getPrev()):?&gt;<br />
+ &lt;a href=&quot;somescript?page=&lt;?=$link?&gt;&quot;&gt;Previous&lt;/a&gt;|<br />
+ &lt;?endif?&gt;<br />
+ &lt;/td&gt;<br />
+ &lt;td&gt;<br />
+ &lt;?foreach ($pager-&gt;getPrevLinks() as $link):?&gt;<br />
+ &lt;a href=&quot;somescript?page=&lt;?=$link?&gt;&quot;&gt;&lt;?=$link?&gt;&lt;/a&gt;|<br />
+ &lt;?endforeach?&gt;<br />
+ &lt;/td&gt;<br />
+ &lt;td&gt;&lt;?=$pager-&gt;getPage()?&gt;&lt;/td&gt;<br />
+ &lt;td&gt;<br />
+ &lt;?foreach ($pager-&gt;getNextLinks() as $link):?&gt;<br />
+ | &lt;a href=&quot;somescript?page=&lt;?=$link?&gt;&quot;&gt;&lt;?=$link?&gt;&lt;/a&gt;<br />
+ &lt;?endforeach?&gt;<br />
+ &lt;/td&gt;<br />
+ &lt;td&gt;<br />
+ &lt;?if ($link = $pager-&gt;getNext()):?&gt;<br />
+ &lt;a href=&quot;somescript?page=&lt;?=$link?&gt;&quot;&gt;Last&lt;/a&gt;|<br />
+ &lt;?endif?&gt;<br />
+ &lt;/td&gt;<br />
+ &lt;td&gt;<br />
+ &lt;?if ($link = $pager-&gt;getLastPage()):?&gt;<br />
+ &lt;a href=&quot;somescript?page=&lt;?=$link?&gt;&quot;&gt;&lt;?=$link?&gt;&lt;/a&gt;|<br />
+ &lt;?endif?&gt;<br />
+ &lt;/td&gt;<br />
+ &lt;/tr&gt;<br />
+ &lt;/table&gt;<br />
+ &lt;table id=&quot;latestPoems&quot;&gt;<br />
+ &lt;tr&gt;<br />
+ &lt;th&gt;Title&lt;/th&gt;<br />
+ &lt;th&gt;Auteur&lt;/th&gt;<br />
+ &lt;th&gt;Date&lt;/th&gt;<br />
+ &lt;th&gt;comments&lt;/th&gt;<br />
+ &lt;/tr&gt;<br />
+ &lt;?foreach ($pager-&gt;getResult() as $poem):?&gt;<br />
+ &lt;tr&gt;<br />
+ &lt;td&gt;&lt;?=$poem-&gt;getTitle()?&gt;&lt;/td&gt;<br />
+ &lt;td&gt;&lt;?=$poem-&gt;getPoemUsers()-&gt;getUname()?&gt;&lt;/td&gt;<br />
+ &lt;td&gt;&lt;?=$poem-&gt;getTime()?&gt;&lt;/td&gt;<br />
+ &lt;td&gt;&lt;?=$poem-&gt;getComments()?&gt;&lt;/td&gt;<br />
+ &lt;/tr&gt;<br />
+ &lt;?endforeach?&gt;<br />
+ &lt;/table&gt;</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a> $c = null, string $peerClass = null, string $peerSelectMethod = null, int $page = 1, int $rowsPerPage = 25)
+                    <p>Create a new Propel Pager.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_setCriteria">setCriteria</a>(<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a> $c)
+                    <p>Set the criteria for this pager.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getCriteria">getCriteria</a>()
+                    <p>Return the Criteria object for this pager.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_setPeerClass">setPeerClass</a>(string $class)
+                    <p>Set the Peer Classname</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPeerClass">getPeerClass</a>()
+                    <p>Return the Peer Classname.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_setPeerMethod">setPeerMethod</a>(string $method)
+                    <p>Set the Peer select method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPeerMethod">getPeerMethod</a>()
+                    <p>Return the Peer select method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_setPeerSelectMethod">setPeerSelectMethod</a>(string $method)
+                    <p>Set the Peer select method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPeerSelectMethod">getPeerSelectMethod</a>()
+                    <p>Return the Peer select method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPeerCountMethod">setPeerCountMethod</a>(string $method)
+                    <p>Sets the Count method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getPeerCountMethod">getPeerCountMethod</a>()
+                    <p>Return the Peer count method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getResult">getResult</a>()
+                    <p>Get the paged resultset</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getFirstPage">getFirstPage</a>()
+                    <p>Get the first page</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_atFirstPage">atFirstPage</a>()
+                    <p>Convenience method to indicate whether current page is the first page.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getLastPage">getLastPage</a>()
+                    <p>Get last page</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_atLastPage">atLastPage</a>()
+                    <p>Convenience method to indicate whether current page is the last page.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getTotalPages">getTotalPages</a>()
+                    <p>get total pages</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getPrevLinks">getPrevLinks</a>(int $range = 5)
+                    <p>get an array of previous id&#039;s</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getNextLinks">getNextLinks</a>(int $range = 5)
+                    <p>get an array of next id&#039;s</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_isLastPageComplete">isLastPageComplete</a>()
+                    <p>Returns whether last page is complete</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getPrev">getPrev</a>()
+                    <p>get previous id</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getNext">getNext</a>()
+                    <p>get next id</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_setPage">setPage</a>(int $page)
+                    <p>Set the current page number (First page is 1).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getPage">getPage</a>()
+                    <p>Get current page.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setRowsPerPage">setRowsPerPage</a>(int $r)
+                    <p>Set the number of rows per page.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getRowsPerPage">getRowsPerPage</a>()
+                    <p>Get number of rows per page.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getTotalRecordCount">getTotalRecordCount</a>()
+                    <p>Gets the total number of (un-LIMITed) records.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setStart">setStart</a>(int $v)
+                    <p>Sets the start row or offset.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_setMax">setMax</a>(int $v)
+                    <p>Sets max rows (limit).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_count">count</a>()
+                    <p>Returns the count of the current page&#039;s records</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_current">current</a>()
+                    <p>Returns the current element of the iterator</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_key">key</a>()
+                    <p>Returns the current key of the iterator</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_next">next</a>()
+                    <p>Advances the iterator to the next element</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_rewind">rewind</a>()
+                    <p>Resets the iterator to the first element</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_valid">valid</a>()
+                    <p>Checks if the current key exists in the container</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 123</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a> $c = null, string $peerClass = null, string $peerSelectMethod = null, int $page = 1, int $rowsPerPage = 25)</code>
+    </h3>
+    <div class="details">
+        <p>Create a new Propel Pager.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+                <td>$c</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$peerClass</td>
+                <td>The name of the static Peer class.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$peerSelectMethod</td>
+                <td>The name of the static method for selecting content from the Peer class.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$page</td>
+                <td>The current page (1-based).</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$rowsPerPage</td>
+                <td>The number of rows that should be displayed per page.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setCriteria">
+        <div class="location">at line 141</div>
+        <code>            public            void
+    <strong>setCriteria</strong>(<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a> $c)</code>
+    </h3>
+    <div class="details">
+        <p>Set the criteria for this pager.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+                <td>$c</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCriteria">
+        <div class="location">at line 150</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>getCriteria</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the Criteria object for this pager.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPeerClass">
+        <div class="location">at line 161</div>
+        <code>            public            void
+    <strong>setPeerClass</strong>(string $class)</code>
+    </h3>
+    <div class="details">
+        <p>Set the Peer Classname</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPeerClass">
+        <div class="location">at line 170</div>
+        <code>            public            string
+    <strong>getPeerClass</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the Peer Classname.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPeerMethod">
+        <div class="location">at line 183</div>
+        <code>            public            void
+    <strong>setPeerMethod</strong>(string $method)</code>
+    </h3>
+    <div class="details">
+        <p>Set the Peer select method.</p>
+        <p>This exists for legacy support, please use setPeerSelectMethod().</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>The name of the static method to call on the Peer class.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>setPeerSelectMethod()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getPeerMethod">
+        <div class="location">at line 195</div>
+        <code>            public            string
+    <strong>getPeerMethod</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the Peer select method.</p>
+        <p>This exists for legacy support, please use getPeerSelectMethod().</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>getPeerSelectMethod()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_setPeerSelectMethod">
+        <div class="location">at line 206</div>
+        <code>            public            void
+    <strong>setPeerSelectMethod</strong>(string $method)</code>
+    </h3>
+    <div class="details">
+        <p>Set the Peer select method.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>The name of the static method to call on the Peer class.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPeerSelectMethod">
+        <div class="location">at line 215</div>
+        <code>            public            string
+    <strong>getPeerSelectMethod</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the Peer select method.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPeerCountMethod">
+        <div class="location">at line 226</div>
+        <code>            public            
+    <strong>setPeerCountMethod</strong>(string $method)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the Count method.</p>
+        <p>This is set based on the Peer method, for example if Peer method is doSelectJoin*() then the<br />
+ count method will be doCountJoin*().</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>The name of the static method to call on the Peer class.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPeerCountMethod">
+        <div class="location">at line 234</div>
+        <code>            public            
+    <strong>getPeerCountMethod</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the Peer count method.</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getResult">
+        <div class="location">at line 263</div>
+        <code>            public            mixed
+    <strong>getResult</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the paged resultset</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>$rs</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFirstPage">
+        <div class="location">at line 294</div>
+        <code>            public            int
+    <strong>getFirstPage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the first page</p>
+        <p>For now I can only think of returning 1 always.<br />
+ It should probably return 0 if there are no pages</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>1</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_atFirstPage">
+        <div class="location">at line 304</div>
+        <code>            public            boolean
+    <strong>atFirstPage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Convenience method to indicate whether current page is the first page.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLastPage">
+        <div class="location">at line 314</div>
+        <code>            public            int
+    <strong>getLastPage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get last page</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>$lastPage</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_atLastPage">
+        <div class="location">at line 329</div>
+        <code>            public            boolean
+    <strong>atLastPage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Convenience method to indicate whether current page is the last page.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTotalPages">
+        <div class="location">at line 339</div>
+        <code>            public            int
+    <strong>getTotalPages</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>get total pages</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>$this-&gt;pages</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPrevLinks">
+        <div class="location">at line 359</div>
+        <code>            public            array
+    <strong>getPrevLinks</strong>(int $range = 5)</code>
+    </h3>
+    <div class="details">
+        <p>get an array of previous id&#039;s</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$range</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>$links</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNextLinks">
+        <div class="location">at line 382</div>
+        <code>            public            array
+    <strong>getNextLinks</strong>(int $range = 5)</code>
+    </h3>
+    <div class="details">
+        <p>get an array of next id&#039;s</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$range</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>$links</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isLastPageComplete">
+        <div class="location">at line 404</div>
+        <code>            public            bool
+    <strong>isLastPageComplete</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether last page is complete</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>Last page complete or not</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPrev">
+        <div class="location">at line 414</div>
+        <code>            public            mixed
+    <strong>getPrev</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>get previous id</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>$prev</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNext">
+        <div class="location">at line 430</div>
+        <code>            public            mixed
+    <strong>getNext</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>get next id</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>$next</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPage">
+        <div class="location">at line 446</div>
+        <code>            public            void
+    <strong>setPage</strong>(int $page)</code>
+    </h3>
+    <div class="details">
+        <p>Set the current page number (First page is 1).</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$page</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPage">
+        <div class="location">at line 457</div>
+        <code>            public            int
+    <strong>getPage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get current page.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setRowsPerPage">
+        <div class="location">at line 466</div>
+        <code>            public            
+    <strong>setRowsPerPage</strong>(int $r)</code>
+    </h3>
+    <div class="details">
+        <p>Set the number of rows per page.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$r</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRowsPerPage">
+        <div class="location">at line 477</div>
+        <code>            public            int
+    <strong>getRowsPerPage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get number of rows per page.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTotalRecordCount">
+        <div class="location">at line 498</div>
+        <code>            public            int
+    <strong>getTotalRecordCount</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the total number of (un-LIMITed) records.</p>
+        <p>This method will perform a query that executes un-LIMITed query.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>Total number of records - disregarding page, maxrows, etc.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setStart">
+        <div class="location">at line 528</div>
+        <code>            public            
+    <strong>setStart</strong>(int $v)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the start row or offset.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$v</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setMax">
+        <div class="location">at line 538</div>
+        <code>            public            void
+    <strong>setMax</strong>(int $v)</code>
+    </h3>
+    <div class="details">
+        <p>Sets max rows (limit).</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$v</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_count">
+        <div class="location">at line 547</div>
+        <code>            public            int
+    <strong>count</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the count of the current page&#039;s records</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_current">
+        <div class="location">at line 556</div>
+        <code>            public            mixed
+    <strong>current</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the current element of the iterator</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_key">
+        <div class="location">at line 569</div>
+        <code>            public            int
+    <strong>key</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the current key of the iterator</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_next">
+        <div class="location">at line 578</div>
+        <code>            public            void
+    <strong>next</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Advances the iterator to the next element</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_rewind">
+        <div class="location">at line 587</div>
+        <code>            public            void
+    <strong>rewind</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Resets the iterator to the first element</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_valid">
+        <div class="location">at line 596</div>
+        <code>            public            boolean
+    <strong>valid</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Checks if the current key exists in the container</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>PropelSQLParser | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>PropelSQLParser</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PropelSQLParser</strong></p>
+
+            <div class="description">
+            <p>Service class for parsing a large SQL string into an array of SQL statements</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSQL">setSQL</a>(string $sql)
+                    <p>Sets the inner SQL string for this object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getSQL">getSQL</a>()
+                    <p>Gets the inner SQL string for this object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;integer
+                </td>
+                <td class="last">
+                    <a href="#method_executeString">executeString</a>(string $input, <a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a> $connection)
+                    <p>Execute a list of DDL statements based on a string Does not use transactions since they are not supported in DDL statements</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;integer
+                </td>
+                <td class="last">
+                    <a href="#method_executeFile">executeFile</a>(string $file, <a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a> $connection)
+                    <p>Execute a list of DDL statements based on the path to the SQL file Does not use transactions since they are not supported in DDL statements</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;array
+                </td>
+                <td class="last">
+                    <a href="#method_parseString">parseString</a>(string $input)
+                    <p>Explodes a SQL string into an array of SQL statements.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;array
+                </td>
+                <td class="last">
+                    <a href="#method_parseFile">parseFile</a>($file)
+                    <p>Explodes a SQL file into an array of SQL statements.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_convertLineFeedsToUnixStyle">convertLineFeedsToUnixStyle</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_stripSQLCommentLines">stripSQLCommentLines</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_explodeIntoStatements">explodeIntoStatements</a>()
+                    <p>Explodes the inner SQL string into statements based on the SQL statement delimiter (;)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getNextStatement">getNextStatement</a>()
+                    <p>Gets the next SQL statement in the inner SQL string, and advances the cursor to the end of this statement.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_setSQL">
+        <div class="location">at line 32</div>
+        <code>            public            
+    <strong>setSQL</strong>(string $sql)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the inner SQL string for this object.</p>
+        <p>Also resets the parsing cursor (see getNextStatement)</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$sql</td>
+                <td>The SQL string to parse</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSQL">
+        <div class="location">at line 44</div>
+        <code>            public            string
+    <strong>getSQL</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the inner SQL string for this object.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The SQL string to parse</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_executeString">
+        <div class="location">at line 58</div>
+        <code>        static    public            integer
+    <strong>executeString</strong>(string $input, <a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a> $connection)</code>
+    </h3>
+    <div class="details">
+        <p>Execute a list of DDL statements based on a string Does not use transactions since they are not supported in DDL statements</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$input</td>
+                <td>The SQL statements</td>
+            </tr>
+                    <tr>
+                <td><a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a></td>
+                <td>$connection</td>
+                <td>a connection object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>the number of executed statements</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_executeFile">
+        <div class="location">at line 72</div>
+        <code>        static    public            integer
+    <strong>executeFile</strong>(string $file, <a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a> $connection)</code>
+    </h3>
+    <div class="details">
+        <p>Execute a list of DDL statements based on the path to the SQL file Does not use transactions since they are not supported in DDL statements</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td>the path to the SQL file</td>
+            </tr>
+                    <tr>
+                <td><a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a></td>
+                <td>$connection</td>
+                <td>a connection object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>the number of executed statements</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_parseString">
+        <div class="location">at line 124</div>
+        <code>        static    public            array
+    <strong>parseString</strong>(string $input)</code>
+    </h3>
+    <div class="details">
+        <p>Explodes a SQL string into an array of SQL statements.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$input</td>
+                <td>The SQL code to parse</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>A list of SQL statement strings</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_parseFile">
+        <div class="location">at line 153</div>
+        <code>        static    public            array
+    <strong>parseFile</strong>($file)</code>
+    </h3>
+    <div class="details">
+        <p>Explodes a SQL file into an array of SQL statements.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$file</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>A list of SQL statement strings</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_convertLineFeedsToUnixStyle">
+        <div class="location">at line 162</div>
+        <code>            public            
+    <strong>convertLineFeedsToUnixStyle</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_stripSQLCommentLines">
+        <div class="location">at line 167</div>
+        <code>            public            
+    <strong>stripSQLCommentLines</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_explodeIntoStatements">
+        <div class="location">at line 180</div>
+        <code>            public            array
+    <strong>explodeIntoStatements</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Explodes the inner SQL string into statements based on the SQL statement delimiter (;)</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>A list of SQL statement strings</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNextStatement">
+        <div class="location">at line 197</div>
+        <code>            public            string
+    <strong>getNextStatement</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the next SQL statement in the inner SQL string, and advances the cursor to the end of this statement.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>A SQL statement</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

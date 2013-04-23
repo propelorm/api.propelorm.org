@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Propel\Runtime\Map\RelationMap | Propel 2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel 2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Propel/Runtime/Map.html">Propel\Runtime\Map</a>\RelationMap</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>RelationMap</strong></p>
+
+            <div class="description">
+            <p>RelationMap is used to model a database relationship.</p>
+            <p>GENERAL NOTE<br />
+ ------------<br />
+ The propel.map classes are abstract building-block classes for modeling<br />
+ the database at runtime.  These classes are similar (a lite version) to the<br />
+ propel.engine.database.model classes, which are build-time modeling classes.<br />
+ These classes in themselves do not do any database metadata lookups.</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>MANY_TO_ONE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ONE_TO_MANY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ONE_TO_ONE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MANY_TO_MANY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LOCAL_TO_FOREIGN</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LEFT_TO_RIGHT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>($name)
+                    <p>Constructor.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getName">getName</a>()
+                    <p>Get the name of this relation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPluralName">setPluralName</a>($pluralName)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPluralName">getPluralName</a>()
+                    <p>Get the plural name of this relation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setType">setType</a>(int $type)
+                    <p>Set the type</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getType">getType</a>()
+                    <p>Get the type</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setLocalTable">setLocalTable</a>(<a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a> $table)
+                    <p>Set the local table</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getLocalTable">getLocalTable</a>()
+                    <p>Get the local table</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setForeignTable">setForeignTable</a>(<a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a> $table)
+                    <p>Set the foreign table</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getForeignTable">getForeignTable</a>()
+                    <p>Get the foreign table</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getLeftTable">getLeftTable</a>()
+                    <p>Get the left table of the relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getRightTable">getRightTable</a>()
+                    <p>Get the right table of the relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addColumnMapping">addColumnMapping</a>(<a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a> $local, <a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a> $foreign)
+                    <p>Add a column mapping</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnMappings">getColumnMappings</a>(int $direction = RelationMap::LOCAL_TO_FOREIGN)
+                    <p>Get an associative array mapping local column names to foreign column names The arrangement of the returned array depends on the $direction parameter:  - If the value is RelationMap::LOCAL_TO_FOREIGN, then the returned array is local =&gt; foreign  - If the value is RelationMap::LEFT_TO_RIGHT, then the returned array is left =&gt; right</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isComposite">isComposite</a>()
+                    <p>Returns true if the relation has more than one column mapping</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_countColumnMappings">countColumnMappings</a>()
+                    <p>Return the number of column mappings</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getLocalColumns">getLocalColumns</a>()
+                    <p>Get the local columns</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getForeignColumns">getForeignColumns</a>()
+                    <p>Get the foreign columns</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getLeftColumns">getLeftColumns</a>()
+                    <p>Get the left columns of the relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getRightColumns">getRightColumns</a>()
+                    <p>Get the right columns of the relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setOnUpdate">setOnUpdate</a>(string $onUpdate)
+                    <p>Set the onUpdate behavior</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_getOnUpdate">getOnUpdate</a>()
+                    <p>Get the onUpdate behavior</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setOnDelete">setOnDelete</a>(string $onDelete)
+                    <p>Set the onDelete behavior</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getOnDelete">getOnDelete</a>()
+                    <p>Get the onDelete behavior</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/Map/RelationMap.html"><abbr title="Propel\Runtime\Map\RelationMap">RelationMap</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getSymmetricalRelation">getSymmetricalRelation</a>()
+                    <p>Gets the symmetrical relation</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 72</div>
+        <code>            public            
+    <strong>__construct</strong>($name)</code>
+    </h3>
+    <div class="details">
+        <p>Constructor.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getName">
+        <div class="location">at line 82</div>
+        <code>            public            string
+    <strong>getName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the name of this relation.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The name of the relation.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPluralName">
+        <div class="location">at line 87</div>
+        <code>            public            
+    <strong>setPluralName</strong>($pluralName)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$pluralName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPluralName">
+        <div class="location">at line 97</div>
+        <code>            public            string
+    <strong>getPluralName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the plural name of this relation.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The plural name of the relation.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setType">
+        <div class="location">at line 107</div>
+        <code>            public            
+    <strong>setType</strong>(int $type)</code>
+    </h3>
+    <div class="details">
+        <p>Set the type</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td>The relation type (either self::MANY_TO_ONE, self::ONE_TO_MANY, or self::ONE_TO_ONE)</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getType">
+        <div class="location">at line 117</div>
+        <code>            public            int
+    <strong>getType</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the type</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>the relation type</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setLocalTable">
+        <div class="location">at line 127</div>
+        <code>            public            
+    <strong>setLocalTable</strong>(<a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Set the local table</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a></td>
+                <td>$table</td>
+                <td>The local table for this relationship</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLocalTable">
+        <div class="location">at line 137</div>
+        <code>            public            <a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a>
+    <strong>getLocalTable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the local table</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a></td>
+            <td>The local table for this relationship</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setForeignTable">
+        <div class="location">at line 147</div>
+        <code>            public            
+    <strong>setForeignTable</strong>(<a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Set the foreign table</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a></td>
+                <td>$table</td>
+                <td>The foreign table for this relationship</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getForeignTable">
+        <div class="location">at line 157</div>
+        <code>            public            <a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a>
+    <strong>getForeignTable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the foreign table</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a></td>
+            <td>The foreign table for this relationship</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLeftTable">
+        <div class="location">at line 167</div>
+        <code>            public            <a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a>
+    <strong>getLeftTable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the left table of the relation</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a></td>
+            <td>The left table for this relationship</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRightTable">
+        <div class="location">at line 177</div>
+        <code>            public            <a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a>
+    <strong>getRightTable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the right table of the relation</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/Map/TableMap.html"><abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr></a></td>
+            <td>The right table for this relationship</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addColumnMapping">
+        <div class="location">at line 188</div>
+        <code>            public            
+    <strong>addColumnMapping</strong>(<a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a> $local, <a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a> $foreign)</code>
+    </h3>
+    <div class="details">
+        <p>Add a column mapping</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a></td>
+                <td>$local</td>
+                <td>The local column</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a></td>
+                <td>$foreign</td>
+                <td>The foreign column</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnMappings">
+        <div class="location">at line 203</div>
+        <code>            public            array
+    <strong>getColumnMappings</strong>(int $direction = RelationMap::LOCAL_TO_FOREIGN)</code>
+    </h3>
+    <div class="details">
+        <p>Get an associative array mapping local column names to foreign column names The arrangement of the returned array depends on the $direction parameter:  - If the value is RelationMap::LOCAL_TO_FOREIGN, then the returned array is local =&gt; foreign  - If the value is RelationMap::LEFT_TO_RIGHT, then the returned array is left =&gt; right</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$direction</td>
+                <td>How the associative array must return columns</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>Associative array (local =&gt; foreign) of fully qualified column names</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isComposite">
+        <div class="location">at line 227</div>
+        <code>            public            boolean
+    <strong>isComposite</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns true if the relation has more than one column mapping</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_countColumnMappings">
+        <div class="location">at line 237</div>
+        <code>            public            int
+    <strong>countColumnMappings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the number of column mappings</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLocalColumns">
+        <div class="location">at line 247</div>
+        <code>            public            <a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>[]
+    <strong>getLocalColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the local columns</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getForeignColumns">
+        <div class="location">at line 257</div>
+        <code>            public            <a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>[]
+    <strong>getForeignColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the foreign columns</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLeftColumns">
+        <div class="location">at line 267</div>
+        <code>            public            <a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>[]
+    <strong>getLeftColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the left columns of the relation</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRightColumns">
+        <div class="location">at line 277</div>
+        <code>            public            <a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>[]
+    <strong>getRightColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the right columns of the relation</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setOnUpdate">
+        <div class="location">at line 287</div>
+        <code>            public            
+    <strong>setOnUpdate</strong>(string $onUpdate)</code>
+    </h3>
+    <div class="details">
+        <p>Set the onUpdate behavior</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$onUpdate</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOnUpdate">
+        <div class="location">at line 297</div>
+        <code>            public            integer
+    <strong>getOnUpdate</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the onUpdate behavior</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>the relation type</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setOnDelete">
+        <div class="location">at line 307</div>
+        <code>            public            
+    <strong>setOnDelete</strong>(string $onDelete)</code>
+    </h3>
+    <div class="details">
+        <p>Set the onDelete behavior</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$onDelete</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOnDelete">
+        <div class="location">at line 317</div>
+        <code>            public            int
+    <strong>getOnDelete</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the onDelete behavior</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>the relation type</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSymmetricalRelation">
+        <div class="location">at line 327</div>
+        <code>            public            <a href="../../../Propel/Runtime/Map/RelationMap.html"><abbr title="Propel\Runtime\Map\RelationMap">RelationMap</abbr></a>
+    <strong>getSymmetricalRelation</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the symmetrical relation</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/Map/RelationMap.html"><abbr title="Propel\Runtime\Map\RelationMap">RelationMap</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

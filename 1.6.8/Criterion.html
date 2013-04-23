@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Criterion | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>Criterion</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Criterion</strong></p>
+
+            <div class="description">
+            <p>This is an &quot;inner&quot; class that describes an object in the criteria.</p>
+            <p>In Torque this is an inner class of the Criteria class.</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>UND</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ODER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a> $outer, string $column, mixed $value, string $comparison = null, string $type = null)
+                    <p>Create a new instance.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_init">init</a>(<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a> $criteria)
+                    <p>Init some properties with the help of outer class</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getColumn">getColumn</a>()
+                    <p>Get the column name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_setTable">setTable</a>(string $name)
+                    <p>Set the table name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getTable">getTable</a>()
+                    <p>Get the table name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getComparison">getComparison</a>()
+                    <p>Get the comparison.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getValue">getValue</a>()
+                    <p>Get the value.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="DBAdapter.html"><abbr title="DBAdapter">DBAdapter</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getDB">getDB</a>()
+                    <p>Get the value of db.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_setDB">setDB</a>(<a href="DBAdapter.html"><abbr title="DBAdapter">DBAdapter</abbr></a> $v)
+                    <p>Set the value of db.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setIgnoreCase">setIgnoreCase</a>(boolean $b)
+                    <p>Sets ignore case.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isIgnoreCase">isIgnoreCase</a>()
+                    <p>Is ignore case on or off?</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getConjunctions">getConjunctions</a>()
+                    <p>Get the list of conjunctions in this Criterion</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addAnd">addAnd</a>(<a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a> $criterion)
+                    <p>Append an AND Criterion onto this Criterion&#039;s list.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addOr">addOr</a>(<a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a> $criterion)
+                    <p>Append an OR Criterion onto this Criterion&#039;s list.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_appendPsTo">appendPsTo</a>(string $sb, array $params)
+                    <p>Appends a Prepared Statement representation of the Criterion onto the buffer.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_equals">equals</a>(<a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a>|null $obj)
+                    <p>This method checks another Criteria to see if they contain the same attributes and hashtable entries.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_hashCode">hashCode</a>()
+                    <p>Returns a hash code value for the object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAllTables">getAllTables</a>()
+                    <p>Get all tables from nested criterion objects</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAttachedCriterion">getAttachedCriterion</a>()
+                    <p>get an array of all criterion attached to this recursing through all sub criterion</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___clone">__clone</a>()
+                    <p>Ensures deep cloning of attached objects</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 76</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a> $outer, string $column, mixed $value, string $comparison = null, string $type = null)</code>
+    </h3>
+    <div class="details">
+        <p>Create a new instance.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+                <td>$outer</td>
+                <td>The outer class (this is an &quot;inner&quot; class).</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td>TABLE.COLUMN format.</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_init">
+        <div class="location">at line 97</div>
+        <code>            public            
+    <strong>init</strong>(<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a> $criteria)</code>
+    </h3>
+    <div class="details">
+        <p>Init some properties with the help of outer class</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+                <td>$criteria</td>
+                <td>The outer class</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumn">
+        <div class="location">at line 120</div>
+        <code>            public            string
+    <strong>getColumn</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the column name.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>A String with the column name.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setTable">
+        <div class="location">at line 131</div>
+        <code>            public            void
+    <strong>setTable</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Set the table name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>A String with the table name.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTable">
+        <div class="location">at line 141</div>
+        <code>            public            string
+    <strong>getTable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the table name.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>A String with the table name.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getComparison">
+        <div class="location">at line 151</div>
+        <code>            public            string
+    <strong>getComparison</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the comparison.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>A String with the comparison.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getValue">
+        <div class="location">at line 161</div>
+        <code>            public            mixed
+    <strong>getValue</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the value.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>An Object with the value.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDB">
+        <div class="location">at line 172</div>
+        <code>            public            <a href="DBAdapter.html"><abbr title="DBAdapter">DBAdapter</abbr></a>
+    <strong>getDB</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the value of db.</p>
+        <p>The DBAdapter which might be used to get db specific<br />
+ variations of sql.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="DBAdapter.html"><abbr title="DBAdapter">DBAdapter</abbr></a></td>
+            <td>value of db.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDB">
+        <div class="location">at line 183</div>
+        <code>            public            void
+    <strong>setDB</strong>(<a href="DBAdapter.html"><abbr title="DBAdapter">DBAdapter</abbr></a> $v)</code>
+    </h3>
+    <div class="details">
+        <p>Set the value of db.</p>
+        <p>The DBAdapter might be used to get db specific variations of sql.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="DBAdapter.html"><abbr title="DBAdapter">DBAdapter</abbr></a></td>
+                <td>$v</td>
+                <td>Value to assign to db.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setIgnoreCase">
+        <div class="location">at line 197</div>
+        <code>            public            <a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a>
+    <strong>setIgnoreCase</strong>(boolean $b)</code>
+    </h3>
+    <div class="details">
+        <p>Sets ignore case.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$b</td>
+                <td>True if case should be ignored.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a></td>
+            <td>A modified Criterion object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isIgnoreCase">
+        <div class="location">at line 209</div>
+        <code>            public            boolean
+    <strong>isIgnoreCase</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Is ignore case on or off?</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if case is ignored.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConjunctions">
+        <div class="location">at line 227</div>
+        <code>            public            array
+    <strong>getConjunctions</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the list of conjunctions in this Criterion</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addAnd">
+        <div class="location">at line 235</div>
+        <code>            public            
+    <strong>addAnd</strong>(<a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a> $criterion)</code>
+    </h3>
+    <div class="details">
+        <p>Append an AND Criterion onto this Criterion&#039;s list.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a></td>
+                <td>$criterion</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addOr">
+        <div class="location">at line 249</div>
+        <code>            public            <a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a>
+    <strong>addOr</strong>(<a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a> $criterion)</code>
+    </h3>
+    <div class="details">
+        <p>Append an OR Criterion onto this Criterion&#039;s list.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a></td>
+                <td>$criterion</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_appendPsTo">
+        <div class="location">at line 267</div>
+        <code>            public            void
+    <strong>appendPsTo</strong>(string $sb, array $params)</code>
+    </h3>
+    <div class="details">
+        <p>Appends a Prepared Statement representation of the Criterion onto the buffer.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$sb</td>
+                <td>&amp;$sb The string that will receive the Prepared Statement</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>A list to which Prepared Statement parameters will be appended</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td>- if the expression builder cannot figure out how to turn a specified expression into proper SQL.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_equals">
+        <div class="location">at line 468</div>
+        <code>            public            boolean
+    <strong>equals</strong>(<a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a>|null $obj)</code>
+    </h3>
+    <div class="details">
+        <p>This method checks another Criteria to see if they contain the same attributes and hashtable entries.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a>|null</td>
+                <td>$obj</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hashCode">
+        <div class="location">at line 508</div>
+        <code>            public            
+    <strong>hashCode</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns a hash code value for the object.</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAllTables">
+        <div class="location">at line 539</div>
+        <code>            public            array
+    <strong>getAllTables</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get all tables from nested criterion objects</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAttachedCriterion">
+        <div class="location">at line 568</div>
+        <code>            public            array
+    <strong>getAttachedCriterion</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>get an array of all criterion attached to this recursing through all sub criterion</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>Criterion[]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___clone">
+        <div class="location">at line 581</div>
+        <code>            public            
+    <strong>__clone</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Ensures deep cloning of attached objects</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

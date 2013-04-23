@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>PropelTableComparator | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>PropelTableComparator</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PropelTableComparator</strong></p>
+
+            <div class="description">
+            <p>Service class for comparing Table objects Heavily inspired by Doctrine2&#039;s Migrations (see http://github.com/doctrine/dbal/tree/master/lib/Doctrine/DBAL/Schema/)</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>($tableDiff = null)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getTableDiff">getTableDiff</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setFromTable">setFromTable</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $fromTable)
+                    <p>Set the table the comparator starts from</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Table.html"><abbr title="Table">Table</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getFromTable">getFromTable</a>()
+                    <p>Get the table the comparator starts from</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setToTable">setToTable</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $toTable)
+                    <p>Set the table the comparator goes to</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Table.html"><abbr title="Table">Table</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getToTable">getToTable</a>()
+                    <p>Get the table the comparator goes to</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<a href="PropelTableDiff.html"><abbr title="PropelTableDiff">PropelTableDiff</abbr></a>|boolean
+                </td>
+                <td class="last">
+                    <a href="#method_computeDiff">computeDiff</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $fromTable, <a href="Table.html"><abbr title="Table">Table</abbr></a> $toTable, boolean $caseInsensitive = false)
+                    <p>Compute and return the difference between two table objects</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_compareColumns">compareColumns</a>(boolean $caseInsensitive = false)
+                    <p>Compare the columns of the fromTable and the toTable, and modifies the inner tableDiff if necessary.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_comparePrimaryKeys">comparePrimaryKeys</a>(boolean $caseInsensitive = false)
+                    <p>Compare the primary keys of the fromTable and the toTable, and modifies the inner tableDiff if necessary.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_compareIndices">compareIndices</a>(boolean $caseInsensitive = false)
+                    <p>Compare the indices and unique indices of the fromTable and the toTable, and modifies the inner tableDiff if necessary.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_compareForeignKeys">compareForeignKeys</a>(boolean $caseInsensitive = false)
+                    <p>Compare the foreign keys of the fromTable and the toTable, and modifies the inner tableDiff if necessary.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 29</div>
+        <code>            public            
+    <strong>__construct</strong>($tableDiff = null)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$tableDiff</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTableDiff">
+        <div class="location">at line 34</div>
+        <code>            public            
+    <strong>getTableDiff</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setFromTable">
+        <div class="location">at line 44</div>
+        <code>            public            
+    <strong>setFromTable</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $fromTable)</code>
+    </h3>
+    <div class="details">
+        <p>Set the table the comparator starts from</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$fromTable</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFromTable">
+        <div class="location">at line 54</div>
+        <code>            public            <a href="Table.html"><abbr title="Table">Table</abbr></a>
+    <strong>getFromTable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the table the comparator starts from</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setToTable">
+        <div class="location">at line 64</div>
+        <code>            public            
+    <strong>setToTable</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $toTable)</code>
+    </h3>
+    <div class="details">
+        <p>Set the table the comparator goes to</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$toTable</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getToTable">
+        <div class="location">at line 74</div>
+        <code>            public            <a href="Table.html"><abbr title="Table">Table</abbr></a>
+    <strong>getToTable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the table the comparator goes to</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_computeDiff">
+        <div class="location">at line 89</div>
+        <code>        static    public            <a href="PropelTableDiff.html"><abbr title="PropelTableDiff">PropelTableDiff</abbr></a>|boolean
+    <strong>computeDiff</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $fromTable, <a href="Table.html"><abbr title="Table">Table</abbr></a> $toTable, boolean $caseInsensitive = false)</code>
+    </h3>
+    <div class="details">
+        <p>Compute and return the difference between two table objects</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$fromTable</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$toTable</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$caseInsensitive</td>
+                <td>Whether the comparison is case insensitive. False by default.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="PropelTableDiff.html"><abbr title="PropelTableDiff">PropelTableDiff</abbr></a>|boolean</td>
+            <td>return false if the two tables are similar</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_compareColumns">
+        <div class="location">at line 113</div>
+        <code>            public            integer
+    <strong>compareColumns</strong>(boolean $caseInsensitive = false)</code>
+    </h3>
+    <div class="details">
+        <p>Compare the columns of the fromTable and the toTable, and modifies the inner tableDiff if necessary.</p>
+        <p>Returns the number of differences.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$caseInsensitive</td>
+                <td>Whether the comparison is case insensitive. False by default.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>The number of column differences</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_comparePrimaryKeys">
+        <div class="location">at line 173</div>
+        <code>            public            integer
+    <strong>comparePrimaryKeys</strong>(boolean $caseInsensitive = false)</code>
+    </h3>
+    <div class="details">
+        <p>Compare the primary keys of the fromTable and the toTable, and modifies the inner tableDiff if necessary.</p>
+        <p>Returns the number of differences.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$caseInsensitive</td>
+                <td>Whether the comparison is case insensitive. False by default.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>The number of primary key differences</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_compareIndices">
+        <div class="location">at line 223</div>
+        <code>            public            integer
+    <strong>compareIndices</strong>(boolean $caseInsensitive = false)</code>
+    </h3>
+    <div class="details">
+        <p>Compare the indices and unique indices of the fromTable and the toTable, and modifies the inner tableDiff if necessary.</p>
+        <p>Returns the number of differences.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$caseInsensitive</td>
+                <td>Whether the comparison is case insensitive. False by default.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>The number of index differences</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_compareForeignKeys">
+        <div class="location">at line 272</div>
+        <code>            public            integer
+    <strong>compareForeignKeys</strong>(boolean $caseInsensitive = false)</code>
+    </h3>
+    <div class="details">
+        <p>Compare the foreign keys of the fromTable and the toTable, and modifies the inner tableDiff if necessary.</p>
+        <p>Returns the number of differences.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$caseInsensitive</td>
+                <td>Whether the comparison is case insensitive. False by default.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>The number of foreign key differences</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

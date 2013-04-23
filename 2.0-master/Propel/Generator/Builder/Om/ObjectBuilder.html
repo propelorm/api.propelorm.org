@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Propel\Generator\Builder\Om\ObjectBuilder | Propel 2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel 2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../Propel/Generator/Builder/Om.html">Propel\Generator\Builder\Om</a>\ObjectBuilder</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>ObjectBuilder</strong>        extends <a href="../../../../Propel/Generator/Builder/Om/AbstractObjectBuilder.html"><abbr title="Propel\Generator\Builder\Om\AbstractObjectBuilder">AbstractObjectBuilder</abbr></a></p>
+
+            <div class="description">
+            <p>Generates a PHP5 base Object class for user object model (OM).</p>
+            <p>This class produces the base object class (e.g. BaseMyTable) which contains<br />
+ all the custom-built accessor and setter methods.</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasBehaviorModifier">hasBehaviorModifier</a>(string $hookName, string $modifier = null)
+                    <p>Checks whether any registered behavior on that table has a modifier for a hook</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractObjectBuilder.html#method_hasBehaviorModifier"><abbr title="Propel\Generator\Builder\Om\AbstractObjectBuilder">AbstractObjectBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_applyBehaviorModifier">applyBehaviorModifier</a>($hookName, $script, $tab = &#039;        &#039;)
+                    <p>Checks whether any registered behavior on that table has a modifier for a hook</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractObjectBuilder.html#method_applyBehaviorModifier"><abbr title="Propel\Generator\Builder\Om\AbstractObjectBuilder">AbstractObjectBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getBehaviorContent">getBehaviorContent</a>(string $contentName)
+                    <p>Checks whether any registered behavior content creator on that table exists a contentName</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractObjectBuilder.html#method_getBehaviorContent"><abbr title="Propel\Generator\Builder\Om\AbstractObjectBuilder">AbstractObjectBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPackage">getPackage</a>()
+                    <p>Returns the package for the base object classes.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getNamespace">getNamespace</a>()
+                    <p>Returns the namespace for the base class.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDefaultKeyType">getDefaultKeyType</a>()
+                    <p>Returns default key type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getUnprefixedClassName">getUnprefixedClassName</a>()
+                    <p>Returns the name of the current class being built.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addTemporalAccessorComment">addTemporalAccessorComment</a>(string $script, <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)
+                    <p>Adds the comment for a temporal accessor.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addTemporalAccessorOpen">addTemporalAccessorOpen</a>(string $script, <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)
+                    <p>Adds the function declaration for a temporal accessor.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addDefaultAccessorComment">addDefaultAccessorComment</a>(string $script, <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)
+                    <p>Add the comment for a default accessor method (a getter).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addDefaultAccessorOpen">addDefaultAccessorOpen</a>(string $script, <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)
+                    <p>Adds the function declaration for a default accessor.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addMutatorComment">addMutatorComment</a>(string $script, <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)
+                    <p>Adds the comment for a mutator.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addMutatorOpenOpen">addMutatorOpenOpen</a>(string $script, <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)
+                    <p>Adds the mutator function declaration.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addTemporalMutatorComment">addTemporalMutatorComment</a>($script, <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $col)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addBooleanMutatorComment">addBooleanMutatorComment</a>($script, <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $col)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getFKVarName">getFKVarName</a>(<a href="../../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk)
+                    <p>Constructs variable name for fkey-related objects.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getRefFKCollVarName">getRefFKCollVarName</a>(<a href="../../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk)
+                    <p>Constructs variable name for objects which referencing current table by specified foreign key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPKRefFKVarName">getPKRefFKVarName</a>(<a href="../../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk)
+                    <p>Constructs variable name for single object which references current table by specified foreign key which is ALSO a primary key (hence one-to-one relationship).</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_hasBehaviorModifier">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractObjectBuilder.html#method_hasBehaviorModifier"><abbr title="Propel\Generator\Builder\Om\AbstractObjectBuilder">AbstractObjectBuilder</abbr></a> at line 171</div>
+        <code>            public            boolean
+    <strong>hasBehaviorModifier</strong>(string $hookName, string $modifier = null)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether any registered behavior on that table has a modifier for a hook</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$hookName</td>
+                <td>The name of the hook as called from one of this class methods, e.g. &quot;preSave&quot;</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$modifier</td>
+                <td>The name of the modifier object providing the method in the behavior</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_applyBehaviorModifier">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractObjectBuilder.html#method_applyBehaviorModifier"><abbr title="Propel\Generator\Builder\Om\AbstractObjectBuilder">AbstractObjectBuilder</abbr></a> at line 181</div>
+        <code>            public            
+    <strong>applyBehaviorModifier</strong>($hookName, $script, $tab = &#039;        &#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether any registered behavior on that table has a modifier for a hook</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$hookName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$script</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$tab</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBehaviorContent">
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractObjectBuilder.html#method_getBehaviorContent"><abbr title="Propel\Generator\Builder\Om\AbstractObjectBuilder">AbstractObjectBuilder</abbr></a> at line 190</div>
+        <code>            public            
+    <strong>getBehaviorContent</strong>(string $contentName)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether any registered behavior content creator on that table exists a contentName</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$contentName</td>
+                <td>The name of the content as called from one of this class methods, e.g. &quot;parentClassName&quot;</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPackage">
+        <div class="location">at line 37</div>
+        <code>            public            string
+    <strong>getPackage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the package for the base object classes.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNamespace">
+        <div class="location">at line 48</div>
+        <code>            public            string
+    <strong>getNamespace</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the namespace for the base class.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>Propel\Generator\Builder\Om.AbstractOMBuilder::getNamespace()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getDefaultKeyType">
+        <div class="location">at line 64</div>
+        <code>            public            string
+    <strong>getDefaultKeyType</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns default key type.</p>
+        <p>If not presented in configuration default will be &#039;TYPE_PHPNAME&#039;</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUnprefixedClassName">
+        <div class="location">at line 76</div>
+        <code>            public            string
+    <strong>getUnprefixedClassName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the name of the current class being built.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addTemporalAccessorComment">
+        <div class="location">at line 850</div>
+        <code>            public            
+    <strong>addTemporalAccessorComment</strong>(string $script, <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)</code>
+    </h3>
+    <div class="details">
+        <p>Adds the comment for a temporal accessor.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$script</td>
+                <td>&amp;$script</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addTemporalAccessorOpen">
+        <div class="location">at line 891</div>
+        <code>            public            
+    <strong>addTemporalAccessorOpen</strong>(string $script, <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)</code>
+    </h3>
+    <div class="details">
+        <p>Adds the function declaration for a temporal accessor.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$script</td>
+                <td>&amp;$script</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addDefaultAccessorComment">
+        <div class="location">at line 1173</div>
+        <code>            public            
+    <strong>addDefaultAccessorComment</strong>(string $script, <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)</code>
+    </h3>
+    <div class="details">
+        <p>Add the comment for a default accessor method (a getter).</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$script</td>
+                <td>&amp;$script</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addDefaultAccessorOpen">
+        <div class="location">at line 1196</div>
+        <code>            public            
+    <strong>addDefaultAccessorOpen</strong>(string $script, <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)</code>
+    </h3>
+    <div class="details">
+        <p>Adds the function declaration for a default accessor.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$script</td>
+                <td>&amp;$script</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addMutatorComment">
+        <div class="location">at line 1386</div>
+        <code>            public            
+    <strong>addMutatorComment</strong>(string $script, <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)</code>
+    </h3>
+    <div class="details">
+        <p>Adds the comment for a mutator.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$script</td>
+                <td>&amp;$script</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addMutatorOpenOpen">
+        <div class="location">at line 1404</div>
+        <code>            public            
+    <strong>addMutatorOpenOpen</strong>(string $script, <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)</code>
+    </h3>
+    <div class="details">
+        <p>Adds the mutator function declaration.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$script</td>
+                <td>&amp;$script</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addTemporalMutatorComment">
+        <div class="location">at line 1598</div>
+        <code>            public            
+    <strong>addTemporalMutatorComment</strong>($script, <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $col)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$script</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a></td>
+                <td>$col</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addBooleanMutatorComment">
+        <div class="location">at line 1806</div>
+        <code>            public            
+    <strong>addBooleanMutatorComment</strong>($script, <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $col)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$script</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a></td>
+                <td>$col</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFKVarName">
+        <div class="location">at line 3024</div>
+        <code>            public            string
+    <strong>getFKVarName</strong>(<a href="../../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk)</code>
+    </h3>
+    <div class="details">
+        <p>Constructs variable name for fkey-related objects.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a></td>
+                <td>$fk</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRefFKCollVarName">
+        <div class="location">at line 3034</div>
+        <code>            public            string
+    <strong>getRefFKCollVarName</strong>(<a href="../../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk)</code>
+    </h3>
+    <div class="details">
+        <p>Constructs variable name for objects which referencing current table by specified foreign key.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a></td>
+                <td>$fk</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPKRefFKVarName">
+        <div class="location">at line 3045</div>
+        <code>            public            string
+    <strong>getPKRefFKVarName</strong>(<a href="../../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk)</code>
+    </h3>
+    <div class="details">
+        <p>Constructs variable name for single object which references current table by specified foreign key which is ALSO a primary key (hence one-to-one relationship).</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a></td>
+                <td>$fk</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

@@ -1,0 +1,1838 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Propel\Generator\Model\Database | Propel 2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel 2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Propel/Generator/Model.html">Propel\Generator\Model</a>\Database</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Database</strong>        extends <a href="../../../Propel/Generator/Model/ScopedMappingModel.html"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a></p>
+
+            <div class="description">
+            <p>A class for holding application data structures.</p>
+            <p></p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>DEFAULT_STRING_FORMAT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(string $name = null)
+                    <p>Constructs a new Database object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getNamespace">getNamespace</a>()
+                    <p>Returns the namespace.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_getNamespace"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setNamespace">setNamespace</a>(string $namespace)
+                    <p>Sets the namespace.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_setNamespace"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isAbsoluteNamespace">isAbsoluteNamespace</a>(string $namespace)
+                    <p>Returns whether or not the namespace is absolute.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_isAbsoluteNamespace"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPackage">getPackage</a>()
+                    <p>Returns the package name.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_getPackage"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPackage">setPackage</a>(string $package)
+                    <p>Sets the package name.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_setPackage"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getSchema">getSchema</a>()
+                    <p>Returns the schema name.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_getSchema"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSchema">setSchema</a>(string $schema)
+                    <p>Sets the schema name.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_setSchema"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Platform/PlatformInterface.html"><abbr title="Propel\Generator\Platform\PlatformInterface">PlatformInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getPlatform">getPlatform</a>()
+                    <p>Returns the PlatformInterface implementation for this database.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPlatform">setPlatform</a>(<a href="../../../Propel/Generator/Platform/PlatformInterface.html"><abbr title="Propel\Generator\Platform\PlatformInterface">PlatformInterface</abbr></a> $platform = null)
+                    <p>Sets the PlatformInterface implementation for this database.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getName">getName</a>()
+                    <p>Returns the database name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setName">setName</a>(string $name)
+                    <p>Sets the database name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getBaseClass">getBaseClass</a>()
+                    <p>Returns the name of the base super class inherited by active record objects.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setBaseClass">setBaseClass</a>($class)
+                    <p>Sets the name of the base super class inherited by active record objects.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getBasePeer">getBasePeer</a>()
+                    <p>Returns the name of the base peer super class inherited by Peer classes.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setBasePeer">setBasePeer</a>(string $class)
+                    <p>Sets the name of the base peer super class inherited by Peer classes.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDefaultIdMethod">getDefaultIdMethod</a>()
+                    <p>Returns the name of the default ID method strategy.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDefaultIdMethod">setDefaultIdMethod</a>(string $strategy)
+                    <p>Sets the name of the default ID method strategy.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDefaultPhpNamingMethod">getDefaultPhpNamingMethod</a>()
+                    <p>Returns the name of the default PHP naming method strategy, which specifies the method for converting schema names for table and column to PHP names.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDefaultPhpNamingMethod">setDefaultPhpNamingMethod</a>(string $strategy)
+                    <p>Sets name of the default PHP naming method strategy.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;array
+                </td>
+                <td class="last">
+                    <a href="#method_getSupportedStringFormats">getSupportedStringFormats</a>()
+                    <p>Returns the list of supported string formats</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDefaultStringFormat">setDefaultStringFormat</a>(string $format)
+                    <p>Sets the default string format for ActiveRecord objects in this table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDefaultStringFormat">getDefaultStringFormat</a>()
+                    <p>Returns the default string format for ActiveRecord objects in this table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isHeavyIndexing">isHeavyIndexing</a>()
+                    <p>Returns whether or not heavy indexing is enabled.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_getHeavyIndexing">getHeavyIndexing</a>()
+                    <p>Returns whether or not heavy indexing is enabled.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setHeavyIndexing">setHeavyIndexing</a>(boolean $heavyIndexing)
+                    <p>Sets whether or not heavy indexing is enabled.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getTables">getTables</a>()
+                    <p>Return the list of all tables.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_countTables">countTables</a>()
+                    <p>Return the number of tables in the database.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getTablesForSql">getTablesForSql</a>()
+                    <p>Returns the list of all tables that have a SQL representation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasTable">hasTable</a>(string $name, boolean $caseInsensitive = false)
+                    <p>Returns whether or not the database has a table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getTable">getTable</a>(string $name, boolean $caseInsensitive = false)
+                    <p>Returns the table with the specified name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasTableByPhpName">hasTableByPhpName</a>(string $phpName)
+                    <p>Returns whether or not the database has a table identified by its PHP name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getTableByPhpName">getTableByPhpName</a>(string $phpName)
+                    <p>Returns the table object with the specified PHP name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addTable">addTable</a>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a>|array $table)
+                    <p>Adds a new table to this database.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setParentSchema">setParentSchema</a>(<a href="../../../Propel/Generator/Model/Schema.html"><abbr title="Propel\Generator\Model\Schema">Schema</abbr></a> $parent)
+                    <p>Sets the parent schema</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Schema.html"><abbr title="Propel\Generator\Model\Schema">Schema</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getParentSchema">getParentSchema</a>()
+                    <p>Returns the parent schema</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Domain.html"><abbr title="Propel\Generator\Model\Domain">Domain</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addDomain">addDomain</a>(<a href="../../../Propel/Generator/Model/Domain.html"><abbr title="Propel\Generator\Model\Domain">Domain</abbr></a>|array $data)
+                    <p>Adds a domain object to this database.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Domain.html"><abbr title="Propel\Generator\Model\Domain">Domain</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getDomain">getDomain</a>(string $name)
+                    <p>Returns the already configured domain object by its name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Propel\Generator\Model\GeneratorConfigInterface">GeneratorConfigInterface</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getGeneratorConfig">getGeneratorConfig</a>()
+                    <p>Returns the GeneratorConfigInterface object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getBuildProperty">getBuildProperty</a>(string $name)
+                    <p>Returns the build property identified by its name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addBehavior">addBehavior</a>(<a href="../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>|array $bdata)
+                    <p>Adds a new behavior to the database*</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getBehaviors">getBehaviors</a>()
+                    <p>Returns the list of all database behaviors.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasBehavior">hasBehavior</a>(string $name)
+                    <p>Returns whether or not the database has a specific behavior.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getBehavior">getBehavior</a>(string $name)
+                    <p>Returns the corresponding behavior identified by its name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getTablePrefix">getTablePrefix</a>()
+                    <p>Returns the table prefix for this database.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getNextTableBehavior">getNextTableBehavior</a>()
+                    <p>Returns the next behavior on all tables, ordered by behavior priority, and skipping the ones that were already executed.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_doFinalInitialization">doFinalInitialization</a>()
+                    <p>Finalizes the setup process.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_appendXml">appendXml</a>(<abbr title="Propel\Generator\Model\DOMNode">DOMNode</abbr> $node)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 56</div>
+        <code>            public            
+    <strong>__construct</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Constructs a new Database object.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNamespace">
+        <div class="location">in <a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_getNamespace"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a> at line 57</div>
+        <code>            public            string
+    <strong>getNamespace</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the namespace.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setNamespace">
+        <div class="location">in <a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_setNamespace"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a> at line 67</div>
+        <code>            public            
+    <strong>setNamespace</strong>(string $namespace)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the namespace.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isAbsoluteNamespace">
+        <div class="location">in <a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_isAbsoluteNamespace"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a> at line 90</div>
+        <code>            public            boolean
+    <strong>isAbsoluteNamespace</strong>(string $namespace)</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not the namespace is absolute.</p>
+        <p>A namespace is absolute if it starts with a &quot;\&quot;.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPackage">
+        <div class="location">in <a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_getPackage"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a> at line 100</div>
+        <code>            public            string
+    <strong>getPackage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the package name.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPackage">
+        <div class="location">in <a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_setPackage"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a> at line 110</div>
+        <code>            public            
+    <strong>setPackage</strong>(string $package)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the package name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$package</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSchema">
+        <div class="location">in <a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_getSchema"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a> at line 125</div>
+        <code>            public            string
+    <strong>getSchema</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the schema name.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSchema">
+        <div class="location">in <a href="../../../Propel/Generator/Model/ScopedMappingModel.html#method_setSchema"><abbr title="Propel\Generator\Model\ScopedMappingModel">ScopedMappingModel</abbr></a> at line 135</div>
+        <code>            public            
+    <strong>setSchema</strong>(string $schema)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the schema name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$schema</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPlatform">
+        <div class="location">at line 96</div>
+        <code>            public            <a href="../../../Propel/Generator/Platform/PlatformInterface.html"><abbr title="Propel\Generator\Platform\PlatformInterface">PlatformInterface</abbr></a>
+    <strong>getPlatform</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the PlatformInterface implementation for this database.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Platform/PlatformInterface.html"><abbr title="Propel\Generator\Platform\PlatformInterface">PlatformInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPlatform">
+        <div class="location">at line 106</div>
+        <code>            public            
+    <strong>setPlatform</strong>(<a href="../../../Propel/Generator/Platform/PlatformInterface.html"><abbr title="Propel\Generator\Platform\PlatformInterface">PlatformInterface</abbr></a> $platform = null)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the PlatformInterface implementation for this database.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Platform/PlatformInterface.html"><abbr title="Propel\Generator\Platform\PlatformInterface">PlatformInterface</abbr></a></td>
+                <td>$platform</td>
+                <td>A Platform implementation</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getName">
+        <div class="location">at line 116</div>
+        <code>            public            string
+    <strong>getName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the database name.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setName">
+        <div class="location">at line 126</div>
+        <code>            public            
+    <strong>setName</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the database name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBaseClass">
+        <div class="location">at line 137</div>
+        <code>            public            string
+    <strong>getBaseClass</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the name of the base super class inherited by active record objects.</p>
+        <p>This parameter is overridden at the table level.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setBaseClass">
+        <div class="location">at line 148</div>
+        <code>            public            
+    <strong>setBaseClass</strong>($class)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the name of the base super class inherited by active record objects.</p>
+        <p>This parameter is overridden at the table level.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBasePeer">
+        <div class="location">at line 159</div>
+        <code>            public            string
+    <strong>getBasePeer</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the name of the base peer super class inherited by Peer classes.</p>
+        <p>This parameter is overridden at the table level.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setBasePeer">
+        <div class="location">at line 170</div>
+        <code>            public            
+    <strong>setBasePeer</strong>(string $class)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the name of the base peer super class inherited by Peer classes.</p>
+        <p>This parameter is overridden at the table level.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDefaultIdMethod">
+        <div class="location">at line 181</div>
+        <code>            public            string
+    <strong>getDefaultIdMethod</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the name of the default ID method strategy.</p>
+        <p>This parameter can be overridden at the table level.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDefaultIdMethod">
+        <div class="location">at line 192</div>
+        <code>            public            
+    <strong>setDefaultIdMethod</strong>(string $strategy)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the name of the default ID method strategy.</p>
+        <p>This parameter can be overridden at the table level.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$strategy</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDefaultPhpNamingMethod">
+        <div class="location">at line 204</div>
+        <code>            public            string
+    <strong>getDefaultPhpNamingMethod</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the name of the default PHP naming method strategy, which specifies the method for converting schema names for table and column to PHP names.</p>
+        <p>This parameter can be overridden at the table layer.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDefaultPhpNamingMethod">
+        <div class="location">at line 214</div>
+        <code>            public            
+    <strong>setDefaultPhpNamingMethod</strong>(string $strategy)</code>
+    </h3>
+    <div class="details">
+        <p>Sets name of the default PHP naming method strategy.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$strategy</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSupportedStringFormats">
+        <div class="location">at line 224</div>
+        <code>        static    public            array
+    <strong>getSupportedStringFormats</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the list of supported string formats</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDefaultStringFormat">
+        <div class="location">at line 238</div>
+        <code>            public            
+    <strong>setDefaultStringFormat</strong>(string $format)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the default string format for ActiveRecord objects in this table.</p>
+        <p>This parameter can be overridden at the table level.<br />
+<br />
+ Any of &#039;XML&#039;, &#039;YAML&#039;, &#039;JSON&#039;, or &#039;CSV&#039;.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDefaultStringFormat">
+        <div class="location">at line 256</div>
+        <code>            public            string
+    <strong>getDefaultStringFormat</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the default string format for ActiveRecord objects in this table.</p>
+        <p>This parameter can be overridden at the table level.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isHeavyIndexing">
+        <div class="location">at line 268</div>
+        <code>            public            boolean
+    <strong>isHeavyIndexing</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not heavy indexing is enabled.</p>
+        <p>This is an alias for getHeavyIndexing().</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getHeavyIndexing">
+        <div class="location">at line 280</div>
+        <code>            public            boolean
+    <strong>getHeavyIndexing</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not heavy indexing is enabled.</p>
+        <p>This is an alias for isHeavyIndexing().</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setHeavyIndexing">
+        <div class="location">at line 290</div>
+        <code>            public            
+    <strong>setHeavyIndexing</strong>(boolean $heavyIndexing)</code>
+    </h3>
+    <div class="details">
+        <p>Sets whether or not heavy indexing is enabled.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$heavyIndexing</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTables">
+        <div class="location">at line 300</div>
+        <code>            public            array
+    <strong>getTables</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the list of all tables.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_countTables">
+        <div class="location">at line 310</div>
+        <code>            public            integer
+    <strong>countTables</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the number of tables in the database.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTablesForSql">
+        <div class="location">at line 327</div>
+        <code>            public            array
+    <strong>getTablesForSql</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the list of all tables that have a SQL representation.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasTable">
+        <div class="location">at line 346</div>
+        <code>            public            boolean
+    <strong>hasTable</strong>(string $name, boolean $caseInsensitive = false)</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not the database has a table.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$caseInsensitive</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTable">
+        <div class="location">at line 362</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a>
+    <strong>getTable</strong>(string $name, boolean $caseInsensitive = false)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the table with the specified name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$caseInsensitive</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasTableByPhpName">
+        <div class="location">at line 382</div>
+        <code>            public            boolean
+    <strong>hasTableByPhpName</strong>(string $phpName)</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not the database has a table identified by its PHP name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$phpName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTableByPhpName">
+        <div class="location">at line 393</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a>
+    <strong>getTableByPhpName</strong>(string $phpName)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the table object with the specified PHP name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$phpName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addTable">
+        <div class="location">at line 408</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a>
+    <strong>addTable</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a>|array $table)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a new table to this database.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a>|array</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setParentSchema">
+        <div class="location">at line 476</div>
+        <code>            public            
+    <strong>setParentSchema</strong>(<a href="../../../Propel/Generator/Model/Schema.html"><abbr title="Propel\Generator\Model\Schema">Schema</abbr></a> $parent)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the parent schema</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Schema.html"><abbr title="Propel\Generator\Model\Schema">Schema</abbr></a></td>
+                <td>$parent</td>
+                <td>The parent schema</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getParentSchema">
+        <div class="location">at line 486</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Schema.html"><abbr title="Propel\Generator\Model\Schema">Schema</abbr></a>
+    <strong>getParentSchema</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the parent schema</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Schema.html"><abbr title="Propel\Generator\Model\Schema">Schema</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addDomain">
+        <div class="location">at line 497</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Domain.html"><abbr title="Propel\Generator\Model\Domain">Domain</abbr></a>
+    <strong>addDomain</strong>(<a href="../../../Propel/Generator/Model/Domain.html"><abbr title="Propel\Generator\Model\Domain">Domain</abbr></a>|array $data)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a domain object to this database.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Domain.html"><abbr title="Propel\Generator\Model\Domain">Domain</abbr></a>|array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Domain.html"><abbr title="Propel\Generator\Model\Domain">Domain</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDomain">
+        <div class="location">at line 520</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Domain.html"><abbr title="Propel\Generator\Model\Domain">Domain</abbr></a>
+    <strong>getDomain</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the already configured domain object by its name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Domain.html"><abbr title="Propel\Generator\Model\Domain">Domain</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getGeneratorConfig">
+        <div class="location">at line 534</div>
+        <code>            public            <abbr title="Propel\Generator\Model\GeneratorConfigInterface">GeneratorConfigInterface</abbr>
+    <strong>getGeneratorConfig</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the GeneratorConfigInterface object.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Generator\Model\GeneratorConfigInterface">GeneratorConfigInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBuildProperty">
+        <div class="location">at line 549</div>
+        <code>            public            string
+    <strong>getBuildProperty</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the build property identified by its name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addBehavior">
+        <div class="location">at line 564</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
+    <strong>addBehavior</strong>(<a href="../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>|array $bdata)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a new behavior to the database*</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>|array</td>
+                <td>$bdata</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBehaviors">
+        <div class="location">at line 586</div>
+        <code>            public            array
+    <strong>getBehaviors</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the list of all database behaviors.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasBehavior">
+        <div class="location">at line 597</div>
+        <code>            public            boolean
+    <strong>hasBehavior</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not the database has a specific behavior.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBehavior">
+        <div class="location">at line 608</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
+    <strong>getBehavior</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the corresponding behavior identified by its name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTablePrefix">
+        <div class="location">at line 622</div>
+        <code>            public            string
+    <strong>getTablePrefix</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the table prefix for this database.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNextTableBehavior">
+        <div class="location">at line 633</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
+    <strong>getNextTableBehavior</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the next behavior on all tables, ordered by behavior priority, and skipping the ones that were already executed.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_doFinalInitialization">
+        <div class="location">at line 657</div>
+        <code>            public            
+    <strong>doFinalInitialization</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Finalizes the setup process.</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_appendXml">
+        <div class="location">at line 702</div>
+        <code>            public            
+    <strong>appendXml</strong>(<abbr title="Propel\Generator\Model\DOMNode">DOMNode</abbr> $node)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Generator\Model\DOMNode">DOMNode</abbr></td>
+                <td>$node</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

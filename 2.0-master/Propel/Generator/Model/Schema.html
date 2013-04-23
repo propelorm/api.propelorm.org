@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Propel\Generator\Model\Schema | Propel 2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel 2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Propel/Generator/Model.html">Propel\Generator\Model</a>\Schema</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Schema</strong></p>
+
+            <div class="description">
+            <p>A class for holding application data structures.</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Propel/Generator/Platform/PlatformInterface.html"><abbr title="Propel\Generator\Platform\PlatformInterface">PlatformInterface</abbr></a> $platform = null)
+                    <p>Creates a new instance for the specified database type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPlatform">setPlatform</a>(<a href="../../../Propel/Generator/Platform/PlatformInterface.html"><abbr title="Propel\Generator\Platform\PlatformInterface">PlatformInterface</abbr></a> $platform)
+                    <p>Sets the platform object to use for any databases added to this application schema.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Platform/PlatformInterface.html"><abbr title="Propel\Generator\Platform\PlatformInterface">PlatformInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getPlatform">getPlatform</a>()
+                    <p>Returns the platform object to use for any databases added to this application schema.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setGeneratorConfig">setGeneratorConfig</a>(<a href="../../../Propel/Generator/Config/GeneratorConfigInterface.html"><abbr title="Propel\Generator\Config\GeneratorConfigInterface">GeneratorConfigInterface</abbr></a> $generatorConfig)
+                    <p>Sets the generator configuration</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Config/GeneratorConfigInterface.html"><abbr title="Propel\Generator\Config\GeneratorConfigInterface">GeneratorConfigInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getGeneratorConfig">getGeneratorConfig</a>()
+                    <p>Returns the generator configuration</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setName">setName</a>(string $name)
+                    <p>Sets the schema name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getName">getName</a>()
+                    <p>Returns the schema name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getShortName">getShortName</a>()
+                    <p>Returns the schema short name (without the &#039;-schema&#039; postfix).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getDatabases">getDatabases</a>(boolean $doFinalInitialization = true)
+                    <p>Returns an array of all databases.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasMultipleDatabases">hasMultipleDatabases</a>()
+                    <p>Returns whether or not this schema has multiple databases.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getDatabase">getDatabase</a>(string $name = null, boolean $doFinalInitialization = true)
+                    <p>Returns the database according to the specified name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasDatabase">hasDatabase</a>(string $name)
+                    <p>Returns whether or not a database with the specified name exists in this schema.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addDatabase">addDatabase</a>(<a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a>|array $database)
+                    <p>Adds a database to the list and sets the Schema property to this Schema.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_doFinalInitialization">doFinalInitialization</a>()
+                    <p>Finalizes the databases initialization.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_joinSchemas">joinSchemas</a>(array $schemas)
+                    <p>Merge other Schema objects together into this Schema object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_countTables">countTables</a>()
+                    <p>Returns the number of tables in all the databases of this Schema object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_toString">toString</a>()
+                    <p>Creates a string representation of this Schema.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___toString">__toString</a>()
+                    <p>Magic string method</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 39</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../Propel/Generator/Platform/PlatformInterface.html"><abbr title="Propel\Generator\Platform\PlatformInterface">PlatformInterface</abbr></a> $platform = null)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new instance for the specified database type.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Platform/PlatformInterface.html"><abbr title="Propel\Generator\Platform\PlatformInterface">PlatformInterface</abbr></a></td>
+                <td>$platform</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPlatform">
+        <div class="location">at line 55</div>
+        <code>            public            
+    <strong>setPlatform</strong>(<a href="../../../Propel/Generator/Platform/PlatformInterface.html"><abbr title="Propel\Generator\Platform\PlatformInterface">PlatformInterface</abbr></a> $platform)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the platform object to use for any databases added to this application schema.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Platform/PlatformInterface.html"><abbr title="Propel\Generator\Platform\PlatformInterface">PlatformInterface</abbr></a></td>
+                <td>$platform</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPlatform">
+        <div class="location">at line 66</div>
+        <code>            public            <a href="../../../Propel/Generator/Platform/PlatformInterface.html"><abbr title="Propel\Generator\Platform\PlatformInterface">PlatformInterface</abbr></a>
+    <strong>getPlatform</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the platform object to use for any databases added to this application schema.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Platform/PlatformInterface.html"><abbr title="Propel\Generator\Platform\PlatformInterface">PlatformInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setGeneratorConfig">
+        <div class="location">at line 76</div>
+        <code>            public            
+    <strong>setGeneratorConfig</strong>(<a href="../../../Propel/Generator/Config/GeneratorConfigInterface.html"><abbr title="Propel\Generator\Config\GeneratorConfigInterface">GeneratorConfigInterface</abbr></a> $generatorConfig)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the generator configuration</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Config/GeneratorConfigInterface.html"><abbr title="Propel\Generator\Config\GeneratorConfigInterface">GeneratorConfigInterface</abbr></a></td>
+                <td>$generatorConfig</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getGeneratorConfig">
+        <div class="location">at line 86</div>
+        <code>            public            <a href="../../../Propel/Generator/Config/GeneratorConfigInterface.html"><abbr title="Propel\Generator\Config\GeneratorConfigInterface">GeneratorConfigInterface</abbr></a>
+    <strong>getGeneratorConfig</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the generator configuration</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Config/GeneratorConfigInterface.html"><abbr title="Propel\Generator\Config\GeneratorConfigInterface">GeneratorConfigInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setName">
+        <div class="location">at line 96</div>
+        <code>            public            
+    <strong>setName</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the schema name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getName">
+        <div class="location">at line 106</div>
+        <code>            public            string
+    <strong>getName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the schema name.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getShortName">
+        <div class="location">at line 116</div>
+        <code>            public            string
+    <strong>getShortName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the schema short name (without the &#039;-schema&#039; postfix).</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDatabases">
+        <div class="location">at line 130</div>
+        <code>            public            array
+    <strong>getDatabases</strong>(boolean $doFinalInitialization = true)</code>
+    </h3>
+    <div class="details">
+        <p>Returns an array of all databases.</p>
+        <p>The first boolean parameter tells whether or not to run the<br />
+ final initialization process.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$doFinalInitialization</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasMultipleDatabases">
+        <div class="location">at line 146</div>
+        <code>            public            boolean
+    <strong>hasMultipleDatabases</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not this schema has multiple databases.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDatabase">
+        <div class="location">at line 158</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a>
+    <strong>getDatabase</strong>(string $name = null, boolean $doFinalInitialization = true)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the database according to the specified name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$doFinalInitialization</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasDatabase">
+        <div class="location">at line 188</div>
+        <code>            public            boolean
+    <strong>hasDatabase</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Returns whether or not a database with the specified name exists in this schema.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addDatabase">
+        <div class="location">at line 207</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a>
+    <strong>addDatabase</strong>(<a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a>|array $database)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a database to the list and sets the Schema property to this Schema.</p>
+        <p>The database can be specified as a Database object or a<br />
+ DOMNode object.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a>|array</td>
+                <td>$database</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_doFinalInitialization">
+        <div class="location">at line 236</div>
+        <code>            public            
+    <strong>doFinalInitialization</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Finalizes the databases initialization.</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_joinSchemas">
+        <div class="location">at line 251</div>
+        <code>            public            
+    <strong>joinSchemas</strong>(array $schemas)</code>
+    </h3>
+    <div class="details">
+        <p>Merge other Schema objects together into this Schema object.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$schemas</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_countTables">
+        <div class="location">at line 288</div>
+        <code>            public            integer
+    <strong>countTables</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the number of tables in all the databases of this Schema object.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toString">
+        <div class="location">at line 304</div>
+        <code>            public            string
+    <strong>toString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Creates a string representation of this Schema.</p>
+        <p>The representation is given in xml format.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>Representation in xml format</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___toString">
+        <div class="location">at line 325</div>
+        <code>            public            
+    <strong>__toString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Magic string method</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>toString()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

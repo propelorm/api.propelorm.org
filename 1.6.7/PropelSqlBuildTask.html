@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>PropelSqlBuildTask | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>PropelSqlBuildTask</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PropelSqlBuildTask</strong>        extends <a href="AbstractPropelDataModelTask.html"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a></p>
+
+            <div class="description">
+            <p>The new task for building SQL DDL based on the XML datamodel.</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <abbr title="List">List</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getDataModels">getDataModels</a>()
+                    <p>Return the data models that have been processed.</p>
+                </td>
+                <td><small>from&nbsp;<a href="AbstractPropelDataModelTask.html#method_getDataModels"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Hashtable">Hashtable</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getDataModelDbMap">getDataModelDbMap</a>()
+                    <p>Return the data model to database name map.</p>
+                </td>
+                <td><small>from&nbsp;<a href="AbstractPropelDataModelTask.html#method_getDataModelDbMap"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addSchemaFileset">addSchemaFileset</a>(<abbr title="Fileset">Fileset</abbr> $set)
+                    <p>Adds a set of xml schema files (nested fileset attribute).</p>
+                </td>
+                <td><small>from&nbsp;<a href="AbstractPropelDataModelTask.html#method_addSchemaFileset"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    String
+                </td>
+                <td class="last">
+                    <a href="#method_getTargetDatabase">getTargetDatabase</a>()
+                    <p>Get the current target database.</p>
+                </td>
+                <td><small>from&nbsp;<a href="AbstractPropelDataModelTask.html#method_getTargetDatabase"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setTargetDatabase">setTargetDatabase</a>(<abbr title="v">v</abbr> $v)
+                    <p>Set the current target database.</p>
+                </td>
+                <td><small>from&nbsp;<a href="AbstractPropelDataModelTask.html#method_setTargetDatabase"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getTargetPackage">getTargetPackage</a>()
+                    <p>Get the current target package.</p>
+                </td>
+                <td><small>from&nbsp;<a href="AbstractPropelDataModelTask.html#method_getTargetPackage"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setTargetPackage">setTargetPackage</a>(string $v)
+                    <p>Set the current target package.</p>
+                </td>
+                <td><small>from&nbsp;<a href="AbstractPropelDataModelTask.html#method_setTargetPackage"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPackageObjectModel">setPackageObjectModel</a>(boolean $v)
+                    <p>Set the packageObjectModel switch on/off</p>
+                </td>
+                <td><small>from&nbsp;<a href="AbstractPropelDataModelTask.html#method_setPackageObjectModel"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setValidate">setValidate</a>(boolean $v)
+                    <p>Set whether to perform validation on the datamodel schema.xml file(s).</p>
+                </td>
+                <td><small>from&nbsp;<a href="AbstractPropelDataModelTask.html#method_setValidate"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setXsd">setXsd</a>(<abbr title="PhingFile">PhingFile</abbr> $v)
+                    <p>Set the XSD schema to use for validation of any datamodel schema.xml file(s).</p>
+                </td>
+                <td><small>from&nbsp;<a href="AbstractPropelDataModelTask.html#method_setXsd"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setXsl">setXsl</a>(<abbr title="PhingFile">PhingFile</abbr> $v)
+                    <p>Set the normalization XSLT to use to transform datamodel schema.xml file(s) before validation and parsing.</p>
+                </td>
+                <td><small>from&nbsp;<a href="AbstractPropelDataModelTask.html#method_setXsl"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_setOutputDirectory">setOutputDirectory</a>(<abbr title="PhingFile">PhingFile</abbr> $outputDirectory)
+                    <p>[REQUIRED] Set the output directory.</p>
+                </td>
+                <td><small>from&nbsp;<a href="AbstractPropelDataModelTask.html#method_setOutputDirectory"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDbEncoding">setDbEncoding</a>(<abbr title="v">v</abbr> $v)
+                    <p>Set the current target database encoding.</p>
+                </td>
+                <td><small>from&nbsp;<a href="AbstractPropelDataModelTask.html#method_setDbEncoding"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setUrl">setUrl</a>(string $url)
+                    <p>Set the DB connection url.</p>
+                </td>
+                <td><small>from&nbsp;<a href="AbstractPropelDataModelTask.html#method_setUrl"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setUserid">setUserid</a>(string $userId)
+                    <p>Set the user name for the DB connection.</p>
+                </td>
+                <td><small>from&nbsp;<a href="AbstractPropelDataModelTask.html#method_setUserid"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPassword">setPassword</a>(string $password)
+                    <p>Set the password for the DB connection.</p>
+                </td>
+                <td><small>from&nbsp;<a href="AbstractPropelDataModelTask.html#method_setPassword"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getOutputDirectory">getOutputDirectory</a>()
+                    <p>Get the output directory.</p>
+                </td>
+                <td><small>from&nbsp;<a href="AbstractPropelDataModelTask.html#method_getOutputDirectory"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Mapper">Mapper</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_createMapper">createMapper</a>()
+                    <p>Nested creator, creates one Mapper for this task.</p>
+                </td>
+                <td><small>from&nbsp;<a href="AbstractPropelDataModelTask.html#method_createMapper"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getConnection">getConnection</a>()
+                    <p>Gets the PDO connection, if URL specified.</p>
+                </td>
+                <td><small>from&nbsp;<a href="AbstractPropelDataModelTask.html#method_getConnection"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_main">main</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getDataModels">
+        <div class="location">in <a href="AbstractPropelDataModelTask.html#method_getDataModels"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a> at line 147</div>
+        <code>            public            <abbr title="List">List</abbr>
+    <strong>getDataModels</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the data models that have been processed.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="List">List</abbr></td>
+            <td>data models</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDataModelDbMap">
+        <div class="location">in <a href="AbstractPropelDataModelTask.html#method_getDataModelDbMap"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a> at line 161</div>
+        <code>            public            <abbr title="Hashtable">Hashtable</abbr>
+    <strong>getDataModelDbMap</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the data model to database name map.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Hashtable">Hashtable</abbr></td>
+            <td>data model name to database name map.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addSchemaFileset">
+        <div class="location">in <a href="AbstractPropelDataModelTask.html#method_addSchemaFileset"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a> at line 175</div>
+        <code>            public            
+    <strong>addSchemaFileset</strong>(<abbr title="Fileset">Fileset</abbr> $set)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a set of xml schema files (nested fileset attribute).</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Fileset">Fileset</abbr></td>
+                <td>$set</td>
+                <td>a Set of xml schema files</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTargetDatabase">
+        <div class="location">in <a href="AbstractPropelDataModelTask.html#method_getTargetDatabase"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a> at line 185</div>
+        <code>            public            String
+    <strong>getTargetDatabase</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the current target database.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>String</td>
+            <td>target database(s)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setTargetDatabase">
+        <div class="location">in <a href="AbstractPropelDataModelTask.html#method_setTargetDatabase"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a> at line 195</div>
+        <code>            public            
+    <strong>setTargetDatabase</strong>(<abbr title="v">v</abbr> $v)</code>
+    </h3>
+    <div class="details">
+        <p>Set the current target database.</p>
+        <p>(e.g. mysql, oracle, ..)</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="v">v</abbr></td>
+                <td>$v</td>
+                <td>target database(s)</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTargetPackage">
+        <div class="location">in <a href="AbstractPropelDataModelTask.html#method_getTargetPackage"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a> at line 205</div>
+        <code>            public            string
+    <strong>getTargetPackage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the current target package.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>target PHP package.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setTargetPackage">
+        <div class="location">in <a href="AbstractPropelDataModelTask.html#method_setTargetPackage"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a> at line 216</div>
+        <code>            public            
+    <strong>setTargetPackage</strong>(string $v)</code>
+    </h3>
+    <div class="details">
+        <p>Set the current target package.</p>
+        <p>This is where generated PHP classes will<br />
+ live.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$v</td>
+                <td>target PHP package.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPackageObjectModel">
+        <div class="location">in <a href="AbstractPropelDataModelTask.html#method_setPackageObjectModel"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a> at line 226</div>
+        <code>            public            
+    <strong>setPackageObjectModel</strong>(boolean $v)</code>
+    </h3>
+    <div class="details">
+        <p>Set the packageObjectModel switch on/off</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$v</td>
+                <td>The build.property packageObjectModel</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setValidate">
+        <div class="location">in <a href="AbstractPropelDataModelTask.html#method_setValidate"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a> at line 235</div>
+        <code>            public            
+    <strong>setValidate</strong>(boolean $v)</code>
+    </h3>
+    <div class="details">
+        <p>Set whether to perform validation on the datamodel schema.xml file(s).</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$v</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setXsd">
+        <div class="location">in <a href="AbstractPropelDataModelTask.html#method_setXsd"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a> at line 244</div>
+        <code>            public            
+    <strong>setXsd</strong>(<abbr title="PhingFile">PhingFile</abbr> $v)</code>
+    </h3>
+    <div class="details">
+        <p>Set the XSD schema to use for validation of any datamodel schema.xml file(s).</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="PhingFile">PhingFile</abbr></td>
+                <td>$v</td>
+                <td>PhingFile</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setXsl">
+        <div class="location">in <a href="AbstractPropelDataModelTask.html#method_setXsl"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a> at line 253</div>
+        <code>            public            
+    <strong>setXsl</strong>(<abbr title="PhingFile">PhingFile</abbr> $v)</code>
+    </h3>
+    <div class="details">
+        <p>Set the normalization XSLT to use to transform datamodel schema.xml file(s) before validation and parsing.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="PhingFile">PhingFile</abbr></td>
+                <td>$v</td>
+                <td>PhingFile</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setOutputDirectory">
+        <div class="location">in <a href="AbstractPropelDataModelTask.html#method_setOutputDirectory"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a> at line 265</div>
+        <code>            public            void
+    <strong>setOutputDirectory</strong>(<abbr title="PhingFile">PhingFile</abbr> $outputDirectory)</code>
+    </h3>
+    <div class="details">
+        <p>[REQUIRED] Set the output directory.</p>
+        <p>It will be<br />
+ created if it doesn&#039;t exist.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="PhingFile">PhingFile</abbr></td>
+                <td>$outputDirectory</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="BuildException">BuildException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDbEncoding">
+        <div class="location">in <a href="AbstractPropelDataModelTask.html#method_setDbEncoding"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a> at line 285</div>
+        <code>            public            
+    <strong>setDbEncoding</strong>(<abbr title="v">v</abbr> $v)</code>
+    </h3>
+    <div class="details">
+        <p>Set the current target database encoding.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="v">v</abbr></td>
+                <td>$v</td>
+                <td>target database encoding</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setUrl">
+        <div class="location">in <a href="AbstractPropelDataModelTask.html#method_setUrl"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a> at line 295</div>
+        <code>            public            
+    <strong>setUrl</strong>(string $url)</code>
+    </h3>
+    <div class="details">
+        <p>Set the DB connection url.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>connection url</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setUserid">
+        <div class="location">in <a href="AbstractPropelDataModelTask.html#method_setUserid"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a> at line 305</div>
+        <code>            public            
+    <strong>setUserid</strong>(string $userId)</code>
+    </h3>
+    <div class="details">
+        <p>Set the user name for the DB connection.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$userId</td>
+                <td>database user</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPassword">
+        <div class="location">in <a href="AbstractPropelDataModelTask.html#method_setPassword"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a> at line 315</div>
+        <code>            public            
+    <strong>setPassword</strong>(string $password)</code>
+    </h3>
+    <div class="details">
+        <p>Set the password for the DB connection.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td>database password</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOutputDirectory">
+        <div class="location">in <a href="AbstractPropelDataModelTask.html#method_getOutputDirectory"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a> at line 324</div>
+        <code>            public            string
+    <strong>getOutputDirectory</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the output directory.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createMapper">
+        <div class="location">in <a href="AbstractPropelDataModelTask.html#method_createMapper"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a> at line 335</div>
+        <code>            public            <abbr title="Mapper">Mapper</abbr>
+    <strong>createMapper</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Nested creator, creates one Mapper for this task.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Mapper">Mapper</abbr></td>
+            <td>The created Mapper type object.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="BuildException">BuildException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConnection">
+        <div class="location">in <a href="AbstractPropelDataModelTask.html#method_getConnection"><abbr title="AbstractPropelDataModelTask">AbstractPropelDataModelTask</abbr></a> at line 374</div>
+        <code>            public            <a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a>
+    <strong>getConnection</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the PDO connection, if URL specified.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a></td>
+            <td>Connection to use (for quoting, Platform class, etc.) or NULL if no connection params were specified.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_main">
+        <div class="location">at line 21</div>
+        <code>            public            
+    <strong>main</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

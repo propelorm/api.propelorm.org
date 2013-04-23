@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Propel\Generator\Model\Domain | Propel 2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel 2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Propel/Generator/Model.html">Propel\Generator\Model</a>\Domain</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Domain</strong>        extends <a href="../../../Propel/Generator/Model/MappingModel.html"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a></p>
+
+            <div class="description">
+            <p>A class for holding data about a domain used in the schema.</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(string $type = null, string $sqlType = null, string $size = null, string $scale = null)
+                    <p>Creates a new Domain object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_loadMapping">loadMapping</a>(array $attributes)
+                    <p>Loads a mapping definition from an array.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/MappingModel.html#method_loadMapping"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAttributes">getAttributes</a>()
+                    <p>Returns all definition attributes.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/MappingModel.html#method_getAttributes"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getAttribute">getAttribute</a>(string $name, mixed $default = null)
+                    <p>Returns a particular attribute by a case-insensitive name.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/MappingModel.html#method_getAttribute"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_appendXml">appendXml</a>(<abbr title="Propel\Generator\Model\DOMNode">DOMNode</abbr> $node)
+                    <p>Appends DOM elements to represent this object in XML.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/VendorInfo.html"><abbr title="Propel\Generator\Model\VendorInfo">VendorInfo</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addVendorInfo">addVendorInfo</a>($vendor)
+                    <p>Adds a new VendorInfo instance to this current model object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/MappingModel.html#method_addVendorInfo"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/VendorInfo.html"><abbr title="Propel\Generator\Model\VendorInfo">VendorInfo</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getVendorInfoForType">getVendorInfoForType</a>(string $type)
+                    <p>Returns a VendorInfo object by its type.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/MappingModel.html#method_getVendorInfoForType"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getConfiguredBehavior">getConfiguredBehavior</a>(string $behavior)
+                    <p>Returns the best class name for a given behavior.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/MappingModel.html#method_getConfiguredBehavior"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_toString">toString</a>()
+                    <p>String representation of the current object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/MappingModel.html#method_toString"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method___toString">__toString</a>()
+                    <p>String representation of the current object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/MappingModel.html#method___toString"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_copy">copy</a>(<a href="../../../Propel/Generator/Model/Domain.html"><abbr title="Propel\Generator\Model\Domain">Domain</abbr></a> $domain)
+                    <p>Copies the values from current object into passed-in Domain.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDatabase">setDatabase</a>(<a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a> $database)
+                    <p>Sets the owning database object (if this domain is being setup via XML).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getDatabase">getDatabase</a>()
+                    <p>Returns the owning database object (if this domain was setup via XML).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDescription">getDescription</a>()
+                    <p>Returns the domain description.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDescription">setDescription</a>(string $description)
+                    <p>Sets the domain description.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getName">getName</a>()
+                    <p>Returns the domain description.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setName">setName</a>(string $name)
+                    <p>Sets the domain name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_getScale">getScale</a>()
+                    <p>Returns the scale value.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setScale">setScale</a>(integer $scale)
+                    <p>Sets the scale value.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_replaceScale">replaceScale</a>(integer $scale)
+                    <p>Replaces the size if the new value is not null.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_getSize">getSize</a>()
+                    <p>Returns the size.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSize">setSize</a>(integer $size)
+                    <p>Sets the size.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_replaceSize">replaceSize</a>(integer $size)
+                    <p>Replaces the size if the new value is not null.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getType">getType</a>()
+                    <p>Returns the mapping type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setType">setType</a>(string $mappingType)
+                    <p>Sets the mapping type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_replaceType">replaceType</a>(string $mappingType)
+                    <p>Replaces the mapping type if the new value is not null.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Generator/Model/ColumnDefaultValue.html"><abbr title="Propel\Generator\Model\ColumnDefaultValue">ColumnDefaultValue</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getDefaultValue">getDefaultValue</a>()
+                    <p>Returns the default value object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getPhpDefaultValue">getPhpDefaultValue</a>()
+                    <p>Returns the default value, type-casted for use in PHP OM.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDefaultValue">setDefaultValue</a>(<a href="../../../Propel/Generator/Model/ColumnDefaultValue.html"><abbr title="Propel\Generator\Model\ColumnDefaultValue">ColumnDefaultValue</abbr></a> $value)
+                    <p>Sets the default value.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_replaceDefaultValue">replaceDefaultValue</a>(<a href="../../../Propel/Generator/Model/ColumnDefaultValue.html"><abbr title="Propel\Generator\Model\ColumnDefaultValue">ColumnDefaultValue</abbr></a> $value = null)
+                    <p>Replaces the default value if the new value is not null.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getSqlType">getSqlType</a>()
+                    <p>Returns the SQL type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSqlType">setSqlType</a>(string $sqlType)
+                    <p>Sets the SQL type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_replaceSqlType">replaceSqlType</a>(string $sqlType)
+                    <p>Replaces the SQL type if the new value is not null.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getSizeDefinition">getSizeDefinition</a>()
+                    <p>Returns the size and scale in brackets for use in an sql schema.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 43</div>
+        <code>            public            
+    <strong>__construct</strong>(string $type = null, string $sqlType = null, string $size = null, string $scale = null)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new Domain object.</p>
+        <p>If this domain needs a name, it must be specified manually.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>Propel type.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$sqlType</td>
+                <td>SQL type.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$size</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$scale</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadMapping">
+        <div class="location">in <a href="../../../Propel/Generator/Model/MappingModel.html#method_loadMapping"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a> at line 38</div>
+        <code>            public            
+    <strong>loadMapping</strong>(array $attributes)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a mapping definition from an array.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAttributes">
+        <div class="location">in <a href="../../../Propel/Generator/Model/MappingModel.html#method_getAttributes"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a> at line 58</div>
+        <code>            public            array
+    <strong>getAttributes</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns all definition attributes.</p>
+        <p>All attribute names (keys) are lowercase.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAttribute">
+        <div class="location">in <a href="../../../Propel/Generator/Model/MappingModel.html#method_getAttribute"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a> at line 73</div>
+        <code>            public            mixed
+    <strong>getAttribute</strong>(string $name, mixed $default = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a particular attribute by a case-insensitive name.</p>
+        <p>If the attribute is not set, then the second default value is<br />
+ returned instead.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_appendXml">
+        <div class="location">at line 363</div>
+        <code>            public            
+    <strong>appendXml</strong>(<abbr title="Propel\Generator\Model\DOMNode">DOMNode</abbr> $node)</code>
+    </h3>
+    <div class="details">
+        <p>Appends DOM elements to represent this object in XML.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Generator\Model\DOMNode">DOMNode</abbr></td>
+                <td>$node</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addVendorInfo">
+        <div class="location">in <a href="../../../Propel/Generator/Model/MappingModel.html#method_addVendorInfo"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a> at line 138</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/VendorInfo.html"><abbr title="Propel\Generator\Model\VendorInfo">VendorInfo</abbr></a>
+    <strong>addVendorInfo</strong>($vendor)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a new VendorInfo instance to this current model object.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$vendor</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/VendorInfo.html"><abbr title="Propel\Generator\Model\VendorInfo">VendorInfo</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVendorInfoForType">
+        <div class="location">in <a href="../../../Propel/Generator/Model/MappingModel.html#method_getVendorInfoForType"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a> at line 158</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/VendorInfo.html"><abbr title="Propel\Generator\Model\VendorInfo">VendorInfo</abbr></a>
+    <strong>getVendorInfoForType</strong>(string $type)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a VendorInfo object by its type.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/VendorInfo.html"><abbr title="Propel\Generator\Model\VendorInfo">VendorInfo</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConfiguredBehavior">
+        <div class="location">in <a href="../../../Propel/Generator/Model/MappingModel.html#method_getConfiguredBehavior"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a> at line 176</div>
+        <code>            public            string
+    <strong>getConfiguredBehavior</strong>(string $behavior)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the best class name for a given behavior.</p>
+        <p>If not found, the method tries to autoload \Propel\Generator\Behavior\[Bname]\[Bname]Behavior</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$behavior</td>
+                <td>The behavior name (ie: timestampable)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>$class The behavior fully qualified class name</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="BehaviorNotFoundException">BehaviorNotFoundException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toString">
+        <div class="location">in <a href="../../../Propel/Generator/Model/MappingModel.html#method_toString"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a> at line 198</div>
+        <code>            public            string
+    <strong>toString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>String representation of the current object.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___toString">
+        <div class="location">in <a href="../../../Propel/Generator/Model/MappingModel.html#method___toString"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a> at line 213</div>
+        <code>            public            string
+    <strong>__toString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>String representation of the current object.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_copy">
+        <div class="location">at line 67</div>
+        <code>            public            
+    <strong>copy</strong>(<a href="../../../Propel/Generator/Model/Domain.html"><abbr title="Propel\Generator\Model\Domain">Domain</abbr></a> $domain)</code>
+    </h3>
+    <div class="details">
+        <p>Copies the values from current object into passed-in Domain.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Domain.html"><abbr title="Propel\Generator\Model\Domain">Domain</abbr></a></td>
+                <td>$domain</td>
+                <td>Domain to copy values into.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDatabase">
+        <div class="location">at line 104</div>
+        <code>            public            
+    <strong>setDatabase</strong>(<a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a> $database)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the owning database object (if this domain is being setup via XML).</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a></td>
+                <td>$database</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDatabase">
+        <div class="location">at line 114</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a>
+    <strong>getDatabase</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the owning database object (if this domain was setup via XML).</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDescription">
+        <div class="location">at line 124</div>
+        <code>            public            string
+    <strong>getDescription</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the domain description.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDescription">
+        <div class="location">at line 134</div>
+        <code>            public            
+    <strong>setDescription</strong>(string $description)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the domain description.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$description</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getName">
+        <div class="location">at line 144</div>
+        <code>            public            string
+    <strong>getName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the domain description.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setName">
+        <div class="location">at line 154</div>
+        <code>            public            
+    <strong>setName</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the domain name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getScale">
+        <div class="location">at line 164</div>
+        <code>            public            integer
+    <strong>getScale</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the scale value.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setScale">
+        <div class="location">at line 174</div>
+        <code>            public            
+    <strong>setScale</strong>(integer $scale)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the scale value.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$scale</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_replaceScale">
+        <div class="location">at line 184</div>
+        <code>            public            
+    <strong>replaceScale</strong>(integer $scale)</code>
+    </h3>
+    <div class="details">
+        <p>Replaces the size if the new value is not null.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$scale</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSize">
+        <div class="location">at line 196</div>
+        <code>            public            integer
+    <strong>getSize</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the size.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSize">
+        <div class="location">at line 206</div>
+        <code>            public            
+    <strong>setSize</strong>(integer $size)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the size.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$size</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_replaceSize">
+        <div class="location">at line 216</div>
+        <code>            public            
+    <strong>replaceSize</strong>(integer $size)</code>
+    </h3>
+    <div class="details">
+        <p>Replaces the size if the new value is not null.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$size</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getType">
+        <div class="location">at line 228</div>
+        <code>            public            string
+    <strong>getType</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the mapping type.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setType">
+        <div class="location">at line 238</div>
+        <code>            public            
+    <strong>setType</strong>(string $mappingType)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the mapping type.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$mappingType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_replaceType">
+        <div class="location">at line 248</div>
+        <code>            public            
+    <strong>replaceType</strong>(string $mappingType)</code>
+    </h3>
+    <div class="details">
+        <p>Replaces the mapping type if the new value is not null.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$mappingType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDefaultValue">
+        <div class="location">at line 260</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/ColumnDefaultValue.html"><abbr title="Propel\Generator\Model\ColumnDefaultValue">ColumnDefaultValue</abbr></a>
+    <strong>getDefaultValue</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the default value object.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Generator/Model/ColumnDefaultValue.html"><abbr title="Propel\Generator\Model\ColumnDefaultValue">ColumnDefaultValue</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPhpDefaultValue">
+        <div class="location">at line 270</div>
+        <code>            public            mixed
+    <strong>getPhpDefaultValue</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the default value, type-casted for use in PHP OM.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDefaultValue">
+        <div class="location">at line 296</div>
+        <code>            public            
+    <strong>setDefaultValue</strong>(<a href="../../../Propel/Generator/Model/ColumnDefaultValue.html"><abbr title="Propel\Generator\Model\ColumnDefaultValue">ColumnDefaultValue</abbr></a> $value)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the default value.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/ColumnDefaultValue.html"><abbr title="Propel\Generator\Model\ColumnDefaultValue">ColumnDefaultValue</abbr></a></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_replaceDefaultValue">
+        <div class="location">at line 306</div>
+        <code>            public            
+    <strong>replaceDefaultValue</strong>(<a href="../../../Propel/Generator/Model/ColumnDefaultValue.html"><abbr title="Propel\Generator\Model\ColumnDefaultValue">ColumnDefaultValue</abbr></a> $value = null)</code>
+    </h3>
+    <div class="details">
+        <p>Replaces the default value if the new value is not null.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Model/ColumnDefaultValue.html"><abbr title="Propel\Generator\Model\ColumnDefaultValue">ColumnDefaultValue</abbr></a></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSqlType">
+        <div class="location">at line 318</div>
+        <code>            public            string
+    <strong>getSqlType</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the SQL type.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSqlType">
+        <div class="location">at line 328</div>
+        <code>            public            
+    <strong>setSqlType</strong>(string $sqlType)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the SQL type.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$sqlType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_replaceSqlType">
+        <div class="location">at line 338</div>
+        <code>            public            
+    <strong>replaceSqlType</strong>(string $sqlType)</code>
+    </h3>
+    <div class="details">
+        <p>Replaces the SQL type if the new value is not null.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$sqlType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSizeDefinition">
+        <div class="location">at line 350</div>
+        <code>            public            string
+    <strong>getSizeDefinition</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the size and scale in brackets for use in an sql schema.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

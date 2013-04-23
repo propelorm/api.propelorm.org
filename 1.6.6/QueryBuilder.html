@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>QueryBuilder | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>QueryBuilder</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>QueryBuilder</strong>        extends <a href="OMBuilder.html"><abbr title="OMBuilder">OMBuilder</abbr></a></p>
+
+            <div class="description">
+            <p>Generates a PHP5 base Query class for user object model (OM).</p>
+            <p>This class produces the base query class (e.g. BaseBookQuery) which contains all<br />
+ the custom-built query methods.</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_build">build</a>()
+                    <p>Builds the PHP source for current class and returns it as a string.</p>
+                </td>
+                <td><small>from&nbsp;<a href="OMBuilder.html#method_build"><abbr title="OMBuilder">OMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_buildObjectInstanceCreationCode">buildObjectInstanceCreationCode</a>($objName, $clsName)
+                    <p>Creates a $obj = new Book(); code snippet.</p>
+                </td>
+                <td><small>from&nbsp;<a href="OMBuilder.html#method_buildObjectInstanceCreationCode"><abbr title="OMBuilder">OMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getUnprefixedClassname">getUnprefixedClassname</a>()
+                    <p>Returns the name of the current class being built.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getClassname">getClassname</a>()
+                    <p>Returns the prefixed classname that is being built by the current class.</p>
+                </td>
+                <td><small>from&nbsp;<a href="OMBuilder.html#method_getClassname"><abbr title="OMBuilder">OMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getFullyQualifiedClassname">getFullyQualifiedClassname</a>()
+                    <p>Returns the namespaced classname if there is a namespace, and the raw classname otherwise</p>
+                </td>
+                <td><small>from&nbsp;<a href="OMBuilder.html#method_getFullyQualifiedClassname"><abbr title="OMBuilder">OMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getClasspath">getClasspath</a>()
+                    <p>Gets the dot-path representation of current class being built.</p>
+                </td>
+                <td><small>from&nbsp;<a href="OMBuilder.html#method_getClasspath"><abbr title="OMBuilder">OMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getClassFilePath">getClassFilePath</a>()
+                    <p>Gets the full path to the file for the current class.</p>
+                </td>
+                <td><small>from&nbsp;<a href="OMBuilder.html#method_getClassFilePath"><abbr title="OMBuilder">OMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPackage">getPackage</a>()
+                    <p>Gets the package for the [base] object classes.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPackagePath">getPackagePath</a>()
+                    <p>Returns filesystem path for current package.</p>
+                </td>
+                <td><small>from&nbsp;<a href="OMBuilder.html#method_getPackagePath"><abbr title="OMBuilder">OMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getNamespace">getNamespace</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_declareClassNamespace">declareClassNamespace</a>($class, $namespace = &#039;&#039;)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="OMBuilder.html#method_declareClassNamespace"><abbr title="OMBuilder">OMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_declareClass">declareClass</a>($fullyQualifiedClassName)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="OMBuilder.html#method_declareClass"><abbr title="OMBuilder">OMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_declareClassFromBuilder">declareClassFromBuilder</a>($builder)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="OMBuilder.html#method_declareClassFromBuilder"><abbr title="OMBuilder">OMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_declareClasses">declareClasses</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="OMBuilder.html#method_declareClasses"><abbr title="OMBuilder">OMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getDeclaredClasses">getDeclaredClasses</a>($namespace = null)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="OMBuilder.html#method_getDeclaredClasses"><abbr title="OMBuilder">OMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getNamespaceStatement">getNamespaceStatement</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="OMBuilder.html#method_getNamespaceStatement"><abbr title="OMBuilder">OMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getUseStatements">getUseStatements</a>($ignoredNamespace = null)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="OMBuilder.html#method_getUseStatements"><abbr title="OMBuilder">OMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPeerClassname">getPeerClassname</a>()
+                    <p>Shortcut method to return the [stub] peer classname for current table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="OMBuilder.html#method_getPeerClassname"><abbr title="OMBuilder">OMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getQueryClassname">getQueryClassname</a>()
+                    <p>Shortcut method to return the [stub] query classname for current table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="OMBuilder.html#method_getQueryClassname"><abbr title="OMBuilder">OMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getObjectClassname">getObjectClassname</a>()
+                    <p>Returns the object classname for current table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="OMBuilder.html#method_getObjectClassname"><abbr title="OMBuilder">OMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnConstant">getColumnConstant</a>(<a href="Column.html"><abbr title="Column">Column</abbr></a> $col, string $classname = null)
+                    <p>Get the column constant name (e.g.</p>
+                </td>
+                <td><small>from&nbsp;<a href="OMBuilder.html#method_getColumnConstant"><abbr title="OMBuilder">OMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getBasePeer">getBasePeer</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p>Gets the basePeer path if specified for table/db.</p>
+                </td>
+                <td><small>from&nbsp;<a href="OMBuilder.html#method_getBasePeer"><abbr title="OMBuilder">OMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getFKPhpNameAffix">getFKPhpNameAffix</a>(<a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $fk, boolean $plural = false)
+                    <p>Gets the PHP method name affix to be used for fkeys for the current table (not referrers to this table).</p>
+                </td>
+                <td><small>from&nbsp;<a href="OMBuilder.html#method_getFKPhpNameAffix"><abbr title="OMBuilder">OMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getRefFKPhpNameAffix">getRefFKPhpNameAffix</a>(<a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $fk, boolean $plural = false)
+                    <p>Gets the PHP method name affix to be used for referencing foreign key methods and variable names (e.g.</p>
+                </td>
+                <td><small>from&nbsp;<a href="OMBuilder.html#method_getRefFKPhpNameAffix"><abbr title="OMBuilder">OMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasBehaviorModifier">hasBehaviorModifier</a>($hookName, $modifier = null)
+                    <p>Checks whether any registered behavior on that table has a modifier for a hook</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_applyBehaviorModifierBase">applyBehaviorModifierBase</a>($hookName, $modifier, $script, $tab = &#039;		&#039;)
+                    <p>Checks whether any registered behavior on that table has a modifier for a hook</p>
+                </td>
+                <td><small>from&nbsp;<a href="OMBuilder.html#method_applyBehaviorModifierBase"><abbr title="OMBuilder">OMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getBehaviorContentBase">getBehaviorContentBase</a>(string $contentName, string $modifier)
+                    <p>Checks whether any registered behavior content creator on that table exists a contentName</p>
+                </td>
+                <td><small>from&nbsp;<a href="OMBuilder.html#method_getBehaviorContentBase"><abbr title="OMBuilder">OMBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_applyBehaviorModifier">applyBehaviorModifier</a>($hookName, $script, $tab = &#039;		&#039;)
+                    <p>Checks whether any registered behavior on that table has a modifier for a hook</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getBehaviorContent">getBehaviorContent</a>(string $contentName)
+                    <p>Checks whether any registered behavior content creator on that table exists a contentName</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_build">
+        <div class="location">in <a href="OMBuilder.html#method_build"><abbr title="OMBuilder">OMBuilder</abbr></a> at line 42</div>
+        <code>            public            string
+    <strong>build</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Builds the PHP source for current class and returns it as a string.</p>
+        <p>This is the main entry point and defines a basic structure that classes should follow.<br />
+ In most cases this method will not need to be overridden by subclasses.  This method<br />
+ does assume that the output language is PHP code, so it will need to be overridden if<br />
+ this is not the case.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The resulting PHP sourcecode.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_buildObjectInstanceCreationCode">
+        <div class="location">in <a href="OMBuilder.html#method_buildObjectInstanceCreationCode"><abbr title="OMBuilder">OMBuilder</abbr></a> at line 86</div>
+        <code>            public            string
+    <strong>buildObjectInstanceCreationCode</strong>($objName, $clsName)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a $obj = new Book(); code snippet.</p>
+        <p>Can be used by frameworks, for instance, to<br />
+ extend this behavior, e.g. initialize the object after creating the instance or so.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$objName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$clsName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>Some code</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUnprefixedClassname">
+        <div class="location">at line 49</div>
+        <code>            public            string
+    <strong>getUnprefixedClassname</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the name of the current class being built.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getClassname">
+        <div class="location">in <a href="OMBuilder.html#method_getClassname"><abbr title="OMBuilder">OMBuilder</abbr></a> at line 103</div>
+        <code>            public            string
+    <strong>getClassname</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the prefixed classname that is being built by the current class.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>DataModelBuilder#prefixClassname()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getFullyQualifiedClassname">
+        <div class="location">in <a href="OMBuilder.html#method_getFullyQualifiedClassname"><abbr title="OMBuilder">OMBuilder</abbr></a> at line 112</div>
+        <code>            public            string
+    <strong>getFullyQualifiedClassname</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the namespaced classname if there is a namespace, and the raw classname otherwise</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getClasspath">
+        <div class="location">in <a href="OMBuilder.html#method_getClasspath"><abbr title="OMBuilder">OMBuilder</abbr></a> at line 125</div>
+        <code>            public            string
+    <strong>getClasspath</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the dot-path representation of current class being built.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getClassFilePath">
+        <div class="location">in <a href="OMBuilder.html#method_getClassFilePath"><abbr title="OMBuilder">OMBuilder</abbr></a> at line 140</div>
+        <code>            public            string
+    <strong>getClassFilePath</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the full path to the file for the current class.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPackage">
+        <div class="location">at line 29</div>
+        <code>            public            string
+    <strong>getPackage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the package for the [base] object classes.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPackagePath">
+        <div class="location">in <a href="OMBuilder.html#method_getPackagePath"><abbr title="OMBuilder">OMBuilder</abbr></a> at line 164</div>
+        <code>            public            string
+    <strong>getPackagePath</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns filesystem path for current package.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNamespace">
+        <div class="location">at line 34</div>
+        <code>            public            
+    <strong>getNamespace</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_declareClassNamespace">
+        <div class="location">in <a href="OMBuilder.html#method_declareClassNamespace"><abbr title="OMBuilder">OMBuilder</abbr></a> at line 190</div>
+        <code>            public            
+    <strong>declareClassNamespace</strong>($class, $namespace = &#039;&#039;)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$namespace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_declareClass">
+        <div class="location">in <a href="OMBuilder.html#method_declareClass"><abbr title="OMBuilder">OMBuilder</abbr></a> at line 199</div>
+        <code>            public            
+    <strong>declareClass</strong>($fullyQualifiedClassName)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$fullyQualifiedClassName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_declareClassFromBuilder">
+        <div class="location">in <a href="OMBuilder.html#method_declareClassFromBuilder"><abbr title="OMBuilder">OMBuilder</abbr></a> at line 210</div>
+        <code>            public            
+    <strong>declareClassFromBuilder</strong>($builder)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$builder</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_declareClasses">
+        <div class="location">in <a href="OMBuilder.html#method_declareClasses"><abbr title="OMBuilder">OMBuilder</abbr></a> at line 215</div>
+        <code>            public            
+    <strong>declareClasses</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDeclaredClasses">
+        <div class="location">in <a href="OMBuilder.html#method_getDeclaredClasses"><abbr title="OMBuilder">OMBuilder</abbr></a> at line 223</div>
+        <code>            public            
+    <strong>getDeclaredClasses</strong>($namespace = null)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$namespace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNamespaceStatement">
+        <div class="location">in <a href="OMBuilder.html#method_getNamespaceStatement"><abbr title="OMBuilder">OMBuilder</abbr></a> at line 232</div>
+        <code>            public            
+    <strong>getNamespaceStatement</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUseStatements">
+        <div class="location">in <a href="OMBuilder.html#method_getUseStatements"><abbr title="OMBuilder">OMBuilder</abbr></a> at line 242</div>
+        <code>            public            
+    <strong>getUseStatements</strong>($ignoredNamespace = null)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$ignoredNamespace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPeerClassname">
+        <div class="location">in <a href="OMBuilder.html#method_getPeerClassname"><abbr title="OMBuilder">OMBuilder</abbr></a> at line 266</div>
+        <code>            public            string
+    <strong>getPeerClassname</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Shortcut method to return the [stub] peer classname for current table.</p>
+        <p>This is the classname that is used whenever object or peer classes want<br />
+ to invoke methods of the peer classes.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>(e.g. &#039;MyPeer&#039;)</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>StubPeerBuilder::getClassname()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getQueryClassname">
+        <div class="location">in <a href="OMBuilder.html#method_getQueryClassname"><abbr title="OMBuilder">OMBuilder</abbr></a> at line 278</div>
+        <code>            public            string
+    <strong>getQueryClassname</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Shortcut method to return the [stub] query classname for current table.</p>
+        <p>This is the classname that is used whenever object or peer classes want<br />
+ to invoke methods of the query classes.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>(e.g. &#039;Myquery&#039;)</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>StubQueryBuilder::getClassname()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getObjectClassname">
+        <div class="location">in <a href="OMBuilder.html#method_getObjectClassname"><abbr title="OMBuilder">OMBuilder</abbr></a> at line 290</div>
+        <code>            public            string
+    <strong>getObjectClassname</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the object classname for current table.</p>
+        <p>This is the classname that is used whenever object or peer classes want<br />
+ to invoke methods of the object classes.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>(e.g. &#039;My&#039;)</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>StubPeerBuilder::getClassname()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnConstant">
+        <div class="location">in <a href="OMBuilder.html#method_getColumnConstant"><abbr title="OMBuilder">OMBuilder</abbr></a> at line 305</div>
+        <code>            public            string
+    <strong>getColumnConstant</strong>(<a href="Column.html"><abbr title="Column">Column</abbr></a> $col, string $classname = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get the column constant name (e.g.</p>
+        <p>PeerName::COLUMN_NAME).</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Column.html"><abbr title="Column">Column</abbr></a></td>
+                <td>$col</td>
+                <td>The column we need a name for.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$classname</td>
+                <td>The Peer classname to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>If $classname is provided, then will return $classname::COLUMN_NAME; if not, then the peername is looked up for current table to yield $currTablePeer::COLUMN_NAME.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBasePeer">
+        <div class="location">in <a href="OMBuilder.html#method_getBasePeer"><abbr title="OMBuilder">OMBuilder</abbr></a> at line 330</div>
+        <code>            public            string
+    <strong>getBasePeer</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Gets the basePeer path if specified for table/db.</p>
+        <p>If not, will return &#039;propel.util.BasePeer&#039;</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFKPhpNameAffix">
+        <div class="location">in <a href="OMBuilder.html#method_getFKPhpNameAffix"><abbr title="OMBuilder">OMBuilder</abbr></a> at line 380</div>
+        <code>            public            string
+    <strong>getFKPhpNameAffix</strong>(<a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $fk, boolean $plural = false)</code>
+    </h3>
+    <div class="details">
+        <p>Gets the PHP method name affix to be used for fkeys for the current table (not referrers to this table).</p>
+        <p>The difference between this method and the getRefFKPhpNameAffix() method is that in this method the<br />
+ classname in the affix is the foreign table classname.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a></td>
+                <td>$fk</td>
+                <td>The local FK that we need a name for.</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$plural</td>
+                <td>Whether the php name should be plural (e.g. initRelatedObjs() vs. addRelatedObj()</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRefFKPhpNameAffix">
+        <div class="location">in <a href="OMBuilder.html#method_getRefFKPhpNameAffix"><abbr title="OMBuilder">OMBuilder</abbr></a> at line 443</div>
+        <code>            public            string
+    <strong>getRefFKPhpNameAffix</strong>(<a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $fk, boolean $plural = false)</code>
+    </h3>
+    <div class="details">
+        <p>Gets the PHP method name affix to be used for referencing foreign key methods and variable names (e.g.</p>
+        <p>set????(), $coll???).<br />
+<br />
+ The difference between this method and the getFKPhpNameAffix() method is that in this method the<br />
+ classname in the affix is the classname of the local fkey table.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a></td>
+                <td>$fk</td>
+                <td>The referrer FK that we need a name for.</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$plural</td>
+                <td>Whether the php name should be plural (e.g. initRelatedObjs() vs. addRelatedObj()</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasBehaviorModifier">
+        <div class="location">at line 1421</div>
+        <code>            public            boolean
+    <strong>hasBehaviorModifier</strong>($hookName, $modifier = null)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether any registered behavior on that table has a modifier for a hook</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$hookName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$modifier</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_applyBehaviorModifierBase">
+        <div class="location">in <a href="OMBuilder.html#method_applyBehaviorModifierBase"><abbr title="OMBuilder">OMBuilder</abbr></a> at line 524</div>
+        <code>            public            
+    <strong>applyBehaviorModifierBase</strong>($hookName, $modifier, $script, $tab = &#039;		&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether any registered behavior on that table has a modifier for a hook</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$hookName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$modifier</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$script</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$tab</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBehaviorContentBase">
+        <div class="location">in <a href="OMBuilder.html#method_getBehaviorContentBase"><abbr title="OMBuilder">OMBuilder</abbr></a> at line 552</div>
+        <code>            public            
+    <strong>getBehaviorContentBase</strong>(string $contentName, string $modifier)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether any registered behavior content creator on that table exists a contentName</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$contentName</td>
+                <td>The name of the content as called from one of this class methods, e.g. &quot;parentClassname&quot;</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$modifier</td>
+                <td>The name of the modifier object providing the method in the behavior</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_applyBehaviorModifier">
+        <div class="location">at line 1431</div>
+        <code>            public            
+    <strong>applyBehaviorModifier</strong>($hookName, $script, $tab = &#039;		&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether any registered behavior on that table has a modifier for a hook</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$hookName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$script</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$tab</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBehaviorContent">
+        <div class="location">at line 1440</div>
+        <code>            public            
+    <strong>getBehaviorContent</strong>(string $contentName)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether any registered behavior content creator on that table exists a contentName</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$contentName</td>
+                <td>The name of the content as called from one of this class methods, e.g. &quot;parentClassname&quot;</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

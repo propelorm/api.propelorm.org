@@ -1,0 +1,4046 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Criteria | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>Criteria</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Criteria</strong>        implements
+        <a href="http://php.net/IteratorAggregate"><abbr title="IteratorAggregate">IteratorAggregate</abbr></a></p>
+
+            <div class="description">
+            <p>This is a utility class for holding criteria information for a query.</p>
+            <p>BasePeer constructs SQL statements based on the values in this class.</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>EQUAL</td>
+                <td class="last">
+                    <p><em>Comparison type.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NOT_EQUAL</td>
+                <td class="last">
+                    <p><em>Comparison type.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ALT_NOT_EQUAL</td>
+                <td class="last">
+                    <p><em>Comparison type.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>GREATER_THAN</td>
+                <td class="last">
+                    <p><em>Comparison type.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LESS_THAN</td>
+                <td class="last">
+                    <p><em>Comparison type.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>GREATER_EQUAL</td>
+                <td class="last">
+                    <p><em>Comparison type.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LESS_EQUAL</td>
+                <td class="last">
+                    <p><em>Comparison type.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LIKE</td>
+                <td class="last">
+                    <p><em>Comparison type.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NOT_LIKE</td>
+                <td class="last">
+                    <p><em>Comparison type.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONTAINS_ALL</td>
+                <td class="last">
+                    <p><em>Comparison for array column types</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONTAINS_SOME</td>
+                <td class="last">
+                    <p><em>Comparison for array column types</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONTAINS_NONE</td>
+                <td class="last">
+                    <p><em>Comparison for array column types</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ILIKE</td>
+                <td class="last">
+                    <p><em>PostgreSQL comparison type</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NOT_ILIKE</td>
+                <td class="last">
+                    <p><em>PostgreSQL comparison type</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CUSTOM</td>
+                <td class="last">
+                    <p><em>Comparison type.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CUSTOM_EQUAL</td>
+                <td class="last">
+                    <p><em>Comparison type for update</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DISTINCT</td>
+                <td class="last">
+                    <p><em>Comparison type.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IN</td>
+                <td class="last">
+                    <p><em>Comparison type.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NOT_IN</td>
+                <td class="last">
+                    <p><em>Comparison type.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ALL</td>
+                <td class="last">
+                    <p><em>Comparison type.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>JOIN</td>
+                <td class="last">
+                    <p><em>Comparison type.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BINARY_AND</td>
+                <td class="last">
+                    <p><em>Binary math operator: AND</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BINARY_OR</td>
+                <td class="last">
+                    <p><em>Binary math operator: OR</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ASC</td>
+                <td class="last">
+                    <p><em>&quot;Order by&quot; qualifier - ascending</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DESC</td>
+                <td class="last">
+                    <p><em>&quot;Order by&quot; qualifier - descending</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ISNULL</td>
+                <td class="last">
+                    <p><em>&quot;IS NULL&quot; null comparison</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ISNOTNULL</td>
+                <td class="last">
+                    <p><em>&quot;IS NOT NULL&quot; null comparison</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CURRENT_DATE</td>
+                <td class="last">
+                    <p><em>&quot;CURRENT_DATE&quot; ANSI SQL function</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CURRENT_TIME</td>
+                <td class="last">
+                    <p><em>&quot;CURRENT_TIME&quot; ANSI SQL function</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CURRENT_TIMESTAMP</td>
+                <td class="last">
+                    <p><em>&quot;CURRENT_TIMESTAMP&quot; ANSI SQL function</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LEFT_JOIN</td>
+                <td class="last">
+                    <p><em>&quot;LEFT JOIN&quot; SQL statement</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RIGHT_JOIN</td>
+                <td class="last">
+                    <p><em>&quot;RIGHT JOIN&quot; SQL statement</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>INNER_JOIN</td>
+                <td class="last">
+                    <p><em>&quot;INNER JOIN&quot; SQL statement</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LOGICAL_OR</td>
+                <td class="last">
+                    <p><em>logical OR operator</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LOGICAL_AND</td>
+                <td class="last">
+                    <p><em>logical AND operator</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<abbr title="dbName">dbName</abbr> $dbName = null)
+                    <p>Creates a new instance with the default capacity which corresponds to the specified database.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getIterator">getIterator</a>()
+                    <p>Implementing SPL IteratorAggregate interface.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getMap">getMap</a>()
+                    <p>Get the criteria map, i.e.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_clear">clear</a>()
+                    <p>Brings this criteria back to its initial state, so that it can be reused as if it was new.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addAsColumn">addAsColumn</a>(string $name, string $clause)
+                    <p>Add an AS clause to the select columns.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAsColumns">getAsColumns</a>()
+                    <p>Get the column aliases.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnForAs">getColumnForAs</a>($as)
+                    <p>Returns the column name associated with an alias (AS-column).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addAlias">addAlias</a>(string $alias, string $table)
+                    <p>Allows one to specify an alias for a table that can be used in various parts of the SQL.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_removeAlias">removeAlias</a>(string $alias)
+                    <p>Remove an alias for a table (useful when merging Criterias).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAliases">getAliases</a>()
+                    <p>Returns the aliases for this Criteria</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getTableForAlias">getTableForAlias</a>(string $alias)
+                    <p>Returns the table name associated with an alias.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="array($tableName,">array($tableName,</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getTableNameAndAlias">getTableNameAndAlias</a>(string $tableAliasOrName)
+                    <p>Returns the table name and alias based on a table alias or name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_keys">keys</a>()
+                    <p>Get the keys of the criteria map, i.e.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_containsKey">containsKey</a>(string $column)
+                    <p>Does this Criteria object contain the specified key?</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_keyContainsValue">keyContainsValue</a>(string $column)
+                    <p>Does this Criteria object contain the specified key and does it have a value set for the key</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasWhereClause">hasWhereClause</a>()
+                    <p>Whether this Criteria has any where columns.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_setUseTransaction">setUseTransaction</a>($v)
+                    <p>Will force the sql represented by this criteria to be executed within a transaction.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isUseTransaction">isUseTransaction</a>()
+                    <p>Whether the sql command specified by this criteria must be wrapped in a transaction.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getCriterion">getCriterion</a>(string $column)
+                    <p>Method to return criteria related to columns in a table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getLastCriterion">getLastCriterion</a>()
+                    <p>Method to return the latest Criterion in a table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getNewCriterion">getNewCriterion</a>(string $column, mixed $value = null, string $comparison = self::EQUAL)
+                    <p>Method to return criterion that is not added automatically to this Criteria.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnName">getColumnName</a>(string $name)
+                    <p>Method to return a String table name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getTablesColumns">getTablesColumns</a>()
+                    <p>Shortcut method to get an array of columns indexed by table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getComparison">getComparison</a>(string $key)
+                    <p>Method to return a comparison String.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDbName">getDbName</a>()
+                    <p>Get the Database(Map) name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_setDbName">setDbName</a>(string $dbName = null)
+                    <p>Set the DatabaseMap name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPrimaryTableName">getPrimaryTableName</a>()
+                    <p>Get the primary table for this Criteria.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPrimaryTableName">setPrimaryTableName</a>($tableName)
+                    <p>Sets the primary table for this Criteria.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getTableName">getTableName</a>(string $name)
+                    <p>Method to return a String table name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getValue">getValue</a>(string $name)
+                    <p>Method to return the value that was added to Criteria.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_get">get</a>(string $key)
+                    <p>An alias to getValue() -- exposing a Hashtable-like interface.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Instance">Instance</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_put">put</a>(string $key, mixed $value)
+                    <p>Overrides Hashtable put, so that this object is returned instead of the value previously in the Criteria object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_putAll">putAll</a>(mixed $t)
+                    <p>Copies all of the mappings from the specified Map to this Criteria These mappings will replace any mappings that this Criteria had for any of the keys currently in the specified Map.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="A">A</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_add">add</a>($p1, $value = null, $comparison = null)
+                    <p>This method adds a new criterion to the list of criterias.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="A">A</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_addCond">addCond</a>(string $name, string $p1, mixed $value = null, string $comparison = null)
+                    <p>This method creates a new criterion but keeps it for later use with combine() Until combine() is called, the condition is not added to the query</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_combine">combine</a>(array $criterions = array(), string $operator = self::LOGICAL_AND, string $name = null)
+                    <p>Combine several named criterions with a logical operator</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addJoin">addJoin</a>(mixed $left, mixed $right, mixed $joinType = null)
+                    <p>This is the way that you should add a join of two tables.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addMultipleJoin">addMultipleJoin</a>(array $conditions, string $joinType = null)
+                    <p>Add a join with multiple conditions</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addJoinObject">addJoinObject</a>(<a href="Join.html"><abbr title="Join">Join</abbr></a> $join)
+                    <p>Add a join object to the Criteria</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getJoins">getJoins</a>()
+                    <p>Get the array of Joins.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addSelectQuery">addSelectQuery</a>(<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a> $subQueryCriteria, string $alias = null)
+                    <p>Adds a Criteria as subQuery in the From Clause.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasSelectQueries">hasSelectQueries</a>()
+                    <p>Checks whether this Criteria has a subquery.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getSelectQueries">getSelectQueries</a>()
+                    <p>Get the associative array of Criteria for the subQueries per alias.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getSelectQuery">getSelectQuery</a>(string $alias)
+                    <p>Get the Criteria for a specific subQuery.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasSelectQuery">hasSelectQuery</a>(string $alias)
+                    <p>checks if the Criteria for a specific subQuery is set.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_forgeSelectQueryAlias">forgeSelectQueryAlias</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setAll">setAll</a>()
+                    <p>Adds &quot;ALL&quot; modifier to the SQL statement.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setDistinct">setDistinct</a>()
+                    <p>Adds &quot;DISTINCT&quot; modifier to the SQL statement.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addSelectModifier">addSelectModifier</a>(string $modifier)
+                    <p>Adds a modifier to the SQL statement.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_removeSelectModifier">removeSelectModifier</a>(string $modifier)
+                    <p>Removes a modifier to the SQL statement.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_hasSelectModifier">hasSelectModifier</a>(string $modifier)
+                    <p>Checks the existence of a SQL select modifier</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setIgnoreCase">setIgnoreCase</a>(boolean $b)
+                    <p>Sets ignore case.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isIgnoreCase">isIgnoreCase</a>()
+                    <p>Is ignore case on or off?</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setSingleRecord">setSingleRecord</a>(boolean $b)
+                    <p>Set single record?  Set this to &lt;code&gt;true&lt;/code&gt; if you expect the query to result in only a single result record (the default behaviour is to throw a PropelException if multiple records are returned when the query is executed).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isSingleRecord">isSingleRecord</a>()
+                    <p>Is single record?</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setLimit">setLimit</a>(<abbr title="limit">limit</abbr> $limit)
+                    <p>Set limit.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getLimit">getLimit</a>()
+                    <p>Get limit.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setOffset">setOffset</a>(int $offset)
+                    <p>Set offset.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="An">An</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getOffset">getOffset</a>()
+                    <p>Get offset.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addSelectColumn">addSelectColumn</a>(string $name)
+                    <p>Add select column.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setComment">setComment</a>(string $comment = null)
+                    <p>Set the query comment, that appears after the first verb in the SQL query</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getComment">getComment</a>()
+                    <p>Get the query comment, that appears after the first verb in the SQL query</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasSelectClause">hasSelectClause</a>()
+                    <p>Whether this Criteria has any select columns.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getSelectColumns">getSelectColumns</a>()
+                    <p>Get select columns.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_clearSelectColumns">clearSelectColumns</a>()
+                    <p>Clears current select columns.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="An">An</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getSelectModifiers">getSelectModifiers</a>()
+                    <p>Get select modifiers.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="A">A</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_addGroupByColumn">addGroupByColumn</a>(string $groupBy)
+                    <p>Add group by column name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="A">A</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_addAscendingOrderByColumn">addAscendingOrderByColumn</a>(string $name)
+                    <p>Add order by column name, explicitly specifying ascending.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addDescendingOrderByColumn">addDescendingOrderByColumn</a>(string $name)
+                    <p>Add order by column name, explicitly specifying descending.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getOrderByColumns">getOrderByColumns</a>()
+                    <p>Get order by columns.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_clearOrderByColumns">clearOrderByColumns</a>()
+                    <p>Clear the order-by columns.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_clearGroupByColumns">clearGroupByColumns</a>()
+                    <p>Clear the group-by columns.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getGroupByColumns">getGroupByColumns</a>()
+                    <p>Get group by columns.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getHaving">getHaving</a>()
+                    <p>Get Having Criterion.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_remove">remove</a>(string $key)
+                    <p>Remove an object from the criteria.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_toString">toString</a>()
+                    <p>Build a string representation of the Criteria.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_size">size</a>()
+                    <p>Returns the size (count) of this criteria.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_equals">equals</a>($crit)
+                    <p>This method checks another Criteria to see if they contain the same attributes and hashtable entries.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_mergeWith">mergeWith</a>(<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a> $criteria, string $operator = null)
+                    <p>Add the content of a Criteria to the current Criteria In case of conflict, the current Criteria keeps its properties</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="A">A</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_addHaving">addHaving</a>(<a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a> $having)
+                    <p>This method adds a prepared Criterion object to the Criteria as a having clause.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addAnd">addAnd</a>($p1, $p2 = null, $p3 = null, $preferColumnCondition = true)
+                    <p>If a criterion for the requested column already exists, the condition is &quot;AND&quot;ed to the existing criterion (necessary for Propel 1.4 compatibility).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addOr">addOr</a>($p1, $p2 = null, $p3 = null, $preferColumnCondition = true)
+                    <p>If a criterion for the requested column already exists, the condition is &quot;OR&quot;ed to the existing criterion (necessary for Propel 1.4 compatibility).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addUsingOperator">addUsingOperator</a>(string|<a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a> $p1, mixed $value = null, string $operator = null, boolean $preferColumnCondition = true)
+                    <p>Overrides Criteria::add() to use the default combine operator</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method__or">_or</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method__and">_and</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="PropelConditionalProxy.html"><abbr title="PropelConditionalProxy">PropelConditionalProxy</abbr></a>|<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method__if">_if</a>(bool $cond)
+                    <p>Returns the current object if the condition is true, or a PropelConditionalProxy instance otherwise.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="PropelConditionalProxy.html"><abbr title="PropelConditionalProxy">PropelConditionalProxy</abbr></a>|<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method__elseif">_elseif</a>(bool $cond)
+                    <p>Returns a PropelConditionalProxy instance.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="PropelConditionalProxy.html"><abbr title="PropelConditionalProxy">PropelConditionalProxy</abbr></a>|<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method__else">_else</a>()
+                    <p>Returns a PropelConditionalProxy instance.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method__endif">_endif</a>()
+                    <p>Returns the current object Allows for conditional statements in a fluid interface.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___clone">__clone</a>()
+                    <p>Ensures deep cloning of attached objects</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 248</div>
+        <code>            public            
+    <strong>__construct</strong>(<abbr title="dbName">dbName</abbr> $dbName = null)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new instance with the default capacity which corresponds to the specified database.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="dbName">dbName</abbr></td>
+                <td>$dbName</td>
+                <td>The dabase name.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getIterator">
+        <div class="location">at line 258</div>
+        <code>            public            
+    <strong>getIterator</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Implementing SPL IteratorAggregate interface.</p>
+        <p>This allows<br />
+ you to foreach () over a Criteria object.</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getMap">
+        <div class="location">at line 267</div>
+        <code>            public            array
+    <strong>getMap</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the criteria map, i.e.</p>
+        <p>the array of Criterions</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_clear">
+        <div class="location">at line 278</div>
+        <code>            public            void
+    <strong>clear</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Brings this criteria back to its initial state, so that it can be reused as if it was new.</p>
+        <p>Except if the criteria has grown in<br />
+ capacity, it is left at the current capacity.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addAsColumn">
+        <div class="location">at line 317</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>addAsColumn</strong>(string $name, string $clause)</code>
+    </h3>
+    <div class="details">
+        <p>Add an AS clause to the select columns.</p>
+        <p>Usage:<br />
+<br />
+ &lt;code&gt;<br />
+ Criteria myCrit = new Criteria();<br />
+ myCrit-&gt;addAsColumn(&quot;alias&quot;, &quot;ALIAS(&quot;.MyPeer::ID.&quot;)&quot;);<br />
+ &lt;/code&gt;</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Wanted Name of the column (alias).</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$clause</td>
+                <td>SQL clause to select from the table If the name already exists, it is replaced by the new clause.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>A modified Criteria object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAsColumns">
+        <div class="location">at line 329</div>
+        <code>            public            array
+    <strong>getAsColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the column aliases.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>An assoc array which map the column alias names to the alias clauses.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnForAs">
+        <div class="location">at line 340</div>
+        <code>            public            string
+    <strong>getColumnForAs</strong>($as)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the column name associated with an alias (AS-column).</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$as</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>$string</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addAlias">
+        <div class="location">at line 356</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>addAlias</strong>(string $alias, string $table)</code>
+    </h3>
+    <div class="details">
+        <p>Allows one to specify an alias for a table that can be used in various parts of the SQL.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$alias</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>A modified Criteria object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeAlias">
+        <div class="location">at line 370</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>removeAlias</strong>(string $alias)</code>
+    </h3>
+    <div class="details">
+        <p>Remove an alias for a table (useful when merging Criterias).</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$alias</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>A modified Criteria object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAliases">
+        <div class="location">at line 382</div>
+        <code>            public            array
+    <strong>getAliases</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the aliases for this Criteria</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTableForAlias">
+        <div class="location">at line 393</div>
+        <code>            public            string
+    <strong>getTableForAlias</strong>(string $alias)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the table name associated with an alias.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$alias</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>$string</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTableNameAndAlias">
+        <div class="location">at line 408</div>
+        <code>            public            <abbr title="array($tableName,">array($tableName,</abbr>
+    <strong>getTableNameAndAlias</strong>(string $tableAliasOrName)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the table name and alias based on a table alias or name.</p>
+        <p>Use this method to get the details of a table name that comes in a clause,<br />
+ which can be either a table name or an alias name.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$tableAliasOrName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="array($tableName,">array($tableName,</abbr></td>
+            <td>$tableAlias)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_keys">
+        <div class="location">at line 426</div>
+        <code>            public            array
+    <strong>keys</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the keys of the criteria map, i.e.</p>
+        <p>the list of columns bearing a condition<br />
+ &lt;code&gt;<br />
+ print_r($c-&gt;keys());<br />
+  =&gt; array(&#039;book.price&#039;, &#039;book.title&#039;, &#039;author.first_name&#039;)<br />
+ &lt;/code&gt;</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_containsKey">
+        <div class="location">at line 437</div>
+        <code>            public            boolean
+    <strong>containsKey</strong>(string $column)</code>
+    </h3>
+    <div class="details">
+        <p>Does this Criteria object contain the specified key?</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td>[table.]column</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if this Criteria object contain the specified key.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_keyContainsValue">
+        <div class="location">at line 450</div>
+        <code>            public            boolean
+    <strong>keyContainsValue</strong>(string $column)</code>
+    </h3>
+    <div class="details">
+        <p>Does this Criteria object contain the specified key and does it have a value set for the key</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td>[table.]column</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if this Criteria object contain the specified key and a value for that key</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasWhereClause">
+        <div class="location">at line 465</div>
+        <code>            public            boolean
+    <strong>hasWhereClause</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Whether this Criteria has any where columns.</p>
+        <p>This counts conditions added with the add() method.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>add()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_setUseTransaction">
+        <div class="location">at line 477</div>
+        <code>            public            void
+    <strong>setUseTransaction</strong>($v)</code>
+    </h3>
+    <div class="details">
+        <p>Will force the sql represented by this criteria to be executed within a transaction.</p>
+        <p>This is here primarily to support the oid type in<br />
+ postgresql.  Though it can be used to require any single sql statement<br />
+ to use a transaction.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$v</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isUseTransaction">
+        <div class="location">at line 488</div>
+        <code>            public            boolean
+    <strong>isUseTransaction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Whether the sql command specified by this criteria must be wrapped in a transaction.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCriterion">
+        <div class="location">at line 502</div>
+        <code>            public            <a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a>
+    <strong>getCriterion</strong>(string $column)</code>
+    </h3>
+    <div class="details">
+        <p>Method to return criteria related to columns in a table.</p>
+        <p>Make sure you call containsKey($column) prior to calling this method,<br />
+ since no check on the existence of the $column is made in this method.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td>Column name.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a></td>
+            <td>A Criterion object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLastCriterion">
+        <div class="location">at line 512</div>
+        <code>            public            <a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a>
+    <strong>getLastCriterion</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Method to return the latest Criterion in a table.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a></td>
+            <td>A Criterion or null no Criterion is added.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNewCriterion">
+        <div class="location">at line 531</div>
+        <code>            public            <a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a>
+    <strong>getNewCriterion</strong>(string $column, mixed $value = null, string $comparison = self::EQUAL)</code>
+    </h3>
+    <div class="details">
+        <p>Method to return criterion that is not added automatically to this Criteria.</p>
+        <p>This can be used to chain the<br />
+ Criterions to form a more complex where clause.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td>Full name of column (for example TABLE.COLUMN).</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnName">
+        <div class="location">at line 542</div>
+        <code>            public            string
+    <strong>getColumnName</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Method to return a String table name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the key.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The value of the object at key.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTablesColumns">
+        <div class="location">at line 562</div>
+        <code>            public            array
+    <strong>getTablesColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Shortcut method to get an array of columns indexed by table.</p>
+        <p>&lt;code&gt;<br />
+ print_r($c-&gt;getTablesColumns());<br />
+  =&gt; array(<br />
+       &#039;book&#039;   =&gt; array(&#039;book.price&#039;, &#039;book.title&#039;),<br />
+       &#039;author&#039; =&gt; array(&#039;author.first_name&#039;)<br />
+     )<br />
+ &lt;/code&gt;</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>array(table =&gt; array(table.column1, table.column2))</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getComparison">
+        <div class="location">at line 578</div>
+        <code>            public            string
+    <strong>getComparison</strong>(string $key)</code>
+    </h3>
+    <div class="details">
+        <p>Method to return a comparison String.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>String name of the key.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>A String with the value of the object at key.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDbName">
+        <div class="location">at line 591</div>
+        <code>            public            string
+    <strong>getDbName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the Database(Map) name.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>A String with the Database(Map) name.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDbName">
+        <div class="location">at line 603</div>
+        <code>            public            void
+    <strong>setDbName</strong>(string $dbName = null)</code>
+    </h3>
+    <div class="details">
+        <p>Set the DatabaseMap name.</p>
+        <p>If &lt;code&gt;null&lt;/code&gt; is supplied, uses value<br />
+ provided by &lt;code&gt;Propel::getDefaultDB()&lt;/code&gt;.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$dbName</td>
+                <td>The Database (Map) name.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPrimaryTableName">
+        <div class="location">at line 617</div>
+        <code>            public            string
+    <strong>getPrimaryTableName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the primary table for this Criteria.</p>
+        <p>This is useful for cases where a Criteria may not contain<br />
+ any SELECT columns or WHERE columns.  This must be explicitly<br />
+ set, of course, in order to be useful.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPrimaryTableName">
+        <div class="location">at line 631</div>
+        <code>            public            
+    <strong>setPrimaryTableName</strong>($tableName)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the primary table for this Criteria.</p>
+        <p>This is useful for cases where a Criteria may not contain<br />
+ any SELECT columns or WHERE columns.  This must be explicitly<br />
+ set, of course, in order to be useful.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$tableName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTableName">
+        <div class="location">at line 642</div>
+        <code>            public            string
+    <strong>getTableName</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Method to return a String table name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The name of the key.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The value of table for criterion at key.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getValue">
+        <div class="location">at line 656</div>
+        <code>            public            mixed
+    <strong>getValue</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Method to return the value that was added to Criteria.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>A String with the name of the key.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>The value of object at key.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_get">
+        <div class="location">at line 670</div>
+        <code>            public            mixed
+    <strong>get</strong>(string $key)</code>
+    </h3>
+    <div class="details">
+        <p>An alias to getValue() -- exposing a Hashtable-like interface.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>An Object.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>The value within the Criterion (not the Criterion object).</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_put">
+        <div class="location">at line 689</div>
+        <code>            public            <abbr title="Instance">Instance</abbr>
+    <strong>put</strong>(string $key, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Overrides Hashtable put, so that this object is returned instead of the value previously in the Criteria object.</p>
+        <p>The reason is so that it more closely matches the behavior<br />
+ of the add() methods. If you want to get the previous value<br />
+ then you should first Criteria.get() it yourself. Note, if<br />
+ you attempt to pass in an Object that is not a String, it will<br />
+ throw a NPE. The reason for this is that none of the add()<br />
+ methods support adding anything other than a String as a key.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Instance">Instance</abbr></td>
+            <td>of self.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_putAll">
+        <div class="location">at line 704</div>
+        <code>            public            
+    <strong>putAll</strong>(mixed $t)</code>
+    </h3>
+    <div class="details">
+        <p>Copies all of the mappings from the specified Map to this Criteria These mappings will replace any mappings that this Criteria had for any of the keys currently in the specified Map.</p>
+        <p>if the map was another Criteria, its attributes are copied to this<br />
+ Criteria, overwriting previous settings.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$t</td>
+                <td>Mappings to be stored in this map.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_add">
+        <div class="location">at line 740</div>
+        <code>            public            <abbr title="A">A</abbr>
+    <strong>add</strong>($p1, $value = null, $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>This method adds a new criterion to the list of criterias.</p>
+        <p>If a criterion for the requested column already exists, it is<br />
+ replaced. If is used as follow:<br />
+<br />
+ &lt;code&gt;<br />
+ $crit = new Criteria();<br />
+ $crit-&gt;add($column, $value, Criteria::GREATER_THAN);<br />
+ &lt;/code&gt;<br />
+<br />
+ Any comparison can be used.<br />
+<br />
+ The name of the table must be used implicitly in the column name,<br />
+ so the Column name must be something like &#039;TABLE.id&#039;.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$p1</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$comparison</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="A">A</abbr></td>
+            <td>modified Criteria object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addCond">
+        <div class="location">at line 774</div>
+        <code>            public            <abbr title="A">A</abbr>
+    <strong>addCond</strong>(string $name, string $p1, mixed $value = null, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>This method creates a new criterion but keeps it for later use with combine() Until combine() is called, the condition is not added to the query</p>
+        <p>&lt;code&gt;<br />
+ $crit = new Criteria();<br />
+ $crit-&gt;addCond(&#039;cond1&#039;, $column1, $value1, Criteria::GREATER_THAN);<br />
+ $crit-&gt;addCond(&#039;cond2&#039;, $column2, $value2, Criteria::EQUAL);<br />
+ $crit-&gt;combine(array(&#039;cond1&#039;, &#039;cond2&#039;), Criteria::LOGICAL_OR);<br />
+ &lt;/code&gt;<br />
+<br />
+ Any comparison can be used.<br />
+<br />
+ The name of the table must be used implicitly in the column name,<br />
+ so the Column name must be something like &#039;TABLE.id&#039;.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>name to combine the criterion later</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$p1</td>
+                <td>The column to run the comparison on, or Criterion object.</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>A String.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="A">A</abbr></td>
+            <td>modified Criteria object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_combine">
+        <div class="location">at line 792</div>
+        <code>            public            
+    <strong>combine</strong>(array $criterions = array(), string $operator = self::LOGICAL_AND, string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Combine several named criterions with a logical operator</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$criterions</td>
+                <td>array of the name of the criterions to combine</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td>logical operator, either Criteria::LOGICAL_AND, or Criteria::LOGICAL_OR</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>optional name to combine the criterion later</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addJoin">
+        <div class="location">at line 833</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>addJoin</strong>(mixed $left, mixed $right, mixed $joinType = null)</code>
+    </h3>
+    <div class="details">
+        <p>This is the way that you should add a join of two tables.</p>
+        <p>Example usage:<br />
+ &lt;code&gt;<br />
+ $c-&gt;addJoin(ProjectPeer::ID, FooPeer::PROJECT_ID, Criteria::LEFT_JOIN);<br />
+ // LEFT JOIN FOO ON (PROJECT.ID = FOO.PROJECT_ID)<br />
+ &lt;/code&gt;</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$left</td>
+                <td>A String with the left side of the join.</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$right</td>
+                <td>A String with the right side of the join.</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$joinType</td>
+                <td>A String with the join operator among Criteria::INNER_JOIN, Criteria::LEFT_JOIN, and Criteria::RIGHT_JOIN</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>A modified Criteria object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addMultipleJoin">
+        <div class="location">at line 888</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>addMultipleJoin</strong>(array $conditions, string $joinType = null)</code>
+    </h3>
+    <div class="details">
+        <p>Add a join with multiple conditions</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$conditions</td>
+                <td>An array of conditions, each condition being an array (left, right, operator)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$joinType</td>
+                <td>A String with the join operator. Defaults to an implicit join.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>A modified Criteria object.</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>http://propel.phpdb.org/trac/ticket/167,</td>
+                <td>http://propel.phpdb.org/trac/ticket/606 Example usage: $c-&gt;addMultipleJoin(array( array(LeftPeer::LEFT_COLUMN, RightPeer::RIGHT_COLUMN),  // if no third argument, defaults to Criteria::EQUAL array(FoldersPeer::alias( &#039;fo&#039;, FoldersPeer::LFT ), FoldersPeer::alias( &#039;parent&#039;, FoldersPeer::RGT ), Criteria::LESS_EQUAL ) ), Criteria::LEFT_JOIN );</td>
+            </tr>
+                    <tr>
+                <td>addJoin()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_addJoinObject">
+        <div class="location">at line 941</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>addJoinObject</strong>(<a href="Join.html"><abbr title="Join">Join</abbr></a> $join)</code>
+    </h3>
+    <div class="details">
+        <p>Add a join object to the Criteria</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Join.html"><abbr title="Join">Join</abbr></a></td>
+                <td>$join</td>
+                <td>A join object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>A modified Criteria object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getJoins">
+        <div class="location">at line 954</div>
+        <code>            public            array
+    <strong>getJoins</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the array of Joins.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>Join[]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addSelectQuery">
+        <div class="location">at line 967</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>addSelectQuery</strong>(<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a> $subQueryCriteria, string $alias = null)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a Criteria as subQuery in the From Clause.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+                <td>$subQueryCriteria</td>
+                <td>Criteria to build the subquery from</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$alias</td>
+                <td>alias for the subQuery</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>this modified Criteria object (Fluid API)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasSelectQueries">
+        <div class="location">at line 982</div>
+        <code>            public            Boolean
+    <strong>hasSelectQueries</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether this Criteria has a subquery.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSelectQueries">
+        <div class="location">at line 992</div>
+        <code>            public            array
+    <strong>getSelectQueries</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the associative array of Criteria for the subQueries per alias.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>Criteria[]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSelectQuery">
+        <div class="location">at line 1003</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>getSelectQuery</strong>(string $alias)</code>
+    </h3>
+    <div class="details">
+        <p>Get the Criteria for a specific subQuery.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$alias</td>
+                <td>alias for the subQuery</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasSelectQuery">
+        <div class="location">at line 1014</div>
+        <code>            public            boolean
+    <strong>hasSelectQuery</strong>(string $alias)</code>
+    </h3>
+    <div class="details">
+        <p>checks if the Criteria for a specific subQuery is set.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$alias</td>
+                <td>alias for the subQuery</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_forgeSelectQueryAlias">
+        <div class="location">at line 1019</div>
+        <code>            public            
+    <strong>forgeSelectQueryAlias</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAll">
+        <div class="location">at line 1032</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>setAll</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Adds &quot;ALL&quot; modifier to the SQL statement.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>Modified Criteria object (for fluent API)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDistinct">
+        <div class="location">at line 1044</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>setDistinct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Adds &quot;DISTINCT&quot; modifier to the SQL statement.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>Modified Criteria object (for fluent API)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addSelectModifier">
+        <div class="location">at line 1060</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>addSelectModifier</strong>(string $modifier)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a modifier to the SQL statement.</p>
+        <p>e.g. self::ALL, self::DISTINCT, &#039;SQL_CALC_FOUND_ROWS&#039;, &#039;HIGH_PRIORITY&#039;, etc.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$modifier</td>
+                <td>The modifier to add</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>Modified Criteria object (for fluent API)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeSelectModifier">
+        <div class="location">at line 1078</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>removeSelectModifier</strong>(string $modifier)</code>
+    </h3>
+    <div class="details">
+        <p>Removes a modifier to the SQL statement.</p>
+        <p>Checks for existence before removal</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$modifier</td>
+                <td>The modifier to add</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>Modified Criteria object (for fluent API)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasSelectModifier">
+        <div class="location">at line 1092</div>
+        <code>            public            bool
+    <strong>hasSelectModifier</strong>(string $modifier)</code>
+    </h3>
+    <div class="details">
+        <p>Checks the existence of a SQL select modifier</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$modifier</td>
+                <td>The modifier to add</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setIgnoreCase">
+        <div class="location">at line 1103</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>setIgnoreCase</strong>(boolean $b)</code>
+    </h3>
+    <div class="details">
+        <p>Sets ignore case.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$b</td>
+                <td>True if case should be ignored.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>Modified Criteria object (for fluent API)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isIgnoreCase">
+        <div class="location">at line 1114</div>
+        <code>            public            boolean
+    <strong>isIgnoreCase</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Is ignore case on or off?</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if case is ignored.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSingleRecord">
+        <div class="location">at line 1131</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>setSingleRecord</strong>(boolean $b)</code>
+    </h3>
+    <div class="details">
+        <p>Set single record?  Set this to &lt;code&gt;true&lt;/code&gt; if you expect the query to result in only a single result record (the default behaviour is to throw a PropelException if multiple records are returned when the query is executed).</p>
+        <p>This should be used in situations where returning multiple<br />
+ rows would indicate an error of some sort.  If your query might return<br />
+ multiple records but you are only interested in the first one then you<br />
+ should be using setLimit(1).</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$b</td>
+                <td>Set to TRUE if you expect the query to select just one record.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>Modified Criteria object (for fluent API)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isSingleRecord">
+        <div class="location">at line 1142</div>
+        <code>            public            boolean
+    <strong>isSingleRecord</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Is single record?</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if a single record is being returned.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setLimit">
+        <div class="location">at line 1153</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>setLimit</strong>(<abbr title="limit">limit</abbr> $limit)</code>
+    </h3>
+    <div class="details">
+        <p>Set limit.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="limit">limit</abbr></td>
+                <td>$limit</td>
+                <td>An int with the value for limit.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>Modified Criteria object (for fluent API)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLimit">
+        <div class="location">at line 1165</div>
+        <code>            public            int
+    <strong>getLimit</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get limit.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>An int with the value for limit.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setOffset">
+        <div class="location">at line 1177</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>setOffset</strong>(int $offset)</code>
+    </h3>
+    <div class="details">
+        <p>Set offset.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$offset</td>
+                <td>An int with the value for offset.  (Note this values is cast to a 32bit integer and may result in truncatation)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>Modified Criteria object (for fluent API)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOffset">
+        <div class="location">at line 1188</div>
+        <code>            public            <abbr title="An">An</abbr>
+    <strong>getOffset</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get offset.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="An">An</abbr></td>
+            <td>int with the value for offset.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addSelectColumn">
+        <div class="location">at line 1199</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>addSelectColumn</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Add select column.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the select column.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>Modified Criteria object (for fluent API)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setComment">
+        <div class="location">at line 1211</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>setComment</strong>(string $comment = null)</code>
+    </h3>
+    <div class="details">
+        <p>Set the query comment, that appears after the first verb in the SQL query</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$comment</td>
+                <td>The comment to add to the query, without comment sign</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>Modified Criteria object (for fluent API)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getComment">
+        <div class="location">at line 1223</div>
+        <code>            public            string
+    <strong>getComment</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the query comment, that appears after the first verb in the SQL query</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The comment to add to the query, without comment sign</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasSelectClause">
+        <div class="location">at line 1237</div>
+        <code>            public            boolean
+    <strong>hasSelectClause</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Whether this Criteria has any select columns.</p>
+        <p>This will include columns added with addAsColumn() method.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>addAsColumn()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>addSelectColumn()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getSelectColumns">
+        <div class="location">at line 1247</div>
+        <code>            public            array
+    <strong>getSelectColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get select columns.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>An array with the name of the select columns.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_clearSelectColumns">
+        <div class="location">at line 1257</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>clearSelectColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Clears current select columns.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>Modified Criteria object (for fluent API)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSelectModifiers">
+        <div class="location">at line 1268</div>
+        <code>            public            <abbr title="An">An</abbr>
+    <strong>getSelectModifiers</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get select modifiers.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="An">An</abbr></td>
+            <td>array with the select modifiers.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addGroupByColumn">
+        <div class="location">at line 1279</div>
+        <code>            public            <abbr title="A">A</abbr>
+    <strong>addGroupByColumn</strong>(string $groupBy)</code>
+    </h3>
+    <div class="details">
+        <p>Add group by column name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$groupBy</td>
+                <td>The name of the column to group by.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="A">A</abbr></td>
+            <td>modified Criteria object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addAscendingOrderByColumn">
+        <div class="location">at line 1291</div>
+        <code>            public            <abbr title="A">A</abbr>
+    <strong>addAscendingOrderByColumn</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Add order by column name, explicitly specifying ascending.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The name of the column to order by.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="A">A</abbr></td>
+            <td>modified Criteria object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addDescendingOrderByColumn">
+        <div class="location">at line 1303</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>addDescendingOrderByColumn</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Add order by column name, explicitly specifying descending.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The name of the column to order by.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>Modified Criteria object (for fluent API)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOrderByColumns">
+        <div class="location">at line 1314</div>
+        <code>            public            array
+    <strong>getOrderByColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get order by columns.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>An array with the name of the order columns.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_clearOrderByColumns">
+        <div class="location">at line 1324</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>clearOrderByColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Clear the order-by columns.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>Modified Criteria object (for fluent API)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_clearGroupByColumns">
+        <div class="location">at line 1335</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>clearGroupByColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Clear the group-by columns.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getGroupByColumns">
+        <div class="location">at line 1346</div>
+        <code>            public            array
+    <strong>getGroupByColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get group by columns.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getHaving">
+        <div class="location">at line 1356</div>
+        <code>            public            <a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a>
+    <strong>getHaving</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get Having Criterion.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a></td>
+            <td>A Criterion object that is the having clause.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_remove">
+        <div class="location">at line 1367</div>
+        <code>            public            mixed
+    <strong>remove</strong>(string $key)</code>
+    </h3>
+    <div class="details">
+        <p>Remove an object from the criteria.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>A string with the key to be removed.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>The removed value.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toString">
+        <div class="location">at line 1384</div>
+        <code>            public            string
+    <strong>toString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Build a string representation of the Criteria.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>A String with the representation of the Criteria.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_size">
+        <div class="location">at line 1412</div>
+        <code>            public            int
+    <strong>size</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the size (count) of this criteria.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_equals">
+        <div class="location">at line 1422</div>
+        <code>            public            boolean
+    <strong>equals</strong>($crit)</code>
+    </h3>
+    <div class="details">
+        <p>This method checks another Criteria to see if they contain the same attributes and hashtable entries.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$crit</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_mergeWith">
+        <div class="location">at line 1486</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>mergeWith</strong>(<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a> $criteria, string $operator = null)</code>
+    </h3>
+    <div class="details">
+        <p>Add the content of a Criteria to the current Criteria In case of conflict, the current Criteria keeps its properties</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+                <td>$criteria</td>
+                <td>The criteria to read properties from</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td>The logical operator used to combine conditions Defaults to Criteria::LOGICAL_AND, also accapts Criteria::LOGICAL_OR This parameter is deprecated, use _or() instead</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>The current criteria object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addHaving">
+        <div class="location">at line 1579</div>
+        <code>            public            <abbr title="A">A</abbr>
+    <strong>addHaving</strong>(<a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a> $having)</code>
+    </h3>
+    <div class="details">
+        <p>This method adds a prepared Criterion object to the Criteria as a having clause.</p>
+        <p>You can get a new, empty Criterion object with the<br />
+ getNewCriterion() method.<br />
+<br />
+ &lt;p&gt;<br />
+ &lt;code&gt;<br />
+ $crit = new Criteria();<br />
+ $c = $crit-&gt;getNewCriterion(BasePeer::ID, 5, Criteria::LESS_THAN);<br />
+ $crit-&gt;addHaving($c);<br />
+ &lt;/code&gt;</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a></td>
+                <td>$having</td>
+                <td>A Criterion object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="A">A</abbr></td>
+            <td>modified Criteria object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addAnd">
+        <div class="location">at line 1599</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>addAnd</strong>($p1, $p2 = null, $p3 = null, $preferColumnCondition = true)</code>
+    </h3>
+    <div class="details">
+        <p>If a criterion for the requested column already exists, the condition is &quot;AND&quot;ed to the existing criterion (necessary for Propel 1.4 compatibility).</p>
+        <p>If no criterion for the requested column already exists, the condition is &quot;AND&quot;ed to the latest criterion.<br />
+ If no criterion exist, the condition is added a new criterion<br />
+<br />
+ Any comparison can be used.<br />
+<br />
+ Supports a number of different signatures:<br />
+  - addAnd(column, value, comparison)<br />
+  - addAnd(column, value)<br />
+  - addAnd(Criterion)</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$p1</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$p2</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$p3</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$preferColumnCondition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>A modified Criteria object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addOr">
+        <div class="location">at line 1630</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>addOr</strong>($p1, $p2 = null, $p3 = null, $preferColumnCondition = true)</code>
+    </h3>
+    <div class="details">
+        <p>If a criterion for the requested column already exists, the condition is &quot;OR&quot;ed to the existing criterion (necessary for Propel 1.4 compatibility).</p>
+        <p>If no criterion for the requested column already exists, the condition is &quot;OR&quot;ed to the latest criterion.<br />
+ If no criterion exist, the condition is added a new criterion<br />
+<br />
+ Any comparison can be used.<br />
+<br />
+ Supports a number of different signatures:<br />
+  - addOr(column, value, comparison)<br />
+  - addOr(column, value)<br />
+  - addOr(Criterion)</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$p1</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$p2</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$p3</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$preferColumnCondition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>A modified Criteria object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addUsingOperator">
+        <div class="location">at line 1668</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>addUsingOperator</strong>(string|<a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a> $p1, mixed $value = null, string $operator = null, boolean $preferColumnCondition = true)</code>
+    </h3>
+    <div class="details">
+        <p>Overrides Criteria::add() to use the default combine operator</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string|<a href="Criterion.html"><abbr title="Criterion">Criterion</abbr></a></td>
+                <td>$p1</td>
+                <td>The column to run the comparison on (e.g. BookPeer::ID), or Criterion object</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td>A String, like Criteria::EQUAL.</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$preferColumnCondition</td>
+                <td>If true, the condition is combined with an existing condition on the same column (necessary for Propel 1.4 compatibility). If false, the condition is combined with the last existing condition.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>A modified Criteria object.</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>Criteria::add()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method__or">
+        <div class="location">at line 1680</div>
+        <code>            public            
+    <strong>_or</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__and">
+        <div class="location">at line 1687</div>
+        <code>            public            
+    <strong>_and</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__if">
+        <div class="location">at line 1705</div>
+        <code>            public            <a href="PropelConditionalProxy.html"><abbr title="PropelConditionalProxy">PropelConditionalProxy</abbr></a>|<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>_if</strong>(bool $cond)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the current object if the condition is true, or a PropelConditionalProxy instance otherwise.</p>
+        <p>Allows for conditional statements in a fluid interface.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>bool</td>
+                <td>$cond</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="PropelConditionalProxy.html"><abbr title="PropelConditionalProxy">PropelConditionalProxy</abbr></a>|<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__elseif">
+        <div class="location">at line 1719</div>
+        <code>            public            <a href="PropelConditionalProxy.html"><abbr title="PropelConditionalProxy">PropelConditionalProxy</abbr></a>|<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>_elseif</strong>(bool $cond)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a PropelConditionalProxy instance.</p>
+        <p>Allows for conditional statements in a fluid interface.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>bool</td>
+                <td>$cond</td>
+                <td>ignored</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="PropelConditionalProxy.html"><abbr title="PropelConditionalProxy">PropelConditionalProxy</abbr></a>|<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__else">
+        <div class="location">at line 1734</div>
+        <code>            public            <a href="PropelConditionalProxy.html"><abbr title="PropelConditionalProxy">PropelConditionalProxy</abbr></a>|<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>_else</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns a PropelConditionalProxy instance.</p>
+        <p>Allows for conditional statements in a fluid interface.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="PropelConditionalProxy.html"><abbr title="PropelConditionalProxy">PropelConditionalProxy</abbr></a>|<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__endif">
+        <div class="location">at line 1749</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>_endif</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the current object Allows for conditional statements in a fluid interface.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___clone">
+        <div class="location">at line 1768</div>
+        <code>            public            
+    <strong>__clone</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Ensures deep cloning of attached objects</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

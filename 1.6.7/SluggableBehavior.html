@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>SluggableBehavior | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>SluggableBehavior</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>SluggableBehavior</strong>        extends <a href="Behavior.html"><abbr title="Behavior">Behavior</abbr></a></p>
+
+            <div class="description">
+            <p>Adds a slug column</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setName">setName</a>(string $name)
+                    <p>Sets the name of the Behavior</p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_setName"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getName">getName</a>()
+                    <p>Returns the name of the Behavior</p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_getName"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setTable">setTable</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p>Sets the table this behavior is applied to</p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_setTable"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Table.html"><abbr title="Table">Table</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getTable">getTable</a>()
+                    <p>Returns the table this behavior is applied to</p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_getTable"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDatabase">setDatabase</a>(<a href="Database.html"><abbr title="Database">Database</abbr></a> $database)
+                    <p>Sets the database this behavior is applied to</p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_setDatabase"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Database.html"><abbr title="Database">Database</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getDatabase">getDatabase</a>()
+                    <p>Returns the table this behavior is applied to if behavior is applied to &lt;database&gt; element.</p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_getDatabase"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addParameter">addParameter</a>(array $attribute)
+                    <p>Add a parameter Expects an associative array looking like array(&#039;name&#039; =&gt; &#039;foo&#039;, &#039;value&#039; =&gt; bar)</p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_addParameter"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setParameters">setParameters</a>(array $parameters)
+                    <p>Overrides the behavior parameters Expects an associative array looking like array(&#039;foo&#039; =&gt; &#039;bar&#039;)</p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_setParameters"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getParameters">getParameters</a>()
+                    <p>Get the associative array of parameters</p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_getParameters"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getParameter">getParameter</a>($name)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_getParameter"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setTableModificationOrder">setTableModificationOrder</a>(<abbr title="$tableModificationOrder">$tableModificationOrder</abbr> $tableModificationOrder)
+                    <p>Define when this behavior must execute its modifyTable() relative to other behaviors.</p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_setTableModificationOrder"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_getTableModificationOrder">getTableModificationOrder</a>()
+                    <p>Get when this behavior must execute its modifyTable() relative to other behaviors.</p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_getTableModificationOrder"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_modifyDatabase">modifyDatabase</a>()
+                    <p>This method is automatically called on database behaviors when the database model is finished Propagate the behavior to the tables of the database Override this method to have a database behavior do something special</p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_modifyDatabase"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_modifyTable">modifyTable</a>()
+                    <p>Add the slug_column to the current table</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setTableModified">setTableModified</a>($bool)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_setTableModified"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_isTableModified">isTableModified</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_isTableModified"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_renderTemplate">renderTemplate</a>(string $filename, array $vars = array(), string $templateDir = &#039;/templates/&#039;)
+                    <p>Use Propel&#039;s simple templating system to render a PHP file using variables passed as arguments.</p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_renderTemplate"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ColumnMap">ColumnMap</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnForParameter">getColumnForParameter</a>(string $param)
+                    <p>Retrieve a column object using a name stored in the behavior parameters Useful for table behaviors</p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_getColumnForParameter"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_appendXml">appendXml</a>(<a href="http://php.net/DOMNode"><abbr title="DOMNode">DOMNode</abbr></a> $node)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_appendXml"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getTableModifier">getTableModifier</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_getTableModifier"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getObjectBuilderModifier">getObjectBuilderModifier</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_getObjectBuilderModifier"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getQueryBuilderModifier">getQueryBuilderModifier</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_getQueryBuilderModifier"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getPeerBuilderModifier">getPeerBuilderModifier</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_getPeerBuilderModifier"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getTableMapBuilderModifier">getTableMapBuilderModifier</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_getTableMapBuilderModifier"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_hasAdditionalBuilders">hasAdditionalBuilders</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_hasAdditionalBuilders"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getAdditionalBuilders">getAdditionalBuilders</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="Behavior.html#method_getAdditionalBuilders"><abbr title="Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_preSave">preSave</a>($builder)
+                    <p>Add code in ObjectBuilder::preSave</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_objectMethods">objectMethods</a>($builder)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addCleanupSlugPart">addCleanupSlugPart</a>($script)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addLimitSlugSize">addLimitSlugSize</a>($script)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addMakeSlugUnique">addMakeSlugUnique</a>($script)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_queryMethods">queryMethods</a>($builder)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_setName">
+        <div class="location">in <a href="Behavior.html#method_setName"><abbr title="Behavior">Behavior</abbr></a> at line 38</div>
+        <code>            public            
+    <strong>setName</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the name of the Behavior</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>the name of the behavior</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getName">
+        <div class="location">in <a href="Behavior.html#method_getName"><abbr title="Behavior">Behavior</abbr></a> at line 48</div>
+        <code>            public            string
+    <strong>getName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the name of the Behavior</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setTable">
+        <div class="location">in <a href="Behavior.html#method_setTable"><abbr title="Behavior">Behavior</abbr></a> at line 58</div>
+        <code>            public            
+    <strong>setTable</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the table this behavior is applied to</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td>the table this behavior is applied to</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTable">
+        <div class="location">in <a href="Behavior.html#method_getTable"><abbr title="Behavior">Behavior</abbr></a> at line 68</div>
+        <code>            public            <a href="Table.html"><abbr title="Table">Table</abbr></a>
+    <strong>getTable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the table this behavior is applied to</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDatabase">
+        <div class="location">in <a href="Behavior.html#method_setDatabase"><abbr title="Behavior">Behavior</abbr></a> at line 78</div>
+        <code>            public            
+    <strong>setDatabase</strong>(<a href="Database.html"><abbr title="Database">Database</abbr></a> $database)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the database this behavior is applied to</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Database.html"><abbr title="Database">Database</abbr></a></td>
+                <td>$database</td>
+                <td>the database this behavior is applied to</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDatabase">
+        <div class="location">in <a href="Behavior.html#method_getDatabase"><abbr title="Behavior">Behavior</abbr></a> at line 88</div>
+        <code>            public            <a href="Database.html"><abbr title="Database">Database</abbr></a>
+    <strong>getDatabase</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the table this behavior is applied to if behavior is applied to &lt;database&gt; element.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Database.html"><abbr title="Database">Database</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addParameter">
+        <div class="location">in <a href="Behavior.html#method_addParameter"><abbr title="Behavior">Behavior</abbr></a> at line 99</div>
+        <code>            public            
+    <strong>addParameter</strong>(array $attribute)</code>
+    </h3>
+    <div class="details">
+        <p>Add a parameter Expects an associative array looking like array(&#039;name&#039; =&gt; &#039;foo&#039;, &#039;value&#039; =&gt; bar)</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$attribute</td>
+                <td>associative array with name and value keys</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setParameters">
+        <div class="location">in <a href="Behavior.html#method_setParameters"><abbr title="Behavior">Behavior</abbr></a> at line 111</div>
+        <code>            public            
+    <strong>setParameters</strong>(array $parameters)</code>
+    </h3>
+    <div class="details">
+        <p>Overrides the behavior parameters Expects an associative array looking like array(&#039;foo&#039; =&gt; &#039;bar&#039;)</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td>associative array</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getParameters">
+        <div class="location">in <a href="Behavior.html#method_getParameters"><abbr title="Behavior">Behavior</abbr></a> at line 120</div>
+        <code>            public            array
+    <strong>getParameters</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the associative array of parameters</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getParameter">
+        <div class="location">in <a href="Behavior.html#method_getParameter"><abbr title="Behavior">Behavior</abbr></a> at line 125</div>
+        <code>            public            
+    <strong>getParameter</strong>($name)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setTableModificationOrder">
+        <div class="location">in <a href="Behavior.html#method_setTableModificationOrder"><abbr title="Behavior">Behavior</abbr></a> at line 140</div>
+        <code>            public            
+    <strong>setTableModificationOrder</strong>(<abbr title="$tableModificationOrder">$tableModificationOrder</abbr> $tableModificationOrder)</code>
+    </h3>
+    <div class="details">
+        <p>Define when this behavior must execute its modifyTable() relative to other behaviors.</p>
+        <p>The bigger the value, the later the behavior is executed. Default is 50.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="$tableModificationOrder">$tableModificationOrder</abbr></td>
+                <td>$tableModificationOrder</td>
+                <td>integer</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTableModificationOrder">
+        <div class="location">in <a href="Behavior.html#method_getTableModificationOrder"><abbr title="Behavior">Behavior</abbr></a> at line 151</div>
+        <code>            public            integer
+    <strong>getTableModificationOrder</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get when this behavior must execute its modifyTable() relative to other behaviors.</p>
+        <p>The bigger the value, the later the behavior is executed. Default is 50.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_modifyDatabase">
+        <div class="location">in <a href="Behavior.html#method_modifyDatabase"><abbr title="Behavior">Behavior</abbr></a> at line 161</div>
+        <code>            public            
+    <strong>modifyDatabase</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>This method is automatically called on database behaviors when the database model is finished Propagate the behavior to the tables of the database Override this method to have a database behavior do something special</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_modifyTable">
+        <div class="location">at line 35</div>
+        <code>            public            
+    <strong>modifyTable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Add the slug_column to the current table</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setTableModified">
+        <div class="location">in <a href="Behavior.html#method_setTableModified"><abbr title="Behavior">Behavior</abbr></a> at line 181</div>
+        <code>            public            
+    <strong>setTableModified</strong>($bool)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$bool</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isTableModified">
+        <div class="location">in <a href="Behavior.html#method_isTableModified"><abbr title="Behavior">Behavior</abbr></a> at line 186</div>
+        <code>            public            
+    <strong>isTableModified</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_renderTemplate">
+        <div class="location">in <a href="Behavior.html#method_renderTemplate"><abbr title="Behavior">Behavior</abbr></a> at line 203</div>
+        <code>            public            string
+    <strong>renderTemplate</strong>(string $filename, array $vars = array(), string $templateDir = &#039;/templates/&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Use Propel&#039;s simple templating system to render a PHP file using variables passed as arguments.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td>The template file name, relative to the behavior&#039;s dirname</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$vars</td>
+                <td>An associative array of argumens to be rendered</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$templateDir</td>
+                <td>The name of the template subdirectory</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The rendered template</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnForParameter">
+        <div class="location">in <a href="Behavior.html#method_getColumnForParameter"><abbr title="Behavior">Behavior</abbr></a> at line 245</div>
+        <code>            public            <abbr title="ColumnMap">ColumnMap</abbr>
+    <strong>getColumnForParameter</strong>(string $param)</code>
+    </h3>
+    <div class="details">
+        <p>Retrieve a column object using a name stored in the behavior parameters Useful for table behaviors</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$param</td>
+                <td>Name of the parameter storing the column name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ColumnMap">ColumnMap</abbr></td>
+            <td>The column of the table supporting the behavior</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_appendXml">
+        <div class="location">in <a href="Behavior.html#method_appendXml"><abbr title="Behavior">Behavior</abbr></a> at line 262</div>
+        <code>            public            
+    <strong>appendXml</strong>(<a href="http://php.net/DOMNode"><abbr title="DOMNode">DOMNode</abbr></a> $node)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/DOMNode"><abbr title="DOMNode">DOMNode</abbr></a></td>
+                <td>$node</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>parent::appendXml(DOMNode)</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getTableModifier">
+        <div class="location">in <a href="Behavior.html#method_getTableModifier"><abbr title="Behavior">Behavior</abbr></a> at line 276</div>
+        <code>            public            
+    <strong>getTableModifier</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getObjectBuilderModifier">
+        <div class="location">in <a href="Behavior.html#method_getObjectBuilderModifier"><abbr title="Behavior">Behavior</abbr></a> at line 281</div>
+        <code>            public            
+    <strong>getObjectBuilderModifier</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getQueryBuilderModifier">
+        <div class="location">in <a href="Behavior.html#method_getQueryBuilderModifier"><abbr title="Behavior">Behavior</abbr></a> at line 286</div>
+        <code>            public            
+    <strong>getQueryBuilderModifier</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPeerBuilderModifier">
+        <div class="location">in <a href="Behavior.html#method_getPeerBuilderModifier"><abbr title="Behavior">Behavior</abbr></a> at line 291</div>
+        <code>            public            
+    <strong>getPeerBuilderModifier</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTableMapBuilderModifier">
+        <div class="location">in <a href="Behavior.html#method_getTableMapBuilderModifier"><abbr title="Behavior">Behavior</abbr></a> at line 296</div>
+        <code>            public            
+    <strong>getTableMapBuilderModifier</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasAdditionalBuilders">
+        <div class="location">in <a href="Behavior.html#method_hasAdditionalBuilders"><abbr title="Behavior">Behavior</abbr></a> at line 301</div>
+        <code>            public            
+    <strong>hasAdditionalBuilders</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAdditionalBuilders">
+        <div class="location">in <a href="Behavior.html#method_getAdditionalBuilders"><abbr title="Behavior">Behavior</abbr></a> at line 306</div>
+        <code>            public            
+    <strong>getAdditionalBuilders</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_preSave">
+        <div class="location">at line 79</div>
+        <code>            public            string
+    <strong>preSave</strong>($builder)</code>
+    </h3>
+    <div class="details">
+        <p>Add code in ObjectBuilder::preSave</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$builder</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The code to put at the hook</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_objectMethods">
+        <div class="location">at line 100</div>
+        <code>            public            
+    <strong>objectMethods</strong>($builder)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$builder</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addCleanupSlugPart">
+        <div class="location">at line 191</div>
+        <code>            public            
+    <strong>addCleanupSlugPart</strong>($script)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$script</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addLimitSlugSize">
+        <div class="location">at line 234</div>
+        <code>            public            
+    <strong>addLimitSlugSize</strong>($script)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$script</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addMakeSlugUnique">
+        <div class="location">at line 259</div>
+        <code>            public            
+    <strong>addMakeSlugUnique</strong>($script)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$script</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_queryMethods">
+        <div class="location">at line 299</div>
+        <code>            public            
+    <strong>queryMethods</strong>($builder)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$builder</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

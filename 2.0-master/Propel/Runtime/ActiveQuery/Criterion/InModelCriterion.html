@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Propel\Runtime\ActiveQuery\Criterion\InModelCriterion | Propel 2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel 2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../Propel/Runtime/ActiveQuery/Criterion.html">Propel\Runtime\ActiveQuery\Criterion</a>\InModelCriterion</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>InModelCriterion</strong>        extends <a href="../../../../Propel/Runtime/ActiveQuery/Criterion/AbstractModelCriterion.html"><abbr title="Propel\Runtime\ActiveQuery\Criterion\AbstractModelCriterion">AbstractModelCriterion</abbr></a></p>
+
+            <div class="description">
+            <p>Specialized ModelCriterion used for IN or NOT IN model clauses, e.g.</p>
+            <p>&#039;book.TITLE NOT IN ?&#039;</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>UND</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ODER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $outer, string $clause, <abbr title="Propel\Runtime\ActiveQuery\Criterion\ColumnMap">ColumnMap</abbr> $column, mixed $value = null, string $tableAlias = null)
+                    <p>Create a new instance.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Runtime/ActiveQuery/Criterion/AbstractModelCriterion.html#method___construct"><abbr title="Propel\Runtime\ActiveQuery\Criterion\AbstractModelCriterion">AbstractModelCriterion</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getClause">getClause</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Runtime/ActiveQuery/Criterion/AbstractModelCriterion.html#method_getClause"><abbr title="Propel\Runtime\ActiveQuery\Criterion\AbstractModelCriterion">AbstractModelCriterion</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_equals">equals</a>($obj)
+                    <p>This method checks another Criteria to see if they contain the same attributes and hashtable entries.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Runtime/ActiveQuery/Criterion/AbstractModelCriterion.html#method_equals"><abbr title="Propel\Runtime\ActiveQuery\Criterion\AbstractModelCriterion">AbstractModelCriterion</abbr></a></small></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">in <a href="../../../../Propel/Runtime/ActiveQuery/Criterion/AbstractModelCriterion.html#method___construct"><abbr title="Propel\Runtime\ActiveQuery\Criterion\AbstractModelCriterion">AbstractModelCriterion</abbr></a> at line 33</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $outer, string $clause, <abbr title="Propel\Runtime\ActiveQuery\Criterion\ColumnMap">ColumnMap</abbr> $column, mixed $value = null, string $tableAlias = null)</code>
+    </h3>
+    <div class="details">
+        <p>Create a new instance.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a></td>
+                <td>$outer</td>
+                <td>The outer class (this is an &quot;inner&quot; class).</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$clause</td>
+                <td>A simple pseudo-SQL clause, e.g. &#039;foo.BAR LIKE ?&#039;</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\ActiveQuery\Criterion\ColumnMap">ColumnMap</abbr></td>
+                <td>$column</td>
+                <td>A Column object to help escaping the value</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tableAlias</td>
+                <td>optional table alias</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getClause">
+        <div class="location">in <a href="../../../../Propel/Runtime/ActiveQuery/Criterion/AbstractModelCriterion.html#method_getClause"><abbr title="Propel\Runtime\ActiveQuery\Criterion\AbstractModelCriterion">AbstractModelCriterion</abbr></a> at line 44</div>
+        <code>            public            
+    <strong>getClause</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_equals">
+        <div class="location">in <a href="../../../../Propel/Runtime/ActiveQuery/Criterion/AbstractModelCriterion.html#method_equals"><abbr title="Propel\Runtime\ActiveQuery\Criterion\AbstractModelCriterion">AbstractModelCriterion</abbr></a> at line 54</div>
+        <code>            public            boolean
+    <strong>equals</strong>($obj)</code>
+    </h3>
+    <div class="details">
+        <p>This method checks another Criteria to see if they contain the same attributes and hashtable entries.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$obj</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>PropelTemplate | Propel API</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel API</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>PropelTemplate</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PropelTemplate</strong></p>
+
+            <div class="description">
+            <p>Simple templating system to ease behavior writing</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setTemplate">setTemplate</a>(string $template)
+                    <p>Set a string as a template.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setTemplateFile">setTemplateFile</a>(string $filePath)
+                    <p>Set a file as a template.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_render">render</a>(array $vars = array())
+                    <p>Render the template using the variable provided as arguments.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_setTemplate">
+        <div class="location">at line 32</div>
+        <code>            public            
+    <strong>setTemplate</strong>(string $template)</code>
+    </h3>
+    <div class="details">
+        <p>Set a string as a template.</p>
+        <p>The string doesn&#039;t need closing php tags.<br />
+<br />
+ &lt;code&gt;<br />
+ $template-&gt;setTemplate(&#039;This is &lt;?php echo $name ?&gt;&#039;);<br />
+ &lt;/code&gt;</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$template</td>
+                <td>the template string</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setTemplateFile">
+        <div class="location">at line 46</div>
+        <code>            public            
+    <strong>setTemplateFile</strong>(string $filePath)</code>
+    </h3>
+    <div class="details">
+        <p>Set a file as a template.</p>
+        <p>The file can be any regular PHP file.<br />
+ <br />
+ &lt;code&gt;<br />
+ $template-&gt;setTemplateFile(dirname(__FILE__) . &#039;/template/foo.php&#039;);<br />
+ &lt;/code&gt;</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$filePath</td>
+                <td>The (absolute or relative to the include path) file path</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_render">
+        <div class="location">at line 65</div>
+        <code>            public            string
+    <strong>render</strong>(array $vars = array())</code>
+    </h3>
+    <div class="details">
+        <p>Render the template using the variable provided as arguments.</p>
+        <p>&lt;code&gt;<br />
+ $template = new PropelTemplate();<br />
+ $template-&gt;setTemplate(&#039;This is &lt;?php echo $name ?&gt;&#039;);<br />
+ echo $template-&gt;render(array(&#039;name&#039; =&gt; &#039;Mike&#039;));<br />
+ // This is Mike<br />
+ &lt;/code&gt;</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$vars</td>
+                <td>An associative array of argumens to be rendered</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The rendered template</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

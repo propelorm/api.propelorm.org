@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Propel\Runtime\Util\Profiler | Propel 2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel 2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Propel/Runtime/Util.html">Propel\Runtime\Util</a>\Profiler</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Profiler</strong></p>
+
+            <div class="description">
+            <p>Profiler for Propel</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>($slowTreshold = 0.1, $innerGlue = &#039;: &#039;, $outerGlue = &#039; | &#039;)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSlowTreshold">setSlowTreshold</a>(integer $slowTreshold)
+                    <p>Set the duration which triggers the &#039;slow&#039; label on details.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDetails">setDetails</a>(array $details)
+                    <p>Set the list of details to be included in a profile.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setInnerGlue">setInnerGlue</a>(string $innerGlue)
+                    <p>Set the inner glue for the details.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setOuterGlue">setOuterGlue</a>(string $outerGlue)
+                    <p>Set the outer glue for the details.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setConfiguration">setConfiguration</a>(array $profilerConfiguration)
+                    <p>Configure the profiler from an array.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getConfiguration">getConfiguration</a>()
+                    <p>Get an array representing the configuration of the profiler.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_start">start</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_isSlow">isSlow</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getProfile">getProfile</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getProfileBetween">getProfileBetween</a>(array $startSnapshot, array $endSnapshot)
+                    <p>Returns a string that may be prepended to a log line, containing debug information according to the current configuration.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;array
+                </td>
+                <td class="last">
+                    <a href="#method_getSnapshot">getSnapshot</a>()
+                    <p>Get a snapshot of the current time and memory consumption.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_formatMemory">formatMemory</a>(integer $bytes, integer $precision = 3)
+                    <p>Format a byte count into a human-readable representation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_formatDuration">formatDuration</a>(<abbr title="Propel\Runtime\Util\double">double</abbr> $duration, integer $precision = 3)
+                    <p>Format a duration into a human-readable representation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<abbr title="Propel\Runtime\Util\float">float</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_toPrecision">toPrecision</a>(<abbr title="Propel\Runtime\Util\float">float</abbr> $number, integer $significantFigures = 3)
+                    <p>Rounding to significant digits (sort of like JavaScript&#039;s toPrecision()).</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 39</div>
+        <code>            public            
+    <strong>__construct</strong>($slowTreshold = 0.1, $innerGlue = &#039;: &#039;, $outerGlue = &#039; | &#039;)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$slowTreshold</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$innerGlue</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$outerGlue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSlowTreshold">
+        <div class="location">at line 51</div>
+        <code>            public            
+    <strong>setSlowTreshold</strong>(integer $slowTreshold)</code>
+    </h3>
+    <div class="details">
+        <p>Set the duration which triggers the &#039;slow&#039; label on details.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$slowTreshold</td>
+                <td>duration in seconds</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDetails">
+        <div class="location">at line 61</div>
+        <code>            public            
+    <strong>setDetails</strong>(array $details)</code>
+    </h3>
+    <div class="details">
+        <p>Set the list of details to be included in a profile.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$details</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setInnerGlue">
+        <div class="location">at line 71</div>
+        <code>            public            
+    <strong>setInnerGlue</strong>(string $innerGlue)</code>
+    </h3>
+    <div class="details">
+        <p>Set the inner glue for the details.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$innerGlue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setOuterGlue">
+        <div class="location">at line 81</div>
+        <code>            public            
+    <strong>setOuterGlue</strong>(string $outerGlue)</code>
+    </h3>
+    <div class="details">
+        <p>Set the outer glue for the details.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$outerGlue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setConfiguration">
+        <div class="location">at line 112</div>
+        <code>            public            
+    <strong>setConfiguration</strong>(array $profilerConfiguration)</code>
+    </h3>
+    <div class="details">
+        <p>Configure the profiler from an array.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$profilerConfiguration</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConfiguration">
+        <div class="location">at line 135</div>
+        <code>            public            array
+    <strong>getConfiguration</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get an array representing the configuration of the profiler.</p>
+        <p>This array can be used as an input for self::setConfiguration().</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_start">
+        <div class="location">at line 145</div>
+        <code>            public            
+    <strong>start</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isSlow">
+        <div class="location">at line 150</div>
+        <code>            public            
+    <strong>isSlow</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getProfile">
+        <div class="location">at line 155</div>
+        <code>            public            
+    <strong>getProfile</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getProfileBetween">
+        <div class="location">at line 174</div>
+        <code>            public            string
+    <strong>getProfileBetween</strong>(array $startSnapshot, array $endSnapshot)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a string that may be prepended to a log line, containing debug information according to the current configuration.</p>
+        <p>Uses two debug snapshots to calculate how much time has passed since the call to<br />
+ self::start(), how much the memory consumption by PHP has changed etc.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$startSnapshot</td>
+                <td>A snapshot, as returned by self::getSnapshot().</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$endSnapshot</td>
+                <td>A snapshot, as returned by self::getSnapshot().</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>self::getSnapshot()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getSnapshot">
+        <div class="location">at line 218</div>
+        <code>        static    public            array
+    <strong>getSnapshot</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a snapshot of the current time and memory consumption.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_formatMemory">
+        <div class="location">at line 235</div>
+        <code>        static    public            string
+    <strong>formatMemory</strong>(integer $bytes, integer $precision = 3)</code>
+    </h3>
+    <div class="details">
+        <p>Format a byte count into a human-readable representation.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$bytes</td>
+                <td>Byte count to convert. Can be negative.</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$precision</td>
+                <td>How many decimals to include.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_formatDuration">
+        <div class="location">at line 257</div>
+        <code>        static    public            string
+    <strong>formatDuration</strong>(<abbr title="Propel\Runtime\Util\double">double</abbr> $duration, integer $precision = 3)</code>
+    </h3>
+    <div class="details">
+        <p>Format a duration into a human-readable representation.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Util\double">double</abbr></td>
+                <td>$duration</td>
+                <td>Duration to format, in seconds.</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$precision</td>
+                <td>How many decimals to include.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toPrecision">
+        <div class="location">at line 278</div>
+        <code>        static    public            <abbr title="Propel\Runtime\Util\float">float</abbr>
+    <strong>toPrecision</strong>(<abbr title="Propel\Runtime\Util\float">float</abbr> $number, integer $significantFigures = 3)</code>
+    </h3>
+    <div class="details">
+        <p>Rounding to significant digits (sort of like JavaScript&#039;s toPrecision()).</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Util\float">float</abbr></td>
+                <td>$number</td>
+                <td>Value to round</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$significantFigures</td>
+                <td>Number of significant figures</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Runtime\Util\float">float</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

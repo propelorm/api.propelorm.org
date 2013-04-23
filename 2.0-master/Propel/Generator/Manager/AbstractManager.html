@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Propel\Generator\Manager\AbstractManager | Propel 2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel 2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Propel/Generator/Manager.html">Propel\Generator\Manager</a>\AbstractManager</h1>
+    </div>
+        <div class="content">
+                <p>abstract class    <strong>AbstractManager</strong></p>
+
+            <div class="description">
+            <p>An abstract base Propel manager to perform work related to the XML schema file.</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getSchemas">getSchemas</a>()
+                    <p>Returns the list of schemas.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSchemas">setSchemas</a>(array $schemas)
+                    <p>Sets the schemas list.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setWorkingDirectory">setWorkingDirectory</a>(string $workingDirectory)
+                    <p>Sets the working directory path.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getWorkingDirectory">getWorkingDirectory</a>()
+                    <p>Returns the working directory path.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getDataModels">getDataModels</a>()
+                    <p>Returns the data models that have been processed.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getDataModelDbMap">getDataModelDbMap</a>()
+                    <p>Returns the data model to database name map.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setValidate">setValidate</a>(boolean $validate)
+                    <p>Sets whether to perform validation on the datamodel schema.xml file(s).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setXsd">setXsd</a>(string $xsd)
+                    <p>Sets the XSD schema to use for validation of any datamodel schema.xml file(s).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setXsl">setXsl</a>(string $xsl)
+                    <p>Sets the normalization XSLT to use to transform datamodel schema.xml file(s) before validation and parsing.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDbEncoding">setDbEncoding</a>(string $encoding)
+                    <p>Sets the current target database encoding.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setLoggerClosure">setLoggerClosure</a>(<abbr title="Propel\Generator\Manager\Closure">Closure</abbr> $logger)
+                    <p>Sets a logger closure.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setGeneratorConfig">setGeneratorConfig</a>(<a href="../../../Propel/Generator/Config/GeneratorConfigInterface.html"><abbr title="Propel\Generator\Config\GeneratorConfigInterface">GeneratorConfigInterface</abbr></a> $generatorConfig)
+                    <p>Sets the GeneratorConfigInterface implementation.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getSchemas">
+        <div class="location">at line 100</div>
+        <code>            public            array
+    <strong>getSchemas</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the list of schemas.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSchemas">
+        <div class="location">at line 110</div>
+        <code>            public            
+    <strong>setSchemas</strong>(array $schemas)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the schemas list.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$schemas</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setWorkingDirectory">
+        <div class="location">at line 120</div>
+        <code>            public            
+    <strong>setWorkingDirectory</strong>(string $workingDirectory)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the working directory path.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$workingDirectory</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getWorkingDirectory">
+        <div class="location">at line 130</div>
+        <code>            public            string
+    <strong>getWorkingDirectory</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the working directory path.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDataModels">
+        <div class="location">at line 142</div>
+        <code>            public            array
+    <strong>getDataModels</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the data models that have been processed.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDataModelDbMap">
+        <div class="location">at line 156</div>
+        <code>            public            array
+    <strong>getDataModelDbMap</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the data model to database name map.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setValidate">
+        <div class="location">at line 170</div>
+        <code>            public            
+    <strong>setValidate</strong>(boolean $validate)</code>
+    </h3>
+    <div class="details">
+        <p>Sets whether to perform validation on the datamodel schema.xml file(s).</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$validate</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setXsd">
+        <div class="location">at line 181</div>
+        <code>            public            
+    <strong>setXsd</strong>(string $xsd)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the XSD schema to use for validation of any datamodel schema.xml file(s).</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$xsd</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setXsl">
+        <div class="location">at line 192</div>
+        <code>            public            
+    <strong>setXsl</strong>(string $xsl)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the normalization XSLT to use to transform datamodel schema.xml file(s) before validation and parsing.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$xsl</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDbEncoding">
+        <div class="location">at line 202</div>
+        <code>            public            
+    <strong>setDbEncoding</strong>(string $encoding)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the current target database encoding.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$encoding</td>
+                <td>Target database encoding</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setLoggerClosure">
+        <div class="location">at line 212</div>
+        <code>            public            
+    <strong>setLoggerClosure</strong>(<abbr title="Propel\Generator\Manager\Closure">Closure</abbr> $logger)</code>
+    </h3>
+    <div class="details">
+        <p>Sets a logger closure.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Generator\Manager\Closure">Closure</abbr></td>
+                <td>$logger</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setGeneratorConfig">
+        <div class="location">at line 370</div>
+        <code>            public            
+    <strong>setGeneratorConfig</strong>(<a href="../../../Propel/Generator/Config/GeneratorConfigInterface.html"><abbr title="Propel\Generator\Config\GeneratorConfigInterface">GeneratorConfigInterface</abbr></a> $generatorConfig)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the GeneratorConfigInterface implementation.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Generator/Config/GeneratorConfigInterface.html"><abbr title="Propel\Generator\Config\GeneratorConfigInterface">GeneratorConfigInterface</abbr></a></td>
+                <td>$generatorConfig</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

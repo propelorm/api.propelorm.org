@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Propel\Runtime\Adapter\Pdo\PdoConnection | Propel 2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel 2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../Propel/Runtime/Adapter/Pdo.html">Propel\Runtime\Adapter\Pdo</a>\PdoConnection</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PdoConnection</strong>        extends <a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a>        implements
+        <a href="../../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a></p>
+
+            <div class="description">
+            <p>PDO extension that implements ConnectionInterface and builds statements implementing StatementInterface.</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setName">setName</a>(string $name)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getName">getName</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>($dsn, $user = null, $password = null, array $options = null)
+                    <p>Creates a PDO instance representing a connection to a database.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_setAttribute">setAttribute</a>(integer $attribute, mixed $value)
+                    <p>Sets a connection attribute.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_setName">
+        <div class="location">at line 29</div>
+        <code>            public            
+    <strong>setName</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The datasource name associated to this connection</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getName">
+        <div class="location">at line 37</div>
+        <code>            public            string
+    <strong>getName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The datasource name associated to this connection</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___construct">
+        <div class="location">at line 45</div>
+        <code>            public            
+    <strong>__construct</strong>($dsn, $user = null, $password = null, array $options = null)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a PDO instance representing a connection to a database.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$dsn</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$password</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAttribute">
+        <div class="location">at line 61</div>
+        <code>            public            boolean
+    <strong>setAttribute</strong>(integer $attribute, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Sets a connection attribute.</p>
+        <p>This is overridden here to allow names corresponding to PDO constant names.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$attribute</td>
+                <td>The attribute to set (e.g. &#039;PDO::ATTR_CASE&#039;, or more simply &#039;ATTR_CASE&#039;).</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The attribute value.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>TRUE on success or FALSE on failure.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

@@ -6,16 +6,24 @@ the master API). It's generated thanks to [Sami]. You can browse the API on
 
 ## Regenerate the API
 
-You can generate it using a Shell script:
+If you want to regenerate the API (to be up to date with master for instance),
+first setup Composer and install the necessary dependencies:
 
-```bash
+~~~bash
+$ curl -sS https://getcomposer.org/installer | php
+$ php composer.phar install
+~~~
+
+Then generate the structure using the `build-api` script:
+
+~~~bash
 $ build-api v1
 $ build-api v2
-```
+~~~
 
 It will automatically clone the repo of the specific version from GitHub and then
-generate the API. You can open the `index.html` file at the root of this repo to
-browse the API.
+generate the API. Finally, You can open the `index.html` file at the root of this
+repo to browse the API.
 
 > You may encounter issues when generating the 1.6 API because of an issue with
 the file names and the `json_encode` function.

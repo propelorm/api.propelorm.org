@@ -39,7 +39,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(string $sql, <a href="../../../Propel/Runtime/Connection/ConnectionWrapper.html"><abbr title="Propel\Runtime\Connection\ConnectionWrapper">ConnectionWrapper</abbr></a> $connection, array $driver_options = array())
+                    <a href="#method___construct">__construct</a>(string $sql, <a href="../../../Propel/Runtime/Connection/ConnectionWrapper.html"><abbr title="Propel\Runtime\Connection\ConnectionWrapper">ConnectionWrapper</abbr></a> $connection, array $options = array())
                     <p>Creates a Statement instance</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../Propel/Runtime/Connection/StatementWrapper.html#method___construct"><abbr title="Propel\Runtime\Connection\StatementWrapper">StatementWrapper</abbr></a></small></td>
@@ -109,7 +109,7 @@
                     mixed
                 </td>
                 <td class="last">
-                    <a href="#method_fetch">fetch</a>($fetchStyle = 4)
+                    <a href="#method_fetch">fetch</a>(integer $fetchStyle = 4)
                     <p>Fetches the next row from a result set.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../Propel/Runtime/Connection/StatementWrapper.html#method_fetch"><abbr title="Propel\Runtime\Connection\StatementWrapper">StatementWrapper</abbr></a></small></td>
@@ -119,7 +119,7 @@
                     array
                 </td>
                 <td class="last">
-                    <a href="#method_fetchAll">fetchAll</a>($fetchStyle = 4)
+                    <a href="#method_fetchAll">fetchAll</a>(integer $fetchStyle = 4)
                     <p>Returns an array containing all of the result set rows.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../Propel/Runtime/Connection/StatementWrapper.html#method_fetchAll"><abbr title="Propel\Runtime\Connection\StatementWrapper">StatementWrapper</abbr></a></small></td>
@@ -172,7 +172,7 @@
                         <h3 id="method___construct">
         <div class="location">in <a href="../../../Propel/Runtime/Connection/StatementWrapper.html#method___construct"><abbr title="Propel\Runtime\Connection\StatementWrapper">StatementWrapper</abbr></a> at line 61</div>
         <code>            public            
-    <strong>__construct</strong>(string $sql, <a href="../../../Propel/Runtime/Connection/ConnectionWrapper.html"><abbr title="Propel\Runtime\Connection\ConnectionWrapper">ConnectionWrapper</abbr></a> $connection, array $driver_options = array())</code>
+    <strong>__construct</strong>(string $sql, <a href="../../../Propel/Runtime/Connection/ConnectionWrapper.html"><abbr title="Propel\Runtime\Connection\ConnectionWrapper">ConnectionWrapper</abbr></a> $connection, array $options = array())</code>
     </h3>
     <div class="details">
         <p>Creates a Statement instance</p>
@@ -193,7 +193,7 @@
             </tr>
                     <tr>
                 <td>array</td>
-                <td>$driver_options</td>
+                <td>$options</td>
                 <td>Optional driver options</td>
             </tr>
             </table>
@@ -403,7 +403,7 @@
     </div>
 
                 <h3 id="method_getExecutedQueryString">
-        <div class="location">in <a href="../../../Propel/Runtime/Connection/StatementWrapper.html#method_getExecutedQueryString"><abbr title="Propel\Runtime\Connection\StatementWrapper">StatementWrapper</abbr></a> at line 183</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Connection/StatementWrapper.html#method_getExecutedQueryString"><abbr title="Propel\Runtime\Connection\StatementWrapper">StatementWrapper</abbr></a> at line 185</div>
         <code>            public            string
     <strong>getExecutedQueryString</strong>()</code>
     </h3>
@@ -427,9 +427,9 @@
     </div>
 
                 <h3 id="method_fetch">
-        <div class="location">in <a href="../../../Propel/Runtime/Connection/StatementWrapper.html#method_fetch"><abbr title="Propel\Runtime\Connection\StatementWrapper">StatementWrapper</abbr></a> at line 221</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Connection/StatementWrapper.html#method_fetch"><abbr title="Propel\Runtime\Connection\StatementWrapper">StatementWrapper</abbr></a> at line 210</div>
         <code>            public            mixed
-    <strong>fetch</strong>($fetchStyle = 4)</code>
+    <strong>fetch</strong>(integer $fetchStyle = 4)</code>
     </h3>
     <div class="details">
         <p>Fetches the next row from a result set.</p>
@@ -440,9 +440,9 @@
 
                     <table>
                     <tr>
-                <td></td>
+                <td>integer</td>
                 <td>$fetchStyle</td>
-                <td></td>
+                <td>Controls how the next row will be returned to the caller.</td>
             </tr>
             </table>
 
@@ -462,9 +462,9 @@
     </div>
 
                 <h3 id="method_fetchAll">
-        <div class="location">in <a href="../../../Propel/Runtime/Connection/StatementWrapper.html#method_fetchAll"><abbr title="Propel\Runtime\Connection\StatementWrapper">StatementWrapper</abbr></a> at line 234</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Connection/StatementWrapper.html#method_fetchAll"><abbr title="Propel\Runtime\Connection\StatementWrapper">StatementWrapper</abbr></a> at line 222</div>
         <code>            public            array
-    <strong>fetchAll</strong>($fetchStyle = 4)</code>
+    <strong>fetchAll</strong>(integer $fetchStyle = 4)</code>
     </h3>
     <div class="details">
         <p>Returns an array containing all of the result set rows.</p>
@@ -474,9 +474,9 @@
 
                     <table>
                     <tr>
-                <td></td>
+                <td>integer</td>
                 <td>$fetchStyle</td>
-                <td></td>
+                <td>Controls the contents of the returned array as documented in fetch()</td>
             </tr>
             </table>
 
@@ -496,7 +496,7 @@
     </div>
 
                 <h3 id="method_fetchColumn">
-        <div class="location">in <a href="../../../Propel/Runtime/Connection/StatementWrapper.html#method_fetchColumn"><abbr title="Propel\Runtime\Connection\StatementWrapper">StatementWrapper</abbr></a> at line 248</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Connection/StatementWrapper.html#method_fetchColumn"><abbr title="Propel\Runtime\Connection\StatementWrapper">StatementWrapper</abbr></a> at line 236</div>
         <code>            public            string
     <strong>fetchColumn</strong>(integer $columnIndex)</code>
     </h3>
@@ -530,7 +530,7 @@
     </div>
 
                 <h3 id="method_rowCount">
-        <div class="location">in <a href="../../../Propel/Runtime/Connection/StatementWrapper.html#method_rowCount"><abbr title="Propel\Runtime\Connection\StatementWrapper">StatementWrapper</abbr></a> at line 266</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Connection/StatementWrapper.html#method_rowCount"><abbr title="Propel\Runtime\Connection\StatementWrapper">StatementWrapper</abbr></a> at line 254</div>
         <code>            public            integer
     <strong>rowCount</strong>()</code>
     </h3>
@@ -560,7 +560,7 @@
     </div>
 
                 <h3 id="method_getIterator">
-        <div class="location">in <a href="../../../Propel/Runtime/Connection/StatementWrapper.html#method_getIterator"><abbr title="Propel\Runtime\Connection\StatementWrapper">StatementWrapper</abbr></a> at line 276</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Connection/StatementWrapper.html#method_getIterator"><abbr title="Propel\Runtime\Connection\StatementWrapper">StatementWrapper</abbr></a> at line 264</div>
         <code>            public            <abbr title="Propel\Runtime\Connection\Traversable">Traversable</abbr>
     <strong>getIterator</strong>()</code>
     </h3>
@@ -584,7 +584,7 @@
     </div>
 
                 <h3 id="method___call">
-        <div class="location">in <a href="../../../Propel/Runtime/Connection/StatementWrapper.html#method___call"><abbr title="Propel\Runtime\Connection\StatementWrapper">StatementWrapper</abbr></a> at line 281</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Connection/StatementWrapper.html#method___call"><abbr title="Propel\Runtime\Connection\StatementWrapper">StatementWrapper</abbr></a> at line 269</div>
         <code>            public            
     <strong>__call</strong>($method, $args)</code>
     </h3>

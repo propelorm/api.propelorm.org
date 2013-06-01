@@ -50,7 +50,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_applyBehaviorModifier">applyBehaviorModifier</a>($hookName, $script, $tab = &#039;        &#039;)
+                    <a href="#method_applyBehaviorModifier">applyBehaviorModifier</a>(string $hookName, string $script, string $tab = &#039;        &#039;)
                     <p>Checks whether any registered behavior on that table has a modifier for a hook</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractObjectBuilder.html#method_applyBehaviorModifier"><abbr title="Propel\Generator\Builder\Om\AbstractObjectBuilder">AbstractObjectBuilder</abbr></a></small></td>
@@ -260,9 +260,9 @@
     </div>
 
                 <h3 id="method_applyBehaviorModifier">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractObjectBuilder.html#method_applyBehaviorModifier"><abbr title="Propel\Generator\Builder\Om\AbstractObjectBuilder">AbstractObjectBuilder</abbr></a> at line 181</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractObjectBuilder.html#method_applyBehaviorModifier"><abbr title="Propel\Generator\Builder\Om\AbstractObjectBuilder">AbstractObjectBuilder</abbr></a> at line 182</div>
         <code>            public            
-    <strong>applyBehaviorModifier</strong>($hookName, $script, $tab = &#039;        &#039;)</code>
+    <strong>applyBehaviorModifier</strong>(string $hookName, string $script, string $tab = &#039;        &#039;)</code>
     </h3>
     <div class="details">
         <p>Checks whether any registered behavior on that table has a modifier for a hook</p>
@@ -272,17 +272,17 @@
 
                     <table>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$hookName</td>
-                <td></td>
+                <td>The name of the hook as called from one of this class methods, e.g. &quot;preSave&quot;</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$script</td>
-                <td></td>
+                <td>&amp;$script  The script will be modified in this method.</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$tab</td>
                 <td></td>
             </tr>
@@ -295,7 +295,7 @@
     </div>
 
                 <h3 id="method_getBehaviorContent">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractObjectBuilder.html#method_getBehaviorContent"><abbr title="Propel\Generator\Builder\Om\AbstractObjectBuilder">AbstractObjectBuilder</abbr></a> at line 190</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractObjectBuilder.html#method_getBehaviorContent"><abbr title="Propel\Generator\Builder\Om\AbstractObjectBuilder">AbstractObjectBuilder</abbr></a> at line 191</div>
         <code>            public            
     <strong>getBehaviorContent</strong>(string $contentName)</code>
     </h3>
@@ -320,7 +320,7 @@
     </div>
 
                 <h3 id="method_getPackage">
-        <div class="location">at line 37</div>
+        <div class="location">at line 38</div>
         <code>            public            string
     <strong>getPackage</strong>()</code>
     </h3>
@@ -344,7 +344,7 @@
     </div>
 
                 <h3 id="method_getNamespace">
-        <div class="location">at line 48</div>
+        <div class="location">at line 49</div>
         <code>            public            string
     <strong>getNamespace</strong>()</code>
     </h3>
@@ -377,7 +377,7 @@
     </div>
 
                 <h3 id="method_getDefaultKeyType">
-        <div class="location">at line 64</div>
+        <div class="location">at line 65</div>
         <code>            public            string
     <strong>getDefaultKeyType</strong>()</code>
     </h3>
@@ -401,7 +401,7 @@
     </div>
 
                 <h3 id="method_getUnprefixedClassName">
-        <div class="location">at line 76</div>
+        <div class="location">at line 77</div>
         <code>            public            string
     <strong>getUnprefixedClassName</strong>()</code>
     </h3>
@@ -425,7 +425,7 @@
     </div>
 
                 <h3 id="method_addTemporalAccessorComment">
-        <div class="location">at line 850</div>
+        <div class="location">at line 762</div>
         <code>            public            
     <strong>addTemporalAccessorComment</strong>(string $script, <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)</code>
     </h3>
@@ -455,7 +455,7 @@
     </div>
 
                 <h3 id="method_addTemporalAccessorOpen">
-        <div class="location">at line 891</div>
+        <div class="location">at line 803</div>
         <code>            public            
     <strong>addTemporalAccessorOpen</strong>(string $script, <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)</code>
     </h3>
@@ -485,7 +485,7 @@
     </div>
 
                 <h3 id="method_addDefaultAccessorComment">
-        <div class="location">at line 1173</div>
+        <div class="location">at line 1085</div>
         <code>            public            
     <strong>addDefaultAccessorComment</strong>(string $script, <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)</code>
     </h3>
@@ -515,7 +515,7 @@
     </div>
 
                 <h3 id="method_addDefaultAccessorOpen">
-        <div class="location">at line 1196</div>
+        <div class="location">at line 1108</div>
         <code>            public            
     <strong>addDefaultAccessorOpen</strong>(string $script, <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)</code>
     </h3>
@@ -545,7 +545,7 @@
     </div>
 
                 <h3 id="method_addMutatorComment">
-        <div class="location">at line 1386</div>
+        <div class="location">at line 1307</div>
         <code>            public            
     <strong>addMutatorComment</strong>(string $script, <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)</code>
     </h3>
@@ -575,7 +575,7 @@
     </div>
 
                 <h3 id="method_addMutatorOpenOpen">
-        <div class="location">at line 1404</div>
+        <div class="location">at line 1325</div>
         <code>            public            
     <strong>addMutatorOpenOpen</strong>(string $script, <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)</code>
     </h3>
@@ -605,7 +605,7 @@
     </div>
 
                 <h3 id="method_addTemporalMutatorComment">
-        <div class="location">at line 1598</div>
+        <div class="location">at line 1519</div>
         <code>            public            
     <strong>addTemporalMutatorComment</strong>($script, <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $col)</code>
     </h3>
@@ -635,7 +635,7 @@
     </div>
 
                 <h3 id="method_addBooleanMutatorComment">
-        <div class="location">at line 1806</div>
+        <div class="location">at line 1727</div>
         <code>            public            
     <strong>addBooleanMutatorComment</strong>($script, <a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $col)</code>
     </h3>
@@ -665,7 +665,7 @@
     </div>
 
                 <h3 id="method_getFKVarName">
-        <div class="location">at line 3024</div>
+        <div class="location">at line 2964</div>
         <code>            public            string
     <strong>getFKVarName</strong>(<a href="../../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk)</code>
     </h3>
@@ -699,7 +699,7 @@
     </div>
 
                 <h3 id="method_getRefFKCollVarName">
-        <div class="location">at line 3034</div>
+        <div class="location">at line 2974</div>
         <code>            public            string
     <strong>getRefFKCollVarName</strong>(<a href="../../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk)</code>
     </h3>
@@ -733,7 +733,7 @@
     </div>
 
                 <h3 id="method_getPKRefFKVarName">
-        <div class="location">at line 3045</div>
+        <div class="location">at line 2985</div>
         <code>            public            string
     <strong>getPKRefFKVarName</strong>(<a href="../../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk)</code>
     </h3>

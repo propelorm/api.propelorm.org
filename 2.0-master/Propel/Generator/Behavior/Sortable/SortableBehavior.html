@@ -102,7 +102,7 @@
                     <a href="#method_addParameter">addParameter</a>(array $parameter)
                     <p>Adds a single parameter.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Model/Behavior.html#method_addParameter"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -259,16 +259,6 @@
                     <a href="../../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
                 </td>
                 <td class="last">
-                    <a href="#method_getPeerBuilderModifier">getPeerBuilderModifier</a>()
-                    <p>Returns the peer builder modifier object.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    <a href="../../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
-                </td>
-                <td class="last">
                     <a href="#method_getTableMapBuilderModifier">getTableMapBuilderModifier</a>()
                     <p>Returns the table map builder modifier object.</p>
                 </td>
@@ -301,6 +291,56 @@
                 <td class="last">
                     <a href="#method_useScope">useScope</a>()
                     <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_generateScopePhp">generateScopePhp</a>()
+                    <p>Generates the method argument signature, the appropriate phpDoc for @params, the scope builder php code and the scope variable builder php code/</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnGetter">getColumnGetter</a>(string $name)
+                    <p>Returns the getter method name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnSetter">getColumnSetter</a>(string $name)
+                    <p>Returns the setter method name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string[]
+                </td>
+                <td class="last">
+                    <a href="#method_getScopes">getScopes</a>()
+                    <p>Returns all scope columns as array.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_hasMultipleScopes">hasMultipleScopes</a>()
+                    <p>Returns true if the behavior has multiple scope columns.</p>
                 </td>
                 <td></td>
             </tr>
@@ -457,7 +497,7 @@
     </div>
 
                 <h3 id="method_addParameter">
-        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_addParameter"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 101</div>
+        <div class="location">at line 177</div>
         <code>            public            
     <strong>addParameter</strong>(array $parameter)</code>
     </h3>
@@ -637,7 +677,7 @@
     </div>
 
                 <h3 id="method_modifyTable">
-        <div class="location">at line 39</div>
+        <div class="location">at line 38</div>
         <code>            public            
     <strong>modifyTable</strong>()</code>
     </h3>
@@ -829,7 +869,7 @@
     </div>
 
                 <h3 id="method_getObjectBuilderModifier">
-        <div class="location">at line 59</div>
+        <div class="location">at line 67</div>
         <code>            public            <a href="../../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
     <strong>getObjectBuilderModifier</strong>()</code>
     </h3>
@@ -853,7 +893,7 @@
     </div>
 
                 <h3 id="method_getQueryBuilderModifier">
-        <div class="location">at line 68</div>
+        <div class="location">at line 76</div>
         <code>            public            <a href="../../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
     <strong>getQueryBuilderModifier</strong>()</code>
     </h3>
@@ -876,32 +916,8 @@
                     </div>
     </div>
 
-                <h3 id="method_getPeerBuilderModifier">
-        <div class="location">at line 77</div>
-        <code>            public            <a href="../../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
-    <strong>getPeerBuilderModifier</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Returns the peer builder modifier object.</p>
-        <p>The current object is returned by default.</p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td><a href="../../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
                 <h3 id="method_getTableMapBuilderModifier">
-        <div class="location">at line 86</div>
+        <div class="location">at line 85</div>
         <code>            public            <a href="../../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
     <strong>getTableMapBuilderModifier</strong>()</code>
     </h3>
@@ -925,7 +941,7 @@
     </div>
 
                 <h3 id="method_hasAdditionalBuilders">
-        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_hasAdditionalBuilders"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 359</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_hasAdditionalBuilders"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 347</div>
         <code>            public            boolean
     <strong>hasAdditionalBuilders</strong>()</code>
     </h3>
@@ -949,7 +965,7 @@
     </div>
 
                 <h3 id="method_getAdditionalBuilders">
-        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_getAdditionalBuilders"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 369</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Model/Behavior.html#method_getAdditionalBuilders"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a> at line 357</div>
         <code>            public            array
     <strong>getAdditionalBuilders</strong>()</code>
     </h3>
@@ -973,7 +989,7 @@
     </div>
 
                 <h3 id="method_useScope">
-        <div class="location">at line 95</div>
+        <div class="location">at line 94</div>
         <code>            public            
     <strong>useScope</strong>()</code>
     </h3>
@@ -982,6 +998,146 @@
         <p></p>
         <div class="tags">
             
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_generateScopePhp">
+        <div class="location">at line 105</div>
+        <code>            public            array
+    <strong>generateScopePhp</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Generates the method argument signature, the appropriate phpDoc for @params, the scope builder php code and the scope variable builder php code/</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>($methodSignature, $paramsDoc, $scopeBuilder, $buildScopeVars)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnGetter">
+        <div class="location">at line 158</div>
+        <code>            public            string
+    <strong>getColumnGetter</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the getter method name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnSetter">
+        <div class="location">at line 169</div>
+        <code>            public            string
+    <strong>getColumnSetter</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the setter method name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getScopes">
+        <div class="location">at line 191</div>
+        <code>            public            string[]
+    <strong>getScopes</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns all scope columns as array.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasMultipleScopes">
+        <div class="location">at line 203</div>
+        <code>            public            bool
+    <strong>hasMultipleScopes</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns true if the behavior has multiple scope columns.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>

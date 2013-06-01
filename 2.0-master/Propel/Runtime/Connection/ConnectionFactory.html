@@ -47,7 +47,7 @@
                     static&nbsp;<a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a>
                 </td>
                 <td class="last">
-                    <a href="#method_create">create</a>(array $configuration, <a href="../../../Propel/Runtime/Adapter/AdapterInterface.html"><abbr title="Propel\Runtime\Adapter\AdapterInterface">AdapterInterface</abbr></a> $adapter, string $defaultConnectionClass = self::DEFAULT_CONNECTION_CLASS)
+                    <a href="#method_create">create</a>(array $configuration = array(), <a href="../../../Propel/Runtime/Adapter/AdapterInterface.html"><abbr title="Propel\Runtime\Adapter\AdapterInterface">AdapterInterface</abbr></a> $adapter, string $defaultConnectionClass = self::DEFAULT_CONNECTION_CLASS)
                     <p>Open a database connection based on a configuration.</p>
                 </td>
                 <td></td>
@@ -58,9 +58,9 @@
         <h2>Details</h2>
 
                         <h3 id="method_create">
-        <div class="location">at line 31</div>
+        <div class="location">at line 33</div>
         <code>        static    public            <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a>
-    <strong>create</strong>(array $configuration, <a href="../../../Propel/Runtime/Adapter/AdapterInterface.html"><abbr title="Propel\Runtime\Adapter\AdapterInterface">AdapterInterface</abbr></a> $adapter, string $defaultConnectionClass = self::DEFAULT_CONNECTION_CLASS)</code>
+    <strong>create</strong>(array $configuration = array(), <a href="../../../Propel/Runtime/Adapter/AdapterInterface.html"><abbr title="Propel\Runtime\Adapter\AdapterInterface">AdapterInterface</abbr></a> $adapter, string $defaultConnectionClass = self::DEFAULT_CONNECTION_CLASS)</code>
     </h3>
     <div class="details">
         <p>Open a database connection based on a configuration.</p>
@@ -72,12 +72,12 @@
                     <tr>
                 <td>array</td>
                 <td>$configuration</td>
-                <td>array(&#039;dsn&#039; =&gt; &#039;...&#039;, &#039;user&#039; =&gt; &#039;...&#039;, &#039;password&#039; =&gt; &#039;...&#039;)</td>
+                <td></td>
             </tr>
                     <tr>
                 <td><a href="../../../Propel/Runtime/Adapter/AdapterInterface.html"><abbr title="Propel\Runtime\Adapter\AdapterInterface">AdapterInterface</abbr></a></td>
                 <td>$adapter</td>
-                <td>The adapter to use to build the connection</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>string</td>
@@ -97,6 +97,19 @@
     </table>
 
             
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Exception/InvalidArgumentException.html"><abbr title="Propel\Runtime\Exception\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\ConnectionException">ConnectionException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
             
                     </div>
     </div>

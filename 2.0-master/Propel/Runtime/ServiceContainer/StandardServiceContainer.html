@@ -76,14 +76,14 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_setAdapterClasses">setAdapterClasses</a>($adapterClasses)
+                    <a href="#method_setAdapterClasses">setAdapterClasses</a>(array $adapterClasses)
                     <p>Reset existing adapters classes and set new classes for all datasources.</p>
                 </td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type">
-                    <abbr title="Propel\Runtime\ServiceContainer\Propel\Runtime\Adapter\AdapterInterface">AdapterInterface</abbr>
+                    <a href="../../../Propel/Runtime/Adapter/AdapterInterface.html"><abbr title="Propel\Runtime\Adapter\AdapterInterface">AdapterInterface</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_getAdapter">getAdapter</a>(string $name = null)
@@ -422,7 +422,7 @@
                 <h3 id="method_setAdapterClasses">
         <div class="location">at line 134</div>
         <code>            public            
-    <strong>setAdapterClasses</strong>($adapterClasses)</code>
+    <strong>setAdapterClasses</strong>(array $adapterClasses)</code>
     </h3>
     <div class="details">
         <p>Reset existing adapters classes and set new classes for all datasources.</p>
@@ -432,9 +432,9 @@
 
                     <table>
                     <tr>
-                <td></td>
+                <td>array</td>
                 <td>$adapterClasses</td>
-                <td></td>
+                <td>A list of adapters</td>
             </tr>
             </table>
 
@@ -445,8 +445,8 @@
     </div>
 
                 <h3 id="method_getAdapter">
-        <div class="location">at line 149</div>
-        <code>            public            <abbr title="Propel\Runtime\ServiceContainer\Propel\Runtime\Adapter\AdapterInterface">AdapterInterface</abbr>
+        <div class="location">at line 151</div>
+        <code>            public            <a href="../../../Propel/Runtime/Adapter/AdapterInterface.html"><abbr title="Propel\Runtime\Adapter\AdapterInterface">AdapterInterface</abbr></a>
     <strong>getAdapter</strong>(string $name = null)</code>
     </h3>
     <div class="details">
@@ -468,18 +468,27 @@
 
                     <table>
         <tr>
-            <td><abbr title="Propel\Runtime\ServiceContainer\Propel\Runtime\Adapter\AdapterInterface">AdapterInterface</abbr></td>
+            <td><a href="../../../Propel/Runtime/Adapter/AdapterInterface.html"><abbr title="Propel\Runtime\Adapter\AdapterInterface">AdapterInterface</abbr></a></td>
             <td></td>
         </tr>
     </table>
 
             
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="AdapterException">AdapterException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
             
                     </div>
     </div>
 
                 <h3 id="method_setAdapter">
-        <div class="location">at line 170</div>
+        <div class="location">at line 172</div>
         <code>            public            
     <strong>setAdapter</strong>(string $name, <a href="../../../Propel/Runtime/Adapter/AdapterInterface.html"><abbr title="Propel\Runtime\Adapter\AdapterInterface">AdapterInterface</abbr></a> $adapter)</code>
     </h3>
@@ -509,7 +518,7 @@
     </div>
 
                 <h3 id="method_setAdapters">
-        <div class="location">at line 181</div>
+        <div class="location">at line 183</div>
         <code>            public            
     <strong>setAdapters</strong>(array $adapters)</code>
     </h3>
@@ -534,7 +543,7 @@
     </div>
 
                 <h3 id="method_checkVersion">
-        <div class="location">at line 196</div>
+        <div class="location">at line 198</div>
         <code>            public            
     <strong>checkVersion</strong>(string $generatorVersion)</code>
     </h3>
@@ -559,7 +568,7 @@
     </div>
 
                 <h3 id="method_setDatabaseMapClass">
-        <div class="location">at line 213</div>
+        <div class="location">at line 216</div>
         <code>            public            
     <strong>setDatabaseMapClass</strong>(string $databaseMapClass)</code>
     </h3>
@@ -584,7 +593,7 @@
     </div>
 
                 <h3 id="method_getDatabaseMap">
-        <div class="location">at line 227</div>
+        <div class="location">at line 230</div>
         <code>            public            <a href="../../../Propel/Runtime/Map/DatabaseMap.html"><abbr title="Propel\Runtime\Map\DatabaseMap">DatabaseMap</abbr></a>
     <strong>getDatabaseMap</strong>(string $name = null)</code>
     </h3>
@@ -618,7 +627,7 @@
     </div>
 
                 <h3 id="method_setDatabaseMap">
-        <div class="location">at line 246</div>
+        <div class="location">at line 249</div>
         <code>            public            
     <strong>setDatabaseMap</strong>(string $name, <a href="../../../Propel/Runtime/Map/DatabaseMap.html"><abbr title="Propel\Runtime\Map\DatabaseMap">DatabaseMap</abbr></a> $databaseMap)</code>
     </h3>
@@ -648,7 +657,7 @@
     </div>
 
                 <h3 id="method_setConnectionManager">
-        <div class="location">at line 255</div>
+        <div class="location">at line 258</div>
         <code>            public            
     <strong>setConnectionManager</strong>(string $name, <a href="../../../Propel/Runtime/Connection/ConnectionManagerInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionManagerInterface">ConnectionManagerInterface</abbr></a> $manager)</code>
     </h3>
@@ -678,7 +687,7 @@
     </div>
 
                 <h3 id="method_getConnectionManager">
-        <div class="location">at line 271</div>
+        <div class="location">at line 274</div>
         <code>            public            <a href="../../../Propel/Runtime/Connection/ConnectionManagerInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionManagerInterface">ConnectionManagerInterface</abbr></a>
     <strong>getConnectionManager</strong>(string $name)</code>
     </h3>
@@ -712,7 +721,7 @@
     </div>
 
                 <h3 id="method_getConnectionManagers">
-        <div class="location">at line 279</div>
+        <div class="location">at line 282</div>
         <code>            public            <abbr title="Propel\Runtime\ServiceContainer\array[\Propel\Runtime\Connection\ConnectionManagerInterface]">ConnectionManagerInterface]</abbr>
     <strong>getConnectionManagers</strong>()</code>
     </h3>
@@ -736,7 +745,7 @@
     </div>
 
                 <h3 id="method_closeConnections">
-        <div class="location">at line 290</div>
+        <div class="location">at line 293</div>
         <code>            public            
     <strong>closeConnections</strong>()</code>
     </h3>
@@ -752,7 +761,7 @@
     </div>
 
                 <h3 id="method_getConnection">
-        <div class="location">at line 308</div>
+        <div class="location">at line 311</div>
         <code>            public            <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a>
     <strong>getConnection</strong>(string $name = null, string $mode = ServiceContainerInterface::CONNECTION_WRITE)</code>
     </h3>
@@ -792,7 +801,7 @@
     </div>
 
                 <h3 id="method_getWriteConnection">
-        <div class="location">at line 334</div>
+        <div class="location">at line 337</div>
         <code>            public            <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a>
     <strong>getWriteConnection</strong>(string $name)</code>
     </h3>
@@ -836,7 +845,7 @@
     </div>
 
                 <h3 id="method_getReadConnection">
-        <div class="location">at line 351</div>
+        <div class="location">at line 354</div>
         <code>            public            <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a>
     <strong>getReadConnection</strong>(string $name)</code>
     </h3>
@@ -872,7 +881,7 @@
     </div>
 
                 <h3 id="method_setConnection">
-        <div class="location">at line 362</div>
+        <div class="location">at line 365</div>
         <code>            public            
     <strong>setConnection</strong>(string $name, <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $connection)</code>
     </h3>
@@ -902,7 +911,7 @@
     </div>
 
                 <h3 id="method_setProfilerClass">
-        <div class="location">at line 377</div>
+        <div class="location">at line 380</div>
         <code>            public            
     <strong>setProfilerClass</strong>(string $profilerClass)</code>
     </h3>
@@ -928,7 +937,7 @@
     </div>
 
                 <h3 id="method_setProfilerConfiguration">
-        <div class="location">at line 389</div>
+        <div class="location">at line 392</div>
         <code>            public            
     <strong>setProfilerConfiguration</strong>(array $profilerConfiguration)</code>
     </h3>
@@ -962,7 +971,7 @@
     </div>
 
                 <h3 id="method_setProfiler">
-        <div class="location">at line 400</div>
+        <div class="location">at line 403</div>
         <code>            public            
     <strong>setProfiler</strong>(<a href="../../../Propel/Runtime/Util/Profiler.html"><abbr title="Propel\Runtime\Util\Profiler">Profiler</abbr></a> $profiler)</code>
     </h3>
@@ -987,7 +996,7 @@
     </div>
 
                 <h3 id="method_getProfiler">
-        <div class="location">at line 412</div>
+        <div class="location">at line 415</div>
         <code>            public            <a href="../../../Propel/Runtime/Util/Profiler.html"><abbr title="Propel\Runtime\Util\Profiler">Profiler</abbr></a>
     <strong>getProfiler</strong>()</code>
     </h3>
@@ -1011,7 +1020,7 @@
     </div>
 
                 <h3 id="method_getLogger">
-        <div class="location">at line 431</div>
+        <div class="location">at line 434</div>
         <code>            public            <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr>
     <strong>getLogger</strong>($name = &#039;defaultLogger&#039;)</code>
     </h3>
@@ -1045,7 +1054,7 @@
     </div>
 
                 <h3 id="method_setLogger">
-        <div class="location">at line 444</div>
+        <div class="location">at line 447</div>
         <code>            public            
     <strong>setLogger</strong>(string $name, <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger)</code>
     </h3>
@@ -1075,7 +1084,7 @@
     </div>
 
                 <h3 id="method_setLoggerConfiguration">
-        <div class="location">at line 494</div>
+        <div class="location">at line 514</div>
         <code>            public            
     <strong>setLoggerConfiguration</strong>(string $name, array $loggerConfiguration)</code>
     </h3>

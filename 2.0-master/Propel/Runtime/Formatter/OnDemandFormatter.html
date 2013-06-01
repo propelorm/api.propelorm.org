@@ -39,7 +39,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_format">format</a>(<a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a> $stmt)
+                    <a href="#method_format">format</a>(<a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a> $dataFetcher = null)
                     <p></p>
                 </td>
                 <td></td>
@@ -59,7 +59,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_formatOne">formatOne</a>(<a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a> $stmt)
+                    <a href="#method_formatOne">formatOne</a>(<a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a> $dataFetcher = null)
                     <p></p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../Propel/Runtime/Formatter/ObjectFormatter.html#method_formatOne"><abbr title="Propel\Runtime\Formatter\ObjectFormatter">ObjectFormatter</abbr></a></small></td>
@@ -89,14 +89,14 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_init">init</a>(<a href="../../../Propel/Runtime/ActiveQuery/ModelCriteria.html"><abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr></a> $criteria)
+                    <a href="#method_init">init</a>(<a href="../../../Propel/Runtime/ActiveQuery/BaseModelCriteria.html"><abbr title="Propel\Runtime\ActiveQuery\BaseModelCriteria">BaseModelCriteria</abbr></a> $criteria = null, <a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a> $dataFetcher = null)
                     <p></p>
                 </td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type">
-                    
+                    <abbr title="Propel\Runtime\Formatter\Collection">Collection</abbr>
                 </td>
                 <td class="last">
                     <a href="#method_getCollection">getCollection</a>()
@@ -112,7 +112,7 @@
                         <h3 id="method_format">
         <div class="location">at line 37</div>
         <code>            public            
-    <strong>format</strong>(<a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a> $stmt)</code>
+    <strong>format</strong>(<a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a> $dataFetcher = null)</code>
     </h3>
     <div class="details">
         <p></p>
@@ -122,8 +122,8 @@
 
                     <table>
                     <tr>
-                <td><a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a></td>
-                <td>$stmt</td>
+                <td><a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a></td>
+                <td>$dataFetcher</td>
                 <td></td>
             </tr>
             </table>
@@ -135,7 +135,7 @@
     </div>
 
                 <h3 id="method_getCollectionClassName">
-        <div class="location">at line 50</div>
+        <div class="location">at line 56</div>
         <code>            public            
     <strong>getCollectionClassName</strong>()</code>
     </h3>
@@ -150,9 +150,9 @@
     </div>
 
                 <h3 id="method_formatOne">
-        <div class="location">in <a href="../../../Propel/Runtime/Formatter/ObjectFormatter.html#method_formatOne"><abbr title="Propel\Runtime\Formatter\ObjectFormatter">ObjectFormatter</abbr></a> at line 59</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Formatter/ObjectFormatter.html#method_formatOne"><abbr title="Propel\Runtime\Formatter\ObjectFormatter">ObjectFormatter</abbr></a> at line 64</div>
         <code>            public            
-    <strong>formatOne</strong>(<a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a> $stmt)</code>
+    <strong>formatOne</strong>(<a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a> $dataFetcher = null)</code>
     </h3>
     <div class="details">
         <p></p>
@@ -162,8 +162,8 @@
 
                     <table>
                     <tr>
-                <td><a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a></td>
-                <td>$stmt</td>
+                <td><a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a></td>
+                <td>$dataFetcher</td>
                 <td></td>
             </tr>
             </table>
@@ -175,7 +175,7 @@
     </div>
 
                 <h3 id="method_isObjectFormatter">
-        <div class="location">in <a href="../../../Propel/Runtime/Formatter/ObjectFormatter.html#method_isObjectFormatter"><abbr title="Propel\Runtime\Formatter\ObjectFormatter">ObjectFormatter</abbr></a> at line 71</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Formatter/ObjectFormatter.html#method_isObjectFormatter"><abbr title="Propel\Runtime\Formatter\ObjectFormatter">ObjectFormatter</abbr></a> at line 82</div>
         <code>            public            
     <strong>isObjectFormatter</strong>()</code>
     </h3>
@@ -190,7 +190,7 @@
     </div>
 
                 <h3 id="method_getAllObjectsFromRow">
-        <div class="location">at line 75</div>
+        <div class="location">at line 83</div>
         <code>            public            <abbr title="Propel\Runtime\Formatter\BaseObject">BaseObject</abbr>
     <strong>getAllObjectsFromRow</strong>(array $row)</code>
     </h3>
@@ -204,7 +204,7 @@
                     <tr>
                 <td>array</td>
                 <td>$row</td>
-                <td>associative array indexed by column number, as returned by PDOStatement::fetch(PDO::FETCH_NUM)</td>
+                <td>associative array with data</td>
             </tr>
             </table>
 
@@ -226,7 +226,7 @@
                 <h3 id="method_init">
         <div class="location">at line 28</div>
         <code>            public            
-    <strong>init</strong>(<a href="../../../Propel/Runtime/ActiveQuery/ModelCriteria.html"><abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr></a> $criteria)</code>
+    <strong>init</strong>(<a href="../../../Propel/Runtime/ActiveQuery/BaseModelCriteria.html"><abbr title="Propel\Runtime\ActiveQuery\BaseModelCriteria">BaseModelCriteria</abbr></a> $criteria = null, <a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a> $dataFetcher = null)</code>
     </h3>
     <div class="details">
         <p></p>
@@ -236,8 +236,13 @@
 
                     <table>
                     <tr>
-                <td><a href="../../../Propel/Runtime/ActiveQuery/ModelCriteria.html"><abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr></a></td>
+                <td><a href="../../../Propel/Runtime/ActiveQuery/BaseModelCriteria.html"><abbr title="Propel\Runtime\ActiveQuery\BaseModelCriteria">BaseModelCriteria</abbr></a></td>
                 <td>$criteria</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a></td>
+                <td>$dataFetcher</td>
                 <td></td>
             </tr>
             </table>
@@ -249,8 +254,8 @@
     </div>
 
                 <h3 id="method_getCollection">
-        <div class="location">at line 55</div>
-        <code>            public            
+        <div class="location">at line 64</div>
+        <code>            public            <abbr title="Propel\Runtime\Formatter\Collection">Collection</abbr>
     <strong>getCollection</strong>()</code>
     </h3>
     <div class="details">
@@ -258,6 +263,15 @@
         <p></p>
         <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Runtime\Formatter\Collection">Collection</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>

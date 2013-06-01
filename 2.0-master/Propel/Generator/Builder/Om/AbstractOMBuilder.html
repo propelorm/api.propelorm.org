@@ -27,7 +27,7 @@
             <div class="description">
             <p>Baseclass for OM-building classes.</p>
             <p>OM-building classes are those that build a PHP (or other) class to service<br />
- a single table.  This includes Peer classes, Entity classes, Map classes,<br />
+ a single table.  This includes Entity classes, Map classes,<br />
  Node classes, Nested Set classes, etc.</p>
         </div>
     
@@ -48,16 +48,6 @@
             </tr>
                     <tr>
                 <td class="type">
-                    <a href="../../../../Propel/Generator/Builder/Om/PeerBuilder.html"><abbr title="Propel\Generator\Builder\Om\PeerBuilder">PeerBuilder</abbr></a>
-                </td>
-                <td class="last">
-                    <a href="#method_getPeerBuilder">getPeerBuilder</a>()
-                    <p>Returns new or existing Peer builder class for this table.</p>
-                </td>
-                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getPeerBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
                     <a href="../../../../Propel/Common/Pluralizer/PluralizerInterface.html"><abbr title="Propel\Common\Pluralizer\PluralizerInterface">PluralizerInterface</abbr></a>
                 </td>
                 <td class="last">
@@ -65,16 +55,6 @@
                     <p>Returns new or existing Pluralizer class.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getPluralizer"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    <a href="../../../../Propel/Generator/Builder/Om/PeerBuilder.html"><abbr title="Propel\Generator\Builder\Om\PeerBuilder">PeerBuilder</abbr></a>
-                </td>
-                <td class="last">
-                    <a href="#method_getStubPeerBuilder">getStubPeerBuilder</a>()
-                    <p>Returns new or existing stub Peer builder class for this table.</p>
-                </td>
-                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getStubPeerBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -165,26 +145,6 @@
                     <p>Gets a new data model builder class for specified table and classname.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getNewBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    <a href="../../../../Propel/Generator/Builder/Om/PeerBuilder.html"><abbr title="Propel\Generator\Builder\Om\PeerBuilder">PeerBuilder</abbr></a>
-                </td>
-                <td class="last">
-                    <a href="#method_getNewPeerBuilder">getNewPeerBuilder</a>(<a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)
-                    <p>Returns a new Peer class builder instance.</p>
-                </td>
-                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getNewPeerBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    <a href="../../../../Propel/Generator/Builder/Om/PeerBuilder.html"><abbr title="Propel\Generator\Builder\Om\PeerBuilder">PeerBuilder</abbr></a>
-                </td>
-                <td class="last">
-                    <a href="#method_getNewStubPeerBuilder">getNewStubPeerBuilder</a>(<a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)
-                    <p>Convenience method to return a NEW Peer stub class builder instance.</p>
-                </td>
-                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getNewStubPeerBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -581,16 +541,6 @@
                     string
                 </td>
                 <td class="last">
-                    <a href="#method_getPeerClassName">getPeerClassName</a>(boolean $fqcn = false)
-                    <p>Shortcut method to return the [stub] peer classname for current table.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    string
-                </td>
-                <td class="last">
                     <a href="#method_getQueryClassName">getQueryClassName</a>(boolean $fqcn = false)
                     <p>Shortcut method to return the [stub] query classname for current table.</p>
                 </td>
@@ -623,16 +573,6 @@
                 <td class="last">
                     <a href="#method_getColumnConstant">getColumnConstant</a>(<a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $col, string $classname = null)
                     <p>Get the column constant name (e.g.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    string
-                </td>
-                <td class="last">
-                    <a href="#method_getBasePeer">getBasePeer</a>(<a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)
-                    <p>Gets the basePeer path if specified for table/db.</p>
                 </td>
                 <td></td>
             </tr>
@@ -712,7 +652,7 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method___construct"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 135</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method___construct"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 122</div>
         <code>            public            
     <strong>__construct</strong>(<a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
     </h3>
@@ -736,32 +676,8 @@
                     </div>
     </div>
 
-                <h3 id="method_getPeerBuilder">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getPeerBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 144</div>
-        <code>            public            <a href="../../../../Propel/Generator/Builder/Om/PeerBuilder.html"><abbr title="Propel\Generator\Builder\Om\PeerBuilder">PeerBuilder</abbr></a>
-    <strong>getPeerBuilder</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Returns new or existing Peer builder class for this table.</p>
-        <p></p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td><a href="../../../../Propel/Generator/Builder/Om/PeerBuilder.html"><abbr title="Propel\Generator\Builder\Om\PeerBuilder">PeerBuilder</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
                 <h3 id="method_getPluralizer">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getPluralizer"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 157</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getPluralizer"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 131</div>
         <code>            public            <a href="../../../../Propel/Common/Pluralizer/PluralizerInterface.html"><abbr title="Propel\Common\Pluralizer\PluralizerInterface">PluralizerInterface</abbr></a>
     <strong>getPluralizer</strong>()</code>
     </h3>
@@ -784,32 +700,8 @@
                     </div>
     </div>
 
-                <h3 id="method_getStubPeerBuilder">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getStubPeerBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 170</div>
-        <code>            public            <a href="../../../../Propel/Generator/Builder/Om/PeerBuilder.html"><abbr title="Propel\Generator\Builder\Om\PeerBuilder">PeerBuilder</abbr></a>
-    <strong>getStubPeerBuilder</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Returns new or existing stub Peer builder class for this table.</p>
-        <p></p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td><a href="../../../../Propel/Generator/Builder/Om/PeerBuilder.html"><abbr title="Propel\Generator\Builder\Om\PeerBuilder">PeerBuilder</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
                 <h3 id="method_getObjectBuilder">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getObjectBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 183</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getObjectBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 144</div>
         <code>            public            <a href="../../../../Propel/Generator/Builder/Om/ObjectBuilder.html"><abbr title="Propel\Generator\Builder\Om\ObjectBuilder">ObjectBuilder</abbr></a>
     <strong>getObjectBuilder</strong>()</code>
     </h3>
@@ -833,7 +725,7 @@
     </div>
 
                 <h3 id="method_getStubObjectBuilder">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getStubObjectBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 196</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getStubObjectBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 157</div>
         <code>            public            <a href="../../../../Propel/Generator/Builder/Om/ObjectBuilder.html"><abbr title="Propel\Generator\Builder\Om\ObjectBuilder">ObjectBuilder</abbr></a>
     <strong>getStubObjectBuilder</strong>()</code>
     </h3>
@@ -857,7 +749,7 @@
     </div>
 
                 <h3 id="method_getQueryBuilder">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getQueryBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 209</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getQueryBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 170</div>
         <code>            public            <a href="../../../../Propel/Generator/Builder/Om/ObjectBuilder.html"><abbr title="Propel\Generator\Builder\Om\ObjectBuilder">ObjectBuilder</abbr></a>
     <strong>getQueryBuilder</strong>()</code>
     </h3>
@@ -881,7 +773,7 @@
     </div>
 
                 <h3 id="method_getStubQueryBuilder">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getStubQueryBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 222</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getStubQueryBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 183</div>
         <code>            public            <a href="../../../../Propel/Generator/Builder/Om/ObjectBuilder.html"><abbr title="Propel\Generator\Builder\Om\ObjectBuilder">ObjectBuilder</abbr></a>
     <strong>getStubQueryBuilder</strong>()</code>
     </h3>
@@ -905,7 +797,7 @@
     </div>
 
                 <h3 id="method_getTableMapBuilder">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getTableMapBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 235</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getTableMapBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 196</div>
         <code>            public            <a href="../../../../Propel/Generator/Builder/Om/ObjectBuilder.html"><abbr title="Propel\Generator\Builder\Om\ObjectBuilder">ObjectBuilder</abbr></a>
     <strong>getTableMapBuilder</strong>()</code>
     </h3>
@@ -929,7 +821,7 @@
     </div>
 
                 <h3 id="method_getInterfaceBuilder">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getInterfaceBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 248</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getInterfaceBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 209</div>
         <code>            public            <a href="../../../../Propel/Generator/Builder/Om/ObjectBuilder.html"><abbr title="Propel\Generator\Builder\Om\ObjectBuilder">ObjectBuilder</abbr></a>
     <strong>getInterfaceBuilder</strong>()</code>
     </h3>
@@ -953,7 +845,7 @@
     </div>
 
                 <h3 id="method_getMultiExtendObjectBuilder">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getMultiExtendObjectBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 261</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getMultiExtendObjectBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 222</div>
         <code>            public            <a href="../../../../Propel/Generator/Builder/Om/ObjectBuilder.html"><abbr title="Propel\Generator\Builder\Om\ObjectBuilder">ObjectBuilder</abbr></a>
     <strong>getMultiExtendObjectBuilder</strong>()</code>
     </h3>
@@ -977,7 +869,7 @@
     </div>
 
                 <h3 id="method_getDataSQLBuilder">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getDataSQLBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 274</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getDataSQLBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 235</div>
         <code>            public            <a href="../../../../Propel/Generator/Builder/Sql/DataSQLBuilder.html"><abbr title="Propel\Generator\Builder\Sql\DataSQLBuilder">DataSQLBuilder</abbr></a>
     <strong>getDataSQLBuilder</strong>()</code>
     </h3>
@@ -1001,7 +893,7 @@
     </div>
 
                 <h3 id="method_getNewBuilder">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getNewBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 290</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getNewBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 251</div>
         <code>            public            <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a>
     <strong>getNewBuilder</strong>(<a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table, string $classname)</code>
     </h3>
@@ -1039,84 +931,14 @@
                     </div>
     </div>
 
-                <h3 id="method_getNewPeerBuilder">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getNewPeerBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 307</div>
-        <code>            public            <a href="../../../../Propel/Generator/Builder/Om/PeerBuilder.html"><abbr title="Propel\Generator\Builder\Om\PeerBuilder">PeerBuilder</abbr></a>
-    <strong>getNewPeerBuilder</strong>(<a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
-    </h3>
-    <div class="details">
-        <p>Returns a new Peer class builder instance.</p>
-        <p>This is used very frequently from the peer and object builders to get<br />
- a peer builder for a RELATED table.</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td><a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
-                <td>$table</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td><a href="../../../../Propel/Generator/Builder/Om/PeerBuilder.html"><abbr title="Propel\Generator\Builder\Om\PeerBuilder">PeerBuilder</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_getNewStubPeerBuilder">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getNewStubPeerBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 321</div>
-        <code>            public            <a href="../../../../Propel/Generator/Builder/Om/PeerBuilder.html"><abbr title="Propel\Generator\Builder\Om\PeerBuilder">PeerBuilder</abbr></a>
-    <strong>getNewStubPeerBuilder</strong>(<a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
-    </h3>
-    <div class="details">
-        <p>Convenience method to return a NEW Peer stub class builder instance.</p>
-        <p>This is used from the peer and object builders to get<br />
- a peer builder for a RELATED table.</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td><a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
-                <td>$table</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td><a href="../../../../Propel/Generator/Builder/Om/PeerBuilder.html"><abbr title="Propel\Generator\Builder\Om\PeerBuilder">PeerBuilder</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
                 <h3 id="method_getNewObjectBuilder">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getNewObjectBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 335</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getNewObjectBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 268</div>
         <code>            public            <a href="../../../../Propel/Generator/Builder/Om/ObjectBuilder.html"><abbr title="Propel\Generator\Builder\Om\ObjectBuilder">ObjectBuilder</abbr></a>
     <strong>getNewObjectBuilder</strong>(<a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
     </h3>
     <div class="details">
         <p>Convenience method to return a NEW Object class builder instance.</p>
-        <p>This is used very frequently from the peer and object builders to get<br />
+        <p>This is used very frequently from the tableMap and object builders to get<br />
  an object builder for a RELATED table.</p>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -1145,7 +967,7 @@
     </div>
 
                 <h3 id="method_getNewStubObjectBuilder">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getNewStubObjectBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 349</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getNewStubObjectBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 282</div>
         <code>            public            <a href="../../../../Propel/Generator/Builder/Om/ObjectBuilder.html"><abbr title="Propel\Generator\Builder\Om\ObjectBuilder">ObjectBuilder</abbr></a>
     <strong>getNewStubObjectBuilder</strong>(<a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
     </h3>
@@ -1180,7 +1002,7 @@
     </div>
 
                 <h3 id="method_getNewQueryBuilder">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getNewQueryBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 363</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getNewQueryBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 296</div>
         <code>            public            <a href="../../../../Propel/Generator/Builder/Om/QueryBuilder.html"><abbr title="Propel\Generator\Builder\Om\QueryBuilder">QueryBuilder</abbr></a>
     <strong>getNewQueryBuilder</strong>(<a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
     </h3>
@@ -1215,7 +1037,7 @@
     </div>
 
                 <h3 id="method_getNewStubQueryBuilder">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getNewStubQueryBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 377</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getNewStubQueryBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 310</div>
         <code>            public            <a href="../../../../Propel/Generator/Builder/Om/QueryBuilder.html"><abbr title="Propel\Generator\Builder\Om\QueryBuilder">QueryBuilder</abbr></a>
     <strong>getNewStubQueryBuilder</strong>(<a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
     </h3>
@@ -1250,7 +1072,7 @@
     </div>
 
                 <h3 id="method_getNewQueryInheritanceBuilder">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getNewQueryInheritanceBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 386</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getNewQueryInheritanceBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 319</div>
         <code>            public            <a href="../../../../Propel/Generator/Builder/Om/ObjectBuilder.html"><abbr title="Propel\Generator\Builder\Om\ObjectBuilder">ObjectBuilder</abbr></a>
     <strong>getNewQueryInheritanceBuilder</strong>($child)</code>
     </h3>
@@ -1284,7 +1106,7 @@
     </div>
 
                 <h3 id="method_getNewStubQueryInheritanceBuilder">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getNewStubQueryInheritanceBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 398</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getNewStubQueryInheritanceBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 331</div>
         <code>            public            <a href="../../../../Propel/Generator/Builder/Om/ObjectBuilder.html"><abbr title="Propel\Generator\Builder\Om\ObjectBuilder">ObjectBuilder</abbr></a>
     <strong>getNewStubQueryInheritanceBuilder</strong>($child)</code>
     </h3>
@@ -1318,7 +1140,7 @@
     </div>
 
                 <h3 id="method_getNewTableMapBuilder">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getNewTableMapBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 410</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getNewTableMapBuilder"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 343</div>
         <code>            public            <a href="../../../../Propel/Generator/Builder/Om/TableMapBuilder.html"><abbr title="Propel\Generator\Builder\Om\TableMapBuilder">TableMapBuilder</abbr></a>
     <strong>getNewTableMapBuilder</strong>(<a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
     </h3>
@@ -1352,7 +1174,7 @@
     </div>
 
                 <h3 id="method_getGeneratorConfig">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getGeneratorConfig"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 420</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getGeneratorConfig"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 353</div>
         <code>            public            <a href="../../../../Propel/Generator/Config/GeneratorConfigInterface.html"><abbr title="Propel\Generator\Config\GeneratorConfigInterface">GeneratorConfigInterface</abbr></a>
     <strong>getGeneratorConfig</strong>()</code>
     </h3>
@@ -1376,7 +1198,7 @@
     </div>
 
                 <h3 id="method_getBuildProperty">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getBuildProperty"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 431</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getBuildProperty"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 364</div>
         <code>            public            string
     <strong>getBuildProperty</strong>(string $name)</code>
     </h3>
@@ -1410,7 +1232,7 @@
     </div>
 
                 <h3 id="method_setGeneratorConfig">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_setGeneratorConfig"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 445</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_setGeneratorConfig"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 378</div>
         <code>            public            
     <strong>setGeneratorConfig</strong>(<a href="../../../../Propel/Generator/Config/GeneratorConfigInterface.html"><abbr title="Propel\Generator\Config\GeneratorConfigInterface">GeneratorConfigInterface</abbr></a> $v)</code>
     </h3>
@@ -1435,7 +1257,7 @@
     </div>
 
                 <h3 id="method_setTable">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_setTable"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 454</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_setTable"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 387</div>
         <code>            public            
     <strong>setTable</strong>(<a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
     </h3>
@@ -1460,7 +1282,7 @@
     </div>
 
                 <h3 id="method_getTable">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getTable"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 463</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getTable"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 396</div>
         <code>            public            <a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a>
     <strong>getTable</strong>()</code>
     </h3>
@@ -1484,7 +1306,7 @@
     </div>
 
                 <h3 id="method_getPlatform">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getPlatform"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 472</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getPlatform"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 405</div>
         <code>            public            <a href="../../../../Propel/Generator/Platform/PlatformInterface.html"><abbr title="Propel\Generator\Platform\PlatformInterface">PlatformInterface</abbr></a>
     <strong>getPlatform</strong>()</code>
     </h3>
@@ -1508,7 +1330,7 @@
     </div>
 
                 <h3 id="method_setPlatform">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_setPlatform"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 490</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_setPlatform"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 423</div>
         <code>            public            
     <strong>setPlatform</strong>(<a href="../../../../Propel/Generator/Platform/PlatformInterface.html"><abbr title="Propel\Generator\Platform\PlatformInterface">PlatformInterface</abbr></a> $platform)</code>
     </h3>
@@ -1533,7 +1355,7 @@
     </div>
 
                 <h3 id="method_getDatabase">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getDatabase"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 499</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getDatabase"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 432</div>
         <code>            public            <a href="../../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a>
     <strong>getDatabase</strong>()</code>
     </h3>
@@ -1557,7 +1379,7 @@
     </div>
 
                 <h3 id="method_getWarnings">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getWarnings"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 519</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_getWarnings"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 452</div>
         <code>            public            string[]
     <strong>getWarnings</strong>()</code>
     </h3>
@@ -1581,7 +1403,7 @@
     </div>
 
                 <h3 id="method_quoteIdentifier">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_quoteIdentifier"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 534</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_quoteIdentifier"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 467</div>
         <code>            public            string
     <strong>quoteIdentifier</strong>(string $text)</code>
     </h3>
@@ -1617,7 +1439,7 @@
     </div>
 
                 <h3 id="method_prefixClassName">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_prefixClassName"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 548</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/DataModelBuilder.html#method_prefixClassName"><abbr title="Propel\Generator\Builder\DataModelBuilder">DataModelBuilder</abbr></a> at line 481</div>
         <code>            public            string
     <strong>prefixClassName</strong>($identifier)</code>
     </h3>
@@ -2269,49 +2091,14 @@
                     </div>
     </div>
 
-                <h3 id="method_getPeerClassName">
-        <div class="location">at line 476</div>
-        <code>            public            string
-    <strong>getPeerClassName</strong>(boolean $fqcn = false)</code>
-    </h3>
-    <div class="details">
-        <p>Shortcut method to return the [stub] peer classname for current table.</p>
-        <p>This is the classname that is used whenever object or peer classes want<br />
- to invoke methods of the peer classes.</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td>boolean</td>
-                <td>$fqcn</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td>string</td>
-            <td>(e.g. &#039;MyPeer&#039;)</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
                 <h3 id="method_getQueryClassName">
-        <div class="location">at line 488</div>
+        <div class="location">at line 476</div>
         <code>            public            string
     <strong>getQueryClassName</strong>(boolean $fqcn = false)</code>
     </h3>
     <div class="details">
         <p>Shortcut method to return the [stub] query classname for current table.</p>
-        <p>This is the classname that is used whenever object or peer classes want<br />
+        <p>This is the classname that is used whenever object or tablemap classes want<br />
  to invoke methods of the query classes.</p>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -2340,13 +2127,13 @@
     </div>
 
                 <h3 id="method_getObjectClassName">
-        <div class="location">at line 500</div>
+        <div class="location">at line 488</div>
         <code>            public            string
     <strong>getObjectClassName</strong>(boolean $fqcn = false)</code>
     </h3>
     <div class="details">
         <p>Returns the object classname for current table.</p>
-        <p>This is the classname that is used whenever object or peer classes want<br />
+        <p>This is the classname that is used whenever object or tablemap classes want<br />
  to invoke methods of the object classes.</p>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -2375,13 +2162,13 @@
     </div>
 
                 <h3 id="method_getTableMapClassName">
-        <div class="location">at line 512</div>
+        <div class="location">at line 500</div>
         <code>            public            string
     <strong>getTableMapClassName</strong>(boolean $fqcn = false)</code>
     </h3>
     <div class="details">
         <p>Returns the tableMap classname for current table.</p>
-        <p>This is the classname that is used whenever object or peer classes want<br />
+        <p>This is the classname that is used whenever object or tablemap classes want<br />
  to invoke methods of the object classes.</p>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -2410,13 +2197,13 @@
     </div>
 
                 <h3 id="method_getColumnConstant">
-        <div class="location">at line 525</div>
+        <div class="location">at line 513</div>
         <code>            public            string
     <strong>getColumnConstant</strong>(<a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $col, string $classname = null)</code>
     </h3>
     <div class="details">
         <p>Get the column constant name (e.g.</p>
-        <p>PeerName::COLUMN_NAME).</p>
+        <p>TableMapName::COLUMN_NAME).</p>
         <div class="tags">
                             <h4>Parameters</h4>
 
@@ -2429,7 +2216,7 @@
                     <tr>
                 <td>string</td>
                 <td>$classname</td>
-                <td>The Peer classname to use.</td>
+                <td>The TableMap classname to use.</td>
             </tr>
             </table>
 
@@ -2439,41 +2226,7 @@
                     <table>
         <tr>
             <td>string</td>
-            <td>If $classname is provided, then will return $classname::COLUMN_NAME; if not, then the peername is looked up for current table to yield $currTablePeer::COLUMN_NAME.</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_getBasePeer">
-        <div class="location">at line 550</div>
-        <code>            public            string
-    <strong>getBasePeer</strong>(<a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
-    </h3>
-    <div class="details">
-        <p>Gets the basePeer path if specified for table/db.</p>
-        <p>If not, will return &#039;propel.util.BasePeer&#039;</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td><a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
-                <td>$table</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td>string</td>
-            <td></td>
+            <td>If $classname is provided, then will return $classname::COLUMN_NAME; if not, then the TableMapName is looked up for current table to yield $currTableTableMap::COLUMN_NAME.</td>
         </tr>
     </table>
 
@@ -2483,7 +2236,7 @@
     </div>
 
                 <h3 id="method_getFKPhpNameAffix">
-        <div class="location">at line 601</div>
+        <div class="location">at line 574</div>
         <code>            public            string
     <strong>getFKPhpNameAffix</strong>(<a href="../../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk, boolean $plural = false)</code>
     </h3>
@@ -2523,7 +2276,7 @@
     </div>
 
                 <h3 id="method_getRefFKPhpNameAffix">
-        <div class="location">at line 663</div>
+        <div class="location">at line 636</div>
         <code>            public            string
     <strong>getRefFKPhpNameAffix</strong>(<a href="../../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk, boolean $plural = false)</code>
     </h3>
@@ -2565,7 +2318,7 @@
     </div>
 
                 <h3 id="method_hasBehaviorModifier">
-        <div class="location">at line 714</div>
+        <div class="location">at line 687</div>
         <code>            public            boolean
     <strong>hasBehaviorModifier</strong>(string $hookName, string $modifier)</code>
     </h3>
@@ -2604,7 +2357,7 @@
     </div>
 
                 <h3 id="method_applyBehaviorModifierBase">
-        <div class="location">at line 732</div>
+        <div class="location">at line 705</div>
         <code>            public            
     <strong>applyBehaviorModifierBase</strong>($hookName, $modifier, $script, $tab = &#039;        &#039;)</code>
     </h3>
@@ -2644,7 +2397,7 @@
     </div>
 
                 <h3 id="method_getBehaviorContentBase">
-        <div class="location">at line 760</div>
+        <div class="location">at line 733</div>
         <code>            public            
     <strong>getBehaviorContentBase</strong>(string $contentName, string $modifier)</code>
     </h3>
@@ -2674,7 +2427,7 @@
     </div>
 
                 <h3 id="method_renderTemplate">
-        <div class="location">at line 781</div>
+        <div class="location">at line 754</div>
         <code>            public            string
     <strong>renderTemplate</strong>(string $filename, array $vars = array(), string $templateDir = &#039;/templates/&#039;)</code>
     </h3>
@@ -2719,7 +2472,7 @@
     </div>
 
                 <h3 id="method_getTableMapClass">
-        <div class="location">at line 801</div>
+        <div class="location">at line 774</div>
         <code>            public            string
     <strong>getTableMapClass</strong>()</code>
     </h3>

@@ -136,7 +136,7 @@
                     <a href="../../../Propel/Generator/Model/VendorInfo.html"><abbr title="Propel\Generator\Model\VendorInfo">VendorInfo</abbr></a>
                 </td>
                 <td class="last">
-                    <a href="#method_addVendorInfo">addVendorInfo</a>($vendor)
+                    <a href="#method_addVendorInfo">addVendorInfo</a>(<a href="../../../Propel/Generator/Model/VendorInfo.html"><abbr title="Propel\Generator\Model\VendorInfo">VendorInfo</abbr></a>|array $vendor)
                     <p>Adds a new VendorInfo instance to this current model object.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../Propel/Generator/Model/MappingModel.html#method_addVendorInfo"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a></small></td>
@@ -671,6 +671,36 @@
                 </td>
                 <td></td>
             </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isAtLeastOneForeignPrimaryKey">isAtLeastOneForeignPrimaryKey</a>()
+                    <p>Whether at least one foreign column is also the primary key of the foreign table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getForeignPrimaryKeys">getForeignPrimaryKeys</a>()
+                    <p>Returns all foreign columns which are also a primary key of the foreign table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isAtLeastOneLocalPrimaryKey">isAtLeastOneLocalPrimaryKey</a>()
+                    <p>Whether at least one local column is also a primary key.</p>
+                </td>
+                <td></td>
+            </tr>
             </table>
 
 
@@ -818,7 +848,7 @@
                 <h3 id="method_addVendorInfo">
         <div class="location">in <a href="../../../Propel/Generator/Model/MappingModel.html#method_addVendorInfo"><abbr title="Propel\Generator\Model\MappingModel">MappingModel</abbr></a> at line 138</div>
         <code>            public            <a href="../../../Propel/Generator/Model/VendorInfo.html"><abbr title="Propel\Generator\Model\VendorInfo">VendorInfo</abbr></a>
-    <strong>addVendorInfo</strong>($vendor)</code>
+    <strong>addVendorInfo</strong>(<a href="../../../Propel/Generator/Model/VendorInfo.html"><abbr title="Propel\Generator\Model\VendorInfo">VendorInfo</abbr></a>|array $vendor)</code>
     </h3>
     <div class="details">
         <p>Adds a new VendorInfo instance to this current model object.</p>
@@ -828,7 +858,7 @@
 
                     <table>
                     <tr>
-                <td></td>
+                <td><a href="../../../Propel/Generator/Model/VendorInfo.html"><abbr title="Propel\Generator\Model\VendorInfo">VendorInfo</abbr></a>|array</td>
                 <td>$vendor</td>
                 <td></td>
             </tr>
@@ -2049,7 +2079,7 @@
                     <table>
         <tr>
             <td>boolean</td>
-            <td></td>
+            <td>Returns true if all columns inside this foreign key are primary keys of the foreign table</td>
         </tr>
     </table>
 
@@ -2097,7 +2127,7 @@
                     <table>
         <tr>
             <td>boolean</td>
-            <td></td>
+            <td>True if all local columns are at the same time a primary key</td>
         </tr>
     </table>
 
@@ -2212,6 +2242,78 @@
         <tr>
             <td>array</td>
             <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isAtLeastOneForeignPrimaryKey">
+        <div class="location">at line 761</div>
+        <code>            public            boolean
+    <strong>isAtLeastOneForeignPrimaryKey</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Whether at least one foreign column is also the primary key of the foreign table.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if there is at least one column that is a primary key of the foreign table</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getForeignPrimaryKeys">
+        <div class="location">at line 773</div>
+        <code>            public            array
+    <strong>getForeignPrimaryKeys</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns all foreign columns which are also a primary key of the foreign table.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>Column[]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isAtLeastOneLocalPrimaryKey">
+        <div class="location">at line 799</div>
+        <code>            public            boolean
+    <strong>isAtLeastOneLocalPrimaryKey</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Whether at least one local column is also a primary key.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if there is at least one column that is a primary key</td>
         </tr>
     </table>
 

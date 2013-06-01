@@ -50,6 +50,16 @@
                     
                 </td>
                 <td class="last">
+                    <a href="#method_getObjectBuilderClass">getObjectBuilderClass</a>($type)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
                     <a href="#method_setConnection">setConnection</a>(<a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null)
                     <p>Sets the database connection to use for this Platform class.</p>
                 </td>
@@ -62,6 +72,16 @@
                 <td class="last">
                     <a href="#method_getConnection">getConnection</a>()
                     <p>Returns the database connection to use for this Platform class.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string|null
+                </td>
+                <td class="last">
+                    <a href="#method_getBuilderClass">getBuilderClass</a>(<abbr title="Propel\Generator\Platform\$type">$type</abbr> $type)
+                    <p>Returns a platform specific builder class if exists.</p>
                 </td>
                 <td></td>
             </tr>
@@ -230,7 +250,7 @@
                     string
                 </td>
                 <td class="last">
-                    <a href="#method_getColumnListDDL">getColumnListDDL</a>($columns, $delimiter = &#039;,&#039;)
+                    <a href="#method_getColumnListDDL">getColumnListDDL</a>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>[]|string[] $columns, string $delimiter = &#039;,&#039;)
                     <p>Creates a delimiter-delimited string list of column names, quoted using quoteIdentifier().</p>
                 </td>
                 <td></td>
@@ -631,7 +651,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_supportsVarcharWithoutSize">supportsVarcharWithoutSize</a>()
-                    <p>Wether RDBMS supports VARCHAR without explicit size</p>
+                    <p>Whether RDBMS supports VARCHAR without explicit size</p>
                 </td>
                 <td></td>
             </tr>
@@ -735,8 +755,33 @@
                     </div>
     </div>
 
+                <h3 id="method_getObjectBuilderClass">
+        <div class="location">at line 68</div>
+        <code>            public            
+    <strong>getObjectBuilderClass</strong>($type)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_setConnection">
-        <div class="location">at line 73</div>
+        <div class="location">at line 78</div>
         <code>            public            
     <strong>setConnection</strong>(<a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null)</code>
     </h3>
@@ -761,7 +806,7 @@
     </div>
 
                 <h3 id="method_getConnection">
-        <div class="location">at line 83</div>
+        <div class="location">at line 88</div>
         <code>            public            <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a>
     <strong>getConnection</strong>()</code>
     </h3>
@@ -784,8 +829,42 @@
                     </div>
     </div>
 
+                <h3 id="method_getBuilderClass">
+        <div class="location">at line 100</div>
+        <code>            public            string|null
+    <strong>getBuilderClass</strong>(<abbr title="Propel\Generator\Platform\$type">$type</abbr> $type)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a platform specific builder class if exists.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Generator\Platform\$type">$type</abbr></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>Returns null if no platform specified builder class exists.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_setGeneratorConfig">
-        <div class="location">at line 93</div>
+        <div class="location">at line 116</div>
         <code>            public            
     <strong>setGeneratorConfig</strong>(<a href="../../../Propel/Generator/Config/GeneratorConfigInterface.html"><abbr title="Propel\Generator\Config\GeneratorConfigInterface">GeneratorConfigInterface</abbr></a> $config)</code>
     </h3>
@@ -810,7 +889,7 @@
     </div>
 
                 <h3 id="method_getDatabaseType">
-        <div class="location">at line 144</div>
+        <div class="location">at line 167</div>
         <code>            public            string
     <strong>getDatabaseType</strong>()</code>
     </h3>
@@ -834,7 +913,7 @@
     </div>
 
                 <h3 id="method_getMaxColumnNameLength">
-        <div class="location">at line 158</div>
+        <div class="location">at line 181</div>
         <code>            public            int
     <strong>getMaxColumnNameLength</strong>()</code>
     </h3>
@@ -858,7 +937,7 @@
     </div>
 
                 <h3 id="method_getNativeIdMethod">
-        <div class="location">at line 168</div>
+        <div class="location">at line 191</div>
         <code>            public            string
     <strong>getNativeIdMethod</strong>()</code>
     </h3>
@@ -882,7 +961,7 @@
     </div>
 
                 <h3 id="method_isNativeIdMethodAutoIncrement">
-        <div class="location">at line 173</div>
+        <div class="location">at line 196</div>
         <code>            public            
     <strong>isNativeIdMethodAutoIncrement</strong>()</code>
     </h3>
@@ -897,7 +976,7 @@
     </div>
 
                 <h3 id="method_getDomainForType">
-        <div class="location">at line 184</div>
+        <div class="location">at line 207</div>
         <code>            public            <a href="../../../Propel/Generator/Model/Domain.html"><abbr title="Propel\Generator\Model\Domain">Domain</abbr></a>
     <strong>getDomainForType</strong>(string $mappingType)</code>
     </h3>
@@ -931,7 +1010,7 @@
     </div>
 
                 <h3 id="method_getNullString">
-        <div class="location">at line 198</div>
+        <div class="location">at line 221</div>
         <code>            public            <abbr title="Propel\Generator\Platform\string.">string.</abbr>
     <strong>getNullString</strong>($notNull)</code>
     </h3>
@@ -965,7 +1044,7 @@
     </div>
 
                 <h3 id="method_getAutoIncrement">
-        <div class="location">at line 208</div>
+        <div class="location">at line 231</div>
         <code>            public            <abbr title="Propel\Generator\Platform\string.">string.</abbr>
     <strong>getAutoIncrement</strong>()</code>
     </h3>
@@ -989,7 +1068,7 @@
     </div>
 
                 <h3 id="method_getSequenceName">
-        <div class="location">at line 223</div>
+        <div class="location">at line 246</div>
         <code>            public            string
     <strong>getSequenceName</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
     </h3>
@@ -1024,7 +1103,7 @@
     </div>
 
                 <h3 id="method_getAddTablesDDL">
-        <div class="location">at line 253</div>
+        <div class="location">at line 276</div>
         <code>            public            string
     <strong>getAddTablesDDL</strong>(<a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a> $database)</code>
     </h3>
@@ -1058,7 +1137,7 @@
     </div>
 
                 <h3 id="method_getBeginDDL">
-        <div class="location">at line 273</div>
+        <div class="location">at line 296</div>
         <code>            public            string
     <strong>getBeginDDL</strong>()</code>
     </h3>
@@ -1082,7 +1161,7 @@
     </div>
 
                 <h3 id="method_getEndDDL">
-        <div class="location">at line 282</div>
+        <div class="location">at line 305</div>
         <code>            public            string
     <strong>getEndDDL</strong>()</code>
     </h3>
@@ -1106,7 +1185,7 @@
     </div>
 
                 <h3 id="method_getDropTableDDL">
-        <div class="location">at line 290</div>
+        <div class="location">at line 313</div>
         <code>            public            string
     <strong>getDropTableDDL</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
     </h3>
@@ -1140,7 +1219,7 @@
     </div>
 
                 <h3 id="method_getAddTableDDL">
-        <div class="location">at line 303</div>
+        <div class="location">at line 326</div>
         <code>            public            string
     <strong>getAddTableDDL</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
     </h3>
@@ -1174,7 +1253,7 @@
     </div>
 
                 <h3 id="method_getColumnDDL">
-        <div class="location">at line 342</div>
+        <div class="location">at line 365</div>
         <code>            public            string
     <strong>getColumnDDL</strong>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $col)</code>
     </h3>
@@ -1208,7 +1287,7 @@
     </div>
 
                 <h3 id="method_getColumnDefaultValueDDL">
-        <div class="location">at line 370</div>
+        <div class="location">at line 393</div>
         <code>            public            string
     <strong>getColumnDefaultValueDDL</strong>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $col)</code>
     </h3>
@@ -1242,9 +1321,9 @@
     </div>
 
                 <h3 id="method_getColumnListDDL">
-        <div class="location">at line 413</div>
+        <div class="location">at line 436</div>
         <code>            public            string
-    <strong>getColumnListDDL</strong>($columns, $delimiter = &#039;,&#039;)</code>
+    <strong>getColumnListDDL</strong>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>[]|string[] $columns, string $delimiter = &#039;,&#039;)</code>
     </h3>
     <div class="details">
         <p>Creates a delimiter-delimited string list of column names, quoted using quoteIdentifier().</p>
@@ -1254,14 +1333,14 @@
 
                     <table>
                     <tr>
-                <td></td>
+                <td><a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>[]|string[]</td>
                 <td>$columns</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$delimiter</td>
-                <td></td>
+                <td>The delimiter to use in separating the column names.</td>
             </tr>
             </table>
 
@@ -1281,7 +1360,7 @@
     </div>
 
                 <h3 id="method_getPrimaryKeyName">
-        <div class="location">at line 431</div>
+        <div class="location">at line 454</div>
         <code>            public            string
     <strong>getPrimaryKeyName</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
     </h3>
@@ -1315,7 +1394,7 @@
     </div>
 
                 <h3 id="method_getPrimaryKeyDDL">
-        <div class="location">at line 443</div>
+        <div class="location">at line 466</div>
         <code>            public            string
     <strong>getPrimaryKeyDDL</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
     </h3>
@@ -1349,7 +1428,7 @@
     </div>
 
                 <h3 id="method_getDropPrimaryKeyDDL">
-        <div class="location">at line 456</div>
+        <div class="location">at line 479</div>
         <code>            public            string
     <strong>getDropPrimaryKeyDDL</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
     </h3>
@@ -1383,7 +1462,7 @@
     </div>
 
                 <h3 id="method_getAddPrimaryKeyDDL">
-        <div class="location">at line 474</div>
+        <div class="location">at line 497</div>
         <code>            public            string
     <strong>getAddPrimaryKeyDDL</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
     </h3>
@@ -1417,7 +1496,7 @@
     </div>
 
                 <h3 id="method_getAddIndicesDDL">
-        <div class="location">at line 492</div>
+        <div class="location">at line 515</div>
         <code>            public            string
     <strong>getAddIndicesDDL</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
     </h3>
@@ -1451,7 +1530,7 @@
     </div>
 
                 <h3 id="method_getAddIndexDDL">
-        <div class="location">at line 508</div>
+        <div class="location">at line 531</div>
         <code>            public            string
     <strong>getAddIndexDDL</strong>(<a href="../../../Propel/Generator/Model/Index.html"><abbr title="Propel\Generator\Model\Index">Index</abbr></a> $index)</code>
     </h3>
@@ -1485,7 +1564,7 @@
     </div>
 
                 <h3 id="method_getDropIndexDDL">
-        <div class="location">at line 528</div>
+        <div class="location">at line 551</div>
         <code>            public            string
     <strong>getDropIndexDDL</strong>(<a href="../../../Propel/Generator/Model/Index.html"><abbr title="Propel\Generator\Model\Index">Index</abbr></a> $index)</code>
     </h3>
@@ -1519,7 +1598,7 @@
     </div>
 
                 <h3 id="method_getIndexDDL">
-        <div class="location">at line 545</div>
+        <div class="location">at line 568</div>
         <code>            public            string
     <strong>getIndexDDL</strong>(<a href="../../../Propel/Generator/Model/Index.html"><abbr title="Propel\Generator\Model\Index">Index</abbr></a> $index)</code>
     </h3>
@@ -1553,7 +1632,7 @@
     </div>
 
                 <h3 id="method_getUniqueDDL">
-        <div class="location">at line 560</div>
+        <div class="location">at line 583</div>
         <code>            public            string
     <strong>getUniqueDDL</strong>(<a href="../../../Propel/Generator/Model/Unique.html"><abbr title="Propel\Generator\Model\Unique">Unique</abbr></a> $unique)</code>
     </h3>
@@ -1587,7 +1666,7 @@
     </div>
 
                 <h3 id="method_getAddForeignKeysDDL">
-        <div class="location">at line 571</div>
+        <div class="location">at line 594</div>
         <code>            public            string
     <strong>getAddForeignKeysDDL</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
     </h3>
@@ -1621,7 +1700,7 @@
     </div>
 
                 <h3 id="method_getAddForeignKeyDDL">
-        <div class="location">at line 587</div>
+        <div class="location">at line 610</div>
         <code>            public            string
     <strong>getAddForeignKeyDDL</strong>(<a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk)</code>
     </h3>
@@ -1655,7 +1734,7 @@
     </div>
 
                 <h3 id="method_getDropForeignKeyDDL">
-        <div class="location">at line 608</div>
+        <div class="location">at line 631</div>
         <code>            public            string
     <strong>getDropForeignKeyDDL</strong>(<a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk)</code>
     </h3>
@@ -1689,7 +1768,7 @@
     </div>
 
                 <h3 id="method_getForeignKeyDDL">
-        <div class="location">at line 627</div>
+        <div class="location">at line 650</div>
         <code>            public            string
     <strong>getForeignKeyDDL</strong>(<a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk)</code>
     </h3>
@@ -1723,7 +1802,7 @@
     </div>
 
                 <h3 id="method_getCommentLineDDL">
-        <div class="location">at line 653</div>
+        <div class="location">at line 676</div>
         <code>            public            
     <strong>getCommentLineDDL</strong>($comment)</code>
     </h3>
@@ -1748,7 +1827,7 @@
     </div>
 
                 <h3 id="method_getCommentBlockDDL">
-        <div class="location">at line 661</div>
+        <div class="location">at line 684</div>
         <code>            public            
     <strong>getCommentBlockDDL</strong>($comment)</code>
     </h3>
@@ -1773,7 +1852,7 @@
     </div>
 
                 <h3 id="method_getModifyDatabaseDDL">
-        <div class="location">at line 678</div>
+        <div class="location">at line 701</div>
         <code>            public            string
     <strong>getModifyDatabaseDDL</strong>(<a href="../../../Propel/Generator/Model/Diff/DatabaseDiff.html"><abbr title="Propel\Generator\Model\Diff\DatabaseDiff">DatabaseDiff</abbr></a> $databaseDiff)</code>
     </h3>
@@ -1807,7 +1886,7 @@
     </div>
 
                 <h3 id="method_getRenameTableDDL">
-        <div class="location">at line 712</div>
+        <div class="location">at line 735</div>
         <code>            public            string
     <strong>getRenameTableDDL</strong>($fromTableName, $toTableName)</code>
     </h3>
@@ -1846,7 +1925,7 @@
     </div>
 
                 <h3 id="method_getModifyTableDDL">
-        <div class="location">at line 730</div>
+        <div class="location">at line 753</div>
         <code>            public            string
     <strong>getModifyTableDDL</strong>(<a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a> $tableDiff)</code>
     </h3>
@@ -1880,7 +1959,7 @@
     </div>
 
                 <h3 id="method_getModifyTableColumnsDDL">
-        <div class="location">at line 795</div>
+        <div class="location">at line 818</div>
         <code>            public            string
     <strong>getModifyTableColumnsDDL</strong>(<a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a> $tableDiff)</code>
     </h3>
@@ -1914,7 +1993,7 @@
     </div>
 
                 <h3 id="method_getModifyTablePrimaryKeyDDL">
-        <div class="location">at line 824</div>
+        <div class="location">at line 847</div>
         <code>            public            string
     <strong>getModifyTablePrimaryKeyDDL</strong>(<a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a> $tableDiff)</code>
     </h3>
@@ -1948,7 +2027,7 @@
     </div>
 
                 <h3 id="method_getModifyTableIndicesDDL">
-        <div class="location">at line 842</div>
+        <div class="location">at line 865</div>
         <code>            public            string
     <strong>getModifyTableIndicesDDL</strong>(<a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a> $tableDiff)</code>
     </h3>
@@ -1982,7 +2061,7 @@
     </div>
 
                 <h3 id="method_getModifyTableForeignKeysDDL">
-        <div class="location">at line 869</div>
+        <div class="location">at line 892</div>
         <code>            public            string
     <strong>getModifyTableForeignKeysDDL</strong>(<a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a> $tableDiff)</code>
     </h3>
@@ -2016,7 +2095,7 @@
     </div>
 
                 <h3 id="method_getRemoveColumnDDL">
-        <div class="location">at line 895</div>
+        <div class="location">at line 918</div>
         <code>            public            string
     <strong>getRemoveColumnDDL</strong>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)</code>
     </h3>
@@ -2050,7 +2129,7 @@
     </div>
 
                 <h3 id="method_getRenameColumnDDL">
-        <div class="location">at line 912</div>
+        <div class="location">at line 935</div>
         <code>            public            string
     <strong>getRenameColumnDDL</strong>($fromColumn, $toColumn)</code>
     </h3>
@@ -2089,7 +2168,7 @@
     </div>
 
                 <h3 id="method_getModifyColumnDDL">
-        <div class="location">at line 930</div>
+        <div class="location">at line 953</div>
         <code>            public            string
     <strong>getModifyColumnDDL</strong>(<a href="../../../Propel/Generator/Model/Diff/ColumnDiff.html"><abbr title="Propel\Generator\Model\Diff\ColumnDiff">ColumnDiff</abbr></a> $columnDiff)</code>
     </h3>
@@ -2123,7 +2202,7 @@
     </div>
 
                 <h3 id="method_getModifyColumnsDDL">
-        <div class="location">at line 948</div>
+        <div class="location">at line 971</div>
         <code>            public            string
     <strong>getModifyColumnsDDL</strong>($columnDiffs)</code>
     </h3>
@@ -2157,7 +2236,7 @@
     </div>
 
                 <h3 id="method_getAddColumnDDL">
-        <div class="location">at line 981</div>
+        <div class="location">at line 1004</div>
         <code>            public            string
     <strong>getAddColumnDDL</strong>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)</code>
     </h3>
@@ -2191,7 +2270,7 @@
     </div>
 
                 <h3 id="method_getAddColumnsDDL">
-        <div class="location">at line 998</div>
+        <div class="location">at line 1021</div>
         <code>            public            string
     <strong>getAddColumnsDDL</strong>($columns)</code>
     </h3>
@@ -2225,7 +2304,7 @@
     </div>
 
                 <h3 id="method_hasSize">
-        <div class="location">at line 1031</div>
+        <div class="location">at line 1054</div>
         <code>            public            boolean
     <strong>hasSize</strong>(string $sqlType)</code>
     </h3>
@@ -2259,7 +2338,7 @@
     </div>
 
                 <h3 id="method_hasScale">
-        <div class="location">at line 1042</div>
+        <div class="location">at line 1065</div>
         <code>            public            boolean
     <strong>hasScale</strong>(string $sqlType)</code>
     </h3>
@@ -2293,7 +2372,7 @@
     </div>
 
                 <h3 id="method_quote">
-        <div class="location">at line 1052</div>
+        <div class="location">at line 1075</div>
         <code>            public            string
     <strong>quote</strong>(string $text)</code>
     </h3>
@@ -2327,7 +2406,7 @@
     </div>
 
                 <h3 id="method_quoteIdentifier">
-        <div class="location">at line 1080</div>
+        <div class="location">at line 1103</div>
         <code>            public            string
     <strong>quoteIdentifier</strong>(string $text)</code>
     </h3>
@@ -2361,7 +2440,7 @@
     </div>
 
                 <h3 id="method_setIdentifierQuoting">
-        <div class="location">at line 1085</div>
+        <div class="location">at line 1108</div>
         <code>            public            
     <strong>setIdentifierQuoting</strong>($enabled = true)</code>
     </h3>
@@ -2386,7 +2465,7 @@
     </div>
 
                 <h3 id="method_getIdentifierQuoting">
-        <div class="location">at line 1090</div>
+        <div class="location">at line 1113</div>
         <code>            public            
     <strong>getIdentifierQuoting</strong>()</code>
     </h3>
@@ -2401,7 +2480,7 @@
     </div>
 
                 <h3 id="method_supportsNativeDeleteTrigger">
-        <div class="location">at line 1099</div>
+        <div class="location">at line 1122</div>
         <code>            public            boolean
     <strong>supportsNativeDeleteTrigger</strong>()</code>
     </h3>
@@ -2425,7 +2504,7 @@
     </div>
 
                 <h3 id="method_supportsInsertNullPk">
-        <div class="location">at line 1108</div>
+        <div class="location">at line 1131</div>
         <code>            public            boolean
     <strong>supportsInsertNullPk</strong>()</code>
     </h3>
@@ -2449,7 +2528,7 @@
     </div>
 
                 <h3 id="method_hasStreamBlobImpl">
-        <div class="location">at line 1118</div>
+        <div class="location">at line 1141</div>
         <code>            public            boolean
     <strong>hasStreamBlobImpl</strong>()</code>
     </h3>
@@ -2473,7 +2552,7 @@
     </div>
 
                 <h3 id="method_supportsSchemas">
-        <div class="location">at line 1126</div>
+        <div class="location">at line 1149</div>
         <code>            public            boolean
     <strong>supportsSchemas</strong>()</code>
     </h3>
@@ -2506,7 +2585,7 @@
     </div>
 
                 <h3 id="method_supportsMigrations">
-        <div class="location">at line 1134</div>
+        <div class="location">at line 1157</div>
         <code>            public            boolean
     <strong>supportsMigrations</strong>()</code>
     </h3>
@@ -2539,12 +2618,12 @@
     </div>
 
                 <h3 id="method_supportsVarcharWithoutSize">
-        <div class="location">at line 1140</div>
+        <div class="location">at line 1163</div>
         <code>            public            boolean
     <strong>supportsVarcharWithoutSize</strong>()</code>
     </h3>
     <div class="details">
-        <p>Wether RDBMS supports VARCHAR without explicit size</p>
+        <p>Whether RDBMS supports VARCHAR without explicit size</p>
         <p></p>
         <div class="tags">
             
@@ -2563,7 +2642,7 @@
     </div>
 
                 <h3 id="method_getBooleanString">
-        <div class="location">at line 1156</div>
+        <div class="location">at line 1179</div>
         <code>            public            mixed
     <strong>getBooleanString</strong>($b)</code>
     </h3>
@@ -2601,7 +2680,7 @@
     </div>
 
                 <h3 id="method_getPhpArrayString">
-        <div class="location">at line 1174</div>
+        <div class="location">at line 1197</div>
         <code>            public            
     <strong>getPhpArrayString</strong>($stringValue)</code>
     </h3>
@@ -2626,7 +2705,7 @@
     </div>
 
                 <h3 id="method_getTimestampFormatter">
-        <div class="location">at line 1198</div>
+        <div class="location">at line 1221</div>
         <code>            public            string
     <strong>getTimestampFormatter</strong>()</code>
     </h3>
@@ -2650,7 +2729,7 @@
     </div>
 
                 <h3 id="method_getTimeFormatter">
-        <div class="location">at line 1207</div>
+        <div class="location">at line 1230</div>
         <code>            public            string
     <strong>getTimeFormatter</strong>()</code>
     </h3>
@@ -2674,7 +2753,7 @@
     </div>
 
                 <h3 id="method_getDateFormatter">
-        <div class="location">at line 1216</div>
+        <div class="location">at line 1239</div>
         <code>            public            string
     <strong>getDateFormatter</strong>()</code>
     </h3>
@@ -2698,7 +2777,7 @@
     </div>
 
                 <h3 id="method_getColumnBindingPHP">
-        <div class="location">at line 1226</div>
+        <div class="location">at line 1249</div>
         <code>            public            
     <strong>getColumnBindingPHP</strong>($column, $identifier, $columnValueAccessor, $tab = &#039;            &#039;)</code>
     </h3>
@@ -2739,7 +2818,7 @@
     </div>
 
                 <h3 id="method_getIdentifierPhp">
-        <div class="location">at line 1261</div>
+        <div class="location">at line 1284</div>
         <code>            public            
     <strong>getIdentifierPhp</strong>($columnValueMutator, $connectionVariableName = &#039;$con&#039;, $sequenceName = &#039;&#039;, $tab = &#039;            &#039;)</code>
     </h3>

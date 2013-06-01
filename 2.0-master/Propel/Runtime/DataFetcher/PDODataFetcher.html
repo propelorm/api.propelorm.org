@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Propel\Runtime\DataFetcher\PDODataFetcher | Propel 2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Propel 2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Propel/Runtime/DataFetcher.html">Propel\Runtime\DataFetcher</a>\PDODataFetcher</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PDODataFetcher</strong>        extends <a href="../../../Propel/Runtime/DataFetcher/AbstractDataFetcher.html"><abbr title="Propel\Runtime\DataFetcher\AbstractDataFetcher">AbstractDataFetcher</abbr></a></p>
+
+            <div class="description">
+            <p>Class PDODataFetcher</p>
+            <p>The PDO dataFetcher for PDOStatement.</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(mixed $dataObject)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/DataFetcher/AbstractDataFetcher.html#method___construct"><abbr title="Propel\Runtime\DataFetcher\AbstractDataFetcher">AbstractDataFetcher</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDataObject">setDataObject</a>(mixed $dataObject)
+                    <p>Sets the dataObject.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/DataFetcher/AbstractDataFetcher.html#method_setDataObject"><abbr title="Propel\Runtime\DataFetcher\AbstractDataFetcher">AbstractDataFetcher</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getDataObject">getDataObject</a>()
+                    <p>Returns the current data object that holds or references to actual data.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/DataFetcher/AbstractDataFetcher.html#method_getDataObject"><abbr title="Propel\Runtime\DataFetcher\AbstractDataFetcher">AbstractDataFetcher</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed|null
+                </td>
+                <td class="last">
+                    <a href="#method_fetchColumn">fetchColumn</a>(int $index = null)
+                    <p>Returns the data of the first column of the next row, based on this-&gt;fetch();</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/DataFetcher/AbstractDataFetcher.html#method_fetchColumn"><abbr title="Propel\Runtime\DataFetcher\AbstractDataFetcher">AbstractDataFetcher</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array|null
+                </td>
+                <td class="last">
+                    <a href="#method_fetch">fetch</a>($style = \PDO::FETCH_NUM)
+                    <p>Returns the data of the next row, based on this-&gt;next() &amp;&amp; this-&gt;current();</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_next">next</a>()
+                    <p>Move forward to next element</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_current">current</a>()
+                    <p>Return the current element</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_key">key</a>()
+                    <p>Return the key of the current element</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_valid">valid</a>()
+                    <p>Checks if current position is valid</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_rewind">rewind</a>()
+                    <p>Not supported in PDODataFetcher.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_close">close</a>()
+                    <p>Frees the resultSet.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_count">count</a>()
+                    <p>Returns the count of items in the resultSet.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getIndexType">getIndexType</a>()
+                    <p>Returns the TableMap::TYPE_* depends on your resultSet.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_bindColumn">bindColumn</a>(mixed $column, mixed $param, int $type = null, int $maxlen = null, mixed $driverdata = null)
+                    <p>Bind a column to a PHP variable.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">in <a href="../../../Propel/Runtime/DataFetcher/AbstractDataFetcher.html#method___construct"><abbr title="Propel\Runtime\DataFetcher\AbstractDataFetcher">AbstractDataFetcher</abbr></a> at line 18</div>
+        <code>            public            
+    <strong>__construct</strong>(mixed $dataObject)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$dataObject</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDataObject">
+        <div class="location">in <a href="../../../Propel/Runtime/DataFetcher/AbstractDataFetcher.html#method_setDataObject"><abbr title="Propel\Runtime\DataFetcher\AbstractDataFetcher">AbstractDataFetcher</abbr></a> at line 26</div>
+        <code>            public            
+    <strong>setDataObject</strong>(mixed $dataObject)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the dataObject.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$dataObject</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDataObject">
+        <div class="location">in <a href="../../../Propel/Runtime/DataFetcher/AbstractDataFetcher.html#method_getDataObject"><abbr title="Propel\Runtime\DataFetcher\AbstractDataFetcher">AbstractDataFetcher</abbr></a> at line 34</div>
+        <code>            public            mixed
+    <strong>getDataObject</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the current data object that holds or references to actual data.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fetchColumn">
+        <div class="location">in <a href="../../../Propel/Runtime/DataFetcher/AbstractDataFetcher.html#method_fetchColumn"><abbr title="Propel\Runtime\DataFetcher\AbstractDataFetcher">AbstractDataFetcher</abbr></a> at line 42</div>
+        <code>            public            mixed|null
+    <strong>fetchColumn</strong>(int $index = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the data of the first column of the next row, based on this-&gt;fetch();</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fetch">
+        <div class="location">at line 29</div>
+        <code>            public            array|null
+    <strong>fetch</strong>($style = \PDO::FETCH_NUM)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the data of the next row, based on this-&gt;next() &amp;&amp; this-&gt;current();</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$style</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_next">
+        <div class="location">at line 37</div>
+        <code>            public            void
+    <strong>next</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Move forward to next element</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>Any returned value is ignored.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_current">
+        <div class="location">at line 50</div>
+        <code>            public            mixed
+    <strong>current</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the current element</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>Can return any type.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_key">
+        <div class="location">at line 58</div>
+        <code>            public            mixed
+    <strong>key</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the key of the current element</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>scalar on success, or null on failure.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_valid">
+        <div class="location">at line 66</div>
+        <code>            public            boolean
+    <strong>valid</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Checks if current position is valid</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>The return value will be casted to boolean and then evaluated. Returns true on success or false on failure.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_rewind">
+        <div class="location">at line 76</div>
+        <code>            public            void
+    <strong>rewind</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Not supported in PDODataFetcher.</p>
+        <p>It actually fetches the first row, since a foreach in php triggers that<br />
+ function as init.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>Any returned value is ignored.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_close">
+        <div class="location">at line 84</div>
+        <code>            public            
+    <strong>close</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Frees the resultSet.</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_count">
+        <div class="location">at line 94</div>
+        <code>            public            int
+    <strong>count</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the count of items in the resultSet.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getIndexType">
+        <div class="location">at line 102</div>
+        <code>            public            string
+    <strong>getIndexType</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the TableMap::TYPE_* depends on your resultSet.</p>
+        <p>We need this information<br />
+ to be able to populate objects based on your array of fetch().</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>one of TableMap::TYPE_*</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_bindColumn">
+        <div class="location">at line 118</div>
+        <code>            public            
+    <strong>bindColumn</strong>(mixed $column, mixed $param, int $type = null, int $maxlen = null, mixed $driverdata = null)</code>
+    </h3>
+    <div class="details">
+        <p>Bind a column to a PHP variable.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$param</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$maxlen</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$driverdata</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>http://www.php.net/manual/en/pdostatement.bindcolumn.php</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

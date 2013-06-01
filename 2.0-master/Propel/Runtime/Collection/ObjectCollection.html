@@ -242,7 +242,7 @@
                     <a href="#method_contains">contains</a>(mixed $element)
                     <p>Whether or not this collection contains a specified element</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_contains"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -252,7 +252,7 @@
                     <a href="#method_search">search</a>(mixed $element)
                     <p>Search an element in the collection</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_search"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -346,16 +346,6 @@
             </tr>
                     <tr>
                 <td class="type">
-                    string
-                </td>
-                <td class="last">
-                    <a href="#method_getPeerClass">getPeerClass</a>()
-                    <p>Get the peer class of the elements in the collection</p>
-                </td>
-                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_getPeerClass"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
                     
                 </td>
                 <td class="last">
@@ -433,6 +423,16 @@
                     <p>Returns a string representation of the current collection.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method___toString"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___clone">__clone</a>()
+                    <p>Creates clones of the containing data.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method___clone"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -581,6 +581,16 @@
                 <td class="last">
                     <a href="#method_toKeyValue">toKeyValue</a>(string $keyColumn = &#039;PrimaryKey&#039;, string $valueColumn = null)
                     <p>Get an associative array representation of the collection The first parameter specifies the column to be used for the key, And the second for the value.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_toKeyIndex">toKeyIndex</a>(string $keyColumn = &#039;PrimaryKey&#039;)
+                    <p>Get an associative array representation of the collection.</p>
                 </td>
                 <td></td>
             </tr>
@@ -1117,7 +1127,7 @@
     </div>
 
                 <h3 id="method_contains">
-        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_contains"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 334</div>
+        <div class="location">at line 344</div>
         <code>            public            boolean
     <strong>contains</strong>(mixed $element)</code>
     </h3>
@@ -1151,7 +1161,7 @@
     </div>
 
                 <h3 id="method_search">
-        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_search"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 345</div>
+        <div class="location">at line 330</div>
         <code>            public            mixed
     <strong>search</strong>(mixed $element)</code>
     </h3>
@@ -1413,32 +1423,8 @@
                     </div>
     </div>
 
-                <h3 id="method_getPeerClass">
-        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getPeerClass"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 476</div>
-        <code>            public            string
-    <strong>getPeerClass</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Get the peer class of the elements in the collection</p>
-        <p></p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td>string</td>
-            <td>Name of the Propel peer class stored in the collection</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
                 <h3 id="method_getTableMapClass">
-        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getTableMapClass"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 487</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getTableMapClass"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 471</div>
         <code>            public            
     <strong>getTableMapClass</strong>()</code>
     </h3>
@@ -1453,7 +1439,7 @@
     </div>
 
                 <h3 id="method_setFormatter">
-        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_setFormatter"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 501</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_setFormatter"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 485</div>
         <code>            public            
     <strong>setFormatter</strong>(<a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> $formatter)</code>
     </h3>
@@ -1478,7 +1464,7 @@
     </div>
 
                 <h3 id="method_getFormatter">
-        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getFormatter"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 509</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getFormatter"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 493</div>
         <code>            public            <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a>
     <strong>getFormatter</strong>()</code>
     </h3>
@@ -1502,7 +1488,7 @@
     </div>
 
                 <h3 id="method_getWriteConnection">
-        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getWriteConnection"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 519</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getWriteConnection"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 503</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\ConnectionInterface">ConnectionInterface</abbr>
     <strong>getWriteConnection</strong>()</code>
     </h3>
@@ -1526,7 +1512,7 @@
     </div>
 
                 <h3 id="method_importFrom">
-        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_importFrom"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 539</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_importFrom"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 523</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\BaseObject">BaseObject</abbr>
     <strong>importFrom</strong>(mixed $parser, string $data)</code>
     </h3>
@@ -1565,7 +1551,7 @@
     </div>
 
                 <h3 id="method_exportTo">
-        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_exportTo"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 568</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_exportTo"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 552</div>
         <code>            public            string
     <strong>exportTo</strong>(mixed $parser, boolean $usePrefix = true, boolean $includeLazyLoadColumns = true)</code>
     </h3>
@@ -1609,7 +1595,7 @@
     </div>
 
                 <h3 id="method___call">
-        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method___call"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 588</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method___call"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 572</div>
         <code>            public            array|string
     <strong>__call</strong>(string $name, mixed $params)</code>
     </h3>
@@ -1649,7 +1635,7 @@
     </div>
 
                 <h3 id="method___toString">
-        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method___toString"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 612</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method___toString"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 596</div>
         <code>            public            string
     <strong>__toString</strong>()</code>
     </h3>
@@ -1668,6 +1654,21 @@
         </tr>
     </table>
 
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___clone">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method___clone"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 604</div>
+        <code>            public            
+    <strong>__clone</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Creates clones of the containing data.</p>
+        <p></p>
+        <div class="tags">
+            
             
             
                     </div>
@@ -1966,7 +1967,7 @@
     </div>
 
                 <h3 id="method_save">
-        <div class="location">at line 35</div>
+        <div class="location">at line 36</div>
         <code>            public            
     <strong>save</strong>(<a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null)</code>
     </h3>
@@ -1991,7 +1992,7 @@
     </div>
 
                 <h3 id="method_delete">
-        <div class="location">at line 61</div>
+        <div class="location">at line 62</div>
         <code>            public            
     <strong>delete</strong>(<a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null)</code>
     </h3>
@@ -2016,7 +2017,7 @@
     </div>
 
                 <h3 id="method_getPrimaryKeys">
-        <div class="location">at line 88</div>
+        <div class="location">at line 89</div>
         <code>            public            array
     <strong>getPrimaryKeys</strong>(boolean $usePrefix = true)</code>
     </h3>
@@ -2050,7 +2051,7 @@
     </div>
 
                 <h3 id="method_fromArray">
-        <div class="location">at line 108</div>
+        <div class="location">at line 109</div>
         <code>            public            
     <strong>fromArray</strong>(array $arr)</code>
     </h3>
@@ -2075,7 +2076,7 @@
     </div>
 
                 <h3 id="method_toArray">
-        <div class="location">at line 153</div>
+        <div class="location">at line 154</div>
         <code>            public            array
     <strong>toArray</strong>(string $keyColumn = null, boolean $usePrefix = false, string $keyType = TableMap::TYPE_PHPNAME, boolean $includeLazyLoadColumns = true, array $alreadyDumpedObjects = array())</code>
     </h3>
@@ -2129,7 +2130,7 @@
     </div>
 
                 <h3 id="method_getArrayCopy">
-        <div class="location">at line 196</div>
+        <div class="location">at line 197</div>
         <code>            public            array
     <strong>getArrayCopy</strong>(string $keyColumn = null, boolean $usePrefix = false)</code>
     </h3>
@@ -2168,7 +2169,7 @@
     </div>
 
                 <h3 id="method_toKeyValue">
-        <div class="location">at line 226</div>
+        <div class="location">at line 227</div>
         <code>            public            array
     <strong>toKeyValue</strong>(string $keyColumn = &#039;PrimaryKey&#039;, string $valueColumn = null)</code>
     </h3>
@@ -2208,8 +2209,52 @@
                     </div>
     </div>
 
+                <h3 id="method_toKeyIndex">
+        <div class="location">at line 257</div>
+        <code>            public            array
+    <strong>toKeyIndex</strong>(string $keyColumn = &#039;PrimaryKey&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Get an associative array representation of the collection.</p>
+        <p>The first parameter specifies the column to be used for the key.<br />
+<br />
+ &lt;code&gt;<br />
+   $res = $userCollection-&gt;toKeyIndex(&#039;Name&#039;);<br />
+<br />
+   $res = array(<br />
+       &#039;peter&#039; =&gt; class User #1 {$name =&gt; &#039;peter&#039;, ...},<br />
+       &#039;hans&#039; =&gt; class User #2 {$name =&gt; &#039;hans&#039;, ...},<br />
+       ...<br />
+   )<br />
+ &lt;/code&gt;</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$keyColumn</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_populateRelation">
-        <div class="location">at line 248</div>
+        <div class="location">at line 278</div>
         <code>            public            <a href="../../../Propel/Runtime/Collection/ObjectCollection.html"><abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr></a>
     <strong>populateRelation</strong>(string $relation, <abbr title="Propel\Runtime\Collection\Criteria">Criteria</abbr> $criteria = null, <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null)</code>
     </h3>

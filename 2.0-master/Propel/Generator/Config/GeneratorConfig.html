@@ -110,7 +110,7 @@
                     <a href="../../../Propel/Generator/Platform/PlatformInterface.html"><abbr title="Propel\Generator\Platform\PlatformInterface">PlatformInterface</abbr></a>
                 </td>
                 <td class="last">
-                    <a href="#method_getConfiguredPlatform">getConfiguredPlatform</a>(<a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null, $database = null)
+                    <a href="#method_getConfiguredPlatform">getConfiguredPlatform</a>(<a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null, string $database = null)
                     <p>Creates and configures a new Platform class.</p>
                 </td>
                 <td></td>
@@ -157,11 +157,11 @@
             </tr>
                     <tr>
                 <td class="type">
-                    
+                    array|null
                 </td>
                 <td class="last">
-                    <a href="#method_getBuildConnections">getBuildConnections</a>()
-                    <p></p>
+                    <a href="#method_getBuildConnections">getBuildConnections</a>(string $directory = &#039;.&#039;)
+                    <p>Returns all connections from the buildtime config.</p>
                 </td>
                 <td></td>
             </tr>
@@ -408,9 +408,9 @@
     </div>
 
                 <h3 id="method_getConfiguredPlatform">
-        <div class="location">at line 165</div>
+        <div class="location">at line 166</div>
         <code>            public            <a href="../../../Propel/Generator/Platform/PlatformInterface.html"><abbr title="Propel\Generator\Platform\PlatformInterface">PlatformInterface</abbr></a>
-    <strong>getConfiguredPlatform</strong>(<a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null, $database = null)</code>
+    <strong>getConfiguredPlatform</strong>(<a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null, string $database = null)</code>
     </h3>
     <div class="details">
         <p>Creates and configures a new Platform class.</p>
@@ -425,7 +425,7 @@
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$database</td>
                 <td></td>
             </tr>
@@ -447,7 +447,7 @@
     </div>
 
                 <h3 id="method_getConfiguredSchemaParser">
-        <div class="location">at line 197</div>
+        <div class="location">at line 198</div>
         <code>            public            <a href="../../../Propel/Generator/Reverse/SchemaParserInterface.html"><abbr title="Propel\Generator\Reverse\SchemaParserInterface">SchemaParserInterface</abbr></a>
     <strong>getConfiguredSchemaParser</strong>(<a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null)</code>
     </h3>
@@ -481,7 +481,7 @@
     </div>
 
                 <h3 id="method_getConfiguredBuilder">
-        <div class="location">at line 221</div>
+        <div class="location">at line 222</div>
         <code>            public            <abbr title="Propel\Generator\Config\DataModelBuilder">DataModelBuilder</abbr>
     <strong>getConfiguredBuilder</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table, string $type)</code>
     </h3>
@@ -520,7 +520,7 @@
     </div>
 
                 <h3 id="method_getConfiguredPluralizer">
-        <div class="location">at line 235</div>
+        <div class="location">at line 239</div>
         <code>            public            <abbr title="Propel\Generator\Config\Pluralizer">Pluralizer</abbr>
     <strong>getConfiguredPluralizer</strong>()</code>
     </h3>
@@ -544,7 +544,7 @@
     </div>
 
                 <h3 id="method_setBuildConnections">
-        <div class="location">at line 243</div>
+        <div class="location">at line 247</div>
         <code>            public            
     <strong>setBuildConnections</strong>($buildConnections)</code>
     </h3>
@@ -569,22 +569,41 @@
     </div>
 
                 <h3 id="method_getBuildConnections">
-        <div class="location">at line 248</div>
-        <code>            public            
-    <strong>getBuildConnections</strong>()</code>
+        <div class="location">at line 259</div>
+        <code>            public            array|null
+    <strong>getBuildConnections</strong>(string $directory = &#039;.&#039;)</code>
     </h3>
     <div class="details">
-        <p></p>
+        <p>Returns all connections from the buildtime config.</p>
         <p></p>
         <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$directory</td>
+                <td>Relative to current working directory or absolute.</td>
+            </tr>
+            </table>
+
             
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array|null</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
     </div>
 
                 <h3 id="method_getBuildConnection">
-        <div class="location">at line 284</div>
+        <div class="location">at line 298</div>
         <code>            public            
     <strong>getBuildConnection</strong>($databaseName = null)</code>
     </h3>
@@ -609,7 +628,7 @@
     </div>
 
                 <h3 id="method_getConnection">
-        <div class="location">at line 303</div>
+        <div class="location">at line 317</div>
         <code>            public            
     <strong>getConnection</strong>($database)</code>
     </h3>

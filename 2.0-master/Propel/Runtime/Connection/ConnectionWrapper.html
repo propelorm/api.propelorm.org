@@ -229,7 +229,7 @@
             </tr>
                     <tr>
                 <td class="type">
-                    <abbr title="Propel\Runtime\Connection\PDOStatement">PDOStatement</abbr>
+                    <a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_query">query</a>()
@@ -244,6 +244,26 @@
                 <td class="last">
                     <a href="#method_quote">quote</a>(string $string, int $parameter_type = 2)
                     <p>Quotes a string for use in a query.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getSingleDataFetcher">getSingleDataFetcher</a>(<abbr title="Propel\Runtime\Connection\$data">$data</abbr> $data)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getDataFetcher">getDataFetcher</a>(<abbr title="Propel\Runtime\Connection\$data">$data</abbr> $data)
+                    <p></p>
                 </td>
                 <td></td>
             </tr>
@@ -545,7 +565,7 @@
     </h3>
     <div class="details">
         <p>Check whether the connection contains a transaction that can be committed.</p>
-        <p>To be used in an evironment where Propelexceptions are caught.</p>
+        <p>To be used in an environment where Propelexceptions are caught.</p>
         <div class="tags">
             
                             <h4>Return Value</h4>
@@ -787,7 +807,7 @@
                     <table>
         <tr>
             <td><a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a></td>
-            <td>A Statement object if the database server successfully prepares, FALSE otherwise.</td>
+            <td></td>
         </tr>
     </table>
 
@@ -821,7 +841,7 @@
                     <table>
         <tr>
             <td>integer</td>
-            <td>The number of rows that were modified or deleted by the SQL statement you issued. If no rows were affected, returns 0.</td>
+            <td></td>
         </tr>
     </table>
 
@@ -832,7 +852,7 @@
 
                 <h3 id="method_query">
         <div class="location">at line 415</div>
-        <code>            public            <abbr title="Propel\Runtime\Connection\PDOStatement">PDOStatement</abbr>
+        <code>            public            <a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a>
     <strong>query</strong>()</code>
     </h3>
     <div class="details">
@@ -846,8 +866,8 @@
 
                     <table>
         <tr>
-            <td><abbr title="Propel\Runtime\Connection\PDOStatement">PDOStatement</abbr></td>
-            <td>A Statement object if the database server successfully prepares, FALSE otherwise.</td>
+            <td><a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a></td>
+            <td></td>
         </tr>
     </table>
 
@@ -906,8 +926,76 @@
                     </div>
     </div>
 
+                <h3 id="method_getSingleDataFetcher">
+        <div class="location">at line 453</div>
+        <code>            public            <a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a>
+    <strong>getSingleDataFetcher</strong>(<abbr title="Propel\Runtime\Connection\$data">$data</abbr> $data)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\$data">$data</abbr></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDataFetcher">
+        <div class="location">at line 461</div>
+        <code>            public            <a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a>
+    <strong>getDataFetcher</strong>(<abbr title="Propel\Runtime\Connection\$data">$data</abbr> $data)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\$data">$data</abbr></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_lastInsertId">
-        <div class="location">at line 467</div>
+        <div class="location">at line 483</div>
         <code>            public            string
     <strong>lastInsertId</strong>(string $name = null)</code>
     </h3>
@@ -943,7 +1031,7 @@
     </div>
 
                 <h3 id="method_clearStatementCache">
-        <div class="location">at line 475</div>
+        <div class="location">at line 491</div>
         <code>            public            
     <strong>clearStatementCache</strong>()</code>
     </h3>
@@ -958,7 +1046,7 @@
     </div>
 
                 <h3 id="method_getQueryCount">
-        <div class="location">at line 488</div>
+        <div class="location">at line 504</div>
         <code>            public            integer
     <strong>getQueryCount</strong>()</code>
     </h3>
@@ -983,7 +1071,7 @@
     </div>
 
                 <h3 id="method_incrementQueryCount">
-        <div class="location">at line 500</div>
+        <div class="location">at line 516</div>
         <code>            public            integer
     <strong>incrementQueryCount</strong>()</code>
     </h3>
@@ -1007,7 +1095,7 @@
     </div>
 
                 <h3 id="method_getLastExecutedQuery">
-        <div class="location">at line 510</div>
+        <div class="location">at line 526</div>
         <code>            public            string
     <strong>getLastExecutedQuery</strong>()</code>
     </h3>
@@ -1031,7 +1119,7 @@
     </div>
 
                 <h3 id="method_setLastExecutedQuery">
-        <div class="location">at line 520</div>
+        <div class="location">at line 536</div>
         <code>            public            
     <strong>setLastExecutedQuery</strong>(string $query)</code>
     </h3>
@@ -1056,7 +1144,7 @@
     </div>
 
                 <h3 id="method_useDebug">
-        <div class="location">at line 530</div>
+        <div class="location">at line 546</div>
         <code>            public            
     <strong>useDebug</strong>(boolean $value = true)</code>
     </h3>
@@ -1081,7 +1169,7 @@
     </div>
 
                 <h3 id="method_setLogMethods">
-        <div class="location">at line 544</div>
+        <div class="location">at line 560</div>
         <code>            public            
     <strong>setLogMethods</strong>(array $logMethods)</code>
     </h3>
@@ -1106,7 +1194,7 @@
     </div>
 
                 <h3 id="method_getLogMethods">
-        <div class="location">at line 552</div>
+        <div class="location">at line 568</div>
         <code>            public            array
     <strong>getLogMethods</strong>()</code>
     </h3>
@@ -1130,7 +1218,7 @@
     </div>
 
                 <h3 id="method_setLogger">
-        <div class="location">at line 565</div>
+        <div class="location">at line 581</div>
         <code>            public            
     <strong>setLogger</strong>(<abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger)</code>
     </h3>
@@ -1155,7 +1243,7 @@
     </div>
 
                 <h3 id="method_getLogger">
-        <div class="location">at line 576</div>
+        <div class="location">at line 592</div>
         <code>            public            <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr>
     <strong>getLogger</strong>()</code>
     </h3>
@@ -1179,7 +1267,7 @@
     </div>
 
                 <h3 id="method_log">
-        <div class="location">at line 590</div>
+        <div class="location">at line 606</div>
         <code>            public            
     <strong>log</strong>(string $msg)</code>
     </h3>
@@ -1204,7 +1292,7 @@
     </div>
 
                 <h3 id="method___call">
-        <div class="location">at line 607</div>
+        <div class="location">at line 623</div>
         <code>            public            
     <strong>__call</strong>($method, $args)</code>
     </h3>
@@ -1234,7 +1322,7 @@
     </div>
 
                 <h3 id="method___destruct">
-        <div class="location">at line 617</div>
+        <div class="location">at line 633</div>
         <code>            public            
     <strong>__destruct</strong>()</code>
     </h3>

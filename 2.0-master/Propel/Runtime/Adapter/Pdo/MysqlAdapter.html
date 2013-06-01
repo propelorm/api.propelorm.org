@@ -23,7 +23,7 @@
     </div>
         <div class="content">
                 <p>class    <strong>MysqlAdapter</strong>        extends <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a>        implements
-        <a href="../../../../Propel/Runtime/Adapter/AdapterInterface.html"><abbr title="Propel\Runtime\Adapter\AdapterInterface">AdapterInterface</abbr></a></p>
+        <a href="../../../../Propel/Runtime/Adapter/SqlAdapterInterface.html"><abbr title="Propel\Runtime\Adapter\SqlAdapterInterface">SqlAdapterInterface</abbr></a></p>
 
             <div class="description">
             <p>This is used in order to connect to a MySQL database.</p>
@@ -37,7 +37,7 @@
             <table>
                     <tr>
                 <td class="type">
-                    <abbr title="Propel\Runtime\Adapter\Pdo\Propel\Runtime\Adapter\Pdo\PdoConnection">PdoConnection</abbr>
+                    <a href="../../../../Propel/Runtime/Connection/PdoConnection.html"><abbr title="Propel\Runtime\Connection\PdoConnection">PdoConnection</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_getConnection">getConnection</a>(array $conparams)
@@ -237,11 +237,11 @@
             </tr>
                     <tr>
                 <td class="type">
-                    <abbr title="Propel\Runtime\Adapter\Pdo\Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr>
+                    <a href="../../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_turnSelectColumnsToAliases">turnSelectColumnsToAliases</a>(<a href="../../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $criteria)
-                    <p>Ensures uniqueness of select column names by turning them all into aliases This is necessary for queries on more than one table when the tables share a column name Moved from BasePeer to PdoAdapter and turned from static to non static</p>
+                    <p>Ensures uniqueness of select column names by turning them all into aliases This is necessary for queries on more than one table when the tables share a column name</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_turnSelectColumnsToAliases"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a></small></td>
             </tr>
@@ -341,8 +341,8 @@
         <h2>Details</h2>
 
                         <h3 id="method_getConnection">
-        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_getConnection"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 37</div>
-        <code>            public            <abbr title="Propel\Runtime\Adapter\Pdo\Propel\Runtime\Adapter\Pdo\PdoConnection">PdoConnection</abbr>
+        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_getConnection"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 40</div>
+        <code>            public            <a href="../../../../Propel/Runtime/Connection/PdoConnection.html"><abbr title="Propel\Runtime\Connection\PdoConnection">PdoConnection</abbr></a>
     <strong>getConnection</strong>(array $conparams)</code>
     </h3>
     <div class="details">
@@ -364,18 +364,31 @@
 
                     <table>
         <tr>
-            <td><abbr title="Propel\Runtime\Adapter\Pdo\Propel\Runtime\Adapter\Pdo\PdoConnection">PdoConnection</abbr></td>
+            <td><a href="../../../../Propel/Runtime/Connection/PdoConnection.html"><abbr title="Propel\Runtime\Connection\PdoConnection">PdoConnection</abbr></a></td>
             <td></td>
         </tr>
     </table>
 
             
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="AdapterException">AdapterException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
             
                     </div>
     </div>
 
                 <h3 id="method_initConnection">
-        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_initConnection"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 101</div>
+        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_initConnection"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 104</div>
         <code>            public            
     <strong>initConnection</strong>(<a href="../../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con, array $settings)</code>
     </h3>
@@ -417,7 +430,7 @@
     </div>
 
                 <h3 id="method_setCharset">
-        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_setCharset"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 127</div>
+        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_setCharset"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 130</div>
         <code>            public            
     <strong>setCharset</strong>(<a href="../../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con, string $charset)</code>
     </h3>
@@ -457,7 +470,7 @@
     </div>
 
                 <h3 id="method_toUpperCase">
-        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_toUpperCase"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 138</div>
+        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_toUpperCase"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 141</div>
         <code>            public            string
     <strong>toUpperCase</strong>(string $in)</code>
     </h3>
@@ -491,7 +504,7 @@
     </div>
 
                 <h3 id="method_ignoreCase">
-        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_ignoreCase"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 149</div>
+        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_ignoreCase"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 152</div>
         <code>            public            string
     <strong>ignoreCase</strong>(string $in)</code>
     </h3>
@@ -525,7 +538,7 @@
     </div>
 
                 <h3 id="method_ignoreCaseInOrderBy">
-        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_ignoreCaseInOrderBy"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 163</div>
+        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_ignoreCaseInOrderBy"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 166</div>
         <code>            public            string
     <strong>ignoreCaseInOrderBy</strong>(string $in)</code>
     </h3>
@@ -561,7 +574,7 @@
     </div>
 
                 <h3 id="method_getStringDelimiter">
-        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_getStringDelimiter"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 175</div>
+        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_getStringDelimiter"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 178</div>
         <code>            public            string
     <strong>getStringDelimiter</strong>()</code>
     </h3>
@@ -575,7 +588,7 @@
                     <table>
         <tr>
             <td>string</td>
-            <td>The text delimeter.</td>
+            <td>The text delimiter.</td>
         </tr>
     </table>
 
@@ -671,7 +684,7 @@
     </div>
 
                 <h3 id="method_isGetIdBeforeInsert">
-        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_isGetIdBeforeInsert"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 219</div>
+        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_isGetIdBeforeInsert"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 222</div>
         <code>            public            boolean
     <strong>isGetIdBeforeInsert</strong>()</code>
     </h3>
@@ -695,7 +708,7 @@
     </div>
 
                 <h3 id="method_isGetIdAfterInsert">
-        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_isGetIdAfterInsert"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 229</div>
+        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_isGetIdAfterInsert"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 232</div>
         <code>            public            boolean
     <strong>isGetIdAfterInsert</strong>()</code>
     </h3>
@@ -719,7 +732,7 @@
     </div>
 
                 <h3 id="method_getId">
-        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_getId"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 242</div>
+        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_getId"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 245</div>
         <code>            public            mixed
     <strong>getId</strong>(<a href="../../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con, string $name = null)</code>
     </h3>
@@ -758,7 +771,7 @@
     </div>
 
                 <h3 id="method_formatTemporalValue">
-        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_formatTemporalValue"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 255</div>
+        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_formatTemporalValue"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 258</div>
         <code>            public            string
     <strong>formatTemporalValue</strong>(mixed $value, <a href="../../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a> $cMap)</code>
     </h3>
@@ -797,7 +810,7 @@
     </div>
 
                 <h3 id="method_getTimestampFormatter">
-        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_getTimestampFormatter"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 282</div>
+        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_getTimestampFormatter"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 285</div>
         <code>            public            string
     <strong>getTimestampFormatter</strong>()</code>
     </h3>
@@ -821,7 +834,7 @@
     </div>
 
                 <h3 id="method_getDateFormatter">
-        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_getDateFormatter"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 292</div>
+        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_getDateFormatter"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 295</div>
         <code>            public            string
     <strong>getDateFormatter</strong>()</code>
     </h3>
@@ -845,7 +858,7 @@
     </div>
 
                 <h3 id="method_getTimeFormatter">
-        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_getTimeFormatter"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 302</div>
+        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_getTimeFormatter"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 305</div>
         <code>            public            string
     <strong>getTimeFormatter</strong>()</code>
     </h3>
@@ -902,7 +915,7 @@
     </div>
 
                 <h3 id="method_cleanupSQL">
-        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_cleanupSQL"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 330</div>
+        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_cleanupSQL"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 333</div>
         <code>            public            
     <strong>cleanupSQL</strong>(string $sql, array $params, <a href="../../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $values, <a href="../../../../Propel/Runtime/Map/DatabaseMap.html"><abbr title="Propel\Runtime\Map\DatabaseMap">DatabaseMap</abbr></a> $dbMap)</code>
     </h3>
@@ -942,7 +955,7 @@
     </div>
 
                 <h3 id="method_getDeleteFromClause">
-        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_getDeleteFromClause"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 342</div>
+        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_getDeleteFromClause"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 345</div>
         <code>            public            string
     <strong>getDeleteFromClause</strong>(<a href="../../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $criteria, string $tableName)</code>
     </h3>
@@ -981,14 +994,13 @@
     </div>
 
                 <h3 id="method_createSelectSqlPart">
-        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_createSelectSqlPart"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 375</div>
+        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_createSelectSqlPart"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 377</div>
         <code>            public            string
     <strong>createSelectSqlPart</strong>(<a href="../../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $criteria, array $fromClause, boolean $aliasAll = false)</code>
     </h3>
     <div class="details">
         <p>Builds the SELECT part of a SQL statement based on a Criteria taking into account select columns and &#039;as&#039; columns (i.e.</p>
-        <p>columns aliases)<br />
- Move from BasePeer to PdoAdapter and turn from static to non static</p>
+        <p>columns aliases)</p>
         <div class="tags">
                             <h4>Parameters</h4>
 
@@ -1026,12 +1038,12 @@
     </div>
 
                 <h3 id="method_turnSelectColumnsToAliases">
-        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_turnSelectColumnsToAliases"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 447</div>
-        <code>            public            <abbr title="Propel\Runtime\Adapter\Pdo\Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr>
+        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_turnSelectColumnsToAliases"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 448</div>
+        <code>            public            <a href="../../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>turnSelectColumnsToAliases</strong>(<a href="../../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $criteria)</code>
     </h3>
     <div class="details">
-        <p>Ensures uniqueness of select column names by turning them all into aliases This is necessary for queries on more than one table when the tables share a column name Moved from BasePeer to PdoAdapter and turned from static to non static</p>
+        <p>Ensures uniqueness of select column names by turning them all into aliases This is necessary for queries on more than one table when the tables share a column name</p>
         <p></p>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -1049,7 +1061,7 @@
 
                     <table>
         <tr>
-            <td><abbr title="Propel\Runtime\Adapter\Pdo\Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></td>
+            <td><a href="../../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a></td>
             <td>The input, with Select columns replaced by aliases</td>
         </tr>
     </table>
@@ -1069,19 +1081,19 @@
     </div>
 
                 <h3 id="method_bindValues">
-        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_bindValues"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 497</div>
+        <div class="location">in <a href="../../../../Propel/Runtime/Adapter/Pdo/PdoAdapter.html#method_bindValues"><abbr title="Propel\Runtime\Adapter\Pdo\PdoAdapter">PdoAdapter</abbr></a> at line 498</div>
         <code>            public            
     <strong>bindValues</strong>(<a href="../../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a> $stmt, array $params, <a href="../../../../Propel/Runtime/Map/DatabaseMap.html"><abbr title="Propel\Runtime\Map\DatabaseMap">DatabaseMap</abbr></a> $dbMap)</code>
     </h3>
     <div class="details">
         <p>Binds values in a prepared statement.</p>
-        <p>This method is designed to work with the BasePeer::createSelectSql() method, which creates<br />
+        <p>This method is designed to work with the Criteria::createSelectSql() method, which creates<br />
  both the SELECT SQL statement and populates a passed-in array of parameter<br />
  values that should be substituted.<br />
 <br />
  &lt;code&gt;<br />
  $adapter = Propel::getServiceContainer()-&gt;getAdapter($criteria-&gt;getDbName());<br />
- $sql = BasePeer::createSelectSql($criteria, $params);<br />
+ $sql = $criteria-&gt;createSelectSql($params);<br />
  $stmt = $con-&gt;prepare($sql);<br />
  $params = array();<br />
  $adapter-&gt;populateStmtValues($stmt, $params, Propel::getServiceContainer()-&gt;getDatabaseMap($critera-&gt;getDbName()));<br />

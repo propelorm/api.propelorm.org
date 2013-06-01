@@ -49,14 +49,14 @@
                     <tr>
                 <td>TYPE_COLNAME</td>
                 <td class="last">
-                    <p><em>column (peer) name type e.g.</em></p>
+                    <p><em>column (tableMap) name type e.g.</em></p>
                     <p>&#039;book.AUTHOR_ID&#039;</p>
                 </td>
             </tr>
                     <tr>
                 <td>TYPE_RAW_COLNAME</td>
                 <td class="last">
-                    <p><em>column part of the column peer name e.g.</em></p>
+                    <p><em>column part of the column tableMap name e.g.</em></p>
                     <p>&#039;AUTHOR_ID&#039;</p>
                 </td>
             </tr>
@@ -178,16 +178,6 @@
                 <td class="last">
                     <a href="#method_getClassName">getClassName</a>()
                     <p>Get the ClassName of the Propel Class belonging to this table.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    string
-                </td>
-                <td class="last">
-                    <a href="#method_getPeerClassName">getPeerClassName</a>()
-                    <p>Get the Peer ClassName of the Propel Class belonging to this table.</p>
                 </td>
                 <td></td>
             </tr>
@@ -491,13 +481,43 @@
                 </td>
                 <td></td>
             </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;mixed
+                </td>
+                <td class="last">
+                    <a href="#method_doInsert">doInsert</a>(<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $criteria, <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null)
+                    <p>Method to perform inserts based on values and keys in a Criteria.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_getFieldnamesForClass">getFieldnamesForClass</a>($classname, $type = TableMap::TYPE_PHPNAME)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_translateFieldnameForClass">translateFieldnameForClass</a>($classname, $fieldname, $fromType, $toType)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
             </table>
 
 
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 170</div>
+        <div class="location">at line 174</div>
         <code>            public            
     <strong>__construct</strong>($name = null, $dbMap = null)</code>
     </h3>
@@ -527,7 +547,7 @@
     </div>
 
                 <h3 id="method_initialize">
-        <div class="location">at line 185</div>
+        <div class="location">at line 189</div>
         <code>            public            
     <strong>initialize</strong>()</code>
     </h3>
@@ -542,7 +562,7 @@
     </div>
 
                 <h3 id="method_setDatabaseMap">
-        <div class="location">at line 194</div>
+        <div class="location">at line 198</div>
         <code>            public            
     <strong>setDatabaseMap</strong>(<a href="../../../Propel/Runtime/Map/DatabaseMap.html"><abbr title="Propel\Runtime\Map\DatabaseMap">DatabaseMap</abbr></a> $dbMap)</code>
     </h3>
@@ -567,7 +587,7 @@
     </div>
 
                 <h3 id="method_getDatabaseMap">
-        <div class="location">at line 204</div>
+        <div class="location">at line 208</div>
         <code>            public            <a href="../../../Propel/Runtime/Map/DatabaseMap.html"><abbr title="Propel\Runtime\Map\DatabaseMap">DatabaseMap</abbr></a>
     <strong>getDatabaseMap</strong>()</code>
     </h3>
@@ -591,7 +611,7 @@
     </div>
 
                 <h3 id="method_setName">
-        <div class="location">at line 214</div>
+        <div class="location">at line 218</div>
         <code>            public            
     <strong>setName</strong>(string $name)</code>
     </h3>
@@ -616,7 +636,7 @@
     </div>
 
                 <h3 id="method_getName">
-        <div class="location">at line 224</div>
+        <div class="location">at line 228</div>
         <code>            public            string
     <strong>getName</strong>()</code>
     </h3>
@@ -640,7 +660,7 @@
     </div>
 
                 <h3 id="method_setPhpName">
-        <div class="location">at line 234</div>
+        <div class="location">at line 238</div>
         <code>            public            
     <strong>setPhpName</strong>(string $phpName)</code>
     </h3>
@@ -665,7 +685,7 @@
     </div>
 
                 <h3 id="method_getPhpName">
-        <div class="location">at line 244</div>
+        <div class="location">at line 248</div>
         <code>            public            string
     <strong>getPhpName</strong>()</code>
     </h3>
@@ -689,14 +709,14 @@
     </div>
 
                 <h3 id="method_setClassName">
-        <div class="location">at line 255</div>
+        <div class="location">at line 259</div>
         <code>            public            
     <strong>setClassName</strong>(string $classname)</code>
     </h3>
     <div class="details">
         <p>Set the ClassName of the Table.</p>
         <p>Could be useful for calling<br />
- Peer and Object methods dynamically.</p>
+ tableMap and Object methods dynamically.</p>
         <div class="tags">
                             <h4>Parameters</h4>
 
@@ -715,7 +735,7 @@
     </div>
 
                 <h3 id="method_getClassName">
-        <div class="location">at line 265</div>
+        <div class="location">at line 269</div>
         <code>            public            string
     <strong>getClassName</strong>()</code>
     </h3>
@@ -738,32 +758,8 @@
                     </div>
     </div>
 
-                <h3 id="method_getPeerClassName">
-        <div class="location">at line 275</div>
-        <code>            public            string
-    <strong>getPeerClassName</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Get the Peer ClassName of the Propel Class belonging to this table.</p>
-        <p></p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td>string</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
                 <h3 id="method_setPackage">
-        <div class="location">at line 285</div>
+        <div class="location">at line 279</div>
         <code>            public            
     <strong>setPackage</strong>(string $package)</code>
     </h3>
@@ -788,7 +784,7 @@
     </div>
 
                 <h3 id="method_getPackage">
-        <div class="location">at line 295</div>
+        <div class="location">at line 289</div>
         <code>            public            string
     <strong>getPackage</strong>()</code>
     </h3>
@@ -812,7 +808,7 @@
     </div>
 
                 <h3 id="method_setUseIdGenerator">
-        <div class="location">at line 305</div>
+        <div class="location">at line 299</div>
         <code>            public            
     <strong>setUseIdGenerator</strong>(boolean $bit)</code>
     </h3>
@@ -837,7 +833,7 @@
     </div>
 
                 <h3 id="method_isUseIdGenerator">
-        <div class="location">at line 315</div>
+        <div class="location">at line 309</div>
         <code>            public            boolean
     <strong>isUseIdGenerator</strong>()</code>
     </h3>
@@ -861,7 +857,7 @@
     </div>
 
                 <h3 id="method_setSingleTableInheritance">
-        <div class="location">at line 325</div>
+        <div class="location">at line 319</div>
         <code>            public            
     <strong>setSingleTableInheritance</strong>(boolean $bit)</code>
     </h3>
@@ -886,7 +882,7 @@
     </div>
 
                 <h3 id="method_isSingleTableInheritance">
-        <div class="location">at line 335</div>
+        <div class="location">at line 329</div>
         <code>            public            boolean
     <strong>isSingleTableInheritance</strong>()</code>
     </h3>
@@ -910,7 +906,7 @@
     </div>
 
                 <h3 id="method_setPrimaryKeyMethodInfo">
-        <div class="location">at line 345</div>
+        <div class="location">at line 339</div>
         <code>            public            
     <strong>setPrimaryKeyMethodInfo</strong>(mixed $pkInfo)</code>
     </h3>
@@ -935,7 +931,7 @@
     </div>
 
                 <h3 id="method_getPrimaryKeyMethodInfo">
-        <div class="location">at line 355</div>
+        <div class="location">at line 349</div>
         <code>            public            mixed
     <strong>getPrimaryKeyMethodInfo</strong>()</code>
     </h3>
@@ -959,7 +955,7 @@
     </div>
 
                 <h3 id="method_addColumn">
-        <div class="location">at line 373</div>
+        <div class="location">at line 398</div>
         <code>            public            <a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>
     <strong>addColumn</strong>($name, $phpName, $type, $isNotNull = false, $size = null, $defaultValue = null, $pk = false, $fkTable = null, $fkColumn = null)</code>
     </h3>
@@ -1033,7 +1029,7 @@
     </div>
 
                 <h3 id="method_addConfiguredColumn">
-        <div class="location">at line 405</div>
+        <div class="location">at line 430</div>
         <code>            public            <a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>
     <strong>addConfiguredColumn</strong>(<a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a> $cmap)</code>
     </h3>
@@ -1068,7 +1064,7 @@
     </div>
 
                 <h3 id="method_hasColumn">
-        <div class="location">at line 419</div>
+        <div class="location">at line 444</div>
         <code>            public            boolean
     <strong>hasColumn</strong>(mixed $name, boolean $normalize = true)</code>
     </h3>
@@ -1107,7 +1103,7 @@
     </div>
 
                 <h3 id="method_getColumn">
-        <div class="location">at line 438</div>
+        <div class="location">at line 463</div>
         <code>            public            <a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>
     <strong>getColumn</strong>(string $name, boolean $normalize = true)</code>
     </h3>
@@ -1155,7 +1151,7 @@
     </div>
 
                 <h3 id="method_hasColumnByPhpName">
-        <div class="location">at line 456</div>
+        <div class="location">at line 481</div>
         <code>            public            boolean
     <strong>hasColumnByPhpName</strong>(mixed $phpName)</code>
     </h3>
@@ -1189,7 +1185,7 @@
     </div>
 
                 <h3 id="method_getColumnByPhpName">
-        <div class="location">at line 468</div>
+        <div class="location">at line 493</div>
         <code>            public            <a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>
     <strong>getColumnByPhpName</strong>(string $phpName)</code>
     </h3>
@@ -1232,7 +1228,7 @@
     </div>
 
                 <h3 id="method_getColumns">
-        <div class="location">at line 482</div>
+        <div class="location">at line 507</div>
         <code>            public            <a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>[]
     <strong>getColumns</strong>()</code>
     </h3>
@@ -1256,7 +1252,7 @@
     </div>
 
                 <h3 id="method_addPrimaryKey">
-        <div class="location">at line 496</div>
+        <div class="location">at line 521</div>
         <code>            public            <a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>
     <strong>addPrimaryKey</strong>($columnName, $phpName, $type, $isNotNull = false, $size = null, $defaultValue = null)</code>
     </h3>
@@ -1315,7 +1311,7 @@
     </div>
 
                 <h3 id="method_addForeignKey">
-        <div class="location">at line 513</div>
+        <div class="location">at line 538</div>
         <code>            public            <a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>
     <strong>addForeignKey</strong>($columnName, $phpName, $type, $fkTable, $fkColumn, $isNotNull = false, $size, $defaultValue = null)</code>
     </h3>
@@ -1384,7 +1380,7 @@
     </div>
 
                 <h3 id="method_addForeignPrimaryKey">
-        <div class="location">at line 530</div>
+        <div class="location">at line 555</div>
         <code>            public            <a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>
     <strong>addForeignPrimaryKey</strong>($columnName, $phpName, $type, $fkTable, $fkColumn, $isNotNull = false, $size, $defaultValue = null)</code>
     </h3>
@@ -1453,7 +1449,7 @@
     </div>
 
                 <h3 id="method_isCrossRef">
-        <div class="location">at line 538</div>
+        <div class="location">at line 563</div>
         <code>            public            boolean
     <strong>isCrossRef</strong>()</code>
     </h3>
@@ -1477,7 +1473,7 @@
     </div>
 
                 <h3 id="method_setIsCrossRef">
-        <div class="location">at line 548</div>
+        <div class="location">at line 573</div>
         <code>            public            
     <strong>setIsCrossRef</strong>(boolean $isCrossRef)</code>
     </h3>
@@ -1502,7 +1498,7 @@
     </div>
 
                 <h3 id="method_getPrimaryKeys">
-        <div class="location">at line 558</div>
+        <div class="location">at line 583</div>
         <code>            public            <a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>[]
     <strong>getPrimaryKeys</strong>()</code>
     </h3>
@@ -1526,7 +1522,7 @@
     </div>
 
                 <h3 id="method_getForeignKeys">
-        <div class="location">at line 568</div>
+        <div class="location">at line 593</div>
         <code>            public            <a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>[]
     <strong>getForeignKeys</strong>()</code>
     </h3>
@@ -1550,7 +1546,7 @@
     </div>
 
                 <h3 id="method_buildRelations">
-        <div class="location">at line 578</div>
+        <div class="location">at line 603</div>
         <code>            public            
     <strong>buildRelations</strong>()</code>
     </h3>
@@ -1565,7 +1561,7 @@
     </div>
 
                 <h3 id="method_addRelation">
-        <div class="location">at line 594</div>
+        <div class="location">at line 619</div>
         <code>            public            <a href="../../../Propel/Runtime/Map/RelationMap.html"><abbr title="Propel\Runtime\Map\RelationMap">RelationMap</abbr></a>
     <strong>addRelation</strong>(string $name, string $tablePhpName, integer $type, array $columnMapping = array(), string $onDelete = null, string $onUpdate = null, string $pluralName = null)</code>
     </h3>
@@ -1629,7 +1625,7 @@
     </div>
 
                 <h3 id="method_hasRelation">
-        <div class="location">at line 633</div>
+        <div class="location">at line 658</div>
         <code>            public            boolean
     <strong>hasRelation</strong>(string $name)</code>
     </h3>
@@ -1663,7 +1659,7 @@
     </div>
 
                 <h3 id="method_getRelation">
-        <div class="location">at line 646</div>
+        <div class="location">at line 671</div>
         <code>            public            <a href="../../../Propel/Runtime/Map/RelationMap.html"><abbr title="Propel\Runtime\Map\RelationMap">RelationMap</abbr></a>
     <strong>getRelation</strong>(string $name)</code>
     </h3>
@@ -1706,7 +1702,7 @@
     </div>
 
                 <h3 id="method_getRelations">
-        <div class="location">at line 661</div>
+        <div class="location">at line 686</div>
         <code>            public            array
     <strong>getRelations</strong>()</code>
     </h3>
@@ -1730,7 +1726,7 @@
     </div>
 
                 <h3 id="method_getBehaviors">
-        <div class="location">at line 677</div>
+        <div class="location">at line 702</div>
         <code>            public            array
     <strong>getBehaviors</strong>()</code>
     </h3>
@@ -1754,7 +1750,7 @@
     </div>
 
                 <h3 id="method_hasPrimaryStringColumn">
-        <div class="location">at line 687</div>
+        <div class="location">at line 712</div>
         <code>            public            boolean
     <strong>hasPrimaryStringColumn</strong>()</code>
     </h3>
@@ -1778,7 +1774,7 @@
     </div>
 
                 <h3 id="method_getPrimaryStringColumn">
-        <div class="location">at line 697</div>
+        <div class="location">at line 722</div>
         <code>            public            <a href="../../../Propel/Runtime/Map/ColumnMap.html"><abbr title="Propel\Runtime\Map\ColumnMap">ColumnMap</abbr></a>
     <strong>getPrimaryStringColumn</strong>()</code>
     </h3>
@@ -1796,6 +1792,136 @@
         </tr>
     </table>
 
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_doInsert">
+        <div class="location">at line 756</div>
+        <code>        static    public            mixed
+    <strong>doInsert</strong>(<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $criteria, <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Method to perform inserts based on values and keys in a Criteria.</p>
+        <p>&lt;p&gt;<br />
+ If the primary key is auto incremented the data in Criteria<br />
+ will be inserted and the auto increment value will be returned.<br />
+ &lt;p&gt;<br />
+ If the primary key is included in Criteria then that value will<br />
+ be used to insert the row.<br />
+ &lt;p&gt;<br />
+ If no primary key is included in Criteria then we will try to<br />
+ figure out the primary key from the database map and insert the<br />
+ row with the next available id using util.db.IDBroker.<br />
+ &lt;p&gt;<br />
+ If no primary key is defined for the table the values will be<br />
+ inserted as specified in Criteria and null will be returned.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a></td>
+                <td>$criteria</td>
+                <td>Object containing values to insert.</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a></td>
+                <td>$con</td>
+                <td>A ConnectionInterface connection.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>The primary key for the new row if the primary key is auto-generated. Otherwise will return null.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Exception/RuntimeException.html"><abbr title="Propel\Runtime\Exception\RuntimeException">RuntimeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFieldnamesForClass">
+        <div class="location">at line 852</div>
+        <code>        static    public            
+    <strong>getFieldnamesForClass</strong>($classname, $type = TableMap::TYPE_PHPNAME)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$classname</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_translateFieldnameForClass">
+        <div class="location">at line 859</div>
+        <code>        static    public            
+    <strong>translateFieldnameForClass</strong>($classname, $fieldname, $fromType, $toType)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$classname</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldname</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fromType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$toType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
             
             
                     </div>

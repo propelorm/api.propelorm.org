@@ -116,51 +116,31 @@
             </tr>
                     <tr>
                 <td class="type">
-                    int
-                </td>
-                <td class="last">
-                    <a href="#method_exec">exec</a>(string $statement)
-                    <p>Execute an SQL statement and return the number of affected rows.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    <a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a>|bool
-                </td>
-                <td class="last">
-                    <a href="#method_prepare">prepare</a>(string $statement, array $driver_options = array())
-                    <p>Prepares a statement for execution and returns a statement object.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    <a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a>|bool
-                </td>
-                <td class="last">
-                    <a href="#method_query">query</a>()
-                    <p>Executes an SQL statement, returning a result set as a Statement object.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    string
-                </td>
-                <td class="last">
-                    <a href="#method_quote">quote</a>(string $string, int $parameter_type = 2)
-                    <p>Quotes a string for use in a query.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
                     string
                 </td>
                 <td class="last">
                     <a href="#method_lastInsertId">lastInsertId</a>(string $name = null)
                     <p>Returns the ID of the last inserted row or sequence value.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getSingleDataFetcher">getSingleDataFetcher</a>(<abbr title="Propel\Runtime\Connection\$data">$data</abbr> $data)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getDataFetcher">getDataFetcher</a>(<abbr title="Propel\Runtime\Connection\$data">$data</abbr> $data)
+                    <p></p>
                 </td>
                 <td></td>
             </tr>
@@ -395,170 +375,8 @@
                     </div>
     </div>
 
-                <h3 id="method_exec">
-        <div class="location">at line 104</div>
-        <code>            public            int
-    <strong>exec</strong>(string $statement)</code>
-    </h3>
-    <div class="details">
-        <p>Execute an SQL statement and return the number of affected rows.</p>
-        <p></p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td>string</td>
-                <td>$statement</td>
-                <td>The SQL statement to prepare and execute. Data inside the query should be properly escaped.</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td>int</td>
-            <td>The number of rows that were modified or deleted by the SQL statement you issued. If no rows were affected, returns 0.</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_prepare">
-        <div class="location">at line 125</div>
-        <code>            public            <a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a>|bool
-    <strong>prepare</strong>(string $statement, array $driver_options = array())</code>
-    </h3>
-    <div class="details">
-        <p>Prepares a statement for execution and returns a statement object.</p>
-        <p>Prepares an SQL statement to be executed by the Statement::execute() method.<br />
- The SQL statement can contain zero or more named (:name) or question mark (?)<br />
- parameter markers for which real values will be substituted when the statement<br />
- is executed. You cannot use both named and question mark parameter markers<br />
- within the same SQL statement; pick one or the other parameter style. Use<br />
- these parameters to bind any user-input, do not include the user-input<br />
- directly in the query.</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td>string</td>
-                <td>$statement</td>
-                <td>This must be a valid SQL statement for the target database server.</td>
-            </tr>
-                    <tr>
-                <td>array</td>
-                <td>$driver_options</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td><a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a>|bool</td>
-            <td>A Statement object if the database server successfully prepares, FALSE otherwise.</td>
-        </tr>
-    </table>
-
-            
-                            <h4>Exceptions</h4>
-
-                    <table>
-                    <tr>
-                <td><a href="../../../Propel/Runtime/Connection/Exception/ConnectionException.html"><abbr title="Propel\Runtime\Connection\Exception\ConnectionException">ConnectionException</abbr></a></td>
-                <td>depending on error handling.</td>
-            </tr>
-            </table>
-
-            
-                    </div>
-    </div>
-
-                <h3 id="method_query">
-        <div class="location">at line 137</div>
-        <code>            public            <a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a>|bool
-    <strong>query</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Executes an SQL statement, returning a result set as a Statement object.</p>
-        <p></p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td><a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a>|bool</td>
-            <td>A Statement object if the database server successfully prepares, FALSE otherwise.</td>
-        </tr>
-    </table>
-
-            
-                            <h4>Exceptions</h4>
-
-                    <table>
-                    <tr>
-                <td><a href="../../../Propel/Runtime/Connection/Exception/ConnectionException.html"><abbr title="Propel\Runtime\Connection\Exception\ConnectionException">ConnectionException</abbr></a></td>
-                <td>depending on error handling.</td>
-            </tr>
-            </table>
-
-            
-                    </div>
-    </div>
-
-                <h3 id="method_quote">
-        <div class="location">at line 154</div>
-        <code>            public            string
-    <strong>quote</strong>(string $string, int $parameter_type = 2)</code>
-    </h3>
-    <div class="details">
-        <p>Quotes a string for use in a query.</p>
-        <p>Places quotes around the input string (if required) and escapes special<br />
- characters within the input string, using a quoting style appropriate to<br />
- the underlying driver.</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td>string</td>
-                <td>$string</td>
-                <td>The string to be quoted.</td>
-            </tr>
-                    <tr>
-                <td>int</td>
-                <td>$parameter_type</td>
-                <td>Provides a data type hint for drivers that have alternate quoting styles.</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td>string</td>
-            <td>A quoted string that is theoretically safe to pass into an SQL statement. Returns FALSE if the driver does not support quoting in this way.</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
                 <h3 id="method_lastInsertId">
-        <div class="location">at line 173</div>
+        <div class="location">at line 112</div>
         <code>            public            string
     <strong>lastInsertId</strong>(string $name = null)</code>
     </h3>
@@ -585,6 +403,74 @@
         <tr>
             <td>string</td>
             <td>If a sequence name was not specified for the name parameter, returns a string representing the row ID of the last row that was inserted into the database. If a sequence name was specified for the name parameter, returns a string representing the last value retrieved from the specified sequence object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSingleDataFetcher">
+        <div class="location">at line 119</div>
+        <code>            public            <a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a>
+    <strong>getSingleDataFetcher</strong>(<abbr title="Propel\Runtime\Connection\$data">$data</abbr> $data)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\$data">$data</abbr></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDataFetcher">
+        <div class="location">at line 126</div>
+        <code>            public            <a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a>
+    <strong>getDataFetcher</strong>(<abbr title="Propel\Runtime\Connection\$data">$data</abbr> $data)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\$data">$data</abbr></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a></td>
+            <td></td>
         </tr>
     </table>
 

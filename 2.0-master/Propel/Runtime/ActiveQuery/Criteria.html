@@ -26,7 +26,7 @@
 
             <div class="description">
             <p>This is a utility class for holding criteria information for a query.</p>
-            <p>BasePeer constructs SQL statements based on the values in this class.</p>
+            <p></p>
         </div>
     
             <h2>Constants</h2>
@@ -296,7 +296,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(<abbr title="Propel\Runtime\ActiveQuery\dbName">dbName</abbr> $dbName = null)
+                    <a href="#method___construct">__construct</a>(String $dbName = null)
                     <p>Creates a new instance with the default capacity which corresponds to the specified database.</p>
                 </td>
                 <td></td>
@@ -618,6 +618,16 @@
                 <td class="last">
                     <a href="#method_add">add</a>($p1, $value = null, $comparison = null)
                     <p>This method adds a new criterion to the list of criterias.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method___toString">__toString</a>()
+                    <p></p>
                 </td>
                 <td></td>
             </tr>
@@ -1097,7 +1107,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_addOr">addOr</a>($p1, $p2 = null, $p3 = null, $preferColumnCondition = true)
-                    <p>If a criterion for the requested column already exists, the condition is &quot;OR&quot;ed to the existing criterion (necessary for Propel 1.4 compatibility).</p>
+                    <p>If a prior criterion exists, the condition is &quot;OR&quot;ed to it.</p>
                 </td>
                 <td></td>
             </tr>
@@ -1108,6 +1118,96 @@
                 <td class="last">
                     <a href="#method_addUsingOperator">addUsingOperator</a>(string|<a href="../../../Propel/Runtime/ActiveQuery/Criterion/AbstractCriterion.html"><abbr title="Propel\Runtime\ActiveQuery\Criterion\AbstractCriterion">AbstractCriterion</abbr></a> $p1, mixed $value = null, string $operator = null, boolean $preferColumnCondition = true)
                     <p>Overrides Criteria::add() to use the default combine operator</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_createSelectSql">createSelectSql</a>(array $params)
+                    <p>Method to create an SQL query based on values in a Criteria.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_doInsert">doInsert</a>(<a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null)
+                    <p>Method to perform inserts based on values and keys in a Criteria.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getPrimaryKey">getPrimaryKey</a>(<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $criteria = null)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_doUpdate">doUpdate</a>(<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $updateValues, <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con)
+                    <p>Method used to update rows in the DB.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_buildParams">buildParams</a>($columns, <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $values = null)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_doCount">doCount</a>($con = null)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_needsSelectAliases">needsSelectAliases</a>()
+                    <p>Checks whether the Criteria needs to use column aliasing This is implemented in a service class rather than in Criteria itself in order to avoid doing the tests when it&#039;s not necessary (e.g.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_doDelete">doDelete</a>(<a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null)
+                    <p>Issue a DELETE query based on the current ModelCriteria This method is called by ModelCriteria::delete() inside a transaction</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_doSelect">doSelect</a>(<abbr title="Propel\Runtime\ActiveQuery\$con">$con</abbr> $con = null)
+                    <p>Builds, binds and executes a SELECT query based on the current object.</p>
                 </td>
                 <td></td>
             </tr>
@@ -1187,9 +1287,9 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 264</div>
+        <div class="location">at line 263</div>
         <code>            public            
-    <strong>__construct</strong>(<abbr title="Propel\Runtime\ActiveQuery\dbName">dbName</abbr> $dbName = null)</code>
+    <strong>__construct</strong>(String $dbName = null)</code>
     </h3>
     <div class="details">
         <p>Creates a new instance with the default capacity which corresponds to the specified database.</p>
@@ -1199,7 +1299,7 @@
 
                     <table>
                     <tr>
-                <td><abbr title="Propel\Runtime\ActiveQuery\dbName">dbName</abbr></td>
+                <td>String</td>
                 <td>$dbName</td>
                 <td>The database name.</td>
             </tr>
@@ -1212,7 +1312,7 @@
     </div>
 
                 <h3 id="method_getMap">
-        <div class="location">at line 274</div>
+        <div class="location">at line 273</div>
         <code>            public            array
     <strong>getMap</strong>()</code>
     </h3>
@@ -1236,7 +1336,7 @@
     </div>
 
                 <h3 id="method_clear">
-        <div class="location">at line 285</div>
+        <div class="location">at line 284</div>
         <code>            public            void
     <strong>clear</strong>()</code>
     </h3>
@@ -1261,7 +1361,7 @@
     </div>
 
                 <h3 id="method_addAsColumn">
-        <div class="location">at line 324</div>
+        <div class="location">at line 322</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>addAsColumn</strong>(string $name, string $clause)</code>
     </h3>
@@ -1271,8 +1371,10 @@
 <br />
  &lt;code&gt;<br />
  Criteria myCrit = new Criteria();<br />
- myCrit-&gt;addAsColumn(&#039;alias&#039;, &#039;ALIAS(&#039;.MyPeer::ID.&#039;)&#039;);<br />
- &lt;/code&gt;</p>
+ myCrit-&gt;addAsColumn(&#039;alias&#039;, &#039;ALIAS(&#039;.MyTableMap::ID.&#039;)&#039;);<br />
+ &lt;/code&gt;<br />
+<br />
+ If the name already exists, it is replaced by the new clause.</p>
         <div class="tags">
                             <h4>Parameters</h4>
 
@@ -1285,7 +1387,7 @@
                     <tr>
                 <td>string</td>
                 <td>$clause</td>
-                <td>SQL clause to select from the table If the name already exists, it is replaced by the new clause.</td>
+                <td>SQL clause to select from the table</td>
             </tr>
             </table>
 
@@ -1305,7 +1407,7 @@
     </div>
 
                 <h3 id="method_getAsColumns">
-        <div class="location">at line 337</div>
+        <div class="location">at line 335</div>
         <code>            public            array
     <strong>getAsColumns</strong>()</code>
     </h3>
@@ -1329,7 +1431,7 @@
     </div>
 
                 <h3 id="method_getColumnForAs">
-        <div class="location">at line 348</div>
+        <div class="location">at line 346</div>
         <code>            public            string
     <strong>getColumnForAs</strong>($as)</code>
     </h3>
@@ -1363,7 +1465,7 @@
     </div>
 
                 <h3 id="method_addAlias">
-        <div class="location">at line 364</div>
+        <div class="location">at line 362</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>addAlias</strong>(string $alias, string $table)</code>
     </h3>
@@ -1402,7 +1504,7 @@
     </div>
 
                 <h3 id="method_removeAlias">
-        <div class="location">at line 378</div>
+        <div class="location">at line 376</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>removeAlias</strong>(string $alias)</code>
     </h3>
@@ -1436,7 +1538,7 @@
     </div>
 
                 <h3 id="method_getAliases">
-        <div class="location">at line 390</div>
+        <div class="location">at line 388</div>
         <code>            public            array
     <strong>getAliases</strong>()</code>
     </h3>
@@ -1460,7 +1562,7 @@
     </div>
 
                 <h3 id="method_getTableForAlias">
-        <div class="location">at line 401</div>
+        <div class="location">at line 399</div>
         <code>            public            string
     <strong>getTableForAlias</strong>(string $alias)</code>
     </h3>
@@ -1494,7 +1596,7 @@
     </div>
 
                 <h3 id="method_getTableNameAndAlias">
-        <div class="location">at line 416</div>
+        <div class="location">at line 414</div>
         <code>            public            <abbr title="Propel\Runtime\ActiveQuery\array($tableName,">array($tableName,</abbr>
     <strong>getTableNameAndAlias</strong>(string $tableAliasOrName)</code>
     </h3>
@@ -1529,7 +1631,7 @@
     </div>
 
                 <h3 id="method_keys">
-        <div class="location">at line 434</div>
+        <div class="location">at line 432</div>
         <code>            public            array
     <strong>keys</strong>()</code>
     </h3>
@@ -1557,7 +1659,7 @@
     </div>
 
                 <h3 id="method_containsKey">
-        <div class="location">at line 445</div>
+        <div class="location">at line 443</div>
         <code>            public            boolean
     <strong>containsKey</strong>(string $column)</code>
     </h3>
@@ -1591,7 +1693,7 @@
     </div>
 
                 <h3 id="method_keyContainsValue">
-        <div class="location">at line 458</div>
+        <div class="location">at line 456</div>
         <code>            public            boolean
     <strong>keyContainsValue</strong>(string $column)</code>
     </h3>
@@ -1625,7 +1727,7 @@
     </div>
 
                 <h3 id="method_hasWhereClause">
-        <div class="location">at line 473</div>
+        <div class="location">at line 471</div>
         <code>            public            boolean
     <strong>hasWhereClause</strong>()</code>
     </h3>
@@ -1658,7 +1760,7 @@
     </div>
 
                 <h3 id="method_setUseTransaction">
-        <div class="location">at line 485</div>
+        <div class="location">at line 483</div>
         <code>            public            void
     <strong>setUseTransaction</strong>($v)</code>
     </h3>
@@ -1694,7 +1796,7 @@
     </div>
 
                 <h3 id="method_isUseTransaction">
-        <div class="location">at line 496</div>
+        <div class="location">at line 494</div>
         <code>            public            boolean
     <strong>isUseTransaction</strong>()</code>
     </h3>
@@ -1718,7 +1820,7 @@
     </div>
 
                 <h3 id="method_getCriterion">
-        <div class="location">at line 510</div>
+        <div class="location">at line 508</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criterion/AbstractCriterion.html"><abbr title="Propel\Runtime\ActiveQuery\Criterion\AbstractCriterion">AbstractCriterion</abbr></a>
     <strong>getCriterion</strong>(string $column)</code>
     </h3>
@@ -1753,7 +1855,7 @@
     </div>
 
                 <h3 id="method_getLastCriterion">
-        <div class="location">at line 520</div>
+        <div class="location">at line 518</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criterion/AbstractCriterion.html"><abbr title="Propel\Runtime\ActiveQuery\Criterion\AbstractCriterion">AbstractCriterion</abbr></a>
     <strong>getLastCriterion</strong>()</code>
     </h3>
@@ -1777,7 +1879,7 @@
     </div>
 
                 <h3 id="method_getNewCriterion">
-        <div class="location">at line 541</div>
+        <div class="location">at line 539</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criterion/AbstractCriterion.html"><abbr title="Propel\Runtime\ActiveQuery\Criterion\AbstractCriterion">AbstractCriterion</abbr></a>
     <strong>getNewCriterion</strong>(string $column, mixed $value = null, string $comparison = self::EQUAL)</code>
     </h3>
@@ -1822,7 +1924,7 @@
     </div>
 
                 <h3 id="method_getColumnName">
-        <div class="location">at line 579</div>
+        <div class="location">at line 577</div>
         <code>            public            string
     <strong>getColumnName</strong>(string $name)</code>
     </h3>
@@ -1856,7 +1958,7 @@
     </div>
 
                 <h3 id="method_getTablesColumns">
-        <div class="location">at line 600</div>
+        <div class="location">at line 598</div>
         <code>            public            array
     <strong>getTablesColumns</strong>()</code>
     </h3>
@@ -1886,7 +1988,7 @@
     </div>
 
                 <h3 id="method_getComparison">
-        <div class="location">at line 617</div>
+        <div class="location">at line 615</div>
         <code>            public            string
     <strong>getComparison</strong>(string $key)</code>
     </h3>
@@ -1920,7 +2022,7 @@
     </div>
 
                 <h3 id="method_getDbName">
-        <div class="location">at line 631</div>
+        <div class="location">at line 629</div>
         <code>            public            string
     <strong>getDbName</strong>()</code>
     </h3>
@@ -1944,7 +2046,7 @@
     </div>
 
                 <h3 id="method_setDbName">
-        <div class="location">at line 643</div>
+        <div class="location">at line 641</div>
         <code>            public            void
     <strong>setDbName</strong>(string $dbName = null)</code>
     </h3>
@@ -1979,7 +2081,7 @@
     </div>
 
                 <h3 id="method_getPrimaryTableName">
-        <div class="location">at line 657</div>
+        <div class="location">at line 655</div>
         <code>            public            string
     <strong>getPrimaryTableName</strong>()</code>
     </h3>
@@ -2005,7 +2107,7 @@
     </div>
 
                 <h3 id="method_setPrimaryTableName">
-        <div class="location">at line 671</div>
+        <div class="location">at line 669</div>
         <code>            public            
     <strong>setPrimaryTableName</strong>($tableName)</code>
     </h3>
@@ -2032,7 +2134,7 @@
     </div>
 
                 <h3 id="method_getTableName">
-        <div class="location">at line 682</div>
+        <div class="location">at line 680</div>
         <code>            public            string
     <strong>getTableName</strong>(string $name)</code>
     </h3>
@@ -2066,7 +2168,7 @@
     </div>
 
                 <h3 id="method_getValue">
-        <div class="location">at line 697</div>
+        <div class="location">at line 695</div>
         <code>            public            mixed
     <strong>getValue</strong>(string $name)</code>
     </h3>
@@ -2100,7 +2202,7 @@
     </div>
 
                 <h3 id="method_get">
-        <div class="location">at line 712</div>
+        <div class="location">at line 710</div>
         <code>            public            mixed
     <strong>get</strong>(string $key)</code>
     </h3>
@@ -2134,7 +2236,7 @@
     </div>
 
                 <h3 id="method_put">
-        <div class="location">at line 731</div>
+        <div class="location">at line 729</div>
         <code>            public            <abbr title="Propel\Runtime\ActiveQuery\Instance">Instance</abbr>
     <strong>put</strong>(string $key, mixed $value)</code>
     </h3>
@@ -2178,7 +2280,7 @@
     </div>
 
                 <h3 id="method_putAll">
-        <div class="location">at line 746</div>
+        <div class="location">at line 744</div>
         <code>            public            
     <strong>putAll</strong>(mixed $t)</code>
     </h3>
@@ -2204,7 +2306,7 @@
     </div>
 
                 <h3 id="method_add">
-        <div class="location">at line 782</div>
+        <div class="location">at line 780</div>
         <code>            public            <abbr title="Propel\Runtime\ActiveQuery\A">A</abbr>
     <strong>add</strong>($p1, $value = null, $comparison = null)</code>
     </h3>
@@ -2258,8 +2360,32 @@
                     </div>
     </div>
 
+                <h3 id="method___toString">
+        <div class="location">at line 794</div>
+        <code>            public            string
+    <strong>__toString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_addCond">
-        <div class="location">at line 816</div>
+        <div class="location">at line 822</div>
         <code>            public            <abbr title="Propel\Runtime\ActiveQuery\A">A</abbr>
     <strong>addCond</strong>(string $name, string $p1, mixed $value = null, string $comparison = null)</code>
     </h3>
@@ -2318,7 +2444,7 @@
     </div>
 
                 <h3 id="method_combine">
-        <div class="location">at line 830</div>
+        <div class="location">at line 836</div>
         <code>            public            
     <strong>combine</strong>(array $criterions = array(), string $operator = self::LOGICAL_AND, string $name = null)</code>
     </h3>
@@ -2353,7 +2479,7 @@
     </div>
 
                 <h3 id="method_addJoin">
-        <div class="location">at line 871</div>
+        <div class="location">at line 877</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>addJoin</strong>(mixed $left, mixed $right, mixed $joinType = null)</code>
     </h3>
@@ -2361,7 +2487,7 @@
         <p>This is the way that you should add a join of two tables.</p>
         <p>Example usage:<br />
  &lt;code&gt;<br />
- $c-&gt;addJoin(ProjectPeer::ID, FooPeer::PROJECT_ID, Criteria::LEFT_JOIN);<br />
+ $c-&gt;addJoin(ProjectTableMap::ID, FooTableMap::PROJECT_ID, Criteria::LEFT_JOIN);<br />
  // LEFT JOIN FOO ON (PROJECT.ID = FOO.PROJECT_ID)<br />
  &lt;/code&gt;</p>
         <div class="tags">
@@ -2401,7 +2527,7 @@
     </div>
 
                 <h3 id="method_addMultipleJoin">
-        <div class="location">at line 928</div>
+        <div class="location">at line 934</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>addMultipleJoin</strong>(array $conditions, string $joinType = null)</code>
     </h3>
@@ -2441,7 +2567,7 @@
                     <table>
                     <tr>
                 <td>http://propel.phpdb.org/trac/ticket/167,</td>
-                <td>http://propel.phpdb.org/trac/ticket/606 Example usage: $c-&gt;addMultipleJoin(array( array(LeftPeer::LEFT_COLUMN, RightPeer::RIGHT_COLUMN),  // if no third argument, defaults to Criteria::EQUAL array(FoldersPeer::alias( &#039;fo&#039;, FoldersPeer::LFT ), FoldersPeer::alias( &#039;parent&#039;, FoldersPeer::RGT ), Criteria::LESS_EQUAL ) ), Criteria::LEFT_JOIN );</td>
+                <td>http://propel.phpdb.org/trac/ticket/606 Example usage: $c-&gt;addMultipleJoin(array( array(LeftTableMap::LEFT_COLUMN, RightTableMap::RIGHT_COLUMN),  // if no third argument, defaults to Criteria::EQUAL array(FoldersTableMap::alias( &#039;fo&#039;, FoldersTableMap::LFT ), FoldersTableMap::alias( &#039;parent&#039;, FoldersTableMap::RGT ), Criteria::LESS_EQUAL ) ), Criteria::LEFT_JOIN );</td>
             </tr>
                     <tr>
                 <td>addJoin()</td>
@@ -2453,7 +2579,7 @@
     </div>
 
                 <h3 id="method_addJoinObject">
-        <div class="location">at line 987</div>
+        <div class="location">at line 993</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>addJoinObject</strong>(<a href="../../../Propel/Runtime/ActiveQuery/Join.html"><abbr title="Propel\Runtime\ActiveQuery\Join">Join</abbr></a> $join)</code>
     </h3>
@@ -2487,7 +2613,7 @@
     </div>
 
                 <h3 id="method_getJoins">
-        <div class="location">at line 1000</div>
+        <div class="location">at line 1006</div>
         <code>            public            array
     <strong>getJoins</strong>()</code>
     </h3>
@@ -2511,7 +2637,7 @@
     </div>
 
                 <h3 id="method_addSelectQuery">
-        <div class="location">at line 1013</div>
+        <div class="location">at line 1019</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>addSelectQuery</strong>(<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $subQueryCriteria, string $alias = null)</code>
     </h3>
@@ -2550,7 +2676,7 @@
     </div>
 
                 <h3 id="method_hasSelectQueries">
-        <div class="location">at line 1028</div>
+        <div class="location">at line 1034</div>
         <code>            public            boolean
     <strong>hasSelectQueries</strong>()</code>
     </h3>
@@ -2574,7 +2700,7 @@
     </div>
 
                 <h3 id="method_getSelectQueries">
-        <div class="location">at line 1038</div>
+        <div class="location">at line 1044</div>
         <code>            public            array
     <strong>getSelectQueries</strong>()</code>
     </h3>
@@ -2598,7 +2724,7 @@
     </div>
 
                 <h3 id="method_getSelectQuery">
-        <div class="location">at line 1049</div>
+        <div class="location">at line 1055</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>getSelectQuery</strong>(string $alias)</code>
     </h3>
@@ -2632,7 +2758,7 @@
     </div>
 
                 <h3 id="method_hasSelectQuery">
-        <div class="location">at line 1060</div>
+        <div class="location">at line 1066</div>
         <code>            public            boolean
     <strong>hasSelectQuery</strong>(string $alias)</code>
     </h3>
@@ -2666,7 +2792,7 @@
     </div>
 
                 <h3 id="method_forgeSelectQueryAlias">
-        <div class="location">at line 1065</div>
+        <div class="location">at line 1071</div>
         <code>            public            
     <strong>forgeSelectQueryAlias</strong>()</code>
     </h3>
@@ -2681,7 +2807,7 @@
     </div>
 
                 <h3 id="method_setAll">
-        <div class="location">at line 1079</div>
+        <div class="location">at line 1085</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>setAll</strong>()</code>
     </h3>
@@ -2705,7 +2831,7 @@
     </div>
 
                 <h3 id="method_setDistinct">
-        <div class="location">at line 1091</div>
+        <div class="location">at line 1097</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>setDistinct</strong>()</code>
     </h3>
@@ -2729,7 +2855,7 @@
     </div>
 
                 <h3 id="method_addSelectModifier">
-        <div class="location">at line 1107</div>
+        <div class="location">at line 1113</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>addSelectModifier</strong>(string $modifier)</code>
     </h3>
@@ -2763,7 +2889,7 @@
     </div>
 
                 <h3 id="method_removeSelectModifier">
-        <div class="location">at line 1125</div>
+        <div class="location">at line 1131</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>removeSelectModifier</strong>(string $modifier)</code>
     </h3>
@@ -2797,7 +2923,7 @@
     </div>
 
                 <h3 id="method_hasSelectModifier">
-        <div class="location">at line 1139</div>
+        <div class="location">at line 1145</div>
         <code>            public            boolean
     <strong>hasSelectModifier</strong>(string $modifier)</code>
     </h3>
@@ -2831,7 +2957,7 @@
     </div>
 
                 <h3 id="method_setIgnoreCase">
-        <div class="location">at line 1150</div>
+        <div class="location">at line 1156</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>setIgnoreCase</strong>(boolean $b)</code>
     </h3>
@@ -2865,7 +2991,7 @@
     </div>
 
                 <h3 id="method_isIgnoreCase">
-        <div class="location">at line 1162</div>
+        <div class="location">at line 1168</div>
         <code>            public            boolean
     <strong>isIgnoreCase</strong>()</code>
     </h3>
@@ -2889,7 +3015,7 @@
     </div>
 
                 <h3 id="method_setSingleRecord">
-        <div class="location">at line 1179</div>
+        <div class="location">at line 1185</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>setSingleRecord</strong>(boolean $b)</code>
     </h3>
@@ -2926,7 +3052,7 @@
     </div>
 
                 <h3 id="method_isSingleRecord">
-        <div class="location">at line 1191</div>
+        <div class="location">at line 1197</div>
         <code>            public            boolean
     <strong>isSingleRecord</strong>()</code>
     </h3>
@@ -2950,7 +3076,7 @@
     </div>
 
                 <h3 id="method_setLimit">
-        <div class="location">at line 1202</div>
+        <div class="location">at line 1208</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>setLimit</strong>(int $limit)</code>
     </h3>
@@ -2984,7 +3110,7 @@
     </div>
 
                 <h3 id="method_getLimit">
-        <div class="location">at line 1215</div>
+        <div class="location">at line 1221</div>
         <code>            public            int
     <strong>getLimit</strong>()</code>
     </h3>
@@ -3008,7 +3134,7 @@
     </div>
 
                 <h3 id="method_setOffset">
-        <div class="location">at line 1227</div>
+        <div class="location">at line 1233</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>setOffset</strong>(int $offset)</code>
     </h3>
@@ -3042,7 +3168,7 @@
     </div>
 
                 <h3 id="method_getOffset">
-        <div class="location">at line 1239</div>
+        <div class="location">at line 1245</div>
         <code>            public            int
     <strong>getOffset</strong>()</code>
     </h3>
@@ -3066,7 +3192,7 @@
     </div>
 
                 <h3 id="method_addSelectColumn">
-        <div class="location">at line 1250</div>
+        <div class="location">at line 1256</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>addSelectColumn</strong>(string $name)</code>
     </h3>
@@ -3100,7 +3226,7 @@
     </div>
 
                 <h3 id="method_setComment">
-        <div class="location">at line 1263</div>
+        <div class="location">at line 1269</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>setComment</strong>(string $comment = null)</code>
     </h3>
@@ -3134,7 +3260,7 @@
     </div>
 
                 <h3 id="method_getComment">
-        <div class="location">at line 1275</div>
+        <div class="location">at line 1281</div>
         <code>            public            string
     <strong>getComment</strong>()</code>
     </h3>
@@ -3158,7 +3284,7 @@
     </div>
 
                 <h3 id="method_hasSelectClause">
-        <div class="location">at line 1289</div>
+        <div class="location">at line 1295</div>
         <code>            public            boolean
     <strong>hasSelectClause</strong>()</code>
     </h3>
@@ -3195,7 +3321,7 @@
     </div>
 
                 <h3 id="method_getSelectColumns">
-        <div class="location">at line 1299</div>
+        <div class="location">at line 1305</div>
         <code>            public            array
     <strong>getSelectColumns</strong>()</code>
     </h3>
@@ -3219,7 +3345,7 @@
     </div>
 
                 <h3 id="method_clearSelectColumns">
-        <div class="location">at line 1309</div>
+        <div class="location">at line 1315</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>clearSelectColumns</strong>()</code>
     </h3>
@@ -3243,7 +3369,7 @@
     </div>
 
                 <h3 id="method_getSelectModifiers">
-        <div class="location">at line 1321</div>
+        <div class="location">at line 1327</div>
         <code>            public            <abbr title="Propel\Runtime\ActiveQuery\An">An</abbr>
     <strong>getSelectModifiers</strong>()</code>
     </h3>
@@ -3267,7 +3393,7 @@
     </div>
 
                 <h3 id="method_addGroupByColumn">
-        <div class="location">at line 1332</div>
+        <div class="location">at line 1338</div>
         <code>            public            <abbr title="Propel\Runtime\ActiveQuery\A">A</abbr>
     <strong>addGroupByColumn</strong>(string $groupBy)</code>
     </h3>
@@ -3301,7 +3427,7 @@
     </div>
 
                 <h3 id="method_addAscendingOrderByColumn">
-        <div class="location">at line 1345</div>
+        <div class="location">at line 1351</div>
         <code>            public            <abbr title="Propel\Runtime\ActiveQuery\A">A</abbr>
     <strong>addAscendingOrderByColumn</strong>(string $name)</code>
     </h3>
@@ -3335,7 +3461,7 @@
     </div>
 
                 <h3 id="method_addDescendingOrderByColumn">
-        <div class="location">at line 1358</div>
+        <div class="location">at line 1364</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>addDescendingOrderByColumn</strong>(string $name)</code>
     </h3>
@@ -3369,7 +3495,7 @@
     </div>
 
                 <h3 id="method_getOrderByColumns">
-        <div class="location">at line 1370</div>
+        <div class="location">at line 1376</div>
         <code>            public            array
     <strong>getOrderByColumns</strong>()</code>
     </h3>
@@ -3393,7 +3519,7 @@
     </div>
 
                 <h3 id="method_clearOrderByColumns">
-        <div class="location">at line 1380</div>
+        <div class="location">at line 1386</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>clearOrderByColumns</strong>()</code>
     </h3>
@@ -3417,7 +3543,7 @@
     </div>
 
                 <h3 id="method_clearGroupByColumns">
-        <div class="location">at line 1392</div>
+        <div class="location">at line 1398</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>clearGroupByColumns</strong>()</code>
     </h3>
@@ -3441,7 +3567,7 @@
     </div>
 
                 <h3 id="method_getGroupByColumns">
-        <div class="location">at line 1404</div>
+        <div class="location">at line 1410</div>
         <code>            public            array
     <strong>getGroupByColumns</strong>()</code>
     </h3>
@@ -3465,7 +3591,7 @@
     </div>
 
                 <h3 id="method_getHaving">
-        <div class="location">at line 1414</div>
+        <div class="location">at line 1420</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criterion/AbstractCriterion.html"><abbr title="Propel\Runtime\ActiveQuery\Criterion\AbstractCriterion">AbstractCriterion</abbr></a>
     <strong>getHaving</strong>()</code>
     </h3>
@@ -3489,7 +3615,7 @@
     </div>
 
                 <h3 id="method_remove">
-        <div class="location">at line 1425</div>
+        <div class="location">at line 1431</div>
         <code>            public            mixed
     <strong>remove</strong>(string $key)</code>
     </h3>
@@ -3523,7 +3649,7 @@
     </div>
 
                 <h3 id="method_toString">
-        <div class="location">at line 1443</div>
+        <div class="location">at line 1449</div>
         <code>            public            string
     <strong>toString</strong>()</code>
     </h3>
@@ -3547,7 +3673,7 @@
     </div>
 
                 <h3 id="method_size">
-        <div class="location">at line 1470</div>
+        <div class="location">at line 1476</div>
         <code>            public            int
     <strong>size</strong>()</code>
     </h3>
@@ -3571,7 +3697,7 @@
     </div>
 
                 <h3 id="method_equals">
-        <div class="location">at line 1480</div>
+        <div class="location">at line 1486</div>
         <code>            public            boolean
     <strong>equals</strong>($crit)</code>
     </h3>
@@ -3605,7 +3731,7 @@
     </div>
 
                 <h3 id="method_mergeWith">
-        <div class="location">at line 1551</div>
+        <div class="location">at line 1557</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>mergeWith</strong>(<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $criteria, string $operator = null)</code>
     </h3>
@@ -3644,7 +3770,7 @@
     </div>
 
                 <h3 id="method_addHaving">
-        <div class="location">at line 1646</div>
+        <div class="location">at line 1652</div>
         <code>            public            <abbr title="Propel\Runtime\ActiveQuery\A">A</abbr>
     <strong>addHaving</strong>(mixed $p1, mixed $value = null, mixed $comparison = null)</code>
     </h3>
@@ -3656,7 +3782,7 @@
  &lt;p&gt;<br />
  &lt;code&gt;<br />
  $crit = new Criteria();<br />
- $c = $crit-&gt;getNewCriterion(BasePeer::ID, 5, Criteria::LESS_THAN);<br />
+ $c = $crit-&gt;getNewCriterion(BaseTableMap::ID, 5, Criteria::LESS_THAN);<br />
  $crit-&gt;addHaving($c);<br />
  &lt;/code&gt;</p>
         <div class="tags">
@@ -3696,7 +3822,7 @@
     </div>
 
                 <h3 id="method_addAnd">
-        <div class="location">at line 1700</div>
+        <div class="location">at line 1706</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>addAnd</strong>($p1, $p2 = null, $p3 = null, $preferColumnCondition = true)</code>
     </h3>
@@ -3753,14 +3879,13 @@
     </div>
 
                 <h3 id="method_addOr">
-        <div class="location">at line 1731</div>
+        <div class="location">at line 1736</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>addOr</strong>($p1, $p2 = null, $p3 = null, $preferColumnCondition = true)</code>
     </h3>
     <div class="details">
-        <p>If a criterion for the requested column already exists, the condition is &quot;OR&quot;ed to the existing criterion (necessary for Propel 1.4 compatibility).</p>
-        <p>If no criterion for the requested column already exists, the condition is &quot;OR&quot;ed to the latest criterion.<br />
- If no criterion exist, the condition is added a new criterion<br />
+        <p>If a prior criterion exists, the condition is &quot;OR&quot;ed to it.</p>
+        <p>If no criterion exist, the condition is added a new criterion<br />
 <br />
  Any comparison can be used.<br />
 <br />
@@ -3810,7 +3935,7 @@
     </div>
 
                 <h3 id="method_addUsingOperator">
-        <div class="location">at line 1769</div>
+        <div class="location">at line 1766</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>addUsingOperator</strong>(string|<a href="../../../Propel/Runtime/ActiveQuery/Criterion/AbstractCriterion.html"><abbr title="Propel\Runtime\ActiveQuery\Criterion\AbstractCriterion">AbstractCriterion</abbr></a> $p1, mixed $value = null, string $operator = null, boolean $preferColumnCondition = true)</code>
     </h3>
@@ -3824,7 +3949,7 @@
                     <tr>
                 <td>string|<a href="../../../Propel/Runtime/ActiveQuery/Criterion/AbstractCriterion.html"><abbr title="Propel\Runtime\ActiveQuery\Criterion\AbstractCriterion">AbstractCriterion</abbr></a></td>
                 <td>$p1</td>
-                <td>The column to run the comparison on (e.g. BookPeer::ID), or Criterion object</td>
+                <td>The column to run the comparison on (e.g. BookTableMap::ID), or Criterion object</td>
             </tr>
                     <tr>
                 <td>mixed</td>
@@ -3867,8 +3992,344 @@
                     </div>
     </div>
 
+                <h3 id="method_createSelectSql">
+        <div class="location">at line 1790</div>
+        <code>            public            string
+    <strong>createSelectSql</strong>(array $params)</code>
+    </h3>
+    <div class="details">
+        <p>Method to create an SQL query based on values in a Criteria.</p>
+        <p>This method creates only prepared statement SQL (using ? where values<br />
+ will go).  The second parameter ($params) stores the values that need<br />
+ to be set before the statement is executed.  The reason we do it this way<br />
+ is to let the PDO layer handle all escaping &amp; value formatting.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>&amp;$params Parameters that are to be replaced in prepared statement.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Exception/PropelException.html"><abbr title="Propel\Runtime\Exception\PropelException">PropelException</abbr></a></td>
+                <td>Trouble creating the query string.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_doInsert">
+        <div class="location">at line 2007</div>
+        <code>            public            mixed
+    <strong>doInsert</strong>(<a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Method to perform inserts based on values and keys in a Criteria.</p>
+        <p>&lt;p&gt;<br />
+ If the primary key is auto incremented the data in Criteria<br />
+ will be inserted and the auto increment value will be returned.<br />
+ &lt;p&gt;<br />
+ If the primary key is included in Criteria then that value will<br />
+ be used to insert the row.<br />
+ &lt;p&gt;<br />
+ If no primary key is included in Criteria then we will try to<br />
+ figure out the primary key from the database map and insert the<br />
+ row with the next available id using util.db.IDBroker.<br />
+ &lt;p&gt;<br />
+ If no primary key is defined for the table the values will be<br />
+ inserted as specified in Criteria and null will be returned.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a></td>
+                <td>$con</td>
+                <td>A ConnectionInterface connection.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>The primary key for the new row if the primary key is auto-generated. Otherwise will return null.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Exception/PropelException.html"><abbr title="Propel\Runtime\Exception\PropelException">PropelException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPrimaryKey">
+        <div class="location">at line 2103</div>
+        <code>            public            
+    <strong>getPrimaryKey</strong>(<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $criteria = null)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a></td>
+                <td>$criteria</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_doUpdate">
+        <div class="location">at line 2147</div>
+        <code>            public            int
+    <strong>doUpdate</strong>(<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $updateValues, <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con)</code>
+    </h3>
+    <div class="details">
+        <p>Method used to update rows in the DB.</p>
+        <p>Rows are selected based<br />
+ on selectCriteria and updated using values in updateValues.<br />
+ &lt;p&gt;<br />
+ Use this method for performing an update of the kind:<br />
+ &lt;p&gt;<br />
+ WHERE some_column = some value AND could_have_another_column =<br />
+ another value AND so on.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a></td>
+                <td>$updateValues</td>
+                <td>A Criteria object containing values used in set clause.</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a></td>
+                <td>$con</td>
+                <td>The ConnectionInterface connection object to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>The number of rows affected by last update statement. For most uses there is only one update statement executed, so this number will correspond to the number of rows affected by the call to this method. Note that the return value does require that this information is returned (supported) by the Propel db driver.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="PropelException">PropelException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_buildParams">
+        <div class="location">at line 2272</div>
+        <code>            public            
+    <strong>buildParams</strong>($columns, <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $values = null)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a></td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_doCount">
+        <div class="location">at line 2292</div>
+        <code>            public            
+    <strong>doCount</strong>($con = null)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_needsSelectAliases">
+        <div class="location">at line 2341</div>
+        <code>            public            
+    <strong>needsSelectAliases</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether the Criteria needs to use column aliasing This is implemented in a service class rather than in Criteria itself in order to avoid doing the tests when it&#039;s not necessary (e.g.</p>
+        <p>for SELECTs)</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_doDelete">
+        <div class="location">at line 2367</div>
+        <code>            public            int
+    <strong>doDelete</strong>(<a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Issue a DELETE query based on the current ModelCriteria This method is called by ModelCriteria::delete() inside a transaction</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a></td>
+                <td>$con</td>
+                <td>a connection object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>the number of deleted rows</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="PropelException">PropelException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_doSelect">
+        <div class="location">at line 2429</div>
+        <code>            public            <a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a>
+    <strong>doSelect</strong>(<abbr title="Propel\Runtime\ActiveQuery\$con">$con</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Builds, binds and executes a SELECT query based on the current object.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\ActiveQuery\$con">$con</abbr></td>
+                <td>$con</td>
+                <td>A connection object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a></td>
+            <td>A dataFetcher using the connection, ready to be fetched</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/Exception/PropelException.html"><abbr title="Propel\Runtime\Exception\PropelException">PropelException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
                 <h3 id="method__or">
-        <div class="location">at line 1782</div>
+        <div class="location">at line 2456</div>
         <code>            public            
     <strong>_or</strong>()</code>
     </h3>
@@ -3883,7 +4344,7 @@
     </div>
 
                 <h3 id="method__and">
-        <div class="location">at line 1789</div>
+        <div class="location">at line 2463</div>
         <code>            public            
     <strong>_and</strong>()</code>
     </h3>
@@ -3898,7 +4359,7 @@
     </div>
 
                 <h3 id="method__if">
-        <div class="location">at line 1807</div>
+        <div class="location">at line 2481</div>
         <code>            public            <a href="../../../Propel/Runtime/Util/PropelConditionalProxy.html"><abbr title="Propel\Runtime\Util\PropelConditionalProxy">PropelConditionalProxy</abbr></a>|<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>_if</strong>(boolean $cond)</code>
     </h3>
@@ -3932,7 +4393,7 @@
     </div>
 
                 <h3 id="method__elseif">
-        <div class="location">at line 1822</div>
+        <div class="location">at line 2496</div>
         <code>            public            <a href="../../../Propel/Runtime/Util/PropelConditionalProxy.html"><abbr title="Propel\Runtime\Util\PropelConditionalProxy">PropelConditionalProxy</abbr></a>|<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>_elseif</strong>(boolean $cond)</code>
     </h3>
@@ -3966,7 +4427,7 @@
     </div>
 
                 <h3 id="method__else">
-        <div class="location">at line 1837</div>
+        <div class="location">at line 2511</div>
         <code>            public            <a href="../../../Propel/Runtime/Util/PropelConditionalProxy.html"><abbr title="Propel\Runtime\Util\PropelConditionalProxy">PropelConditionalProxy</abbr></a>|<a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>_else</strong>()</code>
     </h3>
@@ -3990,7 +4451,7 @@
     </div>
 
                 <h3 id="method__endif">
-        <div class="location">at line 1852</div>
+        <div class="location">at line 2526</div>
         <code>            public            <a href="../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a>
     <strong>_endif</strong>()</code>
     </h3>
@@ -4014,7 +4475,7 @@
     </div>
 
                 <h3 id="method___clone">
-        <div class="location">at line 1871</div>
+        <div class="location">at line 2545</div>
         <code>            public            
     <strong>__clone</strong>()</code>
     </h3>

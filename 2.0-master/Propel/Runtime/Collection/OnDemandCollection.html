@@ -346,16 +346,6 @@
             </tr>
                     <tr>
                 <td class="type">
-                    string
-                </td>
-                <td class="last">
-                    <a href="#method_getPeerClass">getPeerClass</a>()
-                    <p>Get the peer class of the elements in the collection</p>
-                </td>
-                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method_getPeerClass"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
                     
                 </td>
                 <td class="last">
@@ -433,6 +423,16 @@
                     <p>Returns a string representation of the current collection.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method___toString"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___clone">__clone</a>()
+                    <p>Creates clones of the containing data.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Collection/Collection.html#method___clone"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -519,7 +519,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_initIterator">initIterator</a>(<a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> $formatter, <a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a> $stmt)
+                    <a href="#method_initIterator">initIterator</a>(<a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> $formatter, <a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a> $dataFetcher)
                     <p></p>
                 </td>
                 <td></td>
@@ -1541,32 +1541,8 @@
                     </div>
     </div>
 
-                <h3 id="method_getPeerClass">
-        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getPeerClass"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 476</div>
-        <code>            public            string
-    <strong>getPeerClass</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Get the peer class of the elements in the collection</p>
-        <p></p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td>string</td>
-            <td>Name of the Propel peer class stored in the collection</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
                 <h3 id="method_getTableMapClass">
-        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getTableMapClass"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 487</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getTableMapClass"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 471</div>
         <code>            public            
     <strong>getTableMapClass</strong>()</code>
     </h3>
@@ -1581,7 +1557,7 @@
     </div>
 
                 <h3 id="method_setFormatter">
-        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_setFormatter"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 501</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_setFormatter"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 485</div>
         <code>            public            
     <strong>setFormatter</strong>(<a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> $formatter)</code>
     </h3>
@@ -1606,7 +1582,7 @@
     </div>
 
                 <h3 id="method_getFormatter">
-        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getFormatter"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 509</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getFormatter"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 493</div>
         <code>            public            <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a>
     <strong>getFormatter</strong>()</code>
     </h3>
@@ -1630,7 +1606,7 @@
     </div>
 
                 <h3 id="method_getWriteConnection">
-        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getWriteConnection"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 519</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_getWriteConnection"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 503</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\ConnectionInterface">ConnectionInterface</abbr>
     <strong>getWriteConnection</strong>()</code>
     </h3>
@@ -1654,7 +1630,7 @@
     </div>
 
                 <h3 id="method_importFrom">
-        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_importFrom"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 539</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method_importFrom"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 523</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\BaseObject">BaseObject</abbr>
     <strong>importFrom</strong>(mixed $parser, string $data)</code>
     </h3>
@@ -1737,7 +1713,7 @@
     </div>
 
                 <h3 id="method___call">
-        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method___call"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 588</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method___call"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 572</div>
         <code>            public            array|string
     <strong>__call</strong>(string $name, mixed $params)</code>
     </h3>
@@ -1777,7 +1753,7 @@
     </div>
 
                 <h3 id="method___toString">
-        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method___toString"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 612</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method___toString"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 596</div>
         <code>            public            string
     <strong>__toString</strong>()</code>
     </h3>
@@ -1796,6 +1772,21 @@
         </tr>
     </table>
 
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___clone">
+        <div class="location">in <a href="../../../Propel/Runtime/Collection/Collection.html#method___clone"><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></a> at line 604</div>
+        <code>            public            
+    <strong>__clone</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Creates clones of the containing data.</p>
+        <p></p>
+        <div class="tags">
+            
             
             
                     </div>
@@ -2096,7 +2087,7 @@
                 <h3 id="method_initIterator">
         <div class="location">at line 41</div>
         <code>            public            
-    <strong>initIterator</strong>(<a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> $formatter, <a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a> $stmt)</code>
+    <strong>initIterator</strong>(<a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> $formatter, <a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a> $dataFetcher)</code>
     </h3>
     <div class="details">
         <p></p>
@@ -2111,8 +2102,8 @@
                 <td></td>
             </tr>
                     <tr>
-                <td><a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a></td>
-                <td>$stmt</td>
+                <td><a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a></td>
+                <td>$dataFetcher</td>
                 <td></td>
             </tr>
             </table>

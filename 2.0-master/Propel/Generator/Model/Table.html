@@ -201,27 +201,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_setBaseClass">setBaseClass</a>(string $class)
-                    <p>Sets the peer base class name.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    string
-                </td>
-                <td class="last">
-                    <a href="#method_getBasePeer">getBasePeer</a>()
-                    <p>Returns the peer base class name.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method_setBasePeer">setBasePeer</a>(string $class)
-                    <p>Sets the base peer class name.</p>
+                    <p>Sets the base class name.</p>
                 </td>
                 <td></td>
             </tr>
@@ -372,6 +352,26 @@
                 <td class="last">
                     <a href="#method_addIdMethodParameter">addIdMethodParameter</a>(<a href="../../../Propel/Generator/Model/IdMethodParameter.html"><abbr title="Propel\Generator\Model\IdMethodParameter">IdMethodParameter</abbr></a> $idMethodParameter)
                     <p>Adds a new parameter for the strategy that generates primary keys.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_removeIndex">removeIndex</a>(string $name)
+                    <p>Removes a index from the table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_hasIndex">hasIndex</a>(string $name)
+                    <p>Checks if the table has a index by name.</p>
                 </td>
                 <td></td>
             </tr>
@@ -591,7 +591,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_getIdMethod">getIdMethod</a>()
-                    <p>Returns the method strateg for generating primary keys.</p>
+                    <p>Returns the method strategy for generating primary keys.</p>
                 </td>
                 <td></td>
             </tr>
@@ -737,7 +737,7 @@
             </tr>
                     <tr>
                 <td class="type">
-                    array
+                    <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>[]
                 </td>
                 <td class="last">
                     <a href="#method_getColumns">getColumns</a>()
@@ -927,7 +927,7 @@
             </tr>
                     <tr>
                 <td class="type">
-                    array
+                    <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>[]
                 </td>
                 <td class="last">
                     <a href="#method_getPrimaryKey">getPrimaryKey</a>()
@@ -1041,7 +1041,7 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 72</div>
+        <div class="location">at line 71</div>
         <code>            public            
     <strong>__construct</strong>(string $name = null)</code>
     </h3>
@@ -1247,7 +1247,7 @@
     </div>
 
                 <h3 id="method_setupObject">
-        <div class="location">at line 119</div>
+        <div class="location">at line 118</div>
         <code>            public            
     <strong>setupObject</strong>()</code>
     </h3>
@@ -1262,7 +1262,7 @@
     </div>
 
                 <h3 id="method_getBuildProperty">
-        <div class="location">at line 164</div>
+        <div class="location">at line 162</div>
         <code>            public            string
     <strong>getBuildProperty</strong>(string $key)</code>
     </h3>
@@ -1296,7 +1296,7 @@
     </div>
 
                 <h3 id="method_applyBehaviors">
-        <div class="location">at line 173</div>
+        <div class="location">at line 171</div>
         <code>            public            
     <strong>applyBehaviors</strong>()</code>
     </h3>
@@ -1311,7 +1311,7 @@
     </div>
 
                 <h3 id="method_doFinalInitialization">
-        <div class="location">at line 191</div>
+        <div class="location">at line 189</div>
         <code>            public            
     <strong>doFinalInitialization</strong>()</code>
     </h3>
@@ -1327,7 +1327,7 @@
     </div>
 
                 <h3 id="method_addExtraIndices">
-        <div class="location">at line 253</div>
+        <div class="location">at line 251</div>
         <code>            public            
     <strong>addExtraIndices</strong>()</code>
     </h3>
@@ -1342,7 +1342,7 @@
     </div>
 
                 <h3 id="method_getColumnList">
-        <div class="location">at line 343</div>
+        <div class="location">at line 361</div>
         <code>            public            string
     <strong>getColumnList</strong>(array $columns, string $delimiter = &#039;,&#039;)</code>
     </h3>
@@ -1390,7 +1390,7 @@
     </div>
 
                 <h3 id="method_doNaming">
-        <div class="location">at line 360</div>
+        <div class="location">at line 378</div>
         <code>            public            
     <strong>doNaming</strong>()</code>
     </h3>
@@ -1406,7 +1406,7 @@
     </div>
 
                 <h3 id="method_getBaseClass">
-        <div class="location">at line 427</div>
+        <div class="location">at line 438</div>
         <code>            public            string
     <strong>getBaseClass</strong>()</code>
     </h3>
@@ -1430,61 +1430,12 @@
     </div>
 
                 <h3 id="method_setBaseClass">
-        <div class="location">at line 445</div>
+        <div class="location">at line 456</div>
         <code>            public            
     <strong>setBaseClass</strong>(string $class)</code>
     </h3>
     <div class="details">
-        <p>Sets the peer base class name.</p>
-        <p></p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td>string</td>
-                <td>$class</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_getBasePeer">
-        <div class="location">at line 455</div>
-        <code>            public            string
-    <strong>getBasePeer</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Returns the peer base class name.</p>
-        <p></p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td>string</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_setBasePeer">
-        <div class="location">at line 473</div>
-        <code>            public            
-    <strong>setBasePeer</strong>(string $class)</code>
-    </h3>
-    <div class="details">
-        <p>Sets the base peer class name.</p>
+        <p>Sets the base class name.</p>
         <p></p>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -1504,7 +1455,7 @@
     </div>
 
                 <h3 id="method_addColumn">
-        <div class="location">at line 484</div>
+        <div class="location">at line 467</div>
         <code>            public            <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>
     <strong>addColumn</strong>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>|array $col)</code>
     </h3>
@@ -1538,7 +1489,7 @@
     </div>
 
                 <h3 id="method_removeColumn">
-        <div class="location">at line 523</div>
+        <div class="location">at line 506</div>
         <code>            public            
     <strong>removeColumn</strong>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>|string $column)</code>
     </h3>
@@ -1563,7 +1514,7 @@
     </div>
 
                 <h3 id="method_adjustColumnPositions">
-        <div class="location">at line 556</div>
+        <div class="location">at line 539</div>
         <code>            public            
     <strong>adjustColumnPositions</strong>()</code>
     </h3>
@@ -1578,7 +1529,7 @@
     </div>
 
                 <h3 id="method_addForeignKey">
-        <div class="location">at line 571</div>
+        <div class="location">at line 554</div>
         <code>            public            <a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a>
     <strong>addForeignKey</strong>(<a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a>|array $fkdata)</code>
     </h3>
@@ -1612,7 +1563,7 @@
     </div>
 
                 <h3 id="method_getChildrenColumn">
-        <div class="location">at line 598</div>
+        <div class="location">at line 581</div>
         <code>            public            <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>
     <strong>getChildrenColumn</strong>()</code>
     </h3>
@@ -1636,7 +1587,7 @@
     </div>
 
                 <h3 id="method_getChildrenNames">
-        <div class="location">at line 608</div>
+        <div class="location">at line 591</div>
         <code>            public            array
     <strong>getChildrenNames</strong>()</code>
     </h3>
@@ -1660,7 +1611,7 @@
     </div>
 
                 <h3 id="method_addReferrer">
-        <div class="location">at line 628</div>
+        <div class="location">at line 611</div>
         <code>            public            
     <strong>addReferrer</strong>(<a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk)</code>
     </h3>
@@ -1685,7 +1636,7 @@
     </div>
 
                 <h3 id="method_getReferrers">
-        <div class="location">at line 638</div>
+        <div class="location">at line 621</div>
         <code>            public            array
     <strong>getReferrers</strong>()</code>
     </h3>
@@ -1709,7 +1660,7 @@
     </div>
 
                 <h3 id="method_setupReferrers">
-        <div class="location">at line 651</div>
+        <div class="location">at line 634</div>
         <code>            public            
     <strong>setupReferrers</strong>(boolean $throwErrors = false)</code>
     </h3>
@@ -1736,7 +1687,7 @@
     </div>
 
                 <h3 id="method_getCrossFks">
-        <div class="location">at line 724</div>
+        <div class="location">at line 707</div>
         <code>            public            array
     <strong>getCrossFks</strong>()</code>
     </h3>
@@ -1760,7 +1711,7 @@
     </div>
 
                 <h3 id="method_setContainsForeignPK">
-        <div class="location">at line 743</div>
+        <div class="location">at line 726</div>
         <code>            public            boolean
     <strong>setContainsForeignPK</strong>($b)</code>
     </h3>
@@ -1794,7 +1745,7 @@
     </div>
 
                 <h3 id="method_getContainsForeignPK">
-        <div class="location">at line 753</div>
+        <div class="location">at line 736</div>
         <code>            public            boolean
     <strong>getContainsForeignPK</strong>()</code>
     </h3>
@@ -1818,7 +1769,7 @@
     </div>
 
                 <h3 id="method_getForeignTableNames">
-        <div class="location">at line 763</div>
+        <div class="location">at line 746</div>
         <code>            public            array
     <strong>getForeignTableNames</strong>()</code>
     </h3>
@@ -1842,7 +1793,7 @@
     </div>
 
                 <h3 id="method_requiresTransactionInPostgres">
-        <div class="location">at line 773</div>
+        <div class="location">at line 756</div>
         <code>            public            boolean
     <strong>requiresTransactionInPostgres</strong>()</code>
     </h3>
@@ -1866,7 +1817,7 @@
     </div>
 
                 <h3 id="method_addIdMethodParameter">
-        <div class="location">at line 783</div>
+        <div class="location">at line 766</div>
         <code>            public            
     <strong>addIdMethodParameter</strong>(<a href="../../../Propel/Generator/Model/IdMethodParameter.html"><abbr title="Propel\Generator\Model\IdMethodParameter">IdMethodParameter</abbr></a> $idMethodParameter)</code>
     </h3>
@@ -1890,8 +1841,67 @@
                     </div>
     </div>
 
+                <h3 id="method_removeIndex">
+        <div class="location">at line 787</div>
+        <code>            public            
+    <strong>removeIndex</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Removes a index from the table.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasIndex">
+        <div class="location">at line 805</div>
+        <code>            public            bool
+    <strong>hasIndex</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Checks if the table has a index by name.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_addIndex">
-        <div class="location">at line 806</div>
+        <div class="location">at line 823</div>
         <code>            public            <a href="../../../Propel/Generator/Model/Index.html"><abbr title="Propel\Generator\Model\Index">Index</abbr></a>
     <strong>addIndex</strong>(<a href="../../../Propel/Generator/Model/Index.html"><abbr title="Propel\Generator\Model\Index">Index</abbr></a> $index)</code>
     </h3>
@@ -1925,7 +1935,7 @@
     </div>
 
                 <h3 id="method_addUnique">
-        <div class="location">at line 830</div>
+        <div class="location">at line 847</div>
         <code>            public            <a href="../../../Propel/Generator/Model/Unique.html"><abbr title="Propel\Generator\Model\Unique">Unique</abbr></a>
     <strong>addUnique</strong>(<a href="../../../Propel/Generator/Model/Unique.html"><abbr title="Propel\Generator\Model\Unique">Unique</abbr></a> $unique)</code>
     </h3>
@@ -1959,7 +1969,7 @@
     </div>
 
                 <h3 id="method_getGeneratorConfig">
-        <div class="location">at line 851</div>
+        <div class="location">at line 868</div>
         <code>            public            <abbr title="Propel\Generator\Model\GeneratorConfig">GeneratorConfig</abbr>
     <strong>getGeneratorConfig</strong>()</code>
     </h3>
@@ -1983,7 +1993,7 @@
     </div>
 
                 <h3 id="method_addBehavior">
-        <div class="location">at line 861</div>
+        <div class="location">at line 878</div>
         <code>            public            <a href="../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
     <strong>addBehavior</strong>($bdata)</code>
     </h3>
@@ -2017,7 +2027,7 @@
     </div>
 
                 <h3 id="method_getBehaviors">
-        <div class="location">at line 883</div>
+        <div class="location">at line 900</div>
         <code>            public            array
     <strong>getBehaviors</strong>()</code>
     </h3>
@@ -2041,7 +2051,7 @@
     </div>
 
                 <h3 id="method_hasBehavior">
-        <div class="location">at line 894</div>
+        <div class="location">at line 911</div>
         <code>            public            boolean
     <strong>hasBehavior</strong>(string $name)</code>
     </h3>
@@ -2075,7 +2085,7 @@
     </div>
 
                 <h3 id="method_getBehavior">
-        <div class="location">at line 905</div>
+        <div class="location">at line 922</div>
         <code>            public            <a href="../../../Propel/Generator/Model/Behavior.html"><abbr title="Propel\Generator\Model\Behavior">Behavior</abbr></a>
     <strong>getBehavior</strong>(string $name)</code>
     </h3>
@@ -2109,7 +2119,7 @@
     </div>
 
                 <h3 id="method_hasAdditionalBuilders">
-        <div class="location">at line 915</div>
+        <div class="location">at line 932</div>
         <code>            public            boolean
     <strong>hasAdditionalBuilders</strong>()</code>
     </h3>
@@ -2133,7 +2143,7 @@
     </div>
 
                 <h3 id="method_getEarlyBehaviors">
-        <div class="location">at line 930</div>
+        <div class="location">at line 947</div>
         <code>            public            Array
     <strong>getEarlyBehaviors</strong>()</code>
     </h3>
@@ -2157,7 +2167,7 @@
     </div>
 
                 <h3 id="method_getAdditionalBuilders">
-        <div class="location">at line 947</div>
+        <div class="location">at line 964</div>
         <code>            public            array
     <strong>getAdditionalBuilders</strong>()</code>
     </h3>
@@ -2181,7 +2191,7 @@
     </div>
 
                 <h3 id="method_getName">
-        <div class="location">at line 962</div>
+        <div class="location">at line 979</div>
         <code>            public            string
     <strong>getName</strong>()</code>
     </h3>
@@ -2205,7 +2215,7 @@
     </div>
 
                 <h3 id="method_getDescription">
-        <div class="location">at line 980</div>
+        <div class="location">at line 997</div>
         <code>            public            string
     <strong>getDescription</strong>()</code>
     </h3>
@@ -2229,7 +2239,7 @@
     </div>
 
                 <h3 id="method_hasDescription">
-        <div class="location">at line 990</div>
+        <div class="location">at line 1007</div>
         <code>            public            boolean
     <strong>hasDescription</strong>()</code>
     </h3>
@@ -2253,7 +2263,7 @@
     </div>
 
                 <h3 id="method_setDescription">
-        <div class="location">at line 1000</div>
+        <div class="location">at line 1017</div>
         <code>            public            
     <strong>setDescription</strong>(string $description)</code>
     </h3>
@@ -2278,7 +2288,7 @@
     </div>
 
                 <h3 id="method_getPhpName">
-        <div class="location">at line 1011</div>
+        <div class="location">at line 1028</div>
         <code>            public            string
     <strong>getPhpName</strong>()</code>
     </h3>
@@ -2311,7 +2321,7 @@
     </div>
 
                 <h3 id="method_setPhpName">
-        <div class="location">at line 1029</div>
+        <div class="location">at line 1046</div>
         <code>            public            
     <strong>setPhpName</strong>(string $phpName)</code>
     </h3>
@@ -2336,7 +2346,7 @@
     </div>
 
                 <h3 id="method_getStudlyPhpName">
-        <div class="location">at line 1051</div>
+        <div class="location">at line 1068</div>
         <code>            public            string
     <strong>getStudlyPhpName</strong>()</code>
     </h3>
@@ -2360,7 +2370,7 @@
     </div>
 
                 <h3 id="method_getCommonName">
-        <div class="location">at line 1061</div>
+        <div class="location">at line 1078</div>
         <code>            public            string
     <strong>getCommonName</strong>()</code>
     </h3>
@@ -2384,7 +2394,7 @@
     </div>
 
                 <h3 id="method_setCommonName">
-        <div class="location">at line 1071</div>
+        <div class="location">at line 1088</div>
         <code>            public            
     <strong>setCommonName</strong>(string $name)</code>
     </h3>
@@ -2409,7 +2419,7 @@
     </div>
 
                 <h3 id="method_setDefaultStringFormat">
-        <div class="location">at line 1084</div>
+        <div class="location">at line 1101</div>
         <code>            public            
     <strong>setDefaultStringFormat</strong>(string $format)</code>
     </h3>
@@ -2443,7 +2453,7 @@
     </div>
 
                 <h3 id="method_getDefaultStringFormat">
-        <div class="location">at line 1102</div>
+        <div class="location">at line 1119</div>
         <code>            public            string
     <strong>getDefaultStringFormat</strong>()</code>
     </h3>
@@ -2467,12 +2477,12 @@
     </div>
 
                 <h3 id="method_getIdMethod">
-        <div class="location">at line 1119</div>
+        <div class="location">at line 1136</div>
         <code>            public            string
     <strong>getIdMethod</strong>()</code>
     </h3>
     <div class="details">
-        <p>Returns the method strateg for generating primary keys.</p>
+        <p>Returns the method strategy for generating primary keys.</p>
         <p>[HL] changing behavior so that Database default method is returned<br />
  if no method has been specified for the table.</p>
         <div class="tags">
@@ -2492,7 +2502,7 @@
     </div>
 
                 <h3 id="method_isAllowPkInsert">
-        <div class="location">at line 1130</div>
+        <div class="location">at line 1147</div>
         <code>            public            boolean
     <strong>isAllowPkInsert</strong>()</code>
     </h3>
@@ -2516,7 +2526,7 @@
     </div>
 
                 <h3 id="method_setIdMethod">
-        <div class="location">at line 1140</div>
+        <div class="location">at line 1157</div>
         <code>            public            
     <strong>setIdMethod</strong>(string $idMethod)</code>
     </h3>
@@ -2541,7 +2551,7 @@
     </div>
 
                 <h3 id="method_isSkipSql">
-        <div class="location">at line 1151</div>
+        <div class="location">at line 1168</div>
         <code>            public            boolean
     <strong>isSkipSql</strong>()</code>
     </h3>
@@ -2565,7 +2575,7 @@
     </div>
 
                 <h3 id="method_setSkipSql">
-        <div class="location">at line 1161</div>
+        <div class="location">at line 1178</div>
         <code>            public            
     <strong>setSkipSql</strong>(boolean $skip)</code>
     </h3>
@@ -2590,7 +2600,7 @@
     </div>
 
                 <h3 id="method_isReadOnly">
-        <div class="location">at line 1172</div>
+        <div class="location">at line 1189</div>
         <code>            public            boolean
     <strong>isReadOnly</strong>()</code>
     </h3>
@@ -2615,7 +2625,7 @@
     </div>
 
                 <h3 id="method_isReloadOnInsert">
-        <div class="location">at line 1181</div>
+        <div class="location">at line 1198</div>
         <code>            public            boolean
     <strong>isReloadOnInsert</strong>()</code>
     </h3>
@@ -2639,7 +2649,7 @@
     </div>
 
                 <h3 id="method_isReloadOnUpdate">
-        <div class="location">at line 1191</div>
+        <div class="location">at line 1208</div>
         <code>            public            boolean
     <strong>isReloadOnUpdate</strong>()</code>
     </h3>
@@ -2663,7 +2673,7 @@
     </div>
 
                 <h3 id="method_getAlias">
-        <div class="location">at line 1201</div>
+        <div class="location">at line 1218</div>
         <code>            public            string
     <strong>getAlias</strong>()</code>
     </h3>
@@ -2687,7 +2697,7 @@
     </div>
 
                 <h3 id="method_isAlias">
-        <div class="location">at line 1212</div>
+        <div class="location">at line 1229</div>
         <code>            public            boolean
     <strong>isAlias</strong>()</code>
     </h3>
@@ -2711,7 +2721,7 @@
     </div>
 
                 <h3 id="method_setAlias">
-        <div class="location">at line 1223</div>
+        <div class="location">at line 1240</div>
         <code>            public            
     <strong>setAlias</strong>(string $alias)</code>
     </h3>
@@ -2736,7 +2746,7 @@
     </div>
 
                 <h3 id="method_getInterface">
-        <div class="location">at line 1233</div>
+        <div class="location">at line 1250</div>
         <code>            public            string
     <strong>getInterface</strong>()</code>
     </h3>
@@ -2760,7 +2770,7 @@
     </div>
 
                 <h3 id="method_setInterface">
-        <div class="location">at line 1243</div>
+        <div class="location">at line 1260</div>
         <code>            public            
     <strong>setInterface</strong>(string $interface)</code>
     </h3>
@@ -2785,7 +2795,7 @@
     </div>
 
                 <h3 id="method_isAbstract">
-        <div class="location">at line 1256</div>
+        <div class="location">at line 1273</div>
         <code>            public            boolean
     <strong>isAbstract</strong>()</code>
     </h3>
@@ -2811,7 +2821,7 @@
     </div>
 
                 <h3 id="method_setAbstract">
-        <div class="location">at line 1269</div>
+        <div class="location">at line 1286</div>
         <code>            public            
     <strong>setAbstract</strong>(boolean $isAbstract)</code>
     </h3>
@@ -2838,8 +2848,8 @@
     </div>
 
                 <h3 id="method_getColumns">
-        <div class="location">at line 1279</div>
-        <code>            public            array
+        <div class="location">at line 1296</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>[]
     <strong>getColumns</strong>()</code>
     </h3>
     <div class="details">
@@ -2851,7 +2861,7 @@
 
                     <table>
         <tr>
-            <td>array</td>
+            <td><a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>[]</td>
             <td></td>
         </tr>
     </table>
@@ -2862,7 +2872,7 @@
     </div>
 
                 <h3 id="method_getNumColumns">
-        <div class="location">at line 1289</div>
+        <div class="location">at line 1306</div>
         <code>            public            integer
     <strong>getNumColumns</strong>()</code>
     </h3>
@@ -2886,7 +2896,7 @@
     </div>
 
                 <h3 id="method_getNumLazyLoadColumns">
-        <div class="location">at line 1299</div>
+        <div class="location">at line 1316</div>
         <code>            public            integer
     <strong>getNumLazyLoadColumns</strong>()</code>
     </h3>
@@ -2910,7 +2920,7 @@
     </div>
 
                 <h3 id="method_hasEnumColumns">
-        <div class="location">at line 1316</div>
+        <div class="location">at line 1333</div>
         <code>            public            boolean
     <strong>hasEnumColumns</strong>()</code>
     </h3>
@@ -2934,7 +2944,7 @@
     </div>
 
                 <h3 id="method_getForeignKeys">
-        <div class="location">at line 1332</div>
+        <div class="location">at line 1349</div>
         <code>            public            array
     <strong>getForeignKeys</strong>()</code>
     </h3>
@@ -2958,7 +2968,7 @@
     </div>
 
                 <h3 id="method_getIdMethodParameters">
-        <div class="location">at line 1341</div>
+        <div class="location">at line 1358</div>
         <code>            public            
     <strong>getIdMethodParameters</strong>()</code>
     </h3>
@@ -2973,7 +2983,7 @@
     </div>
 
                 <h3 id="method_getIndices">
-        <div class="location">at line 1351</div>
+        <div class="location">at line 1368</div>
         <code>            public            array
     <strong>getIndices</strong>()</code>
     </h3>
@@ -2997,7 +3007,7 @@
     </div>
 
                 <h3 id="method_getUnices">
-        <div class="location">at line 1361</div>
+        <div class="location">at line 1378</div>
         <code>            public            array
     <strong>getUnices</strong>()</code>
     </h3>
@@ -3021,7 +3031,7 @@
     </div>
 
                 <h3 id="method_hasColumn">
-        <div class="location">at line 1373</div>
+        <div class="location">at line 1390</div>
         <code>            public            boolean
     <strong>hasColumn</strong>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>|string $column, boolean $caseInsensitive = false)</code>
     </h3>
@@ -3060,7 +3070,7 @@
     </div>
 
                 <h3 id="method_getColumn">
-        <div class="location">at line 1393</div>
+        <div class="location">at line 1410</div>
         <code>            public            <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>
     <strong>getColumn</strong>(string $name, boolean $caseInsensitive = false)</code>
     </h3>
@@ -3099,7 +3109,7 @@
     </div>
 
                 <h3 id="method_getColumnByPhpName">
-        <div class="location">at line 1412</div>
+        <div class="location">at line 1429</div>
         <code>            public            <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>
     <strong>getColumnByPhpName</strong>(string $phpName)</code>
     </h3>
@@ -3133,7 +3143,7 @@
     </div>
 
                 <h3 id="method_getForeignKeysReferencingTable">
-        <div class="location">at line 1428</div>
+        <div class="location">at line 1445</div>
         <code>            public            array
     <strong>getForeignKeysReferencingTable</strong>(string $tableName)</code>
     </h3>
@@ -3167,13 +3177,13 @@
     </div>
 
                 <h3 id="method_getColumnForeignKeys">
-        <div class="location">at line 1450</div>
+        <div class="location">at line 1467</div>
         <code>            public            array
     <strong>getColumnForeignKeys</strong>(string $column)</code>
     </h3>
     <div class="details">
         <p>Returns the foreign keys that include column in it&#039;s list of local columns.</p>
-        <p>Eg. Foreign key (a, b, c) refrences tbl(x, y, z) will be returned of col<br />
+        <p>Eg. Foreign key (a, b, c) references tbl(x, y, z) will be returned of col<br />
  is either a, b or c.</p>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -3202,7 +3212,7 @@
     </div>
 
                 <h3 id="method_setDatabase">
-        <div class="location">at line 1467</div>
+        <div class="location">at line 1484</div>
         <code>            public            
     <strong>setDatabase</strong>(<a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a> $database)</code>
     </h3>
@@ -3227,7 +3237,7 @@
     </div>
 
                 <h3 id="method_getDatabase">
-        <div class="location">at line 1477</div>
+        <div class="location">at line 1494</div>
         <code>            public            <a href="../../../Propel/Generator/Model/Database.html"><abbr title="Propel\Generator\Model\Database">Database</abbr></a>
     <strong>getDatabase</strong>()</code>
     </h3>
@@ -3251,7 +3261,7 @@
     </div>
 
                 <h3 id="method_getPlatform">
-        <div class="location">at line 1487</div>
+        <div class="location">at line 1504</div>
         <code>            public            <abbr title="Propel\Generator\Model\PlatformInterface">PlatformInterface</abbr>
     <strong>getPlatform</strong>()</code>
     </h3>
@@ -3275,7 +3285,7 @@
     </div>
 
                 <h3 id="method_isForReferenceOnly">
-        <div class="location">at line 1499</div>
+        <div class="location">at line 1516</div>
         <code>            public            boolean
     <strong>isForReferenceOnly</strong>()</code>
     </h3>
@@ -3299,7 +3309,7 @@
     </div>
 
                 <h3 id="method_setForReferenceOnly">
-        <div class="location">at line 1509</div>
+        <div class="location">at line 1526</div>
         <code>            public            
     <strong>setForReferenceOnly</strong>(boolean $v)</code>
     </h3>
@@ -3324,7 +3334,7 @@
     </div>
 
                 <h3 id="method_appendXml">
-        <div class="location">at line 1519</div>
+        <div class="location">at line 1536</div>
         <code>            public            
     <strong>appendXml</strong>(<abbr title="Propel\Generator\Model\DOMNode">DOMNode</abbr> $node)</code>
     </h3>
@@ -3349,8 +3359,8 @@
     </div>
 
                 <h3 id="method_getPrimaryKey">
-        <div class="location">at line 1621</div>
-        <code>            public            array
+        <div class="location">at line 1634</div>
+        <code>            public            <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>[]
     <strong>getPrimaryKey</strong>()</code>
     </h3>
     <div class="details">
@@ -3362,7 +3372,7 @@
 
                     <table>
         <tr>
-            <td>array</td>
+            <td><a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>[]</td>
             <td></td>
         </tr>
     </table>
@@ -3373,7 +3383,7 @@
     </div>
 
                 <h3 id="method_hasPrimaryKey">
-        <div class="location">at line 1638</div>
+        <div class="location">at line 1651</div>
         <code>            public            boolean
     <strong>hasPrimaryKey</strong>()</code>
     </h3>
@@ -3397,7 +3407,7 @@
     </div>
 
                 <h3 id="method_hasCompositePrimaryKey">
-        <div class="location">at line 1648</div>
+        <div class="location">at line 1661</div>
         <code>            public            boolean
     <strong>hasCompositePrimaryKey</strong>()</code>
     </h3>
@@ -3421,7 +3431,7 @@
     </div>
 
                 <h3 id="method_getFirstPrimaryKeyColumn">
-        <div class="location">at line 1660</div>
+        <div class="location">at line 1673</div>
         <code>            public            <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>
     <strong>getFirstPrimaryKeyColumn</strong>()</code>
     </h3>
@@ -3445,7 +3455,7 @@
     </div>
 
                 <h3 id="method_hasAutoIncrementPrimaryKey">
-        <div class="location">at line 1674</div>
+        <div class="location">at line 1687</div>
         <code>            public            boolean
     <strong>hasAutoIncrementPrimaryKey</strong>()</code>
     </h3>
@@ -3469,7 +3479,7 @@
     </div>
 
                 <h3 id="method_getAutoIncrementPrimaryKey">
-        <div class="location">at line 1684</div>
+        <div class="location">at line 1697</div>
         <code>            public            <a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>
     <strong>getAutoIncrementPrimaryKey</strong>()</code>
     </h3>
@@ -3493,7 +3503,7 @@
     </div>
 
                 <h3 id="method_getIsCrossRef">
-        <div class="location">at line 1701</div>
+        <div class="location">at line 1714</div>
         <code>            public            boolean
     <strong>getIsCrossRef</strong>()</code>
     </h3>
@@ -3517,7 +3527,7 @@
     </div>
 
                 <h3 id="method_isCrossRef">
-        <div class="location">at line 1711</div>
+        <div class="location">at line 1724</div>
         <code>            public            boolean
     <strong>isCrossRef</strong>()</code>
     </h3>
@@ -3541,7 +3551,7 @@
     </div>
 
                 <h3 id="method_setIsCrossRef">
-        <div class="location">at line 1721</div>
+        <div class="location">at line 1734</div>
         <code>            public            
     <strong>setIsCrossRef</strong>(boolean $isCrossRef)</code>
     </h3>
@@ -3566,7 +3576,7 @@
     </div>
 
                 <h3 id="method_hasForeignKeys">
-        <div class="location">at line 1731</div>
+        <div class="location">at line 1744</div>
         <code>            public            boolean
     <strong>hasForeignKeys</strong>()</code>
     </h3>
@@ -3590,7 +3600,7 @@
     </div>
 
                 <h3 id="method_hasCrossForeignKeys">
-        <div class="location">at line 1741</div>
+        <div class="location">at line 1754</div>
         <code>            public            boolean
     <strong>hasCrossForeignKeys</strong>()</code>
     </h3>

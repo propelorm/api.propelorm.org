@@ -58,7 +58,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(<a href="../../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $outer, $column, $value, $comparison = Criteria::IN)
+                    <a href="#method___construct">__construct</a>(<a href="../../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $outer, string $column, string $value, string $comparison = Criteria::IN)
                     <p>Create a new instance.</p>
                 </td>
                 <td></td>
@@ -185,6 +185,16 @@
             </tr>
                     <tr>
                 <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___toString">__toString</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Propel/Runtime/ActiveQuery/Criterion/AbstractCriterion.html#method___toString"><abbr title="Propel\Runtime\ActiveQuery\Criterion\AbstractCriterion">AbstractCriterion</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
                     boolean
                 </td>
                 <td class="last">
@@ -231,7 +241,7 @@
                         <h3 id="method___construct">
         <div class="location">at line 29</div>
         <code>            public            
-    <strong>__construct</strong>(<a href="../../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $outer, $column, $value, $comparison = Criteria::IN)</code>
+    <strong>__construct</strong>(<a href="../../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a> $outer, string $column, string $value, string $comparison = Criteria::IN)</code>
     </h3>
     <div class="details">
         <p>Create a new instance.</p>
@@ -243,22 +253,22 @@
                     <tr>
                 <td><a href="../../../../Propel/Runtime/ActiveQuery/Criteria.html"><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></a></td>
                 <td>$outer</td>
-                <td></td>
+                <td>The outer class (this is an &quot;inner&quot; class).</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$column</td>
-                <td></td>
+                <td>ignored</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$value</td>
-                <td></td>
+                <td>The condition to be added to the query string</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$comparison</td>
-                <td></td>
+                <td>One of Criteria::IN and Criteria::NOT_IN</td>
             </tr>
             </table>
 
@@ -580,7 +590,7 @@
                     <tr>
                 <td>string</td>
                 <td>$sb</td>
-                <td>&amp;$sb The string that will receive the Prepared Statement</td>
+                <td>&amp;$sb    The string that will receive the Prepared Statement</td>
             </tr>
                     <tr>
                 <td>array</td>
@@ -613,8 +623,23 @@
                     </div>
     </div>
 
+                <h3 id="method___toString">
+        <div class="location">in <a href="../../../../Propel/Runtime/ActiveQuery/Criterion/AbstractCriterion.html#method___toString"><abbr title="Propel\Runtime\ActiveQuery\Criterion\AbstractCriterion">AbstractCriterion</abbr></a> at line 278</div>
+        <code>            public            
+    <strong>__toString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_equals">
-        <div class="location">in <a href="../../../../Propel/Runtime/ActiveQuery/Criterion/AbstractCriterion.html#method_equals"><abbr title="Propel\Runtime\ActiveQuery\Criterion\AbstractCriterion">AbstractCriterion</abbr></a> at line 291</div>
+        <div class="location">in <a href="../../../../Propel/Runtime/ActiveQuery/Criterion/AbstractCriterion.html#method_equals"><abbr title="Propel\Runtime\ActiveQuery\Criterion\AbstractCriterion">AbstractCriterion</abbr></a> at line 300</div>
         <code>            public            boolean
     <strong>equals</strong>($obj)</code>
     </h3>
@@ -648,7 +673,7 @@
     </div>
 
                 <h3 id="method_getAllTables">
-        <div class="location">in <a href="../../../../Propel/Runtime/ActiveQuery/Criterion/AbstractCriterion.html#method_getAllTables"><abbr title="Propel\Runtime\ActiveQuery\Criterion\AbstractCriterion">AbstractCriterion</abbr></a> at line 332</div>
+        <div class="location">in <a href="../../../../Propel/Runtime/ActiveQuery/Criterion/AbstractCriterion.html#method_getAllTables"><abbr title="Propel\Runtime\ActiveQuery\Criterion\AbstractCriterion">AbstractCriterion</abbr></a> at line 341</div>
         <code>            public            array
     <strong>getAllTables</strong>()</code>
     </h3>
@@ -672,7 +697,7 @@
     </div>
 
                 <h3 id="method_getAttachedCriterion">
-        <div class="location">in <a href="../../../../Propel/Runtime/ActiveQuery/Criterion/AbstractCriterion.html#method_getAttachedCriterion"><abbr title="Propel\Runtime\ActiveQuery\Criterion\AbstractCriterion">AbstractCriterion</abbr></a> at line 358</div>
+        <div class="location">in <a href="../../../../Propel/Runtime/ActiveQuery/Criterion/AbstractCriterion.html#method_getAttachedCriterion"><abbr title="Propel\Runtime\ActiveQuery\Criterion\AbstractCriterion">AbstractCriterion</abbr></a> at line 367</div>
         <code>            public            <abbr title="Propel\Runtime\ActiveQuery\Criterion\Criterion">Criterion</abbr>[]
     <strong>getAttachedCriterion</strong>()</code>
     </h3>
@@ -696,7 +721,7 @@
     </div>
 
                 <h3 id="method___clone">
-        <div class="location">in <a href="../../../../Propel/Runtime/ActiveQuery/Criterion/AbstractCriterion.html#method___clone"><abbr title="Propel\Runtime\ActiveQuery\Criterion\AbstractCriterion">AbstractCriterion</abbr></a> at line 371</div>
+        <div class="location">in <a href="../../../../Propel/Runtime/ActiveQuery/Criterion/AbstractCriterion.html#method___clone"><abbr title="Propel\Runtime\ActiveQuery\Criterion\AbstractCriterion">AbstractCriterion</abbr></a> at line 380</div>
         <code>            public            
     <strong>__clone</strong>()</code>
     </h3>

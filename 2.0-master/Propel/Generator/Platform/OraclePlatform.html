@@ -49,6 +49,16 @@
                     
                 </td>
                 <td class="last">
+                    <a href="#method_getObjectBuilderClass">getObjectBuilderClass</a>($type)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getObjectBuilderClass"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
                     <a href="#method_setConnection">setConnection</a>(<a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null)
                     <p>Sets the database connection to use for this Platform class.</p>
                 </td>
@@ -63,6 +73,16 @@
                     <p>Returns the database connection to use for this Platform class.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getConnection"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string|null
+                </td>
+                <td class="last">
+                    <a href="#method_getBuilderClass">getBuilderClass</a>(<abbr title="Propel\Generator\Platform\$type">$type</abbr> $type)
+                    <p>Returns a platform specific builder class if exists.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getBuilderClass"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -229,7 +249,7 @@
                     string
                 </td>
                 <td class="last">
-                    <a href="#method_getColumnListDDL">getColumnListDDL</a>($columns, $delimiter = &#039;,&#039;)
+                    <a href="#method_getColumnListDDL">getColumnListDDL</a>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>[]|string[] $columns, string $delimiter = &#039;,&#039;)
                     <p>Creates a delimiter-delimited string list of column names, quoted using quoteIdentifier().</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getColumnListDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
@@ -630,7 +650,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_supportsVarcharWithoutSize">supportsVarcharWithoutSize</a>()
-                    <p>Wether RDBMS supports VARCHAR without explicit size</p>
+                    <p>Whether RDBMS supports VARCHAR without explicit size</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_supportsVarcharWithoutSize"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a></small></td>
             </tr>
@@ -754,8 +774,33 @@
                     </div>
     </div>
 
+                <h3 id="method_getObjectBuilderClass">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getObjectBuilderClass"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 68</div>
+        <code>            public            
+    <strong>getObjectBuilderClass</strong>($type)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_setConnection">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_setConnection"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 73</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_setConnection"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 78</div>
         <code>            public            
     <strong>setConnection</strong>(<a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a> $con = null)</code>
     </h3>
@@ -780,7 +825,7 @@
     </div>
 
                 <h3 id="method_getConnection">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getConnection"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 83</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getConnection"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 88</div>
         <code>            public            <a href="../../../Propel/Runtime/Connection/ConnectionInterface.html"><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></a>
     <strong>getConnection</strong>()</code>
     </h3>
@@ -803,8 +848,42 @@
                     </div>
     </div>
 
+                <h3 id="method_getBuilderClass">
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getBuilderClass"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 100</div>
+        <code>            public            string|null
+    <strong>getBuilderClass</strong>(<abbr title="Propel\Generator\Platform\$type">$type</abbr> $type)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a platform specific builder class if exists.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Generator\Platform\$type">$type</abbr></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>Returns null if no platform specified builder class exists.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_setGeneratorConfig">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_setGeneratorConfig"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 93</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_setGeneratorConfig"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 116</div>
         <code>            public            
     <strong>setGeneratorConfig</strong>(<a href="../../../Propel/Generator/Config/GeneratorConfigInterface.html"><abbr title="Propel\Generator\Config\GeneratorConfigInterface">GeneratorConfigInterface</abbr></a> $config)</code>
     </h3>
@@ -829,7 +908,7 @@
     </div>
 
                 <h3 id="method_getDatabaseType">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getDatabaseType"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 144</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getDatabaseType"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 167</div>
         <code>            public            string
     <strong>getDatabaseType</strong>()</code>
     </h3>
@@ -901,7 +980,7 @@
     </div>
 
                 <h3 id="method_isNativeIdMethodAutoIncrement">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_isNativeIdMethodAutoIncrement"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 173</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_isNativeIdMethodAutoIncrement"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 196</div>
         <code>            public            
     <strong>isNativeIdMethodAutoIncrement</strong>()</code>
     </h3>
@@ -916,7 +995,7 @@
     </div>
 
                 <h3 id="method_getDomainForType">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getDomainForType"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 184</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getDomainForType"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 207</div>
         <code>            public            <a href="../../../Propel/Generator/Model/Domain.html"><abbr title="Propel\Generator\Model\Domain">Domain</abbr></a>
     <strong>getDomainForType</strong>(string $mappingType)</code>
     </h3>
@@ -950,7 +1029,7 @@
     </div>
 
                 <h3 id="method_getNullString">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getNullString"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 198</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getNullString"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 221</div>
         <code>            public            <abbr title="Propel\Generator\Platform\string.">string.</abbr>
     <strong>getNullString</strong>($notNull)</code>
     </h3>
@@ -1008,7 +1087,7 @@
     </div>
 
                 <h3 id="method_getSequenceName">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getSequenceName"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 223</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getSequenceName"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 246</div>
         <code>            public            string
     <strong>getSequenceName</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
     </h3>
@@ -1101,7 +1180,7 @@
     </div>
 
                 <h3 id="method_getEndDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getEndDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 282</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getEndDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 305</div>
         <code>            public            string
     <strong>getEndDDL</strong>()</code>
     </h3>
@@ -1193,7 +1272,7 @@
     </div>
 
                 <h3 id="method_getColumnDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getColumnDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 342</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getColumnDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 365</div>
         <code>            public            string
     <strong>getColumnDDL</strong>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $col)</code>
     </h3>
@@ -1227,7 +1306,7 @@
     </div>
 
                 <h3 id="method_getColumnDefaultValueDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getColumnDefaultValueDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 370</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getColumnDefaultValueDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 393</div>
         <code>            public            string
     <strong>getColumnDefaultValueDDL</strong>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $col)</code>
     </h3>
@@ -1261,9 +1340,9 @@
     </div>
 
                 <h3 id="method_getColumnListDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getColumnListDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 413</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getColumnListDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 436</div>
         <code>            public            string
-    <strong>getColumnListDDL</strong>($columns, $delimiter = &#039;,&#039;)</code>
+    <strong>getColumnListDDL</strong>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>[]|string[] $columns, string $delimiter = &#039;,&#039;)</code>
     </h3>
     <div class="details">
         <p>Creates a delimiter-delimited string list of column names, quoted using quoteIdentifier().</p>
@@ -1273,14 +1352,14 @@
 
                     <table>
                     <tr>
-                <td></td>
+                <td><a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a>[]|string[]</td>
                 <td>$columns</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$delimiter</td>
-                <td></td>
+                <td>The delimiter to use in separating the column names.</td>
             </tr>
             </table>
 
@@ -1368,7 +1447,7 @@
     </div>
 
                 <h3 id="method_getDropPrimaryKeyDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getDropPrimaryKeyDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 456</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getDropPrimaryKeyDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 479</div>
         <code>            public            string
     <strong>getDropPrimaryKeyDDL</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
     </h3>
@@ -1436,7 +1515,7 @@
     </div>
 
                 <h3 id="method_getAddIndicesDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getAddIndicesDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 492</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getAddIndicesDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 515</div>
         <code>            public            string
     <strong>getAddIndicesDDL</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
     </h3>
@@ -1504,7 +1583,7 @@
     </div>
 
                 <h3 id="method_getDropIndexDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getDropIndexDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 528</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getDropIndexDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 551</div>
         <code>            public            string
     <strong>getDropIndexDDL</strong>(<a href="../../../Propel/Generator/Model/Index.html"><abbr title="Propel\Generator\Model\Index">Index</abbr></a> $index)</code>
     </h3>
@@ -1538,7 +1617,7 @@
     </div>
 
                 <h3 id="method_getIndexDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getIndexDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 545</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getIndexDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 568</div>
         <code>            public            string
     <strong>getIndexDDL</strong>(<a href="../../../Propel/Generator/Model/Index.html"><abbr title="Propel\Generator\Model\Index">Index</abbr></a> $index)</code>
     </h3>
@@ -1606,7 +1685,7 @@
     </div>
 
                 <h3 id="method_getAddForeignKeysDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getAddForeignKeysDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 571</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getAddForeignKeysDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 594</div>
         <code>            public            string
     <strong>getAddForeignKeysDDL</strong>(<a href="../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
     </h3>
@@ -1640,7 +1719,7 @@
     </div>
 
                 <h3 id="method_getAddForeignKeyDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getAddForeignKeyDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 587</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getAddForeignKeyDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 610</div>
         <code>            public            string
     <strong>getAddForeignKeyDDL</strong>(<a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk)</code>
     </h3>
@@ -1674,7 +1753,7 @@
     </div>
 
                 <h3 id="method_getDropForeignKeyDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getDropForeignKeyDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 608</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getDropForeignKeyDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 631</div>
         <code>            public            string
     <strong>getDropForeignKeyDDL</strong>(<a href="../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk)</code>
     </h3>
@@ -1742,7 +1821,7 @@
     </div>
 
                 <h3 id="method_getCommentLineDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getCommentLineDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 653</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getCommentLineDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 676</div>
         <code>            public            
     <strong>getCommentLineDDL</strong>($comment)</code>
     </h3>
@@ -1767,7 +1846,7 @@
     </div>
 
                 <h3 id="method_getCommentBlockDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getCommentBlockDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 661</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getCommentBlockDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 684</div>
         <code>            public            
     <strong>getCommentBlockDDL</strong>($comment)</code>
     </h3>
@@ -1792,7 +1871,7 @@
     </div>
 
                 <h3 id="method_getModifyDatabaseDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyDatabaseDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 678</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyDatabaseDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 701</div>
         <code>            public            string
     <strong>getModifyDatabaseDDL</strong>(<a href="../../../Propel/Generator/Model/Diff/DatabaseDiff.html"><abbr title="Propel\Generator\Model\Diff\DatabaseDiff">DatabaseDiff</abbr></a> $databaseDiff)</code>
     </h3>
@@ -1826,7 +1905,7 @@
     </div>
 
                 <h3 id="method_getRenameTableDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getRenameTableDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 712</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getRenameTableDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 735</div>
         <code>            public            string
     <strong>getRenameTableDDL</strong>($fromTableName, $toTableName)</code>
     </h3>
@@ -1865,7 +1944,7 @@
     </div>
 
                 <h3 id="method_getModifyTableDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyTableDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 730</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyTableDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 753</div>
         <code>            public            string
     <strong>getModifyTableDDL</strong>(<a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a> $tableDiff)</code>
     </h3>
@@ -1899,7 +1978,7 @@
     </div>
 
                 <h3 id="method_getModifyTableColumnsDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyTableColumnsDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 795</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyTableColumnsDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 818</div>
         <code>            public            string
     <strong>getModifyTableColumnsDDL</strong>(<a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a> $tableDiff)</code>
     </h3>
@@ -1933,7 +2012,7 @@
     </div>
 
                 <h3 id="method_getModifyTablePrimaryKeyDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyTablePrimaryKeyDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 824</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyTablePrimaryKeyDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 847</div>
         <code>            public            string
     <strong>getModifyTablePrimaryKeyDDL</strong>(<a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a> $tableDiff)</code>
     </h3>
@@ -1967,7 +2046,7 @@
     </div>
 
                 <h3 id="method_getModifyTableIndicesDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyTableIndicesDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 842</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyTableIndicesDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 865</div>
         <code>            public            string
     <strong>getModifyTableIndicesDDL</strong>(<a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a> $tableDiff)</code>
     </h3>
@@ -2001,7 +2080,7 @@
     </div>
 
                 <h3 id="method_getModifyTableForeignKeysDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyTableForeignKeysDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 869</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyTableForeignKeysDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 892</div>
         <code>            public            string
     <strong>getModifyTableForeignKeysDDL</strong>(<a href="../../../Propel/Generator/Model/Diff/TableDiff.html"><abbr title="Propel\Generator\Model\Diff\TableDiff">TableDiff</abbr></a> $tableDiff)</code>
     </h3>
@@ -2035,7 +2114,7 @@
     </div>
 
                 <h3 id="method_getRemoveColumnDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getRemoveColumnDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 895</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getRemoveColumnDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 918</div>
         <code>            public            string
     <strong>getRemoveColumnDDL</strong>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)</code>
     </h3>
@@ -2069,7 +2148,7 @@
     </div>
 
                 <h3 id="method_getRenameColumnDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getRenameColumnDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 912</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getRenameColumnDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 935</div>
         <code>            public            string
     <strong>getRenameColumnDDL</strong>($fromColumn, $toColumn)</code>
     </h3>
@@ -2108,7 +2187,7 @@
     </div>
 
                 <h3 id="method_getModifyColumnDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyColumnDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 930</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyColumnDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 953</div>
         <code>            public            string
     <strong>getModifyColumnDDL</strong>(<a href="../../../Propel/Generator/Model/Diff/ColumnDiff.html"><abbr title="Propel\Generator\Model\Diff\ColumnDiff">ColumnDiff</abbr></a> $columnDiff)</code>
     </h3>
@@ -2142,7 +2221,7 @@
     </div>
 
                 <h3 id="method_getModifyColumnsDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyColumnsDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 948</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getModifyColumnsDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 971</div>
         <code>            public            string
     <strong>getModifyColumnsDDL</strong>($columnDiffs)</code>
     </h3>
@@ -2176,7 +2255,7 @@
     </div>
 
                 <h3 id="method_getAddColumnDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getAddColumnDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 981</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getAddColumnDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1004</div>
         <code>            public            string
     <strong>getAddColumnDDL</strong>(<a href="../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $column)</code>
     </h3>
@@ -2210,7 +2289,7 @@
     </div>
 
                 <h3 id="method_getAddColumnsDDL">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getAddColumnsDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 998</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getAddColumnsDDL"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1021</div>
         <code>            public            string
     <strong>getAddColumnsDDL</strong>($columns)</code>
     </h3>
@@ -2244,7 +2323,7 @@
     </div>
 
                 <h3 id="method_hasSize">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_hasSize"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1031</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_hasSize"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1054</div>
         <code>            public            boolean
     <strong>hasSize</strong>(string $sqlType)</code>
     </h3>
@@ -2278,7 +2357,7 @@
     </div>
 
                 <h3 id="method_hasScale">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_hasScale"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1042</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_hasScale"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1065</div>
         <code>            public            boolean
     <strong>hasScale</strong>(string $sqlType)</code>
     </h3>
@@ -2312,7 +2391,7 @@
     </div>
 
                 <h3 id="method_quote">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_quote"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1052</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_quote"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1075</div>
         <code>            public            string
     <strong>quote</strong>(string $text)</code>
     </h3>
@@ -2380,7 +2459,7 @@
     </div>
 
                 <h3 id="method_setIdentifierQuoting">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_setIdentifierQuoting"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1085</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_setIdentifierQuoting"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1108</div>
         <code>            public            
     <strong>setIdentifierQuoting</strong>($enabled = true)</code>
     </h3>
@@ -2405,7 +2484,7 @@
     </div>
 
                 <h3 id="method_getIdentifierQuoting">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getIdentifierQuoting"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1090</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getIdentifierQuoting"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1113</div>
         <code>            public            
     <strong>getIdentifierQuoting</strong>()</code>
     </h3>
@@ -2444,7 +2523,7 @@
     </div>
 
                 <h3 id="method_supportsInsertNullPk">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_supportsInsertNullPk"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1108</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_supportsInsertNullPk"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1131</div>
         <code>            public            boolean
     <strong>supportsInsertNullPk</strong>()</code>
     </h3>
@@ -2525,7 +2604,7 @@
     </div>
 
                 <h3 id="method_supportsMigrations">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_supportsMigrations"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1134</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_supportsMigrations"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1157</div>
         <code>            public            boolean
     <strong>supportsMigrations</strong>()</code>
     </h3>
@@ -2558,12 +2637,12 @@
     </div>
 
                 <h3 id="method_supportsVarcharWithoutSize">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_supportsVarcharWithoutSize"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1140</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_supportsVarcharWithoutSize"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1163</div>
         <code>            public            boolean
     <strong>supportsVarcharWithoutSize</strong>()</code>
     </h3>
     <div class="details">
-        <p>Wether RDBMS supports VARCHAR without explicit size</p>
+        <p>Whether RDBMS supports VARCHAR without explicit size</p>
         <p></p>
         <div class="tags">
             
@@ -2582,7 +2661,7 @@
     </div>
 
                 <h3 id="method_getBooleanString">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getBooleanString"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1156</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getBooleanString"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1179</div>
         <code>            public            mixed
     <strong>getBooleanString</strong>($b)</code>
     </h3>
@@ -2620,7 +2699,7 @@
     </div>
 
                 <h3 id="method_getPhpArrayString">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getPhpArrayString"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1174</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getPhpArrayString"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1197</div>
         <code>            public            
     <strong>getPhpArrayString</strong>($stringValue)</code>
     </h3>
@@ -2669,7 +2748,7 @@
     </div>
 
                 <h3 id="method_getTimeFormatter">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getTimeFormatter"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1207</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getTimeFormatter"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1230</div>
         <code>            public            string
     <strong>getTimeFormatter</strong>()</code>
     </h3>
@@ -2693,7 +2772,7 @@
     </div>
 
                 <h3 id="method_getDateFormatter">
-        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getDateFormatter"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1216</div>
+        <div class="location">in <a href="../../../Propel/Generator/Platform/DefaultPlatform.html#method_getDateFormatter"><abbr title="Propel\Generator\Platform\DefaultPlatform">DefaultPlatform</abbr></a> at line 1239</div>
         <code>            public            string
     <strong>getDateFormatter</strong>()</code>
     </h3>

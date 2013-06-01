@@ -39,17 +39,37 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(<a href="../../../Propel/Runtime/ActiveQuery/ModelCriteria.html"><abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr></a> $criteria = null)
+                    <a href="#method___construct">__construct</a>(<a href="../../../Propel/Runtime/ActiveQuery/BaseModelCriteria.html"><abbr title="Propel\Runtime\ActiveQuery\BaseModelCriteria">BaseModelCriteria</abbr></a> $criteria = null, <a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a> $dataFetcher = null)
                     <p></p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method___construct"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDataFetcher">setDataFetcher</a>(<a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a> $dataFetcher)
+                    <p>Sets a DataFetcherInterface object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_setDataFetcher"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getDataFetcher">getDataFetcher</a>()
+                    <p>Returns the current DataFetcherInterface object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_getDataFetcher"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
                     <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a>
                 </td>
                 <td class="last">
-                    <a href="#method_init">init</a>(<a href="../../../Propel/Runtime/ActiveQuery/ModelCriteria.html"><abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr></a> $criteria)
+                    <a href="#method_init">init</a>(<a href="../../../Propel/Runtime/ActiveQuery/BaseModelCriteria.html"><abbr title="Propel\Runtime\ActiveQuery\BaseModelCriteria">BaseModelCriteria</abbr></a> $criteria, <a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a> $dataFetcher = null)
                     <p>Define the hydration schema based on a query object.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_init"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a></small></td>
@@ -93,26 +113,6 @@
                     <p></p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_getClass"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method_setPeer">setPeer</a>($peer)
-                    <p></p>
-                </td>
-                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_setPeer"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method_getPeer">getPeer</a>()
-                    <p></p>
-                </td>
-                <td><small>from&nbsp;<a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_getPeer"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -199,7 +199,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_format">format</a>(<a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a> $stmt)
+                    <a href="#method_format">format</a>(<a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a> $dataFetcher = null)
                     <p></p>
                 </td>
                 <td></td>
@@ -209,7 +209,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_formatOne">formatOne</a>(<a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a> $stmt)
+                    <a href="#method_formatOne">formatOne</a>(<a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a> $dataFetcher = null)
                     <p></p>
                 </td>
                 <td></td>
@@ -270,9 +270,9 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method___construct"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 43</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method___construct"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 46</div>
         <code>            public            
-    <strong>__construct</strong>(<a href="../../../Propel/Runtime/ActiveQuery/ModelCriteria.html"><abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr></a> $criteria = null)</code>
+    <strong>__construct</strong>(<a href="../../../Propel/Runtime/ActiveQuery/BaseModelCriteria.html"><abbr title="Propel\Runtime\ActiveQuery\BaseModelCriteria">BaseModelCriteria</abbr></a> $criteria = null, <a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a> $dataFetcher = null)</code>
     </h3>
     <div class="details">
         <p></p>
@@ -282,8 +282,13 @@
 
                     <table>
                     <tr>
-                <td><a href="../../../Propel/Runtime/ActiveQuery/ModelCriteria.html"><abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr></a></td>
+                <td><a href="../../../Propel/Runtime/ActiveQuery/BaseModelCriteria.html"><abbr title="Propel\Runtime\ActiveQuery\BaseModelCriteria">BaseModelCriteria</abbr></a></td>
                 <td>$criteria</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a></td>
+                <td>$dataFetcher</td>
                 <td></td>
             </tr>
             </table>
@@ -294,10 +299,59 @@
                     </div>
     </div>
 
+                <h3 id="method_setDataFetcher">
+        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_setDataFetcher"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 63</div>
+        <code>            public            
+    <strong>setDataFetcher</strong>(<a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a> $dataFetcher)</code>
+    </h3>
+    <div class="details">
+        <p>Sets a DataFetcherInterface object.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a></td>
+                <td>$dataFetcher</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDataFetcher">
+        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_getDataFetcher"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 73</div>
+        <code>            public            <a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a>
+    <strong>getDataFetcher</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the current DataFetcherInterface object.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_init">
-        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_init"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 63</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_init"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 87</div>
         <code>            public            <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a>
-    <strong>init</strong>(<a href="../../../Propel/Runtime/ActiveQuery/ModelCriteria.html"><abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr></a> $criteria)</code>
+    <strong>init</strong>(<a href="../../../Propel/Runtime/ActiveQuery/BaseModelCriteria.html"><abbr title="Propel\Runtime\ActiveQuery\BaseModelCriteria">BaseModelCriteria</abbr></a> $criteria, <a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a> $dataFetcher = null)</code>
     </h3>
     <div class="details">
         <p>Define the hydration schema based on a query object.</p>
@@ -307,8 +361,13 @@
 
                     <table>
                     <tr>
-                <td><a href="../../../Propel/Runtime/ActiveQuery/ModelCriteria.html"><abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr></a></td>
+                <td><a href="../../../Propel/Runtime/ActiveQuery/BaseModelCriteria.html"><abbr title="Propel\Runtime\ActiveQuery\BaseModelCriteria">BaseModelCriteria</abbr></a></td>
                 <td>$criteria</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a></td>
+                <td>$dataFetcher</td>
                 <td></td>
             </tr>
             </table>
@@ -329,7 +388,7 @@
     </div>
 
                 <h3 id="method_setDbName">
-        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_setDbName"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 76</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_setDbName"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 103</div>
         <code>            public            
     <strong>setDbName</strong>($dbName)</code>
     </h3>
@@ -354,7 +413,7 @@
     </div>
 
                 <h3 id="method_getDbName">
-        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_getDbName"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 81</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_getDbName"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 108</div>
         <code>            public            
     <strong>getDbName</strong>()</code>
     </h3>
@@ -369,7 +428,7 @@
     </div>
 
                 <h3 id="method_setClass">
-        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_setClass"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 86</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_setClass"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 113</div>
         <code>            public            
     <strong>setClass</strong>($class)</code>
     </h3>
@@ -394,7 +453,7 @@
     </div>
 
                 <h3 id="method_getClass">
-        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_getClass"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 93</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_getClass"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 119</div>
         <code>            public            
     <strong>getClass</strong>()</code>
     </h3>
@@ -408,48 +467,8 @@
                     </div>
     </div>
 
-                <h3 id="method_setPeer">
-        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_setPeer"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 98</div>
-        <code>            public            
-    <strong>setPeer</strong>($peer)</code>
-    </h3>
-    <div class="details">
-        <p></p>
-        <p></p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td></td>
-                <td>$peer</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_getPeer">
-        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_getPeer"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 103</div>
-        <code>            public            
-    <strong>getPeer</strong>()</code>
-    </h3>
-    <div class="details">
-        <p></p>
-        <p></p>
-        <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
                 <h3 id="method_setWith">
-        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_setWith"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 108</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_setWith"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 124</div>
         <code>            public            
     <strong>setWith</strong>($withs = array())</code>
     </h3>
@@ -474,7 +493,7 @@
     </div>
 
                 <h3 id="method_getWith">
-        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_getWith"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 113</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_getWith"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 129</div>
         <code>            public            
     <strong>getWith</strong>()</code>
     </h3>
@@ -489,7 +508,7 @@
     </div>
 
                 <h3 id="method_setAsColumns">
-        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_setAsColumns"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 118</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_setAsColumns"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 134</div>
         <code>            public            
     <strong>setAsColumns</strong>($asColumns = array())</code>
     </h3>
@@ -514,7 +533,7 @@
     </div>
 
                 <h3 id="method_getAsColumns">
-        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_getAsColumns"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 123</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_getAsColumns"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 139</div>
         <code>            public            
     <strong>getAsColumns</strong>()</code>
     </h3>
@@ -529,7 +548,7 @@
     </div>
 
                 <h3 id="method_setHasLimit">
-        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_setHasLimit"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 128</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_setHasLimit"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 144</div>
         <code>            public            
     <strong>setHasLimit</strong>($hasLimit = false)</code>
     </h3>
@@ -554,7 +573,7 @@
     </div>
 
                 <h3 id="method_hasLimit">
-        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_hasLimit"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 133</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_hasLimit"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 149</div>
         <code>            public            
     <strong>hasLimit</strong>()</code>
     </h3>
@@ -569,7 +588,7 @@
     </div>
 
                 <h3 id="method_getCollectionClassName">
-        <div class="location">at line 45</div>
+        <div class="location">at line 51</div>
         <code>            public            
     <strong>getCollectionClassName</strong>()</code>
     </h3>
@@ -584,7 +603,7 @@
     </div>
 
                 <h3 id="method_formatRecord">
-        <div class="location">at line 71</div>
+        <div class="location">at line 83</div>
         <code>            public            array
     <strong>formatRecord</strong>(<abbr title="Propel\Runtime\Formatter\BaseObject">BaseObject</abbr> $record = null)</code>
     </h3>
@@ -620,7 +639,7 @@
                 <h3 id="method_format">
         <div class="location">at line 25</div>
         <code>            public            
-    <strong>format</strong>(<a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a> $stmt)</code>
+    <strong>format</strong>(<a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a> $dataFetcher = null)</code>
     </h3>
     <div class="details">
         <p></p>
@@ -630,8 +649,8 @@
 
                     <table>
                     <tr>
-                <td><a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a></td>
-                <td>$stmt</td>
+                <td><a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a></td>
+                <td>$dataFetcher</td>
                 <td></td>
             </tr>
             </table>
@@ -643,9 +662,9 @@
     </div>
 
                 <h3 id="method_formatOne">
-        <div class="location">at line 50</div>
+        <div class="location">at line 56</div>
         <code>            public            
-    <strong>formatOne</strong>(<a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a> $stmt)</code>
+    <strong>formatOne</strong>(<a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a> $dataFetcher = null)</code>
     </h3>
     <div class="details">
         <p></p>
@@ -655,8 +674,8 @@
 
                     <table>
                     <tr>
-                <td><a href="../../../Propel/Runtime/Connection/StatementInterface.html"><abbr title="Propel\Runtime\Connection\StatementInterface">StatementInterface</abbr></a></td>
-                <td>$stmt</td>
+                <td><a href="../../../Propel/Runtime/DataFetcher/DataFetcherInterface.html"><abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr></a></td>
+                <td>$dataFetcher</td>
                 <td></td>
             </tr>
             </table>
@@ -668,7 +687,7 @@
     </div>
 
                 <h3 id="method_isObjectFormatter">
-        <div class="location">at line 76</div>
+        <div class="location">at line 88</div>
         <code>            public            
     <strong>isObjectFormatter</strong>()</code>
     </h3>
@@ -683,7 +702,7 @@
     </div>
 
                 <h3 id="method_checkInit">
-        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_checkInit"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 179</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_checkInit"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 195</div>
         <code>            public            
     <strong>checkInit</strong>()</code>
     </h3>
@@ -698,7 +717,7 @@
     </div>
 
                 <h3 id="method_getTableMap">
-        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_getTableMap"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 186</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_getTableMap"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 202</div>
         <code>            public            
     <strong>getTableMap</strong>()</code>
     </h3>
@@ -713,7 +732,7 @@
     </div>
 
                 <h3 id="method_getSingleObjectFromRow">
-        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_getSingleObjectFromRow"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 235</div>
+        <div class="location">in <a href="../../../Propel/Runtime/Formatter/AbstractFormatter.html#method_getSingleObjectFromRow"><abbr title="Propel\Runtime\Formatter\AbstractFormatter">AbstractFormatter</abbr></a> at line 251</div>
         <code>            public            <abbr title="Propel\Runtime\Formatter\BaseObject">BaseObject</abbr>
     <strong>getSingleObjectFromRow</strong>(array $row, string $class, int $col)</code>
     </h3>
@@ -727,7 +746,7 @@
                     <tr>
                 <td>array</td>
                 <td>$row</td>
-                <td>associative array indexed by column number, as returned by PDOStatement::fetch(PDO::FETCH_NUM)</td>
+                <td>associative array indexed by column number, as returned by DataFetcher::fetch()</td>
             </tr>
                     <tr>
                 <td>string</td>
@@ -757,7 +776,7 @@
     </div>
 
                 <h3 id="method_getStructuredArrayFromRow">
-        <div class="location">at line 81</div>
+        <div class="location">at line 93</div>
         <code>            public            
     <strong>getStructuredArrayFromRow</strong>($row)</code>
     </h3>

@@ -250,16 +250,6 @@
                     string
                 </td>
                 <td class="last">
-                    <a href="#method_getPeerClassName">getPeerClassName</a>(boolean $fqcn = false)
-                    <p>Shortcut method to return the [stub] peer classname for current table.</p>
-                </td>
-                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getPeerClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    string
-                </td>
-                <td class="last">
                     <a href="#method_getQueryClassName">getQueryClassName</a>(boolean $fqcn = false)
                     <p>Shortcut method to return the [stub] query classname for current table.</p>
                 </td>
@@ -294,16 +284,6 @@
                     <p>Get the column constant name (e.g.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getColumnConstant"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    string
-                </td>
-                <td class="last">
-                    <a href="#method_getBasePeer">getBasePeer</a>(<a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)
-                    <p>Gets the basePeer path if specified for table/db.</p>
-                </td>
-                <td><small>from&nbsp;<a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getBasePeer"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -1010,49 +990,14 @@
                     </div>
     </div>
 
-                <h3 id="method_getPeerClassName">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getPeerClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 476</div>
-        <code>            public            string
-    <strong>getPeerClassName</strong>(boolean $fqcn = false)</code>
-    </h3>
-    <div class="details">
-        <p>Shortcut method to return the [stub] peer classname for current table.</p>
-        <p>This is the classname that is used whenever object or peer classes want<br />
- to invoke methods of the peer classes.</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td>boolean</td>
-                <td>$fqcn</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td>string</td>
-            <td>(e.g. &#039;MyPeer&#039;)</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
                 <h3 id="method_getQueryClassName">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getQueryClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 488</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getQueryClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 476</div>
         <code>            public            string
     <strong>getQueryClassName</strong>(boolean $fqcn = false)</code>
     </h3>
     <div class="details">
         <p>Shortcut method to return the [stub] query classname for current table.</p>
-        <p>This is the classname that is used whenever object or peer classes want<br />
+        <p>This is the classname that is used whenever object or tablemap classes want<br />
  to invoke methods of the query classes.</p>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -1081,13 +1026,13 @@
     </div>
 
                 <h3 id="method_getObjectClassName">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getObjectClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 500</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getObjectClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 488</div>
         <code>            public            string
     <strong>getObjectClassName</strong>(boolean $fqcn = false)</code>
     </h3>
     <div class="details">
         <p>Returns the object classname for current table.</p>
-        <p>This is the classname that is used whenever object or peer classes want<br />
+        <p>This is the classname that is used whenever object or tablemap classes want<br />
  to invoke methods of the object classes.</p>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -1116,13 +1061,13 @@
     </div>
 
                 <h3 id="method_getTableMapClassName">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getTableMapClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 512</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getTableMapClassName"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 500</div>
         <code>            public            string
     <strong>getTableMapClassName</strong>(boolean $fqcn = false)</code>
     </h3>
     <div class="details">
         <p>Returns the tableMap classname for current table.</p>
-        <p>This is the classname that is used whenever object or peer classes want<br />
+        <p>This is the classname that is used whenever object or tablemap classes want<br />
  to invoke methods of the object classes.</p>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -1151,13 +1096,13 @@
     </div>
 
                 <h3 id="method_getColumnConstant">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getColumnConstant"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 525</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getColumnConstant"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 513</div>
         <code>            public            string
     <strong>getColumnConstant</strong>(<a href="../../../../Propel/Generator/Model/Column.html"><abbr title="Propel\Generator\Model\Column">Column</abbr></a> $col, string $classname = null)</code>
     </h3>
     <div class="details">
         <p>Get the column constant name (e.g.</p>
-        <p>PeerName::COLUMN_NAME).</p>
+        <p>TableMapName::COLUMN_NAME).</p>
         <div class="tags">
                             <h4>Parameters</h4>
 
@@ -1170,7 +1115,7 @@
                     <tr>
                 <td>string</td>
                 <td>$classname</td>
-                <td>The Peer classname to use.</td>
+                <td>The TableMap classname to use.</td>
             </tr>
             </table>
 
@@ -1180,41 +1125,7 @@
                     <table>
         <tr>
             <td>string</td>
-            <td>If $classname is provided, then will return $classname::COLUMN_NAME; if not, then the peername is looked up for current table to yield $currTablePeer::COLUMN_NAME.</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_getBasePeer">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getBasePeer"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 550</div>
-        <code>            public            string
-    <strong>getBasePeer</strong>(<a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a> $table)</code>
-    </h3>
-    <div class="details">
-        <p>Gets the basePeer path if specified for table/db.</p>
-        <p>If not, will return &#039;propel.util.BasePeer&#039;</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td><a href="../../../../Propel/Generator/Model/Table.html"><abbr title="Propel\Generator\Model\Table">Table</abbr></a></td>
-                <td>$table</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td>string</td>
-            <td></td>
+            <td>If $classname is provided, then will return $classname::COLUMN_NAME; if not, then the TableMapName is looked up for current table to yield $currTableTableMap::COLUMN_NAME.</td>
         </tr>
     </table>
 
@@ -1224,7 +1135,7 @@
     </div>
 
                 <h3 id="method_getFKPhpNameAffix">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getFKPhpNameAffix"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 601</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getFKPhpNameAffix"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 574</div>
         <code>            public            string
     <strong>getFKPhpNameAffix</strong>(<a href="../../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk, boolean $plural = false)</code>
     </h3>
@@ -1264,7 +1175,7 @@
     </div>
 
                 <h3 id="method_getRefFKPhpNameAffix">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getRefFKPhpNameAffix"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 663</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getRefFKPhpNameAffix"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 636</div>
         <code>            public            string
     <strong>getRefFKPhpNameAffix</strong>(<a href="../../../../Propel/Generator/Model/ForeignKey.html"><abbr title="Propel\Generator\Model\ForeignKey">ForeignKey</abbr></a> $fk, boolean $plural = false)</code>
     </h3>
@@ -1306,7 +1217,7 @@
     </div>
 
                 <h3 id="method_hasBehaviorModifier">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_hasBehaviorModifier"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 714</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_hasBehaviorModifier"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 687</div>
         <code>            public            boolean
     <strong>hasBehaviorModifier</strong>(string $hookName, string $modifier)</code>
     </h3>
@@ -1345,7 +1256,7 @@
     </div>
 
                 <h3 id="method_applyBehaviorModifierBase">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_applyBehaviorModifierBase"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 732</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_applyBehaviorModifierBase"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 705</div>
         <code>            public            
     <strong>applyBehaviorModifierBase</strong>($hookName, $modifier, $script, $tab = &#039;        &#039;)</code>
     </h3>
@@ -1385,7 +1296,7 @@
     </div>
 
                 <h3 id="method_getBehaviorContentBase">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getBehaviorContentBase"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 760</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getBehaviorContentBase"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 733</div>
         <code>            public            
     <strong>getBehaviorContentBase</strong>(string $contentName, string $modifier)</code>
     </h3>
@@ -1415,7 +1326,7 @@
     </div>
 
                 <h3 id="method_renderTemplate">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_renderTemplate"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 781</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_renderTemplate"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 754</div>
         <code>            public            string
     <strong>renderTemplate</strong>(string $filename, array $vars = array(), string $templateDir = &#039;/templates/&#039;)</code>
     </h3>
@@ -1460,7 +1371,7 @@
     </div>
 
                 <h3 id="method_getTableMapClass">
-        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getTableMapClass"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 801</div>
+        <div class="location">in <a href="../../../../Propel/Generator/Builder/Om/AbstractOMBuilder.html#method_getTableMapClass"><abbr title="Propel\Generator\Builder\Om\AbstractOMBuilder">AbstractOMBuilder</abbr></a> at line 774</div>
         <code>            public            string
     <strong>getTableMapClass</strong>()</code>
     </h3>

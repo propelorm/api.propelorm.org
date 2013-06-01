@@ -152,7 +152,7 @@
             </tr>
                     <tr>
                 <td class="type">
-                    static&nbsp;<abbr title="Propel\Runtime\Propel\Runtime\Adapter\AdapterInterface">AdapterInterface</abbr>
+                    static&nbsp;<abbr title="Propel\Runtime\AdapterInterface">AdapterInterface</abbr>
                 </td>
                 <td class="last">
                     <a href="#method_getAdapter">getAdapter</a>(string $name = null)
@@ -245,7 +245,7 @@
                     static&nbsp;boolean
                 </td>
                 <td class="last">
-                    <a href="#method_log">log</a>(string $message, string $level = self::LOG_DEBUG)
+                    <a href="#method_log">log</a>(string $message, int $level = self::LOG_DEBUG)
                     <p>Logs a message If a logger has been configured, the logger will be used, otherwise the logging message will be discarded without any further action</p>
                 </td>
                 <td></td>
@@ -385,7 +385,7 @@
 
                 <h3 id="method_getAdapter">
         <div class="location">at line 151</div>
-        <code>        static    public            <abbr title="Propel\Runtime\Propel\Runtime\Adapter\AdapterInterface">AdapterInterface</abbr>
+        <code>        static    public            <abbr title="Propel\Runtime\AdapterInterface">AdapterInterface</abbr>
     <strong>getAdapter</strong>(string $name = null)</code>
     </h3>
     <div class="details">
@@ -407,7 +407,7 @@
 
                     <table>
         <tr>
-            <td><abbr title="Propel\Runtime\Propel\Runtime\Adapter\AdapterInterface">AdapterInterface</abbr></td>
+            <td><abbr title="Propel\Runtime\AdapterInterface">AdapterInterface</abbr></td>
             <td></td>
         </tr>
     </table>
@@ -672,7 +672,7 @@
                 <h3 id="method_log">
         <div class="location">at line 272</div>
         <code>        static    public            boolean
-    <strong>log</strong>(string $message, string $level = self::LOG_DEBUG)</code>
+    <strong>log</strong>(string $message, int $level = self::LOG_DEBUG)</code>
     </h3>
     <div class="details">
         <p>Logs a message If a logger has been configured, the logger will be used, otherwise the logging message will be discarded without any further action</p>
@@ -687,7 +687,7 @@
                 <td>The message that will be logged.</td>
             </tr>
                     <tr>
-                <td>string</td>
+                <td>int</td>
                 <td>$level</td>
                 <td>The logging level.</td>
             </tr>

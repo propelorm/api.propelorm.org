@@ -1,0 +1,1 @@
+exclude: [ README.md, v1_config.php, v2_config.php, composer.json, build-api ]

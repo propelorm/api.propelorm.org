@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>GeneratorConfig | </title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>GeneratorConfig</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>GeneratorConfig</strong>        implements
+        <a href="GeneratorConfigInterface.html"><abbr title="GeneratorConfigInterface">GeneratorConfigInterface</abbr></a></p>
+
+            <div class="description">
+            <p>A class that holds build properties and provide a class loading mechanism for the generator.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(mixed $props = null)
+                    <p>Construct a new GeneratorConfig.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getBuildProperties">getBuildProperties</a>()
+                    <p>Gets the build properties.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setBuildProperties">setBuildProperties</a>(mixed $props)
+                    <p>Parses the passed-in properties, renaming and saving eligible properties in this object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getBuildProperty">getBuildProperty</a>(string $name)
+                    <p>Gets a specific propel (renamed) property from the build.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setBuildProperty">setBuildProperty</a>(string $name, mixed $value)
+                    <p>Sets a specific propel (renamed) property from the build.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getClassname">getClassname</a>(string $propname)
+                    <p>Resolves and returns the class name based on the specified property value.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getBuilderClassname">getBuilderClassname</a>(string $type)
+                    <p>Resolves and returns the builder class name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Platform">Platform</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getConfiguredPlatform">getConfiguredPlatform</a>(<a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a> $con = null, $database = null)
+                    <p>Creates and configures a new Platform class.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="SchemaParser.html"><abbr title="SchemaParser">SchemaParser</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getConfiguredSchemaParser">getConfiguredSchemaParser</a>(<a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a> $con = null)
+                    <p>Creates and configures a new SchemaParser class for specified platform.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="DataModelBuilder.html"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getConfiguredBuilder">getConfiguredBuilder</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table, string $type, $cache = true)
+                    <p>Gets a configured data model builder class for specified table and based on type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Pluralizer.html"><abbr title="Pluralizer">Pluralizer</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getConfiguredPluralizer">getConfiguredPluralizer</a>()
+                    <p>Gets a configured Pluralizer class.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getConfiguredBehavior">getConfiguredBehavior</a>(string $name)
+                    <p>Gets a configured behavior class</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setBuildConnections">setBuildConnections</a>($buildConnections)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getBuildConnections">getBuildConnections</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getBuildConnection">getBuildConnection</a>($databaseName = null)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getBuildPDO">getBuildPDO</a>($database)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 39</div>
+        <code>            public            
+    <strong>__construct</strong>(mixed $props = null)</code>
+    </h3>
+    <div class="details">
+        <p>Construct a new GeneratorConfig.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$props</td>
+                <td>Array or Iterator</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBuildProperties">
+        <div class="location">at line 51</div>
+        <code>            public            array
+    <strong>getBuildProperties</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the build properties.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setBuildProperties">
+        <div class="location">at line 64</div>
+        <code>            public            
+    <strong>setBuildProperties</strong>(mixed $props)</code>
+    </h3>
+    <div class="details">
+        <p>Parses the passed-in properties, renaming and saving eligible properties in this object.</p>
+        <p>Renames the propel.xxx properties to just xxx and renames any xxx.yyy properties
+to xxxYyy as PHP doesn't like the xxx.yyy syntax.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$props</td>
+                <td>Array or Iterator</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBuildProperty">
+        <div class="location">at line 89</div>
+        <code>            public            mixed
+    <strong>getBuildProperty</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Gets a specific propel (renamed) property from the build.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setBuildProperty">
+        <div class="location">at line 100</div>
+        <code>            public            
+    <strong>setBuildProperty</strong>(string $name, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Sets a specific propel (renamed) property from the build.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getClassname">
+        <div class="location">at line 113</div>
+        <code>            public            string
+    <strong>getClassname</strong>(string $propname)</code>
+    </h3>
+    <div class="details">
+        <p>Resolves and returns the class name based on the specified property value.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$propname</td>
+                <td>The name of the property that holds the class path (dot-path notation).</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The class name.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="BuildException">BuildException</abbr></td>
+                <td>If the classname cannot be determined or class cannot be loaded.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBuilderClassname">
+        <div class="location">at line 149</div>
+        <code>            public            string
+    <strong>getBuilderClassname</strong>(string $type)</code>
+    </h3>
+    <div class="details">
+        <p>Resolves and returns the builder class name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The class name.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConfiguredPlatform">
+        <div class="location">at line 164</div>
+        <code>            public            <abbr title="Platform">Platform</abbr>
+    <strong>getConfiguredPlatform</strong>(<a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a> $con = null, $database = null)</code>
+    </h3>
+    <div class="details">
+        <p>Creates and configures a new Platform class.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$database</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Platform">Platform</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="BuildException">BuildException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConfiguredSchemaParser">
+        <div class="location">at line 200</div>
+        <code>            public            <a href="SchemaParser.html"><abbr title="SchemaParser">SchemaParser</abbr></a>
+    <strong>getConfiguredSchemaParser</strong>(<a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Creates and configures a new SchemaParser class for specified platform.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="SchemaParser.html"><abbr title="SchemaParser">SchemaParser</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="BuildException">BuildException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConfiguredBuilder">
+        <div class="location">at line 222</div>
+        <code>            public            <a href="DataModelBuilder.html"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a>
+    <strong>getConfiguredBuilder</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table, string $type, $cache = true)</code>
+    </h3>
+    <div class="details">
+        <p>Gets a configured data model builder class for specified table and based on type.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>The type of builder ('ddl', 'sql', etc.)</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cache</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="DataModelBuilder.html"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConfiguredPluralizer">
+        <div class="location">at line 236</div>
+        <code>            public            <a href="Pluralizer.html"><abbr title="Pluralizer">Pluralizer</abbr></a>
+    <strong>getConfiguredPluralizer</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets a configured Pluralizer class.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Pluralizer.html"><abbr title="Pluralizer">Pluralizer</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConfiguredBehavior">
+        <div class="location">at line 251</div>
+        <code>            public            string
+    <strong>getConfiguredBehavior</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Gets a configured behavior class</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>a behavior name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>a behavior class name</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setBuildConnections">
+        <div class="location">at line 264</div>
+        <code>            public            
+    <strong>setBuildConnections</strong>($buildConnections)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$buildConnections</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBuildConnections">
+        <div class="location">at line 269</div>
+        <code>            public            
+    <strong>getBuildConnections</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBuildConnection">
+        <div class="location">at line 305</div>
+        <code>            public            
+    <strong>getBuildConnection</strong>($databaseName = null)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$databaseName</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBuildPDO">
+        <div class="location">at line 324</div>
+        <code>            public            
+    <strong>getBuildPDO</strong>($database)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$database</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

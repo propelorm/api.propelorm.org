@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>PHP5ObjectNoCollectionBuilder | </title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>PHP5ObjectNoCollectionBuilder</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PHP5ObjectNoCollectionBuilder</strong>        extends <a href="PHP5ObjectBuilder.html"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a></p>
+
+            <div class="description">
+            <p>Generates a PHP5 base Object class for user object model (OM).</p>
+            <p>This class produces the base object class (e.g. BaseMyTable) which contains all
+the custom-built accessor and setter methods.</p>
+
+<p>This class overrides PHP5BaseObject to use Peer methods and Criteria
+instead of Query objects for fetching foreign keys. This can be useful if
+some legacy Propel 1.4 code assumes that the getters returns arrays
+instead of collections.</p>
+
+<p>This class is not used by default. You must override
+the propel.builder.object.class setting in build.properties to use it:
+<code>
+propel.builder.object.class = builder.om.PHP5ObjectNoCollectionBuilder
+</code></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPackage">getPackage</a>()
+                    <p>Gets the package for the [base] object classes.</p>
+                </td>
+                <td><small>from&nbsp;<a href="PHP5ObjectBuilder.html#method_getPackage"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getNamespace">getNamespace</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="PHP5ObjectBuilder.html#method_getNamespace"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDefaultKeyType">getDefaultKeyType</a>()
+                    <p>Returns default key type.</p>
+                </td>
+                <td><small>from&nbsp;<a href="PHP5ObjectBuilder.html#method_getDefaultKeyType"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getUnprefixedClassname">getUnprefixedClassname</a>()
+                    <p>Returns the name of the current class being built.</p>
+                </td>
+                <td><small>from&nbsp;<a href="PHP5ObjectBuilder.html#method_getUnprefixedClassname"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addTemporalAccessorComment">addTemporalAccessorComment</a>(string $script, <a href="Column.html"><abbr title="Column">Column</abbr></a> $col)
+                    <p>Adds the comment for a temporal accessor</p>
+                </td>
+                <td><small>from&nbsp;<a href="PHP5ObjectBuilder.html#method_addTemporalAccessorComment"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addTemporalAccessorOpen">addTemporalAccessorOpen</a>(string $script, <a href="Column.html"><abbr title="Column">Column</abbr></a> $col)
+                    <p>Adds the function declaration for a temporal accessor</p>
+                </td>
+                <td><small>from&nbsp;<a href="PHP5ObjectBuilder.html#method_addTemporalAccessorOpen"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addDefaultAccessorComment">addDefaultAccessorComment</a>(string $script, <a href="Column.html"><abbr title="Column">Column</abbr></a> $col)
+                    <p>Add the comment for a default accessor method (a getter)</p>
+                </td>
+                <td><small>from&nbsp;<a href="PHP5ObjectBuilder.html#method_addDefaultAccessorComment"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addDefaultAccessorOpen">addDefaultAccessorOpen</a>(string $script, <a href="Column.html"><abbr title="Column">Column</abbr></a> $col)
+                    <p>Adds the function declaration for a default accessor</p>
+                </td>
+                <td><small>from&nbsp;<a href="PHP5ObjectBuilder.html#method_addDefaultAccessorOpen"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addMutatorComment">addMutatorComment</a>(string $script, <a href="Column.html"><abbr title="Column">Column</abbr></a> $col)
+                    <p>Adds the comment for a mutator</p>
+                </td>
+                <td><small>from&nbsp;<a href="PHP5ObjectBuilder.html#method_addMutatorComment"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addMutatorOpenOpen">addMutatorOpenOpen</a>(string $script, <a href="Column.html"><abbr title="Column">Column</abbr></a> $col)
+                    <p>Adds the mutator function declaration</p>
+                </td>
+                <td><small>from&nbsp;<a href="PHP5ObjectBuilder.html#method_addMutatorOpenOpen"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addTemporalMutatorComment">addTemporalMutatorComment</a>($script, <a href="Column.html"><abbr title="Column">Column</abbr></a> $col)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="PHP5ObjectBuilder.html#method_addTemporalMutatorComment"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addBooleanMutatorComment">addBooleanMutatorComment</a>($script, <a href="Column.html"><abbr title="Column">Column</abbr></a> $col)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="PHP5ObjectBuilder.html#method_addBooleanMutatorComment"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getFKVarName">getFKVarName</a>(<a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $fk)
+                    <p>Constructs variable name for fkey-related objects.</p>
+                </td>
+                <td><small>from&nbsp;<a href="PHP5ObjectBuilder.html#method_getFKVarName"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getRefFKCollVarName">getRefFKCollVarName</a>(<a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $fk)
+                    <p>Constructs variable name for objects which referencing current table by specified foreign key.</p>
+                </td>
+                <td><small>from&nbsp;<a href="PHP5ObjectBuilder.html#method_getRefFKCollVarName"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPKRefFKVarName">getPKRefFKVarName</a>(<a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $fk)
+                    <p>Constructs variable name for single object which references current table by specified foreign key which is ALSO a primary key (hence one-to-one relationship).</p>
+                </td>
+                <td><small>from&nbsp;<a href="PHP5ObjectBuilder.html#method_getPKRefFKVarName"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a></small></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getPackage">
+        <div class="location">in <a href="PHP5ObjectBuilder.html#method_getPackage"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a> at line 30</div>
+        <code>            public            string
+    <strong>getPackage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the package for the [base] object classes.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNamespace">
+        <div class="location">in <a href="PHP5ObjectBuilder.html#method_getNamespace"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a> at line 35</div>
+        <code>            public            
+    <strong>getNamespace</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDefaultKeyType">
+        <div class="location">in <a href="PHP5ObjectBuilder.html#method_getDefaultKeyType"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a> at line 51</div>
+        <code>            public            string
+    <strong>getDefaultKeyType</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns default key type.</p>
+        <p>if not presented in configuration default will be 'TYPE_PHPNAME'</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUnprefixedClassname">
+        <div class="location">in <a href="PHP5ObjectBuilder.html#method_getUnprefixedClassname"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a> at line 63</div>
+        <code>            public            string
+    <strong>getUnprefixedClassname</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the name of the current class being built.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addTemporalAccessorComment">
+        <div class="location">in <a href="PHP5ObjectBuilder.html#method_addTemporalAccessorComment"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a> at line 821</div>
+        <code>            public            
+    <strong>addTemporalAccessorComment</strong>(string $script, <a href="Column.html"><abbr title="Column">Column</abbr></a> $col)</code>
+    </h3>
+    <div class="details">
+        <p>Adds the comment for a temporal accessor</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$script</td>
+                <td>The script will be modified in this method.</td>
+            </tr>
+                    <tr>
+                <td><a href="Column.html"><abbr title="Column">Column</abbr></a></td>
+                <td>$col</td>
+                <td>The current column.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>addTemporalAccessor</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_addTemporalAccessorOpen">
+        <div class="location">in <a href="PHP5ObjectBuilder.html#method_addTemporalAccessorOpen"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a> at line 877</div>
+        <code>            public            
+    <strong>addTemporalAccessorOpen</strong>(string $script, <a href="Column.html"><abbr title="Column">Column</abbr></a> $col)</code>
+    </h3>
+    <div class="details">
+        <p>Adds the function declaration for a temporal accessor</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$script</td>
+                <td>The script will be modified in this method.</td>
+            </tr>
+                    <tr>
+                <td><a href="Column.html"><abbr title="Column">Column</abbr></a></td>
+                <td>$col</td>
+                <td>The current column.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>addTemporalAccessor</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_addDefaultAccessorComment">
+        <div class="location">in <a href="PHP5ObjectBuilder.html#method_addDefaultAccessorComment"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a> at line 1250</div>
+        <code>            public            
+    <strong>addDefaultAccessorComment</strong>(string $script, <a href="Column.html"><abbr title="Column">Column</abbr></a> $col)</code>
+    </h3>
+    <div class="details">
+        <p>Add the comment for a default accessor method (a getter)</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$script</td>
+                <td>The script will be modified in this method.</td>
+            </tr>
+                    <tr>
+                <td><a href="Column.html"><abbr title="Column">Column</abbr></a></td>
+                <td>$col</td>
+                <td>The current column.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>addDefaultAccessor()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_addDefaultAccessorOpen">
+        <div class="location">in <a href="PHP5ObjectBuilder.html#method_addDefaultAccessorOpen"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a> at line 1275</div>
+        <code>            public            
+    <strong>addDefaultAccessorOpen</strong>(string $script, <a href="Column.html"><abbr title="Column">Column</abbr></a> $col)</code>
+    </h3>
+    <div class="details">
+        <p>Adds the function declaration for a default accessor</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$script</td>
+                <td>The script will be modified in this method.</td>
+            </tr>
+                    <tr>
+                <td><a href="Column.html"><abbr title="Column">Column</abbr></a></td>
+                <td>$col</td>
+                <td>The current column.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>addDefaultAccessor()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_addMutatorComment">
+        <div class="location">in <a href="PHP5ObjectBuilder.html#method_addMutatorComment"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a> at line 1489</div>
+        <code>            public            
+    <strong>addMutatorComment</strong>(string $script, <a href="Column.html"><abbr title="Column">Column</abbr></a> $col)</code>
+    </h3>
+    <div class="details">
+        <p>Adds the comment for a mutator</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$script</td>
+                <td>The script will be modified in this method.</td>
+            </tr>
+                    <tr>
+                <td><a href="Column.html"><abbr title="Column">Column</abbr></a></td>
+                <td>$col</td>
+                <td>The current column.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>addMutatorOpen()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_addMutatorOpenOpen">
+        <div class="location">in <a href="PHP5ObjectBuilder.html#method_addMutatorOpenOpen"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a> at line 1509</div>
+        <code>            public            
+    <strong>addMutatorOpenOpen</strong>(string $script, <a href="Column.html"><abbr title="Column">Column</abbr></a> $col)</code>
+    </h3>
+    <div class="details">
+        <p>Adds the mutator function declaration</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$script</td>
+                <td>The script will be modified in this method.</td>
+            </tr>
+                    <tr>
+                <td><a href="Column.html"><abbr title="Column">Column</abbr></a></td>
+                <td>$col</td>
+                <td>The current column.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>addMutatorOpen()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_addTemporalMutatorComment">
+        <div class="location">in <a href="PHP5ObjectBuilder.html#method_addTemporalMutatorComment"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a> at line 1725</div>
+        <code>            public            
+    <strong>addTemporalMutatorComment</strong>($script, <a href="Column.html"><abbr title="Column">Column</abbr></a> $col)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$script</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="Column.html"><abbr title="Column">Column</abbr></a></td>
+                <td>$col</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addBooleanMutatorComment">
+        <div class="location">in <a href="PHP5ObjectBuilder.html#method_addBooleanMutatorComment"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a> at line 1954</div>
+        <code>            public            
+    <strong>addBooleanMutatorComment</strong>($script, <a href="Column.html"><abbr title="Column">Column</abbr></a> $col)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$script</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="Column.html"><abbr title="Column">Column</abbr></a></td>
+                <td>$col</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFKVarName">
+        <div class="location">in <a href="PHP5ObjectBuilder.html#method_getFKVarName"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a> at line 3298</div>
+        <code>            public            string
+    <strong>getFKVarName</strong>(<a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $fk)</code>
+    </h3>
+    <div class="details">
+        <p>Constructs variable name for fkey-related objects.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a></td>
+                <td>$fk</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRefFKCollVarName">
+        <div class="location">in <a href="PHP5ObjectBuilder.html#method_getRefFKCollVarName"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a> at line 3310</div>
+        <code>            public            string
+    <strong>getRefFKCollVarName</strong>(<a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $fk)</code>
+    </h3>
+    <div class="details">
+        <p>Constructs variable name for objects which referencing current table by specified foreign key.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a></td>
+                <td>$fk</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPKRefFKVarName">
+        <div class="location">in <a href="PHP5ObjectBuilder.html#method_getPKRefFKVarName"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a> at line 3323</div>
+        <code>            public            string
+    <strong>getPKRefFKVarName</strong>(<a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $fk)</code>
+    </h3>
+    <div class="details">
+        <p>Constructs variable name for single object which references current table by specified foreign key which is ALSO a primary key (hence one-to-one relationship).</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a></td>
+                <td>$fk</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

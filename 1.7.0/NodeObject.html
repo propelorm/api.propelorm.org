@@ -1,0 +1,1769 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>NodeObject | </title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Interface</div>
+    <h1><a href=".html"></a>NodeObject</h1>
+    </div>
+        <div class="content">
+                <p>interface    <strong>NodeObject</strong>        implements
+        <a href="http://php.net/IteratorAggregate"><abbr title="IteratorAggregate">IteratorAggregate</abbr></a></p>
+
+            <div class="description">
+            <p>This interface defines methods that must be implemented by all business objects within the system to handle Node object.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_save">save</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>If object is saved without left/right values, set them as undefined (0)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_delete">delete</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Delete node and descendants</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    object
+                </td>
+                <td class="last">
+                    <a href="#method_makeRoot">makeRoot</a>()
+                    <p>Sets node properties to make it a root node.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getLevel">getLevel</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Gets the level if set, otherwise calculates this and returns it</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getPath">getPath</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Get the path to the node in the tree</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getNumberOfChildren">getNumberOfChildren</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Gets the number of children for the node (direct descendants)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getNumberOfDescendants">getNumberOfDescendants</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Gets the total number of descendants for the node</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getChildren">getChildren</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Gets the children for the node</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getDescendants">getDescendants</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Gets the descendants for the node</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    object
+                </td>
+                <td class="last">
+                    <a href="#method_setLevel">setLevel</a>(int $level)
+                    <p>Sets the level of the node in the tree</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    object
+                </td>
+                <td class="last">
+                    <a href="#method_setChildren">setChildren</a>(array $children)
+                    <p>Sets the children array of the node in the tree</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    object
+                </td>
+                <td class="last">
+                    <a href="#method_setParentNode">setParentNode</a>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $parent = null)
+                    <p>Sets the parentNode of the node in the tree</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    object
+                </td>
+                <td class="last">
+                    <a href="#method_setPrevSibling">setPrevSibling</a>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $node = null)
+                    <p>Sets the previous sibling of the node in the tree</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    object
+                </td>
+                <td class="last">
+                    <a href="#method_setNextSibling">setNextSibling</a>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $node = null)
+                    <p>Sets the next sibling of the node in the tree</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_isRoot">isRoot</a>()
+                    <p>Determines if the node is the root node</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_isLeaf">isLeaf</a>()
+                    <p>Determines if the node is a leaf node</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_isEqualTo">isEqualTo</a>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $node)
+                    <p>Tests if object is equal to $node</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_hasParent">hasParent</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Tests if object has an ancestor</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_hasChildren">hasChildren</a>()
+                    <p>Determines if the node has children / descendants</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_hasPrevSibling">hasPrevSibling</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Determines if the node has previous sibling</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_hasNextSibling">hasNextSibling</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Determines if the node has next sibling</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_retrieveParent">retrieveParent</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Gets ancestor for the given node if it exists</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_retrieveFirstChild">retrieveFirstChild</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Gets first child if it exists</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_retrieveLastChild">retrieveLastChild</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Gets last child if it exists</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_retrievePrevSibling">retrievePrevSibling</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Gets prev sibling for the given node if it exists</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_retrieveNextSibling">retrieveNextSibling</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Gets next sibling for the given node if it exists</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    object
+                </td>
+                <td class="last">
+                    <a href="#method_insertAsFirstChildOf">insertAsFirstChildOf</a>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $parent, <a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Inserts as first child of destination node $parent</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    object
+                </td>
+                <td class="last">
+                    <a href="#method_insertAsLastChildOf">insertAsLastChildOf</a>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $parent, <a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Inserts as last child of destination node $parent</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    object
+                </td>
+                <td class="last">
+                    <a href="#method_insertAsPrevSiblingOf">insertAsPrevSiblingOf</a>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $dest, <a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Inserts node as previous sibling to destination node $dest</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    object
+                </td>
+                <td class="last">
+                    <a href="#method_insertAsNextSiblingOf">insertAsNextSiblingOf</a>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $dest, <a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Inserts node as next sibling to destination node $dest</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_moveToFirstChildOf">moveToFirstChildOf</a>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $parent, <a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Moves node to be first child of $parent</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_moveToLastChildOf">moveToLastChildOf</a>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $parent, <a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Moves node to be last child of $parent</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_moveToPrevSiblingOf">moveToPrevSiblingOf</a>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $dest, <a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Moves node to be prev sibling to $dest</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_moveToNextSiblingOf">moveToNextSiblingOf</a>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $dest, <a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Moves node to be next sibling to $dest</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_insertAsParentOf">insertAsParentOf</a>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $node, <a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)
+                    <p>Inserts node as parent of given node.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getScopeIdValue">getScopeIdValue</a>()
+                    <p>Wraps the getter for the scope value</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    object
+                </td>
+                <td class="last">
+                    <a href="#method_setScopeIdValue">setScopeIdValue</a>(int $v)
+                    <p>Set the value of scope column</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_save">
+        <div class="location">at line 29</div>
+        <code>            public            void
+    <strong>save</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>If object is saved without left/right values, set them as undefined (0)</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_delete">
+        <div class="location">at line 39</div>
+        <code>            public            void
+    <strong>delete</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Delete node and descendants</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_makeRoot">
+        <div class="location">at line 47</div>
+        <code>            public            object
+    <strong>makeRoot</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Sets node properties to make it a root node.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>object</td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLevel">
+        <div class="location">at line 56</div>
+        <code>            public            int
+    <strong>getLevel</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Gets the level if set, otherwise calculates this and returns it</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPath">
+        <div class="location">at line 65</div>
+        <code>            public            array
+    <strong>getPath</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get the path to the node in the tree</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNumberOfChildren">
+        <div class="location">at line 74</div>
+        <code>            public            int
+    <strong>getNumberOfChildren</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Gets the number of children for the node (direct descendants)</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNumberOfDescendants">
+        <div class="location">at line 83</div>
+        <code>            public            int
+    <strong>getNumberOfDescendants</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Gets the total number of descendants for the node</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getChildren">
+        <div class="location">at line 92</div>
+        <code>            public            array
+    <strong>getChildren</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Gets the children for the node</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDescendants">
+        <div class="location">at line 101</div>
+        <code>            public            array
+    <strong>getDescendants</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Gets the descendants for the node</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setLevel">
+        <div class="location">at line 110</div>
+        <code>            public            object
+    <strong>setLevel</strong>(int $level)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the level of the node in the tree</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$level</td>
+                <td>new value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>object</td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setChildren">
+        <div class="location">at line 119</div>
+        <code>            public            object
+    <strong>setChildren</strong>(array $children)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the children array of the node in the tree</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$children</td>
+                <td>array of Propel node object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>object</td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setParentNode">
+        <div class="location">at line 128</div>
+        <code>            public            object
+    <strong>setParentNode</strong>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $parent = null)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the parentNode of the node in the tree</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a></td>
+                <td>$parent</td>
+                <td>Propel node object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>object</td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPrevSibling">
+        <div class="location">at line 137</div>
+        <code>            public            object
+    <strong>setPrevSibling</strong>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $node = null)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the previous sibling of the node in the tree</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a></td>
+                <td>$node</td>
+                <td>Propel node object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>object</td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setNextSibling">
+        <div class="location">at line 146</div>
+        <code>            public            object
+    <strong>setNextSibling</strong>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $node = null)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the next sibling of the node in the tree</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a></td>
+                <td>$node</td>
+                <td>Propel node object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>object</td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isRoot">
+        <div class="location">at line 153</div>
+        <code>            public            bool
+    <strong>isRoot</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Determines if the node is the root node</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isLeaf">
+        <div class="location">at line 160</div>
+        <code>            public            bool
+    <strong>isLeaf</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Determines if the node is a leaf node</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isEqualTo">
+        <div class="location">at line 169</div>
+        <code>            public            bool
+    <strong>isEqualTo</strong>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $node)</code>
+    </h3>
+    <div class="details">
+        <p>Tests if object is equal to $node</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a></td>
+                <td>$node</td>
+                <td>Propel object for node to compare to</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasParent">
+        <div class="location">at line 178</div>
+        <code>            public            bool
+    <strong>hasParent</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Tests if object has an ancestor</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasChildren">
+        <div class="location">at line 185</div>
+        <code>            public            bool
+    <strong>hasChildren</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Determines if the node has children / descendants</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasPrevSibling">
+        <div class="location">at line 194</div>
+        <code>            public            bool
+    <strong>hasPrevSibling</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Determines if the node has previous sibling</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasNextSibling">
+        <div class="location">at line 203</div>
+        <code>            public            bool
+    <strong>hasNextSibling</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Determines if the node has next sibling</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_retrieveParent">
+        <div class="location">at line 212</div>
+        <code>            public            mixed
+    <strong>retrieveParent</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Gets ancestor for the given node if it exists</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>Propel object if exists else false</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_retrieveFirstChild">
+        <div class="location">at line 221</div>
+        <code>            public            mixed
+    <strong>retrieveFirstChild</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Gets first child if it exists</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>Propel object if exists else false</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_retrieveLastChild">
+        <div class="location">at line 230</div>
+        <code>            public            mixed
+    <strong>retrieveLastChild</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Gets last child if it exists</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>Propel object if exists else false</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_retrievePrevSibling">
+        <div class="location">at line 239</div>
+        <code>            public            mixed
+    <strong>retrievePrevSibling</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Gets prev sibling for the given node if it exists</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>Propel object if exists else false</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_retrieveNextSibling">
+        <div class="location">at line 248</div>
+        <code>            public            mixed
+    <strong>retrieveNextSibling</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Gets next sibling for the given node if it exists</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>Propel object if exists else false</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_insertAsFirstChildOf">
+        <div class="location">at line 258</div>
+        <code>            public            object
+    <strong>insertAsFirstChildOf</strong>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $parent, <a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Inserts as first child of destination node $parent</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a></td>
+                <td>$parent</td>
+                <td>Propel object for given destination node</td>
+            </tr>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>object</td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_insertAsLastChildOf">
+        <div class="location">at line 268</div>
+        <code>            public            object
+    <strong>insertAsLastChildOf</strong>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $parent, <a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Inserts as last child of destination node $parent</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a></td>
+                <td>$parent</td>
+                <td>Propel object for given destination node</td>
+            </tr>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>object</td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_insertAsPrevSiblingOf">
+        <div class="location">at line 278</div>
+        <code>            public            object
+    <strong>insertAsPrevSiblingOf</strong>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $dest, <a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Inserts node as previous sibling to destination node $dest</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a></td>
+                <td>$dest</td>
+                <td>Propel object for given destination node</td>
+            </tr>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>object</td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_insertAsNextSiblingOf">
+        <div class="location">at line 288</div>
+        <code>            public            object
+    <strong>insertAsNextSiblingOf</strong>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $dest, <a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Inserts node as next sibling to destination node $dest</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a></td>
+                <td>$dest</td>
+                <td>Propel object for given destination node</td>
+            </tr>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>object</td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_moveToFirstChildOf">
+        <div class="location">at line 298</div>
+        <code>            public            void
+    <strong>moveToFirstChildOf</strong>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $parent, <a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Moves node to be first child of $parent</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a></td>
+                <td>$parent</td>
+                <td>Propel object for destination node</td>
+            </tr>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_moveToLastChildOf">
+        <div class="location">at line 308</div>
+        <code>            public            void
+    <strong>moveToLastChildOf</strong>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $parent, <a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Moves node to be last child of $parent</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a></td>
+                <td>$parent</td>
+                <td>Propel object for destination node</td>
+            </tr>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_moveToPrevSiblingOf">
+        <div class="location">at line 318</div>
+        <code>            public            void
+    <strong>moveToPrevSiblingOf</strong>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $dest, <a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Moves node to be prev sibling to $dest</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a></td>
+                <td>$dest</td>
+                <td>Propel object for destination node</td>
+            </tr>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_moveToNextSiblingOf">
+        <div class="location">at line 328</div>
+        <code>            public            void
+    <strong>moveToNextSiblingOf</strong>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $dest, <a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Moves node to be next sibling to $dest</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a></td>
+                <td>$dest</td>
+                <td>Propel object for destination node</td>
+            </tr>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_insertAsParentOf">
+        <div class="location">at line 339</div>
+        <code>            public            void
+    <strong>insertAsParentOf</strong>(<a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a> $node, <a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Inserts node as parent of given node.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="NodeObject.html"><abbr title="NodeObject">NodeObject</abbr></a></td>
+                <td>$node</td>
+                <td>Propel object for given destination node</td>
+            </tr>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>Connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>When trying to insert node as parent of a root node</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getScopeIdValue">
+        <div class="location">at line 346</div>
+        <code>            public            int
+    <strong>getScopeIdValue</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Wraps the getter for the scope value</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setScopeIdValue">
+        <div class="location">at line 355</div>
+        <code>            public            object
+    <strong>setScopeIdValue</strong>(int $v)</code>
+    </h3>
+    <div class="details">
+        <p>Set the value of scope column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$v</td>
+                <td>new value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>object</td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

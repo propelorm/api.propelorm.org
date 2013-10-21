@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>DBMSSQL | </title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>DBMSSQL</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>DBMSSQL</strong>        extends <a href="DBAdapter.html"><abbr title="DBAdapter">DBAdapter</abbr></a></p>
+
+            <div class="description">
+            <p>This is used to connect to a MSSQL database.</p>
+            <p>
+</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>ID_METHOD_NONE</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ID_METHOD_AUTOINCREMENT</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ID_METHOD_SEQUENCE</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<a href="DBAdapter.html"><abbr title="DBAdapter">DBAdapter</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_factory">factory</a>(string $driver)
+                    <p>Creates a new instance of the database adapter associated with the specified Propel driver.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DBAdapter.html#method_factory"><abbr title="DBAdapter">DBAdapter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_prepareParams">prepareParams</a>(array $settings)
+                    <p>Prepare connection parameters.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DBAdapter.html#method_prepareParams"><abbr title="DBAdapter">DBAdapter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_initConnection">initConnection</a>(<a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a> $con, array $settings)
+                    <p>This method is called after a connection was created to run necessary post-initialization queries or code.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DBAdapter.html#method_initConnection"><abbr title="DBAdapter">DBAdapter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setCharset">setCharset</a>(<a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a> $con, string $charset)
+                    <p>MS SQL Server does not support SET NAMES</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_toUpperCase">toUpperCase</a>(string $in)
+                    <p>This method is used to ignore case.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getStringDelimiter">getStringDelimiter</a>()
+                    <p>Returns the character used to indicate the beginning and end of a piece of text used in a SQL statement (generally a single quote).</p>
+                </td>
+                <td><small>from&nbsp;<a href="DBAdapter.html#method_getStringDelimiter"><abbr title="DBAdapter">DBAdapter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_ignoreCase">ignoreCase</a>(string $in)
+                    <p>This method is used to ignore case.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_ignoreCaseInOrderBy">ignoreCaseInOrderBy</a>(string $in)
+                    <p>This method is used to ignore case in an ORDER BY clause.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DBAdapter.html#method_ignoreCaseInOrderBy"><abbr title="DBAdapter">DBAdapter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_concatString">concatString</a>(string $s1, string $s2)
+                    <p>Returns SQL which concatenates the second string to the first.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_subString">subString</a>(string $s, integer $pos, integer $len)
+                    <p>Returns SQL which extracts a substring.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_strLength">strLength</a>(string $s)
+                    <p>Returns SQL which calculates the length (in chars) of a string.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_quoteIdentifier">quoteIdentifier</a>(string $text)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_quoteIdentifierTable">quoteIdentifierTable</a>(string $table)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isGetIdBeforeInsert">isGetIdBeforeInsert</a>()
+                    <p>Whether this adapter uses an ID generation system that requires getting ID <em>before</em> performing INSERT.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DBAdapter.html#method_isGetIdBeforeInsert"><abbr title="DBAdapter">DBAdapter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isGetIdAfterInsert">isGetIdAfterInsert</a>()
+                    <p>Whether this adapter uses an ID generation system that requires getting ID <em>before</em> performing INSERT.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DBAdapter.html#method_isGetIdAfterInsert"><abbr title="DBAdapter">DBAdapter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getId">getId</a>(<a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a> $con, string $name = null)
+                    <p>Gets the generated ID (either last ID for autoincrement or next sequence ID).</p>
+                </td>
+                <td><small>from&nbsp;<a href="DBAdapter.html#method_getId"><abbr title="DBAdapter">DBAdapter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_formatTemporalValue">formatTemporalValue</a>(mixed $value, mixed $type)
+                    <p>Formats a temporal value before binding, given a ColumnMap object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DBAdapter.html#method_formatTemporalValue"><abbr title="DBAdapter">DBAdapter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getTimestampFormatter">getTimestampFormatter</a>()
+                    <p>Returns timestamp formatter string for use in date() function.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DBAdapter.html#method_getTimestampFormatter"><abbr title="DBAdapter">DBAdapter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDateFormatter">getDateFormatter</a>()
+                    <p>Returns date formatter string for use in date() function.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DBAdapter.html#method_getDateFormatter"><abbr title="DBAdapter">DBAdapter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getTimeFormatter">getTimeFormatter</a>()
+                    <p>Returns time formatter string for use in date() function.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DBAdapter.html#method_getTimeFormatter"><abbr title="DBAdapter">DBAdapter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_useQuoteIdentifier">useQuoteIdentifier</a>()
+                    <p>Should Column-Names get identifiers for inserts or updates.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DBAdapter.html#method_useQuoteIdentifier"><abbr title="DBAdapter">DBAdapter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_cleanupSQL">cleanupSQL</a>(string $sql, array $params, <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a> $values, <a href="DatabaseMap.html"><abbr title="DatabaseMap">DatabaseMap</abbr></a> $dbMap)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_applyLimit">applyLimit</a>(string $sql, integer $offset, integer $limit)
+                    <p>Simulated Limit/Offset</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_random">random</a>(string $seed = null)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDeleteFromClause">getDeleteFromClause</a>(<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a> $criteria, string $tableName)
+                    <p>Returns the "DELETE FROM <table> [AS <alias>]" part of DELETE query.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DBAdapter.html#method_getDeleteFromClause"><abbr title="DBAdapter">DBAdapter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_createSelectSqlPart">createSelectSqlPart</a>(<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a> $criteria, array $fromClause, boolean $aliasAll = false)
+                    <p>Builds the SELECT part of a SQL statement based on a Criteria taking into account select columns and 'as' columns (i.e.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DBAdapter.html#method_createSelectSqlPart"><abbr title="DBAdapter">DBAdapter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_turnSelectColumnsToAliases">turnSelectColumnsToAliases</a>(<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a> $criteria)
+                    <p>Ensures uniqueness of select column names by turning them all into aliases This is necessary for queries on more than one table when the tables share a column name Moved from BasePeer to DBAdapter and turned from static to non static</p>
+                </td>
+                <td><small>from&nbsp;<a href="DBAdapter.html#method_turnSelectColumnsToAliases"><abbr title="DBAdapter">DBAdapter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_bindValues">bindValues</a>(<a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a> $stmt, array $params, <a href="DatabaseMap.html"><abbr title="DatabaseMap">DatabaseMap</abbr></a> $dbMap)
+                    <p>Binds values in a prepared statement.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DBAdapter.html#method_bindValues"><abbr title="DBAdapter">DBAdapter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_bindValue">bindValue</a>(<a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a> $stmt, string $parameter, mixed $value, <a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a> $cMap, null|integer $position = null)
+                    <p>Binds a value to a positioned parameted in a statement, given a ColumnMap object to infer the binding type.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DBAdapter.html#method_bindValue"><abbr title="DBAdapter">DBAdapter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_doExplainPlan">doExplainPlan</a>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con, <a href="ModelCriteria.html"><abbr title="ModelCriteria">ModelCriteria</abbr></a>|string $query)
+                    <p>Do Explain Plan for query object or query string</p>
+                </td>
+                <td><small>from&nbsp;<a href="DBAdapter.html#method_doExplainPlan"><abbr title="DBAdapter">DBAdapter</abbr></a></small></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_factory">
+        <div class="location">in <a href="DBAdapter.html#method_factory"><abbr title="DBAdapter">DBAdapter</abbr></a> at line 66</div>
+        <code>        static    public            <a href="DBAdapter.html"><abbr title="DBAdapter">DBAdapter</abbr></a>
+    <strong>factory</strong>(string $driver)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new instance of the database adapter associated with the specified Propel driver.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$driver</td>
+                <td>The name of the Propel driver to create a new adapter instance for or a shorter form adapter key.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="DBAdapter.html"><abbr title="DBAdapter">DBAdapter</abbr></a></td>
+            <td>An instance of a Propel database adapter.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td>If the adapter could not be instantiated.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_prepareParams">
+        <div class="location">in <a href="DBAdapter.html#method_prepareParams"><abbr title="DBAdapter">DBAdapter</abbr></a> at line 85</div>
+        <code>            public            array
+    <strong>prepareParams</strong>(array $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Prepare connection parameters.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_initConnection">
+        <div class="location">in <a href="DBAdapter.html#method_initConnection"><abbr title="DBAdapter">DBAdapter</abbr></a> at line 104</div>
+        <code>            public            
+    <strong>initConnection</strong>(<a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a> $con, array $settings)</code>
+    </h3>
+    <div class="details">
+        <p>This method is called after a connection was created to run necessary post-initialization queries or code.</p>
+        <p>If a charset was specified, this will be set before any other queries
+are executed.</p>
+
+<p>This base method runs queries specified using the "query" setting.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a></td>
+                <td>$con</td>
+                <td>A PDO connection instance.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$settings</td>
+                <td>An array of settings.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>setCharset()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_setCharset">
+        <div class="location">at line 28</div>
+        <code>            public            
+    <strong>setCharset</strong>(<a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a> $con, string $charset)</code>
+    </h3>
+    <div class="details">
+        <p>MS SQL Server does not support SET NAMES</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a></td>
+                <td>$con</td>
+                <td>A $PDO PDO connection instance.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$charset</td>
+                <td>The $string charset encoding.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>DBAdapter::setCharset()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_toUpperCase">
+        <div class="location">at line 39</div>
+        <code>            public            string
+    <strong>toUpperCase</strong>(string $in)</code>
+    </h3>
+    <div class="details">
+        <p>This method is used to ignore case.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$in</td>
+                <td>The string to transform to upper case.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The upper case string.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getStringDelimiter">
+        <div class="location">in <a href="DBAdapter.html#method_getStringDelimiter"><abbr title="DBAdapter">DBAdapter</abbr></a> at line 150</div>
+        <code>            public            string
+    <strong>getStringDelimiter</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the character used to indicate the beginning and end of a piece of text used in a SQL statement (generally a single quote).</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The text delimiter.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_ignoreCase">
+        <div class="location">at line 51</div>
+        <code>            public            string
+    <strong>ignoreCase</strong>(string $in)</code>
+    </h3>
+    <div class="details">
+        <p>This method is used to ignore case.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$in</td>
+                <td>The string whose case to ignore.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The string in a case that can be ignored.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_ignoreCaseInOrderBy">
+        <div class="location">in <a href="DBAdapter.html#method_ignoreCaseInOrderBy"><abbr title="DBAdapter">DBAdapter</abbr></a> at line 174</div>
+        <code>            public            string
+    <strong>ignoreCaseInOrderBy</strong>(string $in)</code>
+    </h3>
+    <div class="details">
+        <p>This method is used to ignore case in an ORDER BY clause.</p>
+        <p>Usually it is the same as ignoreCase, but some databases
+(Interbase for example) does not use the same SQL in ORDER BY
+and other clauses.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$in</td>
+                <td>The string whose case to ignore.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The string in a case that can be ignored.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_concatString">
+        <div class="location">at line 64</div>
+        <code>            public            string
+    <strong>concatString</strong>(string $s1, string $s2)</code>
+    </h3>
+    <div class="details">
+        <p>Returns SQL which concatenates the second string to the first.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$s1</td>
+                <td>String to concatenate.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$s2</td>
+                <td>String to append.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_subString">
+        <div class="location">at line 78</div>
+        <code>            public            string
+    <strong>subString</strong>(string $s, integer $pos, integer $len)</code>
+    </h3>
+    <div class="details">
+        <p>Returns SQL which extracts a substring.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$s</td>
+                <td>String to extract from.</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$pos</td>
+                <td>Offset to start from.</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$len</td>
+                <td>Number of characters to extract.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_strLength">
+        <div class="location">at line 90</div>
+        <code>            public            string
+    <strong>strLength</strong>(string $s)</code>
+    </h3>
+    <div class="details">
+        <p>Returns SQL which calculates the length (in chars) of a string.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$s</td>
+                <td>String to calculate length of.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_quoteIdentifier">
+        <div class="location">at line 102</div>
+        <code>            public            string
+    <strong>quoteIdentifier</strong>(string $text)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td>The identifier to quote.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The quoted identifier.</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>DBAdapter::quoteIdentifier()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_quoteIdentifierTable">
+        <div class="location">at line 114</div>
+        <code>            public            string
+    <strong>quoteIdentifierTable</strong>(string $table)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td>The table name to quo</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The quoted table name</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>DBAdapter::quoteIdentifierTable()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_isGetIdBeforeInsert">
+        <div class="location">in <a href="DBAdapter.html#method_isGetIdBeforeInsert"><abbr title="DBAdapter">DBAdapter</abbr></a> at line 250</div>
+        <code>            public            boolean
+    <strong>isGetIdBeforeInsert</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Whether this adapter uses an ID generation system that requires getting ID <em>before</em> performing INSERT.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isGetIdAfterInsert">
+        <div class="location">in <a href="DBAdapter.html#method_isGetIdAfterInsert"><abbr title="DBAdapter">DBAdapter</abbr></a> at line 260</div>
+        <code>            public            boolean
+    <strong>isGetIdAfterInsert</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Whether this adapter uses an ID generation system that requires getting ID <em>before</em> performing INSERT.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getId">
+        <div class="location">in <a href="DBAdapter.html#method_getId"><abbr title="DBAdapter">DBAdapter</abbr></a> at line 275</div>
+        <code>            public            mixed
+    <strong>getId</strong>(<a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a> $con, string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Gets the generated ID (either last ID for autoincrement or next sequence ID).</p>
+        <p>Warning: duplicates logic from DefaultPlatform::getIdentifierPhp().
+Any code modification here must be ported there.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_formatTemporalValue">
+        <div class="location">in <a href="DBAdapter.html#method_formatTemporalValue"><abbr title="DBAdapter">DBAdapter</abbr></a> at line 288</div>
+        <code>            public            string
+    <strong>formatTemporalValue</strong>(mixed $value, mixed $type)</code>
+    </h3>
+    <div class="details">
+        <p>Formats a temporal value before binding, given a ColumnMap object.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The temporal value</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$type</td>
+                <td>PropelColumnTypes constant, or ColumnMap object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The formatted temporal value</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTimestampFormatter">
+        <div class="location">in <a href="DBAdapter.html#method_getTimestampFormatter"><abbr title="DBAdapter">DBAdapter</abbr></a> at line 318</div>
+        <code>            public            string
+    <strong>getTimestampFormatter</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns timestamp formatter string for use in date() function.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDateFormatter">
+        <div class="location">in <a href="DBAdapter.html#method_getDateFormatter"><abbr title="DBAdapter">DBAdapter</abbr></a> at line 328</div>
+        <code>            public            string
+    <strong>getDateFormatter</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns date formatter string for use in date() function.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTimeFormatter">
+        <div class="location">in <a href="DBAdapter.html#method_getTimeFormatter"><abbr title="DBAdapter">DBAdapter</abbr></a> at line 338</div>
+        <code>            public            string
+    <strong>getTimeFormatter</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns time formatter string for use in date() function.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_useQuoteIdentifier">
+        <div class="location">in <a href="DBAdapter.html#method_useQuoteIdentifier"><abbr title="DBAdapter">DBAdapter</abbr></a> at line 354</div>
+        <code>            public            
+    <strong>useQuoteIdentifier</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Should Column-Names get identifiers for inserts or updates.</p>
+        <p>By default false is returned -> backwards compability.</p>
+
+<p>it`s a workaround...!!!</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_cleanupSQL">
+        <div class="location">at line 297</div>
+        <code>            public            
+    <strong>cleanupSQL</strong>(string $sql, array $params, <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a> $values, <a href="DatabaseMap.html"><abbr title="DatabaseMap">DatabaseMap</abbr></a> $dbMap)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$sql</td>
+                <td>The sql statement</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>array('column' => ..., 'table' => ..., 'value' => ...)</td>
+            </tr>
+                    <tr>
+                <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+                <td>$values</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="DatabaseMap.html"><abbr title="DatabaseMap">DatabaseMap</abbr></a></td>
+                <td>$dbMap</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>parent::cleanupSQL()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_applyLimit">
+        <div class="location">at line 150</div>
+        <code>            public            void
+    <strong>applyLimit</strong>(string $sql, integer $offset, integer $limit)</code>
+    </h3>
+    <div class="details">
+        <p>Simulated Limit/Offset</p>
+        <p>This rewrites the $sql query to apply the offset and limit.
+some of the ORDER BY logic borrowed from Doctrine MsSqlPlatform</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$sql</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$limit</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>DBAdapter::applyLimit()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_random">
+        <div class="location">at line 127</div>
+        <code>            public            string
+    <strong>random</strong>(string $seed = null)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$seed</td>
+                <td>(optional) seed value for databases that support this</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>DBAdapter::random()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getDeleteFromClause">
+        <div class="location">in <a href="DBAdapter.html#method_getDeleteFromClause"><abbr title="DBAdapter">DBAdapter</abbr></a> at line 395</div>
+        <code>            public            string
+    <strong>getDeleteFromClause</strong>(<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a> $criteria, string $tableName)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the "DELETE FROM <table> [AS <alias>]" part of DELETE query.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+                <td>$criteria</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tableName</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createSelectSqlPart">
+        <div class="location">in <a href="DBAdapter.html#method_createSelectSqlPart"><abbr title="DBAdapter">DBAdapter</abbr></a> at line 427</div>
+        <code>            public            string
+    <strong>createSelectSqlPart</strong>(<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a> $criteria, array $fromClause, boolean $aliasAll = false)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the SELECT part of a SQL statement based on a Criteria taking into account select columns and 'as' columns (i.e.</p>
+        <p>columns aliases)
+Move from BasePeer to DBAdapter and turn from static to non static</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+                <td>$criteria</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$fromClause</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$aliasAll</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_turnSelectColumnsToAliases">
+        <div class="location">in <a href="DBAdapter.html#method_turnSelectColumnsToAliases"><abbr title="DBAdapter">DBAdapter</abbr></a> at line 499</div>
+        <code>            public            <a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a>
+    <strong>turnSelectColumnsToAliases</strong>(<a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a> $criteria)</code>
+    </h3>
+    <div class="details">
+        <p>Ensures uniqueness of select column names by turning them all into aliases This is necessary for queries on more than one table when the tables share a column name Moved from BasePeer to DBAdapter and turned from static to non static</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+                <td>$criteria</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Criteria.html"><abbr title="Criteria">Criteria</abbr></a></td>
+            <td>The input, with Select columns replaced by aliases</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>http://propel.phpdb.org/trac/ticket/795</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_bindValues">
+        <div class="location">in <a href="DBAdapter.html#method_bindValues"><abbr title="DBAdapter">DBAdapter</abbr></a> at line 549</div>
+        <code>            public            
+    <strong>bindValues</strong>(<a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a> $stmt, array $params, <a href="DatabaseMap.html"><abbr title="DatabaseMap">DatabaseMap</abbr></a> $dbMap)</code>
+    </h3>
+    <div class="details">
+        <p>Binds values in a prepared statement.</p>
+        <p>This method is designed to work with the BasePeer::createSelectSql() method, which creates
+both the SELECT SQL statement and populates a passed-in array of parameter
+values that should be substituted.</p>
+
+<p><code>
+$db = Propel::getDB($criteria->getDbName());
+$sql = BasePeer::createSelectSql($criteria, $params);
+$stmt = $con->prepare($sql);
+$params = array();
+$db->populateStmtValues($stmt, $params, Propel::getDatabaseMap($critera->getDbName()));
+$stmt->execute();
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a></td>
+                <td>$stmt</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>array('column' => ..., 'table' => ..., 'value' => ...)</td>
+            </tr>
+                    <tr>
+                <td><a href="DatabaseMap.html"><abbr title="DatabaseMap">DatabaseMap</abbr></a></td>
+                <td>$dbMap</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_bindValue">
+        <div class="location">in <a href="DBAdapter.html#method_bindValue"><abbr title="DBAdapter">DBAdapter</abbr></a> at line 585</div>
+        <code>            public            boolean
+    <strong>bindValue</strong>(<a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a> $stmt, string $parameter, mixed $value, <a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a> $cMap, null|integer $position = null)</code>
+    </h3>
+    <div class="details">
+        <p>Binds a value to a positioned parameted in a statement, given a ColumnMap object to infer the binding type.</p>
+        <p>Warning: duplicates logic from DefaultPlatform::getColumnBindingPHP().
+Any code modification here must be ported there.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a></td>
+                <td>$stmt</td>
+                <td>The statement to bind</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$parameter</td>
+                <td>Parameter identifier</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value to bind</td>
+            </tr>
+                    <tr>
+                <td><a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a></td>
+                <td>$cMap</td>
+                <td>The ColumnMap of the column to bind</td>
+            </tr>
+                    <tr>
+                <td>null|integer</td>
+                <td>$position</td>
+                <td>The position of the parameter to bind</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_doExplainPlan">
+        <div class="location">in <a href="DBAdapter.html#method_doExplainPlan"><abbr title="DBAdapter">DBAdapter</abbr></a> at line 607</div>
+        <code>            public            <a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a>
+    <strong>doExplainPlan</strong>(<a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con, <a href="ModelCriteria.html"><abbr title="ModelCriteria">ModelCriteria</abbr></a>|string $query)</code>
+    </h3>
+    <div class="details">
+        <p>Do Explain Plan for query object or query string</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>propel connection</td>
+            </tr>
+                    <tr>
+                <td><a href="ModelCriteria.html"><abbr title="ModelCriteria">ModelCriteria</abbr></a>|string</td>
+                <td>$query</td>
+                <td>query the criteria or the query string</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a></td>
+            <td>A PDO statement executed using the connection, ready to be fetched</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td>if explain plan is not implemented for adapter</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

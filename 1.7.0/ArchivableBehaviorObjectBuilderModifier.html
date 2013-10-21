@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>ArchivableBehaviorObjectBuilderModifier | </title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>ArchivableBehaviorObjectBuilderModifier</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>ArchivableBehaviorObjectBuilderModifier</strong></p>
+
+            <div class="description">
+            <p>Keeps tracks of an ActiveRecord object, even after deletion</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="ArchivableBehavior.html"><abbr title="ArchivableBehavior">ArchivableBehavior</abbr></a> $behavior)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_objectAttributes">objectAttributes</a>(<a href="PHP5ObjectBuilder.html"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a> $builder)
+                    <p>Add object attributes to the built class.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_postInsert">postInsert</a>(<a href="PHP5ObjectBuilder.html"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a> $builder)
+                    <p>Add code to the postInsert hook.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_postUpdate">postUpdate</a>(<a href="PHP5ObjectBuilder.html"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a> $builder)
+                    <p>Add code to the postUpdate hoook.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_preDelete">preDelete</a>($builder)
+                    <p>Using preDelete rather than postDelete to allow user to retrieve related records and archive them before cascade deletion.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_objectMethods">objectMethods</a>($builder)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_addGetArchive">addGetArchive</a>($builder)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_addArchive">addArchive</a>($builder)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_addRestoreFromArchive">addRestoreFromArchive</a>($builder)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_addPopulateFromArchive">addPopulateFromArchive</a>($builder)
+                    <p>Generates a method to populate the current AR object based on an archive object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_fakeAutoIncrementPrimaryKeyForConcreteInheritance">fakeAutoIncrementPrimaryKeyForConcreteInheritance</a>()
+                    <p>Checks if the current table uses concrete_inheritance, and if it's parent has an auto-increment primary key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_addSaveWithoutArchive">addSaveWithoutArchive</a>($builder)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_addDeleteWithoutArchive">addDeleteWithoutArchive</a>($builder)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 21</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="ArchivableBehavior.html"><abbr title="ArchivableBehavior">ArchivableBehavior</abbr></a> $behavior)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="ArchivableBehavior.html"><abbr title="ArchivableBehavior">ArchivableBehavior</abbr></a></td>
+                <td>$behavior</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_objectAttributes">
+        <div class="location">at line 39</div>
+        <code>            public            string
+    <strong>objectAttributes</strong>(<a href="PHP5ObjectBuilder.html"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a> $builder)</code>
+    </h3>
+    <div class="details">
+        <p>Add object attributes to the built class.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PHP5ObjectBuilder.html"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a></td>
+                <td>$builder</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The PHP code to be added to the builder.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_postInsert">
+        <div class="location">at line 69</div>
+        <code>            public            string
+    <strong>postInsert</strong>(<a href="PHP5ObjectBuilder.html"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a> $builder)</code>
+    </h3>
+    <div class="details">
+        <p>Add code to the postInsert hook.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PHP5ObjectBuilder.html"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a></td>
+                <td>$builder</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The PHP code to be added to the builder.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_postUpdate">
+        <div class="location">at line 89</div>
+        <code>            public            string
+    <strong>postUpdate</strong>(<a href="PHP5ObjectBuilder.html"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a> $builder)</code>
+    </h3>
+    <div class="details">
+        <p>Add code to the postUpdate hoook.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PHP5ObjectBuilder.html"><abbr title="PHP5ObjectBuilder">PHP5ObjectBuilder</abbr></a></td>
+                <td>$builder</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The PHP code to be added to the builder.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_preDelete">
+        <div class="location">at line 111</div>
+        <code>            public            string
+    <strong>preDelete</strong>($builder)</code>
+    </h3>
+    <div class="details">
+        <p>Using preDelete rather than postDelete to allow user to retrieve related records and archive them before cascade deletion.</p>
+        <p>The actual deletion is made by the query object, so the AR class must tell
+the query class to enable or disable archiveOnDelete.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$builder</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>the PHP code to be added to the builder</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_objectMethods">
+        <div class="location">at line 124</div>
+        <code>            public            string
+    <strong>objectMethods</strong>($builder)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$builder</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>the PHP code to be added to the builder</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addGetArchive">
+        <div class="location">at line 152</div>
+        <code>            public            string
+    <strong>addGetArchive</strong>($builder)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$builder</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>the PHP code to be added to the builder</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addArchive">
+        <div class="location">at line 163</div>
+        <code>            public            string
+    <strong>addArchive</strong>($builder)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$builder</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>the PHP code to be added to the builder</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addRestoreFromArchive">
+        <div class="location">at line 177</div>
+        <code>            public            string
+    <strong>addRestoreFromArchive</strong>($builder)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$builder</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>the PHP code to be added to the builder</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addPopulateFromArchive">
+        <div class="location">at line 191</div>
+        <code>            public            string
+    <strong>addPopulateFromArchive</strong>($builder)</code>
+    </h3>
+    <div class="details">
+        <p>Generates a method to populate the current AR object based on an archive object.</p>
+        <p>This method is necessary because the archive's copyInto() may include the archived_at column
+and therefore cannot be used. Besides, the way autoincremented PKs are handled should be explicit.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$builder</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>the PHP code to be added to the builder</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fakeAutoIncrementPrimaryKeyForConcreteInheritance">
+        <div class="location">at line 211</div>
+        <code>            public            boolean
+    <strong>fakeAutoIncrementPrimaryKeyForConcreteInheritance</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Checks if the current table uses concrete_inheritance, and if it's parent has an auto-increment primary key.</p>
+        <p>In this case, we need to define the
+populateFromArchive() method with the second parameter, in order to comply with
+php strict standards. The parameter is not used (PKs are inserted regardless if
+it is set to true or false).</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addSaveWithoutArchive">
+        <div class="location">at line 234</div>
+        <code>            public            string
+    <strong>addSaveWithoutArchive</strong>($builder)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$builder</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>the PHP code to be added to the builder</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addDeleteWithoutArchive">
+        <div class="location">at line 246</div>
+        <code>            public            string
+    <strong>addDeleteWithoutArchive</strong>($builder)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$builder</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>the PHP code to be added to the builder</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

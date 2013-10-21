@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>PropelSchemaReverseTask | </title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>PropelSchemaReverseTask</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PropelSchemaReverseTask</strong>        extends <abbr title="PDOTask">PDOTask</abbr></p>
+
+            <div class="description">
+            <p>This class generates an XML schema of an existing database from the database metadata.</p>
+            <p>
+</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>VALIDATORS_NONE</td>
+                <td class="last">
+                    <p><em>Zero bit for no validators</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>VALIDATORS_MAXLENGTH</td>
+                <td class="last">
+                    <p><em>Bit for maxLength validator</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>VALIDATORS_MAXVALUE</td>
+                <td class="last">
+                    <p><em>Bit for maxValue validator</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>VALIDATORS_TYPE</td>
+                <td class="last">
+                    <p><em>Bit for type validator</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>VALIDATORS_REQUIRED</td>
+                <td class="last">
+                    <p><em>Bit for required validator</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>VALIDATORS_UNIQUE</td>
+                <td class="last">
+                    <p><em>Bit for unique validator</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>VALIDATORS_ALL</td>
+                <td class="last">
+                    <p><em>Bit for all validators</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDbSchema">getDbSchema</a>()
+                    <p>Gets the (optional) schema name to use.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDbSchema">setDbSchema</a>(string $dbSchema)
+                    <p>Sets the name of a database schema to use (optional).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDbEncoding">getDbEncoding</a>($v)
+                    <p>Gets the database encoding.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDbEncoding">setDbEncoding</a>(string $v)
+                    <p>Sets the database encoding.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDatabaseName">getDatabaseName</a>()
+                    <p>Gets the datasource name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDatabaseName">setDatabaseName</a>(string $v)
+                    <p>Sets the datasource name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setOutputFile">setOutputFile</a>(<abbr title="PhingFile">PhingFile</abbr> $v)
+                    <p>Sets the output name for the XML file.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSamePhpName">setSamePhpName</a>(boolean $v)
+                    <p>Set whether to use the column name as phpName without any translation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setAddVendorInfo">setAddVendorInfo</a>(boolean $v)
+                    <p>Set whether to add vendor info to the schema.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_setAddValidators">setAddValidators</a>(string $v)
+                    <p>Sets set validator bitfield from a comma-separated list of "validator bit" names.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isSamePhpName">isSamePhpName</a>()
+                    <p>Whether to use the column name as phpName without any translation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_main">main</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getDbSchema">
+        <div class="location">at line 196</div>
+        <code>            public            string
+    <strong>getDbSchema</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the (optional) schema name to use.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDbSchema">
+        <div class="location">at line 206</div>
+        <code>            public            
+    <strong>setDbSchema</strong>(string $dbSchema)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the name of a database schema to use (optional).</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$dbSchema</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDbEncoding">
+        <div class="location">at line 216</div>
+        <code>            public            string
+    <strong>getDbEncoding</strong>($v)</code>
+    </h3>
+    <div class="details">
+        <p>Gets the database encoding.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$v</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDbEncoding">
+        <div class="location">at line 226</div>
+        <code>            public            
+    <strong>setDbEncoding</strong>(string $v)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the database encoding.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$v</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDatabaseName">
+        <div class="location">at line 236</div>
+        <code>            public            string
+    <strong>getDatabaseName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the datasource name.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDatabaseName">
+        <div class="location">at line 248</div>
+        <code>            public            
+    <strong>setDatabaseName</strong>(string $v)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the datasource name.</p>
+        <p>This will be used as the <database name=""> value in the generated schema.xml</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$v</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setOutputFile">
+        <div class="location">at line 258</div>
+        <code>            public            
+    <strong>setOutputFile</strong>(<abbr title="PhingFile">PhingFile</abbr> $v)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the output name for the XML file.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="PhingFile">PhingFile</abbr></td>
+                <td>$v</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSamePhpName">
+        <div class="location">at line 268</div>
+        <code>            public            
+    <strong>setSamePhpName</strong>(boolean $v)</code>
+    </h3>
+    <div class="details">
+        <p>Set whether to use the column name as phpName without any translation.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$v</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAddVendorInfo">
+        <div class="location">at line 278</div>
+        <code>            public            
+    <strong>setAddVendorInfo</strong>(boolean $v)</code>
+    </h3>
+    <div class="details">
+        <p>Set whether to add vendor info to the schema.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$v</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAddValidators">
+        <div class="location">at line 291</div>
+        <code>            public            void
+    <strong>setAddValidators</strong>(string $v)</code>
+    </h3>
+    <div class="details">
+        <p>Sets set validator bitfield from a comma-separated list of "validator bit" names.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$v</td>
+                <td>The comma-separated list of which validators to add.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="BuildException">BuildException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isSamePhpName">
+        <div class="location">at line 331</div>
+        <code>            public            boolean
+    <strong>isSamePhpName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Whether to use the column name as phpName without any translation.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_main">
+        <div class="location">at line 339</div>
+        <code>            public            
+    <strong>main</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="BuildException">BuildException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

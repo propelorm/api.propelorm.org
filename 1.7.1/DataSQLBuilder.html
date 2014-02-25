@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>DataSQLBuilder | </title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>DataSQLBuilder</h1>
+    </div>
+        <div class="content">
+                <p>abstract class    <strong>DataSQLBuilder</strong>        extends <a href="DataModelBuilder.html"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></p>
+
+            <div class="description">
+            <p>Baseclass for SQL data dump SQL building classes.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p>Creates new instance of DataModelBuilder subclass.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method___construct"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="PeerBuilder.html"><abbr title="PeerBuilder">PeerBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getPeerBuilder">getPeerBuilder</a>()
+                    <p>Returns new or existing Peer builder class for this table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getPeerBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Pluralizer.html"><abbr title="Pluralizer">Pluralizer</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getPluralizer">getPluralizer</a>()
+                    <p>Returns new or existing Pluralizer class.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getPluralizer"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="PeerBuilder.html"><abbr title="PeerBuilder">PeerBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getStubPeerBuilder">getStubPeerBuilder</a>()
+                    <p>Returns new or existing stub Peer builder class for this table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getStubPeerBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getObjectBuilder">getObjectBuilder</a>()
+                    <p>Returns new or existing Object builder class for this table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getObjectBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getStubObjectBuilder">getStubObjectBuilder</a>()
+                    <p>Returns new or existing stub Object builder class for this table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getStubObjectBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getQueryBuilder">getQueryBuilder</a>()
+                    <p>Returns new or existing Query builder class for this table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getQueryBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getStubQueryBuilder">getStubQueryBuilder</a>()
+                    <p>Returns new or existing stub Query builder class for this table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getStubQueryBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getTableMapBuilder">getTableMapBuilder</a>()
+                    <p>Returns new or existing Object builder class for this table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getTableMapBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getInterfaceBuilder">getInterfaceBuilder</a>()
+                    <p>Returns new or existing stub Interface builder class for this table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getInterfaceBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getMultiExtendObjectBuilder">getMultiExtendObjectBuilder</a>()
+                    <p>Returns new or existing stub child object builder class for this table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getMultiExtendObjectBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getNodeBuilder">getNodeBuilder</a>()
+                    <p>Returns new or existing node Object builder class for this table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getNodeBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="PeerBuilder.html"><abbr title="PeerBuilder">PeerBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getNodePeerBuilder">getNodePeerBuilder</a>()
+                    <p>Returns new or existing node Peer builder class for this table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getNodePeerBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getStubNodeBuilder">getStubNodeBuilder</a>()
+                    <p>Returns new or existing stub node Object builder class for this table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getStubNodeBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="PeerBuilder.html"><abbr title="PeerBuilder">PeerBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getStubNodePeerBuilder">getStubNodePeerBuilder</a>()
+                    <p>Returns new or existing stub node Peer builder class for this table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getStubNodePeerBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getNestedSetBuilder">getNestedSetBuilder</a>()
+                    <p>Returns new or existing nested set object builder class for this table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getNestedSetBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="PeerBuilder.html"><abbr title="PeerBuilder">PeerBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getNestedSetPeerBuilder">getNestedSetPeerBuilder</a>()
+                    <p>Returns new or existing nested set Peer builder class for this table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getNestedSetPeerBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="DataSQLBuilder.html"><abbr title="DataSQLBuilder">DataSQLBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getDataSQLBuilder">getDataSQLBuilder</a>()
+                    <p>Returns new or existing data sql builder class for this table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getDataSQLBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="DataModelBuilder.html"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getNewBuilder">getNewBuilder</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table, string $classname)
+                    <p>Gets a new data model builder class for specified table and classname.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getNewBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="PeerBuilder.html"><abbr title="PeerBuilder">PeerBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getNewPeerBuilder">getNewPeerBuilder</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p>Convenience method to return a NEW Peer class builder instance.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getNewPeerBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="PeerBuilder.html"><abbr title="PeerBuilder">PeerBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getNewStubPeerBuilder">getNewStubPeerBuilder</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p>Convenience method to return a NEW Peer stub class builder instance.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getNewStubPeerBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getNewObjectBuilder">getNewObjectBuilder</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p>Convenience method to return a NEW Object class builder instance.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getNewObjectBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getNewStubObjectBuilder">getNewStubObjectBuilder</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p>Convenience method to return a NEW Object stub class builder instance.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getNewStubObjectBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="QueryBuilder.html"><abbr title="QueryBuilder">QueryBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getNewQueryBuilder">getNewQueryBuilder</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p>Convenience method to return a NEW query class builder instance.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getNewQueryBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="QueryBuilder.html"><abbr title="QueryBuilder">QueryBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getNewStubQueryBuilder">getNewStubQueryBuilder</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p>Convenience method to return a NEW query stub class builder instance.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getNewStubQueryBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getNewQueryInheritanceBuilder">getNewQueryInheritanceBuilder</a>($child)
+                    <p>Returns new Query Inheritance builder class for this table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getNewQueryInheritanceBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getNewStubQueryInheritanceBuilder">getNewStubQueryInheritanceBuilder</a>($child)
+                    <p>Returns new stub Query Inheritance builder class for this table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getNewStubQueryInheritanceBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="GeneratorConfig.html"><abbr title="GeneratorConfig">GeneratorConfig</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getGeneratorConfig">getGeneratorConfig</a>()
+                    <p>Gets the GeneratorConfig object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getGeneratorConfig"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getBuildProperty">getBuildProperty</a>(string $name)
+                    <p>Get a specific [name transformed] build property.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getBuildProperty"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setGeneratorConfig">setGeneratorConfig</a>(<a href="GeneratorConfigInterface.html"><abbr title="GeneratorConfigInterface">GeneratorConfigInterface</abbr></a> $v)
+                    <p>Sets the GeneratorConfig object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_setGeneratorConfig"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setTable">setTable</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p>Sets the table for this builder.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_setTable"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Table.html"><abbr title="Table">Table</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getTable">getTable</a>()
+                    <p>Returns the current Table object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getTable"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="PropelPlatformInterface.html"><abbr title="PropelPlatformInterface">PropelPlatformInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getPlatform">getPlatform</a>()
+                    <p>Convenience method to returns the Platform class for this table (database).</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getPlatform"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPlatform">setPlatform</a>(<a href="PropelPlatformInterface.html"><abbr title="PropelPlatformInterface">PropelPlatformInterface</abbr></a> $platform)
+                    <p>Platform setter</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_setPlatform"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="Database.html"><abbr title="Database">Database</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getDatabase">getDatabase</a>()
+                    <p>Convenience method to returns the database for current table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getDatabase"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getWarnings">getWarnings</a>()
+                    <p>Gets array of warning messages.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_getWarnings"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_quoteIdentifier">quoteIdentifier</a>(string $text)
+                    <p>Wraps call to Platform->quoteIdentifier() with a check to see whether quoting is enabled.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_quoteIdentifier"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_prefixClassname">prefixClassname</a>($identifier)
+                    <p>Returns the name of the current class being built, with a possible prefix.</p>
+                </td>
+                <td><small>from&nbsp;<a href="DataModelBuilder.html#method_prefixClassname"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_reset">reset</a>()
+                    <p>Perform any reset between runs of this builder.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_getDatabaseStartSql">getDatabaseStartSql</a>()
+                    <p>Gets any SQL to place at the start of all the row inserts.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_getDatabaseEndSql">getDatabaseEndSql</a>()
+                    <p>Gets any SQL to place at the end of all the row inserts.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getTableStartSql">getTableStartSql</a>()
+                    <p>Gets any SQL to place before row inserts for a new table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getTableEndSql">getTableEndSql</a>()
+                    <p>Gets any SQL to place at the end of row inserts for a table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_buildRowSql">buildRowSql</a>(<a href="DataRow.html"><abbr title="DataRow">DataRow</abbr></a> $row)
+                    <p>The main method in this class, returns the SQL for INSERTing data into a row.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getTimestampSql">getTimestampSql</a>(string $value)
+                    <p>Gets a representation of a timestamp value suitable for use in a SQL statement.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">in <a href="DataModelBuilder.html#method___construct"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 180</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Creates new instance of DataModelBuilder subclass.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td>The Table which we are using to build [OM, DDL, etc.].</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPeerBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getPeerBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 190</div>
+        <code>            public            <a href="PeerBuilder.html"><abbr title="PeerBuilder">PeerBuilder</abbr></a>
+    <strong>getPeerBuilder</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns new or existing Peer builder class for this table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="PeerBuilder.html"><abbr title="PeerBuilder">PeerBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPluralizer">
+        <div class="location">in <a href="DataModelBuilder.html#method_getPluralizer"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 204</div>
+        <code>            public            <a href="Pluralizer.html"><abbr title="Pluralizer">Pluralizer</abbr></a>
+    <strong>getPluralizer</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns new or existing Pluralizer class.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Pluralizer.html"><abbr title="Pluralizer">Pluralizer</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getStubPeerBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getStubPeerBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 218</div>
+        <code>            public            <a href="PeerBuilder.html"><abbr title="PeerBuilder">PeerBuilder</abbr></a>
+    <strong>getStubPeerBuilder</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns new or existing stub Peer builder class for this table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="PeerBuilder.html"><abbr title="PeerBuilder">PeerBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getObjectBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getObjectBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 232</div>
+        <code>            public            <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+    <strong>getObjectBuilder</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns new or existing Object builder class for this table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getStubObjectBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getStubObjectBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 246</div>
+        <code>            public            <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+    <strong>getStubObjectBuilder</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns new or existing stub Object builder class for this table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getQueryBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getQueryBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 260</div>
+        <code>            public            <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+    <strong>getQueryBuilder</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns new or existing Query builder class for this table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getStubQueryBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getStubQueryBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 274</div>
+        <code>            public            <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+    <strong>getStubQueryBuilder</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns new or existing stub Query builder class for this table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTableMapBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getTableMapBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 288</div>
+        <code>            public            <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+    <strong>getTableMapBuilder</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns new or existing Object builder class for this table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getInterfaceBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getInterfaceBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 302</div>
+        <code>            public            <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+    <strong>getInterfaceBuilder</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns new or existing stub Interface builder class for this table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getMultiExtendObjectBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getMultiExtendObjectBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 316</div>
+        <code>            public            <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+    <strong>getMultiExtendObjectBuilder</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns new or existing stub child object builder class for this table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNodeBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getNodeBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 330</div>
+        <code>            public            <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+    <strong>getNodeBuilder</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns new or existing node Object builder class for this table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNodePeerBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getNodePeerBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 344</div>
+        <code>            public            <a href="PeerBuilder.html"><abbr title="PeerBuilder">PeerBuilder</abbr></a>
+    <strong>getNodePeerBuilder</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns new or existing node Peer builder class for this table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="PeerBuilder.html"><abbr title="PeerBuilder">PeerBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getStubNodeBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getStubNodeBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 358</div>
+        <code>            public            <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+    <strong>getStubNodeBuilder</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns new or existing stub node Object builder class for this table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getStubNodePeerBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getStubNodePeerBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 372</div>
+        <code>            public            <a href="PeerBuilder.html"><abbr title="PeerBuilder">PeerBuilder</abbr></a>
+    <strong>getStubNodePeerBuilder</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns new or existing stub node Peer builder class for this table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="PeerBuilder.html"><abbr title="PeerBuilder">PeerBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNestedSetBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getNestedSetBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 386</div>
+        <code>            public            <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+    <strong>getNestedSetBuilder</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns new or existing nested set object builder class for this table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNestedSetPeerBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getNestedSetPeerBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 400</div>
+        <code>            public            <a href="PeerBuilder.html"><abbr title="PeerBuilder">PeerBuilder</abbr></a>
+    <strong>getNestedSetPeerBuilder</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns new or existing nested set Peer builder class for this table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="PeerBuilder.html"><abbr title="PeerBuilder">PeerBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDataSQLBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getDataSQLBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 414</div>
+        <code>            public            <a href="DataSQLBuilder.html"><abbr title="DataSQLBuilder">DataSQLBuilder</abbr></a>
+    <strong>getDataSQLBuilder</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns new or existing data sql builder class for this table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="DataSQLBuilder.html"><abbr title="DataSQLBuilder">DataSQLBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNewBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getNewBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 431</div>
+        <code>            public            <a href="DataModelBuilder.html"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a>
+    <strong>getNewBuilder</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table, string $classname)</code>
+    </h3>
+    <div class="details">
+        <p>Gets a new data model builder class for specified table and classname.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$classname</td>
+                <td>The class of builder</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="DataModelBuilder.html"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNewPeerBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getNewPeerBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 449</div>
+        <code>            public            <a href="PeerBuilder.html"><abbr title="PeerBuilder">PeerBuilder</abbr></a>
+    <strong>getNewPeerBuilder</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Convenience method to return a NEW Peer class builder instance.</p>
+        <p>This is used very frequently from the peer and object builders to get
+a peer builder for a RELATED table.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="PeerBuilder.html"><abbr title="PeerBuilder">PeerBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNewStubPeerBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getNewStubPeerBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 464</div>
+        <code>            public            <a href="PeerBuilder.html"><abbr title="PeerBuilder">PeerBuilder</abbr></a>
+    <strong>getNewStubPeerBuilder</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Convenience method to return a NEW Peer stub class builder instance.</p>
+        <p>This is used from the peer and object builders to get
+a peer builder for a RELATED table.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="PeerBuilder.html"><abbr title="PeerBuilder">PeerBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNewObjectBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getNewObjectBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 479</div>
+        <code>            public            <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+    <strong>getNewObjectBuilder</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Convenience method to return a NEW Object class builder instance.</p>
+        <p>This is used very frequently from the peer and object builders to get
+an object builder for a RELATED table.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNewStubObjectBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getNewStubObjectBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 494</div>
+        <code>            public            <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+    <strong>getNewStubObjectBuilder</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Convenience method to return a NEW Object stub class builder instance.</p>
+        <p>This is used from the query builders to get
+an object builder for a RELATED table.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNewQueryBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getNewQueryBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 509</div>
+        <code>            public            <a href="QueryBuilder.html"><abbr title="QueryBuilder">QueryBuilder</abbr></a>
+    <strong>getNewQueryBuilder</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Convenience method to return a NEW query class builder instance.</p>
+        <p>This is used from the query builders to get
+a query builder for a RELATED table.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="QueryBuilder.html"><abbr title="QueryBuilder">QueryBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNewStubQueryBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getNewStubQueryBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 524</div>
+        <code>            public            <a href="QueryBuilder.html"><abbr title="QueryBuilder">QueryBuilder</abbr></a>
+    <strong>getNewStubQueryBuilder</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Convenience method to return a NEW query stub class builder instance.</p>
+        <p>This is used from the query builders to get
+a query builder for a RELATED table.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="QueryBuilder.html"><abbr title="QueryBuilder">QueryBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNewQueryInheritanceBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getNewQueryInheritanceBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 534</div>
+        <code>            public            <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+    <strong>getNewQueryInheritanceBuilder</strong>($child)</code>
+    </h3>
+    <div class="details">
+        <p>Returns new Query Inheritance builder class for this table.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$child</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNewStubQueryInheritanceBuilder">
+        <div class="location">in <a href="DataModelBuilder.html#method_getNewStubQueryInheritanceBuilder"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 547</div>
+        <code>            public            <a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a>
+    <strong>getNewStubQueryInheritanceBuilder</strong>($child)</code>
+    </h3>
+    <div class="details">
+        <p>Returns new stub Query Inheritance builder class for this table.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$child</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ObjectBuilder.html"><abbr title="ObjectBuilder">ObjectBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getGeneratorConfig">
+        <div class="location">in <a href="DataModelBuilder.html#method_getGeneratorConfig"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 560</div>
+        <code>            public            <a href="GeneratorConfig.html"><abbr title="GeneratorConfig">GeneratorConfig</abbr></a>
+    <strong>getGeneratorConfig</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the GeneratorConfig object.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="GeneratorConfig.html"><abbr title="GeneratorConfig">GeneratorConfig</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBuildProperty">
+        <div class="location">in <a href="DataModelBuilder.html#method_getBuildProperty"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 572</div>
+        <code>            public            string
+    <strong>getBuildProperty</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Get a specific [name transformed] build property.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setGeneratorConfig">
+        <div class="location">in <a href="DataModelBuilder.html#method_setGeneratorConfig"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 586</div>
+        <code>            public            
+    <strong>setGeneratorConfig</strong>(<a href="GeneratorConfigInterface.html"><abbr title="GeneratorConfigInterface">GeneratorConfigInterface</abbr></a> $v)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the GeneratorConfig object.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="GeneratorConfigInterface.html"><abbr title="GeneratorConfigInterface">GeneratorConfigInterface</abbr></a></td>
+                <td>$v</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setTable">
+        <div class="location">in <a href="DataModelBuilder.html#method_setTable"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 596</div>
+        <code>            public            
+    <strong>setTable</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the table for this builder.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTable">
+        <div class="location">in <a href="DataModelBuilder.html#method_getTable"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 606</div>
+        <code>            public            <a href="Table.html"><abbr title="Table">Table</abbr></a>
+    <strong>getTable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the current Table object.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPlatform">
+        <div class="location">in <a href="DataModelBuilder.html#method_getPlatform"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 616</div>
+        <code>            public            <a href="PropelPlatformInterface.html"><abbr title="PropelPlatformInterface">PropelPlatformInterface</abbr></a>
+    <strong>getPlatform</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Convenience method to returns the Platform class for this table (database).</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="PropelPlatformInterface.html"><abbr title="PropelPlatformInterface">PropelPlatformInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPlatform">
+        <div class="location">in <a href="DataModelBuilder.html#method_setPlatform"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 633</div>
+        <code>            public            
+    <strong>setPlatform</strong>(<a href="PropelPlatformInterface.html"><abbr title="PropelPlatformInterface">PropelPlatformInterface</abbr></a> $platform)</code>
+    </h3>
+    <div class="details">
+        <p>Platform setter</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelPlatformInterface.html"><abbr title="PropelPlatformInterface">PropelPlatformInterface</abbr></a></td>
+                <td>$platform</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDatabase">
+        <div class="location">in <a href="DataModelBuilder.html#method_getDatabase"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 643</div>
+        <code>            public            <a href="Database.html"><abbr title="Database">Database</abbr></a>
+    <strong>getDatabase</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Convenience method to returns the database for current table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="Database.html"><abbr title="Database">Database</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getWarnings">
+        <div class="location">in <a href="DataModelBuilder.html#method_getWarnings"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 665</div>
+        <code>            public            array
+    <strong>getWarnings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets array of warning messages.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>string[]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_quoteIdentifier">
+        <div class="location">in <a href="DataModelBuilder.html#method_quoteIdentifier"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 681</div>
+        <code>            public            string
+    <strong>quoteIdentifier</strong>(string $text)</code>
+    </h3>
+    <div class="details">
+        <p>Wraps call to Platform->quoteIdentifier() with a check to see whether quoting is enabled.</p>
+        <p>All subclasses should call this quoteIdentifier() method rather than calling the Platform
+method directly.  This method is used by both DataSQLBuilder and DDLBuilder, and potentially
+in the OM builders also, which is why it is defined in this class.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td>The text to quote.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>Quoted text.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_prefixClassname">
+        <div class="location">in <a href="DataModelBuilder.html#method_prefixClassname"><abbr title="DataModelBuilder">DataModelBuilder</abbr></a> at line 696</div>
+        <code>            public            string
+    <strong>prefixClassname</strong>($identifier)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the name of the current class being built, with a possible prefix.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$identifier</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>OMBuilder#getClassname()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_reset">
+        <div class="location">at line 28</div>
+        <code>        static    public            
+    <strong>reset</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Perform any reset between runs of this builder.</p>
+        <p>This can be used, for example, to clear any stored start/end SQL.</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDatabaseStartSql">
+        <div class="location">at line 38</div>
+        <code>        static    public            string
+    <strong>getDatabaseStartSql</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets any SQL to place at the start of all the row inserts.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDatabaseEndSql">
+        <div class="location">at line 48</div>
+        <code>        static    public            string
+    <strong>getDatabaseEndSql</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets any SQL to place at the end of all the row inserts.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTableStartSql">
+        <div class="location">at line 58</div>
+        <code>            public            string
+    <strong>getTableStartSql</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets any SQL to place before row inserts for a new table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTableEndSql">
+        <div class="location">at line 68</div>
+        <code>            public            string
+    <strong>getTableEndSql</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets any SQL to place at the end of row inserts for a table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_buildRowSql">
+        <div class="location">at line 80</div>
+        <code>            public            string
+    <strong>buildRowSql</strong>(<a href="DataRow.html"><abbr title="DataRow">DataRow</abbr></a> $row)</code>
+    </h3>
+    <div class="details">
+        <p>The main method in this class, returns the SQL for INSERTing data into a row.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="DataRow.html"><abbr title="DataRow">DataRow</abbr></a></td>
+                <td>$row</td>
+                <td>The row to process.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTimestampSql">
+        <div class="location">at line 273</div>
+        <code>            public            string
+    <strong>getTimestampSql</strong>(string $value)</code>
+    </h3>
+    <div class="details">
+        <p>Gets a representation of a timestamp value suitable for use in a SQL statement.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

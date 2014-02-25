@@ -1,0 +1,2188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>TableMap | </title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>TableMap</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>TableMap</strong></p>
+
+            <div class="description">
+            <p>TableMap is used to model a table in a database.</p>
+            <p><h2>GENERAL NOTE</h2>
+
+<p>The propel.map classes are abstract building-block classes for modeling
+the database at runtime.  These classes are similar (a lite version) to the
+propel.engine.database.model classes, which are build-time modeling classes.
+These classes in themselves do not do any database metadata lookups.</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>($name = null, $dbMap = null)
+                    <p>Construct a new TableMap.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_initialize">initialize</a>()
+                    <p>Initialize the TableMap to build columns, relations, etc This method should be overridden by descendents</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDatabaseMap">setDatabaseMap</a>(<a href="DatabaseMap.html"><abbr title="DatabaseMap">DatabaseMap</abbr></a> $dbMap)
+                    <p>Set the DatabaseMap containing this TableMap.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="DatabaseMap.html"><abbr title="DatabaseMap">DatabaseMap</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getDatabaseMap">getDatabaseMap</a>()
+                    <p>Get the DatabaseMap containing this TableMap.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setName">setName</a>(string $name)
+                    <p>Set the name of the Table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getName">getName</a>()
+                    <p>Get the name of the Table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPhpName">setPhpName</a>(string $phpName)
+                    <p>Set the PHP name of the Table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPhpName">getPhpName</a>()
+                    <p>Get the PHP name of the Table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setClassname">setClassname</a>(string $classname)
+                    <p>Set the Classname of the Table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getClassname">getClassname</a>()
+                    <p>Get the Classname of the Propel Class belonging to this table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPeerClassname">getPeerClassname</a>()
+                    <p>Get the Peer Classname of the Propel Class belonging to this table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPackage">setPackage</a>(string $package)
+                    <p>Set the Package of the Table</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPackage">getPackage</a>()
+                    <p>Get the Package of the table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setUseIdGenerator">setUseIdGenerator</a>(boolean $bit)
+                    <p>Set whether or not to use Id generator for primary key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isUseIdGenerator">isUseIdGenerator</a>()
+                    <p>Whether to use Id generator for primary key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSingleTableInheritance">setSingleTableInheritance</a>(boolean $bit)
+                    <p>Set whether or not to this table uses single table inheritance</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isSingleTableInheritance">isSingleTableInheritance</a>()
+                    <p>Whether this table uses single table inheritance</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPrimaryKeyMethodInfo">setPrimaryKeyMethodInfo</a>(<abbr title="$pkInfo">$pkInfo</abbr> $pkInfo)
+                    <p>Sets the name of the sequence used to generate a key</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="An">An</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getPrimaryKeyMethodInfo">getPrimaryKeyMethodInfo</a>()
+                    <p>Get the name of the sequence used to generate a primary key</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addColumn">addColumn</a>($name, $phpName, $type, $isNotNull = false, $size = null, $defaultValue = null, $pk = false, $fkTable = null, $fkColumn = null)
+                    <p>Add a column to the table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addConfiguredColumn">addConfiguredColumn</a>(<a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a> $cmap)
+                    <p>Add a pre-created column to this table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasColumn">hasColumn</a>(mixed $name, boolean $normalize = true)
+                    <p>Does this table contain the specified column?</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getColumn">getColumn</a>(string $name, boolean $normalize = true)
+                    <p>Get a ColumnMap for the table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasColumnByPhpName">hasColumnByPhpName</a>(mixed $phpName)
+                    <p>Does this table contain the specified column?</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnByPhpName">getColumnByPhpName</a>(string $phpName)
+                    <p>Get a ColumnMap for the table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_hasColumnByInsensitiveCase">hasColumnByInsensitiveCase</a>($colName)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnByInsensitiveCase">getColumnByInsensitiveCase</a>($colName)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getColumns">getColumns</a>()
+                    <p>Get a ColumnMap[] of the columns in this table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addPrimaryKey">addPrimaryKey</a>(string $columnName, string $phpName, string $type, boolean $isNotNull = false, int $size = null, string $defaultValue = null)
+                    <p>Add a primary key column to this Table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addForeignKey">addForeignKey</a>(string $columnName, string $phpName, string $type, string $fkTable, string $fkColumn, boolean $isNotNull = false, int $size, string $defaultValue = null)
+                    <p>Add a foreign key column to the table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addForeignPrimaryKey">addForeignPrimaryKey</a>(string $columnName, string $phpName, string $type, string $fkTable, string $fkColumn, boolean $isNotNull = false, int $size, string $defaultValue = null)
+                    <p>Add a foreign primary key column to the table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isCrossRef">isCrossRef</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setIsCrossRef">setIsCrossRef</a>(boolean $isCrossRef)
+                    <p>set the isCrossRef</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getPrimaryKeys">getPrimaryKeys</a>()
+                    <p>Returns array of ColumnMap objects that make up the primary key for this table</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getForeignKeys">getForeignKeys</a>()
+                    <p>Returns array of ColumnMap objects that are foreign keys for this table</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_addValidator">addValidator</a>(string $columnName, string $name, string $classname, string $value, string $message)
+                    <p>Add a validator to a table's column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_buildRelations">buildRelations</a>()
+                    <p>Build relations Relations are lazy loaded for performance reasons This method should be overridden by descendents</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="RelationMap.html"><abbr title="RelationMap">RelationMap</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addRelation">addRelation</a>(string $name, string $tablePhpName, integer $type, array $columnMapping = array(), string $onDelete = null, string $onUpdate = null, string $pluralName = null)
+                    <p>Adds a RelationMap to the table</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasRelation">hasRelation</a>(String $name)
+                    <p>Gets a RelationMap of the table by relation name This method will build the relations if they are not built yet</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="RelationMap.html"><abbr title="RelationMap">RelationMap</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getRelation">getRelation</a>(String $name)
+                    <p>Gets a RelationMap of the table by relation name This method will build the relations if they are not built yet</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="RelationMap.html"><abbr title="RelationMap">RelationMap</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getRelations">getRelations</a>()
+                    <p>Gets the RelationMap objects of the table This method will build the relations if they are not built yet</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getBehaviors">getBehaviors</a>()
+                    <p>Gets the list of behaviors registered for this table</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasPrimaryStringColumn">hasPrimaryStringColumn</a>()
+                    <p>Does this table has a primaryString column?</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_getPrimaryStringColumn">getPrimaryStringColumn</a>()
+                    <p>Gets the ColumnMap for the primary string column.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_containsColumn">containsColumn</a>(mixed $name, boolean $normalize = true)
+                    <p>Does this table contain the specified column?</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getPrimaryKeyColumns">getPrimaryKeyColumns</a>()
+                    <p>Returns array of ColumnMap objects that make up the primary key for this table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPrefix">getPrefix</a>()
+                    <p>Get table prefix name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_setPrefix">setPrefix</a>(string $prefix)
+                    <p>Set table prefix name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_removeUnderScores">removeUnderScores</a>(string $data)
+                    <p>Removes the PREFIX, removes the underscores and makes first letter caps.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 101</div>
+        <code>            public            
+    <strong>__construct</strong>($name = null, $dbMap = null)</code>
+    </h3>
+    <div class="details">
+        <p>Construct a new TableMap.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$dbMap</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_initialize">
+        <div class="location">at line 116</div>
+        <code>            public            
+    <strong>initialize</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Initialize the TableMap to build columns, relations, etc This method should be overridden by descendents</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDatabaseMap">
+        <div class="location">at line 125</div>
+        <code>            public            
+    <strong>setDatabaseMap</strong>(<a href="DatabaseMap.html"><abbr title="DatabaseMap">DatabaseMap</abbr></a> $dbMap)</code>
+    </h3>
+    <div class="details">
+        <p>Set the DatabaseMap containing this TableMap.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="DatabaseMap.html"><abbr title="DatabaseMap">DatabaseMap</abbr></a></td>
+                <td>$dbMap</td>
+                <td>A DatabaseMap.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDatabaseMap">
+        <div class="location">at line 135</div>
+        <code>            public            <a href="DatabaseMap.html"><abbr title="DatabaseMap">DatabaseMap</abbr></a>
+    <strong>getDatabaseMap</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the DatabaseMap containing this TableMap.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="DatabaseMap.html"><abbr title="DatabaseMap">DatabaseMap</abbr></a></td>
+            <td>A DatabaseMap.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setName">
+        <div class="location">at line 145</div>
+        <code>            public            
+    <strong>setName</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Set the name of the Table.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The name of the table.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getName">
+        <div class="location">at line 155</div>
+        <code>            public            string
+    <strong>getName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the name of the Table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>A String with the name of the table.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPhpName">
+        <div class="location">at line 165</div>
+        <code>            public            
+    <strong>setPhpName</strong>(string $phpName)</code>
+    </h3>
+    <div class="details">
+        <p>Set the PHP name of the Table.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$phpName</td>
+                <td>The PHP Name for this table</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPhpName">
+        <div class="location">at line 175</div>
+        <code>            public            string
+    <strong>getPhpName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the PHP name of the Table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>A String with the name of the table.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setClassname">
+        <div class="location">at line 186</div>
+        <code>            public            
+    <strong>setClassname</strong>(string $classname)</code>
+    </h3>
+    <div class="details">
+        <p>Set the Classname of the Table.</p>
+        <p>Could be useful for calling
+Peer and Object methods dynamically.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$classname</td>
+                <td>The Classname</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getClassname">
+        <div class="location">at line 196</div>
+        <code>            public            string
+    <strong>getClassname</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the Classname of the Propel Class belonging to this table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPeerClassname">
+        <div class="location">at line 206</div>
+        <code>            public            string
+    <strong>getPeerClassname</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the Peer Classname of the Propel Class belonging to this table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPackage">
+        <div class="location">at line 216</div>
+        <code>            public            
+    <strong>setPackage</strong>(string $package)</code>
+    </h3>
+    <div class="details">
+        <p>Set the Package of the Table</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$package</td>
+                <td>The Package</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPackage">
+        <div class="location">at line 226</div>
+        <code>            public            string
+    <strong>getPackage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the Package of the table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setUseIdGenerator">
+        <div class="location">at line 236</div>
+        <code>            public            
+    <strong>setUseIdGenerator</strong>(boolean $bit)</code>
+    </h3>
+    <div class="details">
+        <p>Set whether or not to use Id generator for primary key.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$bit</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isUseIdGenerator">
+        <div class="location">at line 246</div>
+        <code>            public            boolean
+    <strong>isUseIdGenerator</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Whether to use Id generator for primary key.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSingleTableInheritance">
+        <div class="location">at line 256</div>
+        <code>            public            
+    <strong>setSingleTableInheritance</strong>(boolean $bit)</code>
+    </h3>
+    <div class="details">
+        <p>Set whether or not to this table uses single table inheritance</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$bit</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isSingleTableInheritance">
+        <div class="location">at line 266</div>
+        <code>            public            boolean
+    <strong>isSingleTableInheritance</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Whether this table uses single table inheritance</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPrimaryKeyMethodInfo">
+        <div class="location">at line 276</div>
+        <code>            public            
+    <strong>setPrimaryKeyMethodInfo</strong>(<abbr title="$pkInfo">$pkInfo</abbr> $pkInfo)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the name of the sequence used to generate a key</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="$pkInfo">$pkInfo</abbr></td>
+                <td>$pkInfo</td>
+                <td>information needed to generate a key</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPrimaryKeyMethodInfo">
+        <div class="location">at line 286</div>
+        <code>            public            <abbr title="An">An</abbr>
+    <strong>getPrimaryKeyMethodInfo</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the name of the sequence used to generate a primary key</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="An">An</abbr></td>
+            <td>Object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addColumn">
+        <div class="location">at line 306</div>
+        <code>            public            <a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a>
+    <strong>addColumn</strong>($name, $phpName, $type, $isNotNull = false, $size = null, $defaultValue = null, $pk = false, $fkTable = null, $fkColumn = null)</code>
+    </h3>
+    <div class="details">
+        <p>Add a column to the table.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$phpName</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$type</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$isNotNull</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$size</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$defaultValue</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$pk</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fkTable</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fkColumn</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a></td>
+            <td>The newly created column.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addConfiguredColumn">
+        <div class="location">at line 340</div>
+        <code>            public            <a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a>
+    <strong>addConfiguredColumn</strong>(<a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a> $cmap)</code>
+    </h3>
+    <div class="details">
+        <p>Add a pre-created column to this table.</p>
+        <p>It will replace any
+existing column.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a></td>
+                <td>$cmap</td>
+                <td>A ColumnMap.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a></td>
+            <td>The added column map.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasColumn">
+        <div class="location">at line 355</div>
+        <code>            public            boolean
+    <strong>hasColumn</strong>(mixed $name, boolean $normalize = true)</code>
+    </h3>
+    <div class="details">
+        <p>Does this table contain the specified column?</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$name</td>
+                <td>name of the column or ColumnMap instance</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$normalize</td>
+                <td>Normalize the column name (if column name not like FIRST_NAME)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if the table contains the column.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumn">
+        <div class="location">at line 375</div>
+        <code>            public            <a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a>
+    <strong>getColumn</strong>(string $name, boolean $normalize = true)</code>
+    </h3>
+    <div class="details">
+        <p>Get a ColumnMap for the table.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>A String with the name of the table.</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$normalize</td>
+                <td>Normalize the column name (if column name not like FIRST_NAME)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a></td>
+            <td>A ColumnMap.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td>if the column is undefined</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasColumnByPhpName">
+        <div class="location">at line 394</div>
+        <code>            public            boolean
+    <strong>hasColumnByPhpName</strong>(mixed $phpName)</code>
+    </h3>
+    <div class="details">
+        <p>Does this table contain the specified column?</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$phpName</td>
+                <td>name of the column</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if the table contains the column.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnByPhpName">
+        <div class="location">at line 407</div>
+        <code>            public            <a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a>
+    <strong>getColumnByPhpName</strong>(string $phpName)</code>
+    </h3>
+    <div class="details">
+        <p>Get a ColumnMap for the table.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$phpName</td>
+                <td>A String with the name of the table.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a></td>
+            <td>A ColumnMap.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td>if the column is undefined</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasColumnByInsensitiveCase">
+        <div class="location">at line 416</div>
+        <code>            public            
+    <strong>hasColumnByInsensitiveCase</strong>($colName)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$colName</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnByInsensitiveCase">
+        <div class="location">at line 421</div>
+        <code>            public            
+    <strong>getColumnByInsensitiveCase</strong>($colName)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$colName</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumns">
+        <div class="location">at line 436</div>
+        <code>            public            <a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a>[]
+    <strong>getColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a ColumnMap[] of the columns in this table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a>[]</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addPrimaryKey">
+        <div class="location">at line 453</div>
+        <code>            public            <a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a>
+    <strong>addPrimaryKey</strong>(string $columnName, string $phpName, string $type, boolean $isNotNull = false, int $size = null, string $defaultValue = null)</code>
+    </h3>
+    <div class="details">
+        <p>Add a primary key column to this Table.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$columnName</td>
+                <td>A string with the column name.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$phpName</td>
+                <td>A string with the php name.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>A string specifying the Propel type.</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$isNotNull</td>
+                <td>Whether column does not allow NULL values.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$size</td>
+                <td>An int specifying the size.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$defaultValue</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a></td>
+            <td>Newly added PrimaryKey column.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addForeignKey">
+        <div class="location">at line 472</div>
+        <code>            public            <a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a>
+    <strong>addForeignKey</strong>(string $columnName, string $phpName, string $type, string $fkTable, string $fkColumn, boolean $isNotNull = false, int $size, string $defaultValue = null)</code>
+    </h3>
+    <div class="details">
+        <p>Add a foreign key column to the table.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$columnName</td>
+                <td>A String with the column name.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$phpName</td>
+                <td>A string with the php name.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>A string specifying the Propel type.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$fkTable</td>
+                <td>A String with the foreign key table name.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$fkColumn</td>
+                <td>A String with the foreign key column name.</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$isNotNull</td>
+                <td>Whether column does not allow NULL values.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$size</td>
+                <td>An int specifying the size.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$defaultValue</td>
+                <td>The default value for this column.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a></td>
+            <td>Newly added ForeignKey column.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addForeignPrimaryKey">
+        <div class="location">at line 491</div>
+        <code>            public            <a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a>
+    <strong>addForeignPrimaryKey</strong>(string $columnName, string $phpName, string $type, string $fkTable, string $fkColumn, boolean $isNotNull = false, int $size, string $defaultValue = null)</code>
+    </h3>
+    <div class="details">
+        <p>Add a foreign primary key column to the table.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$columnName</td>
+                <td>A String with the column name.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$phpName</td>
+                <td>A string with the php name.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>A string specifying the Propel type.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$fkTable</td>
+                <td>A String with the foreign key table name.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$fkColumn</td>
+                <td>A String with the foreign key column name.</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$isNotNull</td>
+                <td>Whether column does not allow NULL values.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$size</td>
+                <td>An int specifying the size.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$defaultValue</td>
+                <td>The default value for this column.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a></td>
+            <td>Newly created foreign pkey column.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isCrossRef">
+        <div class="location">at line 499</div>
+        <code>            public            boolean
+    <strong>isCrossRef</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true if the table is a many to many</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setIsCrossRef">
+        <div class="location">at line 509</div>
+        <code>            public            
+    <strong>setIsCrossRef</strong>(boolean $isCrossRef)</code>
+    </h3>
+    <div class="details">
+        <p>set the isCrossRef</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$isCrossRef</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPrimaryKeys">
+        <div class="location">at line 519</div>
+        <code>            public            array
+    <strong>getPrimaryKeys</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns array of ColumnMap objects that make up the primary key for this table</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>ColumnMap[]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getForeignKeys">
+        <div class="location">at line 529</div>
+        <code>            public            array
+    <strong>getForeignKeys</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns array of ColumnMap objects that are foreign keys for this table</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>ColumnMap[]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addValidator">
+        <div class="location">at line 545</div>
+        <code>            public            void
+    <strong>addValidator</strong>(string $columnName, string $name, string $classname, string $value, string $message)</code>
+    </h3>
+    <div class="details">
+        <p>Add a validator to a table's column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$columnName</td>
+                <td>The name of the validator's column</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The rule name of this validator</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$classname</td>
+                <td>The dot-path name of class to use (e.g. myapp.propel.MyValidator)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>The error message which is returned on invalid values</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_buildRelations">
+        <div class="location">at line 567</div>
+        <code>            public            
+    <strong>buildRelations</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Build relations Relations are lazy loaded for performance reasons This method should be overridden by descendents</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addRelation">
+        <div class="location">at line 584</div>
+        <code>            public            <a href="RelationMap.html"><abbr title="RelationMap">RelationMap</abbr></a>
+    <strong>addRelation</strong>(string $name, string $tablePhpName, integer $type, array $columnMapping = array(), string $onDelete = null, string $onUpdate = null, string $pluralName = null)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a RelationMap to the table</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The relation name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tablePhpName</td>
+                <td>The related table name</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$type</td>
+                <td>The relation type (either RelationMap::MANY<em>TO</em>ONE, RelationMap::ONE<em>TO</em>MANY, or RelationMAp::ONE<em>TO</em>ONE)</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$columnMapping</td>
+                <td>An associative array mapping column names (local => foreign)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$onDelete</td>
+                <td>SQL behavior upon deletion ('SET NULL', 'CASCADE', ...)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$onUpdate</td>
+                <td>SQL behavior upon update ('SET NULL', 'CASCADE', ...)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$pluralName</td>
+                <td>Optional plural name for *_TO_MANY relationships</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="RelationMap.html"><abbr title="RelationMap">RelationMap</abbr></a></td>
+            <td>the built RelationMap object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasRelation">
+        <div class="location">at line 624</div>
+        <code>            public            boolean
+    <strong>hasRelation</strong>(String $name)</code>
+    </h3>
+    <div class="details">
+        <p>Gets a RelationMap of the table by relation name This method will build the relations if they are not built yet</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>String</td>
+                <td>$name</td>
+                <td>The relation name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true if the relation exists</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRelation">
+        <div class="location">at line 638</div>
+        <code>            public            <a href="RelationMap.html"><abbr title="RelationMap">RelationMap</abbr></a>
+    <strong>getRelation</strong>(String $name)</code>
+    </h3>
+    <div class="details">
+        <p>Gets a RelationMap of the table by relation name This method will build the relations if they are not built yet</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>String</td>
+                <td>$name</td>
+                <td>The relation name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="RelationMap.html"><abbr title="RelationMap">RelationMap</abbr></a></td>
+            <td>The relation object</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td>When called on an inexistent relation</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRelations">
+        <div class="location">at line 653</div>
+        <code>            public            <a href="RelationMap.html"><abbr title="RelationMap">RelationMap</abbr></a>[]
+    <strong>getRelations</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the RelationMap objects of the table This method will build the relations if they are not built yet</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="RelationMap.html"><abbr title="RelationMap">RelationMap</abbr></a>[]</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBehaviors">
+        <div class="location">at line 669</div>
+        <code>            public            array
+    <strong>getBehaviors</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the list of behaviors registered for this table</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasPrimaryStringColumn">
+        <div class="location">at line 679</div>
+        <code>            public            boolean
+    <strong>hasPrimaryStringColumn</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Does this table has a primaryString column?</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if the table has a primaryString column.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPrimaryStringColumn">
+        <div class="location">at line 689</div>
+        <code>            public            <a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a>|null
+    <strong>getPrimaryStringColumn</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the ColumnMap for the primary string column.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a>|null</td>
+            <td>The primary string column, null if none given.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_containsColumn">
+        <div class="location">at line 712</div>
+        <code>            public            boolean
+    <strong>containsColumn</strong>(mixed $name, boolean $normalize = true)</code>
+    </h3>
+    <div class="details">
+        <p>Does this table contain the specified column?</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$name</td>
+                <td>name of the column or ColumnMap instance</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$normalize</td>
+                <td>Normalize the column name (if column name not like FIRST_NAME)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if the table contains the column.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPrimaryKeyColumns">
+        <div class="location">at line 738</div>
+        <code>            public            <a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a>[]
+    <strong>getPrimaryKeyColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns array of ColumnMap objects that make up the primary key for this table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="ColumnMap.html"><abbr title="ColumnMap">ColumnMap</abbr></a>[]</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPrefix">
+        <div class="location">at line 758</div>
+        <code>            public            string
+    <strong>getPrefix</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get table prefix name.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>A String with the prefix.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPrefix">
+        <div class="location">at line 773</div>
+        <code>            public            void
+    <strong>setPrefix</strong>(string $prefix)</code>
+    </h3>
+    <div class="details">
+        <p>Set table prefix name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td>The prefix for the table name (ie: SCARAB for SCARAB_PROJECT).</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeUnderScores">
+        <div class="location">at line 818</div>
+        <code>final            public            string
+    <strong>removeUnderScores</strong>(string $data)</code>
+    </h3>
+    <div class="details">
+        <p>Removes the PREFIX, removes the underscores and makes first letter caps.</p>
+        <p>SCARAB<em>FOO</em>BAR becomes FooBar.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>A String with data processed.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Propel | </title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>Propel</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Propel</strong></p>
+
+            <div class="description">
+            <p>Propel's main resource pool and initialization &amp; configuration class.</p>
+            <p>This static class is used to handle Propel initialization and to maintain all of the
+open database connections and instantiated database maps.</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>VERSION</td>
+                <td class="last">
+                    <p><em>The Propel version.</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAULT_NAME</td>
+                <td class="last">
+                    <p><em>A constant for <code>default</code>.</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LOG_EMERG</td>
+                <td class="last">
+                    <p><em>A constant defining 'System is unusuable' logging level</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LOG_ALERT</td>
+                <td class="last">
+                    <p><em>A constant defining 'Immediate action required' logging level</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LOG_CRIT</td>
+                <td class="last">
+                    <p><em>A constant defining 'Critical conditions' logging level</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LOG_ERR</td>
+                <td class="last">
+                    <p><em>A constant defining 'Error conditions' logging level</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LOG_WARNING</td>
+                <td class="last">
+                    <p><em>A constant defining 'Warning conditions' logging level</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LOG_NOTICE</td>
+                <td class="last">
+                    <p><em>A constant defining 'Normal but significant' logging level</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LOG_INFO</td>
+                <td class="last">
+                    <p><em>A constant defining 'Informational' logging level</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LOG_DEBUG</td>
+                <td class="last">
+                    <p><em>A constant defining 'Debug-level messages' logging level</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CLASS_PDO</td>
+                <td class="last">
+                    <p><em>The class name for a PDO object.</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CLASS_PROPEL_PDO</td>
+                <td class="last">
+                    <p><em>The class name for a PropelPDO object.</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CLASS_DEBUG_PDO</td>
+                <td class="last">
+                    <p><em>The class name for a DebugPDO object.</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONNECTION_READ</td>
+                <td class="last">
+                    <p><em>Constant used to request a READ connection (applies to replication).</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONNECTION_WRITE</td>
+                <td class="last">
+                    <p><em>Constant used to request a WRITE connection (applies to replication).</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_initialize">initialize</a>()
+                    <p>Initializes Propel</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_configure">configure</a>(string $configFile)
+                    <p>Configure Propel a PHP (array) config file.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_init">init</a>(string $c)
+                    <p>Initialization of Propel a PHP (array) configuration file.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;bool
+                </td>
+                <td class="last">
+                    <a href="#method_isInit">isInit</a>()
+                    <p>Determine whether Propel has already been initialized.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_setConfiguration">setConfiguration</a>(mixed $c)
+                    <p>Sets the configuration for Propel and all dependencies.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getConfiguration">getConfiguration</a>(int $type = PropelConfiguration::TYPE_ARRAY)
+                    <p>Get the configuration for this component.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_setLogger">setLogger</a>(object $logger)
+                    <p>Override the configured logger.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;bool
+                </td>
+                <td class="last">
+                    <a href="#method_hasLogger">hasLogger</a>()
+                    <p>Returns true if a logger, for example PEAR::Log, has been configured, otherwise false.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;object
+                </td>
+                <td class="last">
+                    <a href="#method_logger">logger</a>()
+                    <p>Get the configured logger.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;bool
+                </td>
+                <td class="last">
+                    <a href="#method_log">log</a>(string $message, string $level = self::LOG_DEBUG)
+                    <p>Logs a message If a logger has been configured, the logger will be used, otherwrise the logging message will be discarded without any further action</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<a href="DatabaseMap.html"><abbr title="DatabaseMap">DatabaseMap</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getDatabaseMap">getDatabaseMap</a>(string $name = null)
+                    <p>Returns the database map information.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_setDatabaseMap">setDatabaseMap</a>(string $name, <a href="DatabaseMap.html"><abbr title="DatabaseMap">DatabaseMap</abbr></a> $map)
+                    <p>Sets the database map object to use for specified datasource.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_setForceMasterConnection">setForceMasterConnection</a>(boolean $bit)
+                    <p>For replication, set whether to always force the use of a master connection.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;boolean
+                </td>
+                <td class="last">
+                    <a href="#method_getForceMasterConnection">getForceMasterConnection</a>()
+                    <p>For replication, whether to always force the use of a master connection.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_setConnection">setConnection</a>(string $name, <a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con, string $mode = Propel::CONNECTION_WRITE)
+                    <p>Sets a Connection for specified datasource name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getConnection">getConnection</a>(string $name = null, string $mode = Propel::CONNECTION_WRITE)
+                    <p>Gets an already-opened PDO connection or opens a new one for passed-in db name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getMasterConnection">getMasterConnection</a>(string $name)
+                    <p>Gets an already-opened write PDO connection or opens a new one for passed-in db name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getSlaveConnection">getSlaveConnection</a>(string $name)
+                    <p>Gets an already-opened read PDO connection or opens a new one for passed-in db name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_initConnection">initConnection</a>(array $conparams, string $name, string $defaultClass = Propel::CLASS_PROPEL_PDO)
+                    <p>Opens a new PDO connection for passed-in db name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<a href="DBAdapter.html"><abbr title="DBAdapter">DBAdapter</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getDB">getDB</a>(string $name = null)
+                    <p>Returns database adapter for a specific datasource.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_setDB">setDB</a>(string $name, <a href="DBAdapter.html"><abbr title="DBAdapter">DBAdapter</abbr></a> $adapter)
+                    <p>Sets a database adapter for specified datasource.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_getDefaultDB">getDefaultDB</a>()
+                    <p>Returns the name of the default database.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_close">close</a>()
+                    <p>Closes any associated resource handles.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;boolean
+                </td>
+                <td class="last">
+                    <a href="#method_autoload">autoload</a>(string $className)
+                    <p>Autoload function for loading propel dependencies.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_initBaseDir">initBaseDir</a>()
+                    <p>Initialize the base directory for the autoloader.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_importClass">importClass</a>($path)
+                    <p>Include once a file specified in DOT notation and return unqualified classname.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_setDatabaseMapClass">setDatabaseMapClass</a>(string $name)
+                    <p>Set your own class-name for Database-Mapping.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;boolean
+                </td>
+                <td class="last">
+                    <a href="#method_disableInstancePooling">disableInstancePooling</a>()
+                    <p>Disable instance pooling.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;boolean
+                </td>
+                <td class="last">
+                    <a href="#method_enableInstancePooling">enableInstancePooling</a>()
+                    <p>Enable instance pooling (enabled by default).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isInstancePoolingEnabled">isInstancePoolingEnabled</a>()
+                    <p>the instance pooling behaviour.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_initialize">
+        <div class="location">at line 262</div>
+        <code>        static    public            
+    <strong>initialize</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Initializes Propel</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td>Any exceptions caught during processing will be rethrown wrapped into a PropelException.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_configure">
+        <div class="location">at line 300</div>
+        <code>        static    public            
+    <strong>configure</strong>(string $configFile)</code>
+    </h3>
+    <div class="details">
+        <p>Configure Propel a PHP (array) config file.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$configFile</td>
+                <td>Path (absolute or relative to include_path) to config file.</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td>If configuration file cannot be opened. (E_WARNING probably will also be raised by PHP)</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_init">
+        <div class="location">at line 336</div>
+        <code>        static    public            
+    <strong>init</strong>(string $c)</code>
+    </h3>
+    <div class="details">
+        <p>Initialization of Propel a PHP (array) configuration file.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$c</td>
+                <td>The Propel configuration file path.</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td>Any exceptions caught during processing will be rethrown wrapped into a PropelException.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isInit">
+        <div class="location">at line 347</div>
+        <code>        static    public            bool
+    <strong>isInit</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Determine whether Propel has already been initialized.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>True if Propel is already initialized.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setConfiguration">
+        <div class="location">at line 357</div>
+        <code>        static    public            
+    <strong>setConfiguration</strong>(mixed $c)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the configuration for Propel and all dependencies.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$c</td>
+                <td>The Configuration (array or PropelConfiguration)</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConfiguration">
+        <div class="location">at line 379</div>
+        <code>        static    public            mixed
+    <strong>getConfiguration</strong>(int $type = PropelConfiguration::TYPE_ARRAY)</code>
+    </h3>
+    <div class="details">
+        <p>Get the configuration for this component.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td><ul>
+<li>PropelConfiguration::TYPE<em>ARRAY: return the configuration as an array (for backward compatibility this is the default) - PropelConfiguration::TYPE</em>ARRAY<em>FLAT: return the configuration as a flat array ($config['name.space.item']) - PropelConfiguration::TYPE</em>OBJECT: return the configuration as a PropelConfiguration instance</li>
+</ul>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>The Configuration (array or PropelConfiguration)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setLogger">
+        <div class="location">at line 396</div>
+        <code>        static    public            
+    <strong>setLogger</strong>(object $logger)</code>
+    </h3>
+    <div class="details">
+        <p>Override the configured logger.</p>
+        <p>This is primarily for things like unit tests / debugging where
+you want to change the logger without altering the configuration file.</p>
+
+<p>You can use any logger class that implements the propel.logger.BasicLogger
+interface.  This interface is based on PEAR::Log, so you can also simply pass
+a PEAR::Log object to this method.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>object</td>
+                <td>$logger</td>
+                <td>The new logger to use. ([PEAR] Log or BasicLogger)</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasLogger">
+        <div class="location">at line 407</div>
+        <code>        static    public            bool
+    <strong>hasLogger</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns true if a logger, for example PEAR::Log, has been configured, otherwise false.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>True if Propel uses logging</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_logger">
+        <div class="location">at line 417</div>
+        <code>        static    public            object
+    <strong>logger</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the configured logger.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>object</td>
+            <td>Configured log class ([PEAR] Log or BasicLogger).</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_log">
+        <div class="location">at line 432</div>
+        <code>        static    public            bool
+    <strong>log</strong>(string $message, string $level = self::LOG_DEBUG)</code>
+    </h3>
+    <div class="details">
+        <p>Logs a message If a logger has been configured, the logger will be used, otherwrise the logging message will be discarded without any further action</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>The message that will be logged.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$level</td>
+                <td>The logging level.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>True if the message was logged successfully or no logger was used.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDatabaseMap">
+        <div class="location">at line 471</div>
+        <code>        static    public            <a href="DatabaseMap.html"><abbr title="DatabaseMap">DatabaseMap</abbr></a>
+    <strong>getDatabaseMap</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the database map information.</p>
+        <p>Name relates to the name
+of the connection pool to associate with the map.</p>
+
+<p>The database maps are "registered" by the generated map builder classes.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The name of the database corresponding to the DatabaseMap to retrieve.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="DatabaseMap.html"><abbr title="DatabaseMap">DatabaseMap</abbr></a></td>
+            <td>The named <code>DatabaseMap</code>.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td><ul>
+<li>if database map is null or propel was not initialized properly.</li>
+</ul>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDatabaseMap">
+        <div class="location">at line 494</div>
+        <code>        static    public            
+    <strong>setDatabaseMap</strong>(string $name, <a href="DatabaseMap.html"><abbr title="DatabaseMap">DatabaseMap</abbr></a> $map)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the database map object to use for specified datasource.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The datasource name.</td>
+            </tr>
+                    <tr>
+                <td><a href="DatabaseMap.html"><abbr title="DatabaseMap">DatabaseMap</abbr></a></td>
+                <td>$map</td>
+                <td>The database map object to use for specified datasource.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setForceMasterConnection">
+        <div class="location">at line 507</div>
+        <code>        static    public            
+    <strong>setForceMasterConnection</strong>(boolean $bit)</code>
+    </h3>
+    <div class="details">
+        <p>For replication, set whether to always force the use of a master connection.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$bit</td>
+                <td>True or False</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getForceMasterConnection">
+        <div class="location">at line 517</div>
+        <code>        static    public            boolean
+    <strong>getForceMasterConnection</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>For replication, whether to always force the use of a master connection.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setConnection">
+        <div class="location">at line 529</div>
+        <code>        static    public            
+    <strong>setConnection</strong>(string $name, <a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a> $con, string $mode = Propel::CONNECTION_WRITE)</code>
+    </h3>
+    <div class="details">
+        <p>Sets a Connection for specified datasource name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The datasource name for the connection being set.</td>
+            </tr>
+                    <tr>
+                <td><a href="PropelPDO.html"><abbr title="PropelPDO">PropelPDO</abbr></a></td>
+                <td>$con</td>
+                <td>The PDO connection.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$mode</td>
+                <td>Whether this is a READ or WRITE connection (Propel::CONNECTION<em>READ, Propel::CONNECTION</em>WRITE)</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConnection">
+        <div class="location">at line 551</div>
+        <code>        static    public            <a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a>
+    <strong>getConnection</strong>(string $name = null, string $mode = Propel::CONNECTION_WRITE)</code>
+    </h3>
+    <div class="details">
+        <p>Gets an already-opened PDO connection or opens a new one for passed-in db name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The datasource name that is used to look up the DSN from the runtime configuration file.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$mode</td>
+                <td>The connection mode (this applies to replication systems).</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a></td>
+            <td>A database connection</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td><ul>
+<li>if connection cannot be configured or initialized.</li>
+</ul>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getMasterConnection">
+        <div class="location">at line 577</div>
+        <code>        static    public            <a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a>
+    <strong>getMasterConnection</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Gets an already-opened write PDO connection or opens a new one for passed-in db name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The datasource name that is used to look up the DSN from the runtime configuation file. Empty name not allowed.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a></td>
+            <td>A database connection</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td><ul>
+<li>if connection cannot be configured or initialized.</li>
+</ul>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSlaveConnection">
+        <div class="location">at line 603</div>
+        <code>        static    public            <a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a>
+    <strong>getSlaveConnection</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Gets an already-opened read PDO connection or opens a new one for passed-in db name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The datasource name that is used to look up the DSN from the runtime configuation file. Empty name not allowed.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a></td>
+            <td>A database connection</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td><ul>
+<li>if connection cannot be configured or initialized.</li>
+</ul>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_initConnection">
+        <div class="location">at line 649</div>
+        <code>        static    public            <a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a>
+    <strong>initConnection</strong>(array $conparams, string $name, string $defaultClass = Propel::CLASS_PROPEL_PDO)</code>
+    </h3>
+    <div class="details">
+        <p>Opens a new PDO connection for passed-in db name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$conparams</td>
+                <td>Connection paramters.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Datasource name.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$defaultClass</td>
+                <td>The PDO subclass to instantiate if there is no explicit classname specified in the connection params (default is Propel::CLASS<em>PROPEL</em>PDO)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a></td>
+            <td>A database connection of the given class (PDO, PropelPDO, SlavePDO or user-defined)</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td><ul>
+<li>if lower-level exception caught when trying to connect.</li>
+</ul>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDB">
+        <div class="location">at line 755</div>
+        <code>        static    public            <a href="DBAdapter.html"><abbr title="DBAdapter">DBAdapter</abbr></a>
+    <strong>getDB</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns database adapter for a specific datasource.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The datasource name.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="DBAdapter.html"><abbr title="DBAdapter">DBAdapter</abbr></a></td>
+            <td>The corresponding database adapter.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td>If unable to find DBdapter for specified db.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDB">
+        <div class="location">at line 779</div>
+        <code>        static    public            
+    <strong>setDB</strong>(string $name, <a href="DBAdapter.html"><abbr title="DBAdapter">DBAdapter</abbr></a> $adapter)</code>
+    </h3>
+    <div class="details">
+        <p>Sets a database adapter for specified datasource.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The datasource name.</td>
+            </tr>
+                    <tr>
+                <td><a href="DBAdapter.html"><abbr title="DBAdapter">DBAdapter</abbr></a></td>
+                <td>$adapter</td>
+                <td>The DBAdapter implementation to use.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDefaultDB">
+        <div class="location">at line 792</div>
+        <code>        static    public            string
+    <strong>getDefaultDB</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the name of the default database.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>Name of the default DB</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_close">
+        <div class="location">at line 808</div>
+        <code>        static    public            
+    <strong>close</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Closes any associated resource handles.</p>
+        <p>This method frees any database connection handles that have been
+opened by the getConnection() method.</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_autoload">
+        <div class="location">at line 823</div>
+        <code>        static    public            boolean
+    <strong>autoload</strong>(string $className)</code>
+    </h3>
+    <div class="details">
+        <p>Autoload function for loading propel dependencies.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$className</td>
+                <td>The class name needing loading.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if the class was loaded, false otherwise.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_initBaseDir">
+        <div class="location">at line 839</div>
+        <code>        static    public            
+    <strong>initBaseDir</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Initialize the base directory for the autoloader.</p>
+        <p>Avoids a call to dirname(<strong>FILE</strong>) each time self::autoload() is called.
+FIXME put in the constructor if the Propel class ever becomes a singleton</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_importClass">
+        <div class="location">at line 859</div>
+        <code>        static    public            string
+    <strong>importClass</strong>($path)</code>
+    </h3>
+    <div class="details">
+        <p>Include once a file specified in DOT notation and return unqualified classname.</p>
+        <p>Typically, Propel uses autoload is used to load classes and expects that all classes
+referenced within Propel are included in Propel's autoload map.  This method is only
+called when a specific non-Propel classname was specified -- for example, the
+classname of a validator in the schema.xml.  This method will attempt to include that
+class via autoload and then relative to a location on the include_path.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$path</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>unqualified classname</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDatabaseMapClass">
+        <div class="location">at line 893</div>
+        <code>        static    public            
+    <strong>setDatabaseMapClass</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Set your own class-name for Database-Mapping.</p>
+        <p>Then
+you can change the whole TableMap-Model, but keep its
+functionality for Criteria.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The name of the class.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_disableInstancePooling">
+        <div class="location">at line 904</div>
+        <code>        static    public            boolean
+    <strong>disableInstancePooling</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Disable instance pooling.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true if the method changed the instance pooling state, false if it was already disabled</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_enableInstancePooling">
+        <div class="location">at line 920</div>
+        <code>        static    public            boolean
+    <strong>enableInstancePooling</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Enable instance pooling (enabled by default).</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true if the method changed the instance pooling state, false if it was already enabled</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isInstancePoolingEnabled">
+        <div class="location">at line 935</div>
+        <code>        static    public            boolean
+    <strong>isInstancePoolingEnabled</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>the instance pooling behaviour.</p>
+        <p>True by default.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>Whether the pooling is enabled or not.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

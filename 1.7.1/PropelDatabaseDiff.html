@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>PropelDatabaseDiff | </title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>PropelDatabaseDiff</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PropelDatabaseDiff</strong></p>
+
+            <div class="description">
+            <p>Value object for storing Database object diffs Heavily inspired by Doctrine2's Migrations (see http://github.com/doctrine/dbal/tree/master/lib/Doctrine/DBAL/Schema/)</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setAddedTables">setAddedTables</a>(array $addedTables)
+                    <p>Setter for the addedTables property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addAddedTable">addAddedTable</a>(string $tableName, <a href="Table.html"><abbr title="Table">Table</abbr></a> $addedTable)
+                    <p>Add an added table</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_removeAddedTable">removeAddedTable</a>(string $tableName)
+                    <p>Remove an added table</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAddedTables">getAddedTables</a>()
+                    <p>Getter for the addedTables property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_countAddedTables">countAddedTables</a>()
+                    <p>Get the number of added tables</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getAddedTable">getAddedTable</a>($tableName)
+                    <p>Get an added table</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setRemovedTables">setRemovedTables</a>(array $removedTables)
+                    <p>Setter for the removedTables property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addRemovedTable">addRemovedTable</a>(string $tableName, <a href="Table.html"><abbr title="Table">Table</abbr></a> $removedTable)
+                    <p>Add a removed table</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_removeRemovedTable">removeRemovedTable</a>(string $tableName)
+                    <p>Remove a removed table</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getRemovedTables">getRemovedTables</a>()
+                    <p>Getter for the removedTables property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_countRemovedTables">countRemovedTables</a>()
+                    <p>Get the number of removed tables</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getRemovedTable">getRemovedTable</a>($tableName)
+                    <p>Get a removed table</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setModifiedTables">setModifiedTables</a>(array $modifiedTables)
+                    <p>Setter for the modifiedTables property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addModifiedTable">addModifiedTable</a>(string $tableName, <a href="PropelTableDiff.html"><abbr title="PropelTableDiff">PropelTableDiff</abbr></a> $modifiedTable)
+                    <p>Add a table difference</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_countModifiedTables">countModifiedTables</a>()
+                    <p>Get the number of modified tables</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getModifiedTables">getModifiedTables</a>()
+                    <p>Getter for the modifiedTables property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setRenamedTables">setRenamedTables</a>(array $renamedTables)
+                    <p>Setter for the renamedTables property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addRenamedTable">addRenamedTable</a>(string $fromName, string $toName)
+                    <p>Add a renamed table</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getRenamedTables">getRenamedTables</a>()
+                    <p>Getter for the renamedTables property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_countRenamedTables">countRenamedTables</a>()
+                    <p>Get the number of renamed tables</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="PropelDatabaseDiff.html"><abbr title="PropelDatabaseDiff">PropelDatabaseDiff</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getReverseDiff">getReverseDiff</a>()
+                    <p>Get the reverse diff for this diff</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDescription">getDescription</a>()
+                    <p>Get a description of the database modifications</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___toString">__toString</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_setAddedTables">
+        <div class="location">at line 33</div>
+        <code>            public            
+    <strong>setAddedTables</strong>(array $addedTables)</code>
+    </h3>
+    <div class="details">
+        <p>Setter for the addedTables property</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$addedTables</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addAddedTable">
+        <div class="location">at line 44</div>
+        <code>            public            
+    <strong>addAddedTable</strong>(string $tableName, <a href="Table.html"><abbr title="Table">Table</abbr></a> $addedTable)</code>
+    </h3>
+    <div class="details">
+        <p>Add an added table</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$tableName</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$addedTable</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeAddedTable">
+        <div class="location">at line 54</div>
+        <code>            public            
+    <strong>removeAddedTable</strong>(string $tableName)</code>
+    </h3>
+    <div class="details">
+        <p>Remove an added table</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$tableName</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddedTables">
+        <div class="location">at line 64</div>
+        <code>            public            array
+    <strong>getAddedTables</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Getter for the addedTables property</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_countAddedTables">
+        <div class="location">at line 74</div>
+        <code>            public            integer
+    <strong>countAddedTables</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the number of added tables</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddedTable">
+        <div class="location">at line 86</div>
+        <code>            public            
+    <strong>getAddedTable</strong>($tableName)</code>
+    </h3>
+    <div class="details">
+        <p>Get an added table</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$tableName</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setRemovedTables">
+        <div class="location">at line 96</div>
+        <code>            public            
+    <strong>setRemovedTables</strong>(array $removedTables)</code>
+    </h3>
+    <div class="details">
+        <p>Setter for the removedTables property</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$removedTables</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addRemovedTable">
+        <div class="location">at line 107</div>
+        <code>            public            
+    <strong>addRemovedTable</strong>(string $tableName, <a href="Table.html"><abbr title="Table">Table</abbr></a> $removedTable)</code>
+    </h3>
+    <div class="details">
+        <p>Add a removed table</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$tableName</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$removedTable</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeRemovedTable">
+        <div class="location">at line 117</div>
+        <code>            public            
+    <strong>removeRemovedTable</strong>(string $tableName)</code>
+    </h3>
+    <div class="details">
+        <p>Remove a removed table</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$tableName</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRemovedTables">
+        <div class="location">at line 127</div>
+        <code>            public            array
+    <strong>getRemovedTables</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Getter for the removedTables property</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_countRemovedTables">
+        <div class="location">at line 137</div>
+        <code>            public            integer
+    <strong>countRemovedTables</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the number of removed tables</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRemovedTable">
+        <div class="location">at line 149</div>
+        <code>            public            
+    <strong>getRemovedTable</strong>($tableName)</code>
+    </h3>
+    <div class="details">
+        <p>Get a removed table</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$tableName</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setModifiedTables">
+        <div class="location">at line 159</div>
+        <code>            public            
+    <strong>setModifiedTables</strong>(array $modifiedTables)</code>
+    </h3>
+    <div class="details">
+        <p>Setter for the modifiedTables property</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$modifiedTables</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addModifiedTable">
+        <div class="location">at line 170</div>
+        <code>            public            
+    <strong>addModifiedTable</strong>(string $tableName, <a href="PropelTableDiff.html"><abbr title="PropelTableDiff">PropelTableDiff</abbr></a> $modifiedTable)</code>
+    </h3>
+    <div class="details">
+        <p>Add a table difference</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$tableName</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="PropelTableDiff.html"><abbr title="PropelTableDiff">PropelTableDiff</abbr></a></td>
+                <td>$modifiedTable</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_countModifiedTables">
+        <div class="location">at line 180</div>
+        <code>            public            integer
+    <strong>countModifiedTables</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the number of modified tables</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getModifiedTables">
+        <div class="location">at line 190</div>
+        <code>            public            array
+    <strong>getModifiedTables</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Getter for the modifiedTables property</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setRenamedTables">
+        <div class="location">at line 200</div>
+        <code>            public            
+    <strong>setRenamedTables</strong>(array $renamedTables)</code>
+    </h3>
+    <div class="details">
+        <p>Setter for the renamedTables property</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$renamedTables</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addRenamedTable">
+        <div class="location">at line 211</div>
+        <code>            public            
+    <strong>addRenamedTable</strong>(string $fromName, string $toName)</code>
+    </h3>
+    <div class="details">
+        <p>Add a renamed table</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$fromName</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$toName</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRenamedTables">
+        <div class="location">at line 221</div>
+        <code>            public            array
+    <strong>getRenamedTables</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Getter for the renamedTables property</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_countRenamedTables">
+        <div class="location">at line 231</div>
+        <code>            public            integer
+    <strong>countRenamedTables</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the number of renamed tables</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getReverseDiff">
+        <div class="location">at line 241</div>
+        <code>            public            <a href="PropelDatabaseDiff.html"><abbr title="PropelDatabaseDiff">PropelDatabaseDiff</abbr></a>
+    <strong>getReverseDiff</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the reverse diff for this diff</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="PropelDatabaseDiff.html"><abbr title="PropelDatabaseDiff">PropelDatabaseDiff</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDescription">
+        <div class="location">at line 268</div>
+        <code>            public            string
+    <strong>getDescription</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a description of the database modifications</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___toString">
+        <div class="location">at line 287</div>
+        <code>            public            
+    <strong>__toString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

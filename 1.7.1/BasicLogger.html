@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>BasicLogger | </title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Interface</div>
+    <h1><a href=".html"></a>BasicLogger</h1>
+    </div>
+        <div class="content">
+                <p>interface    <strong>BasicLogger</strong></p>
+
+            <div class="description">
+            <p>This is a minimalistic interface that any logging class must implement for Propel.</p>
+            <p>The API for this interface is based on the PEAR::Log interface.  It provides a simple
+API that can be used by Propel independently of Log backend.</p>
+
+<p>PEAR::Log and perhaps the Log API was developed by Chuck Hagenbuch <a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#58;c&#x68;&#117;&#x63;&#x6b;&#64;&#x68;&#111;r&#x64;&#101;&#x2e;&#x6f;&#114;&#x67;">c&#x68;&#117;&#x63;&#x6b;&#64;&#x68;&#111;r&#x64;&#101;&#x2e;&#x6f;&#114;&#x67;</a>
+and Jon Parise <a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#106;&#x6f;&#110;&#64;&#x70;&#104;&#x70;&#46;&#x6e;&#101;&#x74;">&#106;&#x6f;&#110;&#64;&#x70;&#104;&#x70;&#46;&#x6e;&#101;&#x74;</a>.</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_alert">alert</a>(mixed $message)
+                    <p>A convenience function for logging an alert event.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_crit">crit</a>(mixed $message)
+                    <p>A convenience function for logging a critical event.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_err">err</a>(mixed $message)
+                    <p>A convenience function for logging an error event.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_warning">warning</a>(mixed $message)
+                    <p>A convenience function for logging a warning event.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_notice">notice</a>(mixed $message)
+                    <p>A convenience function for logging an critical event.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_info">info</a>(mixed $message)
+                    <p>A convenience function for logging an critical event.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_debug">debug</a>(mixed $message)
+                    <p>A convenience function for logging a debug event.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_log">log</a>(mixed $message, int $severity = null)
+                    <p>Primary method to handle logging.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_alert">
+        <div class="location">at line 32</div>
+        <code>            public            
+    <strong>alert</strong>(mixed $message)</code>
+    </h3>
+    <div class="details">
+        <p>A convenience function for logging an alert event.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$message</td>
+                <td>String or Exception object containing the message to log.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_crit">
+        <div class="location">at line 39</div>
+        <code>            public            
+    <strong>crit</strong>(mixed $message)</code>
+    </h3>
+    <div class="details">
+        <p>A convenience function for logging a critical event.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$message</td>
+                <td>String or Exception object containing the message to log.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_err">
+        <div class="location">at line 46</div>
+        <code>            public            
+    <strong>err</strong>(mixed $message)</code>
+    </h3>
+    <div class="details">
+        <p>A convenience function for logging an error event.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$message</td>
+                <td>String or Exception object containing the message to log.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_warning">
+        <div class="location">at line 53</div>
+        <code>            public            
+    <strong>warning</strong>(mixed $message)</code>
+    </h3>
+    <div class="details">
+        <p>A convenience function for logging a warning event.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$message</td>
+                <td>String or Exception object containing the message to log.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_notice">
+        <div class="location">at line 60</div>
+        <code>            public            
+    <strong>notice</strong>(mixed $message)</code>
+    </h3>
+    <div class="details">
+        <p>A convenience function for logging an critical event.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$message</td>
+                <td>String or Exception object containing the message to log.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_info">
+        <div class="location">at line 67</div>
+        <code>            public            
+    <strong>info</strong>(mixed $message)</code>
+    </h3>
+    <div class="details">
+        <p>A convenience function for logging an critical event.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$message</td>
+                <td>String or Exception object containing the message to log.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_debug">
+        <div class="location">at line 74</div>
+        <code>            public            
+    <strong>debug</strong>(mixed $message)</code>
+    </h3>
+    <div class="details">
+        <p>A convenience function for logging a debug event.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$message</td>
+                <td>String or Exception object containing the message to log.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_log">
+        <div class="location">at line 83</div>
+        <code>            public            
+    <strong>log</strong>(mixed $message, int $severity = null)</code>
+    </h3>
+    <div class="details">
+        <p>Primary method to handle logging.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$message</td>
+                <td>String or Exception object containing the message to log.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$severity</td>
+                <td>The numeric severity.  Defaults to null so that no assumptions are made about the logging backend.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

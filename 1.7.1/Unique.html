@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Unique | </title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>Unique</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Unique</strong>        extends <a href="Index.html"><abbr title="Index">Index</abbr></a></p>
+
+            <div class="description">
+            <p>Information about unique columns of a table.</p>
+            <p>This class assumes
+that in the underlying RDBMS, unique constraints and unique indices
+are roughly equivalent.  For example, adding a unique constraint to
+a column also creates an index on that column (this is known to be
+true for MySQL and Oracle).</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>DEBUG</td>
+                <td class="last">
+                    <p><em>enables debug output</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(string $name = null)
+                    <p>Creates a new Index instance.</p>
+                </td>
+                <td><small>from&nbsp;<a href="Index.html#method___construct"><abbr title="Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getIsUnique">getIsUnique</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="Index.html#method_getIsUnique"><abbr title="Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_isUnique">isUnique</a>()
+                    <p>Returns <code>true</code>.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getIndexName">getIndexName</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="Index.html#method_getIndexName"><abbr title="Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getName">getName</a>()
+                    <p>Gets the name of this index.</p>
+                </td>
+                <td><small>from&nbsp;<a href="Index.html#method_getName"><abbr title="Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setIndexName">setIndexName</a>($name)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="Index.html#method_setIndexName"><abbr title="Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setName">setName</a>($name)
+                    <p>Set the name of this index.</p>
+                </td>
+                <td><small>from&nbsp;<a href="Index.html#method_setName"><abbr title="Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setTable">setTable</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $parent)
+                    <p>Set the parent Table of the index</p>
+                </td>
+                <td><small>from&nbsp;<a href="Index.html#method_setTable"><abbr title="Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getTable">getTable</a>()
+                    <p>Get the parent Table of the index</p>
+                </td>
+                <td><small>from&nbsp;<a href="Index.html#method_getTable"><abbr title="Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getTableName">getTableName</a>()
+                    <p>Returns the Name of the table the index is in</p>
+                </td>
+                <td><small>from&nbsp;<a href="Index.html#method_getTableName"><abbr title="Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addColumn">addColumn</a>(mixed $data)
+                    <p>Adds a new column to an index.</p>
+                </td>
+                <td><small>from&nbsp;<a href="Index.html#method_addColumn"><abbr title="Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setColumns">setColumns</a>(array $indexColumns)
+                    <p>Sets array of columns to use for index.</p>
+                </td>
+                <td><small>from&nbsp;<a href="Index.html#method_setColumns"><abbr title="Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasColumnSize">hasColumnSize</a>(string $name)
+                    <p>Whether there is a size for the specified column.</p>
+                </td>
+                <td><small>from&nbsp;<a href="Index.html#method_hasColumnSize"><abbr title="Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="numeric">numeric</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnSize">getColumnSize</a>(string $name)
+                    <p>Returns the size for the specified column, if given.</p>
+                </td>
+                <td><small>from&nbsp;<a href="Index.html#method_getColumnSize"><abbr title="Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_resetColumnSize">resetColumnSize</a>()
+                    <p>Reset the column sizes.</p>
+                </td>
+                <td><small>from&nbsp;<a href="Index.html#method_resetColumnSize"><abbr title="Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getIndexColumnList">getIndexColumnList</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="Index.html#method_getIndexColumnList"><abbr title="Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getColumnList">getColumnList</a>()
+                    <p>Return a comma delimited string of the columns which compose this index.</p>
+                </td>
+                <td><small>from&nbsp;<a href="Index.html#method_getColumnList"><abbr title="Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getIndexColumns">getIndexColumns</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="Index.html#method_getIndexColumns"><abbr title="Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasColumnAtPosition">hasColumnAtPosition</a>(integer $pos, string $name, integer $size = null, boolean $caseInsensitive = false)
+                    <p>Check whether this index has a given column at a given position</p>
+                </td>
+                <td><small>from&nbsp;<a href="Index.html#method_hasColumnAtPosition"><abbr title="Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasColumns">hasColumns</a>()
+                    <p>Check whether the index has columns.</p>
+                </td>
+                <td><small>from&nbsp;<a href="Index.html#method_hasColumns"><abbr title="Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getColumns">getColumns</a>()
+                    <p>Return the list of local columns.</p>
+                </td>
+                <td><small>from&nbsp;<a href="Index.html#method_getColumns"><abbr title="Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_appendXml">appendXml</a>(<a href="http://php.net/DOMNode"><abbr title="DOMNode">DOMNode</abbr></a> $node)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">in <a href="Index.html#method___construct"><abbr title="Index">Index</abbr></a> at line 46</div>
+        <code>            public            
+    <strong>__construct</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new Index instance.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getIsUnique">
+        <div class="location">in <a href="Index.html#method_getIsUnique"><abbr title="Index">Index</abbr></a> at line 86</div>
+        <code>            public            
+    <strong>getIsUnique</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>#isUnique()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_isUnique">
+        <div class="location">at line 32</div>
+        <code>            public            
+    <strong>isUnique</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns <code>true</code>.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getIndexName">
+        <div class="location">in <a href="Index.html#method_getIndexName"><abbr title="Index">Index</abbr></a> at line 103</div>
+        <code>            public            
+    <strong>getIndexName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>#getName()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getName">
+        <div class="location">in <a href="Index.html#method_getName"><abbr title="Index">Index</abbr></a> at line 111</div>
+        <code>            public            
+    <strong>getName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the name of this index.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setIndexName">
+        <div class="location">in <a href="Index.html#method_setIndexName"><abbr title="Index">Index</abbr></a> at line 132</div>
+        <code>            public            
+    <strong>setIndexName</strong>($name)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>#setName(String</td>
+                <td>name)</td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_setName">
+        <div class="location">in <a href="Index.html#method_setName"><abbr title="Index">Index</abbr></a> at line 140</div>
+        <code>            public            
+    <strong>setName</strong>($name)</code>
+    </h3>
+    <div class="details">
+        <p>Set the name of this index.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setTable">
+        <div class="location">in <a href="Index.html#method_setTable"><abbr title="Index">Index</abbr></a> at line 148</div>
+        <code>            public            
+    <strong>setTable</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $parent)</code>
+    </h3>
+    <div class="details">
+        <p>Set the parent Table of the index</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$parent</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTable">
+        <div class="location">in <a href="Index.html#method_getTable"><abbr title="Index">Index</abbr></a> at line 156</div>
+        <code>            public            
+    <strong>getTable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the parent Table of the index</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTableName">
+        <div class="location">in <a href="Index.html#method_getTableName"><abbr title="Index">Index</abbr></a> at line 164</div>
+        <code>            public            
+    <strong>getTableName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the Name of the table the index is in</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addColumn">
+        <div class="location">in <a href="Index.html#method_addColumn"><abbr title="Index">Index</abbr></a> at line 174</div>
+        <code>            public            
+    <strong>addColumn</strong>(mixed $data)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a new column to an index.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td>Column or attributes from XML.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setColumns">
+        <div class="location">in <a href="Index.html#method_setColumns"><abbr title="Index">Index</abbr></a> at line 197</div>
+        <code>            public            
+    <strong>setColumns</strong>(array $indexColumns)</code>
+    </h3>
+    <div class="details">
+        <p>Sets array of columns to use for index.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$indexColumns</td>
+                <td>Column[]</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasColumnSize">
+        <div class="location">in <a href="Index.html#method_hasColumnSize"><abbr title="Index">Index</abbr></a> at line 213</div>
+        <code>            public            boolean
+    <strong>hasColumnSize</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Whether there is a size for the specified column.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnSize">
+        <div class="location">in <a href="Index.html#method_getColumnSize"><abbr title="Index">Index</abbr></a> at line 225</div>
+        <code>            public            <abbr title="numeric">numeric</abbr>
+    <strong>getColumnSize</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the size for the specified column, if given.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="numeric">numeric</abbr></td>
+            <td>The size or NULL</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resetColumnSize">
+        <div class="location">in <a href="Index.html#method_resetColumnSize"><abbr title="Index">Index</abbr></a> at line 237</div>
+        <code>            public            
+    <strong>resetColumnSize</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Reset the column sizes.</p>
+        <p>Useful for generated indices for FKs</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getIndexColumnList">
+        <div class="location">in <a href="Index.html#method_getIndexColumnList"><abbr title="Index">Index</abbr></a> at line 246</div>
+        <code>            public            
+    <strong>getIndexColumnList</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>#getColumnList()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getColumnList">
+        <div class="location">in <a href="Index.html#method_getColumnList"><abbr title="Index">Index</abbr></a> at line 256</div>
+        <code>            public            
+    <strong>getColumnList</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return a comma delimited string of the columns which compose this index.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getIndexColumns">
+        <div class="location">in <a href="Index.html#method_getIndexColumns"><abbr title="Index">Index</abbr></a> at line 265</div>
+        <code>            public            
+    <strong>getIndexColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>#getColumns()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_hasColumnAtPosition">
+        <div class="location">in <a href="Index.html#method_hasColumnAtPosition"><abbr title="Index">Index</abbr></a> at line 281</div>
+        <code>            public            boolean
+    <strong>hasColumnAtPosition</strong>(integer $pos, string $name, integer $size = null, boolean $caseInsensitive = false)</code>
+    </h3>
+    <div class="details">
+        <p>Check whether this index has a given column at a given position</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$pos</td>
+                <td>Position in the column list</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Column name</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$size</td>
+                <td>optional size check</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$caseInsensitive</td>
+                <td>Whether the comparison is case insensitive. False by default.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasColumns">
+        <div class="location">in <a href="Index.html#method_hasColumns"><abbr title="Index">Index</abbr></a> at line 304</div>
+        <code>            public            boolean
+    <strong>hasColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check whether the index has columns.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getColumns">
+        <div class="location">in <a href="Index.html#method_getColumns"><abbr title="Index">Index</abbr></a> at line 314</div>
+        <code>            public            array
+    <strong>getColumns</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the list of local columns.</p>
+        <p>You should not edit this list.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>string[]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_appendXml">
+        <div class="location">at line 40</div>
+        <code>            public            
+    <strong>appendXml</strong>(<a href="http://php.net/DOMNode"><abbr title="DOMNode">DOMNode</abbr></a> $node)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/DOMNode"><abbr title="DOMNode">DOMNode</abbr></a></td>
+                <td>$node</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>XMLElement::appendXml(DOMNode)</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

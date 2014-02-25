@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>PropelPDO | </title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>PropelPDO</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PropelPDO</strong>        extends <a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a></p>
+
+            <div class="description">
+            <p>PDO connection subclass that provides the basic fixes to PDO that are required by Propel.</p>
+            <p>This class was designed to work around the limitation in PDO where attempting to begin
+a transaction when one has already been begun will trigger a PDOException.  Propel
+relies on the ability to create nested transactions, even if the underlying layer
+simply ignores these (because it doesn't support nested transactions).</p>
+
+<p>The changes that this class makes to the underlying API include the addition of the
+getNestedTransactionDepth() and isInTransaction() and the fact that beginTransaction()
+will no longer throw a PDOException (or trigger an error) if a transaction is already
+in-progress.</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>PROPEL_ATTR_CACHE_PREPARES</td>
+                <td class="last">
+                    <p><em>Attribute to use to set whether to cache prepared statements.</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PROPEL_ATTR_CONNECTION_NAME</td>
+                <td class="last">
+                    <p><em>Attribute to use to set the connection name useful for explains</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAULT_SLOW_THRESHOLD</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAULT_ONLYSLOW_ENABLED</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_useDebug">
+                                                            boolean
+                </td>
+                <td>$useDebug</td>
+                <td class="last">Whether or not the debug is enabled</td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(string $dsn, string $username = null, string $password = null, array $driver_options = array())
+                    <p>Creates a PropelPDO instance representing a connection to a database.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setConfiguration">setConfiguration</a>(<a href="PropelConfiguration.html"><abbr title="PropelConfiguration">PropelConfiguration</abbr></a> $configuration)
+                    <p>Inject the runtime configuration</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="PropelConfiguration.html"><abbr title="PropelConfiguration">PropelConfiguration</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getConfiguration">getConfiguration</a>()
+                    <p>Get the runtime configuration</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_getNestedTransactionCount">getNestedTransactionCount</a>()
+                    <p>Gets the current transaction depth.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isInTransaction">isInTransaction</a>()
+                    <p>Is this PDO connection currently in-transaction? This is equivalent to asking whether the current nested transaction count is greater than 0.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isCommitable">isCommitable</a>()
+                    <p>Check whether the connection contains a transaction that can be committed.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_beginTransaction">beginTransaction</a>()
+                    <p>Overrides PDO::beginTransaction() to prevent errors due to already-in-progress transaction.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_commit">commit</a>()
+                    <p>Overrides PDO::commit() to only commit the transaction if we are in the outermost transaction nesting level.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_rollBack">rollBack</a>()
+                    <p>Overrides PDO::rollBack() to only rollback the transaction if we are in the outermost transaction nesting level</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_forceRollBack">forceRollBack</a>()
+                    <p>Rollback the whole transaction, even if this is a nested rollback and reset the nested transaction count to 0.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_setAttribute">setAttribute</a>(integer $attribute, mixed $value)
+                    <p>Sets a connection attribute.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getAttribute">getAttribute</a>(integer $attribute)
+                    <p>Gets a connection attribute.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_prepare">prepare</a>(string $sql, array $driver_options = array())
+                    <p>Prepares a statement for execution and returns a statement object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_exec">exec</a>(string $sql)
+                    <p>Execute an SQL statement and return the number of affected rows.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_query">query</a>()
+                    <p>Executes an SQL statement, returning a result set as a PDOStatement object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_clearStatementCache">clearStatementCache</a>()
+                    <p>Clears any stored prepared statements for this connection.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_getQueryCount">getQueryCount</a>()
+                    <p>Returns the number of queries this DebugPDO instance has performed on the database connection.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_incrementQueryCount">incrementQueryCount</a>()
+                    <p>Increments the number of queries performed by this DebugPDO instance.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getLastExecutedQuery">getLastExecutedQuery</a>()
+                    <p>Get the SQL code for the latest query executed by Propel</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setLastExecutedQuery">setLastExecutedQuery</a>(string $query)
+                    <p>Set the SQL code for the latest query executed by Propel</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_useDebug">useDebug</a>(boolean $value = true)
+                    <p>Enable or disable the query debug features</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setLogLevel">setLogLevel</a>(integer $level)
+                    <p>Sets the logging level to use for logging method calls and SQL statements.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setLogger">setLogger</a>(<a href="BasicLogger.html"><abbr title="BasicLogger">BasicLogger</abbr></a> $logger)
+                    <p>Sets a logger to use.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="BasicLogger.html"><abbr title="BasicLogger">BasicLogger</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getLogger">getLogger</a>()
+                    <p>Gets the logger in use.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_log">log</a>(string $msg, integer $level = null, string $methodName = null, array $debugSnapshot = null)
+                    <p>Logs the method call or SQL using the Propel::log() method or a registered logger class.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getDebugSnapshot">getDebugSnapshot</a>()
+                    <p>Returns a snapshot of the current values of some functions useful in debugging.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___destruct">__destruct</a>()
+                    <p>If so configured, makes an entry to the log of the state of this object just prior to its destruction.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 147</div>
+        <code>            public            
+    <strong>__construct</strong>(string $dsn, string $username = null, string $password = null, array $driver_options = array())</code>
+    </h3>
+    <div class="details">
+        <p>Creates a PropelPDO instance representing a connection to a database.</p>
+        <p>.
+If so configured, specifies a custom PDOStatement class and makes an entry
+to the log with the state of this object just after its initialization.
+Add PropelPDO::__construct to $defaultLogMethods to see this message</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$dsn</td>
+                <td>Connection DSN.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>The user name for the DSN string.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td>The password for the DSN string.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$driver_options</td>
+                <td>A key=>value array of driver-specific connection options.</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/PDOException"><abbr title="PDOException">PDOException</abbr></a></td>
+                <td>if there is an error during connection initialization.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setConfiguration">
+        <div class="location">at line 166</div>
+        <code>            public            
+    <strong>setConfiguration</strong>(<a href="PropelConfiguration.html"><abbr title="PropelConfiguration">PropelConfiguration</abbr></a> $configuration)</code>
+    </h3>
+    <div class="details">
+        <p>Inject the runtime configuration</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelConfiguration.html"><abbr title="PropelConfiguration">PropelConfiguration</abbr></a></td>
+                <td>$configuration</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConfiguration">
+        <div class="location">at line 176</div>
+        <code>            public            <a href="PropelConfiguration.html"><abbr title="PropelConfiguration">PropelConfiguration</abbr></a>
+    <strong>getConfiguration</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the runtime configuration</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="PropelConfiguration.html"><abbr title="PropelConfiguration">PropelConfiguration</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNestedTransactionCount">
+        <div class="location">at line 190</div>
+        <code>            public            integer
+    <strong>getNestedTransactionCount</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the current transaction depth.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isInTransaction">
+        <div class="location">at line 211</div>
+        <code>            public            boolean
+    <strong>isInTransaction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Is this PDO connection currently in-transaction? This is equivalent to asking whether the current nested transaction count is greater than 0.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isCommitable">
+        <div class="location">at line 222</div>
+        <code>            public            boolean
+    <strong>isCommitable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check whether the connection contains a transaction that can be committed.</p>
+        <p>To be used in an environment where Propelexceptions are caught.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if the connection is in a committable transaction</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_beginTransaction">
+        <div class="location">at line 232</div>
+        <code>            public            boolean
+    <strong>beginTransaction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Overrides PDO::beginTransaction() to prevent errors due to already-in-progress transaction.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_commit">
+        <div class="location">at line 255</div>
+        <code>            public            boolean
+    <strong>commit</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Overrides PDO::commit() to only commit the transaction if we are in the outermost transaction nesting level.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_rollBack">
+        <div class="location">at line 284</div>
+        <code>            public            boolean
+    <strong>rollBack</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Overrides PDO::rollBack() to only rollback the transaction if we are in the outermost transaction nesting level</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>Whether operation was successful.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_forceRollBack">
+        <div class="location">at line 311</div>
+        <code>            public            boolean
+    <strong>forceRollBack</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Rollback the whole transaction, even if this is a nested rollback and reset the nested transaction count to 0.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>Whether operation was successful.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAttribute">
+        <div class="location">at line 342</div>
+        <code>            public            void
+    <strong>setAttribute</strong>(integer $attribute, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Sets a connection attribute.</p>
+        <p>This is overridden here to provide support for setting Propel-specific attributes too.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$attribute</td>
+                <td>The attribute to set (e.g. PropelPDO::PROPEL<em>ATTR</em>CACHE_PREPARES).</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The attribute value.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAttribute">
+        <div class="location">at line 365</div>
+        <code>            public            mixed
+    <strong>getAttribute</strong>(integer $attribute)</code>
+    </h3>
+    <div class="details">
+        <p>Gets a connection attribute.</p>
+        <p>This is overridden here to provide support for setting Propel-specific attributes too.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$attribute</td>
+                <td>The attribute to get (e.g. PropelPDO::PROPEL<em>ATTR</em>CACHE_PREPARES).</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_prepare">
+        <div class="location">at line 392</div>
+        <code>            public            <a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a>
+    <strong>prepare</strong>(string $sql, array $driver_options = array())</code>
+    </h3>
+    <div class="details">
+        <p>Prepares a statement for execution and returns a statement object.</p>
+        <p>Overrides PDO::prepare() in order to:
+ - Add logging and query counting if logging is true.
+ - Add query caching support if the PropelPDO::PROPEL<em>ATTR</em>CACHE_PREPARES was set to true.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$sql</td>
+                <td>This must be a valid SQL statement for the target database server.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$driver_options</td>
+                <td>One $array or more key => value pairs to set attribute values for the PDOStatement object that this method returns.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_exec">
+        <div class="location">at line 424</div>
+        <code>            public            integer
+    <strong>exec</strong>(string $sql)</code>
+    </h3>
+    <div class="details">
+        <p>Execute an SQL statement and return the number of affected rows.</p>
+        <p>Overrides PDO::exec() to log queries when required</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$sql</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_query">
+        <div class="location">at line 451</div>
+        <code>            public            <a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a>
+    <strong>query</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Executes an SQL statement, returning a result set as a PDOStatement object.</p>
+        <p>Despite its signature here, this method takes a variety of parameters.</p>
+
+<p>Overrides PDO::query() to log queries when required</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="http://php.net/PDOStatement"><abbr title="PDOStatement">PDOStatement</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>http://php.net/manual/en/pdo.query.php</td>
+                <td>for a description of the possible parameters.</td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_clearStatementCache">
+        <div class="location">at line 477</div>
+        <code>            public            
+    <strong>clearStatementCache</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Clears any stored prepared statements for this connection.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getQueryCount">
+        <div class="location">at line 509</div>
+        <code>            public            integer
+    <strong>getQueryCount</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the number of queries this DebugPDO instance has performed on the database connection.</p>
+        <p>When using DebugPDOStatement as the statement class, any queries by DebugPDOStatement instances
+are counted as well.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td>if persistent connection is used (since unable to override PDOStatement in that case).</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_incrementQueryCount">
+        <div class="location">at line 526</div>
+        <code>            public            integer
+    <strong>incrementQueryCount</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Increments the number of queries performed by this DebugPDO instance.</p>
+        <p>Returns the original number of queries (ie the value of $this->queryCount before calling this method).</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLastExecutedQuery">
+        <div class="location">at line 536</div>
+        <code>            public            string
+    <strong>getLastExecutedQuery</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the SQL code for the latest query executed by Propel</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>Executable SQL code</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setLastExecutedQuery">
+        <div class="location">at line 546</div>
+        <code>            public            
+    <strong>setLastExecutedQuery</strong>(string $query)</code>
+    </h3>
+    <div class="details">
+        <p>Set the SQL code for the latest query executed by Propel</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td>Executable SQL code</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_useDebug">
+        <div class="location">at line 556</div>
+        <code>            public            
+    <strong>useDebug</strong>(boolean $value = true)</code>
+    </h3>
+    <div class="details">
+        <p>Enable or disable the query debug features</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$value</td>
+                <td>True to enable debug (default), false to disable it</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setLogLevel">
+        <div class="location">at line 575</div>
+        <code>            public            
+    <strong>setLogLevel</strong>(integer $level)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the logging level to use for logging method calls and SQL statements.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$level</td>
+                <td>Value of one of the Propel::LOG_* class constants.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setLogger">
+        <div class="location">at line 587</div>
+        <code>            public            
+    <strong>setLogger</strong>(<a href="BasicLogger.html"><abbr title="BasicLogger">BasicLogger</abbr></a> $logger)</code>
+    </h3>
+    <div class="details">
+        <p>Sets a logger to use.</p>
+        <p>The logger will be used by this class to log various method calls and their properties.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="BasicLogger.html"><abbr title="BasicLogger">BasicLogger</abbr></a></td>
+                <td>$logger</td>
+                <td>A Logger with an API compatible with BasicLogger (or PEAR Log).</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLogger">
+        <div class="location">at line 597</div>
+        <code>            public            <a href="BasicLogger.html"><abbr title="BasicLogger">BasicLogger</abbr></a>
+    <strong>getLogger</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the logger in use.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="BasicLogger.html"><abbr title="BasicLogger">BasicLogger</abbr></a></td>
+            <td>A Logger with an API compatible with BasicLogger (or PEAR Log).</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_log">
+        <div class="location">at line 613</div>
+        <code>            public            
+    <strong>log</strong>(string $msg, integer $level = null, string $methodName = null, array $debugSnapshot = null)</code>
+    </h3>
+    <div class="details">
+        <p>Logs the method call or SQL using the Propel::log() method or a registered logger class.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td>Message to log.</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$level</td>
+                <td>Log level to use; will use self::setLogLevel() specified level by default.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$methodName</td>
+                <td>Name of the method whose execution is being logged.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$debugSnapshot</td>
+                <td>Previous return value from self::getDebugSnapshot().</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>self::setLogger()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getDebugSnapshot">
+        <div class="location">at line 663</div>
+        <code>            public            array
+    <strong>getDebugSnapshot</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns a snapshot of the current values of some functions useful in debugging.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="PropelException.html"><abbr title="PropelException">PropelException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method___destruct">
+        <div class="location">at line 800</div>
+        <code>            public            
+    <strong>__destruct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>If so configured, makes an entry to the log of the state of this object just prior to its destruction.</p>
+        <p>Add PropelPDO::__destruct to $defaultLogMethods to see this message</p>
+        <div class="tags">
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>self::log()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>SqlsrvPlatform | </title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>SqlsrvPlatform</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>SqlsrvPlatform</strong>        extends <a href="MssqlPlatform.html"><abbr title="MssqlPlatform">MssqlPlatform</abbr></a></p>
+
+            <div class="description">
+            <p>MS SQL Server using pdo_sqlsrv implementation.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getMaxColumnNameLength">getMaxColumnNameLength</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getNullString">getNullString</a>($notNull)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="MssqlPlatform.html#method_getNullString"><abbr title="MssqlPlatform">MssqlPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_supportsNativeDeleteTrigger">supportsNativeDeleteTrigger</a>()
+                    <p>Whether RDBMS supports native ON DELETE triggers (e.g.</p>
+                </td>
+                <td><small>from&nbsp;<a href="MssqlPlatform.html#method_supportsNativeDeleteTrigger"><abbr title="MssqlPlatform">MssqlPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_supportsInsertNullPk">supportsInsertNullPk</a>()
+                    <p>Whether RDBMS supports INSERT null values in autoincremented primary keys</p>
+                </td>
+                <td><small>from&nbsp;<a href="MssqlPlatform.html#method_supportsInsertNullPk"><abbr title="MssqlPlatform">MssqlPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDropTableDDL">getDropTableDDL</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p>Builds the DDL SQL to drop a table</p>
+                </td>
+                <td><small>from&nbsp;<a href="MssqlPlatform.html#method_getDropTableDDL"><abbr title="MssqlPlatform">MssqlPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPrimaryKeyDDL">getPrimaryKeyDDL</a>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)
+                    <p>Returns the SQL for the primary key of a Table object</p>
+                </td>
+                <td><small>from&nbsp;<a href="MssqlPlatform.html#method_getPrimaryKeyDDL"><abbr title="MssqlPlatform">MssqlPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getAddForeignKeyDDL">getAddForeignKeyDDL</a>(<a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $fk)
+                    <p>Builds the DDL SQL to add a foreign key.</p>
+                </td>
+                <td><small>from&nbsp;<a href="MssqlPlatform.html#method_getAddForeignKeyDDL"><abbr title="MssqlPlatform">MssqlPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getForeignKeyDDL">getForeignKeyDDL</a>(<a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $fk)
+                    <p>Builds the DDL SQL for a ForeignKey object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="MssqlPlatform.html#method_getForeignKeyDDL"><abbr title="MssqlPlatform">MssqlPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_supportsSchemas">supportsSchemas</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="MssqlPlatform.html#method_supportsSchemas"><abbr title="MssqlPlatform">MssqlPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasSize">hasSize</a>(string $sqlType)
+                    <p>Returns if the RDBMS-specific SQL type has a size attribute.</p>
+                </td>
+                <td><small>from&nbsp;<a href="MssqlPlatform.html#method_hasSize"><abbr title="MssqlPlatform">MssqlPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_quoteIdentifier">quoteIdentifier</a>(string $text)
+                    <p>Quotes identifiers used in database SQL.</p>
+                </td>
+                <td><small>from&nbsp;<a href="MssqlPlatform.html#method_quoteIdentifier"><abbr title="MssqlPlatform">MssqlPlatform</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getTimestampFormatter">getTimestampFormatter</a>()
+                    <p>Gets the preferred timestamp formatter for setting date/time values.</p>
+                </td>
+                <td><small>from&nbsp;<a href="MssqlPlatform.html#method_getTimestampFormatter"><abbr title="MssqlPlatform">MssqlPlatform</abbr></a></small></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getMaxColumnNameLength">
+        <div class="location">at line 25</div>
+        <code>            public            int
+    <strong>getMaxColumnNameLength</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>The max column length</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>Platform#getMaxColumnNameLength()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getNullString">
+        <div class="location">in <a href="MssqlPlatform.html#method_getNullString"><abbr title="MssqlPlatform">MssqlPlatform</abbr></a> at line 56</div>
+        <code>            public            string
+    <strong>getNullString</strong>($notNull)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$notNull</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The RDBMS-specific SQL fragment for <code>NULL</code> or <code>NOT NULL</code>.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_supportsNativeDeleteTrigger">
+        <div class="location">in <a href="MssqlPlatform.html#method_supportsNativeDeleteTrigger"><abbr title="MssqlPlatform">MssqlPlatform</abbr></a> at line 61</div>
+        <code>            public            boolean
+    <strong>supportsNativeDeleteTrigger</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Whether RDBMS supports native ON DELETE triggers (e.g.</p>
+        <p>ON DELETE CASCADE).</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_supportsInsertNullPk">
+        <div class="location">in <a href="MssqlPlatform.html#method_supportsInsertNullPk"><abbr title="MssqlPlatform">MssqlPlatform</abbr></a> at line 66</div>
+        <code>            public            boolean
+    <strong>supportsInsertNullPk</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Whether RDBMS supports INSERT null values in autoincremented primary keys</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDropTableDDL">
+        <div class="location">in <a href="MssqlPlatform.html#method_getDropTableDDL"><abbr title="MssqlPlatform">MssqlPlatform</abbr></a> at line 71</div>
+        <code>            public            string
+    <strong>getDropTableDDL</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to drop a table</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPrimaryKeyDDL">
+        <div class="location">in <a href="MssqlPlatform.html#method_getPrimaryKeyDDL"><abbr title="MssqlPlatform">MssqlPlatform</abbr></a> at line 113</div>
+        <code>            public            string
+    <strong>getPrimaryKeyDDL</strong>(<a href="Table.html"><abbr title="Table">Table</abbr></a> $table)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the SQL for the primary key of a Table object</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Table.html"><abbr title="Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddForeignKeyDDL">
+        <div class="location">in <a href="MssqlPlatform.html#method_getAddForeignKeyDDL"><abbr title="MssqlPlatform">MssqlPlatform</abbr></a> at line 125</div>
+        <code>            public            string
+    <strong>getAddForeignKeyDDL</strong>(<a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $fk)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL to add a foreign key.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a></td>
+                <td>$fk</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getForeignKeyDDL">
+        <div class="location">in <a href="MssqlPlatform.html#method_getForeignKeyDDL"><abbr title="MssqlPlatform">MssqlPlatform</abbr></a> at line 143</div>
+        <code>            public            string
+    <strong>getForeignKeyDDL</strong>(<a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a> $fk)</code>
+    </h3>
+    <div class="details">
+        <p>Builds the DDL SQL for a ForeignKey object.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="ForeignKey.html"><abbr title="ForeignKey">ForeignKey</abbr></a></td>
+                <td>$fk</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_supportsSchemas">
+        <div class="location">in <a href="MssqlPlatform.html#method_supportsSchemas"><abbr title="MssqlPlatform">MssqlPlatform</abbr></a> at line 168</div>
+        <code>            public            boolean
+    <strong>supportsSchemas</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>Platform::supportsSchemas()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_hasSize">
+        <div class="location">in <a href="MssqlPlatform.html#method_hasSize"><abbr title="MssqlPlatform">MssqlPlatform</abbr></a> at line 173</div>
+        <code>            public            boolean
+    <strong>hasSize</strong>(string $sqlType)</code>
+    </h3>
+    <div class="details">
+        <p>Returns if the RDBMS-specific SQL type has a size attribute.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$sqlType</td>
+                <td>the SQL type</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if the type has a size attribute</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_quoteIdentifier">
+        <div class="location">in <a href="MssqlPlatform.html#method_quoteIdentifier"><abbr title="MssqlPlatform">MssqlPlatform</abbr></a> at line 178</div>
+        <code>            public            string
+    <strong>quoteIdentifier</strong>(string $text)</code>
+    </h3>
+    <div class="details">
+        <p>Quotes identifiers used in database SQL.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>Quoted identifier.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTimestampFormatter">
+        <div class="location">in <a href="MssqlPlatform.html#method_getTimestampFormatter"><abbr title="MssqlPlatform">MssqlPlatform</abbr></a> at line 183</div>
+        <code>            public            string
+    <strong>getTimestampFormatter</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the preferred timestamp formatter for setting date/time values.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

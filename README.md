@@ -1,6 +1,6 @@
 # [Propel API](http://api.propelorm.org)
 
-This repository contains the Propel API (from version 1.6.0 to 1.6.9 and also
+This repository contains the Propel API (from version 1.6.0 to 1.7.1 ans 2.0@dev and also
 the master API). It's generated thanks to [Sami]. You can browse the API on
 [api.propelorm.org][api].
 
